@@ -29,56 +29,44 @@ var docbaseConfig = {
           "label": "Quick Start"
         },
         {
-          "name": "configure",
-          "label": "Configuration Options"
+          "name": "AppbaseList",
+          "label": "AppbaseList Sensor"
+        },
+        {
+          "name": "AppbaseSearch",
+          "label": "AppbaseSearch Sensor"
+        },
+        {
+          "name": "AppbaseSlider",
+          "label": "AppbaseSlider Sensor"
+        },
+        {
+          "name": "AppbaseMap",
+          "label": "AppbaseMap Sensor"
+        },
+        {
+          "name": "Dependency",
+          "label": "Dependency"
         }
       ]
     },
     {
-      "name": "features",
-      "label": "Features",
+      "name": "mapping",
+      "label": "mapping",
       "files": [
         {
-          "name": "search",
-          "label": "Search"
-        },
-        {
-          "name": "colors",
-          "label": "Colorful"
-        },
-        {
-          "name": "gh-pages",
-          "label": "Deploy to Github"
-        },
-        {
-          "name": "versions",
-          "label": "Versatile Navigation"
+          "name": "mapping",
+          "label": "Mapping"
         }
       ]
     },
     {
-      "name": "layout",
-      "label": "Layout",
+      "name": "contribution",
+      "label": "Contribution",
       "files": [
         {
-          "name": "navigation",
-          "label": "Site Navigation"
-        },
-        {
-          "name": "3col",
-          "label": "Three columns"
-        }
-      ]
-    }
-  ],
-  "v2": [
-    {
-      "name": "changelog",
-      "label": "Changes",
-      "files": [
-        {
-          "name": "changelog",
-          "label": "Changelog"
+          "name": "contribution",
+          "label": "contribution"
         }
       ]
     }
