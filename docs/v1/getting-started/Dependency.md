@@ -1,12 +1,50 @@
 ## Define dependency on other sensors
-Let's take an example if topics lists is depenedent on city selection (topic sensor is dependent on city sensor) then we should pass selected city value in topic sensor and get the topic list according to selected city.
+- **depends**: `Object`: it should contain the sensors on which component is dependent.
 
-To achieve this we should pass following things to topic sensor:
-- `selectedSensor`: which contains all the selected sensor values.
-- `sensorOnSelect`: an event which is filred on select/change of sensor value. - which is responsible to store selected values of sensors (this should be passed in both sensors - city and topic).
-- `depends`: an object which contains dependent sensors
+```js
+<AppbaseMap 
+  ...
+depends={{
+    'SensorId': {
+        "operation": "must",
+        "defaultQuery": this.cityQuery
+        "doNotExecute": {true}
+    }
+}}
+/>
 ```
-depends= {
-    {'city': this.state.mapping.city}
-}
+- **operation**: `String`: It should be either `must` or `should`. It decides whether this query should be inside must clause or should clause.
+
+- **defaultQuery**: `Function`: (optional) this function will receive value of that particulat sensor and user needs to create query on basis of that and return the query, If you don't specify defaultquery queryBuilder will include the default query of that sensor.
+
+- **doNotExecute**: `Boolean`: (by default true) If you don't want to execute query immediatly after dependent sensor changees, then apply true as value. In this case your component already append sensor query but just didn't execute it immediatly.
+
+Let's take an example if topics lists is depenedent on city selection (topicSensor is dependent on citySensor).
+
+To achieve this
+1. Assign sensorId to city list.
+2. Use this sensorId in other sensor.
+
+- City Sensor should look like this
+```
+<AppbaseList
+    sensorId="CitySensor"
+    inputData={this.props.mapping.city} 
+   ...
+/>
+```
+
+- Topic Sensor should look like this
+```
+<AppbaseList
+    sensorId="TopicSensor"
+    inputData={this.props.mapping.topic} 
+   ...
+    depends={{
+        CitySensor: {
+            "operation": "must",
+            "defaultQuery": this.topicDepends
+        }
+    }}
+/>
 ```
