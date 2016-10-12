@@ -1,11 +1,25 @@
 ## AppbaseSlider
-- `fieldName` : `string`: is the name of the field which contains the latitude and longitude of the markers for which you want to plot on the map    
-- `minThreshold`: `number`: is the number field which decides the minimum threshold value for the slider. Defaulted to 0.  
-- `maxThreshold`: `number`: is the number field which decides the maximum threshold value for the slider. Defaulted to 20. 
-- `values`: `Object`: is the object which has property min and max which tells the default selected value.     
-```   
-values: {
-  min: 0,
-  max: 20,
-}
+
+```js
+<AppbaseSlider 
+    sensorId="RangeSensor"
+    inputData={this.props.mapping.guests} 
+    title="guests"
+    maxThreshold={5}
+    minThreshold={0}
+    depends={{
+      CitySensor: {
+        "operation": "must",
+        "defaultQuery": this.topicDepends
+      }
+    }}
+/>
 ```
+
+- **sensorId** : `string`: should be unique id of sensor which can be used in other sensor's dependencies.   
+- **inputData** : `string`: is the name of the field which contains the latitude and longitude of the markers for which you want to plot on the map   
+- **maxThreshold** : `Number`: It specifies the maximum limit of slider range
+- **minThreshold** : `Number`: It specifies the minimum limit of slider range
+- **title**: `String`: It set the title of component.
+- **depends**: `Object`: It should contain the sensors on which component is dependent. [read more](https://appbaseio.github.io/reactive-maps-docs/v1/getting-started/Dependency.html)
+
