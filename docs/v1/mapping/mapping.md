@@ -75,7 +75,7 @@ curl 'http://scalr.api.appbase.io/map_demo/_open' -X POST -d '{}' -u aT29UsiAp:e
 
 4. Update the mapping: 
 
-```
+```curl
 curl 'http://scalr.api.appbase.io/map_demo/_mapping/meetupdata1?ignore_conflicts=true&update_all_types=true' -X PUT -d '{
   "meetupdata1": {
     "properties": {
@@ -145,3 +145,4 @@ curl 'http://scalr.api.appbase.io/map_demo/_mapping/meetupdata1?ignore_conflicts
 }
 
 ' -u aT29UsiAp:e0d26007-d818-4559-8244-c3c2fbad45ad -H 'Content-Type: application/json'
+```
