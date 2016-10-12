@@ -1,11 +1,13 @@
 AppbaseMap component    
 ``` javascript
   <AppbaseMap
-    fieldName="venue"
+    config={config}
+    inputData="venue"
     defaultZoom={13}
     defaultCenter={{ lat: 37.74, lng: -122.45 }}
     historicalData={true}
     markerCluster={false}
+    mapOnIdle = {this.mapOnIdle}
     markerOnDelete={this.markerOnDelete}
     markerOnIndex={this.markerOnIndex}
     markerOnClick={this.markerOnClick}
@@ -13,11 +15,18 @@ AppbaseMap component
     markerOnMouseover={this.markerOnMouseover}
     markerOnMouseout={this.markerOnMouseout} 
     mapStyle="Blue Water" 
+    autoCenter={true}
+    searchAsMoveComponent={true}
+    MapStylesComponent={true}
+    title="Reactive Maps"
+    searchAsMoveDefault={true}
+    requestSize={5}
     depends={{
-      CitySensor: ["reposition"],
-      SearchAsMoveSensor: ["SearchAsMove"],
-      MapStyleSensor: ["MapStyles"]
-  }} />
+        CitySensor: {"operation": "must"},
+        TopicSensor: {"operation": "must", "defaultQuery": this.topicDepends},
+        RangeSensor: {"operation": "must"},
+        VenueSensor: {"operation": "must"}
+    }} />
 ```    
 
 - **fieldName**: `string`: is the name of the field which contains the latitude and longitude of the markers for which you want to plot on the map    
@@ -29,5 +38,7 @@ AppbaseMap component
 - **markerOnIndex**: is the event which is fired when any element is added into the map. It has argument which contains the object which was indexed.      
     - `markerOnClick`, `markerOnDblclick`, `markerOnMouseover`, `markerOnMouseout` are the events which will be fired on click, doubleclick, mouse over, mouse out actions on markers.  
 - **mapStyle**: is the property which set the default map style. Available options for mapStyle is: `"MapBox"`, `"Blue Essence"`, `"Blue Water"`,  `"Flat Map"`,  `"Light Monochrome"`,  `"Midnight Commander"`,  `"Unsaturated Browns"`.  
+- **searchAsMoveDefault**: `Boolean`: is the property which set the default value of `searchAsMove` component. By default it's value is false.  /
+- **requestSize**: `Number`: is the property which set the size in request. By default it's value is 100.  
 - **depends**: is the property which contains the object of sensor and method, In above example on change of "CitySensor" value then it will trigger `reposition` internal method of AppbaseMap. We exposed few methods to use on changing of dependency: `reposition`, `SearchAsMove`, `MapStyles`.  
 
