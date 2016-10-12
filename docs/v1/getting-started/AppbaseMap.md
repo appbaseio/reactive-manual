@@ -58,5 +58,5 @@ and also user can return the markup which will be append inside map (as ex. Poly
 - **mapStyle**: is the property which set the default map style. Available options for mapStyle is: `"MapBox"`, `"Blue Essence"`, `"Blue Water"`,  `"Flat Map"`,  `"Light Monochrome"`,  `"Midnight Commander"`,  `"Unsaturated Browns"`.  
 - **searchAsMoveDefault**: `Boolean`: is the property which set the default value of `searchAsMove` component. By default it's value is false.  /
 - **requestSize**: `Number`: is the property which set the size in request. By default it's value is 100.  
-- **depends**: is the property which contains the object of sensor and method, In above example on change of "CitySensor" value then it will trigger `reposition` internal method of AppbaseMap. We exposed few methods to use on changing of dependency: `reposition`, `SearchAsMove`, `MapStyles`.  
+- **depends**: `Object`: It should contain the sensors on which component is dependent. [read more](https://appbaseio.github.io/reactive-maps-docs/v1/getting-started/Dependency.html)
 
