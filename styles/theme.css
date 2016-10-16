@@ -1,7 +1,7 @@
 .landing, .button, .navbar-fixed-top, .menu a.active:after {
 	background-color: #1281ca;
 }
-.index-container li a, .navbar-default .navbar-nav>li>a:active, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover, a, ul.nav li.dropdown:hover>a, .content li > strong.li-title {
+.index-container li a, .navbar-default .navbar-nav>li>a:active, .navbar-default .navbar-nav>li>a:focus, .navbar-default .navbar-nav>li>a:hover, a, ul.nav li.dropdown:hover>a {
 	color: #1281ca;
 }
 a:active, a:hover, .menu a:hover{
