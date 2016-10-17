@@ -58,7 +58,7 @@ and also user can return the markup which will be append inside map (as ex. Poly
 - **Events**:  `markerOnClick`, `markerOnDblclick`, `markerOnMouseover`, `markerOnMouseout` are the events which will be fired on click, doubleclick, mouse over, mouse out actions on markers.  
 - **mapStyle**: is the property which set the default map style. Available options for mapStyle is: `"MapBox"`, `"Blue Essence"`, `"Blue Water"`,  `"Flat Map"`,  `"Light Monochrome"`,  `"Midnight Commander"`,  `"Unsaturated Browns"`.  
 - **searchAsMoveDefault**: `Boolean`: is the property which set the default value of `searchAsMove` component. By default it's value is false.  /
-- **requestSize**: `Number`: is the property which set the size in request. By default it's value is 100.  
-- **streamActiveTime**: `Number`: is the property which decides the time interval of streaming marker, after that time period marker icon will be converted to normal icon.
+- **requestSize**: `Number`: (default: 100) is the property which set the size in request. By default it's value is 100.  
+- **streamActiveTime**: `Number`: (default: 5) is the property which decides the time interval of streaming marker, after that time period marker icon will be converted to normal icon.
 - **depends**: `Object`: It should contain the sensors on which component is dependent. [read more](https://appbaseio.github.io/reactive-maps-docs/v1/getting-started/Dependency.html)
 
