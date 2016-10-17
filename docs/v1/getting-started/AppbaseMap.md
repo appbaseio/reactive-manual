@@ -21,6 +21,7 @@ AppbaseMap component
     title="Reactive Maps"
     searchAsMoveDefault={true}
     requestSize={5}
+    streamActiveTime={5}
     depends={{
         CitySensor: {"operation": "must"},
         TopicSensor: {"operation": "must", "defaultQuery": this.topicDepends},
@@ -58,5 +59,6 @@ and also user can return the markup which will be append inside map (as ex. Poly
 - **mapStyle**: is the property which set the default map style. Available options for mapStyle is: `"MapBox"`, `"Blue Essence"`, `"Blue Water"`,  `"Flat Map"`,  `"Light Monochrome"`,  `"Midnight Commander"`,  `"Unsaturated Browns"`.  
 - **searchAsMoveDefault**: `Boolean`: is the property which set the default value of `searchAsMove` component. By default it's value is false.  /
 - **requestSize**: `Number`: is the property which set the size in request. By default it's value is 100.  
+- **streamActiveTime**: `Number`: is the property which decides the time interval of streaming marker, after that time period marker icon will be converted to normal icon.
 - **depends**: `Object`: It should contain the sensors on which component is dependent. [read more](https://appbaseio.github.io/reactive-maps-docs/v1/getting-started/Dependency.html)
 
