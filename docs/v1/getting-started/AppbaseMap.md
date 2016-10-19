@@ -1,4 +1,7 @@
-AppbaseMap component    
+{"bigh3": true}
+
+### AppbaseMap component   
+
 ``` javascript
   <AppbaseMap
     config={config}
