@@ -64,4 +64,3 @@ and also user can return the markup which will be append inside map (as ex. Poly
 - **requestSize**: `Number`: (default: 100) is the property which set the size in request. By default it's value is 100.  
 - **streamActiveTime**: `Number`: (default: 5) is the property which decides the time interval of streaming marker, after that time period marker icon will be converted to normal icon.
 - **depends**: `Object`: It should contain the sensors on which component is dependent. [read more](https://appbaseio.github.io/reactive-maps-docs/v1/getting-started/Dependency.html)
-
