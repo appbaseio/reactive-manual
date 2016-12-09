@@ -5,7 +5,7 @@ A `SingleList` component creates a single radio select list widget. It's useful 
 ```js
 <SingleList
   sensorId="CitySensor"
-  inputData={this.props.mapping.city}
+  appbaseField={this.props.mapping.city}
   title="Cities"
   defaultSelected="London"
   showCount={true}
@@ -19,7 +19,7 @@ A `SingleList` component creates a single radio select list widget. It's useful 
 ### Props
 
 - **sensorId** : `String`: should be unique id of sensor which can be used in other sensor's dependencies.   
-- **inputData** : `String`: is the name of the field which contains the latitude and longitude of the markers for which you want to plot on the map   
+- **appbaseField** : `String`: is the name of the field which contains the latitude and longitude of the markers for which you want to plot on the map   
 - **title**: `String`: Set the title of the component, to be shown in the UI.
 - **defaultSelected** : `string`: is the default selected value.   
 - **showCount**: `Boolean`: is the boolean option for whether displaying the count along with the items. Defaults to `true`.  
