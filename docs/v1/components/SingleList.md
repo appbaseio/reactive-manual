@@ -21,7 +21,7 @@ A `SingleList` component creates a single radio select list widget. It's useful 
 - **sensorId** : `String`: should be unique id of sensor which can be used in other sensor's dependencies.   
 - **inputData** : `String`: is the name of the field which contains the latitude and longitude of the markers for which you want to plot on the map   
 - **title**: `String`: Set the title of the component, to be shown in the UI.
-- **defaultSelected** : `string`: is the default selected value (only applicable for single item selection)   
+- **defaultSelected** : `string`: is the default selected value.   
 - **showCount**: `Boolean`: is the boolean option for whether displaying the count along with the items. Defaults to `true`.  
 - **size**: `number`: is the number field which decides how many items needs to be displayed in the List. Defaults to 100.    
 -  **sortBy**: `count` or `asc` or `desc`: is the property which decides on how the list should be sorted. `count` sorts the list based on the count in the desc order. `asc` sorts the list in the ascending order of the term (Alphabetical). `desc` sorts the list in the descending order of the term. Defaulted to `count`.  
