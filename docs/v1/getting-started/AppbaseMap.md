@@ -26,11 +26,12 @@
     requestSize={5}
     streamActiveTime={5}
     depends={{
-        CitySensor: {"operation": "must"},
-        TopicSensor: {"operation": "must", "defaultQuery": this.topicDepends},
-        RangeSensor: {"operation": "must"},
-        VenueSensor: {"operation": "must"}
-    }} />
+        "CitySensor": {"operation": "must"},
+        "TopicSensor": {"operation": "must", "defaultQuery": this.topicDepends},
+        "RangeSensor": {"operation": "must"},
+        "VenueSensor": {"operation": "must"}
+    }} 
+/>
 ```    
 
 - **fieldName**: `string`: is the name of the field which contains the latitude and longitude of the markers for which you want to plot on the map    
