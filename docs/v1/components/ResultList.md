@@ -40,9 +40,13 @@ A `ResultList` component creates a result list widget. Unlike other sensors whos
 
 ### Extending ResultList
 
-`onData` prop registers a function callback which triggers with the following parameters every time there is a change in the data view of the `ResultList` component.
+`onData` prop registers a function callback which is triggered every time there is a change in the data results so that the user can render the `ResultList` view.
 
 ```js
+// Register a callback function with the `onData` prop.
+<ResultList ... onData={this.onData} ... />
+
+// Callback function returns an Arry of HTML elements to be rendered as ResultList items.
 this.onData(res, [err]) {
   console.log(res.mode, res.newData, res.currentData, res.appliedQuery);
   if (res.mode === "historic") {
@@ -57,7 +61,7 @@ this.onData(res, [err]) {
 }
 ```
 
-The callback function returns an Array of HTML elements (think list items) which are then rendered to the view.  
+The callback function returns an Array of HTML elements (think list items) which are then rendered to the view as ResultList items.  
 
 **Usage**:  
 
@@ -66,8 +70,8 @@ The callback function returns an Array of HTML elements (think list items) which
   - **newData**: `Object`: An object array when returning historic data results or a single object for streaming mode updates.  
   - **currentData**: `Array Object`: An array of the result objects being shown in the current component view.  
   - **appliedQuery**: `Object`: Raw query object that triggered the function callback, useful for debugging.  
-  - **took**: `Number`: Time taken in milliseconds (only passed when the mode is "historic").
-- **err**: `Object` Error object.
+  - **took**: `Number`: (Optional) Time taken in milliseconds, only passed when the mode is "historic".
+- **err**: `Object` Error object. 
 
 ### CSS Styles
 
