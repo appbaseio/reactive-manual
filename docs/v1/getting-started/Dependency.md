@@ -1,7 +1,9 @@
+{% raw %}
+
 ## Define dependency on other sensors
 - **depends**: `Object`: it should contain the sensors on which component is dependent.
 
-{% raw %}
+
 ```js
 <AppbaseMap 
   ...
@@ -14,7 +16,6 @@ depends={{
 }}
 />
 ```
-{% endraw %}
 
 - **operation**: `String`: It should be either `must` or `should`. It decides whether this query should be inside must clause or should clause.
 
@@ -39,7 +40,6 @@ To achieve this
 
 - Topic Sensor should look like this
 
-{% raw %}
 ```javascript
 <AppbaseList
     sensorId="TopicSensor"
@@ -53,4 +53,5 @@ To achieve this
     }}
 />
 ```
+
 {% endraw %}
