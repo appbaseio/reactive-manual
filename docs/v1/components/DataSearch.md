@@ -1,9 +1,12 @@
+{"bigh3": true}
+
+{% raw %}
+
 ## DataSearch
 
 A `DataSearch` component creates a searchbox with an autocomplete search functionality. Useful for full-text search, searching a specific field or a set of fields.
 
 ```js
-{% raw %}
 <DataSearch
   sensorId="SearchSensor"
   searchInputId="internalSearch"
@@ -17,7 +20,6 @@ A `DataSearch` component creates a searchbox with an autocomplete search functio
     }
   }}
 />
-{% endraw %}
 ```
 
 ### Props
@@ -44,3 +46,4 @@ A `DataSearch` component creates a searchbox with an autocomplete search functio
 
 4. Playground (with all knob actions)
 
+{% endraw %}
