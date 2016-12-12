@@ -10,8 +10,7 @@
     defaultCenter={{ lat: 37.74, lng: -122.45 }}
     historicalData={true}
     markerCluster={false}
-    markerOnDelete={this.markerOnDelete}
-    markerOnIndex={this.markerOnIndex}
+    OnData={this.onData}
     markerOnClick={this.markerOnClick}
     markerOnDblclick={this.markerOnDblclick}
     markerOnMouseover={this.markerOnMouseover}
