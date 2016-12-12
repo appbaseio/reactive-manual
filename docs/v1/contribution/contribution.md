@@ -1,10 +1,9 @@
-
-```
 ## Contributing
-```     
-npm install
-```    
 
-```     
+```js
+npm install
+```
+
+```js
 npm run webpack-server
-```   
+```

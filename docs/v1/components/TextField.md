@@ -1,3 +1,5 @@
+{"bigh3": true}
+
 ## TextField
 
 A `TextField` component creates a simple text input field. It's useful for taking specific data for defining custom queries, like specifying map bounds of an area.

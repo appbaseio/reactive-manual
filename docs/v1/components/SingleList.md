@@ -1,3 +1,5 @@
+{"bigh3": true}
+
 ## SingleList
 
 A `SingleList` component creates a single radio select list widget. It's useful for building a selecting a category amongst many categories of items, like in an online shopping experience.

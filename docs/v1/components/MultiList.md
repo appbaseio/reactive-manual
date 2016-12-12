@@ -1,3 +1,5 @@
+{"bigh3": true}
+
 ## MultiList
 
 A `MultiList` component creates a multiple checkbox select list widget. It's useful for building an e-commerce facet like search experience.

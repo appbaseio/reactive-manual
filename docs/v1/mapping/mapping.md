@@ -1,3 +1,4 @@
+{"bigh3": true}
 
 ## Elasticsearch Mapping
 

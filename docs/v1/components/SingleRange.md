@@ -1,3 +1,5 @@
+{"bigh3": true}
+
 ## SingleRange
 
 A `SingleRange` component creates a numeric range selector. It's useful for filtering data by prices, for instance.

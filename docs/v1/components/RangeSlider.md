@@ -1,3 +1,5 @@
+{"bigh3": true}
+
 ## RangeSlider
 
 A `RangeSlider` component creates a numeric range slider. It's useful for granular filtering of numeric data.

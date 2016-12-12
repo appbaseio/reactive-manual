@@ -1,3 +1,5 @@
+{"bigh3": true}
+
 {% raw %}
 
 ## Define dependency on other sensors

@@ -1,3 +1,5 @@
+{"bigh3": true}
+
 ## MultiRange
 
 A `MultiRange` component creates a multiple checkbox based numeric range selector. It's useful for filtering data by prices, for instance.
