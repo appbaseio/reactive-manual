@@ -16,21 +16,63 @@ var docbaseConfig ={
    },
    "indexHtml":"./html/main.html",
    "flatdocHtml":"./bower_components/docbase/html/flatdoc.html",
-   "default_version":"",
-   "manual_override":false,
+   "default_version":"v1",
+   "manual_override":true,
    "versions":{
       "v1":[
          {
+            "name":"getting-started",
+            "label":"Getting Started",
+            "files":[
+               {
+                  "name":"Dependency",
+                  "label":"Dependency"
+               },
+               {
+                  "name":"Installation",
+                  "label":"Installation"
+               },
+               {
+                  "name":"Start",
+                  "label":"Quick Start"
+               }
+            ]
+         },
+         {
             "name":"components",
-            "label":"Components",
+            "label":"Sensor Components",
             "files":[
                {
                   "name":"SingleList",
                   "label":"Single List"
                },
                {
-                  "name":"MultiSelect",
-                  "label":"Multi Select"
+                  "name":"MultiList",
+                  "label":"Multi List"
+               },
+               {
+                  "name":"SingleRange",
+                  "label":"Single Range"
+               },
+               {
+                  "name":"MultiRange",
+                  "label":"Multi Range"
+               },
+               {
+                  "name":"RangeSlider",
+                  "label":"Range Slider"
+               },
+               {
+                  "name":"ToggleButton",
+                  "label":"Toggle Button"
+               },
+               {
+                  "name":"TextField",
+                  "label":"Text Field"
+               },
+               {
+                  "name":"DataSearch",
+                  "label":"Data Search"
                },
                {
                   "name":"ResultList",
@@ -39,22 +81,22 @@ var docbaseConfig ={
             ]
          },
          {
-            "name":"mapping",
-            "label":"mapping",
+            "name":"map-components",
+            "label":"Sensors for Map",
             "files":[
                {
-                  "name":"mapping",
-                  "label":"Mapping"
+                  "name":"ReactiveMap",
+                  "label":"Reactive Map"
                }
             ]
          },
          {
-            "name":"contribution",
-            "label":"Contribution",
+            "name":"mapping",
+            "label":"Data Mappings",
             "files":[
                {
-                  "name":"contribution",
-                  "label":"contribution"
+                  "name":"mapping",
+                  "label":"Data Mappings"
                }
             ]
          }

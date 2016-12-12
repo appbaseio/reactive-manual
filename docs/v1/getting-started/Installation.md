@@ -1,4 +1,4 @@
-## Contributing
+## Installation
 
 ```js
 npm install
