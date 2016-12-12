@@ -2,7 +2,7 @@
 
 ### AppbaseMap component   
 
-``` javascript
+```js
   <AppbaseMap
     config={config}
     inputData="venue"
