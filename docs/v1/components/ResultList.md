@@ -11,7 +11,7 @@ A `ResultList` component creates a result list widget. Unlike other sensors whos
   from={0}
   size={10}
   requestOnScroll={true}
-  componentStyle={height:'700px', overflow:'auto'}
+  componentStyle={{height:'700px', overflow:'auto'}}
   onData={this.onData}
   depends={{
     "CitySensor": {
@@ -33,6 +33,7 @@ A `ResultList` component creates a result list widget. Unlike other sensors whos
 - **from**: `Number`: is the starting point from where to fetch the results. Useful in a pagination context. Defaults to 0.  
 - **size**: `Number`: is the number of results to be shown per page. Defaults to 20.  
 - **requestOnScroll**: `Boolean`: Should a paginate data request be made when scroll reaches the end of the component view? Defaults to `true`, allowing an infinite scroll functionality.  
+- **componentStyle**: `Object`: CSS Styles to be applied to the **ResultList** component.  
 - **onData**: `Function`: A callback function where user can define how to render the view based on the data changes.     
 - **depends**: `Object`: An object defining the sensor components that trigger the `ResultList` query. [read more](https://appbaseio.github.io/reactive-maps-docs/v1/getting-started/Dependency.html).
 
@@ -42,16 +43,16 @@ A `ResultList` component creates a result list widget. Unlike other sensors whos
 `onData` prop registers a function callback which triggers with the following parameters every time there is a change in the data view of the `ResultList` component.
 
 ```js
-this.onData(mode, response, currentData, [took,] appliedQuery) {
-  console.log(mode, response, currentData, appliedQuery)
-  if (mode === "historic") {
-    console.log("time taken for response is: "+took+" ms");
-    return currentData + response; // infinite scroll functionality
+this.onData(res, [err]) {
+  console.log(res.mode, res.newData, res.currentData, res.appliedQuery);
+  if (res.mode === "historic") {
+    console.log("time taken for response is: "+took+"ms");
+    return res.currentData + res.newData; // infinite scroll functionality
   } else {
-    console.log("New streaming update: ", response);
-    currentData.unshift(response);
+    console.log("New streaming update: ", res.newData);
+    res.currentData.unshift(res.newData);
     // add markup per element.
-    return currentData;           // show streaming update functionality
+    return res.currentData;               // show streaming update functionality
   }
 }
 ```
@@ -60,12 +61,13 @@ The callback function returns an Array of HTML elements (think list items) which
 
 **Usage**:  
 
-- **mode**: `String`: "historic" when results are returned from the existing dataset and "streaming" when new results are matched.  
-- **response**: `Object`: An object array when returning historic data results or a single object for streaming mode updates.  
-- **currentData**: `Array Object`: An array of the result objects being shown in the current component view.  
-- **took**: `Number`: Time taken in milliseconds (only applicable when mode is "historic".  
-- **appliedQuery**: `Object`: Raw query object that triggered the function callback, useful for debugging.
-
+- **res**: `Object` Response object containing:  
+  - **mode**: `String`: "historic" when results are returned from the existing dataset and "streaming" when new results are matched.  
+  - **newData**: `Object`: An object array when returning historic data results or a single object for streaming mode updates.  
+  - **currentData**: `Array Object`: An array of the result objects being shown in the current component view.  
+  - **appliedQuery**: `Object`: Raw query object that triggered the function callback, useful for debugging.  
+  - **took**: `Number`: Time taken in milliseconds (only passed when the mode is "historic").
+- **err**: `Object` Error object.
 
 ### CSS Styles
 
