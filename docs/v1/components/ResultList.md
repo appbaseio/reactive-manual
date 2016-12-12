@@ -2,7 +2,6 @@
 
 A `ResultList` component creates a result list widget. Unlike other sensors whose states can be filtered by the end user, `ResultList` behaves as an actuator that displays the results of other sensor components in a list.
 
-{% raw %}
 ```js
 <ResultList
   sensorId="SearchResult"
@@ -14,7 +13,7 @@ A `ResultList` component creates a result list widget. Unlike other sensors whos
   requestOnScroll={true}
   componentStyle={{height:'700px', overflow:'auto'}}
   onData={this.onData}
-  depends={{
+  depends={{ "{{" }}
     "CitySensor": {
       "operation": "must"
     },
@@ -24,7 +23,6 @@ A `ResultList` component creates a result list widget. Unlike other sensors whos
   }}
 />
 ```
-{% endraw %}
 
 ### Props
 
