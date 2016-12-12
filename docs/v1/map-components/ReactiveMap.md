@@ -2,6 +2,7 @@
 
 ### AppbaseMap component   
 
+{% raw %}
 ```js
 <ReactiveMap
     inputData="venue"
@@ -27,6 +28,7 @@
       VenueSensor: {"operation": "must"}
     }} />
 ```    
+{% endraw %}
 
 - `appbaseField`: `string`: is the name of the field which contains the latitude and longitude of the markers for which you want to plot on the map    
 - `historicalData`: `Boolean`: is the boolean field which on true, shows the old results and on false, will only run searchstream(). Defaulted to `true`    
