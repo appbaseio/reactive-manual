@@ -1,3 +1,7 @@
+{"bigh3": true}
+
+{% raw %}
+
 ## ResultList
 
 A `ResultList` component creates a result list widget. Unlike other sensors whose states can be filtered by the end user, `ResultList` behaves as an actuator that displays the results of other sensor components in a list.
@@ -89,3 +93,4 @@ The callback function returns an Array of HTML elements (think list items) which
 
 5. Playground (with all knob actions)
 
+{% endraw %}
