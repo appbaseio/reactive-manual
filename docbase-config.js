@@ -25,16 +25,16 @@ var docbaseConfig ={
             "label":"Getting Started",
             "files":[
                {
-                  "name":"Dependency",
-                  "label":"Dependency"
-               },
-               {
                   "name":"Installation",
                   "label":"Installation"
                },
                {
                   "name":"Start",
                   "label":"Quick Start"
+               },
+               {
+                  "name":"Dependency",
+                  "label":"Dependency"
                }
             ]
          },
