@@ -26,41 +26,15 @@ var docbaseConfig ={
             "files":[
                {
                   "name":"SingleList",
-                  "label":"SingleList"
+                  "label":"Single List"
                },
                {
                   "name":"MultiSelect",
-                  "label":"MultiSelect"
-               }
-            ]
-         },
-         {
-            "name":"getting-started",
-            "label":"Getting Started",
-            "files":[
-               {
-                  "name":"start",
-                  "label":"Quick Start"
+                  "label":"Multi Select"
                },
                {
-                  "name":"AppbaseList",
-                  "label":"AppbaseList Sensor"
-               },
-               {
-                  "name":"AppbaseSearch",
-                  "label":"AppbaseSearch Sensor"
-               },
-               {
-                  "name":"AppbaseSlider",
-                  "label":"AppbaseSlider Sensor"
-               },
-               {
-                  "name":"AppbaseMap",
-                  "label":"AppbaseMap Sensor"
-               },
-               {
-                  "name":"Dependency",
-                  "label":"Dependency"
+                  "name":"ResultList",
+                  "label":"Result List"
                }
             ]
          },
