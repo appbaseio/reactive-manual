@@ -1,6 +1,7 @@
 ## Define dependency on other sensors
 - **depends**: `Object`: it should contain the sensors on which component is dependent.
 
+{% raw %}
 ```js
 <AppbaseMap 
   ...
@@ -13,6 +14,8 @@ depends={{
 }}
 />
 ```
+{% endraw %}
+
 - **operation**: `String`: It should be either `must` or `should`. It decides whether this query should be inside must clause or should clause.
 
 - **defaultQuery**: `Function`: (optional) this function will receive value of that particulat sensor and user needs to create query on basis of that and return the query, If you don't specify defaultquery queryBuilder will include the default query of that sensor.
@@ -35,7 +38,9 @@ To achieve this
 ```
 
 - Topic Sensor should look like this
-```
+
+{% raw %}
+```javascript
 <AppbaseList
     sensorId="TopicSensor"
     inputData={this.props.mapping.topic} 
@@ -48,3 +53,4 @@ To achieve this
     }}
 />
 ```
+{% endraw %}
