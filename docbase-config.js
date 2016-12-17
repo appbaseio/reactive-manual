@@ -33,6 +33,10 @@ var docbaseConfig ={
                   "label":"Quick Start"
                },
                {
+                  "name":"StyleGuide",
+                  "label":"Style Guide"
+               },
+               {
                   "name":"Dependency",
                   "label":"Dependency"
                }
