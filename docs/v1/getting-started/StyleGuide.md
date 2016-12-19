@@ -1,6 +1,6 @@
-## Style Guide
+# Style Guide
 
-### Principles
+## Principles
 
 **reactivebase** component styles follow these principles:
 
@@ -9,11 +9,11 @@
 3. Extendible - The classname API follows a consistent naming structure which allows intuitive additions.
 4. Themes - Reactivebase itself uses **sass** styling, making thematic changes a breeze.
 
-### Class API
+## Class API
 
 All reactivebase components use a `rbc` namespace and base class. All classes use a lowercase naming convention.
 
-#### Component class API
+### Component class API
 
 A component class specification follows a `rbc-{componentname}` naming pattern. For instance, a `SingleList` component will have a classname called`rbc-singlelist`.
 
@@ -29,7 +29,7 @@ A component class specification follows a `rbc-{componentname}` naming pattern. 
 | DataSearch      | rbc-datasearch   |
 | ResultList      | rbc-resultlist   |
 
-#### Component States class API
+### Component States class API
 
 A component has different states depending on the set props. For instance, a TextField component with a `title` prop set looks like this:
 
@@ -57,7 +57,7 @@ States applicable only to **SingleList** and **MultiList** components.
 
 Each component's documentation contains a styles API which will list the relevant states and their CSS class names.
 
-#### Subcomponent class API
+### Subcomponent class API
 
 Components can have child components. For example, `ResultList` component contains a `ListItem` component for displaying each result row. Subcomponent class API follows the same naming convention as the component class API.
 
