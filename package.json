@@ -1,8 +1,8 @@
 {
-  "name": "",
+  "name": "@appbaseio/reactivebase-manual",
   "version": "0.0.1",
   "authors": [],
-  "description": "Documentation project powered by docbase",
+  "description": "Reactivebase manual, powered by docbase",
   "contributors": [],
   "scripts": {
     "test": "grunt publish"
