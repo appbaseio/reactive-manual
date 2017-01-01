@@ -2,7 +2,7 @@
 
 ## ToggleButton
 
-![Image to be displayed]()
+![Image to be displayed](https://i.imgur.com/Zyooy5N.png)
 
 `ToggleButton` sensor component creates a toggle button UI widget. It is used for filtering results based on a fixed set of toggleable options.
 
@@ -41,16 +41,18 @@ ToggleButton creates an online query filter by using the `data` prop values. It 
     is an object array of {label:label, value:value} kv pairs, `label` is displayed in the UI and `value` is the corresponding actual field value in the database.
 - **defaultSelected** `Array` [optional]  
     an array of default selected label(s) to pre-select one or more buttons.
+- **multiSelect** `Boolean` [optional]  
+    whether multiple buttons can be selected, defaults to **true**. When set to **false**, only one button can be selected.
 
 
 ### CSS Styles API
 
-![Image to be displayed]()
+![Annotated Image to be displayed](https://i.imgur.com/Zyooy5N.png)
 
 All reactivebase components are `rbc` namespaced.
 
 ```html
-<div class="rbc rbc-togglebutton col s12 col-xs-12 card thumbnail title-true">
+<div class="rbc rbc-togglebutton rbc-title-active rbc-multiselect-active col s12 col-xs-12 card thumbnail">
   <div class="row">
     <h4 class="rbc-title col s12 col-xs-12">Meetup Categories</h4>
     <div class="col s12 col-xs-12">
