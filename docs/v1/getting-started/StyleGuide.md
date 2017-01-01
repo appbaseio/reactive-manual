@@ -39,21 +39,21 @@ A TextField component without a `title` prop set looks like this:
 
 ![](https://i.imgur.com/cwMmYZP.png)
 
-The component state used for title is represented with the CSS class `title-true` when the title is present and `title-false` when the title prop is not set.
+The component state used for title is represented with the CSS class `rbc-title-active` when the title is present and `rbc-title-inactive` when the title prop is not set.
 
 Globally applicable component states:
 
 | Component Prop    | CSS Class Name (when set) |
 |------------------ |-------------------------- |
-| title             | title-true                |
-| placeholder       | placeholder-true          |
+| title             | rbc-title-active                |
+| placeholder       | rbc-placeholder-active          |
 
 States applicable only to **SingleList** and **MultiList** components.
 
 | Component Prop    | CSS Class Name (when set) |
 |------------------ |-------------------------- |
-| showCount         | count-true                |
-| showSearch        | search-true               |
+| showCount         | rbc-count-active                |
+| showSearch        | rbc-search-active               |
 
 Each component's documentation contains a styles API which will list the relevant states and their CSS class names.
 
@@ -61,4 +61,4 @@ Each component's documentation contains a styles API which will list the relevan
 
 Components can have child components. For example, `ResultList` component contains a `ListItem` component for displaying each result row. Subcomponent class API follows the same naming convention as the component class API.
 
-
+[Example here for ToggleButton component styles](http://opensource.appbase.io/reactivebase-manual/v1/components/ToggleButton.html#-togglebutton-css-styles-api).
