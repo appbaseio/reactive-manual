@@ -2,29 +2,42 @@
 
 ## TextField
 
-A `TextField` component creates a simple text input field. It's useful for taking specific data for defining custom queries, like specifying map bounds of an area.
+![Image to be displayed](https://i.imgur.com/VwnK12T.png)
+
+A `TextField` sensor component creates a simple text input field. It is useful for taking generic user inputs for creating a custom query context.
+
+### Usage
 
 ```js
 <TextField
-  sensorId="TextFieldSensor"
-  appbaseField={this.mapping.props.location}
-  title="Map Bounds"
-  placeholder="Some placeholder text"
+  sensorId="NameTextSensor"
+  appbaseField="name"
+  title="Type a Search String"
+  placeholder="Type a car name"
 />
 ```
 
 ### Props
 
-- **sensorId** : `String`: should be unique id of sensor which can be used in other sensor's dependencies.  
-- **appbaseField** : `String`: (optional) is the name of the field for price data in the appbase.io app.  
-- **title**: `String`: Sets the title of the component to be shown in the UI.  
-- **placeholder**: `string`: is the placeholder text label  
-- **depends**: `Object`: It should contain the sensors on which the component is dependent. [read more](https://appbaseio.github.io/reactive-maps-docs/v1/getting-started/Dependency.html)
+- **sensorId** `String`  
+    unique id of the sensor, can be referenced when creating a combined query context in an actuator's `depends` prop.  
+- **appbaseField** `String`  
+    DB data field to be mapped with the component's UI options.
+- **title** `String` [optional]  
+    title of the component to be shown in the UI.
+- **placeholder** `String` [optional]  
+    placeholder to be displayed in the text field.  
 
 
-### CSS Styles
+### CSS Styles API
 
+TBD
 
+* Image
+
+* HTML snippet
+
+* bullet points on all the classes used starting from component class.
 
 ### Examples
 
