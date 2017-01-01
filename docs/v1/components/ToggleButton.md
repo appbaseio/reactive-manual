@@ -2,32 +2,72 @@
 
 ## ToggleButton
 
-A `ToggleButton` component creates a single or multiple toggle button selector. It's useful for filtering data by boolean like fields. Like, is the restaurant open now or not.
+![Image to be displayed]()
+
+`ToggleButton` sensor component creates a toggle button UI widget. It is used for filtering results based on a fixed set of toggleable options.
+
+Example uses:
+* filter movies by ratings between 1 and 5,
+* display restaurants that accept delivery and are open now,
+* show flight tickets by one way, round trip and multi-city options.
+
+ToggleButton creates an online query filter by using the `data` prop values. It can be used with other sensor components to create a combined query filter context. Read more on using multiple sensors together in the [`depends`]() doc.
+
+### Usage
 
 ```js
 <ToggleButton
-  sensorId="PriceButtons"
-  appbaseField={this.props.mapping.price}
-  title="Price"
-  defaultSelected=["Open"]
+  sensorId="MeetupTops"
+  appbaseField="group_topics.topic_name.raw"
+  title="Meetup Topics"
   data={
-    [{"value": "open", "label": "Open"}]
+    [{"label": "Social",   "value": "Social"},
+     {"label": "Travel",   "value": "Travel"},
+     {"label": "Outdoors", "value": "Outdoors"}]
   }
+  defaultSelected=["Social"]
 />
 ```
 
 ### Props
 
-- **sensorId**: `String`: should be unique id of sensor which can be used in other sensor's dependencies.   
-- **appbaseField**: `String`: is the name of the field for price data in the appbase.io app. For a `ToggleButton` component, the field should be of a numeric data type.
-- **title**: `String`: Sets the title of the component to be shown in the UI.
-- **defaultSelected**: `Array`: of the default selected label(s)   
-- **data**: `Object Array`: is a collection of UI options with labels and value fields
-- **depends**: `Object`: It should contain the sensors on which the component is dependent. [read more](https://appbaseio.github.io/reactive-maps-docs/v1/getting-started/Dependency.html)
+- **sensorId** `String`  
+    unique id of the sensor, can be referenced when creating a combined query context in an actuator's `depends` prop.  
+- **appbaseField** `String`  
+    DB data field to be mapped with the component's UI options.
+- **title** `String` [optional]  
+    title of the component to be shown in the UI.
+- **data** `Object Array`  
+    is an object array of {label:label, value:value} kv pairs, `label` is displayed in the UI and `value` is the corresponding actual field value in the database.
+- **defaultSelected** `Array` [optional]  
+    an array of default selected label(s) to pre-select one or more buttons.
 
 
-### CSS Styles
+### CSS Styles API
 
+![Image to be displayed]()
+
+All reactivebase components are `rbc` namespaced.
+
+```html
+<div class="rbc rbc-togglebutton col s12 col-xs-12 card thumbnail title-true">
+  <div class="row">
+    <h4 class="rbc-title col s12 col-xs-12">Meetup Categories</h4>
+    <div class="col s12 col-xs-12">
+      <div class="rbc-buttongroup">
+        <button class="rbc-btn rbc-btn-active" title="Social">Social</button>
+        <button class="rbc-btn rbc-btn-inactive" title="Travel">Travel</button>
+        <button class="rbc-btn rbc-btn-inactive" title="Outdoors">Outdoors</button>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+* ToggleButton component's class name is `rbc-togglebutton`. Additionally, depending on the presence / absence of the `title` prop, a `rbc-title-active` or `rbc-title-inactive` class is respectively applied.
+* the title element has a class name of `rbc-title`.
+* the buttons are encapsulated inside a `rbc-buttongroup` class.
+* each individual button has a `rbc-btn` class. If the button is currently selected, it will also have the `rbc-btn-active` class. If the button is not selected, it will likewise have the `rbc-btn-inactive` class.
 
 
 ### Examples
