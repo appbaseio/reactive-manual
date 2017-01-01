@@ -9,7 +9,7 @@ var docbaseConfig ={
    },
    "github":{
       "user":"appbaseio",
-      "repo":"reactive-maps-docs",
+      "repo":"reactivebase-manual",
       "path":"docs",
       "branch":"master",
       "access_token":"OTAwNDU5MTk4M2NlYzViYzQxNzFlN2E3Yjk1MWQ2ZjhkODRjMTg5Yg=="
