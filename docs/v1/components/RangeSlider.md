@@ -2,6 +2,8 @@
 
 ## RangeSlider
 
+![Image to be displayed](https://i.imgur.com/OYUWZHL.png)
+
 A `RangeSlider` component creates a numeric range slider. It's useful for granular filtering of numeric data.
 
 ```js

@@ -4,6 +4,8 @@
 
 ## DataSearch
 
+![Image to be displayed](https://i.imgur.com/dLeyahL.png)
+
 A `DataSearch` component creates a searchbox with an autocomplete search functionality. Useful for full-text search, searching a specific field or a set of fields.
 
 ```js

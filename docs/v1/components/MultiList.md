@@ -2,6 +2,8 @@
 
 ## MultiList
 
+![Image to be displayed](https://i.imgur.com/KuSUJyX.png)
+
 A `MultiList` component creates a multiple checkbox select list widget. It's useful for building an e-commerce facet like search experience.
 
 ```js

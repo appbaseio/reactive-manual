@@ -4,6 +4,8 @@
 
 ## ResultList
 
+![Image to be displayed](https://i.imgur.com/GcUFZjh.png)
+
 A `ResultList` component creates a result list widget. Unlike other sensors whose states can be filtered by the end user, `ResultList` behaves as an actuator that displays the results of other sensor components in a list.
 
 ```js

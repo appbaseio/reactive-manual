@@ -2,6 +2,8 @@
 
 ## SingleRange
 
+![Image to be displayed](https://i.imgur.com/55jFax6.png)
+
 A `SingleRange` component creates a numeric range selector. It's useful for filtering data by prices, for instance.
 
 ```js
