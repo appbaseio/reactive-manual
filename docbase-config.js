@@ -55,12 +55,28 @@ var docbaseConfig ={
                   "label":"Multi List"
                },
                {
+                  "name":"SingleDropdownList",
+                  "label":"Single Dropdown List"
+               },
+               {
+                  "name":"MultiDropdownList",
+                  "label":"Multi Dropdown List"
+               },
+               {
                   "name":"SingleRange",
                   "label":"Single Range"
                },
                {
                   "name":"MultiRange",
                   "label":"Multi Range"
+               },
+               {
+                  "name":"SingleDropdownRange",
+                  "label":"Single Dropdown Range"
+               },
+               {
+                  "name":"MultiDropdownRange",
+                  "label":"Multi Dropdown Range"
                },
                {
                   "name":"RangeSlider",
