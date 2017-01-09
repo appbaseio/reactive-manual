@@ -36,6 +36,17 @@ A `DataSearch` component creates a searchbox with an autocomplete search functio
 
 ### CSS Styles
 
+All reactivebase components are `rbc` namespaced.
+
+```html
+<div class="rbc rbc-datasearch rbc-placeholder-active">
+    <div class="Select Select--single is-searchable">
+      ...
+    </div>
+</div>
+```
+
+* DataSearch component's class name is `rbc-datasearch`. Additionally, depending on the presence / absence of the `placeholder` prop, a `rbc-placeholder-active` or `rbc-placeholder-inactive` class is respectively applied.
 
 
 ### Examples

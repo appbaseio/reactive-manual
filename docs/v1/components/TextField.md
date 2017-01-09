@@ -31,13 +31,22 @@ A `TextField` sensor component creates a simple text input field. It is useful f
 
 ### CSS Styles API
 
-TBD
+All reactivebase components are `rbc` namespaced.
 
-* Image
+```html
+<div class="rbc rbc-textfield col s12 col-xs-12 card thumbnail rbc-title-active rbc-placeholder-inactive">
+	<h4 class="rbc-title col s12 col-xs-12">Type a search string</h4>
+	<div class="rbc-search-container col s12 col-xs-12">
+		<input type="text" class="rbc-input" value="">
+	</div>
+</div>
+```
 
-* HTML snippet
+* Textfield component's class name is `rbc-textfield`. Additionally, depending on the presence / absence of the `title` prop, a `rbc-title-active` or `rbc-title-inactive` class is respectively applied. Similarly for `placeholder` prop, classname of `rbc-placeholder-active` or `rbc-placeholder-active` is applied.
+* the title element has a class name of `rbc-title`.
+* the search element has a class name of `rbc-search-container`.
+* the input element has a class name of `rbc-input`.
 
-* bullet points on all the classes used starting from component class.
 
 ### Examples
 

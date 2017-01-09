@@ -37,6 +37,28 @@ A `RangeSlider` component creates a numeric range slider. It's useful for granul
 
 ### CSS Styles
 
+All reactivebase components are `rbc` namespaced.
+
+```html
+<div class="rbc rbc-rangeslider card thumbnail col s12 col-xs-12 rbc-title-active">
+    <h4 class="rbc-title col s12 col-xs-12">Guests</h4>
+    <div class="rbc-bar-container col s12 col-xs-12">
+      <span class="rbc-bar-item">
+        <span class="bar"></span>
+      </span>
+    </div>
+    <div class="rbc-rangeslider-container col s12 col-xs-12" style="margin: 25px 0px;">
+        <div class="rc-slider">
+          ...
+        </div>
+    </div>
+</div>
+```
+
+* RangeSlider component's class name is `rbc-rangeslider`. Additionally, depending on the presence / absence of the `title` prop, a `rbc-title-active` or `rbc-title-inactive` class is respectively applied.
+* the title element has a class name of `rbc-title`.
+* the histogram is encapsulated inside a `rbc-bar-container` class with each element having class name of `rbc-bar-item`.
+* the slider is encapsulated inside a `rbc-rangeslider-container` class.
 
 
 ### Examples
