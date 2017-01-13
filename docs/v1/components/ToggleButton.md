@@ -47,7 +47,7 @@ ToggleButton creates an online query filter by using the `data` prop values. It 
 
 ### CSS Styles API
 
-![Annotated Image to be displayed](https://i.imgur.com/Zyooy5N.png)
+![Annotated image](https://i.imgur.com/lMbqk2H.png)
 
 All reactivebase components are `rbc` namespaced.
 

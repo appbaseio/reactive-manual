@@ -33,6 +33,8 @@ A `TextField` sensor component creates a simple text input field. It is useful f
 
 All reactivebase components are `rbc` namespaced.
 
+![Annotated image](https://i.imgur.com/kZoLD15.png)
+
 ```html
 <div class="rbc rbc-textfield col s12 col-xs-12 card thumbnail rbc-title-active rbc-placeholder-inactive">
 	<h4 class="rbc-title col s12 col-xs-12">Type a search string</h4>

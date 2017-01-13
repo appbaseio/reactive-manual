@@ -39,6 +39,8 @@ A `RangeSlider` component creates a numeric range slider. It's useful for granul
 
 All reactivebase components are `rbc` namespaced.
 
+![Annotated image](https://i.imgur.com/jXeI9W1.png)
+
 ```html
 <div class="rbc rbc-rangeslider card thumbnail col s12 col-xs-12 rbc-title-active">
     <h4 class="rbc-title col s12 col-xs-12">Guests</h4>

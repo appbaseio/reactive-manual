@@ -35,6 +35,8 @@ A `SingleRange` component creates a numeric range selector. It's useful for filt
 
 All reactivebase components are `rbc` namespaced.
 
+![Annotated image](https://i.imgur.com/8DHlOHz.png)
+
 ```html
 <div class="rbc rbc-singlerange col s12 col-xs-12 card thumbnail rbc-title-active">
   <div class="row">
