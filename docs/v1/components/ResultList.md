@@ -87,12 +87,10 @@ The callback function returns an Array of HTML elements (think list items) which
 
 1. ResultList with all the default props with a single sensor filter.
 
-2. ResultList with an infinite scroll with a single sensor filter.
+2. ResultList with a search and a filter sensor.
 
-3. ResultList with a pagination view based on a search and a filter sensor.
+3. ResultList that shows streaming updates.
 
-4. ResultList that shows streaming updates.
-
-5. Playground (with all knob actions)
+4. Playground (with all knob actions).
 
 {% endraw %}
