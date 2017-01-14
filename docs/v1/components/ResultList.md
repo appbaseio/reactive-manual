@@ -17,7 +17,7 @@ A `ResultList` component creates a result list widget. Unlike other sensors whos
   from={0}
   size={10}
   requestOnScroll={true}
-  componentStyle={{height:'700px', overflow:'auto'}}
+  containerStyle={{height:'700px', overflow:'auto'}}
   onData={this.onData}
   depends={{
     "CitySensor": {

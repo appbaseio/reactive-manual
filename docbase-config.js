@@ -55,6 +55,10 @@ var docbaseConfig ={
                   "label":"Multi List"
                },
                {
+                  "name":"NestedList",
+                  "label":"Nested List"
+               },
+               {
                   "name":"SingleDropdownList",
                   "label":"Single Dropdown List"
                },
@@ -97,6 +101,10 @@ var docbaseConfig ={
                {
                   "name":"ResultList",
                   "label":"Result List"
+               },
+               {
+                  "name":"PaginatedResultList",
+                  "label":"Paginated Result List"
                }
             ]
          },
