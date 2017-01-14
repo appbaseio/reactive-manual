@@ -75,6 +75,14 @@ var docbaseConfig ={
                   "label":"Multi Range"
                },
                {
+                  "name":"DatePicker",
+                  "label":"Date Picker"
+               },
+               {
+                  "name":"DateRange",
+                  "label":"Date Range"
+               },
+               {
                   "name":"SingleDropdownRange",
                   "label":"Single Dropdown Range"
                },
