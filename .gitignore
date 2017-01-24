@@ -9,5 +9,8 @@ logs
 node_modules
 bower_components
 
+# VIM swp
+*.swp
+
 # OSX metadata
 *.DS_Store
