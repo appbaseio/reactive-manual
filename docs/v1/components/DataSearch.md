@@ -1,37 +1,39 @@
 {"bigh3": true}
 
-{% raw %}
-
 ## DataSearch
 
 ![Image to be displayed](https://i.imgur.com/dLeyahL.png)
 
-A `DataSearch` component creates a searchbox with an autocomplete search functionality. Useful for full-text search, searching a specific field or a set of fields.
+A `DataSearch` sensor component creates a searchbox UI widget with an autocomplete functionality. It is used for applying full-text search across one or more fields.
+
+Example uses:
+* Searching for a rental listing by its `name` or `description` field.
+* Creating an e-commerce search box for finding products by their listing properties.
+
+### Usage
 
 ```js
 <DataSearch
   sensorId="SearchSensor"
-  searchInputId="internalSearch"
-  appbaseField={[this.props.mapping.venues, this.props.mapping.cities]}
+  appbaseField={["group_venue", "group_city"]}
   title="Search"
   placeholder="Search for cities or venues"
-  depends={{
-    'CitySensor': {
-      "operation": "must",
-      "doNotExecute": {true}
-    }
-  }}
+  autocomplete={true}
 />
 ```
 
 ### Props
 
-- **sensorId**: `String`: should be unique id of sensor which can be used in other sensor's dependencies.  
-- **searchInputId**: `String`: (optional) An additional sensor reference ID that allows actions on the search text changes.  
-- **appbaseField**: `String`: is the name of the field for price data in the appbase.io app. For a `DataSearch` component, the field should be of a `String` data type. Search can also be applied on more than one fields.  
-- **title**: `String`: Sets the title of the component to be shown in the UI.
-- **placeholder**: `string`: is the placeholder text to be shown in the searhbox.  
-- **depends**: `Object`: It should contain the sensors on which the component is dependent. [read more](https://appbaseio.github.io/reactive-maps-docs/v1/getting-started/Dependency.html)
+- **sensorId** `String`
+    unique id of the sensor, can be referenced when creating a combined query context in an actuator’s depends prop.
+- **appbaseField** `String` or `Array`
+    DB data field(s) on which the search query will be aplied to. If you want to search across multiple fields, pass them as an `Array`.
+- **title** `String` [optional]
+    Sets the title of the component to be shown in the UI.
+- **placeholder** `String` [optional]
+    Sets the placeholder text to be shown in the searhbox input field. Defaults to "Search...".
+- **autocomplete** `Boolean` [optional]
+    Sets whether the autocomplete functionality should be enabled or disabled. Defaults to true.
 
 
 ### CSS Styles
@@ -52,11 +54,5 @@ All reactivebase components are `rbc` namespaced.
 ### Examples
 
 1. DataSearch with all the default props
-
-2. Datasearch on multiple search fields
-
-3. DataSearch with a list actuator that shows results on `searchInputId` changes
-
-4. Playground (with all knob actions)
-
-{% endraw %}
+1. DataSearch with autocomplete turned off
+1. Playground (with all knob actions)
