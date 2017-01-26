@@ -38,7 +38,7 @@ A `MultiList` component creates a multiple checkbox select list widget. It's use
 
 All reactivebase components are `rbc` namespaced.
 
-![Annotated image](https://i.imgur.com/0D44LTI.png)
+![Annotated image](https://i.imgur.com/qJZgfvI.png)
 
 ```html
 <div class="rbc rbc-multilist col s12 col-xs-12 card thumbnail rbc-search-active rbc-title-active rbc-placeholder-active">

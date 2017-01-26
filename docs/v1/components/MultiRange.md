@@ -35,7 +35,7 @@ A `MultiRange` component creates a multiple checkbox based numeric range selecto
 
 All reactivebase components are `rbc` namespaced.
 
-![Annotated image](https://i.imgur.com/6sizEH5.png)
+![Annotated image](https://i.imgur.com/m3uFfKj.png)
 
 ```html
 <div class="rbc rbc-multirange col s12 col-xs-12 card thumbnail rbc-title-active">

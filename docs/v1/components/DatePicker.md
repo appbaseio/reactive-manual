@@ -49,15 +49,22 @@ All reactivebase components are `rbc` namespaced.
 ![Annotated image](https://i.imgur.com/bSei4w3.png)
 
 ```html
-<div class="rbc col s12 col-xs-12 card thumbnail rbc-search-active rbc-title-active rbc-placeholder-active rbc-singlelist">
-  <h4 class="rbc-title col s12 col-xs-12">Cities</h4>
-  <div class="rbc-search-container col s12 col-xs-12">
-    <input type="text" class="rbc-input col s12 col-xs-12 form-control" value="" placeholder="Search City">
-  </div>
-  <div class="rbc-list-container col s12 col-xs-12">
-    <div class="rbc-list-item row">
-      <input type="radio" class="rbc-radio-item" value="London">
-      <label class="rbc-label">London <span class="rbc-count">(211)</span></label>
+<div class="rbc rbc-datepicker col s12 col-xs-12 card thumbnail rbc-title-active">
+  <h4 class="rbc-title col s12 col-xs-12">DatePicker</h4>
+  <div class="col s12 col-xs-12">
+    <div class="SingleDatePicker">
+      <div class="SingleDatePickerInput">
+        <div class="DateInput DateInput--with-caret">
+          <label class="DateInput__label" for="DateSensor">Select Date</label>
+          <input type="text" class="DateInput__input" id="DateSensor" name="DateSensor" value="" placeholder="Select Date" autocomplete="off">
+          <div class="DateInput__display-text DateInput__display-text--focused">Select Date</div>
+        </div>
+      </div>
+      <div class="SingleDatePicker__picker SingleDatePicker__picker--show SingleDatePicker__picker--direction-left SingleDatePicker__picker--horizontal" style="left: 0px;">
+        <div class="DayPicker DayPicker--horizontal" style="width: 318px;">
+          ...
+        </div>
+      </div>
     </div>
   </div>
 </div>

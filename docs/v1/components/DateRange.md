@@ -49,15 +49,32 @@ All reactivebase components are `rbc` namespaced.
 ![Annotated image](https://i.imgur.com/tEwBtgX.png)
 
 ```html
-<div class="rbc col s12 col-xs-12 card thumbnail rbc-search-active rbc-title-active rbc-placeholder-active rbc-singlelist">
-  <h4 class="rbc-title col s12 col-xs-12">Cities</h4>
-  <div class="rbc-search-container col s12 col-xs-12">
-    <input type="text" class="rbc-input col s12 col-xs-12 form-control" value="" placeholder="Search City">
-  </div>
-  <div class="rbc-list-container col s12 col-xs-12">
-    <div class="rbc-list-item row">
-      <input type="radio" class="rbc-radio-item" value="London">
-      <label class="rbc-label">London <span class="rbc-count">(211)</span></label>
+<div class="rbc rbc-daterange col s12 col-xs-12 card thumbnail rbc-title-active">
+  <h4 class="rbc-title col s12 col-xs-12">DateRange</h4>
+  <div class="rbc-daterange-component col s12 col-xs-12">
+    <div class="DateRangePicker">
+      <div class="DateRangePickerInput">
+        <div class="DateInput DateInput--with-caret">
+          <label class="DateInput__label" for="startDate">Start Date</label>
+          <input type="text" class="DateInput__input" id="startDate" name="startDate" value="" placeholder="Start Date" autocomplete="off">
+          <div class="DateInput__display-text DateInput__display-text--focused">Start Date</div>
+        </div>
+        <div class="DateRangePickerInput__arrow">
+          <svg viewBox="0 0 1000 1000">
+            <path d="M694.4 242.4l249.1 249.1c11 11 11 21 0 32L694.4 772.7c-5 5-10 7-16 7s-11-2-16-7c-11-11-11-21 0-32l210.1-210.1H67.1c-13 0-23-10-23-23s10-23 23-23h805.4L662.4 274.5c-21-21.1 11-53.1 32-32.1z"></path>
+          </svg>
+        </div>
+        <div class="DateInput">
+          <label class="DateInput__label" for="endDate">End Date</label>
+          <input type="text" class="DateInput__input" id="endDate" name="endDate" value="" placeholder="End Date" autocomplete="off">
+          <div class="DateInput__display-text">End Date</div>
+        </div>
+      </div>
+      <div class="DateRangePicker__picker DateRangePicker__picker--show DateRangePicker__picker--direction-left DateRangePicker__picker--horizontal" style="left: 0px;">
+        <div class="DayPicker DayPicker--horizontal" style="width: 618px;">
+          ...
+        </div>
+      </div>
     </div>
   </div>
 </div>

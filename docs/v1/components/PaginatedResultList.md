@@ -81,7 +81,36 @@ The callback function returns an Array of HTML elements (think list items) which
 
 ### CSS Styles
 
+All reactivebase components are `rbc` namespaced.
 
+![Annotated Image](https://i.imgur.com/TPP2Zuh.png)
+
+```html
+<div class="row">
+  <div class="col s12 col-xs-12" style="padding: 0px;">
+    <div class="rbc rbc-pagination col s12 col-xs-12 card thumbnail rbc-title-inactive rbc-pagination-top">
+      <div class="col s12 col-xs-12">
+        <ul class="pagination">
+          <li class="waves-effect"><a class="rbc-page-previous"><i class="fa fa-chevron-left"></i></a></li>
+          <li class="rbc-page-number waves-effect"><a>1</a></li>
+          <li class="rbc-page-number active rbc-pagination-active"><a>2</a></li>
+          <li class="rbc-page-number waves-effect"><a>3</a></li>
+          <li class="rbc-page-number waves-effect"><a>4</a></li>
+          <li class="rbc-page-number waves-effect"><a>5</a></li>
+          <li class="rbc-page-number waves-effect"><a>6</a></li>
+          <li class="waves-effect"><a class="rbc-page-next"><i class="fa fa-chevron-right"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col s12 col-xs-12" style="padding: 0px;">
+    <div class="rbc rbc-resultlist card thumbnail rbc-title-active rbc-sort-inactive" style="max-height: 333px;">
+      <h4 class="rbc-title col s12 col-xs-12">Cities</h4>
+      ...
+    </div>
+  </div>
+</div>
+```
 
 ### Examples
 

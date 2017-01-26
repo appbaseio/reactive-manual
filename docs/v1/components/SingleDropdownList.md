@@ -52,7 +52,7 @@ Example uses:
 
 All reactivebase components are `rbc` namespaced.
 
-![Annotated image](https://i.imgur.com/idloNmM.png)
+![Annotated image](https://i.imgur.com/8FY18nw.png)
 
 ```html
 <div class="rbc col s12 col-xs-12 card thumbnail rbc-title-active rbc-singledropdownlist rbc-placeholder-active">
