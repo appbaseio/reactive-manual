@@ -11,6 +11,8 @@ Examples uses:
 * create an e-commerce facet like search experience.
 * create a filter for airlines to fly by in a flight booking experience.
 
+### Usage
+
 ```js
 <MultiList
   sensorId="CitySensor"
@@ -27,23 +29,23 @@ Examples uses:
 
 ### Props
 
-- **sensorId** `String`
+- **sensorId** `String`  
     unique id of the sensor, can be referenced in an actuator's `depends` prop.
-- **appbaseField** `String`
+- **appbaseField** `String`  
     data field to be mapped with the component's UI view. The list items are filtered by a database query on this field.
-- **title** `String` [optional]
+- **title** `String` [optional]  
     title of the component to be shown in the UI. Defaults to no title being shown.
-- **size** `Number` [optional]
+- **size** `Number` [optional]  
     number of list items to be displayed. Defaults to showing a `100` items. Max value for this prop can be `1000`.
--  **sortBy** `String` [optional]
+-  **sortBy** `String` [optional]  
     sorts the list items by one of `count`, `asc`, `desc`. Defaults to `count`, which sorts the list by the frequency of count value, most first.
-- **defaultSelected** `String or Array` [optional]
+- **defaultSelected** `String or Array` [optional]  
     pre-select one or more list items. Accepts either a `String` or an `Array` object containing the items that should be selected. It is important that the passed value(s) exactly match the field value as stored in the DB.
-- **showCount** `Boolean` [optional]
+- **showCount** `Boolean` [optional]  
     show count value of the number of occurences besides each list item. Defaults to `true`.
-- **showSearch** `Boolean` [optional]
+- **showSearch** `Boolean` [optional]  
     whether to show a searchbox to filter the list items locally. Defaults to true.
-- **searchPlaceholder** `String` [optional]
+- **searchPlaceholder** `String` [optional]  
     placeholder to be displayed in the searchbox, only applicable when the `showSearch` prop is set to `true`. When applicable, the default placeholder value is set to "Search".
 
 

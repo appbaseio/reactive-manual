@@ -28,23 +28,23 @@ Example uses:
 
 ### Props
 
-- **sensorId** `String`
+- **sensorId** `String`  
     unique id of the sensor, can be referenced in an actuator's `depends` prop.
-- **appbaseField** `String`
+- **appbaseField** `String`  
     data field to be mapped with the component's UI view. The list items are filtered by a database query on this field.
-- **title** `String` [optional]
+- **title** `String` [optional]  
     title of the component to be shown in the UI.
-- **size** `Number` [optional]
+- **size** `Number` [optional]  
     control how many items to display in the List. Defaults to 100.
-- **sortBy** `String` [optional]
+- **sortBy** `String` [optional]  
     sorts the list items by one of `count`, `asc`, `desc`. Defaults to `count`, which sorts the list by the frequency of count     value, most first.
-- **defaultSelected** `string` [optional]
+- **defaultSelected** `string` [optional]  
     pre-selects an item from the list.
-- **showCount** `Boolean` [optional]
+- **showCount** `Boolean` [optional]  
     show count value of the number of occurences besides a list item. Defaults to `true`.
-- **showSearch** `Boolean` [optional]
+- **showSearch** `Boolean` [optional]  
     whether to show a searchbox to filter the list items locally. Defaults to true.
-- **searchPlaceholder** `String` [optional]
+- **searchPlaceholder** `String` [optional]  
     placeholder to be displayed in the searchbox, only applicable when the `showSearch` prop is set to true. When applicable, the default placeholder value is set to "Search".
 
 

@@ -24,15 +24,15 @@ Example uses:
 
 ### Props
 
-- **sensorId** `String`
+- **sensorId** `String`  
     unique id of the sensor, can be referenced when creating a combined query context in an actuator’s depends prop.
-- **appbaseField** `String` or `Array`
+- **appbaseField** `String` or `Array`  
     DB data field(s) on which the search query will be aplied to. If you want to search across multiple fields, pass them as an `Array`.
-- **title** `String` [optional]
+- **title** `String` [optional]  
     Sets the title of the component to be shown in the UI.
-- **placeholder** `String` [optional]
+- **placeholder** `String` [optional]  
     Sets the placeholder text to be shown in the searhbox input field. Defaults to "Search...".
-- **autocomplete** `Boolean` [optional]
+- **autocomplete** `Boolean` [optional]  
     Sets whether the autocomplete functionality should be enabled or disabled. Defaults to true.
 
 
