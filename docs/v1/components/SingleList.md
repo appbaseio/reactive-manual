@@ -37,7 +37,7 @@ Example uses:
 - **size** `Number` [optional]  
     control how many items to display in the List. Defaults to 100.
 - **sortBy** `String` [optional]  
-    sorts the list items by one of `count`, `asc`, `desc`. Defaults to `count`, which sorts the list by the frequency of count     value, most first.
+    sort the list items by one of `count`, `asc`, `desc`. Defaults to `count`, which sorts the list by the frequency of count     value, most first.
 - **defaultSelected** `string` [optional]  
     pre-selects an item from the list.
 - **showCount** `Boolean` [optional]  

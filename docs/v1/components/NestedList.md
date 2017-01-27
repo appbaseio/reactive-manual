@@ -4,10 +4,11 @@
 
 ![Image to be displayed](https://i.imgur.com/f5aO5HP.png)
 
-A `NestedList` sensor component creates a nested select list UI widget. It is used for filtering results based on the current selection from a list of items.
+A `NestedList` sensor component creates a nested list UI widget. It is used for filtering items by a hierarchy of categories.
+It is used for filtering results based on the current selection from a list of items.
 
 Example uses:
-* select a sub-category from a list of categories for filtering e-commerce search results.
+* show a two-level category list for an e-commerce search experience.
 
 ### Usage
 
@@ -16,29 +17,37 @@ Example uses:
   sensorId="CarCategorySensor"
   appbaseField={[this.props.mapping.brand, this.props.mapping.model]}
   title="List of Brand > Model"
-  showCount={true}
   size={100}
   sortBy="asc"
+  defaultSelected=["ford", "galaxy"]
+  showCount={true}
+  showSearch={false}
+  searchPlaceholder="Search"
 />
 ```
 
 ### Props
 
 - **sensorId** `String`  
-    unique id of the sensor, can be referenced when creating a combined query context in an actuator's `depends` prop.  
-- **appbaseField** `Array of String`  
-    DB data fields to be mapped with the component's UI options. The number of fields determine the level of nesting, in order.
+    unique id of the sensor, can be referenced in an actuator's `depends` prop.
+- **appbaseField** `Array`  
+    data field(s) to be mapped with the component's UI view. A nested list component supports multiple fields passed as an Array denoting the order of nesting.
 - **title** `String` [optional]  
     title of the component to be shown in the UI.
-- **defaultSelected** `string` [optional]  
-    default selected value pre-selects an option from the list.
-- **showCount** `Boolean` [optional]  
-    show count of number of occurences besides an item. Defaults to `true`.
 - **size** `Number` [optional]  
     control how many items to display in the List. Defaults to 100.
--  **sortBy** `String` [optional]  
-    property that decides on how to sort the list items, accepts one of `count`, `asc` or `desc` as valid values. `count` sorts the list based on the count occurences, with highest value at the top. `asc` sorts the list in the ascending order of the list item (Alphabetical). `desc` sorts the list in the descending order of the term. Defaulted to `count`.
+- **sortBy** `String` [optional]  
+    sort the list items by one of `count`, `asc`, or `desc`. Defaults to `count`, which sorts the list by the frequency of count     value, most first.
+- **defaultSelected** `Array` [optional]  
+    pre-select a nested list item. Accepts an `Array` object containing the hierarchy of items to be selected. It is important that the passed value(s) exactly match the field value(s) as stored in the DB.
+- **showCount** `Boolean` [optional]  
+    show a count of the number of occurences besides each list item. Defaults to `true`.
+- **showSearch** `Boolean` [optional]  
+    whether to show a searchbox to filter the list items locally. Defaults to true.
+- **searchPlaceholder** `String` [optional]  
+    placeholder to be displayed in the searchbox, only applicable when the `showSearch` prop is set to `true`. When applicable, the default placeholder value is set to "Search".
 
+**Note:** A NestedList component's props are exactly like a SingleList component except for the `appbaseField` prop which takes an Array to denote the level of nesting.
 
 ### CSS Styles API
 
@@ -81,4 +90,3 @@ All reactivebase components are `rbc` namespaced.
 4. List with a dependency on another sensor
 
 5. Playground (with all knob actions)
-
