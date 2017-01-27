@@ -55,16 +55,16 @@ var docbaseConfig ={
                   "label":"Multi List"
                },
                {
-                  "name":"NestedList",
-                  "label":"Nested List"
-               },
-               {
                   "name":"SingleDropdownList",
                   "label":"Single Dropdown List"
                },
                {
                   "name":"MultiDropdownList",
                   "label":"Multi Dropdown List"
+               },
+               {
+                  "name":"NestedList",
+                  "label":"Nested List"
                },
                {
                   "name":"SingleRange",
@@ -75,14 +75,6 @@ var docbaseConfig ={
                   "label":"Multi Range"
                },
                {
-                  "name":"DatePicker",
-                  "label":"Date Picker"
-               },
-               {
-                  "name":"DateRange",
-                  "label":"Date Range"
-               },
-               {
                   "name":"SingleDropdownRange",
                   "label":"Single Dropdown Range"
                },
@@ -91,12 +83,12 @@ var docbaseConfig ={
                   "label":"Multi Dropdown Range"
                },
                {
-                  "name":"RangeSlider",
-                  "label":"Range Slider"
-               },
-               {
                   "name":"ToggleButton",
                   "label":"Toggle Button"
+               },
+               {
+                  "name":"RangeSlider",
+                  "label":"Range Slider"
                },
                {
                   "name":"TextField",
@@ -105,6 +97,14 @@ var docbaseConfig ={
                {
                   "name":"DataSearch",
                   "label":"Data Search"
+               },
+               {
+                  "name":"DatePicker",
+                  "label":"Date Picker"
+               },
+               {
+                  "name":"DateRange",
+                  "label":"Date Range"
                },
                {
                   "name":"ResultList",
