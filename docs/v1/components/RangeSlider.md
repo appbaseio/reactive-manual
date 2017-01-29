@@ -4,36 +4,50 @@
 
 ![Image to be displayed](https://i.imgur.com/OYUWZHL.png)
 
-A `RangeSlider` component creates a numeric range slider. It's useful for granular filtering of numeric data.
+A `RangeSlider` sensor component creates a numeric range slider UI widget. It is used for granular filtering of numeric data.
+
+Example uses:
+
+* filtering products from a price range in an e-commerce shopping experience.
+* filtering flights from a range of departure and arrival times.
+
+### Usage
 
 ```js
 <RangeSlider
-  sensorId="GuestCount"
-  appbaseField={this.props.mapping.guestcount}
-  title="RSVPs"
+  sensorId="RangeSliderSensor"
+  appbaseField="guests"
+  title="Guests"
+  threshold={
+    {
+      "start": 0,
+      "end": 10
+    }
+  }
   defaultSelected={
-    { 
+    {
       "start": 1,
       "end": 5
     }
   }
-  startThreshold=0
-  endThreshold=10
   stepValue=1
 />
 ```
 
 ### Props
 
-- **sensorId** : `String`: should be unique id of sensor which can be used in other sensor's dependencies.   
-- **appbaseField** : `String`: is the name of the field for the range slider data in the appbase.io app. For a `RangeSlider` component, the field should be of a numeric data type.
-- **title**: `String`: Sets the title of the component to be shown in the UI.
-- **defaultSelected**: `Object`: (Optional) is the default selection of the slider values.    
-- **startThreshold**: `Number`: is the minimum value available to be set on the range slider.  
-- **endThreshold**: `Number`: is the maximum value avaiable to be set on the range slider.  
-- **stepValue**: `Number`: is the step value between two nearest units, defaults to 1.
-- **depends**: `Object`: It should contain the sensors on which the component is dependent. [read more](https://appbaseio.github.io/reactive-maps-docs/v1/getting-started/Dependency.html)
-
+- **sensorId** `String`  
+    unique id of the sensor, can be referenced in an actuator's `depends` prop.
+- **appbaseField** `String`  
+    DB data field to be mapped with the component's UI view.The selected range creates a database query on this field.
+- **title** `String` [optional]  
+    title of the component to be shown in the UI.
+- **range** `Object`  
+    an object with `start` and `end` keys and corresponding numeric values denoting the minimum and maximum possible slider values.
+- **rangeLabels** `Object` [optional]  
+    an object with `start` and `end` keys and corresponding `String` labels to show labels near the ends of the `RangeSlider` component.
+- **defaultSelected** `Object` [optional]  
+    an object with `start` and `end` keys and corresponding numeric values denoting the pre-selected range values.
 
 ### CSS Styles
 
@@ -42,7 +56,7 @@ All reactivebase components are `rbc` namespaced.
 ![Annotated image](https://i.imgur.com/jXeI9W1.png)
 
 ```html
-<div class="rbc rbc-rangeslider card thumbnail col s12 col-xs-12 rbc-title-active">
+<div class="rbc rbc-rangeslider card thumbnail col s12 col-xs-12 rbc-title-active rbc-labels-inactive">
     <h4 class="rbc-title col s12 col-xs-12">Guests</h4>
     <div class="rbc-bar-container col s12 col-xs-12">
       <span class="rbc-bar-item">

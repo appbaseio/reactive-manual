@@ -30,13 +30,13 @@ Example uses:
 ### Props
 
 - **sensorId** `String`  
-    unique id of the sensor, can be referenced in an actuator's `depends` prop.  
+    unique id of the sensor, can be referenced in an actuator's `depends` prop.
 - **appbaseField** `String`  
     DB data field to be mapped with the component's UI view.The selected buttons create a database query on this field.
 - **title** `String` [optional]  
     title of the component to be shown in the UI.
 - **data** `Object Array`  
-    is an object array of {label:label, value:value} kv pairs, `label` is displayed in the UI and `value` is the corresponding actual field value in the database.
+    an object array of {label:label, value:value} kv pairs, `label` is displayed in the UI and `value` is the corresponding actual field value in the database.
 - **defaultSelected** `Array` [optional]  
     an array of default selected label(s) to pre-select one or more buttons.
 - **multiSelect** `Boolean` [optional]  
