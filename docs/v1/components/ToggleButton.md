@@ -11,15 +11,13 @@ Example uses:
 * display restaurants that accept delivery and are open now,
 * show flight tickets by one way, round trip and multi-city options.
 
-ToggleButton creates an online query filter by using the `data` prop values. It can be used with other sensor components to create a combined query filter context. Read more on using multiple sensors together in the [`depends`]() doc.
-
 ### Usage
 
 ```js
 <ToggleButton
   sensorId="MeetupTops"
   appbaseField="group_topics.topic_name.raw"
-  title="Meetup Topics"
+  title="ToggleButton component"
   data={
     [{"label": "Social",   "value": "Social"},
      {"label": "Travel",   "value": "Travel"},
@@ -32,9 +30,9 @@ ToggleButton creates an online query filter by using the `data` prop values. It 
 ### Props
 
 - **sensorId** `String`  
-    unique id of the sensor, can be referenced when creating a combined query context in an actuator's `depends` prop.  
+    unique id of the sensor, can be referenced in an actuator's `depends` prop.  
 - **appbaseField** `String`  
-    DB data field to be mapped with the component's UI options.
+    DB data field to be mapped with the component's UI view.The selected buttons create a database query on this field.
 - **title** `String` [optional]  
     title of the component to be shown in the UI.
 - **data** `Object Array`  
@@ -43,7 +41,6 @@ ToggleButton creates an online query filter by using the `data` prop values. It 
     an array of default selected label(s) to pre-select one or more buttons.
 - **multiSelect** `Boolean` [optional]  
     whether multiple buttons can be selected, defaults to **true**. When set to **false**, only one button can be selected.
-
 
 ### CSS Styles API
 
