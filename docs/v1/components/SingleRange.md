@@ -4,7 +4,7 @@
 
 ![Image to be displayed](https://i.imgur.com/55jFax6.png)
 
-A `SingleRange` sensor component creates a numeric range selector UI widget. It is just like a list widget, but for numeric data.
+A `SingleRange` sensor component creates a numeric range selector UI widget. It is like a list widget, but for numeric data.
 
 Example uses:
 * filtering search results by prices in an e-commerce or food delivery experience.
@@ -38,7 +38,7 @@ Example uses:
 - **data** `Object Array`  
     collection of UI `labels` with associated `start` and `end` range values.
 - **defaultSelected** `String`  
-    pre-select a label from the data array.
+    pre-select a label from the `data` array.
 
 
 ### CSS Styles
