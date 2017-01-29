@@ -56,27 +56,37 @@ All reactivebase components are `rbc` namespaced.
 ![Annotated image](https://i.imgur.com/Gh0iVDb.png)
 
 ```html
-<div class="rbc col s12 col-xs-12 card thumbnail rbc-search-active rbc-title-active rbc-placeholder-active rbc-singlelist">
-  <h4 class="rbc-title col s12 col-xs-12">Cities</h4>
-  <div class="rbc-search-container col s12 col-xs-12">
-    <input type="text" class="rbc-input col s12 col-xs-12 form-control" value="" placeholder="Search City">
-  </div>
-  <div class="rbc-list-container col s12 col-xs-12">
-    <div class="rbc-list-item row">
-      <input type="radio" class="rbc-radio-item" value="London">
-      <label class="rbc-label">London <span class="rbc-count">(211)</span></label>
-    </div>
-  </div>
+<div class="rbc rbc-nestedlist col s12 col-xs-12 card thumbnail rbc-search-inactive rbc-title-active" style="height: 464px;">
+  <h4 class="rbc-title col s12 col-xs-12">NestedList</h4>
+  <ul class="row rbc-list-container">
+    <li class="rbc-list-container col s12 col-xs-12">
+      <a href="javascript:void(0);" class="rbc-list-item rbc-item-active">
+        <span class="rbc-label">volkswagen</span>
+        <span class="rbc-count"></span>
+        <i class="fa fa-chevron-right"></i>
+      </a>
+      <ul class="rbc-sublist-container rbc-indent col s12 col-xs-12">
+        <li class="rbc-list-container col s12 col-xs-12">
+          <a href="javascript:void(0);" class="rbc-list-item rbc-item-inactive">
+            <span class="rbc-label">golf</span>
+            <span class="rbc-count"></span>
+          </a>
+        </li>
+        ...
+      </a>
+    </li>
+    ...
+  </ul>
 </div>
 ```
 
-* SingleList component's class name is `rbc-singlelist`. Additionally, depending on the presence / absence of the `title` prop, a `rbc-title-active` or `rbc-title-inactive` class is respectively applied. Similarly for `search` and `searchPlaceholder` props, classnames of `rbc-search-active`, `rbc-search-inactive`, `rbc-placeholder-active`, `rbc-placeholder-active` are applied.
+* NestedList component's class name is `rbc-nestedlist`. Additionally, depending on the presence / absence of the `title` prop, a `rbc-title-active` or `rbc-title-inactive` class is respectively applied. Similarly for `search` and `searchPlaceholder` props, classnames of `rbc-search-search-active`, `rbc-search-inactive`, `rbc-placeholder-active`, `rbc-placeholder-inactive` are applied.
 * the title element has a class name of `rbc-title`.
 * the search element has a class name of `rbc-search-container`.
-* the radio inputs are encapsulated inside a `rbc-list-container` class with each element having class name of `rbc-list-item`.
-* the input radio element has a class name of `rbc-radio-item`.
+* the list items are encapsulated inside a `rbc-list-container` class with each element having a class name of `rbc-list-item`.
 * the label element has a class name of `rbc-label`.
 * the element containing count inside the label has a class name of `rbc-count`.
+* the nested list items are encapsulated inside a `rbc-sublist-container` class with each element having a class name of `rbc-list-item` and each list item similarly having an element with a `rbc-label` class and a count with a `rbc-count` class.
 
 
 ### Examples
