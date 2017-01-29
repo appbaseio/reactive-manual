@@ -4,11 +4,11 @@
 
 ![Image to be displayed](https://i.imgur.com/HnZexE9.png)
 
-A `DatePicker` sensor component creates a radio select list UI widget. It is used for filtering results based on the current selection from a list of items.
+A `DatePicker` sensor component creates a calender view based UI widget. It is used for filtering results by a date like property.
 
 Example uses:
-* select a category from a list of categories for filtering e-commerce search results.
-* filtering restaurants by a cuisine choice.
+* finding flights departing on a particular day.
+* picking your date of birth for an online application form.
 
 ### Usage
 
@@ -16,7 +16,7 @@ Example uses:
 <DatePicker
   sensorId="CitySensor"
   appbaseField="mtime"
-  title="Datepicker"
+  title="DatePicker"
 />
 ```
 
@@ -28,19 +28,6 @@ Example uses:
     DB data field to be mapped with the component's UI options.
 - **title** `String` [optional]  
     title of the component to be shown in the UI.
-- **defaultSelected** `string` [optional]  
-    default selected value pre-selects an option from the list.
-- **showCount** `Boolean` [optional]  
-    show count of number of occurences besides an item. Defaults to `true`.
-- **size** `Number` [optional]  
-    control how many items to display in the List. Defaults to 100.
--  **sortBy** `String` [optional]  
-    property that decides on how to sort the list items, accepts one of `count`, `asc` or `desc` as valid values. `count` sorts the list based on the count occurences, with highest value at the top. `asc` sorts the list in the ascending order of the list item (Alphabetical). `desc` sorts the list in the descending order of the term. Defaulted to `count`.
-- **showSearch** `Boolean` [optional]  
-    whether to show a searchbox to filter the list items locally. Defaults to true.
-- **searchPlaceholder** `String` [optional]  
-    placeholder to be displayed in the searchbox, only applicable when the `showSearch` prop is set to true.
-
 
 ### CSS Styles API
 
@@ -70,14 +57,8 @@ All reactivebase components are `rbc` namespaced.
 </div>
 ```
 
-* DatePicker component's class name is `rbc-singlelist`. Additionally, depending on the presence / absence of the `title` prop, a `rbc-title-active` or `rbc-title-inactive` class is respectively applied. Similarly for `search` and `searchPlaceholder` props, classnames of `rbc-search-active`, `rbc-search-inactive`, `rbc-placeholder-active`, `rbc-placeholder-active` are applied.
+* DatePicker component's class name is `rbc-singlelist`. Additionally, depending on the presence / absence of the `title` prop, a `rbc-title-active` or `rbc-title-inactive` class is respectively applied. 
 * the title element has a class name of `rbc-title`.
-* the search element has a class name of `rbc-search-container`.
-* the radio inputs are encapsulated inside a `rbc-list-container` class with each element having class name of `rbc-list-item`.
-* the input radio element has a class name of `rbc-radio-item`.
-* the label element has a class name of `rbc-label`.
-* the element containing count inside the label has a class name of `rbc-count`.
-
 
 ### Examples
 
