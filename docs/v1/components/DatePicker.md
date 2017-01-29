@@ -14,9 +14,11 @@ Example uses:
 
 ```js
 <DatePicker
-  sensorId="CitySensor"
+  sensorId="DateSensor"
   appbaseField="mtime"
   title="DatePicker"
+  numberOfMonths={1}
+  allowAllDates={true}
 />
 ```
 
@@ -28,6 +30,23 @@ Example uses:
     DB data field to be mapped with the component's UI options.
 - **title** `String` [optional]  
     title of the component to be shown in the UI.
+- **numberOfMonths** `Number` [optional]  
+    number of months to be shown in the calendar view. Defaults to 1.
+- **allowAllDates** `Boolean` [optional]  
+    whether to all all dates or dates starting from today. Defaults to `true`, i.e. allowing all dates.
+- **date** `Object of Moment` [optional]  
+    pre-select a default date based on a [moment](https://github.com/moment/moment/) object representing a date.
+- **extra** `Object` [optional]  
+    supports the full gauntlet of props as defined in airbnb's [react-dates](https://github.com/airbnb/react-dates) component.
+
+An example `extra` prop object would look like:
+
+```js
+extra={{
+  "withFullScreenPortal": true,
+  "showClearDate": true
+}}
+```
 
 ### CSS Styles API
 
@@ -40,18 +59,7 @@ All reactivebase components are `rbc` namespaced.
   <h4 class="rbc-title col s12 col-xs-12">DatePicker</h4>
   <div class="col s12 col-xs-12">
     <div class="SingleDatePicker">
-      <div class="SingleDatePickerInput">
-        <div class="DateInput DateInput--with-caret">
-          <label class="DateInput__label" for="DateSensor">Select Date</label>
-          <input type="text" class="DateInput__input" id="DateSensor" name="DateSensor" value="" placeholder="Select Date" autocomplete="off">
-          <div class="DateInput__display-text DateInput__display-text--focused">Select Date</div>
-        </div>
-      </div>
-      <div class="SingleDatePicker__picker SingleDatePicker__picker--show SingleDatePicker__picker--direction-left SingleDatePicker__picker--horizontal" style="left: 0px;">
-        <div class="DayPicker DayPicker--horizontal" style="width: 318px;">
           ...
-        </div>
-      </div>
     </div>
   </div>
 </div>
@@ -62,4 +70,14 @@ All reactivebase components are `rbc` namespaced.
 
 ### Examples
 
+1. Basic component example
 
+2. Show more than one month
+
+3. Start with a default date
+
+4. Start with an initial focus
+
+5. An example using `extra` prop
+
+6. Playground mode

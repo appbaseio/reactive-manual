@@ -4,19 +4,21 @@
 
 ![Image to be displayed](https://i.imgur.com/Tl2xXNS.png)
 
-A `DateRange` sensor component creates a radio select list UI widget. It is used for filtering results based on the current selection from a list of items.
+A `DateRange` sensor component creates a calendar view based UI widget. It is used for filtering results by a date like property.
 
 Example uses:
-* select a category from a list of categories for filtering e-commerce search results.
-* filtering restaurants by a cuisine choice.
+* picking a date range for booking a hotel room.
+* finding search results from a database based on date range.
 
 ### Usage
 
 ```js
 <DateRange
-  sensorId="CitySensor"
+  sensorId="DateSensor"
   appbaseField="mtime"
-  title="Datepicker"
+  title="DatePicker"
+  numberOfMonths={2}
+  allowAllDates={true}
 />
 ```
 
@@ -28,19 +30,25 @@ Example uses:
     DB data field to be mapped with the component's UI options.
 - **title** `String` [optional]  
     title of the component to be shown in the UI.
-- **defaultSelected** `string` [optional]  
-    default selected value pre-selects an option from the list.
-- **showCount** `Boolean` [optional]  
-    show count of number of occurences besides an item. Defaults to `true`.
-- **size** `Number` [optional]  
-    control how many items to display in the List. Defaults to 100.
--  **sortBy** `String` [optional]  
-    property that decides on how to sort the list items, accepts one of `count`, `asc` or `desc` as valid values. `count` sorts the list based on the count occurences, with highest value at the top. `asc` sorts the list in the ascending order of the list item (Alphabetical). `desc` sorts the list in the descending order of the term. Defaulted to `count`.
-- **showSearch** `Boolean` [optional]  
-    whether to show a searchbox to filter the list items locally. Defaults to true.
-- **searchPlaceholder** `String` [optional]  
-    placeholder to be displayed in the searchbox, only applicable when the `showSearch` prop is set to true.
+- **numberOfMonths** `Number` [optional]  
+    number of months to be shown in the calendar view. Defaults to 1.
+- **allowAllDates** `Boolean` [optional]  
+    whether to all all dates or dates starting from today. Defaults to `true`, i.e. allowing all dates.
+- **startDate** `Object of Moment` [optional]  
+    pre-select a start date based on a [moment](https://github.com/moment/moment/) object representing a date.
+- **endDate** `Object of Moment` [optional]  
+    pre-select an end date based on a [moment](https://github.com/moment/moment/) object representing a date.
+- **extra** `Object` [optional]  
+    supports the full gauntlet of props as defined in airbnb's [react-dates](https://github.com/airbnb/react-dates) component.
 
+An example `extra` prop object would look like:
+
+```js
+extra={{
+  "withFullScreenPortal": true,
+  "showClearDate": true
+}}
+```
 
 ### CSS Styles API
 
@@ -54,41 +62,26 @@ All reactivebase components are `rbc` namespaced.
   <div class="rbc-daterange-component col s12 col-xs-12">
     <div class="DateRangePicker">
       <div class="DateRangePickerInput">
-        <div class="DateInput DateInput--with-caret">
-          <label class="DateInput__label" for="startDate">Start Date</label>
-          <input type="text" class="DateInput__input" id="startDate" name="startDate" value="" placeholder="Start Date" autocomplete="off">
-          <div class="DateInput__display-text DateInput__display-text--focused">Start Date</div>
-        </div>
-        <div class="DateRangePickerInput__arrow">
-          <svg viewBox="0 0 1000 1000">
-            <path d="M694.4 242.4l249.1 249.1c11 11 11 21 0 32L694.4 772.7c-5 5-10 7-16 7s-11-2-16-7c-11-11-11-21 0-32l210.1-210.1H67.1c-13 0-23-10-23-23s10-23 23-23h805.4L662.4 274.5c-21-21.1 11-53.1 32-32.1z"></path>
-          </svg>
-        </div>
-        <div class="DateInput">
-          <label class="DateInput__label" for="endDate">End Date</label>
-          <input type="text" class="DateInput__input" id="endDate" name="endDate" value="" placeholder="End Date" autocomplete="off">
-          <div class="DateInput__display-text">End Date</div>
-        </div>
-      </div>
-      <div class="DateRangePicker__picker DateRangePicker__picker--show DateRangePicker__picker--direction-left DateRangePicker__picker--horizontal" style="left: 0px;">
-        <div class="DayPicker DayPicker--horizontal" style="width: 618px;">
           ...
-        </div>
       </div>
     </div>
   </div>
 </div>
 ```
 
-* DateRange component's class name is `rbc-singlelist`. Additionally, depending on the presence / absence of the `title` prop, a `rbc-title-active` or `rbc-title-inactive` class is respectively applied. Similarly for `search` and `searchPlaceholder` props, classnames of `rbc-search-active`, `rbc-search-inactive`, `rbc-placeholder-active`, `rbc-placeholder-active` are applied.
+* DateRange component's class name is `rbc-daterange`. Additionally, depending on the presence / absence of the `title` prop, a `rbc-title-active` or `rbc-title-inactive` class is respectively applied.
 * the title element has a class name of `rbc-title`.
-* the search element has a class name of `rbc-search-container`.
-* the radio inputs are encapsulated inside a `rbc-list-container` class with each element having class name of `rbc-list-item`.
-* the input radio element has a class name of `rbc-radio-item`.
-* the label element has a class name of `rbc-label`.
-* the element containing count inside the label has a class name of `rbc-count`.
-
 
 ### Examples
 
+1. Basic component example
 
+2. Show more than one month
+
+3. Start a default date
+
+4. Enable days only starting today onwards
+
+5. An example using `extra` prop
+
+6. Playground mode
