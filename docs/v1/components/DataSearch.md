@@ -14,27 +14,26 @@ Example uses:
 
 ```js
 <DataSearch
-	sensorId="SearchSensor"
-	appbaseField={["group_venue", "group_city"]}
-	title="Search"
-	placeholder="Search for cities or venues"
-	autocomplete={true}
+  sensorId="SearchSensor"
+  appbaseField={["group_venue", "group_city"]}
+  title="Search"
+  placeholder="Search for cities or venues"
+  autocomplete={true}
 />
 ```
 
 ### Props
 
 - **sensorId** `String`  
-		unique id of the sensor, can be referenced when creating a combined query context in an actuator’s depends prop.
-- **appbaseField** `String` or `Array`  
-		DB data field(s) on which the search query will be aplied to. If you want to search across multiple fields, pass them as an `Array`.
+    unique id of the sensor, can be referenced in an actuator’s depends prop.
+- **appbaseField** `String or Array`  
+    data field(s) on which the search query will be aplied to. If you want to search across multiple fields, pass them as an `Array`.
 - **title** `String` [optional]  
-		Sets the title of the component to be shown in the UI.
+    Sets the title of the component to be shown in the UI.
 - **placeholder** `String` [optional]  
-		Sets the placeholder text to be shown in the searhbox input field. Defaults to "Search...".
+    Sets the placeholder text to be shown in the searhbox input field. Defaults to "Search...".
 - **autocomplete** `Boolean` [optional]  
-		Sets whether the autocomplete functionality should be enabled or disabled. Defaults to true.
-
+    Sets whether the autocomplete functionality should be enabled or disabled. Defaults to true.
 
 ### CSS Styles
 
@@ -59,8 +58,12 @@ All reactivebase components are `rbc` namespaced.
 
 ```
 
-* DataSearch component's class name is `rbc-datasearch`. Additionally, depending on the presence / absence of the `placeholder` prop, a `rbc-placeholder-active` or `rbc-placeholder-inactive` class is respectively applied.
-
+* DataSearch component's class name is `rbc-datasearch`.
+* Additionally, depending on the presence / absence of the `placeholder` prop, a `rbc-placeholder-active` or `rbc-placeholder-inactive` class is respectively applied.
+* Also depending on the presence / absence of the `autocomplete` prop, a `rbc-autocomplete-active` or `rbc-autocomplete-inactive` class is respectively applied.
+* the title element has a class name of `rbc-title`.
+* the search container has a class name of `rbc-search-container`.
+* the input element inside the search container has a class name of `rbc-input`.
 
 ### Examples
 

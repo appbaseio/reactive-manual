@@ -48,7 +48,7 @@ All reactivebase components are `rbc` namespaced.
 
 * Textfield component's class name is `rbc-textfield`. Additionally, depending on the presence / absence of the `title` prop, a `rbc-title-active` or `rbc-title-inactive` class is respectively applied. Similarly for `placeholder` prop, classname of `rbc-placeholder-active` or `rbc-placeholder-active` is applied.
 * the title element has a class name of `rbc-title`.
-* the search element has a class name of `rbc-search-container`.
+* the search container has a class name of `rbc-search-container`.
 * the input element has a class name of `rbc-input`.
 
 
