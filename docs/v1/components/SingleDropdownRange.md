@@ -4,49 +4,41 @@
 
 ![Image to be displayed](https://i.imgur.com/A23Iu2w.png)
 
-A `SingleDropdownRange` sensor component creates a radio select list UI widget. It is used for filtering results based on the current selection from a list of items.
+A `SingleDropdownRange` sensor component creates a dropdown based numeric range selector UI widget. It is like a SingleList widget but for numeric data. It is also like SingleRange widget except displayed in a dropdown format.
 
 Example uses:
-* select a category from a list of categories for filtering e-commerce search results.
-* filtering restaurants by a cuisine choice.
+* filtering search results by prices in an e-commerce or food delivery experience.
+* browsing movies by a ratings filter.
 
 ### Usage
 
 ```js
-<SingleList
-  sensorId="CitySensor"
-  appbaseField="group.group_city.raw"
-  title="Cities"
-  defaultSelected="London"
-  showCount={true}
-  size={1000}
-  sortBy="count"
-  showSearch={true}
-  searchPlaceholder="Search City"
+<SingleDropdownRange
+  sensorId="PriceSensor"
+  appbaseField="price"
+  title="SingleDropdownRange component"
+  data={
+    [{"start": 0, "end": 10, "label": "Cheap"},
+     {"start": 11, "end": 20, "label": "Moderate"},
+     {"start": 21, "end": 50, "label": "Pricey"},
+     {"start": 51, "end": 1000, "label": "First Date"}]
+  }
+  defaultSelected="Cheap"
 />
 ```
 
 ### Props
 
 - **sensorId** `String`  
-    unique id of the sensor, can be referenced when creating a combined query context in an actuator's `depends` prop.  
+    unique id of the sensor, can be referenced in an actuator's `depends` prop.
 - **appbaseField** `String`  
-    DB data field to be mapped with the component's UI options.
-- **title** `String` [optional]  
+    data field to be mapped with the component's UI view. The range items are filtered by a database query on this field.
+- **title** `String`  
     title of the component to be shown in the UI.
-- **defaultSelected** `string` [optional]  
-    default selected value pre-selects an option from the list.
-- **showCount** `Boolean` [optional]  
-    show count of number of occurences besides an item. Defaults to `true`.
-- **size** `Number` [optional]  
-    control how many items to display in the List. Defaults to 100.
--  **sortBy** `String` [optional]  
-    property that decides on how to sort the list items, accepts one of `count`, `asc` or `desc` as valid values. `count` sorts the list based on the count occurences, with highest value at the top. `asc` sorts the list in the ascending order of the list item (Alphabetical). `desc` sorts the list in the descending order of the term. Defaulted to `count`.
-- **showSearch** `Boolean` [optional]  
-    whether to show a searchbox to filter the list items locally. Defaults to true.
-- **searchPlaceholder** `String` [optional]  
-    placeholder to be displayed in the searchbox, only applicable when the `showSearch` prop is set to true.
-
+- **data** `Object Array`  
+    collection of UI `labels` with associated `start` and `end` range values.
+- **defaultSelected** `String`  
+    pre-select a label from the `data` array.
 
 ### CSS Styles API
 
