@@ -33,13 +33,12 @@ Example uses:
     unique id of the sensor, can be referenced in an actuator's `depends` prop.
 - **appbaseField** `String`  
     data field to be mapped with the component's UI view. The range items are filtered by a database query on this field.
-- **title** `String`  
+- **title** `String` [optional]  
     title of the component to be shown in the UI.
 - **data** `Object Array`  
     collection of UI `labels` with associated `start` and `end` range values.
-- **defaultSelected** `String`  
+- **defaultSelected** `String` [optional]  
     pre-select a label from the `data` array.
-
 
 ### CSS Styles
 
