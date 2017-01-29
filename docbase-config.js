@@ -44,7 +44,7 @@ var docbaseConfig ={
          },
          {
             "name":"components",
-            "label":"Sensor Components",
+            "label":"Components",
             "files":[
                {
                   "name":"SingleList",
