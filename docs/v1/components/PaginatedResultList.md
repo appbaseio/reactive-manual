@@ -8,6 +8,13 @@
 
 A `PaginatedResultList` is an actuator component that creates a result list UI widget where results from all the applied filters are shown. It is just like a `ResultList` except with a UI for displaying pagination.
 
+Example uses include:
+
+* showing a result view in a e-commerce browsing experience.
+* displaying a forum thread filtered by a specific topi.
+
+### Usage
+
 ```js
 <PaginatedResultList
   sensorId="SearchResult"
