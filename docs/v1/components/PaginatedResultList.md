@@ -60,11 +60,11 @@ Example uses include:
     number of results to show per view. Defaults to 20.
 - **requestOnScroll** `Boolean` [optional]  
     should a paginate data request be made when scroll reaches the end of the component view? Defaults to `true`, allowing an infinite scroll functionality.
-- **componentStyle** `Object`  
+- **componentStyle** `Object` [optional]  
     CSS Styles to be applied to the **ResultList** component.
 - **onData** `Function` [optional]  
     a callback function where user can define how to render the view based on the data changes.
-- **depends** `Object`  
+- **depends** `Object` [optional]  
     an object defining the sensor components who state change triggers the `ResultList` query. You can [read more here](https://appbaseio.github.io/reactive-maps-docs/v1/getting-started/Dependency.html).
 
 ### Extending PaginatedResultList
