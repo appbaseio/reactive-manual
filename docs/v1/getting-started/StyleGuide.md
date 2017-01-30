@@ -15,19 +15,28 @@ All reactivebase components use a `rbc` namespace and base class. All classes us
 
 ### Component class API
 
-A component class specification follows a `rbc-{componentname}` naming pattern. For instance, a `SingleList` component will have a classname called`rbc-singlelist`.
+A component class specification follows a `rbc-{componentname}` naming pattern. For instance, a `SingleList` component will have a classname of `rbc-singlelist`.
 
 | Component Name  |  CSS Class Name |
 |---------------- | --------------- |
 | SingleList      | rbc-singlelist  |
 | MultiList       | rbc-multilist   |
+| SingleDropdownList      | rbc-singledropdownlist  |
+| MultiDropdownList       | rbc-multidropdownlist   |
+| NestedList      | rbc-nestedlist  |
 | SingleRange     | rbc-singlerange |
 | MultiRange      | rbc-multirange  |
-| RangeSlider     | rbc-rangeslider |
+| SingleDropdownRange      | rbc-singledropdownrange  |
+| MultiDropdownRange       | rbc-multidropdownrange   |
 | ToggleButton    | rbc-togglebutton |
+| RangeSlider     | rbc-rangeslider |
 | TextField       | rbc-textfield    |
 | DataSearch      | rbc-datasearch   |
+| DatePicker      | rbc-datepicker   |
+| DateRange       | rbc-daterange    |
 | ResultList      | rbc-resultlist   |
+| PaginatedResultList      | rbc-paginatedresultlist   |
+
 
 ### Component States class API
 
@@ -45,20 +54,34 @@ Globally applicable component states:
 
 | Component Prop    | CSS Class Name (when set) |
 |------------------ |-------------------------- |
-| title             | rbc-title-active                |
-| placeholder       | rbc-placeholder-active          |
+| title             | rbc-title-active          |
+| placeholder       | rbc-placeholder-active    |
 
-States applicable only to **SingleList** and **MultiList** components.
+States applicable only to **SingleList**, **MultiList** and **NestedList** components.
 
 | Component Prop    | CSS Class Name (when set) |
 |------------------ |-------------------------- |
-| showCount         | rbc-count-active                |
-| showSearch        | rbc-search-active               |
+| showCount         | rbc-count-active          |
+| showSearch        | rbc-search-active         |
+
+States applicable only to **DataSearch** component.
+
+| Component Prop   | CSS Class Name (when set) |
+|----------------- |-------------------------- |
+| autocomplete     | rbc-autocomplete-active   |
+
+States applicable only to **ResultList** component.
+
+| Component Prop   | CSS Class Name (when set) |
+|----------------- |-------------------------- |
+| sortOptions      | rbc-sortoptions-active    |
+| stream           | rbc-stream-active         |
 
 Each component's documentation contains a styles API which will list the relevant states and their CSS class names.
 
-### Subcomponent class API
+### Styling within components
 
-Components can have child components. For example, `ResultList` component contains a `ListItem` component for displaying each result row. Subcomponent class API follows the same naming convention as the component class API.
+Components can have child elements and subcomponents. All ReactiveBase components follow a consistent API so that end-users can work with the CSS classes of the inner elements.
 
+![ToggleButton annotated image](https://i.imgur.com/lMbqk2H.png)
 [Example here for ToggleButton component styles](http://opensource.appbase.io/reactivebase-manual/v1/components/ToggleButton.html#-togglebutton-css-styles-api).
