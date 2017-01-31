@@ -14,7 +14,7 @@ Example uses:
 
 ```js
 <DataSearch
-  sensorId="SearchSensor"
+  componentId="SearchSensor"
   appbaseField={["group_venue", "group_city"]}
   title="Search"
   placeholder="Search for cities or venues"
@@ -24,7 +24,7 @@ Example uses:
 
 ### Props
 
-- **sensorId** `String`  
+- **componentId** `String`  
     unique id of the sensor, can be referenced in an actuator’s depends prop.
 - **appbaseField** `String or Array`  
     data field(s) on which the search query will be aplied to. If you want to search across multiple fields, pass them as an `Array`.

@@ -15,7 +15,7 @@ Examples uses:
 
 ```js
 <MultiList
-  sensorId="CitySensor"
+  componentId="CitySensor"
   appbaseField="group_city.raw"
   title="MultiList: City Filter"
   size={100}
@@ -29,7 +29,7 @@ Examples uses:
 
 ### Props
 
-- **sensorId** `String`  
+- **componentId** `String`  
     unique id of the sensor, can be referenced in an actuator's `depends` prop.
 - **appbaseField** `String`  
     data field to be mapped with the component's UI view. The list items are filtered by a database query on this field.

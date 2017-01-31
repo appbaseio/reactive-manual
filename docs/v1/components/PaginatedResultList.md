@@ -17,7 +17,7 @@ Example uses include:
 
 ```js
 <PaginatedResultList
-  sensorId="SearchResult"
+  componentId="SearchResult"
   appbaseField={this.props.mapping.searchKey}
   title="Result List"
   paginationAt="both"
@@ -39,7 +39,7 @@ Example uses include:
 
 ### Props
 
-- **sensorId** `String`  
+- **componentId** `String`  
     unique id of the sensor, can be referenced in an actuator's `depends` prop.
 - **appbaseField** `String`  
     data field to be mapped with the `ResultList`'s UI view, used for providing a sorting context.

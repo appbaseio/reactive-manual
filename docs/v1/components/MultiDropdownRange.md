@@ -14,7 +14,7 @@ Example uses:
 
 ```js
 <MultiDropdownRange
-  sensorId="PriceSensor"
+  componentId="PriceSensor"
   appbaseField="price"
   title="MultiDropdownRange component"
   data={
@@ -29,7 +29,7 @@ Example uses:
 
 ### Props
 
-- **sensorId** `String`  
+- **componentId** `String`  
     unique id of the sensor, can be referenced in an actuator's `depends` prop.
 - **appbaseField** `String`  
     data field to be mapped with the component's UI view. The range items are filtered by a database query on this field.

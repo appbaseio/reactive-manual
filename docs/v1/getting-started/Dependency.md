@@ -10,7 +10,7 @@
 <AppbaseMap 
   ...
 depends={{
-    'SensorId': {
+    'componentId': {
         "operation": "must",
         "defaultQuery": this.cityQuery
         "doNotExecute": {true}
@@ -28,13 +28,13 @@ depends={{
 Let's take an example if topics lists is depenedent on city selection (topicSensor is dependent on citySensor).
 
 To achieve this
-1. Assign sensorId to city list.
-2. Use this sensorId in other sensor.
+1. Assign componentId to city list.
+2. Use this componentId in other sensor.
 
 - City Sensor should look like this
 ```
 <AppbaseList
-    sensorId="CitySensor"
+    componentId="CitySensor"
     inputData={this.props.mapping.city} 
    ...
 />
@@ -44,7 +44,7 @@ To achieve this
 
 ```javascript
 <AppbaseList
-    sensorId="TopicSensor"
+    componentId="TopicSensor"
     inputData={this.props.mapping.topic} 
    ...
     depends={{

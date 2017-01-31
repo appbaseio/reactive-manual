@@ -15,7 +15,7 @@ Example uses:
 
 ```js
 <RangeSlider
-  sensorId="RangeSliderSensor"
+  componentId="RangeSliderSensor"
   appbaseField="guests"
   title="Guests"
   threshold={
@@ -36,7 +36,7 @@ Example uses:
 
 ### Props
 
-- **sensorId** `String`  
+- **componentId** `String`  
     unique id of the sensor, can be referenced in an actuator's `depends` prop.
 - **appbaseField** `String`  
     DB data field to be mapped with the component's UI view.The selected range creates a database query on this field.

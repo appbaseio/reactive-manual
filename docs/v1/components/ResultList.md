@@ -17,7 +17,7 @@ Example uses:
 
 ```js
 <ResultList
-  sensorId="SearchResult"
+  componentId="SearchResult"
   appbaseField="ratings"
   title="ResultList"
   stream={true}
@@ -40,7 +40,7 @@ Example uses:
 
 ### Props
 
-- **sensorId** `String`  
+- **componentId** `String`  
     unique id of the sensor, can be referenced in an actuator's `depends` prop.
 - **appbaseField** `String`  
     data field to be mapped with the `ResultList`'s UI view, used for providing a sorting context.

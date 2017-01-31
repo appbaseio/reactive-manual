@@ -14,7 +14,7 @@ Example uses:
 
 ```js
 <NestedList
-  sensorId="CarCategorySensor"
+  componentId="CarCategorySensor"
   appbaseField={[this.props.mapping.brand, this.props.mapping.model]}
   title="List of Brand > Model"
   size={100}
@@ -28,7 +28,7 @@ Example uses:
 
 ### Props
 
-- **sensorId** `String`  
+- **componentId** `String`  
     unique id of the sensor, can be referenced in an actuator's `depends` prop.
 - **appbaseField** `Array`  
     data field(s) to be mapped with the component's UI view. A nested list component supports multiple fields passed as an Array denoting the order of nesting.

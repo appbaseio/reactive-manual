@@ -14,7 +14,7 @@ Example uses:
 
 ```js
 <SingleList
-  sensorId="CitySensor"
+  componentId="CitySensor"
   appbaseField="group.group_city.raw"
   title="Cities"
   size={100}
@@ -28,7 +28,7 @@ Example uses:
 
 ### Props
 
-- **sensorId** `String`  
+- **componentId** `String`  
     unique id of the sensor, can be referenced in an actuator's `depends` prop.
 - **appbaseField** `String`  
     data field to be mapped with the component's UI view. The list items are filtered by a database query on this field.

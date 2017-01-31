@@ -12,7 +12,7 @@ Unlike other components that have a specific query associated with their UI view
 
 ```js
 <TextField
-  sensorId="NameTextSensor"
+  componentId="NameTextSensor"
   appbaseField="name"
   title="TextField"
   placeholder="Type a car name"
@@ -21,7 +21,7 @@ Unlike other components that have a specific query associated with their UI view
 
 ### Props
 
-- **sensorId** `String`  
+- **componentId** `String`  
     unique id of the sensor, can be referenced in an actuator's `depends` prop.
 - **appbaseField** `String`  
     data field to be mapped with the component's UI view.

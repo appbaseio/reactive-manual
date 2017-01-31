@@ -15,7 +15,7 @@ Example uses:
 
 ```js
 <ToggleButton
-  sensorId="MeetupTops"
+  componentId="MeetupTops"
   appbaseField="group_topics.topic_name.raw"
   title="ToggleButton component"
   data={
@@ -29,7 +29,7 @@ Example uses:
 
 ### Props
 
-- **sensorId** `String`  
+- **componentId** `String`  
     unique id of the sensor, can be referenced in an actuator's `depends` prop.
 - **appbaseField** `String`  
     DB data field to be mapped with the component's UI view.The selected buttons create a database query on this field.
