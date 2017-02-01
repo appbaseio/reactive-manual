@@ -114,6 +114,8 @@ The callback function returns an Array of HTML elements (think list items) which
 
 All reactivebase components are `rbc` namespaced.
 
+![Annotated image](https://i.imgur.com/KtDriR7.png)
+
 ### Examples
 
 1. ResultList with all the default props with a single sensor filter.
