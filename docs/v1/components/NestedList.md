@@ -53,31 +53,25 @@ Example uses:
 
 All reactivebase components are `rbc` namespaced.
 
-![Annotated image](https://i.imgur.com/Gh0iVDb.png)
+![Annotated image](https://i.imgur.com/vClQmZU.png)
 
 ```html
-<div class="rbc rbc-nestedlist col s12 col-xs-12 card thumbnail rbc-search-inactive rbc-title-active" style="height: 464px;">
+<div class="rbc rbc-nestedlist col s12 col-xs-12 card thumbnail rbc-search-active rbc-title-active rbc-placeholder-active rbc-count-active" style="height: 500px;">
   <h4 class="rbc-title col s12 col-xs-12">NestedList</h4>
+  <div class="rbc-search-container col s12 col-xs-12">
+    <input type="text" class="rbc-input col s12 col-xs-12 form-control" value="" placeholder="Search Cars">
+  </div>
   <ul class="row rbc-list-container">
-    <li class="rbc-list-container col s12 col-xs-12">
-      <a href="javascript:void(0);" class="rbc-list-item rbc-item-active">
-        <span class="rbc-label">volkswagen</span>
-        <span class="rbc-count"></span>
-        <i class="fa fa-chevron-right"></i>
-      </a>
+    <li class="rbc-list-container col s12 col-xs-12"><a href="javascript:void(0);" class="rbc-list-item rbc-item-inactive"><span class="rbc-label">volkswage<span class="rbc-count">100</span></span><i class="fa fa-chevron-right"></i></a></li>
+    <li class="rbc-list-container col s12 col-xs-12"><a href="javascript:void(0);" class="rbc-list-item rbc-item-active"><span class="rbc-label">bm<span class="rbc-count">57</span></span><i class="fa fa-chevron-right"></i></a>
       <ul class="rbc-sublist-container rbc-indent col s12 col-xs-12">
-        <li class="rbc-list-container col s12 col-xs-12">
-          <a href="javascript:void(0);" class="rbc-list-item rbc-item-inactive">
-            <span class="rbc-label">golf</span>
-            <span class="rbc-count"></span>
-          </a>
-        </li>
-        ...
-      </a>
+        <li class="rbc-list-container col s12 col-xs-12"><a href="javascript:void(0);" class="rbc-list-item rbc-item-inactive"><span class="rbc-label">>3 serie><span class="rbc-count">28</span></span></a></li>
+        <li class="rbc-list-container col s12 col-xs-12"><a href="javascript:void(0);" class="rbc-list-item rbc-item-inactive"><span class="rbc-label">>5e><span class="rbc-count">12</span></span></a></li>
+      </ul>
     </li>
-    ...
   </ul>
 </div>
+
 ```
 
 * NestedList component's class name is `rbc-nestedlist`. Additionally, depending on the presence / absence of the `title` prop, a `rbc-title-active` or `rbc-title-inactive` class is respectively applied. Similarly for `search` and `searchPlaceholder` props, classnames of `rbc-search-search-active`, `rbc-search-inactive`, `rbc-placeholder-active`, `rbc-placeholder-inactive` are applied.
