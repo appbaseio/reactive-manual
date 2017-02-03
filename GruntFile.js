@@ -7,7 +7,7 @@ module.exports = function(grunt) {
 					generateSearchIndex: true,
 					generateHtml: true,
 					baseUrl: "./",
-					operation: 'parallel',
+					operation: 'series',
 					urlToAccess: "http://localhost:9001/",
 					assets: ['./'],
 					checkLoadedSelector: '#navbar-collapse',
@@ -21,7 +21,7 @@ module.exports = function(grunt) {
 					generateSearchIndex : true,
 					generateHtml : false,
 					baseUrl: "./",
-					operation: 'parallel',
+					operation: 'series',
 					urlToAccess: "http://localhost:9001/",
 					assets: ['./'],
 					checkLoadedSelector : '#navbar-collapse'
