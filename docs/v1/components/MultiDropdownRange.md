@@ -39,6 +39,8 @@ Example uses:
     collection of UI `labels` with associated `start` and `end` range values.
 - **defaultSelected** `Array` [optional]  
     pre-select one or more labels from the `data` array.
+- **placeholder** `String` [optional]  
+    set the placeholder to show for the dropdown UI, useful when no option is `defaultSelected`.
 
 ### CSS Styles API
 
