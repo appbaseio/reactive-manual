@@ -24,6 +24,7 @@ Example uses:
      {"start": 51, "end": 1000, "label": "First Date"}]
   }
   defaultSelected="Cheap"
+  placeholder="Select price range.."
 />
 ```
 
@@ -39,6 +40,8 @@ Example uses:
     collection of UI `labels` with associated `start` and `end` range values.
 - **defaultSelected** `String` [optional]  
     pre-select a label from the `data` array.
+- **placeholder** `String` [optional]  
+    set the placeholder to show for the dropdown UI, useful when no option is `defaultSelected`.
 
 ### CSS Styles API
 
