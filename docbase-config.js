@@ -39,6 +39,10 @@ var docbaseConfig ={
                {
                   "name":"Dependency",
                   "label":"Dependency"
+               },
+               {
+                  "name":"Theming",
+                  "label":"Theming"
                }
             ]
          },
