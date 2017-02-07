@@ -6,6 +6,8 @@
 
 A `SingleDropdownList` sensor component creates a radio select list UI widget. It is used for filtering results based on the current selection from a list of items.
 
+`Note:` This component is exactly like the [SingleList](/v1/component/SingleList.html) component except the UI is based on a dropdown, ideal for showing additional UI filters while conserving screen space.
+
 Example uses:
 * select a category from a list of categories for filtering e-commerce search results.
 * filtering restaurants by a cuisine choice.
@@ -13,13 +15,13 @@ Example uses:
 ### Usage
 
 ```js
-<SingleList
+<SingleDropdownList
   componentId="CitySensor"
   appbaseField="group.group_city.raw"
   title="Cities"
   defaultSelected="London"
   showCount={true}
-  size={1000}
+  size={100}
   sortBy="count"
   showSearch={true}
   searchPlaceholder="Search City"

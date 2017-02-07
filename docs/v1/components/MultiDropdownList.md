@@ -4,22 +4,24 @@
 
 ![Image to be displayed](https://i.imgur.com/ZZ0MG6N.png)
 
-A `MultiDropdownList` sensor component creates a radio select list UI widget. It is used for filtering results based on the current selection from a list of items.
+A `MultiDropdownList` sensor component creates a multiple select dropdown based list UI widget. It is used for filtering results based on the current selection from a list of items.
+
+`Note:` This component is exactly like the [MultiList](/v1/component/MultiList.html) component except the UI is based on a dropdown, ideal for showing additional UI filters while conserving screen space.
 
 Example uses:
-* select a category from a list of categories for filtering e-commerce search results.
-* filtering restaurants by a cuisine choice.
+* create an e-commerce facet like search experience.
+* create a filter for airlines to fly by in a flight booking experience.
 
 ### Usage
 
 ```js
-<SingleList
+<MultiDropdownList
   componentId="CitySensor"
   appbaseField="group.group_city.raw"
   title="Cities"
-  defaultSelected="London"
+  defaultSelected={["London"]}
   showCount={true}
-  size={1000}
+  size={100}
   sortBy="count"
   showSearch={true}
   searchPlaceholder="Search City"
@@ -29,13 +31,13 @@ Example uses:
 ### Props
 
 - **componentId** `String`  
-    unique id of the sensor, can be referenced when creating a combined query context in an actuator's `depends` prop.  
+    unique id of the sensor, can be referenced when creating a combined query context in an actuator's `actuate` prop.  
 - **appbaseField** `String`  
-    DB data field to be mapped with the component's UI options.
+    DB data field to be mapped with the component's UI view. The dropdown list items are filtered by a database query on this field.
 - **title** `String` [optional]  
     title of the component to be shown in the UI.
-- **defaultSelected** `string` [optional]  
-    default selected value pre-selects an option from the list.
+- **defaultSelected** `Array` [optional]  
+    pre-select one or more options from the dropdown list. Accepts an `Array` object containing the items that should be selected. It is important for the passed value(s) exactly match with the field value(s) as stored in appbase.io app.
 - **showCount** `Boolean` [optional]  
     show count of number of occurences besides an item. Defaults to `true`.
 - **size** `Number` [optional]  

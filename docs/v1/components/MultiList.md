@@ -6,7 +6,7 @@
 
 A `MultiList` sensor component creates a multiple checkbox select list UI widget. It is used for filtering results based on the current selection of list items.
 
-Examples uses:
+Example uses:
 
 * create an e-commerce facet like search experience.
 * create a filter for airlines to fly by in a flight booking experience.
@@ -39,8 +39,8 @@ Examples uses:
     number of list items to be displayed. Defaults to showing a `100` items. Max value for this prop can be `1000`.
 -  **sortBy** `String` [optional]  
     sort the list items by one of `count`, `asc`, or `desc`. Defaults to `count`, which sorts the list by the frequency of count value, most first.
-- **defaultSelected** `String or Array` [optional]  
-    pre-select one or more list items. Accepts either a `String` or an `Array` object containing the items that should be selected. It is important that the passed value(s) exactly match the field value(s) as stored in the DB.
+- **defaultSelected** `Array` [optional]  
+    pre-select one or more list items. Accepts an `Array` object containing the items that should be selected. It is important for the passed value(s) to exactly match the field value(s) as stored in the DB.
 - **showCount** `Boolean` [optional]  
     show a count of the number of occurences besides each list item. Defaults to `true`.
 - **showSearch** `Boolean` [optional]  
