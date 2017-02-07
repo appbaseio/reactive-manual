@@ -47,8 +47,18 @@ var docbaseConfig ={
             ]
          },
          {
+            "name":"map-components",
+            "label":"Map Components",
+            "files":[
+               {
+                  "name":"ReactiveMap",
+                  "label":"Reactive Map"
+               }
+            ]
+         },
+         {
             "name":"components",
-            "label":"Components",
+            "label":"Base Components",
             "files":[
                {
                   "name":"SingleList",
@@ -121,18 +131,8 @@ var docbaseConfig ={
             ]
          },
          {
-            "name":"map-components",
-            "label":"Sensors for Map",
-            "files":[
-               {
-                  "name":"ReactiveMap",
-                  "label":"Reactive Map"
-               }
-            ]
-         },
-         {
-            "name":"mapping",
-            "label":"Data Mappings",
+            "name":"advanced",
+            "label":"Advanced Topics",
             "files":[
                {
                   "name":"mapping",
