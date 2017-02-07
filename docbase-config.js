@@ -51,6 +51,14 @@ var docbaseConfig ={
             "label":"Map Components",
             "files":[
                {
+                  "name":"GeoDistanceSlider",
+                  "label":"Geo Distance Slider"
+               },
+               {
+                  "name":"GeoDistanceDropdown",
+                  "label":"Geo Distance Dropdown"
+               },
+               {
                   "name":"ReactiveMap",
                   "label":"Reactive Map"
                }
