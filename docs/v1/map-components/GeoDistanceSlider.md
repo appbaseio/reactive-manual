@@ -52,8 +52,8 @@ Example uses:
     an object with `start` and `end` keys and corresponding numeric values denoting the minimum and maximum possible slider values.
 - **rangeLabels** `Object` [optional]  
     an object with `start` and `end` keys and corresponding `String` labels to show labels near the ends of the `GeoDistanceSlider` component.
-- **defaultSelected** `Object` [optional]  
-    an object with `start` and `end` keys and corresponding numeric values denoting the pre-selected range values.
+- **defaultSelected** `Number` [optional]  
+    pre-select a value from the range.
 - **stepValue** `Number` [optional]  
     step value specifies the slider stepper. Value should be an integer between 1 and floor(#total-range/2). Defaults to 1.
 
