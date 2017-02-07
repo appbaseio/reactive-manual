@@ -1,6 +1,6 @@
-Reactive maps docs
+Reactive Maps Manual
 ====
-[![Build Status](https://travis-ci.org/appbaseio/Docs.svg?branch=master)](https://travis-ci.org/appbaseio/reactive-maps-docs)
-https://appbaseio.github.io/reactive-maps-docs
+[![Build Status](https://travis-ci.org/appbaseio/reactivemaps-manual.svg?branch=master)](https://travis-ci.org/appbaseio/reactivemaps-manual)
+https://appbaseio.github.io/reactivemaps-manual
 
-Check out our framework, Docbase, at https://github.com/appbaseio/Docbase
+reactivemaps-manual is built with Docbase https://github.com/appbaseio/Docbase.
