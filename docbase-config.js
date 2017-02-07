@@ -113,6 +113,10 @@ var docbaseConfig ={
                   "label":"Range Slider"
                },
                {
+                  "name":"NumberBox",
+                  "label":"Number Box"
+               },
+               {
                   "name":"TextField",
                   "label":"Text Field"
                },
@@ -135,6 +139,10 @@ var docbaseConfig ={
                {
                   "name":"PaginatedResultList",
                   "label":"Paginated Result List"
+               },
+               {
+                  "name":"PoweredBy",
+                  "label":"Powered By"
                }
             ]
          },
