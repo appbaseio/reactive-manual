@@ -73,9 +73,9 @@ TBD
 
 1. GeoDistance slider with all the default props
 
-2. GeoDistance Slider with a title
+2. GeoDistance slider with a title
 
-3. GeoDistance Slider with range labels
+3. GeoDistance slider with range labels
 
 4. Playground (with all knob actions)
 

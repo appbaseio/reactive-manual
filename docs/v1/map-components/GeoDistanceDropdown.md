@@ -63,11 +63,11 @@ TBD
 
 ### Examples
 
-1. GeoDistance slider with all the default props
+1. GeoDistance dropdown with all the default props
 
-2. GeoDistance Slider with a title
+2. GeoDistance dropdown with a title
 
-3. GeoDistance Slider with a defaultSelected value
+3. GeoDistance dropdown with a defaultSelected value
 
 4. Playground (with all knob actions)
 
