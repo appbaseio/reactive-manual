@@ -37,4 +37,4 @@ Depending on your choice of CSS library, you can then add your CSS framework. Le
 
 You're all set!
 
-Read the [getting started](http://opensource.appbase.io/reactivemaps-manual/v1/getting-started/Installation.html) guide to find out how to build your first ReactiveMap based app.
+Read the [getting started](http://opensource.appbase.io/reactivemaps-manual/v1/getting-started/Start.html) guide to find out how to build your first ReactiveMap based app.
