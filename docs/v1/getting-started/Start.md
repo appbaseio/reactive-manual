@@ -6,20 +6,18 @@
 
 ### Installation Recap
 
-We install the libraries and then add the relevant browser dependencies in the index.html file.
+We install the library and then add the relevant browser dependencies in the index.html file.
 
 ```sh
-npm install --save @appbaseio/reactivebase
 npm install --save @appbaseio/reactivemaps
 ```
 
 ```html
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=Your_key_here"></script> <!-- Google Maps API Key required-->
-<!-- Add browser styles for both npm modules -->
-<link rel="stylesheet" href="node_modules/@appbaseio/reactivebase/dist/css/style.min.css">
-<link rel="stylesheet" href="node_modules/@appbaseio/reactivemaps/dist/css/style.min.css">
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=Your_key_here">
 <!-- Your choice of CSS framework, can be materialize, boostrap or something else -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"></script> <!-- Google Maps API Key required-->
+<!-- Add browser style for reactivemaps -->
+<link rel="stylesheet" href="node_modules/@appbaseio/reactivemaps/dist/css/style.min.css">
 ```
 
 You can read more about the installation steps [here](http://opensource.appbase.io/reactivemaps-manual/v1/getting-started/Installation.html).
@@ -41,7 +39,7 @@ import {
 } from '@appbaseio/reactivebase';
 ```
 
-Next, we create a `ReactiveBase` component, which requires creating an [appbase.io](https://appbase.io) app along with the `username:password` credentials.
+Next, we create a `ReactiveBase` component, which requires creating an [appbase.io](https://appbase.io) app along with `username:password` credentials.
 
 This quick GIF will help with creating an app and getting the credentials.  
 ![create an appbase.io app](http://im3.ezgif.com/tmp/ezgif.com-59967037ad.gif)
