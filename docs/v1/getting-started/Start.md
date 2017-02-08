@@ -1,4 +1,5 @@
 {"bigh3": true}
+{% raw %}
 
 ## Getting Started
 
@@ -87,3 +88,5 @@ If you followed along, you should see something like this:
 ![Image](https://i.imgur.com/Xj9GIgs.png)
 
 You can also checkout a working demo of the above app directly here - https://github.com/appbaseio-apps/reactivemaps-starter-app.
+
+{% endraw %}
