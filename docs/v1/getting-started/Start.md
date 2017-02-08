@@ -1,3 +1,5 @@
+{"bigh3": true}
+
 ## Getting Started
 
 ### Installation Recap

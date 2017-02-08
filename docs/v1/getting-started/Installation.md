@@ -1,5 +1,6 @@
-## Installation
+{"bigh3": true}
 
+## Installation
 
 ### Step 1: Install via NPM
 
