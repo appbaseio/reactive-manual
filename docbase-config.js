@@ -59,6 +59,10 @@ var docbaseConfig ={
                   "label":"Geo Distance Dropdown"
                },
                {
+                  "name":"PlacesSearch",
+                  "label":"Places Search"
+               },
+               {
                   "name":"ReactiveMap",
                   "label":"Reactive Map"
                }
