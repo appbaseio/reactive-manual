@@ -27,7 +27,7 @@ Example uses:
   requestOnScroll={true}
   componentStyle={{height:'700px', overflow:'auto'}}
   onData={this.onData}
-  depends={{
+  actuate={{
     "CitySensor": {
       "operation": "must"
     },
@@ -41,7 +41,7 @@ Example uses:
 ### Props
 
 - **componentId** `String`  
-    unique id of the sensor, can be referenced in an actuator's `depends` prop.
+    unique id of the sensor, can be referenced in an actuator's `actuate` prop.
 - **appbaseField** `String`  
     data field to be mapped with the `ResultList`'s UI view, used for providing a sorting context.
 - **title** `String` [optional]  
@@ -65,7 +65,7 @@ Example uses:
     CSS Styles to be applied to the **ResultList** component.
 - **onData** `Function` [optional]  
     a callback function where user can define how to render the view based on the data changes.
-- **depends** `Object` [optional]  
+- **actuate** `Object` [optional]  
     an object defining the sensor components who state change triggers the `ResultList` query. You can [read more here](https://appbaseio.github.io/reactive-maps-docs/v1/getting-started/Dependency.html).
 
 ### Extending ResultList

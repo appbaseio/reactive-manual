@@ -22,7 +22,7 @@ Unlike other components that have a specific query associated with their UI view
 ### Props
 
 - **componentId** `String`  
-    unique id of the sensor, can be referenced in an actuator's `depends` prop.
+    unique id of the sensor, can be referenced in an actuator's `actuate` prop.
 - **appbaseField** `String`  
     data field to be mapped with the component's UI view.
 - **title** `String` [optional]  

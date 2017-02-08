@@ -3,13 +3,13 @@
 {% raw %}
 
 ## Define dependency on other sensors
-- **depends**: `Object`: it should contain the sensors on which component is dependent.
+- **actuate**: `Object`: it should contain the sensors on which component is dependent.
 
 
 ```js
 <AppbaseMap 
   ...
-depends={{
+actuate={{
     'componentId': {
         "operation": "must",
         "defaultQuery": this.cityQuery
@@ -47,10 +47,10 @@ To achieve this
     componentId="TopicSensor"
     inputData={this.props.mapping.topic} 
    ...
-    depends={{
+    actuate={{
         CitySensor: {
             "operation": "must",
-            "defaultQuery": this.topicDepends
+            "defaultQuery": this.topicactuate
         }
     }}
 />

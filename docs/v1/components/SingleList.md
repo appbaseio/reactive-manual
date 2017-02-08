@@ -29,7 +29,7 @@ Example uses:
 ### Props
 
 - **componentId** `String`  
-    unique id of the sensor, can be referenced in an actuator's `depends` prop.
+    unique id of the sensor, can be referenced in an actuator's `actuate` prop.
 - **appbaseField** `String`  
     data field to be mapped with the component's UI view. The list items are filtered by a database query on this field.
 - **title** `String` [optional]  
