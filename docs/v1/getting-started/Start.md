@@ -44,35 +44,34 @@ Next, we create a `ReactiveBase` component, which requires creating an [appbase.
 ```
 class HelloWorld extends Component {
     render() {
-       return(
-	  <ReactiveBase
-	    app="reactivemap-demo-app"
-	    username="2ZvCaw7CR"
-	    password="6664ec32-4e21-434d-836c-33af67b88c60"
-	  >
-	    <div class="row">
-	      <div class="col-xs-6">
-		<SingleList
-		  title="SingleList Sensor"
-		  componentId="SingleListSensor"
-		  appbaseField="group.group_city"
-		  size={50}
-		  showSearch={true}
-		/>
-	      </div>
-	      <div class="col-xs-6">
-		<ReactiveMap
-		  title="ReactiveMap Actuator"
-		  componentId="ReactiveMapActuator"
-		  appbaseField="venue"
-		  actuate={{
-		    "SingleListSensor": { "operation": "must" }
-		  }}
-		/>
-	      </div>
-	    </div>
-	  </ReactiveBase>
-       )
+      return(
+		<ReactiveBase
+			app="reactivemap-demo-app"
+			username="2ZvCaw7CR"
+			password="6664ec32-4e21-434d-836c-33af67b88c60">
+			<div class="row">
+				<div class="col-xs-6">
+					<SingleList
+						title="SingleList Sensor"
+						componentId="SingleListSensor"
+						appbaseField="group.group_city"
+						size={50}
+						showSearch={true}
+					/>
+				</div>
+				<div class="col-xs-6">
+					<ReactiveMap
+						title="ReactiveMap Actuator"
+						componentId="ReactiveMapActuator"
+						appbaseField="venue"
+						actuate={{
+							"SingleListSensor": { "operation": "must" }
+						}}
+					/>
+				</div>
+			</div>
+		</ReactiveBase>
+      )
    }
 }
 ```
