@@ -2,8 +2,7 @@
 
 ## GeoDistanceDropdown
 
-![Image to be displayed](
-https://i.imgur.com/FU4s0PQ.png)
+![Image to be displayed](https://i.imgur.com/SidQoYY.png)
 
 A `GeoDistanceDropdown` sensor component creates a location search based proximity slider UI widget. It is used for distance based filtering.
 
