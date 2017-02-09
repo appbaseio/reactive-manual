@@ -37,9 +37,8 @@ import {
 } from '@appbaseio/reactivemaps';
 ```
 
-Next, we create a `ReactiveBase` component, which requires creating an [appbase.io](https://appbase.io) app along with `username:password` credentials.
+Next, we create a `ReactiveBase` component, which requires creating an [appbase.io](https://appbase.io) app along with `username:password` credentials. This quick GIF will help with creating an app and getting the credentials.  
 
-This quick GIF will help with creating an app and getting the credentials.  
 ![create an appbase.io app](https://i.imgur.com/Y6HiHnJ.gif)
 
 ```
