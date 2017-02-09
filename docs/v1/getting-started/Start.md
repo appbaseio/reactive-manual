@@ -13,9 +13,10 @@ npm install --save @appbaseio/reactivemaps
 ```
 
 ```html
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=Your_key_here">
+<!-- Google Maps API Key required-->
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=Your_key_here"></script>
 <!-- Your choice of CSS framework, can be materialize, boostrap or something else -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"></script> <!-- Google Maps API Key required-->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
 <!-- Add browser style for reactivemaps -->
 <link rel="stylesheet" href="node_modules/@appbaseio/reactivemaps/dist/css/style.min.css">
 ```
