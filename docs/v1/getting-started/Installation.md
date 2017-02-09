@@ -4,9 +4,7 @@
 
 ### Step 1: Install via NPM
 
-`ReactiveMaps` module is divided into two libraries to keep separation of concerns. ReactiveMaps itself consists of components related to maps and related search like [`GeoDistanceSlider`](https://opensource.appbase.io/reactivemaps/manual/v1/map-components/GeoDistanceSlider.html), [`PlacesSearch`](https://opensource.appbase.io/reactivemaps/manual/v1/map-components/PlacesSearch.html) and [`ReactiveMap`](https://opensource.appbase.io/reactivemaps/manual/v1/map-components/ReactiveMap.html) while `ReactiveBase` consists of generic UI components like Lists, Ranges, Generic Search, Range Slider, Button Groups, Calendars, Feeds, etc.
-
-Let's install both!
+We will fetch the `ReactiveMaps` module first from npm.
 
 ```js
 npm install --save @appbaseio/reactivemaps
