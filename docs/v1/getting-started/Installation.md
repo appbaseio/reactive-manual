@@ -2,31 +2,23 @@
 
 ## Installation
 
-### Step 1: Install via NPM
+### Step 1: Install reactivemaps via NPM
 
-We will fetch the `ReactiveMaps` module first from npm.
+We will fetch the [`reactivemaps`](https://www.npmjs.com/package/@appbaseio/reactivemaps) module first from npm.
 
 ```js
 npm install --save @appbaseio/reactivemaps
 ```
 
-### Step 2: Add browser related styles
+### Step 2: Add Google Maps JS lib
 
-ReactiveMaps uses Google Maps under the hood. All you need to add that is a simple &lt;script> in the &lt;head> element.
+ReactiveMaps uses Google Maps to render the maps. For including Google Maps, add the following  &lt;script> tag in the &lt;head> element.
 
 ```html
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=Your_key_here"></script>
 ```
 
-### Step 3: Add your CSS framework of choice
-
-Now let's add a CSS framework, we will pick materialize for this guide. You can pick any CSS framework of your liking.
-
-```html
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
-```
-
-### Step 4: Add ReactiveMap's style file
+### Step 3: Add ReactiveMap's style file
 
 All ReactiveMap styles are present in a single file. We will import it in the &lt;head> element as well
 
@@ -34,6 +26,14 @@ All ReactiveMap styles are present in a single file. We will import it in the &l
 <link rel="stylesheet" href="node_modules/@appbaseio/reactivemaps/dist/css/style.min.css">
 ```
 
+If you haven't included any style framework, we recommend adding materialize. 
+
+```html
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+```
+
+---
+
 You're now all set to create an app with ReactiveMaps!
 
-Read the [getting started](http://opensource.appbase.io/reactivemaps-manual/v1/getting-started/Start.html) guide to find out how to build your first ReactiveMap based app.
+Next, read the [getting started](http://opensource.appbase.io/reactivemaps-manual/v1/getting-started/Start.html) guide to find out how to build your first ReactiveMap based app.
