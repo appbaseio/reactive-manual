@@ -31,19 +31,16 @@ If you already have a React boilerplate setup, then let's go ahead and import th
 
 ```javascript
 import {
-  ReactiveMap
-} from '@appbaseio/reactivemaps';
-
-import {
+  ReactiveMap,
   SingleList,
   ReactiveBase
-} from '@appbaseio/reactivebase';
+} from '@appbaseio/reactivemaps';
 ```
 
 Next, we create a `ReactiveBase` component, which requires creating an [appbase.io](https://appbase.io) app along with `username:password` credentials.
 
 This quick GIF will help with creating an app and getting the credentials.  
-![create an appbase.io app](http://im3.ezgif.com/tmp/ezgif.com-59967037ad.gif)
+![create an appbase.io app](https://i.imgur.com/Y6HiHnJ.gif)
 
 ```
 class HelloWorld extends Component {
