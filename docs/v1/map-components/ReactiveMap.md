@@ -163,6 +163,8 @@ and also user can return the markup which will be append inside map (as ex. Poly
 
 ### CSS Styles
 
+![Annotated Image](https://i.imgur.com/YPRoLch.png)
+
 ### Examples
 
 1. ReactiveMap with all the default props.
