@@ -2,58 +2,51 @@
 
 {% raw %}
 
-## Define dependency on other sensors
-- **actuate**: `Object`: it should contain the sensors on which component is dependent.
+## Actuate
+
+One of the key ideas behind Reactive Maps is the sensor / actuator design pattern, which allows defining sensor components
+
+## Usage
+
+```javascript
+<ReactiveMap
+    ...
+    actuate={{
+      "citySensor": {
+        operation: "must"
+      },
+      "searchSensor": {
+        operation: "should",
+        doNotExecute: {true}
+      }
+    }}
+>
+```
+
+- **actuate** `Object`  
+    `actuate` is a prop specific to actuator components, e.g. [`ReactiveMap`](http://opensource.appbase.io/reactivemaps/manual/v1/map-components/ReactiveMap.html), [`ResultList`](https://opensource.appbase.io/reactivemaps/manual/v1/components/ResultList.html). It defines a combined query context for the actuator by chaining one or more sensor components, so when one of the underlying sensor updates, the changes are reflected reactively in the actuator results.
 
 
 ```js
-<AppbaseMap 
+<ReactiveMap 
   ...
-actuate={{
-    'componentId': {
+  actuate={{
+    "<componentId#1>": {
         "operation": "must",
         "defaultQuery": this.cityQuery
         "doNotExecute": {true}
     }
-}}
+  }}
 />
 ```
 
-- **operation**: `String`: It should be either `must` or `should`. It decides whether this query should be inside must clause or should clause.
-
-- **defaultQuery**: `Function`: (optional) this function will receive value of that particulat sensor and user needs to create query on basis of that and return the query, If you don't specify defaultquery queryBuilder will include the default query of that sensor.
-
-- **doNotExecute**: `Boolean`: (by default true) If you don't want to execute query immediatly after dependent sensor changees, then apply true as value. In this case your component already append sensor query but just didn't execute it immediatly.
-
-Let's take an example if topics lists is depenedent on city selection (topicSensor is dependent on citySensor).
-
-To achieve this
-1. Assign componentId to city list.
-2. Use this componentId in other sensor.
-
-- City Sensor should look like this
-```
-<AppbaseList
-    componentId="CitySensor"
-    inputData={this.props.mapping.city} 
-   ...
-/>
-```
-
-- Topic Sensor should look like this
-
-```javascript
-<AppbaseList
-    componentId="TopicSensor"
-    inputData={this.props.mapping.topic} 
-   ...
-    actuate={{
-        CitySensor: {
-            "operation": "must",
-            "defaultQuery": this.topicactuate
-        }
-    }}
-/>
-```
+- **actuate.keys** `String`  
+    the keys of the `actuate` prop are sensor components referenced by their `componentId`.
+  - **operation** `String`  
+      choose the operation clause for the sensor component, currently accepts two values: `must` and `should`. `must` requires the query to return a match for the applied sensor component. On the other hand, `should` doesn't require the query to return a match for the applied sensor component as long as there are other sensors returning matches.
+  - **customQuery** `Function` [optional]  
+      define a custom query for the sensor component. The function recives the current value of the sensor as a value and returns a query in the [Elasticsearch DSL format](https://www.elastic.co/guide/en/elasticsearch/reference/2.4/query-dsl.html).
+  - **doNotExecute** `Boolean` [optional]
+      Sometimes, you don't want the actuator to immediately update when the sensor value updates, you can set this prop to `true`. The query context updates in this case but it is not applied to the acutator. Defaults to `false`. 
 
 {% endraw %}
