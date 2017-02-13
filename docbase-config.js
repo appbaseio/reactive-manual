@@ -37,10 +37,6 @@ var docbaseConfig ={
                   "label":"Style Guide"
                },
                {
-                  "name":"Dependency",
-                  "label":"Dependency"
-               },
-               {
                   "name":"Theming",
                   "label":"Theming"
                }
@@ -155,8 +151,12 @@ var docbaseConfig ={
             "label":"Advanced Topics",
             "files":[
                {
-                  "name":"mapping",
+                  "name":"Mapping",
                   "label":"Data Mappings"
+               },
+               {
+                  "name":"React",
+                  "label":"Reactive UIs"
                }
             ]
          }
