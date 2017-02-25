@@ -16,7 +16,7 @@ var docbaseConfig ={
    },
    "indexHtml":"./html/main.html",
    "flatdocHtml":"./bower_components/docbase/html/flatdoc.html",
-   "default_version":"v1.0.0-alpha",
+   "default_version":"v1.0.0",
    "manual_override":true,
    "versions":{
       "v0.1.6":[
@@ -161,7 +161,7 @@ var docbaseConfig ={
             ]
          }
       ],
-      "v1.0.0-alpha":[
+      "v1.0.0":[
          {
             "name":"getting-started",
             "label":"Getting Started",
