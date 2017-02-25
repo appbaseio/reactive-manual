@@ -282,5 +282,26 @@ var docbaseConfig ={
                   "name":"PaginatedResultList",
                   "label":"Paginated Result List"
                },
+               {
+                  "name":"PoweredBy",
+                  "label":"Powered By"
+               }
+            ]
+         },
+         {
+            "name":"advanced",
+            "label":"Advanced Topics",
+            "files":[
+               {
+                  "name":"Mapping",
+                  "label":"Data Mappings"
+               },
+               {
+                  "name":"React",
+                  "label":"Reactive UIs"
+               }
+            ]
+         }
+      ]
    }
 }
