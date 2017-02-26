@@ -2,11 +2,11 @@
 
 {% raw %}
 
-## ResultList
+## ReactiveList
 
 ![Image to be displayed](https://i.imgur.com/GcUFZjh.png)
 
-A `ResultList` is an actuator component that creates a result list UI widget where results from all the applied filters are shown. It forms the base for building more specific actuators like `PaginatedResultList` and provides a lot of rich functionalities out of the box.
+A `ReactiveList` is an actuator component that creates a result list UI widget where results from all the applied filters are shown. It forms the base for building more specific actuators like `ReactivePaginatedList` and provides a lot of rich functionalities out of the box.
 
 Example uses:
 
@@ -16,10 +16,10 @@ Example uses:
 ### Usage
 
 ```js
-<ResultList
+<ReactiveList
   componentId="SearchResult"
   appbaseField="ratings"
-  title="ResultList"
+  title="ReactiveList"
   stream={true}
   sortBy="desc"
   from={0}
@@ -43,7 +43,7 @@ Example uses:
 - **componentId** `String`  
     unique id of the sensor, can be referenced in an actuator's `actuate` prop.
 - **appbaseField** `String`  
-    data field to be mapped with the `ResultList`'s UI view, used for providing a sorting context.
+    data field to be mapped with the `ReactiveList`'s UI view, used for providing a sorting context.
 - **title** `String` [optional]  
     title of the component, to be shown in the UI.
 - **stream** `Boolean` [optional]  
@@ -51,7 +51,7 @@ Example uses:
 -  **sortBy** `String` [optional]  
     sort the results by either `asc` or `desc` order. It is an alternative to `sortOptions`, both can't be used together.
 - **sortOptions** `Object Array` [optional]  
-    an alternative to the `sortBy` prop, `sortOptions` creates a sorting view in the ResultList component's UI. Each array element is an object that takes three keys:
+    an alternative to the `sortBy` prop, `sortOptions` creates a sorting view in the ReactiveList component's UI. Each array element is an object that takes three keys:
     - `label` - label to be displayed in the UI.
     - `field` - data field to use for applying the sorting criteria on.
     - `order` - specified as either `asc` or `desc`.
@@ -62,21 +62,21 @@ Example uses:
 - **requestOnScroll** `Boolean` [optional]  
     should a paginate data request be made when scroll reaches the end of the component view? Defaults to `true`, allowing an infinite scroll functionality.
 - **componentStyle** `Object` [optional]  
-    CSS Styles to be applied to the **ResultList** component.
+    CSS Styles to be applied to the **ReactiveList** component.
 - **onData** `Function` [optional]  
     a callback function where user can define how to render the view based on the data changes.
-- **actuate** `Object` [optional]  
-    an object defining the sensor components who state change triggers the `ResultList` query. You can [read more here](https://appbaseio.github.io/reactive-maps-docs/v1/getting-started/Dependency.html).
+- **react** `Object` [optional]  
+    a dependency object defining how this component should react based on the state changes in the sensor components.
 
-### Extending ResultList
+### Extending ReactiveList
 
-`onData` prop registers a function callback which is triggered every time there is a change in the data results so that the user can render the `ResultList` component's UI view.
+`onData` prop registers a function callback which is triggered every time there is a change in the data results so that the user can render the `ReactiveList` component's UI view.
 
 ```js
 // Register a callback function with the `onData` prop.
-<ResultList ... onData={this.onData} ... />
+<ReactiveList ... onData={this.onData} ... />
 
-// Callback function returns an Arry of HTML elements to be rendered as ResultList items.
+// Callback function returns an Arry of HTML elements to be rendered as ReactiveList items.
 this.onData(res, [err]) {
   console.log(res.mode, res.newData, res.currentData, res.appliedQuery);
   if (res.mode === "historic") {
@@ -91,7 +91,7 @@ this.onData(res, [err]) {
 }
 ```
 
-The callback function returns an Array of HTML elements (think list items) which are then rendered to the view as ResultList items.
+The callback function returns an Array of HTML elements (think list items) which are then rendered to the view as ReactiveList items.
 
 #### Usage
 
@@ -107,6 +107,8 @@ The callback function returns an Array of HTML elements (think list items) which
         raw query object that triggered the function callback, useful for debugging.
     - **took** `Number` [Optional]  
         time taken in milliseconds, only passed when the mode is "historic".
+    - **total** `Number` [Optional]  
+        total number of results, passed when the mode is "historic".
 - **err** `Object`  
     error object.
 
@@ -118,11 +120,11 @@ All reactivebase components are `rbc` namespaced.
 
 ### Examples
 
-1. ResultList with all the default props with a single sensor filter.
+1. ReactiveList with all the default props with a single sensor filter.
 
-2. ResultList with a search and a filter sensor.
+2. ReactiveList with a search and a filter sensor.
 
-3. ResultList that shows streaming updates.
+3. ReactiveList that shows streaming updates.
 
 4. Playground (with all knob actions).
 

@@ -279,12 +279,12 @@ var docbaseConfig ={
                   "label":"Date Range"
                },
                {
-                  "name":"ResultList",
-                  "label":"Result List"
+                  "name":"ReactiveList",
+                  "label":"Reactive List"
                },
                {
-                  "name":"PaginatedResultList",
-                  "label":"Paginated Result List"
+                  "name":"ReactivePaginatedList",
+                  "label":"Reactive PaginatedList"
                },
                {
                   "name":"PoweredBy",
