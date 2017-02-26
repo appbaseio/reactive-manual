@@ -125,10 +125,6 @@ var docbaseConfig ={
                   "label":"Data Search"
                },
                {
-                  "name":"DataController",
-                  "label":"Data Controller"
-               },
-               {
                   "name":"DatePicker",
                   "label":"Date Picker"
                },
@@ -269,6 +265,10 @@ var docbaseConfig ={
                {
                   "name":"DataSearch",
                   "label":"Data Search"
+               },
+               {
+                  "name":"DataController",
+                  "label":"Data Controller"
                },
                {
                   "name":"DatePicker",
