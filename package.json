@@ -1,6 +1,6 @@
 {
   "name": "@appbaseio/reactivemaps-manual",
-  "version": "0.2.0",
+  "version": "1.0.0-alpha",
   "authors": [],
   "description": "Reactivemaps manual, a react components library for building realtime maps",
   "contributors": [],
