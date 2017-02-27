@@ -23,6 +23,7 @@ Example uses:
   showCount={true}
   showSearch={false}
   searchPlaceholder="Search"
+  initialLoader="Fetching cars.."
 />
 ```
 
@@ -46,6 +47,8 @@ Example uses:
     whether to show a searchbox to filter the list items locally. Defaults to true.
 - **searchPlaceholder** `String` [optional]  
     placeholder to be displayed in the searchbox, only applicable when the `showSearch` prop is set to `true`. When applicable, the default placeholder value is set to "Search".
+- **initialLoader** `String or HTML` [optional]  
+    display text while the data is being fetched, accepts `String` or `HTML` markup.
 
 **Note:** A NestedList component's props are exactly like a SingleList component except for the `appbaseField` prop which takes an Array to denote the level of nesting.
 

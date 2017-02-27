@@ -31,6 +31,7 @@ Example uses:
     }
   }
   stepValue=1
+  initialLoader="creating the histogram.."
 />
 ```
 
@@ -50,6 +51,8 @@ Example uses:
     an object with `start` and `end` keys and corresponding numeric values denoting the pre-selected range values.
 - **stepValue** `Number` [optional]  
     step value specifies the slider stepper. Value should be an integer between 1 and floor(#total-range/2). Defaults to 1.
+- **initialLoader** `String or HTML` [optional]  
+    display text while the data is being fetched, accepts `String` or `HTML` markup.
 
 ### CSS Styles
 

@@ -25,6 +25,7 @@ Example uses:
   sortBy="count"
   showSearch={true}
   searchPlaceholder="Search City"
+  initialLoader="Loading cities list.."
 />
 ```
 
@@ -48,6 +49,8 @@ Example uses:
     whether to show a searchbox to filter the list items locally. Defaults to true.
 - **searchPlaceholder** `String` [optional]  
     placeholder to be displayed in the searchbox, only applicable when the `showSearch` prop is set to true.
+- **initialLoader** `String or HTML` [optional]  
+    display text while the data is being fetched, accepts `String` or `HTML` markup.
 
 
 ### CSS Styles API
