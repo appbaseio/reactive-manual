@@ -64,7 +64,7 @@ class HelloWorld extends Component {
 						title="ReactiveMap Actuator"
 						componentId="ReactiveMapActuator"
 						appbaseField="venue"
-						actuate={{
+						react={{
 							"SingleListSensor": { "operation": "must" }
 						}}
 					/>

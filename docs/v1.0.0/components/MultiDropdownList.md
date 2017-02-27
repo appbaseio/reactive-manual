@@ -32,7 +32,7 @@ Example uses:
 ### Props
 
 - **componentId** `String`  
-    unique id of the sensor, can be referenced when creating a combined query context in an actuator's `actuate` prop.  
+    unique id of the sensor, can be referenced when creating a combined query context in an actuator's `react` prop.  
 - **appbaseField** `String`  
     DB data field to be mapped with the component's UI view. The dropdown list items are filtered by a database query on this field.
 - **title** `String` [optional]  

@@ -25,7 +25,7 @@ Example uses:
 ### Props
 
 - **componentId** `String`  
-    unique id of the sensor, can be referenced in an actuator’s actuate prop.
+    unique id of the sensor, can be referenced in an actuator’s react prop.
 - **appbaseField** `String or Array`  
     data field(s) on which the search query will be aplied to. If you want to search across multiple fields, pass them as an `Array`.
 - **title** `String` [optional]  

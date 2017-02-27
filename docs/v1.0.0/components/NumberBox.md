@@ -26,7 +26,7 @@ Example uses:
 ### Props
 
 - **componentId** `String`  
-    unique id of the sensor, can be referenced in an actuator's `actuate` prop.
+    unique id of the sensor, can be referenced in an actuator's `react` prop.
 - **appbaseField** `String`  
     DB data field to be mapped with the component's UI view.The selected buttons create a database query on this field.
 - **title** `String` [optional]  

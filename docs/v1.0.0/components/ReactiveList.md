@@ -39,7 +39,7 @@ Example uses:
 ### Props
 
 - **componentId** `String`  
-    unique id of the sensor, can be referenced in an actuator's `actuate` prop.
+    unique id of the sensor, can be referenced in an actuator's `react` prop.
 - **appbaseField** `String`  
     data field to be mapped with the `ReactiveList`'s UI view, used for providing a sorting context.
 - **title** `String` [optional]  

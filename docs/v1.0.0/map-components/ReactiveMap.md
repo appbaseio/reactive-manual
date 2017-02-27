@@ -39,8 +39,8 @@ Example uses:
     streamAutoCenter={true}
     streamMarkerImage="path/to/streaming/marker.png"
 
-    // 'actuate' defines when and how the map component should update
-    actuate={{
+    // 'react' defines when and how the map component should update
+    react={{
       CitySensor: {"operation": "must"}
     }}
 
@@ -81,7 +81,7 @@ Example uses:
 ### Props
 
 - **componentId** `String`  
-    unique id of the component, can be referenced in another actuator's `actuate` prop.
+    unique id of the component, can be referenced in another actuator's `react` prop.
 - **appbaseField** `String`  
     DB data field to be mapped with the component's UI view, usually of a geopoint (i.e. location) data type and used for rendering the markers on the map.
 - **title** `String` [optional]  
@@ -118,7 +118,7 @@ Example uses:
     whether to auto center the map based on the location of the streamed update. Defaults to `false`.
 - **streamMarkerImage** `String` [optional]  
     URL of the streaming marker image to be shown. It comes with a default image that's distinct from the defaultMarkerImage. Should be only set if you wish to use a custom marker image.
-- **actuate** `Object`
+- **react** `Object`
     an object defining the sensor components whose state change triggers an update to the map UI. You can read more here.
 - **autoCenter** `Boolean` [optional]  
     whether to auto center the map based on the geometric center of all the location markers. Defaults to `true`.
