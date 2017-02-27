@@ -1,7 +1,5 @@
 {"bigh3": true}
 
-{% raw %}
-
 ## Getting Started
 
 ### Installation Recap
@@ -41,10 +39,11 @@ Next, we create a `ReactiveBase` component, which requires creating an [appbase.
 
 ![create an appbase.io app](https://i.imgur.com/Y6HiHnJ.gif)
 
+{% raw %}
 ```
 class HelloWorld extends Component {
-    render() {
-      return(
+  render() {
+	return(
 		<ReactiveBase
 			app="reactivemap-demo-app"
 			username="2ZvCaw7CR"
@@ -65,16 +64,17 @@ class HelloWorld extends Component {
 						componentId="ReactiveMapActuator"
 						appbaseField="venue"
 						react={{
-							"SingleListSensor": { "operation": "must" }
+							"and": "SingleListSensor"
 						}}
 					/>
 				</div>
 			</div>
 		</ReactiveBase>
-      )
-   }
+	)
+  }
 }
 ```
+{% endraw %}
 
 We create a `SingleList` component with New York city selected by default and add a `ReactiveMap` component which updates reactively every time the SingleList component's selected value changes.
 
@@ -83,5 +83,3 @@ If you followed along, you should see something like this:
 ![Image](https://i.imgur.com/Xj9GIgs.png)
 
 You can also checkout a working demo of the above app directly here - https://github.com/appbaseio-apps/reactivemaps-starter-app.
-
-{% endraw %}
