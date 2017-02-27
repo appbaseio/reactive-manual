@@ -36,4 +36,4 @@ If you haven't included any style framework, we recommend adding materialize.
 
 You're now all set to create an app with ReactiveMaps!
 
-Next, read the [getting started](http://opensource.appbase.io/reactivemaps-manual/v1/getting-started/Start.html) guide to find out how to build your first ReactiveMap based app.
+Next, read the [getting started](Start.html) guide to find out how to build your first ReactiveMap based app.
