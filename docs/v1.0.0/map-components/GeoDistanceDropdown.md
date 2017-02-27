@@ -26,7 +26,10 @@ Example uses:
       { "start": 0, "end": 100, "label": "< 100 miles" },
     ]
   }
-  defaultSelected="< 20 miles"
+  defaultSelected={{
+    location: "SOMA, San Francisco"
+    label: "< 20 miles"
+  }}
   placeholder="Select a distance range.."
 />
 ```
@@ -44,8 +47,8 @@ Example uses:
     ![screenshot](https://i.imgur.com/STbeagk.png).
 - **data** `Object Array`  
     collection of UI `labels` with associated `start` and `end` range values.
-- **defaultSelected** `String` [optional]  
-    pre-select a label from the `data` array.
+- **defaultSelected** `Object` [optional]  
+    pre-select values of the search query with `label` and `location` keys.
 - **placeholder** `String` [optional]  
     set the placeholder to show for the dropdown UI, useful when no option is `defaultSelected`.
 
