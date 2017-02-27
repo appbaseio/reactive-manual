@@ -65,19 +65,19 @@ All reactivebase components are `rbc` namespaced.
 </div>
 ```
 
-* DatePicker component's class name is `rbc-singlelist`. Additionally, depending on the presence / absence of the `title` prop, a `rbc-title-active` or `rbc-title-inactive` class is respectively applied. 
+* DatePicker component's class name is `rbc-datepicker`. Additionally, depending on the presence / absence of the `title` prop, a `rbc-title-active` or `rbc-title-inactive` class is respectively applied. 
 * the title element has a class name of `rbc-title`.
 
 ### Examples
 
-1. Basic component example
+1. [Basic component example](../playground/?selectedKind=DatePicker&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel)
 
-2. Show more than one month
+2. [Show more than one month](../playground/?selectedKind=DatePicker&selectedStory=Show%20more%20than%201%20month&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel)
 
-3. Start with a default date
+3. [Start with a default date](../playground/?selectedKind=DatePicker&selectedStory=Default%20date&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel)
 
-4. Start with an initial focus
+4. [Enable days from today only](../playground/?selectedKind=DatePicker&selectedStory=Enable%20days%20from%20today%20only&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel)
 
-5. An example using `extra` prop
+5. [An example using `extra` prop](../playground/?selectedKind=DatePicker&selectedStory=Using%20extra%20prop%20object&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel)
 
-6. Playground mode
+6. [Playground mode](../playground/?knob-title=Date%20Picker&knob-numberOfMonths=1&knob-allowAllDates=true&selectedKind=DatePicker&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel)
