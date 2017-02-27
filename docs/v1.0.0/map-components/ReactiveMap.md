@@ -41,7 +41,7 @@ Example uses:
 
     // 'react' defines when and how the map component should update
     react={{
-      CitySensor: {"operation": "must"}
+      and: "CitySensor"
     }}
 
     // map events
@@ -119,7 +119,7 @@ Example uses:
 - **streamMarkerImage** `String` [optional]  
     URL of the streaming marker image to be shown. It comes with a default image that's distinct from the defaultMarkerImage. Should be only set if you wish to use a custom marker image.
 - **react** `Object`
-    an object defining the sensor components whose state change triggers an update to the map UI. You can read more here.
+     a dependency object defining how this component should react based on the state changes in the dependent sensor components. You can read more about it [here](v1.0.0/advanced/React.html)
 - **autoCenter** `Boolean` [optional]  
     whether to auto center the map based on the geometric center of all the location markers. Defaults to `true`.
 - **autoMapRender** `Boolean` [optional]  
