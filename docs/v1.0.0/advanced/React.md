@@ -1,5 +1,7 @@
 {"bigh3": true}
 
+{% raw %}
+
 ## React
 
 One of the key ideas behind Reactive Maps is the sensor / actuator design pattern, which allows defining how an actuator component reacts to changes in the states of the sensors.
@@ -45,3 +47,5 @@ An example of a `react` clause where all three clauses are used and values are `
 ```
 
 Here, we are specifying that the map's UI should update whenever one of the blacklist items is not present and simultaneously any one of city or topics matches.
+
+{% endraw %}
