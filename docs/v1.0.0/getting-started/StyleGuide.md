@@ -1,3 +1,5 @@
+{"big-h3": "true"}
+
 # Style Guide
 
 ## Principles
