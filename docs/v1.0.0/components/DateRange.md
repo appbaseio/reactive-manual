@@ -74,14 +74,14 @@ All reactivebase components are `rbc` namespaced.
 
 ### Examples
 
-1. Basic component example
+1. [Basic component example](../playground/?selectedKind=DateRange&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel)
 
-2. Show more than one month
+2. [Show more than one month](../playground/?selectedKind=DateRange&selectedStory=Show%20more%20than%201%20month&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel)
 
-3. Start a default date
+3. [Start a default date](../playground/?selectedKind=DateRange&selectedStory=Default%20date&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel)
 
-4. Enable days only starting today onwards
+4. [Enable days only starting today onwards](../playground/?selectedKind=DateRange&selectedStory=Enable%20days%20from%20today%20only&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel)
 
-5. An example using `extra` prop
+5. [An example using `extra` prop](../playground/?selectedKind=DateRange&selectedStory=Using%20extra%20prop%20object&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel)
 
-6. Playground mode
+6. [Playground mode](../playground/?knob-title=Date%20Range&knob-numberOfMonths=2&knob-allowAllDates=true&selectedKind=DateRange&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel)
