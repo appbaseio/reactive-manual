@@ -26,7 +26,10 @@ Example uses:
       "end": 20
     }
   }
-  defaultSelected={12}
+  defaultSelected={{
+    "location": "SOMA, San Francisco, United States",
+    "distance": 12
+  }}
   rangeLabels={
     {
       "start": "0 mi",
@@ -52,8 +55,8 @@ Example uses:
     an object with `start` and `end` keys and corresponding numeric values denoting the minimum and maximum possible slider values.
 - **rangeLabels** `Object` [optional]  
     an object with `start` and `end` keys and corresponding `String` labels to show labels near the ends of the `GeoDistanceSlider` component.
-- **defaultSelected** `Number` [optional]  
-    pre-select a value from the range.
+- **defaultSelected** `Object` [optional]  
+    pre-select the search query with `location` and the distance with `distance` option.
 - **stepValue** `Number` [optional]  
     step value specifies the slider stepper. Value should be an integer between 1 and floor(#total-range/2). Defaults to 1.
 
