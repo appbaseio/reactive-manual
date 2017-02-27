@@ -19,7 +19,7 @@ npm install --save @appbaseio/reactivemaps
 <link rel="stylesheet" href="node_modules/@appbaseio/reactivemaps/dist/css/style.min.css">
 ```
 
-You can read more about the installation steps [here](Installation.html).
+You can read more about the installation steps [here](../getting-started/Installation.html).
 
 ### Creating an App
 
