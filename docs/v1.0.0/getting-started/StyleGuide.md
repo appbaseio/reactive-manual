@@ -1,4 +1,4 @@
-{"big-h3": "true"}
+{"bigh3": "true"}
 
 # Style Guide
 
