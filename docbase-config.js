@@ -159,16 +159,16 @@ var docbaseConfig ={
             "label":"Advanced Topics",
             "files":[
                {
-                  "name":"Mapping",
-                  "label":"Data Mappings"
-               },
-               {
                   "name":"CustomQuery",
                   "label":"Defining Custom Queries"
                },
                {
                   "name":"React",
-                  "label":"Reactivity"
+                  "label":"Reactive Chaining"
+               },
+               {
+                  "name":"Mapping",
+                  "label":"Data Mappings"
                }
             ]
          }
