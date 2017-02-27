@@ -287,6 +287,10 @@ var docbaseConfig ={
                   "label":"Reactive PaginatedList"
                },
                {
+                  "name":"ReactiveElement",
+                  "label":"Reactive Element"
+               },
+               {
                   "name":"PoweredBy",
                   "label":"Powered By"
                }
