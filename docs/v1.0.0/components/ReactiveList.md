@@ -26,15 +26,13 @@ Example uses:
   size={10}
   requestOnScroll={true}
   componentStyle={{height:'700px', overflow:'auto'}}
-  onData={this.onData}
-  actuate={{
-    "CitySensor": {
-      "operation": "must"
-    },
-    "SearchSensor": {
-      "operation": "must"
-    }
+  initialLoader="Loading Results.."
+  noResults="No Results Found!"
+  showResultStats={true}
+  react={{
+    and: ["CitySensor", "SearchSensor"]
   }}
+  onData={this.onData}
 />
 ```
 
@@ -63,10 +61,16 @@ Example uses:
     should a paginate data request be made when scroll reaches the end of the component view? Defaults to `true`, allowing an infinite scroll functionality.
 - **componentStyle** `Object` [optional]  
     CSS Styles to be applied to the **ReactiveList** component.
-- **onData** `Function` [optional]  
-    a callback function where user can define how to render the view based on the data changes.
+- **initialLoader** `String or HTML` [optional]  
+    display to show the user while the data is loading, accepts `String` or `HTML` markup.
+- **noResults** `String or HTML` [optional]  
+    display to show the user when no results are found, accepts `String` or `HTML` markup.
+- **showResultStats** `Boolean` [optional]  
+    whether to show result stats in the form of results found and time taken. Defaults to `true`.
 - **react** `Object` [optional]  
     a dependency object defining how this component should react based on the state changes in the sensor components.
+- **onData** `Function` [optional]  
+    a callback function where user can define how to render the view based on the data changes.
 
 ### Extending ReactiveList
 

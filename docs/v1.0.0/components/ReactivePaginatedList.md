@@ -25,6 +25,9 @@ Example uses include:
   from={0}
   size={10}
   componentStyle={{height:'500px', overflow:'auto'}}
+  initialLoader="Loading Results.."
+  noResults="No Results Found!"
+  showResultStats={true}
   onData={this.onData}
   react={{
     "and": ["CitySensor", "SearchSensor"]
@@ -57,10 +60,16 @@ Example uses include:
     should a paginate data request be made when scroll reaches the end of the component view? Defaults to `true`, allowing an infinite scroll functionality.
 - **componentStyle** `Object` [optional]  
     CSS Styles to be applied to the component, passed as an object.
-- **onData** `Function` [optional]  
-    a callback function where user can define how to render the view based on the data changes.
+- **initialLoader** `String or HTML` [optional]  
+    display to show the user while the data is loading, accepts `String` or `HTML` markup.
+- **noResults** `String or HTML` [optional]  
+    display to show the user when no results are found, accepts `String` or `HTML` markup.
+- **showResultStats** `Boolean` [optional]  
+    whether to show result stats in the form of results found and time taken. Defaults to `true`.
 - **react** `Object` [optional]  
     a dependency object defining how this component should react based on the state changes in the sensor components.
+- **onData** `Function` [optional]  
+    a callback function where user can define how to render the view based on the data changes.
 
 ### Extending ReactivePaginatedList
 
