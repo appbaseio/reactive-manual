@@ -163,8 +163,12 @@ var docbaseConfig ={
                   "label":"Data Mappings"
                },
                {
+                  "name":"CustomQuery",
+                  "label":"Defining Custom Queries"
+               },
+               {
                   "name":"React",
-                  "label":"Reactive UIs"
+                  "label":"Reactivity"
                }
             ]
          }
