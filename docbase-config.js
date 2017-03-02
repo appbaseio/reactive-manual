@@ -33,12 +33,8 @@ var docbaseConfig ={
                   "label":"Quick Start"
                },
                {
-                  "name":"StyleGuide",
-                  "label":"Style Guide"
-               },
-               {
-                  "name":"Theming",
-                  "label":"Theming"
+                  "name":"Data",
+                  "label":"Importing Data"
                }
             ]
          },
@@ -169,6 +165,14 @@ var docbaseConfig ={
                {
                   "name":"Mapping",
                   "label":"Data Mappings"
+               },
+               {
+                  "name":"StyleGuide",
+                  "label":"Style Guide"
+               },
+               {
+                  "name":"Theming",
+                  "label":"Theming"
                }
             ]
          }
