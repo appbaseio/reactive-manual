@@ -1,3 +1,5 @@
+{"bigh3": "true"}
+
 ## Using your data
 
 The first step in getting started with building a custom project for Reactive Maps is to add your own data. In this guide, we explain how you can import your data with the correct schema.
@@ -26,7 +28,9 @@ In this section, we will cover how to add data using two popular approaches.
 Let's say you have your data organized as a CSV or XLS file.
 
 1. Use an online tool like http://www.csvjson.com/csv2json to convert your CSV data into a JSON format.
-1. Go to your appbase.io app's **Data Browser** section and click "Add Data". ![](https://i.imgur.com/idp5Ia2.png)
+1. Go to your appbase.io app's **Data Browser** section and click "Add Data".  
+
+![](https://i.imgur.com/idp5Ia2.png)
 1. Add the data JSON formatted data here, a single object should be added as a JSON object while multiple records can be added using the Array semantics.
 
 `Tip:` Add upto a hundred records at a time for best results. Ideal when your data set is small.
