@@ -23,7 +23,7 @@ ReactiveMaps uses Google Maps to render the maps. For including Google Maps, add
 All ReactiveMap styles are present in a single file. We will import it in the &lt;head> element as well
 
 ```html
-<link rel="stylesheet" href="node_modules/@appbaseio/reactivemaps/dist/css/style.min.css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/appbaseio/reactivemaps/master/dist/css/style.min.css">
 ```
 
 If you haven't included any style framework, we recommend adding materialize. 
