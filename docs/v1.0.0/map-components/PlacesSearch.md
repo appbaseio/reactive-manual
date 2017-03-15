@@ -19,7 +19,7 @@ Example uses:
   appbaseField="venue_names"
   title="Places Search Sensor"
   placeholder="Search for Places"
-  setAutoLocation={true}
+  autoLocation={true}
 />
 ```
 
@@ -33,7 +33,7 @@ Example uses:
     title of the component to be shown in the UI.
 - **placeholder** `String` [optional]  
     set the placeholder text to be shown in the searchbox field. Defaults to "Search..".
-- **setAutoLocation** `Boolean` [optional]  
+- **autoLocation** `Boolean` [optional]  
     defaults to `true`, fetches the user's current location and prefills it in the searchbox.
 
 ### CSS Styles
