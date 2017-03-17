@@ -35,6 +35,10 @@ var docbaseConfig ={
                {
                   "name":"Data",
                   "label":"Importing Data"
+               },
+               {
+                  "name":"ReactiveBase",
+                  "label":"Base Component"
                }
             ]
          },
