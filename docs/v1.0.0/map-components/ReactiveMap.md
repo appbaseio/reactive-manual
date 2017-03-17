@@ -22,7 +22,7 @@ Example uses:
 
     size={100}
     defaultZoom={13}
-    defaultCenter={{ lat: 37.74, lng: -122.45 }}
+    defaultCenter={{ lat: 37.74, lon: -122.45 }}
 
     showMapStyles={true}
     defaultMapStyle="Standard"
@@ -33,6 +33,7 @@ Example uses:
     setSearchAsMove={true}
     showPopoverOn="click"
     onPopoverTrigger={this.onPopoverTrigger}
+    popoverTTL={3}
 
     stream={true}
     streamTTL={5}
@@ -70,9 +71,6 @@ Example uses:
     autoCenter={true}
     autoMarkerPosition={true}
     componentStyle={{
-      height: '100%';
-    }}
-    containerStyle={{
       height: '700px';
     }}
 />
@@ -91,7 +89,7 @@ Example uses:
 - **defaultZoom** `Number` [optional]  
     preset map's zoom level, accepts integer values between [0, 20]. 0 is the minimum zoom level, where you can see the entire globe. 20 is the maximum zoom level. Defaults to 13.
 - **defaultCenter** `Object` [optional]  
-    preset map's center position by specifying an object with valid `lat` and `lng` values.
+    preset map's center position by specifying an object with valid `lat` and `lon` values.
 - **showMapStyles** `Boolean` [optional]  
     whether to show map styles dropdown picker in the map UI. Defaults to `true`.
 - **defaultMapStyle** `String` [optional]  
@@ -110,6 +108,8 @@ Example uses:
     event that triggers popover, accepts either a "click" or a "mouseover" as valid values.
 - **onPopoverTrigger** `function` [optional]  
     a function that takes one argument for getting a marker's data and returns an HTML markup to be displayed in the popover box.
+- **popoverTTL** `Number` [optional]  
+    time to live for a popover specified in seconds. By default, a popover doesn't have a TTL value. Valid values are in the range (0, 60].
 - **stream** `Boolean` [optional]  
     whether to stream new result (aka realtime view) updates in the UI. Defaults to `false`.
 - **streamTTL** `Number` [optional]  
@@ -119,7 +119,7 @@ Example uses:
 - **streamMarkerImage** `String` [optional]  
     URL of the streaming marker image to be shown. It comes with a default image that's distinct from the defaultMarkerImage. Should be only set if you wish to use a custom marker image.
 - **react** `Object`
-     a dependency object defining how this component should react based on the state changes in the dependent sensor components. You can read more about it [here](v1.0.0/advanced/React.html)
+     a dependency object defining how this component should react based on the state changes in the dependent sensor components. You can read more about it [here](v1.0.0/advanced/React.html).
 - **autoCenter** `Boolean` [optional]  
     whether to auto center the map based on the geometric center of all the location markers. Defaults to `true`.
 - **autoMapRender** `Boolean` [optional]  
@@ -128,8 +128,6 @@ Example uses:
     whether to set the rotation angle of the marker image based on the delta changes in its location, useful when displaying realtime traffic data. Defaults to `false`.
 - **componentStyle** `Object` [optional]  
     CSS style object to be applied to the `ReactiveMap` component.
-- **containerStyle** `Object` [optional]  
-    CSS style object to be applied to the underlying `GoogleMap` component.
 - **onData** `function`  
     event fired when one or more markers are indexed, updated or removed from the map. It takes an object with the following properties:
 
