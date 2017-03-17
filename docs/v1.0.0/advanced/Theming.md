@@ -17,9 +17,8 @@ This will accordingly set the primary, secondary and default colors of the react
 
 ```html
 <ReactiveBase
-	appname="<APP_NAME>"
-	username="<APP's_USERNAME>"
-	password="<APP's_PASSWORD>"
+	app="<APP_NAME>"
+	credentials="<APP's_CREDENTIALS>"
 	type="TYPE"
 	theme="rbc-blue">
 

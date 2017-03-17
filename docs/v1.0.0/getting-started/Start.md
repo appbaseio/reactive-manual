@@ -46,8 +46,7 @@ class HelloWorld extends Component {
 	return(
 		<ReactiveBase
 			app="reactivemap-demo-app"
-			username="2ZvCaw7CR"
-			password="6664ec32-4e21-434d-836c-33af67b88c60">
+			credentials="2ZvCaw7CR:6664ec32-4e21-434d-836c-33af67b88c60">
 			<div class="row">
 				<div class="col-xs-6">
 					<SingleList
