@@ -35,7 +35,7 @@ import {
 } from '@appbaseio/reactivemaps';
 ```
 
-Next, we will create a [`ReactiveBase`](./ReactiveBase.html) component for connecting our UI view with data, where the data source is an [appbase.io](https://appbase.io) app. This quick GIF will help with creating an app and getting its credentials.  
+Next, we will create a [`ReactiveBase`](v1.0.0/getting-started/ReactiveBase.html) component for connecting our UI view with data, where the data source is an [appbase.io](https://appbase.io) app. This quick GIF will help with creating an app and getting its credentials.  
 
 ![create an appbase.io app](https://i.imgur.com/Y6HiHnJ.gif)
 
