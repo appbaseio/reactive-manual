@@ -46,7 +46,7 @@ Example uses:
     unique id of the sensor, can be referenced in an actuator's `react` prop.
 - **appbaseField** `String`  
     DB data field to be mapped with the component's UI view, used when a database query is made on this field.
-- **title** `String` [optional]  
+- **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **unit** `String` [optional]  
     unit for distance measurement, uses `mi` (for miles) by default. Distance units can be specified from the following:  

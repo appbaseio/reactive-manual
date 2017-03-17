@@ -28,7 +28,7 @@ Example uses:
     unique id of the sensor, can be referenced in an actuator’s react prop.
 - **appbaseField** `String or Array`  
     data field(s) on which the search query will be aplied to. If you want to search across multiple fields, pass them as an `Array`.
-- **title** `String` [optional]  
+- **title** `String or HTML` [optional]  
     Sets the title of the component to be shown in the UI.
 - **placeholder** `String` [optional]  
     Sets the placeholder text to be shown in the searhbox input field. Defaults to "Search...".

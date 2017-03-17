@@ -36,7 +36,7 @@ Example uses:
 
 - **componentId** `String`  
     unique id of the sensor, can be referenced in an actuator's `react` prop.
-- **title** `String` [optional]  
+- **title** `String or HTML` [optional]  
     title of the component, to be shown in the UI.
 - **stream** `Boolean` [optional]  
     whether to stream new result updates in the UI. Defaults to `false`.

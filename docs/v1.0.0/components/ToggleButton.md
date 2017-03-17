@@ -33,7 +33,7 @@ Example uses:
     unique id of the sensor, can be referenced in an actuator's `react` prop.
 - **appbaseField** `String`  
     DB data field to be mapped with the component's UI view.The selected buttons create a database query on this field.
-- **title** `String` [optional]  
+- **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **data** `Object Array`  
     an object array of {label:label, value:value} kv pairs, `label` is displayed in the UI and `value` is the corresponding actual field value in the database.

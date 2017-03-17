@@ -35,7 +35,7 @@ Example uses:
     unique id of the sensor, can be referenced when creating a combined query context in an actuator's `react` prop.  
 - **appbaseField** `String`  
     DB data field to be mapped with the component's UI options.
-- **title** `String` [optional]  
+- **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **defaultSelected** `string` [optional]  
     default selected value pre-selects an option from the list.

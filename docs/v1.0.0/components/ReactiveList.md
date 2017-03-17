@@ -42,7 +42,7 @@ Example uses:
     unique id of the sensor, can be referenced in an actuator's `react` prop.
 - **appbaseField** `String`  
     data field to be mapped with the `ReactiveList`'s UI view, used for providing a sorting context.
-- **title** `String` [optional]  
+- **title** `String or HTML` [optional]  
     title of the component, to be shown in the UI.
 - **stream** `Boolean` [optional]  
     whether to stream new result updates in the UI. Defaults to `false`.

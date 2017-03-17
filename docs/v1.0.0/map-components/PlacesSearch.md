@@ -29,7 +29,7 @@ Example uses:
     unique id of the sensor, can be referenced in an actuator's `react` prop.
 - **appbaseField** `String`  
     DB data field to be mapped with the component's UI view, used when a database query is made on this field.
-- **title** `String` [optional]  
+- **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **placeholder** `String` [optional]  
     set the placeholder text to be shown in the searchbox field. Defaults to "Search..".

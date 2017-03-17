@@ -82,7 +82,7 @@ Example uses:
     unique id of the component, can be referenced in another actuator's `react` prop.
 - **appbaseField** `String`  
     DB data field to be mapped with the component's UI view, usually of a geopoint (i.e. location) data type and used for rendering the markers on the map.
-- **title** `String` [optional]  
+- **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **size** `Number` [optional]  
     number of results to show in the map view, can be a number in the range [1, 1000]. Defaults to 100.

@@ -35,7 +35,7 @@ Example uses:
     unique id of the sensor, can be referenced when creating a combined query context in an actuator's `react` prop.  
 - **appbaseField** `String`  
     DB data field to be mapped with the component's UI view. The dropdown list items are filtered by a database query on this field.
-- **title** `String` [optional]  
+- **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **defaultSelected** `Array` [optional]  
     pre-select one or more options from the dropdown list. Accepts an `Array` object containing the items that should be selected. It is important for the passed value(s) exactly match with the field value(s) as stored in appbase.io app.

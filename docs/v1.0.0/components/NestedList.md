@@ -33,7 +33,7 @@ Example uses:
     unique id of the sensor, can be referenced in an actuator's `react` prop.
 - **appbaseField** `Array`  
     data field(s) to be mapped with the component's UI view. A nested list component supports multiple fields passed as an Array denoting the order of nesting.
-- **title** `String` [optional]  
+- **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **size** `Number` [optional]  
     control how many items to display in the List. Defaults to 100.

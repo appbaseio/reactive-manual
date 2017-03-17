@@ -44,7 +44,7 @@ Example uses:
 
 - **componentId** `String`  
     unique id of the sensor, can be referenced in another component's **react** prop.
-- **title** `String` [optional]  
+- **title** `String or HTML` [optional]  
     Sets the title of the component to be shown in the UI.
 - **showUI** `Boolean` [optional]  
     whether to show the UI for the component. Defaults to `false`.

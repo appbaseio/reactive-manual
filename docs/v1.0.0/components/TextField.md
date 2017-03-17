@@ -25,7 +25,7 @@ Unlike other components that have a specific query associated with their UI view
     unique id of the sensor, can be referenced in an actuator's `react` prop.
 - **appbaseField** `String`  
     data field to be mapped with the component's UI view.
-- **title** `String` [optional]  
+- **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **placeholder** `String` [optional]  
     placeholder to be displayed in the text field.

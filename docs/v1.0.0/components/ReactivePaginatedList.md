@@ -41,7 +41,7 @@ Example uses include:
     unique id of the sensor, can be referenced in an actuator's `react` prop.
 - **appbaseField** `String`  
     data field to be mapped with the component's UI view, used for providing a sorting context.
-- **title** `String` [optional]  
+- **title** `String or HTML` [optional]  
     title of the component, to be shown in the UI.
 - **paginationAt** `String` [optional]  
     Determines the position where to show the pagination. Accepts one of `top`, `bottom` or `both` as valid values. Defaults to `bottom`.

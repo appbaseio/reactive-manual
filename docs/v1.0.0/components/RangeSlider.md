@@ -41,7 +41,7 @@ Example uses:
     unique id of the sensor, can be referenced in an actuator's `react` prop.
 - **appbaseField** `String`  
     DB data field to be mapped with the component's UI view.The selected range creates a database query on this field.
-- **title** `String` [optional]  
+- **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **range** `Object`  
     an object with `start` and `end` keys and corresponding numeric values denoting the minimum and maximum possible slider values.

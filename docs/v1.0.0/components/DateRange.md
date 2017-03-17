@@ -28,7 +28,7 @@ Example uses:
     unique id of the sensor, can be referenced when creating a combined query context in an actuator's `react` prop.  
 - **appbaseField** `String`  
     DB data field to be mapped with the component's UI options.
-- **title** `String` [optional]  
+- **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **numberOfMonths** `Number` [optional]  
     number of months to be shown in the calendar view. Defaults to 1.
