@@ -35,7 +35,7 @@ import {
 } from '@appbaseio/reactivemaps';
 ```
 
-Next, we create a `ReactiveBase` component, which requires creating an [appbase.io](https://appbase.io) app along with `username:password` credentials. This quick GIF will help with creating an app and getting the credentials.  
+Next, we will create a [`ReactiveBase`](./ReactiveBase.html) component for connecting our UI view with data, where the data source is an [appbase.io](https://appbase.io) app. This quick GIF will help with creating an app and getting its credentials.  
 
 ![create an appbase.io app](https://i.imgur.com/Y6HiHnJ.gif)
 
@@ -75,10 +75,14 @@ class HelloWorld extends Component {
 ```
 {% endraw %}
 
-We create a `SingleList` component with New York city selected by default and add a `ReactiveMap` component which updates reactively every time the SingleList component's selected value changes.
+Next, we have created a `SingleList` component with New York city selected by default and have added a `ReactiveMap` component which updates reactively every time the SingleList component's selected value changes.
 
-If you followed along, you should see something like this:
+If you have followed along, you should see something like this:
 
 ![Image](https://i.imgur.com/Xj9GIgs.png)
 
-You can also checkout a working demo of the above app directly here - https://github.com/appbaseio-apps/reactivemaps-starter-app.
+You can also checkout a working demo of the above app directly at https://github.com/appbaseio-apps/reactivemaps-starter-app. The repo demonstrates the same example app in different ways:
+1. [`master`](https://github.com/appbaseio-apps/reactivemaps-starter-app/tree/master) - The app as shown in the steps above.
+1. [`browserify`](https://github.com/appbaseio-apps/reactivemaps-starter-app/tree/browserify) - A browserify based build (instead of webpack).
+1. [`withbootstrap`](https://github.com/appbaseio-apps/reactivemaps-starter-app/tree/withbootstrap) - A bootstrap based theming (instead of Materialize).
+1. [`umd`](https://github.com/appbaseio-apps/reactivemaps-starter-app/tree/umd) - A completely browser based app with no npm dependencies and webpack / browserify modules.
