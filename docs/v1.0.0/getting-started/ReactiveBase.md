@@ -2,7 +2,7 @@
 
 ## ReactiveBase
 
-**ReactiveBase** is the **base** component for all `ReactiveMaps` and `ReactiveSearch` apps. It binds the backend app with the UI view components (child elements to ReactiveBase).
+**ReactiveBase** is the **base** component for all `ReactiveMaps` and `ReactiveSearch` apps. It binds the backend app (data source) with the UI view components (child elements to ReactiveBase), allowing the UI views to be reactively updated every time there is a change in the data source or in the UI view components.
 
 This is the first component you will need to add.
 
