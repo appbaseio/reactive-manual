@@ -87,12 +87,12 @@ All reactivebase components are `rbc` namespaced.
 ```
 
 - **componentStyle** `Object`
-  CSS styles to be applied to the **DataController** component. This prop is only applicable when **showUI** prop is set to `true`.
+    CSS styles to be applied to the **DataController** component. This prop is only applicable when **showUI** prop is set to `true`.
 - **customQuery** `Function`
-  takes **value** as a parameter and **returns** the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.
-  `Note:` customQuery is called on value changes in the **DataController** component as long as the component is a part of `react` dependency of at least one other component.
+    takes **value** as a parameter and **returns** the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.
+    `Note:` customQuery is called on value changes in the **DataController** component as long as the component is a part of `react` dependency of at least one other component.
 - **onValueChange** `Function`
-  is called every time the component's **value** changes and is passed as a parameter to the function. This is an ideal way for updating other UI components that need to be updated when **DataController's** value changes.
+    is called every time the component's **value** changes and is passed as a parameter to the function. This is an ideal way for updating other UI components that need to be updated when **DataController's** value changes.
 
 
 ### Examples
