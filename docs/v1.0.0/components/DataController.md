@@ -23,20 +23,6 @@ Example uses:
   dataLabel={
     <p>A customizable UI widget</p>
   }
-  componentStyle={{
-    padding-bottom: '10px'
-  }}
-  customQuery={
-    function() {
-      return {
-        query: {
-          match: {
-            data_field: "this is a test"
-          }
-        }
-      }
-    }
-  }
 />
 ```
 
@@ -50,16 +36,64 @@ Example uses:
     whether to show the UI for the component. Defaults to `false`.
 - **dataLabel** `String or HTML` [optional]  
     set the UI markup. Accepts a string or an HTML element. This prop is only applicable when **showUI** is set to `true`.
-- **componentStyle** `Object` [optional]  
-    CSS styles to be applied to the **DataController** component. Similar to dataLabel, this prop is only applicable when **showUI** is set to `true`.
-- **customQuery** `Function` [optional]  
-    define the data query to be applied to the component, as per Elasticsearch v2.4 Query DSL. Unlike other components where **appbaseField** is a required prop and decides the query, with DataController component -- user returns a query definition in the customQuery prop.
 
 ### CSS Styles
 
 All reactivebase components are `rbc` namespaced.
 
 ![Annotated Image]()
+
+```
+<div class="rbc rbc-datacontroller card thumbnail rbc-title-active rbc-datalabel-active rbc-visible-active">
+  <div>
+    <h4 class="rbc-title col s12 col-xs-12">DataController</h4>
+    <span class="rbc-datalabel col s12 col-xs-12">
+      <p>★ A customizable UI widget ★</p>
+    </span>
+  </div>
+</div>
+```
+
+### Extending
+
+`DataController` component can be extended to
+1. customize the look and feel with `componentStyle`,
+2. update the underlying DB query with `customQuery`,
+3. connect with external interfaces using `onValueChange`.
+
+```
+<DataController
+  ...
+  componentStyle={{"paddingBottom": "10px"}}
+  customQuery={
+    function(value) {
+      return {
+        query: {
+          match: {
+            data_field: "this is a test"
+          }
+        }
+      }
+    }
+  }
+  onValueChange={
+    function(value) {
+      console.log("current value: ", value)
+      // set the state
+      // submit it as a part of the form
+    }
+  }
+/>
+```
+
+- **componentStyle** `Object`
+  CSS styles to be applied to the **DataController** component. This prop is only applicable when **showUI** prop is set to `true`.
+- **customQuery** `Function`
+  takes **value** as a parameter and **returns** the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.
+  `Note:` customQuery is called on value changes in the **DataController** component as long as the component is a part of `react` dependency of at least one other component.
+- **onValueChange** `Function`
+  is called every time the component's **value** changes and is passed as a parameter to the function. This is an ideal way for updating other UI components that need to be updated when **DataController's** value changes.
+
 
 ### Examples
 
