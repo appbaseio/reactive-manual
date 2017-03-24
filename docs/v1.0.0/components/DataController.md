@@ -19,7 +19,7 @@ Example uses:
 <DataController
   componentId="DataControllerSensor"
   title="Data Controller Component"
-  showUI={true}
+  visible={true}
   dataLabel={
     <p>A customizable UI widget</p>
   }
@@ -30,12 +30,12 @@ Example uses:
 
 - **componentId** `String`  
     unique id of the sensor, can be referenced in another component's **react** prop.
-- **title** `String or HTML` [optional]  
-    Sets the title of the component to be shown in the UI.
-- **showUI** `Boolean` [optional]  
+- **visible** `Boolean` [optional]  
     whether to show the UI for the component. Defaults to `false`.
+- **title** `String or HTML` [optional]  
+    Sets the title of the component to be shown in the UI, applicable when **visible** is set to `true`.
 - **dataLabel** `String or HTML` [optional]  
-    set the UI markup. Accepts a string or an HTML element. This prop is only applicable when **showUI** is set to `true`.
+    set the UI markup. Accepts a string or an HTML element. This prop is only applicable when **visible** is set to `true`.
 
 ### CSS Styles
 
@@ -53,6 +53,11 @@ All reactivebase components are `rbc` namespaced.
   </div>
 </div>
 ```
+
+* DataController component's class name is `rbc-datacontroller`.
+* Additionally, depending on the presence / absence of the `visible` prop, a `rbc-visible-active` or `rbc-visible-inactive` class is respectively applied.
+* The title element has a class name of `rbc-title`. Depending on the presence / absence of the title prop, a `rbc-title-active` or `rbc-title-inactive` class is applied at the component's root div.
+* The UI element has a class name of `rbc-datalabel`. Depending on the presence / absence of the datalabel prop, a `rbc-datalabel-active` or `rbc-datalabel-inactive` class is applied at the component's root div.
 
 ### Extending
 
@@ -87,7 +92,7 @@ All reactivebase components are `rbc` namespaced.
 ```
 
 - **componentStyle** `Object`
-    CSS styles to be applied to the **DataController** component. This prop is only applicable when **showUI** prop is set to `true`.
+    CSS styles to be applied to the **DataController** component. This prop is only applicable when **visible** prop is set to `true`.
 - **customQuery** `Function`
     takes **value** as a parameter and **returns** the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.
     `Note:` customQuery is called on value changes in the **DataController** component as long as the component is a part of `react` dependency of at least one other component.
