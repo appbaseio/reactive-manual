@@ -65,6 +65,16 @@ var docbaseConfig ={
             ]
          },
          {
+            "name":"search-components",
+            "label":"Search Components",
+            "files":[
+               {
+                  "name":"NestedList",
+                  "label":"Nested List"
+               }
+            ]
+         },
+         {
             "name":"components",
             "label":"Base Components",
             "files":[
@@ -83,10 +93,6 @@ var docbaseConfig ={
                {
                   "name":"MultiDropdownList",
                   "label":"Multi Dropdown List"
-               },
-               {
-                  "name":"NestedList",
-                  "label":"Nested List"
                },
                {
                   "name":"SingleRange",
