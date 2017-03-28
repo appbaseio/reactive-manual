@@ -41,7 +41,7 @@ Example uses:
 
 All reactivebase components are `rbc` namespaced.
 
-![Annotated Image]()
+![Annotated Image](http://i.imgur.com/YwUKUaC.png)
 
 ```
 <div class="rbc rbc-datacontroller card thumbnail rbc-title-active rbc-datalabel-active rbc-visible-active">
