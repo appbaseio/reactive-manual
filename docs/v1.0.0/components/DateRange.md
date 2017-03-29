@@ -72,16 +72,56 @@ All reactivebase components are `rbc` namespaced.
 * DateRange component's class name is `rbc-daterange`. Additionally, depending on the presence / absence of the `title` prop, a `rbc-title-active` or `rbc-title-inactive` class is respectively applied.
 * the title element has a class name of `rbc-title`.
 
+### Extending
+
+`DateRange` component can be extended to
+1. customize the look and feel with `componentStyle`,
+2. update the underlying DB query with `customQuery`,
+3. connect with external interfaces using `onValueChange`.
+
+```
+<DataSearch
+  ...
+  componentStyle={{"paddingBottom": "10px"}}
+  customQuery={
+    function(value) {
+      return {
+        query: {
+          match: {
+            data_field: "this is a test"
+          }
+        }
+      }
+    }
+  }
+  onValueChange={
+    function(value) {
+      console.log("current value: ", value)
+      // set the state
+      // use the value with other js code
+    }
+  }
+/>
+```
+
+- **componentStyle** `Object`
+    CSS styles to be applied to the **DateRange** component.
+- **customQuery** `Function`
+    takes **value** as a parameter and **returns** the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.
+    `Note:` customQuery is called on value changes in the **DateRange** component as long as the component is a part of `react` dependency of at least one other component.
+- **onValueChange** `Function`
+    is called every time the component's **value** changes and is passed in as a parameter to the function. This can be used for updating other UI components when **DateRange's** value changes.
+
 ### Examples
 
-1. [Basic component example](../playground/?selectedKind=DateRange&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel)
+1. [Basic component example](../playground/?selectedKind=DateRange&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel&filterBy=ReactiveMaps)
 
-2. [Show more than one month](../playground/?selectedKind=DateRange&selectedStory=Show%20more%20than%201%20month&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel)
+2. [Show more than one month](../playground/?selectedKind=DateRange&selectedStory=Show%20more%20than%201%20month&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel&filterBy=ReactiveMaps)
 
-3. [Start a default date](../playground/?selectedKind=DateRange&selectedStory=Default%20date&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel)
+3. [Start a default date](../playground/?selectedKind=DateRange&selectedStory=Default%20date&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel&filterBy=ReactiveMaps)
 
-4. [Enable days only starting today onwards](../playground/?selectedKind=DateRange&selectedStory=Enable%20days%20from%20today%20only&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel)
+4. [Enable days only starting today onwards](../playground/?selectedKind=DateRange&selectedStory=Enable%20days%20from%20today%20only&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel&filterBy=ReactiveMaps)
 
-5. [An example using `extra` prop](../playground/?selectedKind=DateRange&selectedStory=Using%20extra%20prop%20object&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel)
+5. [An example using `extra` prop](../playground/?selectedKind=DateRange&selectedStory=Using%20extra%20prop%20object&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel&filterBy=ReactiveMaps)
 
-6. [Playground mode](../playground/?knob-title=Date%20Range&knob-numberOfMonths=2&knob-allowAllDates=true&selectedKind=DateRange&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel)
+6. [Playground mode](../playground/?knob-title=Date%20Range&knob-numberOfMonths=2&knob-allowAllDates=true&selectedKind=DateRange&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel&filterBy=ReactiveMaps)
