@@ -79,16 +79,56 @@ All reactivebase components are `rbc` namespaced.
 * the label element has a class name of `rbc-label`.
 * the element containing count inside the label has a class name of `rbc-count`.
 
+### Extending
+
+`SingleList` component can be extended to
+1. customize the look and feel with `componentStyle`,
+2. update the underlying DB query with `customQuery`,
+3. connect with external interfaces using `onValueChange`.
+
+```
+<SingleList
+  ...
+  componentStyle={{"paddingBottom": "10px"}}
+  customQuery={
+    function(value) {
+      return {
+        query: {
+          match: {
+            data_field: "this is a test"
+          }
+        }
+      }
+    }
+  }
+  onValueChange={
+    function(value) {
+      console.log("current value: ", value)
+      // set the state
+      // use the value with other js code
+    }
+  }
+/>
+```
+
+- **componentStyle** `Object`
+    CSS styles to be applied to the **SingleList** component.
+- **customQuery** `Function`
+    takes **value** as a parameter and **returns** the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.
+    `Note:` customQuery is called on value changes in the **SingleList** component as long as the component is a part of `react` dependency of at least one other component.
+- **onValueChange** `Function`
+    is called every time the component's **value** changes and is passed in as a parameter to the function. This can be used for updating other UI components when **SingleList's** value changes.
 
 ### Examples
 
-1. List with all the default props
+1. [List with all the default props](..playground/?selectedKind=m%2FSingleList&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveMaps)
 
-2. List with custom sort and a default selection
+2. [List without search UI](..playground/?selectedKind=m%2FSingleList&selectedStory=Without%20Search&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveMaps)
 
-3. List with show search set to true
+3. [List with pre-selected items](..playground/?selectedKind=m%2FSingleList&selectedStory=Default%20Selected&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveMaps)
 
-4. List with a dependency on another sensor
+4. [List with a custom sort order](..playground/?selectedKind=m%2FSingleList&selectedStory=Custom%20Sort&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveMaps)
 
-5. Playground (with all knob actions)
+5. [List with a 'Select All' item](..playground/?selectedKind=m%2FSingleList&selectedStory=With%20Select%20All&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveMaps)
 
+6. [Playground (with all knob actions)](..playground/?knob-title=SingleList%3A%20City%20Filter&knob-size=100&knob-sortBy=count&knob-defaultSelected=San%20Francisco&knob-showCount=true&knob-showSearch=true&knob-placeholder=Search%20City&knob-selectAllLabel=All%20cities&selectedKind=m%2FSingleList&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveMaps)
