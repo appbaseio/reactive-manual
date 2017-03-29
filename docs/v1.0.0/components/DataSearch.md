@@ -100,7 +100,7 @@ All reactivebase components are `rbc` namespaced.
     CSS styles to be applied to the **DataSearch** component.
 - **customQuery** `Function`
     takes **value** as a parameter and **returns** the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.
-    `Note:` customQuery is called on value changes in the **DataController** component as long as the component is a part of `react` dependency of at least one other component.
+    `Note:` customQuery is called on value changes in the **DataSearch** component as long as the component is a part of `react` dependency of at least one other component.
 - **onValueChange** `Function`
     is called every time the component's **value** changes and is passed in as a parameter to the function. This can be used for updating other UI components when **DataSearch's** value changes.
 
