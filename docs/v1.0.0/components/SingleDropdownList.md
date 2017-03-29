@@ -75,16 +75,52 @@ All reactivebase components are `rbc` namespaced.
 * SingleDropdownList component's class name is `rbc-singledropdownlist`. Additionally, depending on the presence / absence of the `title` prop, a `rbc-title-active` or `rbc-title-inactive` class is respectively applied. Similarly for `placeholder` prop, classname of `rbc-placeholder-active` or `rbc-placeholder-active` is applied.
 * the title element has a class name of `rbc-title`.
 
+### Extending
+
+`SingleDropdownList` component can be extended to
+1. customize the look and feel with `componentStyle`,
+2. update the underlying DB query with `customQuery`,
+3. connect with external interfaces using `onValueChange`.
+
+```
+<SingleDropdownList
+  ...
+  componentStyle={{"paddingBottom": "10px"}}
+  customQuery={
+    function(value) {
+      return {
+        query: {
+          match: {
+            data_field: "this is a test"
+          }
+        }
+      }
+    }
+  }
+  onValueChange={
+    function(value) {
+      console.log("current value: ", value)
+      // set the state
+      // use the value with other js code
+    }
+  }
+/>
+```
+
+- **componentStyle** `Object`
+    CSS styles to be applied to the **SingleDropdownList** component.
+- **customQuery** `Function`
+    takes **value** as a parameter and **returns** the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.
+    `Note:` customQuery is called on value changes in the **SingleDropdownList** component as long as the component is a part of `react` dependency of at least one other component.
+- **onValueChange** `Function`
+    is called every time the component's **value** changes and is passed in as a parameter to the function. This can be used for updating other UI components when **SingleDropdownList's** value changes.
 
 ### Examples
 
-1. List with all the default props
+1. [List with all the default props](..playground/?selectedKind=m%2FSingleDropdownList&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveMaps)
 
-2. List with custom sort and a default selection
+2. [List with a 'Select All' option](..playground/?selectedKind=m%2FSingleDropdownList&selectedStory=With%20Select%20All&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveMaps)
 
-3. List with show search set to true
+3. [List with pre-selected options](..playground/?selectedKind=m%2FSingleDropdownList&selectedStory=With%20Default%20Selected&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveMaps)
 
-4. List with a dependency on another sensor
-
-5. Playground (with all knob actions)
-
+4. [Playground (with all knob actions)](..playground/?knob-title=SingleDropdownList&knob-size=100&knob-showCount=true&knob-sortBy=count&knob-selectAllLabel=All%20Cities&knob-defaultSelected=London&knob-placeholder=Select%20a%20City&selectedKind=m%2FSingleDropdownList&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveMaps)
