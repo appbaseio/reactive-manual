@@ -55,7 +55,6 @@ All reactivebase components are `rbc` namespaced.
 			<span class="rbc-search-icon"></span>
 		</div>
 </div>
-
 ```
 
 * DataSearch component's class name is `rbc-datasearch`.
@@ -65,8 +64,49 @@ All reactivebase components are `rbc` namespaced.
 * the search container has a class name of `rbc-search-container`.
 * the input element inside the search container has a class name of `rbc-input`.
 
+### Extending
+
+`DataSearch` component can be extended to
+1. customize the look and feel with `componentStyle`,
+2. update the underlying DB query with `customQuery`,
+3. connect with external interfaces using `onValueChange`.
+
+```
+<DataSearch
+  ...
+  componentStyle={{"paddingBottom": "10px"}}
+  customQuery={
+    function(value) {
+      return {
+        query: {
+          match: {
+            data_field: "this is a test"
+          }
+        }
+      }
+    }
+  }
+  onValueChange={
+    function(value) {
+      console.log("current value: ", value)
+      // set the state
+      // use the value with other js code
+    }
+  }
+/>
+```
+
+- **componentStyle** `Object`
+    CSS styles to be applied to the **DataSearch** component.
+- **customQuery** `Function`
+    takes **value** as a parameter and **returns** the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.
+    `Note:` customQuery is called on value changes in the **DataController** component as long as the component is a part of `react` dependency of at least one other component.
+- **onValueChange** `Function`
+    is called every time the component's **value** changes and is passed in as a parameter to the function. This can be used for updating other UI components when **DataSearch's** value changes.
+
+
 ### Examples
 
-1. DataSearch with all the default props
-1. DataSearch with autocomplete turned off
-1. Playground (with all knob actions)
+1. [DataSearch with all the default props](../playground/?selectedKind=m%2FDataSearch&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveMaps)
+1. [DataSearch with autocomplete turned off](../playground/?selectedKind=m%2FDataSearch&selectedStory=Without%20Autocomplete&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveMaps)
+1. [Playground (with all knob actions)](../playground/?knob-title=DataSearch%3A%20Meetups&knob-placeholder=Search%20Venue&knob-autocomplete=true&selectedKind=m%2FDataSearch&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveMaps)
