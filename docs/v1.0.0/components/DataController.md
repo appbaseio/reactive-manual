@@ -85,7 +85,7 @@ All reactivebase components are `rbc` namespaced.
     function(value) {
       console.log("current value: ", value)
       // set the state
-      // submit it as a part of the form
+      // use the value with other js code
     }
   }
 />
@@ -97,7 +97,7 @@ All reactivebase components are `rbc` namespaced.
     takes **value** as a parameter and **returns** the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.
     `Note:` customQuery is called on value changes in the **DataController** component as long as the component is a part of `react` dependency of at least one other component.
 - **onValueChange** `Function`
-    is called every time the component's **value** changes and is passed as a parameter to the function. This is an ideal way for updating other UI components that need to be updated when **DataController's** value changes.
+    is called every time the component's **value** changes and is passed as a parameter to the function. This can be used for updating other UI components when **DataController's** value changes.
 
 
 ### Examples
