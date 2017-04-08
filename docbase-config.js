@@ -147,10 +147,6 @@ var docbaseConfig ={
                   "label":"Reactive List"
                },
                {
-                  "name":"ReactivePaginatedList",
-                  "label":"Reactive PaginatedList"
-               },
-               {
                   "name":"ReactiveElement",
                   "label":"Reactive Element"
                },
