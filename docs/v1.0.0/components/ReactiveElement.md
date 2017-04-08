@@ -24,11 +24,9 @@ Example uses:
   initialLoader="Loading Results.."
   noResults="No Results Found!"
   showResultStats={true}
-  componentStyle={{height:'700px', overflow:'auto'}}
   react={{
     or: ["CitySensor", "SearchSensor"]
   }}
-  onData={this.onData}
 />
 ```
 
@@ -44,8 +42,6 @@ Example uses:
     starting point from where to fetch the results. Useful in a pagination context. Defaults to 0.
 - **size** `Number` [optional]  
     number of results to show per view. Defaults to 20.
-- **componentStyle** `Object` [optional]  
-    CSS Styles to be applied to the **ReactiveList** component.
 - **initialLoader** `String or HTML` [optional]  
     display to show the user while the data is loading, accepts `String` or `HTML` markup.
 - **noResults** `String or HTML` [optional]  
@@ -54,52 +50,6 @@ Example uses:
     whether to show result stats in the form of results found and time taken. Defaults to `true`.
 - **react** `Object` [optional]  
     a dependency object defining how this component should react based on the state changes in the sensor components.
-- **onData** `Function` [optional]  
-    a callback function where user can define how to render the view based on the data changes.
-
-### Extending ReactiveList
-
-`onData` prop registers a function callback which is triggered every time there is a change in the data results so that the user can render the `ReactiveList` component's UI view.
-
-```js
-// Register a callback function with the `onData` prop.
-<ReactiveList ... onData={this.onData} ... />
-
-// Callback function returns an Arry of HTML elements to be rendered as ReactiveList items.
-this.onData(res, [err]) {
-  console.log(res.mode, res.newData, res.currentData, res.appliedQuery);
-  if (res.mode === "historic") {
-    console.log("time taken for response is: "+took+"ms");
-    return res.currentData + res.newData; // infinite scroll functionality
-  } else {
-    console.log("New streaming update: ", res.newData);
-    res.currentData.unshift(res.newData);
-    // add markup per element.
-    return res.currentData;               // show streaming update functionality
-  }
-}
-```
-
-The callback function returns an Array of HTML elements (think list items) which are then rendered to the view as ReactiveList items.
-
-#### Usage
-
-- **res** `Object`  
-    response object containing:  
-    - **mode** `String`  
-        "historic" when results are returned from the existing dataset and "streaming" when new results are matched.
-    - **newData** `Object`  
-        an object array when returning historic data results or a single object for streaming mode updates.
-    - **currentData** `Object Array`  
-        an array of the result objects being shown in the current component view.
-    - **appliedQuery** `Object`  
-        raw query object that triggered the function callback, useful for debugging.
-    - **took** `Number` [Optional]  
-        time taken in milliseconds, only passed when the mode is "historic".
-    - **total** `Number` [Optional]  
-        total number of results, passed when the mode is "historic".
-- **err** `Object`  
-    error object.
 
 ### CSS Styles
 
@@ -107,13 +57,46 @@ All reactivebase components are `rbc` namespaced.
 
 ![Annotated image](https://i.imgur.com/KtDriR7.png)
 
+### Extending
+
+`ReactiveElement` component can be extended to
+1. customize the look and feel with `componentStyle`,
+2. render individual result data items using `onData`,
+3. render the entire result data using  `onAllData`.
+
+`onData` prop registers a function callback which is triggered every time there is a change in the data results so that the user can render the `ReactiveElement` component's UI view.
+
+```js
+// Register a callback function with the `onData` prop.
+<ReactiveElement
+  ...
+  componentStyle={{"paddingBottom": "10px"}}
+  onData={
+    function(res) {
+      return(
+        <div>
+          { res._source }
+        </div>
+      )
+    }
+  }
+/>
+```
+
+- **componentStyle** `Object`  
+    CSS styles to be applied to the **ReactiveElement** component.
+- **onData** `Function`  
+    takes one parameter which contains the result object and returns a HTML element to be rendered in the component view.
+- **onAllData** `Function`  
+    an extension of the onData() function which contains the entire result data and returns an array of HTML elements to be rendered in the component view.
+
 ### Examples
 
-1. ReactiveList with all the default props with a single sensor filter.
+1. ReactiveElement with all the default props with a single sensor filter.
 
-2. ReactiveList with a search and a filter sensor.
+2. ReactiveElement with a search and a filter sensor.
 
-3. ReactiveList that shows streaming updates.
+3. ReactiveElement that shows streaming updates.
 
 4. Playground (with all knob actions).
 
