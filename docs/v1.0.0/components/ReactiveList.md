@@ -25,14 +25,12 @@ Example uses:
   sortBy="desc"
   from={0}
   size={10}
-  componentStyle={{height:'700px', overflow:'auto'}}
   initialLoader="Loading Results.."
   noResults="No Results Found!"
   showResultStats={true}
   react={{
     and: ["CitySensor", "SearchSensor"]
   }}
-  onData={this.onData}
 />
 ```
 
@@ -61,8 +59,6 @@ Example uses:
     starting point from where to fetch the results. Useful in a pagination context. Defaults to 0.
 - **size** `Number` [optional]  
     number of results to show per view. Defaults to 20.
-- **componentStyle** `Object` [optional]  
-    CSS Styles to be applied to the **ReactiveList** component.
 - **initialLoader** `String or HTML` [optional]  
     display to show the user while the data is loading, accepts `String` or `HTML` markup.
 - **noResults** `String or HTML` [optional]  
@@ -71,10 +67,6 @@ Example uses:
     whether to show result stats in the form of results found and time taken. Defaults to `true`.
 - **react** `Object` [optional]  
     a dependency object defining how this component should react based on the state changes in the sensor components.
-- **onData** `Function` [optional]  
-    a callback function where user can define how to render the view based on the data changes.
-- **onAllData** `Function` [optional]  
-    an alternative callback function to `onData`, where user can define how to render the view based on all the data changes.
 
 ### CSS Styles
 
@@ -91,8 +83,6 @@ All reactivebase components are `rbc` namespaced.
 1. customize the look and feel with `componentStyle`,
 2. render individual result data items using `onData`,
 3. render the entire result data using  `onAllData`.
-
-`onData` prop registers a function callback which is triggered every time there is a change in the data results so that the user can render the `ReactiveList` component's UI view.
 
 ```js
 // Register a callback function with the `onData` prop.
@@ -111,7 +101,12 @@ All reactivebase components are `rbc` namespaced.
 />
 ```
 
-`onData()` method takes one parameter which contains the result object and returns a HTML element.
+- **componentStyle** `Object` [optional]  
+    CSS Styles to be applied to the **ReactiveList** component.
+- **onData** `Function` [optional]  
+    a callback function where user can define how to render the view based on the data changes.
+- **onAllData** `Function` [optional]  
+    an alternative callback function to `onData`, where user can define how to render the view based on all the data changes.
 
 ### Examples
 
