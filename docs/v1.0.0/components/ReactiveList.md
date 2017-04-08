@@ -19,12 +19,12 @@ Example uses:
 <ReactiveList
   componentId="SearchResult"
   appbaseField="ratings"
-  title="ReactiveList"
   stream={true}
+  pagination={false}
+  title="ReactiveList"
   sortBy="desc"
   from={0}
   size={10}
-  requestOnScroll={true}
   componentStyle={{height:'700px', overflow:'auto'}}
   initialLoader="Loading Results.."
   noResults="No Results Found!"
@@ -46,6 +46,10 @@ Example uses:
     title of the component, to be shown in the UI.
 - **stream** `Boolean` [optional]  
     whether to stream new result updates in the UI. Defaults to `false`.
+- **pagination** `Boolean` [optional]  
+    pagination <> infinite scroll switcher. Defaults to `false`, i.e. an infinite scroll based view. When set to `true`, a pagination based list view with page numbers will appear.
+- **paginationAt** `String` [optional]  
+    Determines the position where to show the pagination, only applicable when **pagination** prop is set to `true`. Accepts one of `top`, `bottom` or `both` as valid values. Defaults to `bottom`.
 -  **sortBy** `String` [optional]  
     sort the results by either `asc` or `desc` order. It is an alternative to `sortOptions`, both can't be used together.
 - **sortOptions** `Object Array` [optional]  
@@ -57,8 +61,6 @@ Example uses:
     starting point from where to fetch the results. Useful in a pagination context. Defaults to 0.
 - **size** `Number` [optional]  
     number of results to show per view. Defaults to 20.
-- **requestOnScroll** `Boolean` [optional]  
-    should a paginate data request be made when scroll reaches the end of the component view? Defaults to `true`, allowing an infinite scroll functionality.
 - **componentStyle** `Object` [optional]  
     CSS Styles to be applied to the **ReactiveList** component.
 - **initialLoader** `String or HTML` [optional]  
@@ -71,56 +73,45 @@ Example uses:
     a dependency object defining how this component should react based on the state changes in the sensor components.
 - **onData** `Function` [optional]  
     a callback function where user can define how to render the view based on the data changes.
-
-### Extending ReactiveList
-
-`onData` prop registers a function callback which is triggered every time there is a change in the data results so that the user can render the `ReactiveList` component's UI view.
-
-```js
-// Register a callback function with the `onData` prop.
-<ReactiveList ... onData={this.onData} ... />
-
-// Callback function returns an Arry of HTML elements to be rendered as ReactiveList items.
-this.onData(res, [err]) {
-  console.log(res.mode, res.newData, res.currentData, res.appliedQuery);
-  if (res.mode === "historic") {
-    console.log("time taken for response is: "+took+"ms");
-    return res.currentData + res.newData; // infinite scroll functionality
-  } else {
-    console.log("New streaming update: ", res.newData);
-    res.currentData.unshift(res.newData);
-    // add markup per element.
-    return res.currentData;               // show streaming update functionality
-  }
-}
-```
-
-The callback function returns an Array of HTML elements (think list items) which are then rendered to the view as ReactiveList items.
-
-#### Usage
-
-- **res** `Object`  
-    response object containing:  
-    - **mode** `String`  
-        "historic" when results are returned from the existing dataset and "streaming" when new results are matched.
-    - **newData** `Object`  
-        an object array when returning historic data results or a single object for streaming mode updates.
-    - **currentData** `Object Array`  
-        an array of the result objects being shown in the current component view.
-    - **appliedQuery** `Object`  
-        raw query object that triggered the function callback, useful for debugging.
-    - **took** `Number` [Optional]  
-        time taken in milliseconds, only passed when the mode is "historic".
-    - **total** `Number` [Optional]  
-        total number of results, passed when the mode is "historic".
-- **err** `Object`  
-    error object.
+- **onAllData** `Function` [optional]  
+    an alternative callback function to `onData`, where user can define how to render the view based on all the data changes.
 
 ### CSS Styles
 
 All reactivebase components are `rbc` namespaced.
 
 ![Annotated image](https://i.imgur.com/KtDriR7.png)
+
+
+![Annotated Image](https://i.imgur.com/TPP2Zuh.png)
+
+### Extending
+
+`ReactiveList` component can be extended to
+1. customize the look and feel with `componentStyle`,
+2. render individual result data items using `onData`,
+3. render the entire result data using  `onAllData`.
+
+`onData` prop registers a function callback which is triggered every time there is a change in the data results so that the user can render the `ReactiveList` component's UI view.
+
+```js
+// Register a callback function with the `onData` prop.
+<ReactiveList
+  ...
+  componentStyle={{"paddingBottom": "10px"}}
+  onData={
+    function(res) {
+      return(
+        <div>
+          { res._source }
+        </div>
+      )
+    }
+  }
+/>
+```
+
+`onData()` method takes one parameter which contains the result object and returns a HTML element.
 
 ### Examples
 
