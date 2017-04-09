@@ -149,10 +149,6 @@ var docbaseConfig ={
                {
                   "name":"ReactiveElement",
                   "label":"Reactive Element"
-               },
-               {
-                  "name":"PoweredBy",
-                  "label":"Powered By"
                }
             ]
          },
