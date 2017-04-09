@@ -91,8 +91,8 @@ All reactivebase components are `rbc` namespaced.
 
 ### Examples
 
-1. [Text field  with default props](..playground/?selectedKind=TextField&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs)
+1. [Text field  with default props](../playground/?selectedKind=TextField&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs)
 
-2. [Text field with a default selected value](..playground/?selectedKind=TextField&selectedStory=DefaultSelected&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs)
+2. [Text field with a default selected value](../playground/?selectedKind=TextField&selectedStory=DefaultSelected&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs)
 
-3. [Playground (with all knob actions)](..playground/?knob-title=TextField%3A%20Car%20Search&knob-placeholder=Type%20a%20car%20name&knob-defaultSelected=nissan&selectedKind=TextField&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs)
+3. [Playground (with all knob actions)](../playground/?knob-title=TextField%3A%20Car%20Search&knob-placeholder=Type%20a%20car%20name&knob-defaultSelected=nissan&selectedKind=TextField&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs)
