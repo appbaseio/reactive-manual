@@ -71,6 +71,10 @@ var docbaseConfig ={
                {
                   "name":"NestedList",
                   "label":"Nested List"
+               },
+               {
+                  "name":"MultiLevelMenu",
+                  "label":"MultiLevel Menu"
                }
             ]
          },
