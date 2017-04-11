@@ -54,7 +54,7 @@ Example uses:
     an alternative to the `sortBy` prop, `sortOptions` creates a sorting view in the ReactiveList component's UI. Each array element is an object that takes three keys:
     - `label` - label to be displayed in the UI.
     - `appbaseField` - data field to use for applying the sorting criteria on.
-    - `order` - specified as either `asc` or `desc`.
+    - `sortBy` - specified as either `asc` or `desc`.
 - **from** `Number` [optional]  
     starting point from where to fetch the results. Useful in a pagination context. Defaults to 0.
 - **size** `Number` [optional]  
