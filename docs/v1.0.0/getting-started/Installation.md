@@ -20,17 +20,20 @@ ReactiveMaps uses Google Maps to render the maps. For including Google Maps, add
 
 ### Step 3: Add ReactiveMap's style file
 
-All ReactiveMap styles are present in a single file. We will import it in the &lt;head> element as well
-
-```html
-<link rel="stylesheet" href="https://cdn.rawgit.com/appbaseio/reactivemaps/master/dist/css/style.min.css">
-```
 
 If you haven't included any style framework, we recommend adding materialize. 
 
 ```html
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
 ```
+
+All ReactiveMap styles are present in a single file. We will import it in the &lt;head> element as well.
+
+```html
+<link rel="stylesheet" href="https://cdn.rawgit.com/appbaseio/reactivemaps/master/dist/css/style.min.css">
+```
+
+Make sure to import the stylessheets in the above order.
 
 ---
 
