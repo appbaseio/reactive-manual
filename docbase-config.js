@@ -34,7 +34,11 @@ var docbaseConfig ={
                },
                {
                   "name":"Start",
-                  "label":"Quick Start"
+                  "label":"ReactiveMaps - Quick Start"
+               },
+               {
+                  "name":"RSStart",
+                  "label":"ReactiveSearch - Quick Start"
                },
                {
                   "name":"Data",
