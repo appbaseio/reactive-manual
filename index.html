@@ -17,13 +17,22 @@
   <link rel="stylesheet" type="text/css" href="./bower_components/docbase/dist/css/main.min.css">
   <!-- Theme -->
   <link rel="stylesheet" type="text/css" href="./styles/theme.css" />
-  
 </head>
 <body role="flatdoc">
   <div ng-view></div>
 
- <script type="text/javascript" src='./docbase-config.js'></script>
+  <!-- Hotjar Tracking Code for appbase.io -->
+  <script>
+    (function(h,o,t,j,a,r){
+      h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+      h._hjSettings={hjid:22389,hjsv:5};
+      a=o.getElementsByTagName('head')[0];
+      r=o.createElement('script');r.async=1;
+      r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+      a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+  </script>
+  <script type="text/javascript" src='./docbase-config.js'></script>
   <script type="text/javascript" src="./bower_components/docbase/dist/js/main.unique.js"></script>
-
 </body>
 </html>
