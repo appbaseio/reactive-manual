@@ -29,16 +29,16 @@ var docbaseConfig ={
                   "label":"ReactiveMaps Installation"
                },
                {
-                  "name":"RSInstallation",
-                  "label":"ReactiveSearch Installation"
-               },
-               {
                   "name":"Start",
                   "label":"ReactiveMaps - Quick Start"
                },
                {
-                  "name":"RSStart",
-                  "label":"ReactiveSearch - Quick Start"
+                 "name":"RSInstallation",
+                 "label":"ReactiveSearch Installation"
+               },
+               {
+                 "name":"RSStart",
+                 "label":"ReactiveSearch - Quick Start"
                },
                {
                   "name":"Data",
