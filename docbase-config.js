@@ -26,7 +26,11 @@ var docbaseConfig ={
             "files":[
                {
                   "name":"Installation",
-                  "label":"Installation"
+                  "label":"ReactiveMaps Installation"
+               },
+               {
+                  "name":"RSInstallation",
+                  "label":"ReactiveSearch Installation"
                },
                {
                   "name":"Start",
