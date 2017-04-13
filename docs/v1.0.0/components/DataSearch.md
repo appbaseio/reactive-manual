@@ -19,6 +19,7 @@ Example uses:
   title="Search"
   placeholder="Search for cities or venues"
   autocomplete={true}
+  highlight={false}
 />
 ```
 
