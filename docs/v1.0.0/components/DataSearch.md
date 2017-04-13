@@ -34,6 +34,10 @@ Example uses:
     Sets the placeholder text to be shown in the searhbox input field. Defaults to "Search...".
 - **autocomplete** `Boolean` [optional]  
     Sets whether the autocomplete functionality should be enabled or disabled. Defaults to true.
+- **highlight** `Boolean` [optional]  
+    Whether highlighting should be enabled in the returned results.
+- **highlightFields** `Array` [optional]  
+    When highlighting is enabled, this prop allows specifying the fields which should be returned with the matching highlights. When not specified, it defaults to applying highlights on the field(s) specified in the **appbaseField** prop.
 
 ### CSS Styles
 
