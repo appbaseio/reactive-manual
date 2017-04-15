@@ -83,6 +83,10 @@ var docbaseConfig ={
                {
                   "name":"MultiLevelMenu",
                   "label":"MultiLevel Menu"
+               },
+               {
+                  "name":"CategorySearch",
+                  "label":"Category Search"
                }
             ]
          },
