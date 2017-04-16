@@ -49,22 +49,27 @@ All reactivebase components are `rbc` namespaced.
 ![Annotated Image](https://i.imgur.com/IWHVT1i.png)
 
 ```html
-<div class="rbc rbc-datasearch rbc-title-inactive rbc-placeholder-active rbc-autocomplete-active">
-		<div class="Select Select--single is-searchable">
-			...
-		</div>
-</div>
-
-<div class="rbc rbc-datasearch rbc-title-active rbc-placeholder-active rbc-autocomplete-inactive">
-		<h4 class="rbc-title col s12 col-xs-12">DataSearch</h4>
-		<div class="rbc-search-container col s12 col-xs-12">
-			<input type="text" class="rbc-input" placeholder="Search Venue" value="">
-			<span class="rbc-search-icon"></span>
-		</div>
+<div class="rbc rbc-categorysearch col s12 col-xs-12 card thumbnail rbc-title-active rbc-placeholder-active">
+  <h4 class="rbc-title col s12 col-xs-12">CategorySearch
+  </h4>
+  <div class="Select Select--single is-searchable">
+    <div class="Select-control">
+      <span class="Select-multi-value-wrapper" id="react-select-3--value">
+        <div class="Select-placeholder">Search Car</div>
+        <div class="Select-input" style="display: inline-block;">
+          <input role="combobox" aria-expanded="false" aria-owns="" aria-haspopup="false" aria-activedescendant="react-select-3--value" value="" style="width: 5px; box-sizing: content-box;">
+          <div style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-size: 16px; font-family: &quot;Lato Regular&quot;; font-weight: normal; font-style: normal; letter-spacing: normal;"></div>
+        </div>
+      </span>
+      <span class="Select-arrow-zone">
+        <span class="Select-arrow"></span>
+      </span>
+    </div>
+  </div>
 </div>
 ```
 
-* DataSearch component's class name is `rbc-datasearch`.
+* CategorySearch component's class name is `rbc-categorysearch`.
 * Additionally, depending on the presence / absence of the `placeholder` prop, a `rbc-placeholder-active` or `rbc-placeholder-inactive` class is respectively applied.
 * Also depending on the presence / absence of the `autocomplete` prop, a `rbc-autocomplete-active` or `rbc-autocomplete-inactive` class is respectively applied.
 * the title element has a class name of `rbc-title`.
@@ -104,7 +109,7 @@ All reactivebase components are `rbc` namespaced.
 ```
 
 - **componentStyle** `Object`
-    CSS styles to be applied to the **DataSearch** component.
+    CSS styles to be applied to the **CategorySearch** component.
 - **customQuery** `Function`
     takes **value** as a parameter and **returns** the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.
     `Note:` customQuery is called on value changes in the **CategorySearch** component as long as the component is a part of `react` dependency of at least one other component.
@@ -114,6 +119,5 @@ All reactivebase components are `rbc` namespaced.
 
 ### Examples
 
-1. [DataSearch with all the default props](../playground/?selectedKind=m%2FDataSearch&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveMaps)
-1. [DataSearch with autocomplete turned off](../playground/?selectedKind=m%2FDataSearch&selectedStory=Without%20Autocomplete&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveMaps)
-1. [Playground (with all knob actions)](../playground/?knob-title=DataSearch%3A%20Meetups&knob-placeholder=Search%20Venue&knob-autocomplete=true&selectedKind=m%2FDataSearch&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveMaps)
+1. [CategorySearch with all the default props](../playground/?selectedKind=s%2FCategorySearch&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveSearch)
+1. [Playground (with all knob actions)](../playground/?knob-title=CategorySearch&knob-appbaseField%5B0%5D=name&knob-categoryField=brand.raw&knob-defaultSelected=&knob-placeholder=Search+Car&selectedKind=s%2FCategorySearch&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveSearch)
