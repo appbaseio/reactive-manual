@@ -1,6 +1,6 @@
 {"bigh3": true}
 
-#CategorySearch
+# CategorySearch
 
 ![Image to be displayed](https://i.imgur.com/wRErIC9.png)
 A `CategorySearch` sensor component creates a category search UI widget with an autocomplete functionality. It is used for applying full-text search across one or more fields.
