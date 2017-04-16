@@ -119,5 +119,10 @@ All reactivebase components are `rbc` namespaced.
 
 ### Examples
 
+<p data-height="500" data-theme-id="light" data-slug-hash="dWoVOd" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ReactiveSearch Category Search" class="codepen">See <a href="http://codepen.io/sids-aquarius/pen/dWoVOd/">ReactiveSearch Category Search</a> on codepen.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+See more stories for CategorySearch on playground.
+
 1. [CategorySearch with all the default props](../playground/?selectedKind=s%2FCategorySearch&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveSearch)
 1. [Playground (with all knob actions)](../playground/?knob-title=CategorySearch&knob-appbaseField%5B0%5D=name&knob-categoryField=brand.raw&knob-defaultSelected=&knob-placeholder=Search+Car&selectedKind=s%2FCategorySearch&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveSearch)
