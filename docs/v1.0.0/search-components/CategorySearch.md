@@ -2,7 +2,7 @@
 
 #CategorySearch
 
-![Image to be displayed](https://i.imgur.com/dLeyahL.png)
+![Image to be displayed](https://i.imgur.com/wRErIC9.png)
 A `CategorySearch` sensor component creates a category search UI widget with an autocomplete functionality. It is used for applying full-text search across one or more fields.
 
 Example uses:
@@ -46,7 +46,7 @@ Example uses:
 
 All reactivebase components are `rbc` namespaced.
 
-![Annotated Image](https://i.imgur.com/ysbmr3Gg.png)
+![Annotated Image](https://i.imgur.com/IWHVT1i.png)
 
 ```html
 <div class="rbc rbc-datasearch rbc-title-inactive rbc-placeholder-active rbc-autocomplete-active">
