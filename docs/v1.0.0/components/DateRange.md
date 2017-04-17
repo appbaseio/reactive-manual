@@ -31,7 +31,7 @@ Example uses:
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **numberOfMonths** `Number` [optional]  
-    number of months to be shown in the calendar view. Defaults to 1.
+    number of months to be shown in the calendar view. Defaults to 2.
 - **allowAllDates** `Boolean` [optional]  
     whether to all all dates or dates starting from today. Defaults to `true`, i.e. allowing all dates.
 - **startDate** `Object of Moment` [optional]  
