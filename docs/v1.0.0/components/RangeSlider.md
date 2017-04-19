@@ -4,7 +4,7 @@
 
 ![Image to be displayed](https://i.imgur.com/OYUWZHL.png)
 
-A `RangeSlider` sensor component creates a numeric range slider UI widget. It is used for granular filtering of numeric data.
+`RangeSlider` creates a numeric range slider UI component. It is used for granular filtering of numeric data.
 
 Example uses:
 
@@ -31,6 +31,7 @@ Example uses:
     }
   }
   stepValue=1
+  showHistogram={true}
   initialLoader="creating the histogram.."
 />
 ```
@@ -51,6 +52,10 @@ Example uses:
     an object with `start` and `end` keys and corresponding numeric values denoting the pre-selected range values.
 - **stepValue** `Number` [optional]  
     step value specifies the slider stepper. Value should be an integer between 1 and floor(#total-range/2). Defaults to 1.
+- **showHistogram** `Boolean` [optional]  
+    whether to display the range histogram or not. Defaults to `true`.
+- **interval** `Number` [optional]  
+    set the histogram bar interval, applicable when *showHistogram* is `true`. Defaults to `(range.end - range.start) / 10`.
 - **initialLoader** `String or HTML` [optional]  
     display text while the data is being fetched, accepts `String` or `HTML` markup.
 
@@ -61,7 +66,7 @@ All reactivebase components are `rbc` namespaced.
 ![Annotated image](https://i.imgur.com/jXeI9W1.png)
 
 ```html
-<div class="rbc rbc-rangeslider card thumbnail col s12 col-xs-12 rbc-title-active rbc-labels-inactive">
+<div class="rbc rbc-rangeslider card thumbnail col s12 col-xs-12 rbc-title-active rbc-histogram-active rbc-labels-inactive">
     <h4 class="rbc-title col s12 col-xs-12">Guests</h4>
     <div class="rbc-bar-container col s12 col-xs-12">
       <span class="rbc-bar-item">
@@ -76,7 +81,10 @@ All reactivebase components are `rbc` namespaced.
 </div>
 ```
 
-* RangeSlider component's class name is `rbc-rangeslider`. Additionally, depending on the presence / absence of the `title` prop, a `rbc-title-active` or `rbc-title-inactive` class is respectively applied.
+* RangeSlider component's class name is `rbc-rangeslider`.
+  * Additionally, depending on the presence / absence of the `title` prop, a `rbc-title-active` or `rbc-title-inactive` class is applied.
+  * Depending on the presence / absence of the `showHistogram` prop, a `rbc-histogram-active` or `rbc-histogram-inactive` class is applied.
+  * Depending on the presence / absence of the `rangeLabels` prop, a `rbc-labels-active` or `rbc-labels-inactive` class is applied.
 * the title element has a class name of `rbc-title`.
 * the histogram is encapsulated inside a `rbc-bar-container` class with each element having class name of `rbc-bar-item`.
 * the slider is encapsulated inside a `rbc-rangeslider-container` class.
@@ -86,7 +94,8 @@ All reactivebase components are `rbc` namespaced.
 `RangeSlider` component can be extended to
 1. customize the look and feel with `componentStyle`,
 2. update the underlying DB query with `customQuery`,
-3. connect with external interfaces using `onValueChange`.
+3. connect with external interfaces using `onValueChange`,
+4. filter data using a combined query context via the `react` prop.
 
 ```
 <RangeSlider
@@ -110,18 +119,37 @@ All reactivebase components are `rbc` namespaced.
       // use the value with other js code
     }
   }
+  react={{
+    "and": ["ListSensor"]
+  }}
 />
 ```
 
-- **componentStyle** `Object`
+- **componentStyle** `Object`  
     CSS styles to be applied to the **RangeSlider** component.
-- **customQuery** `Function`
+- **customQuery** `Function`  
     takes **value** as a parameter and **returns** the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.
     `Note:` customQuery is called on value changes in the **RangeSlider** component as long as the component is a part of `react` dependency of at least one other component.
-- **onValueChange** `Function`
+- **onValueChange** `Function`  
     is called every time the component's **value** changes and is passed in as a parameter to the function. This can be used for updating other UI components when **RangeSlider's** value changes.
+- **react** `Object`  
+    specify dependent components to reactively update **RangeSlider's** data view.
+    - **key** `String`  
+        one of `and`, `or`, `not` defines the combining clause.
+        - **and** clause implies that the results will be filtered by matches from **all** of the associated component states.
+        - **or** clause implies that the results will be filtered by matches from **at least one** of the associated component states.
+        - **not** clause implies that the results will be filtered by an **inverse** match of the associated component states.
+    - **value** `String or Array or Object`  
+        - `String` is used for specifying a single component by its `componentId`.
+        - `Array` is used for specifying multiple components by their `componentId`.
+        - `Object` is used for nesting other key clauses.
 
 ### Examples
+
+<p data-height="500" data-theme-id="light" data-slug-hash="wJLYoe" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ReactiveSearch RangeSlider" class="codepen">See <a href="http://codepen.io/sids-aquarius/pen/ZKQeGx/">ReactiveSearch RangeSlider</a> on codepen.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+See more stories for RangeSlider on playground.
 
 1. [Range with all the default props](../playground/?selectedKind=RangeSlider&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveMaps)
 
