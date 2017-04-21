@@ -13,26 +13,42 @@ Example uses:
 
 ### Usage
 
+#### Basic Usage
+```js
+<RangeSlider
+  componentId="RangeSliderSensor"
+  appbaseField="guests"
+  range={{
+    "start": 0,
+    "end": 10
+  }}
+/>
+```
+
+While `RangeSlider` only requires the above props to be used, it comes with many additional props for pre-setting default range values, setting the step value of the range slider, specifying labels for the range endpoints, whether to display histogram etc.
+
+#### Usage With All Props
 ```js
 <RangeSlider
   componentId="RangeSliderSensor"
   appbaseField="guests"
   title="Guests"
-  range={
-    {
-      "start": 0,
-      "end": 10
-    }
-  }
-  defaultSelected={
-    {
-      "start": 1,
-      "end": 5
-    }
-  }
-  stepValue=1
+  range={{
+    "start": 0,
+    "end": 10
+  }}
+  defaultSelected={{
+    "start": 1,
+    "end": 5
+  }}
+  rangeLabels={{
+    "start": "Start",
+    "end": "End"
+  }}
+  stepValue={1}
   showHistogram={true}
-  initialLoader="creating the histogram.."
+  interval={2}
+  initialLoader="Rendering the histogram.."
 />
 ```
 
