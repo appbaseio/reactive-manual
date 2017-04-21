@@ -18,7 +18,7 @@ Example uses:
   componentId="RangeSliderSensor"
   appbaseField="guests"
   title="Guests"
-  threshold={
+  range={
     {
       "start": 0,
       "end": 10
