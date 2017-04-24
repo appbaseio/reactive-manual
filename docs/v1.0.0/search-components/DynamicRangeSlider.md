@@ -2,7 +2,7 @@
 
 ## DynamicRangeSlider
 
-![Image to be displayed](https://i.imgur.com/am2VHmW.png)
+![Image to be displayed](https://i.imgur.com/PGHsWpA.png)
 
 `DynamicRangeSlider` creates a numeric range slider UI component. It is used for granular filtering of numeric data.
 
