@@ -87,6 +87,10 @@ var docbaseConfig ={
                {
                   "name":"CategorySearch",
                   "label":"Category Search"
+               },
+               {
+                  "name":"DynamicRangeSlider",
+                  "label":"DynamicRange Slider"
                }
             ]
          },
