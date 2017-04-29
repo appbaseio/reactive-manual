@@ -91,6 +91,10 @@ var docbaseConfig ={
                {
                   "name":"DynamicRangeSlider",
                   "label":"DynamicRange Slider"
+               },
+               {
+                  "name":"RatingsFilter",
+                  "label":"Ratings Filter"
                }
             ]
          },
