@@ -4,7 +4,7 @@
 
 ![Image to be displayed](https://i.imgur.com/f5aO5HP.png)
 
-A `NestedList` sensor component creates a nested list UI widget. It is used for filtering items by a hierarchy of categories.
+`NestedList` creates a nested list UI component. It is used for filtering items by a hierarchy of categories.
 It is used for filtering results based on the current selection from a list of items.
 
 Example uses:
@@ -12,6 +12,16 @@ Example uses:
 
 ### Usage
 
+#### Basic Usage
+
+```js
+<NestedList
+  componentId="CarCategorySensor"
+  appbaseField={["brand.raw", "model.raw"]}
+/>
+```
+
+#### Usage With All Props
 ```js
 <NestedList
   componentId="CarCategorySensor"
@@ -86,14 +96,70 @@ All reactivebase components are `rbc` namespaced.
 * the nested list items are encapsulated inside a `rbc-sublist-container` class with each element having a class name of `rbc-list-item` and each list item similarly having an element with a `rbc-label` class and a count with a `rbc-count` class.
 
 
+### Extending
+
+`NestedList` component can be extended to
+1. customize the look and feel with `componentStyle`,
+2. update the underlying DB query with `customQuery`,
+3. connect with external interfaces using `onValueChange`,
+4. filter data using a combined query context via the `react` prop.
+
+```
+<NestedList
+  ...
+  componentStyle={{"paddingBottom": "10px"}}
+  customQuery={
+    function(value) {
+      return {
+        query: {
+          match: {
+            data_field: "this is a test"
+          }
+        }
+      }
+    }
+  }
+  onValueChange={
+    function(value) {
+      console.log("current value: ", value)
+      // set the state
+      // use the value with other js code
+    }
+  }
+  react={{
+    "and": ["PriceFilter"]
+  }}
+/>
+```
+
+- **componentStyle** `Object`  
+    CSS styles to be applied to the **NestedList** component.
+- **customQuery** `Function`  
+    takes **value** as a parameter and **returns** the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.
+    `Note:` customQuery is called on value changes in the **NestedList** component as long as the component is a part of `react` dependency of at least one other component.
+- **onValueChange** `Function`  
+    is called every time the component's **value** changes and is passed in as a parameter to the function. This can be used for updating other UI components when **NestedList's** value changes.
+- **react** `Object`  
+    specify dependent components to reactively update **NestedList's** data view.
+    - **key** `String`  
+        one of `and`, `or`, `not` defines the combining clause.
+        - **and** clause implies that the results will be filtered by matches from **all** of the associated component states.
+        - **or** clause implies that the results will be filtered by matches from **at least one** of the associated component states.
+        - **not** clause implies that the results will be filtered by an **inverse** match of the associated component states.
+    - **value** `String or Array or Object`  
+        - `String` is used for specifying a single component by its `componentId`.
+        - `Array` is used for specifying multiple components by their `componentId`.
+        - `Object` is used for nesting other key clauses.
+
 ### Examples
 
-1. List with all the default props
+<p data-height="500" data-theme-id="light" data-slug-hash="EmmKVZ" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ReactiveSearch NestedList" class="codepen">See <a href="http://codepen.io/sids-aquarius/pen/EmmKVZ/">ReactiveSearch NestedList</a> on codepen.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-2. List with custom sort and a default selection
+1. [NestedList with all the default props](../playground/?selectedKind=s%2FNestedList&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveSearch),
 
-3. List with show search set to true
+2. [NestedList with title](../playground/?knob-title=Car+Category&selectedKind=s%2FNestedList&selectedStory=With+Title&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveSearch),
 
-4. List with a dependency on another sensor
+3. [NestedList with default selection](../playground/?knob-title=Car+Category&knob-defaultSelected%5B0%5D=bmw&knob-defaultSelected%5B1%5D=x+series&selectedKind=s%2FNestedList&selectedStory=Default+selection&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveSearch),
 
-5. Playground (with all knob actions)
+4. [Playground (with all knob actions)](../playground/?knob-title=NestedList%3A+Car+Filter&knob-defaultSelected%5B0%5D=bmw&knob-defaultSelected%5B1%5D=x+series&knob-size=100&knob-sortBy=count&knob-showCount=true&knob-showSearch=true&knob-placeholder=Search+Cars&selectedKind=s%2FNestedList&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveSearch).
