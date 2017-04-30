@@ -6,7 +6,7 @@
 
 ![Image to be displayed](https://i.imgur.com/GcUFZjh.png)
 
-A `ReactiveList` is an actuator component that creates a result list UI widget where results from all the applied filters are shown. It forms the base for building more specific actuators like `ReactivePaginatedList` and provides a lot of rich functionalities out of the box.
+`ReactiveList` creates a result list UI component where results from all the applied filters are shown. It forms the base for building more specific actuators like [`ResultCard`](v1.0.0/search-components/ResultCard.html) or [`ResultList`](v1.0.0/search-components/ResultList.html) and provides a lot of rich functionalities out of the box.
 
 Example uses:
 
@@ -14,6 +14,18 @@ Example uses:
 * streaming realtime feed updates based on applied criterias like in a newsfeed.
 
 ### Usage
+
+#### Basic Usage
+
+```js
+<ReactiveList
+  react={{
+    "and": ["CitySensor", "SearchSensor"]
+  }}
+/>
+```
+
+#### Usage With All Props
 
 ```js
 <ReactiveList
@@ -65,6 +77,8 @@ Example uses:
     display to show the user when no results are found, accepts `String` or `HTML` markup.
 - **showResultStats** `Boolean` [optional]  
     whether to show result stats in the form of results found and time taken. Defaults to `true`.
+- **onResultStats** `Function` [optional]  
+    show custom result stats using a function that takes two parameters for `time_taken` and `total_results` and returns a string.
 - **react** `Object` [optional]  
     a dependency object defining how this component should react based on the state changes in the sensor components.
 
@@ -110,12 +124,7 @@ All reactivebase components are `rbc` namespaced.
 
 ### Examples
 
-1. ReactiveList with all the default props with a single sensor filter.
-
-2. ReactiveList with a search and a filter sensor.
-
-3. ReactiveList that shows streaming updates.
-
-4. Playground (with all knob actions).
+<p data-height="500" data-theme-id="light" data-slug-hash="EmmKVZ" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ReactiveSearch ReactiveList" class="codepen">See <a href="http://codepen.io/sids-aquarius/pen/EmmKVZ/">ReactiveSearch ReactiveList</a> on codepen.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 {% endraw %}
