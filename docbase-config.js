@@ -95,6 +95,10 @@ var docbaseConfig ={
                {
                   "name":"RatingsFilter",
                   "label":"Ratings Filter"
+               },
+               {
+                  "name":"ResultCard",
+                  "label":"Result Card"
                }
             ]
          },
