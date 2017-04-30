@@ -99,6 +99,10 @@ var docbaseConfig ={
                {
                   "name":"ResultCard",
                   "label":"Result Card"
+               },
+               {
+                  "name":"ResultList",
+                  "label":"Result List"
                }
             ]
          },
