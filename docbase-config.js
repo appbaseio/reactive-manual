@@ -97,6 +97,10 @@ var docbaseConfig ={
                   "label":"Ratings Filter"
                },
                {
+                  "name":"TagCloud",
+                  "label":"Tag Cloud"
+               },
+               {
                   "name":"ResultCard",
                   "label":"Result Card"
                },
