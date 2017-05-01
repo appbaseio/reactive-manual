@@ -128,7 +128,7 @@ Example uses:
       }
     }
     ```
-    The return format for the callback function is an object with `image`, `title`, `desc` and `url` fields.
+    The return format for the callback function is an object with `image`, `image_size`, `title`, `desc` and `url` fields.
 
 ### CSS Styles
 
@@ -169,7 +169,7 @@ All reactivebase components are `rbc` namespaced.
 - **componentStyle** `Object` [optional]  
     CSS Styles to be applied to the **ResultList** component.
 - **onData** `Function` [optional]  
-    a callback function where user can define how to render the view based on the data changes. In `ResultList`'s case, the expected return format is an object with `image`, `title`, `url` and `desc` keys.
+    a callback function where user can define how to render the view based on the data changes. In `ResultList`'s case, the expected return format is an object with `image`, `image_size`, `title`, `url` and `desc` keys.
 - **react** `Object`  
     specify dependent components to reactively update **ResultList's** data view.
     - **key** `String`  
