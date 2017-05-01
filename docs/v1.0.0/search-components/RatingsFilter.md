@@ -49,12 +49,12 @@ Example uses:
 
 - **componentId** `String`  
     unique id of the sensor, can be referenced in an actuator's `react` prop.
-- **appbaseField** `Array`  
-    data field(s) to be mapped with the component's UI view. A nested list component supports multiple fields passed as an Array denoting the order of nesting.
+- **appbaseField** `String`  
+    data field(s) to be mapped with the component's UI view.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **data** `Object Array`  
-    collection of UI `labels` with associated with `start` and `end` ratings values.
+    collection of UI `label` with associated with `start` and `end` ratings values.
 - **defaultSelected** `Object` [optional]  
     pre-select a ratings value using `start` and `end` key values from one of the data elements.
 
