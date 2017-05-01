@@ -62,10 +62,52 @@ All reactivebase components are `rbc` namespaced.
 
 ![Annotated image](https://i.imgur.com/Lz0NTnd.png)
 
+### Extending
+
+`TagCloud` component can be extended to
+1. customize the look and feel with `componentStyle`,
+2. update the underlying DB query with `customQuery`,
+3. connect with external interfaces using `onValueChange`.
+
+```
+<TagCloud
+  ...
+  componentStyle={{"paddingBottom": "10px"}}
+  customQuery={
+    function(value) {
+      return {
+        query: {
+          match: {
+            data_field: "this is a test"
+          }
+        }
+      }
+    }
+  }
+  onValueChange={
+    function(value) {
+      console.log("current value: ", value)
+      // set the state
+      // use the value with other js code
+    }
+  }
+/>
+```
+
+- **componentStyle** `Object`
+    CSS styles to be applied to the **TagCloud** component.
+- **customQuery** `Function`
+    takes **value** as a parameter and **returns** the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.
+    `Note:` customQuery is called on value changes in the **TagCloud** component as long as the component is a part of `react` dependency of at least one other component.
+- **onValueChange** `Function`
+    is called every time the component's **value** changes and is passed in as a parameter to the function. This can be used for updating other UI components when **TagCloud's** value changes.
+
 ### Examples
 
 <p data-height="500" data-theme-id="light" data-slug-hash="pPPOXX" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ReactiveSearch TagCloud" class="codepen">See <a href="http://codepen.io/sids-aquarius/pen/pPPOXX/">ReactiveSearch TagCloud</a> on codepen.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+See more stories for TagCloud on playground.
 
 1. [Tag Cloud with default props](../playground/?selectedKind=s%2FTagCloud&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveSearch)
 
