@@ -56,7 +56,7 @@ While `DynamicRangeSlider` only requires the above props to be used, it comes wi
     DB data field to be mapped with the component's UI view.The selected range creates a database query on this field.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
-- **defaultSelected** `Object` [optional]  
+- **defaultSelected** `Function` [optional]  
     a function that accepts `min` and `max` range values as parameters and returns an object representing current selection from the range with `start` and `end` keys.
 - **rangeLabels** `Function` [optional]  
     a function that accepts `min` and `max` range values as parameters and returns an object representing labels with `start` and `end` keys.
