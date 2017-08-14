@@ -39,7 +39,7 @@ Example uses:
   placeholder="Search City"
   initialLoader="Loading cities list.."
   showFilter={true}
-  FilterLabel="City"
+  filterLabel="City"
   URLParams={false}
 />
 ```
