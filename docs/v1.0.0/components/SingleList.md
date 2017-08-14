@@ -4,11 +4,11 @@
 
 ![Image to be displayed](https://i.imgur.com/hFKkYws.png)
 
-A `SingleList` sensor component creates a radio select list UI widget. It is used for filtering results based on the current selection from a list of items.
+`SingleList` creates a single selection based list UI component that is connected to a database field.
 
 Example uses:
-* select a category from a list of categories for filtering e-commerce search results.
-* filtering restaurants by a cuisine choice.
+* select a category item from a list of categories in an e-commerce website.
+* select a cuisine item from a list of cuisine items in a food delivery app.
 
 ### Usage
 
@@ -153,23 +153,23 @@ All reactivebase components are `rbc` namespaced.
 - **componentStyle** `Object`  
     CSS styles to be applied to the **SingleList** component.
 - **customQuery** `Function`  
-    takes **value** as a parameter and **returns** the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.
+    is a callback function which accepts component's current **value** as a parameter and **returns** the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.
     `Note:` customQuery is called on value changes in the **SingleList** component as long as the component is a part of `react` dependency of at least one other component.
 - **beforeValueChange** `Function`  
-    is called every time before the component's **value** changes and returns a promise. All changes that affect the SingleList component (e.g. updating the customQuery based on the value) or other ReactiveBase components should take place here before resolving this function.
+    is a callback function which accepts component's future **value** as a parameter and **returns** a promise. It is called everytime before a component's value changes. The promise, if and when resolved, triggers the execution of the component's query and if rejected, kills the query execution. This method can act as a gatekeeper for query execution, since it only executes the query after the provided promise has been resolved.
 - **onValueChange** `Function`  
-    is called every time the component's **value** changes. This is the recommended function to use for external UI views to rely upon (e.g. updating a form field based on SingleList's value selection), and is called only when `beforeValueChange` is successfully resolved.
+    is a callback function which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when a list item is selected in a "Discounted Price" SingleList.
 
 ### Examples
 
-1. [List with all the default props](../playground/?selectedKind=m%2FSingleList&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveMaps)
+1. [List with all the default props](../playground/?selectedKind=map%2FSingleList&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel)
 
-2. [List without search UI](../playground/?selectedKind=m%2FSingleList&selectedStory=Without%20Search&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveMaps)
+2. [List without search UI](../playground/?selectedKind=map%2FSingleList&selectedStory=Without%20Search&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel)
 
-3. [List with pre-selected items](../playground/?selectedKind=m%2FSingleList&selectedStory=Default%20Selected&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveMaps)
+3. [List with pre-selected items](../playground/?selectedKind=map%2FSingleList&selectedStory=Default%20Selected&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel)
 
-4. [List with a custom sort order](../playground/?selectedKind=m%2FSingleList&selectedStory=Custom%20Sort&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveMaps)
+4. [List with a custom sort order](../playground/?selectedKind=map%2FSingleList&selectedStory=Custom%20Sort&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel)
 
-5. [List with a 'Select All' item](../playground/?selectedKind=m%2FSingleList&selectedStory=With%20Select%20All&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveMaps)
+5. [List with a 'Select All' item](../playground/?selectedKind=map%2FSingleList&selectedStory=With%20Select%20All&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel)
 
-6. [Playground (with all knob actions)](../playground/?knob-title=SingleList%3A%20City%20Filter&knob-size=100&knob-sortBy=count&knob-defaultSelected=San%20Francisco&knob-showCount=true&knob-showSearch=true&knob-placeholder=Search%20City&knob-selectAllLabel=All%20cities&selectedKind=m%2FSingleList&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveMaps)
+6. [Playground (with all knob actions)](../playground/?knob-title=SingleList%3A%20City%20Filter&knob-size=100&knob-sortBy=count&knob-defaultSelected=San%20Francisco&knob-showCount=true&knob-showSearch=true&knob-placeholder=Search%20City&knob-selectAllLabel=All%20cities&selectedKind=map%2FSingleList&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel)
