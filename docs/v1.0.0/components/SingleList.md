@@ -57,9 +57,9 @@ Example uses:
 - **sortBy** `String` [optional]  
     sort the list items by one of `count`, `asc`, `desc`. Defaults to `count`, which sorts the list by the frequency of count     value, most first.
 - **defaultSelected** `string` [optional]  
-    pre-selects an item from the list.
+    pre-select an item from the list.
 - **selectAllLabel** `String` [optional]  
-    label to shown in the component UI for an item that selects all list terms.
+    add an extra `Select all` item to the list with the provided label string.
 - **showRadio** `Boolean` [optional]  
     show radio button icon for each list item. Defaults to `true`.
 - **showCount** `Boolean` [optional]  
@@ -150,14 +150,14 @@ All reactivebase components are `rbc` namespaced.
 />
 ```
 
-- **componentStyle** `Object`
+- **componentStyle** `Object`  
     CSS styles to be applied to the **SingleList** component.
-- **customQuery** `Function`
+- **customQuery** `Function`  
     takes **value** as a parameter and **returns** the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.
     `Note:` customQuery is called on value changes in the **SingleList** component as long as the component is a part of `react` dependency of at least one other component.
-- **beforeValueChange** `Function`
+- **beforeValueChange** `Function`  
     is called every time before the component's **value** changes and returns a promise. All changes that affect the SingleList component (e.g. updating the customQuery based on the value) or other ReactiveBase components should take place here before resolving this function.
-- **onValueChange** `Function`
+- **onValueChange** `Function`  
     is called every time the component's **value** changes. This is the recommended function to use for external UI views to rely upon (e.g. updating a form field based on SingleList's value selection), and is called only when `beforeValueChange` is successfully resolved.
 
 ### Examples
