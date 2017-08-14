@@ -12,6 +12,18 @@ Example uses:
 
 ### Usage
 
+#### Basic Usage
+
+```js
+<SingleList
+  componentId="CitySensor"
+  appbaseField="group.group_city.raw"
+  title="Cities"
+/>
+```
+
+#### Usage With All Props
+
 ```js
 <SingleList
   componentId="CitySensor"
@@ -20,10 +32,15 @@ Example uses:
   size={100}
   sortBy="count"
   defaultSelected="London"
+  selectAllLabel="All Cities"
+  showRadio={true}
   showCount={true}
   showSearch={true}
-  searchPlaceholder="Search City"
+  placeholder="Search City"
   initialLoader="Loading cities list.."
+  showFilter={true}
+  FilterLabel="City"
+  URLParams={false}
 />
 ```
 
@@ -41,14 +58,24 @@ Example uses:
     sort the list items by one of `count`, `asc`, `desc`. Defaults to `count`, which sorts the list by the frequency of count     value, most first.
 - **defaultSelected** `string` [optional]  
     pre-selects an item from the list.
+- **selectAllLabel** `String` [optional]  
+    label to shown in the component UI for an item that selects all list terms.
+- **showRadio** `Boolean` [optional]  
+    show radio button icon for each list item. Defaults to `true`.
 - **showCount** `Boolean` [optional]  
     show count value of the number of occurences besides a list item. Defaults to `true`.
 - **showSearch** `Boolean` [optional]  
     whether to show a searchbox to filter the list items locally. Defaults to true.
-- **searchPlaceholder** `String` [optional]  
+- **placeholder** `String` [optional]  
     placeholder to be displayed in the searchbox, only applicable when the `showSearch` prop is set to true. When applicable, the default placeholder value is set to "Search".
 - **initialLoader** `String or HTML` [optional]  
     display text while the data is being fetched, accepts `String` or `HTML` markup.
+- **showFilter** `Boolean` [optional]  
+    show as filter when a value is selected in a global selected filters view. Defaults to `true`.
+- **filterLabel** `String` [optional]  
+    An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
+- **URLParams** `Boolean` [optional]  
+    enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
 
 ### CSS Styles API
 
@@ -84,7 +111,7 @@ All reactivebase components are `rbc` namespaced.
 `SingleList` component can be extended to
 1. customize the look and feel with `componentStyle`,
 2. update the underlying DB query with `customQuery`,
-3. connect with external interfaces using `onValueChange`.
+3. connect with external interfaces using `beforeValueChange` and `onValueChange`.
 
 ```
 <SingleList
@@ -101,6 +128,17 @@ All reactivebase components are `rbc` namespaced.
       }
     }
   }
+  beforeValueChange={
+    function(value) {
+      // called before the value is set
+      // returns a promise
+      return new Promise((resolve, reject) => {
+        // update state or component props
+        resolve()
+        // or reject()
+      })
+    }
+  }
   onValueChange={
     function(value) {
       console.log("current value: ", value)
@@ -108,6 +146,7 @@ All reactivebase components are `rbc` namespaced.
       // use the value with other js code
     }
   }
+
 />
 ```
 
@@ -116,8 +155,10 @@ All reactivebase components are `rbc` namespaced.
 - **customQuery** `Function`
     takes **value** as a parameter and **returns** the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.
     `Note:` customQuery is called on value changes in the **SingleList** component as long as the component is a part of `react` dependency of at least one other component.
+- **beforeValueChange** `Function`
+    is called every time before the component's **value** changes and returns a promise. All changes that affect the SingleList component (e.g. updating the customQuery based on the value) or other ReactiveBase components should take place here before resolving this function.
 - **onValueChange** `Function`
-    is called every time the component's **value** changes and is passed in as a parameter to the function. This can be used for updating other UI components when **SingleList's** value changes.
+    is called every time the component's **value** changes. This is the recommended function to use for external UI views to rely upon (e.g. updating a form field based on SingleList's value selection), and is called only when `beforeValueChange` is successfully resolved.
 
 ### Examples
 
