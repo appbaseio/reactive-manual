@@ -49,6 +49,7 @@ While `RangeSlider` only requires the above props to be used, it comes with many
   showHistogram={true}
   interval={2}
   initialLoader="Rendering the histogram.."
+  URLParams={false}
 />
 ```
 
@@ -62,10 +63,10 @@ While `RangeSlider` only requires the above props to be used, it comes with many
     title of the component to be shown in the UI.
 - **range** `Object`  
     an object with `start` and `end` keys and corresponding numeric values denoting the minimum and maximum possible slider values.
-- **rangeLabels** `Object` [optional]  
-    an object with `start` and `end` keys and corresponding `String` labels to show labels near the ends of the `RangeSlider` component.
 - **defaultSelected** `Object` [optional]  
     an object with `start` and `end` keys and corresponding numeric values denoting the pre-selected range values.
+- **rangeLabels** `Object` [optional]  
+    an object with `start` and `end` keys and corresponding `String` labels to show labels near the ends of the `RangeSlider` component.
 - **stepValue** `Number` [optional]  
     step value specifies the slider stepper. Value should be an integer between 1 and floor(#total-range/2). Defaults to 1.
 - **showHistogram** `Boolean` [optional]  
@@ -74,6 +75,8 @@ While `RangeSlider` only requires the above props to be used, it comes with many
     set the histogram bar interval, applicable when *showHistogram* is `true`. Defaults to `(range.end - range.start) / 10`.
 - **initialLoader** `String or HTML` [optional]  
     display text while the data is being fetched, accepts `String` or `HTML` markup.
+- **URLParams** `Boolean` [optional]  
+    enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
 
 ### CSS Styles
 
@@ -110,7 +113,7 @@ All reactivebase components are `rbc` namespaced.
 `RangeSlider` component can be extended to
 1. customize the look and feel with `componentStyle`,
 2. update the underlying DB query with `customQuery`,
-3. connect with external interfaces using `onValueChange`,
+3. connect with external interfaces using `beforeValueChange` and `onValueChange`,
 4. filter data using a combined query context via the `react` prop.
 
 ```
@@ -126,6 +129,17 @@ All reactivebase components are `rbc` namespaced.
           }
         }
       }
+    }
+  }
+  beforeValueChange={
+    function(value) {
+      // called before the value is set
+      // returns a promise
+      return new Promise((resolve, reject) => {
+        // update state or component props
+        resolve()
+        // or reject()
+      })
     }
   }
   onValueChange={
@@ -146,8 +160,10 @@ All reactivebase components are `rbc` namespaced.
 - **customQuery** `Function`  
     takes **value** as a parameter and **returns** the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.
     `Note:` customQuery is called on value changes in the **RangeSlider** component as long as the component is a part of `react` dependency of at least one other component.
+- **beforeValueChange** `Function`  
+    is a callback function which accepts component's future **value** as a parameter and **returns** a promise. It is called everytime before a component's value changes. The promise, if and when resolved, triggers the execution of the component's query and if rejected, kills the query execution. This method can act as a gatekeeper for query execution, since it only executes the query after the provided promise has been resolved.
 - **onValueChange** `Function`  
-    is called every time the component's **value** changes and is passed in as a parameter to the function. This can be used for updating other UI components when **RangeSlider's** value changes.
+    is a callback function which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when some range is selected in a "Discounted Price" RangeSlider.
 - **react** `Object`  
     specify dependent components to reactively update **RangeSlider's** data view.
     - **key** `String`  
@@ -167,12 +183,12 @@ All reactivebase components are `rbc` namespaced.
 
 See more stories for RangeSlider on playground.
 
-1. [Range with all the default props](../playground/?selectedKind=RangeSlider&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveMaps)
+1. [Range with all the default props](../playground/?knob-defaultSelected%5B0%5D=Social&knob-defaultSelected%5B1%5D=Travel&knob-title=ToggleButton%3A%20Meetup%20Categories&knob-multiSelect=true&selectedKind=map%2FRangeSlider&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
-2. [Range with a default selection](../playground/?selectedKind=RangeSlider&selectedStory=With%20Default%20Selected&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveMaps)
+2. [Range with a default selection](../playground/?knob-defaultSelected=%7B"start"%3A0%2C"end"%3A2%7D&knob-title=ToggleButton%3A%20Meetup%20Categories&knob-multiSelect=true&selectedKind=map%2FRangeSlider&selectedStory=With%20Default%20Selected&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
-3. [Range without histogram](../playground/?selectedKind=RangeSlider&selectedStory=Without%20histogram&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveMaps)
+3. [Range without histogram](../playground/?knob-defaultSelected=%7B"start"%3A0%2C"end"%3A2%7D&knob-title=ToggleButton%3A%20Meetup%20Categories&knob-multiSelect=true&knob-showHistogram=false&selectedKind=map%2FRangeSlider&selectedStory=Without%20histogram&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
-4. [With Range Labels](../playground/?selectedKind=m%2FRangeSlider&selectedStory=With%20Range%20Labels&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveMaps)
+4. [With Range Labels](../playground/?knob-defaultSelected=%7B"start"%3A0%2C"end"%3A2%7D&knob-title=ToggleButton%3A%20Meetup%20Categories&knob-multiSelect=true&knob-showHistogram=false&knob-rangeLabels=%7B"start"%3A"Start"%2C"end"%3A"End"%7D&selectedKind=map%2FRangeSlider&selectedStory=With%20Range%20Labels&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
-5. [Playground (with all knob actions)](../playground/?knob-title=RangeSlider%3A%20Guest%20RSVPs&knob-range=%7B"start"%3A0%2C"end"%3A5%7D&knob-stepValue=1&knob-defaultSelected=%7B"start"%3A0%2C"end"%3A2%7D&knob-rangeLabels=%7B"start"%3A"Start"%2C"end"%3A"End"%7D&knob-showHistogram=true&selectedKind=RangeSlider&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveMaps)
+5. [Playground (with all knob actions)](../playground/?knob-defaultSelected=%7B"start"%3A0%2C"end"%3A2%7D&knob-title=RangeSlider%3A%20Guest%20RSVPs&knob-multiSelect=true&knob-showHistogram=true&knob-rangeLabels=%7B"start"%3A"Start"%2C"end"%3A"End"%7D&knob-range=%7B"start"%3A0%2C"end"%3A5%7D&knob-stepValue=1&knob-interval=20&selectedKind=map%2FRangeSlider&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
