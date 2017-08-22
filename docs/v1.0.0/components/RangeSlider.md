@@ -78,35 +78,16 @@ While `RangeSlider` only requires the above props to be used, it comes with many
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
 
-### CSS Styles
+### Syntax
+
+<p data-height="500" data-theme-id="light" data-slug-hash="ZKQeGx" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ReactiveSearch RangeSlider" class="codepen">See <a href="http://codepen.io/sids-aquarius/pen/ZKQeGx/">ReactiveSearch RangeSlider</a> on codepen.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+### Styles
 
 All reactivebase components are `rbc` namespaced.
 
 ![Annotated image](https://i.imgur.com/jXeI9W1.png)
-
-```html
-<div class="rbc rbc-rangeslider card thumbnail col s12 col-xs-12 rbc-title-active rbc-histogram-active rbc-labels-inactive">
-    <h4 class="rbc-title col s12 col-xs-12">Guests</h4>
-    <div class="rbc-bar-container col s12 col-xs-12">
-      <span class="rbc-bar-item">
-        <span class="bar"></span>
-      </span>
-    </div>
-    <div class="rbc-rangeslider-container col s12 col-xs-12" style="margin: 25px 0px;">
-        <div class="rc-slider">
-          ...
-        </div>
-    </div>
-</div>
-```
-
-* RangeSlider component's class name is `rbc-rangeslider`.
-  * Additionally, depending on the presence / absence of the `title` prop, a `rbc-title-active` or `rbc-title-inactive` class is applied.
-  * Depending on the presence / absence of the `showHistogram` prop, a `rbc-histogram-active` or `rbc-histogram-inactive` class is applied.
-  * Depending on the presence / absence of the `rangeLabels` prop, a `rbc-labels-active` or `rbc-labels-inactive` class is applied.
-* the title element has a class name of `rbc-title`.
-* the histogram is encapsulated inside a `rbc-bar-container` class with each element having class name of `rbc-bar-item`.
-* the slider is encapsulated inside a `rbc-rangeslider-container` class.
 
 ### Extending
 

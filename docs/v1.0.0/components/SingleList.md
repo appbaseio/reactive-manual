@@ -77,7 +77,7 @@ Example uses:
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
 
-### CSS Styles API
+### Styles
 
 All reactivebase components are `rbc` namespaced.
 

@@ -69,31 +69,11 @@ Example uses:
     enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
 
 
-### CSS Styles API
-
-![Annotated image](https://i.imgur.com/lMbqk2H.png)
+### Styles
 
 All reactivebase components are `rbc` namespaced.
 
-```html
-<div class="rbc rbc-togglebutton rbc-title-active rbc-multiselect-active col s12 col-xs-12 card thumbnail">
-  <div class="row">
-    <h4 class="rbc-title col s12 col-xs-12">Meetup Categories</h4>
-    <div class="col s12 col-xs-12">
-      <div class="rbc-buttongroup">
-        <button class="rbc-btn rbc-btn-active" title="Social">Social</button>
-        <button class="rbc-btn rbc-btn-inactive" title="Travel">Travel</button>
-        <button class="rbc-btn rbc-btn-inactive" title="Outdoors">Outdoors</button>
-      </div>
-    </div>
-  </div>
-</div>
-```
-
-* ToggleButton component's class name is `rbc-togglebutton`. Additionally, depending on the presence / absence of the `title` prop, a `rbc-title-active` or `rbc-title-inactive` class is respectively applied.
-* the title element has a class name of `rbc-title`.
-* the buttons are encapsulated inside a `rbc-buttongroup` class.
-* each individual button has a `rbc-btn` class. If the button is currently selected, it will also have the `rbc-btn-active` class. If the button is not selected, it will likewise have the `rbc-btn-inactive` class.
+![Annotated image](https://i.imgur.com/lMbqk2H.png)
 
 ### Extending
 

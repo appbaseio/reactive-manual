@@ -37,27 +37,11 @@ Example uses:
 - **dataLabel** `String or HTML` [optional]  
     set the UI markup. Accepts a string or an HTML element. This prop is only applicable when **visible** is set to `true`.
 
-### CSS Styles
+### Styles
 
 All reactivebase components are `rbc` namespaced.
 
 ![Annotated Image](http://i.imgur.com/ow7MEdG.png)
-
-```
-<div class="rbc rbc-datacontroller card thumbnail rbc-title-active rbc-datalabel-active rbc-visible-active">
-  <div>
-    <h4 class="rbc-title col s12 col-xs-12">DataController</h4>
-    <span class="rbc-datalabel col s12 col-xs-12">
-      <p>★ A customizable UI widget ★</p>
-    </span>
-  </div>
-</div>
-```
-
-* DataController component's class name is `rbc-datacontroller`.
-* Additionally, depending on the presence / absence of the `visible` prop, a `rbc-visible-active` or `rbc-visible-inactive` class is respectively applied.
-* The title element has a class name of `rbc-title`. Depending on the presence / absence of the title prop, a `rbc-title-active` or `rbc-title-inactive` class is applied at the component's root div.
-* The UI element has a class name of `rbc-datalabel`. Depending on the presence / absence of the datalabel prop, a `rbc-datalabel-active` or `rbc-datalabel-inactive` class is applied at the component's root div.
 
 ### Extending
 
@@ -91,14 +75,13 @@ All reactivebase components are `rbc` namespaced.
 />
 ```
 
-- **componentStyle** `Object`
+- **componentStyle** `Object`  
     CSS styles to be applied to the **DataController** component. This prop is only applicable when **visible** prop is set to `true`.
-- **customQuery** `Function`
+- **customQuery** `Function`  
     takes **value** as a parameter and **returns** the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.
     `Note:` customQuery is called on value changes in the **DataController** component as long as the component is a part of `react` dependency of at least one other component.
-- **onValueChange** `Function`
+- **onValueChange** `Function`  
     is called every time the component's **value** changes and is passed as a parameter to the function. This can be used for updating other UI components when **DataController's** value changes.
-
 
 ### Examples
 

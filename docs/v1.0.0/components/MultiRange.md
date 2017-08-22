@@ -70,43 +70,11 @@ Example uses:
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected values of the ranges. This is useful for sharing URLs with the component state. Defaults to `false`.
 
-### CSS Styles
+### Styles
 
 All reactivebase components are `rbc` namespaced.
 
 ![Annotated image](https://i.imgur.com/m3uFfKj.png)
-
-```html
-<div class="rbc rbc-multirange col s12 col-xs-12 card thumbnail rbc-title-active">
-  <div class="row">
-    <h4 class="rbc-title col s12 col-xs-12">Price</h4>
-    <div class="col s12 col-xs-12 rbc-list-container">
-      <div class="rbc-list-item row">
-        <input type="checkbox" value="Cheap">
-        <label class="rbc-label">Cheap</label>
-      </div>
-      <div class="rbc-list-item row">
-        <input type="checkbox" value="Moderate">
-        <label class="rbc-label">Moderate</label>
-      </div>
-      <div class="rbc-list-item row">
-        <input type="checkbox" value="Pricey">
-        <label class="rbc-label">Pricey</label>
-      </div>
-      <div class="rbc-list-item row">
-        <input type="checkbox" value="First Date">
-        <label class="rbc-label">First Date</label>
-      </div>
-    </div>
-  </div>
-</div>
-```
-
-* SingleRange component's class name is `rbc-singlerange`. Additionally, depending on the presence / absence of the `title` prop, a `rbc-title-active` or `rbc-title-inactive` class is respectively applied.
-* the title element has a class name of `rbc-title`.
-* the checkbox inputs are encapsulated inside a `rbc-list-container` class with each element having class name of `rbc-list-item`.
-* the input checkbox element has a class name of `rbc-checkbox-item`.
-* the label element has a class name of `rbc-label`.
 
 ### Extending
 
@@ -151,9 +119,9 @@ All reactivebase components are `rbc` namespaced.
 />
 ```
 
-- **componentStyle** `Object`
+- **componentStyle** `Object`  
     CSS styles to be applied to the **MultiRange** component.
-- **customQuery** `Function`
+- **customQuery** `Function`  
     takes **value** as a parameter and **returns** the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.
     `Note:` customQuery is called on value changes in the **MultiRange** component as long as the component is a part of `react` dependency of at least one other component.
 - **beforeValueChange** `Function`  

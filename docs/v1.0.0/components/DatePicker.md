@@ -48,25 +48,11 @@ extra={{
 }}
 ```
 
-### CSS Styles API
+### Styles
 
 All reactivebase components are `rbc` namespaced.
 
 ![Annotated image](https://i.imgur.com/bSei4w3.png)
-
-```html
-<div class="rbc rbc-datepicker col s12 col-xs-12 card thumbnail rbc-title-active">
-  <h4 class="rbc-title col s12 col-xs-12">DatePicker</h4>
-  <div class="col s12 col-xs-12">
-    <div class="SingleDatePicker">
-          ...
-    </div>
-  </div>
-</div>
-```
-
-* DatePicker component's class name is `rbc-datepicker`. Additionally, depending on the presence / absence of the `title` prop, a `rbc-title-active` or `rbc-title-inactive` class is respectively applied.
-* the title element has a class name of `rbc-title`.
 
 ### Extending
 
@@ -100,12 +86,12 @@ All reactivebase components are `rbc` namespaced.
 />
 ```
 
-- **componentStyle** `Object`
+- **componentStyle** `Object`  
     CSS styles to be applied to the **DatePicker** component.
-- **customQuery** `Function`
+- **customQuery** `Function`  
     takes **value** as a parameter and **returns** the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.
     `Note:` customQuery is called on value changes in the **DatePicker** component as long as the component is a part of `react` dependency of at least one other component.
-- **onValueChange** `Function`
+- **onValueChange** `Function`  
     is called every time the component's **value** changes and is passed in as a parameter to the function. This can be used for updating other UI components when **DatePicker's** value changes.
 
 ### Examples

@@ -82,12 +82,11 @@ Example uses:
 - **react** `Object` [optional]  
     a dependency object defining how this component should react based on the state changes in the sensor components.
 
-### CSS Styles
+### Styles
 
 All reactivebase components are `rbc` namespaced.
 
 ![Annotated image](https://i.imgur.com/KtDriR7.png)
-
 
 ![Annotated Image](https://i.imgur.com/TPP2Zuh.png)
 

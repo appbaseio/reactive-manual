@@ -70,43 +70,11 @@ Example uses:
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the range. This is useful for sharing URLs with the component state. Defaults to `false`.
 
-### CSS Styles
+### Styles
 
 All reactivebase components are `rbc` namespaced.
 
 ![Annotated image](https://i.imgur.com/CIOLTQo.png)
-
-```html
-<div class="rbc rbc-singlerange col s12 col-xs-12 card thumbnail rbc-title-active">
-  <div class="row">
-    <h4 class="rbc-title col s12 col-xs-12">Price</h4>
-    <div class="col s12 col-xs-12 rbc-list-container">
-      <div class="rbc-list-item row">
-        <input type="radio" class="rbc-radio-item" value="Cheap">
-        <label class="rbc-label">Cheap</label>
-      </div>
-      <div class="rbc-list-item row">
-        <input type="radio" class="rbc-radio-item" value="Moderate">
-        <label class="rbc-label">Moderate</label>
-      </div>
-      <div class="rbc-list-item row">
-        <input type="radio" class="rbc-radio-item" value="Pricey">
-        <label class="rbc-label">Pricey</label>
-      </div>
-      <div class="rbc-list-item row">
-        <input type="radio" class="rbc-radio-item" value="First Date">
-        <label class="rbc-label">First Date</label>
-      </div>
-    </div>
-  </div>
-</div>
-```
-
-* SingleRange component's class name is `rbc-singlerange`. Additionally, depending on the presence / absence of the `title` prop, a `rbc-title-active` or `rbc-title-inactive` class is respectively applied.
-* the title element has a class name of `rbc-title`.
-* the radio inputs are encapsulated inside a `rbc-list-container` class with each element having class name of `rbc-list-item`.
-* the input radio element has a class name of `rbc-radio-item`.
-* the label element has a class name of `rbc-label`.
 
 ### Extending
 

@@ -64,27 +64,11 @@ Example uses:
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
 
-### CSS Styles API
+### Styles
 
 All reactivebase components are `rbc` namespaced.
 
 ![Annotated image](https://i.imgur.com/qO1I0Th.png)
-
-```html
-<div class="rbc rbc-multidropdownrange col s12 col-xs-12 card thumbnail rbc-title-active rbc-placeholder-active">
-    <div class="row">
-        <h4 class="rbc-title col s12 col-xs-12">Cities</h4>
-        <div class="col s12 col-xs-12">
-            <div class="Select Select--single is-searchable has-value">
-              ...
-            </div>
-        </div>
-    </div>
-</div>
-```
-
-* MultiDropdownRange component's class name is `rbc-multidropdownrange`. Additionally, depending on the presence / absence of the `title` prop, a `rbc-title-active` or `rbc-title-inactive` class is respectively applied. Similarly for `placeholder` prop, classname of `rbc-placeholder-active` or `rbc-placeholder-active` is applied.
-* the title element has a class name of `rbc-title`.
 
 ### Extending
 
@@ -129,9 +113,9 @@ All reactivebase components are `rbc` namespaced.
 />
 ```
 
-- **componentStyle** `Object`
+- **componentStyle** `Object`  
     CSS styles to be applied to the **MultiDropdownRange** component.
-- **customQuery** `Function`
+- **customQuery** `Function`  
     takes **value** as a parameter and **returns** the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.
     `Note:` customQuery is called on value changes in the **MultiDropdownRange** component as long as the component is a part of `react` dependency of at least one other component.
 - **beforeValueChange** `Function`  

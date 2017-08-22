@@ -62,16 +62,12 @@ Example uses:
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the number. This is useful for sharing URLs with the component state. Defaults to `false`.
 
-### CSS Styles API
-
-![Annotated image]()
+### Styles
 
 All reactivebase components are `rbc` namespaced.
 
-```html
-```
+![Annotated image]()
 
-TBD
 
 ### Extending
 
@@ -116,9 +112,9 @@ TBD
 />
 ```
 
-- **componentStyle** `Object`
+- **componentStyle** `Object`  
     CSS styles to be applied to the **NumberBox** component.
-- **customQuery** `Function`
+- **customQuery** `Function`  
     takes **value** as a parameter and **returns** the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.
     `Note:` customQuery is called on value changes in the **NumberBox** component as long as the component is a part of `react` dependency of at least one other component.
 - **beforeValueChange** `Function`  
