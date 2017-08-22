@@ -70,6 +70,11 @@ Example uses:
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected values of the ranges. This is useful for sharing URLs with the component state. Defaults to `false`.
 
+### Syntax
+
+<p data-height="500" data-theme-id="light" data-slug-hash="zdjJGM" data-default-tab="js" data-user="divyanshu013" data-embed-version="2" data-pen-title="MultiRange docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/zdjJGM/">MultiRange docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
 ### Styles
 
 All reactivebase components are `rbc` namespaced.
@@ -130,6 +135,9 @@ All reactivebase components are `rbc` namespaced.
     is a callback function which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code(s) when range item(s) is/are selected in a "Prices" MultiRange.
 
 ### Examples
+
+<p data-height="500" data-theme-id="light" data-slug-hash="zdjJGM" data-default-tab="result" data-user="divyanshu013" data-embed-version="2" data-pen-title="MultiRange docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/zdjJGM/">MultiRange docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 1. [Range with all the default props](../playground/?knob-title=SingleRange%3A%20Earthquake%20Filter&knob-defaultSelected=Moderate&knob-selectAllLabel=All%20cities&knob-showRadio=true&knob-sortBy=count&knob-size=100&knob-showCount=true&knob-placeholder=Search%20City&knob-showSearch=true&selectedKind=map%2FMultiRange&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
