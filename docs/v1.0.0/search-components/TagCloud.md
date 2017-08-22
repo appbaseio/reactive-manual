@@ -55,8 +55,12 @@ Example uses:
 - **initialLoader** `String or HTML` [optional]  
     text or layout to be displayed while the data is being fetched, accepts `String` or `HTML` markup.
 
+### Syntax
 
-### CSS Styles API
+<p data-height="500" data-theme-id="light" data-slug-hash="pPPOXX" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ReactiveSearch TagCloud" class="codepen">See <a href="http://codepen.io/sids-aquarius/pen/pPPOXX/">ReactiveSearch TagCloud</a> on codepen.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+### Styles
 
 All reactivebase components are `rbc` namespaced.
 

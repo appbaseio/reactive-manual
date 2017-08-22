@@ -57,8 +57,12 @@ Example uses:
 - **defaultSelected** `String or Array` [optional]  
     pre-select a `value` (or multiple values) to be already selected in the component UI. The data type depends on whether *multiSelect* mode is enabled.
 
+### Syntax
 
-### CSS Styles API
+<p data-height="500" data-theme-id="light" data-slug-hash="NjjevM" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ReactiveSearch ToggleList" class="codepen">See <a href="http://codepen.io/sids-aquarius/pen/NjjevM/">ReactiveSearch ToggleList</a> on codepen.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+### Styles
 
 All reactivebase components are `rbc` namespaced.
 

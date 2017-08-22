@@ -58,7 +58,12 @@ Example uses:
 - **defaultSelected** `Object` [optional]  
     pre-select a ratings value using `start` and `end` key values from one of the data elements.
 
-### CSS Styles API
+### Syntax
+
+<p data-height="500" data-theme-id="light" data-slug-hash="zwZzqm" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ReactiveSearch RatingsFilter" class="codepen">See <a href="http://codepen.io/sids-aquarius/pen/zwZzqm/">ReactiveSearch RatingsFilter</a> on codepen.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+### Styles
 
 All reactivebase components are `rbc` namespaced.
 

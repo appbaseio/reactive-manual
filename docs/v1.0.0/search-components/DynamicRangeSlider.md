@@ -69,33 +69,16 @@ While `DynamicRangeSlider` only requires the above props to be used, it comes wi
 - **initialLoader** `String or HTML` [optional]  
     display text while the data is being fetched, accepts `String` or `HTML` markup.
 
-### CSS Styles
+### Syntax
+
+<p data-height="500" data-theme-id="light" data-slug-hash="PmGmOW" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ReactiveSearch RangeSlider" class="codepen">See <a href="http://codepen.io/sids-aquarius/pen/PmGmOW/">ReactiveSearch DynamicRangeSlider</a> on codepen.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+### Styles
 
 All reactivebase components are `rbc` namespaced.
 
 ![Annotated image](https://i.imgur.com/jBkvYft.png)
-
-```html
-<div class="rbc rbc-dynamicrangeslider card thumbnail col s12 col-xs-12 rbc-title-active rbc-rangelabels-inactive rbc-histogram-inactive rbc-initialloader-inactive">
-  <h4 class="rbc-title col s12 col-xs-12">DynamicRangeSlider</h4>
-  <div class="rbc-rangeslider-container col s12 col-xs-12">
-    <div class="rc-slider">
-      <div class="rc-slider-rail"></div>
-      <div class="rc-slider-track rc-slider-track-1" style="visibility: visible; left: 0%; width: 101.01%;"></div>
-      <div class="rc-slider-step"></div>
-      <div class="rc-slider-handle rc-slider-handle-1 rc-slider-handle-lower" style="left: 0%;"></div>
-      <div class="rc-slider-handle rc-slider-handle-2 rc-slider-handle-upper" style="left: 101.01%;"></div>
-      <div class="rc-slider-mark"></div>
-    </div>
-  </div>
-</div>
-```
-
-* DynamicRangeSlider component's class name is `rbc-dynamicrangeslider`. Additionally, depending on the presence / absence of the `title` prop, a `rbc-title-active` or `rbc-title-inactive` class is respectively applied.
-* the title element has a class name of `rbc-title`.
-* the histogram is encapsulated inside a `rbc-bar-container` class with each element having class name of `rbc-bar-item`. When the histogram is not present, the top level element will have a `rbc-histogram-inactive` class.
-* the slider is encapsulated inside a `rbc-rangeslider-container` class.
-* if range labels are not present, the top level element will have a `rbc-rangelabels-inactive` class.
 
 ### Extending
 

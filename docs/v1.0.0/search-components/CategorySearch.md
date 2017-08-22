@@ -42,39 +42,16 @@ Example uses:
 - **highlightFields** `Array` [optional]  
     When highlighting is enabled, this prop allows specifying the fields which should be returned with the matching highlights. When not specified, it defaults to applying highlights on the field(s) specified in the **appbaseField** prop.
 
-### CSS Styles
+### Syntax
+
+<p data-height="500" data-theme-id="light" data-slug-hash="dWoVOd" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ReactiveSearch Category Search" class="codepen">See <a href="http://codepen.io/sids-aquarius/pen/dWoVOd/">ReactiveSearch Category Search</a> on codepen.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+### Styles
 
 All reactivebase components are `rbc` namespaced.
 
 ![Annotated Image](https://i.imgur.com/IWHVT1i.png)
-
-```html
-<div class="rbc rbc-categorysearch col s12 col-xs-12 card thumbnail rbc-title-active rbc-placeholder-active">
-  <h4 class="rbc-title col s12 col-xs-12">CategorySearch
-  </h4>
-  <div class="Select Select--single is-searchable">
-    <div class="Select-control">
-      <span class="Select-multi-value-wrapper" id="react-select-3--value">
-        <div class="Select-placeholder">Search Car</div>
-        <div class="Select-input" style="display: inline-block;">
-          <input role="combobox" aria-expanded="false" aria-owns="" aria-haspopup="false" aria-activedescendant="react-select-3--value" value="" style="width: 5px; box-sizing: content-box;">
-          <div style="position: absolute; top: 0px; left: 0px; visibility: hidden; height: 0px; overflow: scroll; white-space: pre; font-size: 16px; font-family: &quot;Lato Regular&quot;; font-weight: normal; font-style: normal; letter-spacing: normal;"></div>
-        </div>
-      </span>
-      <span class="Select-arrow-zone">
-        <span class="Select-arrow"></span>
-      </span>
-    </div>
-  </div>
-</div>
-```
-
-* CategorySearch component's class name is `rbc-categorysearch`.
-* Additionally, depending on the presence / absence of the `placeholder` prop, a `rbc-placeholder-active` or `rbc-placeholder-inactive` class is respectively applied.
-* Also depending on the presence / absence of the `autocomplete` prop, a `rbc-autocomplete-active` or `rbc-autocomplete-inactive` class is respectively applied.
-* the title element has a class name of `rbc-title`.
-* the search container has a class name of `rbc-search-container`.
-* the input element inside the search container has a class name of `rbc-input`.
 
 ### Extending
 
