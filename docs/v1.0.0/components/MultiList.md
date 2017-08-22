@@ -4,12 +4,12 @@
 
 ![Image to be displayed](https://i.imgur.com/KuSUJyX.png)
 
-A `MultiList` sensor component creates a multiple checkbox select list UI widget. It is used for filtering results based on the current selection of list items.
+`MultiList` creates a multiple selection based list UI component that is connected to a database field. It is similar to a SingleList except can support multiple selections.
 
 Example uses:
 
-* create an e-commerce facet like search experience.
-* create a filter for airlines to fly by in a flight booking experience.
+* select category items from a list of categories in an e-commerce website.
+* selecting airlines to fly by in a flight booking experience.
 
 ### Usage
 
@@ -33,6 +33,7 @@ Example uses:
   size={100}
   sortBy="asc"
   defaultSelected={["San Francisco"]}
+  queryFormat="or"
   selectAllLabel="All Cities"
   showCheckbox={true}
   showCount={true}
@@ -59,6 +60,10 @@ Example uses:
     sort the list items by one of `count`, `asc`, or `desc`. Defaults to `count`, which sorts the list by the frequency of count value, most first.
 - **defaultSelected** `Array` [optional]  
     pre-select one or more list items. Accepts an `Array` object containing the items that should be selected. It is important for the passed value(s) to exactly match the field value(s) as stored in the DB.
+- **queryFormat** `String` [optional]  
+    queries the selected items from the list in one of two modes: `or`, `and`.
+    * Defaults to `or` which queries for results where any of the selected list items are present.
+    * In `and` mode, the applied query filters results where all of the selected items are present.
 - **selectAllLabel** `String` [optional]  
     add an extra `Select all` item to the list with the provided label string.
 - **showCheckbox** `Boolean` [optional]  
@@ -85,28 +90,6 @@ All reactivebase components are `rbc` namespaced.
 
 ![Annotated image](https://i.imgur.com/qJZgfvI.png)
 
-```html
-<div class="rbc rbc-multilist col s12 col-xs-12 card thumbnail rbc-search-active rbc-title-active rbc-placeholder-active">
-  <h4 class="rbc-title col s12 col-xs-12">Cities</h4>
-  <div class="rbc-search-container col s12 col-xs-12">
-    <input type="text" class="rbc-input col s12 col-xs-12 form-control" value="" placeholder="Search City">
-  </div>
-  <div class="rbc-list-container col s12 col-xs-12">
-    <div class="rbc-list-item row">
-      <input type="checkbox" class="rbc-checkbox-item" value="London">
-      <label class="rbc-label">London <span class="rbc-count">(211)</span></label>
-    </div>
-  </div>
-</div>
-```
-
-* Multilist component's class name is `rbc-multilist`. Additionally, depending on the presence / absence of the `title` prop, a `rbc-title-active` or `rbc-title-inactive` class is respectively applied. Similarly for `search` and `searchPlaceholder` props, classnames of `rbc-search-active`, `rbc-search-inactive`, `rbc-placeholder-active`, `rbc-placeholder-active` are applied.
-* the title element has a class name of `rbc-title`.
-* the search element has a class name of `rbc-search-container`.
-* the checkbox inputs are encapsulated inside a `rbc-list-container` class with each element having class name of `rbc-list-item`.
-* the input checkbox element has a class name of `rbc-checkbox-item`.
-* the label element has a class name of `rbc-label`.
-* the element containing count inside the label has a class name of `rbc-count`.
 
 ### Extending
 
@@ -156,8 +139,9 @@ All reactivebase components are `rbc` namespaced.
 - **customQuery** `Function`
     takes **value** as a parameter and **returns** the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.
     `Note:` customQuery is called on value changes in the **MultiList** component as long as the component is a part of `react` dependency of at least one other component.
+    `Note:` When extending with customQuery, the `queryFormat` prop has no affect.
 - **beforeValueChange** `Function`  
-    is a callback function which accepts component's future **value** as a parameter and **returns** a promise. It is called everytime before a component's value changes. The promise, if and when resolved, triggers the execution of the component's query and if rejected, kills the query execution. This method can act as a gatekeeper for query execution, since it only executes the query after the provided promise has been resolved.
+    is a callback function which accepts component's future **value** as a parameter and **returns** a promise. It is called every time before a component's value changes. The promise, if and when resolved, triggers the execution of the component's query and if rejected, kills the query execution. This method can act as a gatekeeper for query execution, since it only executes the query after the provided promise has been resolved.
 - **onValueChange** `Function`  
     is a callback function which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when list item(s) is/are selected in a "Discounted Price" MultiList.
 
