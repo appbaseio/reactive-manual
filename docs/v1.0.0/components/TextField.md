@@ -51,6 +51,11 @@ A `TextField` sensor component creates a simple text input field. It is useful f
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the text field. This is useful for sharing URLs with the component state. Defaults to `false`.
 
+### Syntax
+
+<p data-height="500" data-theme-id="light" data-slug-hash="prKEwL" data-default-tab="js" data-user="divyanshu013" data-embed-version="2" data-pen-title="TextField docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/prKEwL/">TextField docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
 ### Styles
 
 All reactivebase components are `rbc` namespaced.
@@ -111,6 +116,9 @@ All reactivebase components are `rbc` namespaced.
     is a callback function which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when a user searches for something in the TextField.
 
 ### Examples
+
+<p data-height="500" data-theme-id="light" data-slug-hash="prKEwL" data-default-tab="result" data-user="divyanshu013" data-embed-version="2" data-pen-title="TextField docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/prKEwL/">TextField docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 1. [Text field  with default props](../playground/?knob-title=Number%20of%20Guests&knob-defaultSelected=Nissan&knob-data=%7B"start"%3A1%2C"end"%3A16%2C"label"%3A"Guests"%7D&knob-labelPosition=right&knob-queryFormat=exact&selectedKind=search%2FTextField&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
