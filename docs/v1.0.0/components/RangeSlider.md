@@ -80,7 +80,7 @@ While `RangeSlider` only requires the above props to be used, it comes with many
 
 ### Syntax
 
-<p data-height="500" data-theme-id="light" data-slug-hash="ZKQeGx" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ReactiveSearch RangeSlider" class="codepen">See <a href="http://codepen.io/sids-aquarius/pen/ZKQeGx/">ReactiveSearch RangeSlider</a> on codepen.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="GvGjRJ" data-default-tab="js" data-user="divyanshu013" data-embed-version="2" data-pen-title="RangeSlider docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/GvGjRJ/">RangeSlider docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 ### Styles
@@ -159,7 +159,7 @@ All reactivebase components are `rbc` namespaced.
 
 ### Examples
 
-<p data-height="500" data-theme-id="light" data-slug-hash="ZKQeGx" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ReactiveSearch RangeSlider" class="codepen">See <a href="http://codepen.io/sids-aquarius/pen/ZKQeGx/">ReactiveSearch RangeSlider</a> on codepen.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="GvGjRJ" data-default-tab="result" data-user="divyanshu013" data-embed-version="2" data-pen-title="RangeSlider docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/GvGjRJ/">RangeSlider docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 See more stories for RangeSlider on playground.
