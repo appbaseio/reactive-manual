@@ -68,6 +68,10 @@ Example uses:
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
 
+### Syntax
+
+<p data-height="500" data-theme-id="light" data-slug-hash="BdVzje" data-default-tab="js" data-user="divyanshu013" data-embed-version="2" data-pen-title="ToggleButton docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/BdVzje/">ToggleButton docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 ### Styles
 
@@ -129,6 +133,9 @@ All reactivebase components are `rbc` namespaced.
     is a callback function which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code(s) when button(s) is/are selected in a "Discounted Price" ToggleButton.
 
 ### Examples
+
+<p data-height="500" data-theme-id="light" data-slug-hash="BdVzje" data-default-tab="result" data-user="divyanshu013" data-embed-version="2" data-pen-title="ToggleButton docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/BdVzje/">ToggleButton docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 1. [Toggle button with default props](../playground/?selectedKind=map%2FToggleButton&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
