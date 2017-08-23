@@ -64,6 +64,11 @@ Example uses:
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
 
+### Syntax
+
+<p data-height="500" data-theme-id="light" data-slug-hash="vJrGor" data-default-tab="js" data-user="divyanshu013" data-embed-version="2" data-pen-title="SingleDropdownRange docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/vJrGor/">SingleDropdownRange docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
 ### Styles
 
 All reactivebase components are `rbc` namespaced.
@@ -124,6 +129,9 @@ All reactivebase components are `rbc` namespaced.
     is a callback function which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when a range item is selected in a "Prices" SingleDropdownRange.
 
 ### Examples
+
+<p data-height="500" data-theme-id="light" data-slug-hash="vJrGor" data-default-tab="result" data-user="divyanshu013" data-embed-version="2" data-pen-title="SingleDropdownRange docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/vJrGor/">SingleDropdownRange docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 1. [Range with all the default props](../playground/?knob-title=SingleList%3A%20City%20Filter&knob-defaultSelected=San%20Francisco&knob-selectAllLabel=All%20cities&knob-showRadio=true&knob-sortBy=count&knob-showCheckbox=true&knob-size=100&knob-showCount=true&knob-placeholder=s&knob-showSearch=true&selectedKind=map%2FSingleDropdownRange&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
