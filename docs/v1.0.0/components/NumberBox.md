@@ -62,6 +62,11 @@ Example uses:
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the number. This is useful for sharing URLs with the component state. Defaults to `false`.
 
+### Syntax
+
+<p data-height="500" data-theme-id="light" data-slug-hash="dzKpPE" data-default-tab="js" data-user="divyanshu013" data-embed-version="2" data-pen-title="NumberBox docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/dzKpPE/">NumberBox docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
 ### Styles
 
 All reactivebase components are `rbc` namespaced.
@@ -124,6 +129,9 @@ All reactivebase components are `rbc` namespaced.
 
 
 ### Examples
+
+<p data-height="500" data-theme-id="light" data-slug-hash="dzKpPE" data-default-tab="result" data-user="divyanshu013" data-embed-version="2" data-pen-title="NumberBox docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/dzKpPE/">NumberBox docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 1. [A NumberBox component with defaults](../playground/?knob-title=Number%20of%20Guests&knob-defaultSelected=2&selectedKind=search%2FNumberBox&selectedStory=With%20defaultSelected&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
