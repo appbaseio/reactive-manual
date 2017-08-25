@@ -135,6 +135,14 @@ var docbaseConfig ={
                   "label":"Multi Dropdown List"
                },
                {
+                  "name":"SingleDataList",
+                  "label":"Single Data List"
+               },
+               {
+                  "name":"MultiDataList",
+                  "label":"Multi Data List"
+               },
+               {
                   "name":"SingleRange",
                   "label":"Single Range"
                },
