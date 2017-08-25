@@ -4,7 +4,7 @@
 
 ![Image to be displayed](https://i.imgur.com/PGYPXf6.png)
 
-A `SingleDropdownList` sensor component creates a radio select list UI widget. It is used for filtering results based on the current selection from a list of items.
+A `SingleDropdownList` sensor component creates a dropdown list UI widget. It is used for filtering results based on the current selection from a list of items.
 
 `Note:` This component is exactly like the [SingleList](/v1/component/SingleList.html) component except the UI is based on a dropdown, ideal for showing additional UI filters while conserving screen space.
 
