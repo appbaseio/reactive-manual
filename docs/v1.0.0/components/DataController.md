@@ -15,6 +15,16 @@ Example uses:
 
 ### Usage
 
+#### Basic Usage
+
+```js
+<DataController
+  componentId="DataControllerSensor"
+/>
+```
+
+#### Usage With All Props
+
 ```js
 <DataController
   componentId="DataControllerSensor"
@@ -23,6 +33,10 @@ Example uses:
   dataLabel={
     <p>A customizable UI widget</p>
   }
+  defaultSelected="default"
+  showFilter={true}
+  filterLabel="Venue filter"
+  URLParams={false}
 />
 ```
 
@@ -30,12 +44,19 @@ Example uses:
 
 - **componentId** `String`  
     unique id of the sensor, can be referenced in another component's **react** prop.
-- **visible** `Boolean` [optional]  
-    whether to show the UI for the component. Defaults to `false`.
 - **title** `String or HTML` [optional]  
     Sets the title of the component to be shown in the UI, applicable when **visible** is set to `true`.
+- **visible** `Boolean` [optional]  
+    whether to show the UI for the component. Defaults to `false`.
 - **dataLabel** `String or HTML` [optional]  
     set the UI markup. Accepts a string or an HTML element. This prop is only applicable when **visible** is set to `true`.
+- **defaultSelected** `string` [optional]  
+    pre-select a value in the data controller.
+
+### Syntax
+
+<p data-height="500" data-theme-id="light" data-slug-hash="JyBNpG" data-default-tab="js" data-user="divyanshu013" data-embed-version="2" data-pen-title="DataController docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/JyBNpG/">DataController docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 ### Styles
 
@@ -48,7 +69,7 @@ All reactivebase components are `rbc` namespaced.
 `DataController` component can be extended to
 1. customize the look and feel with `componentStyle`,
 2. update the underlying DB query with `customQuery`,
-3. connect with external interfaces using `onValueChange`.
+3. connect with external interfaces using `beforeValueChange` and `onValueChange`.
 
 ```
 <DataController
@@ -63,6 +84,17 @@ All reactivebase components are `rbc` namespaced.
           }
         }
       }
+    }
+  }
+  beforeValueChange={
+    function(value) {
+      // called before the value is set
+      // returns a promise
+      return new Promise((resolve, reject) => {
+        // update state or component props
+        resolve()
+        // or reject()
+      })
     }
   }
   onValueChange={
@@ -80,11 +112,16 @@ All reactivebase components are `rbc` namespaced.
 - **customQuery** `Function`  
     takes **value** as a parameter and **returns** the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.
     `Note:` customQuery is called on value changes in the **DataController** component as long as the component is a part of `react` dependency of at least one other component.
+- **beforeValueChange** `Function`  
+    is a callback function which accepts component's future **value** as a parameter and **returns** a promise. It is called everytime before a component's value changes. The promise, if and when resolved, triggers the execution of the component's query and if rejected, kills the query execution. This method can act as a gatekeeper for query execution, since it only executes the query after the provided promise has been resolved.
 - **onValueChange** `Function`  
-    is called every time the component's **value** changes and is passed as a parameter to the function. This can be used for updating other UI components when **DataController's** value changes.
+    is a callback function which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when a user searches for a product via a DataController.
 
 ### Examples
 
-1. [DataController with all the default props](../playground/?selectedKind=DataController&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel)
-1. [DataSearch with autocomplete turned off](../playground/?selectedKind=DataController&selectedStory=With%20UI&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel)
-1. [Playground (with all knob actions)](../playground/?selectedKind=DataController&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel)
+<p data-height="500" data-theme-id="light" data-slug-hash="JyBNpG" data-default-tab="result" data-user="divyanshu013" data-embed-version="2" data-pen-title="DataController docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/JyBNpG/">DataController docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+1. [DataController with all the default props](../playground/?knob-visible=true&selectedKind=map%2FDataController&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+2. [DataController with UI](../playground/?knob-visible=true&selectedKind=map%2FDataController&selectedStory=With%20UI&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+3. [Playground (with all knob actions)](../playground/?knob-visible=true&knob-title=DataController&knob-dataLabel=★%20%20A%20customizable%20UI%20widget%20★&knob-defaultSelected=default&knob-componentStyle=%7B"paddingBottom"%3A"10px"%7D&knob-showFilter=true&knob-filterLabel=Custom%20Filter%20Name&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&selectedKind=map%2FDataController&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
