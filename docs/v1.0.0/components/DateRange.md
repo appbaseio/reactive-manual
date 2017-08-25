@@ -12,13 +12,35 @@ Example uses:
 
 ### Usage
 
+#### Basic Usage
+
 ```js
 <DateRange
   componentId="DateSensor"
   appbaseField="mtime"
-  title="DatePicker"
+/>
+```
+
+#### Usage With All Props
+
+```js
+<DateRange
+  componentId="DateSensor"
+  appbaseField="mtime"
+  title="DateRange"
+  defaultSelected={{
+    start: moment('2017-01-01'),
+    end: moment('2017-07-01')
+  }}
   numberOfMonths={2}
   allowAllDates={true}
+  extra={{
+    "withFullScreenPortal": false,
+    "showClearDate": true
+  }}
+  showFilter={true}
+  filterLabel="Date"
+  URLParams={false}
 />
 ```
 
@@ -30,25 +52,33 @@ Example uses:
     DB data field to be mapped with the component's UI options.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
+- **defaultSelected** `Object` [optional]  
+    pre-select a default date range based on an object having a **start** and **end** [moment](https://github.com/moment/moment/) object representing a date range.
 - **numberOfMonths** `Number` [optional]  
     number of months to be shown in the calendar view. Defaults to 2.
 - **allowAllDates** `Boolean` [optional]  
     whether to all all dates or dates starting from today. Defaults to `true`, i.e. allowing all dates.
-- **startDate** `Object of Moment` [optional]  
-    pre-select a start date based on a [moment](https://github.com/moment/moment/) object representing a date.
-- **endDate** `Object of Moment` [optional]  
-    pre-select an end date based on a [moment](https://github.com/moment/moment/) object representing a date.
 - **extra** `Object` [optional]  
     supports the full gauntlet of props as defined in airbnb's [react-dates](https://github.com/airbnb/react-dates) component.
+    An example `extra` prop object would look like:
 
-An example `extra` prop object would look like:
+    ```js
+    extra={{
+      "withFullScreenPortal": true,
+      "showClearDate": true
+    }}
+    ```
+- **showFilter** `Boolean` [optional]  
+    show as filter when a value is selected in a global selected filters view. Defaults to `true`.
+- **filterLabel** `String` [optional]  
+    An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
+- **URLParams** `Boolean` [optional]  
+    enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
 
-```js
-extra={{
-  "withFullScreenPortal": true,
-  "showClearDate": true
-}}
-```
+### Syntax
+
+<p data-height="500" data-theme-id="light" data-slug-hash="oeMJBJ" data-default-tab="js" data-user="divyanshu013" data-embed-version="2" data-pen-title="DateRange docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/oeMJBJ/">DateRange docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 ### Styles
 
@@ -61,7 +91,7 @@ All reactivebase components are `rbc` namespaced.
 `DateRange` component can be extended to
 1. customize the look and feel with `componentStyle`,
 2. update the underlying DB query with `customQuery`,
-3. connect with external interfaces using `onValueChange`.
+3. connect with external interfaces using `beforeValueChange` and `onValueChange`.
 
 ```
 <DataSearch
@@ -76,6 +106,17 @@ All reactivebase components are `rbc` namespaced.
           }
         }
       }
+    }
+  }
+  beforeValueChange={
+    function(value) {
+      // called before the value is set
+      // returns a promise
+      return new Promise((resolve, reject) => {
+        // update state or component props
+        resolve()
+        // or reject()
+      })
     }
   }
   onValueChange={
@@ -93,19 +134,24 @@ All reactivebase components are `rbc` namespaced.
 - **customQuery** `Function`  
     takes **value** as a parameter and **returns** the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.
     `Note:` customQuery is called on value changes in the **DateRange** component as long as the component is a part of `react` dependency of at least one other component.
+- **beforeValueChange** `Function`  
+    is a callback function which accepts component's future **value** as a parameter and **returns** a promise. It is called everytime before a component's value changes. The promise, if and when resolved, triggers the execution of the component's query and if rejected, kills the query execution. This method can act as a gatekeeper for query execution, since it only executes the query after the provided promise has been resolved.
 - **onValueChange** `Function`  
-    is called every time the component's **value** changes and is passed in as a parameter to the function. This can be used for updating other UI components when **DateRange's** value changes.
+    is a callback function which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when a particular date range is selected in a DateRange.
 
 ### Examples
 
-1. [Basic component example](../playground/?selectedKind=DateRange&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel&filterBy=ReactiveMaps)
+<p data-height="500" data-theme-id="light" data-slug-hash="oeMJBJ" data-default-tab="result" data-user="divyanshu013" data-embed-version="2" data-pen-title="DateRange docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/oeMJBJ/">DateRange docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-2. [Show more than one month](../playground/?selectedKind=DateRange&selectedStory=Show%20more%20than%201%20month&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel&filterBy=ReactiveMaps)
+1. [Basic component example](../playground/?knob-title=Date%20Range&knob-URLParams%20%28not%20visible%20in%20storybook%29=false&knob-filterLabel=Date%20range&knob-defaultSelected=default&knob-queryFormat=date&knob-numberOfMonths=2&knob-componentStyle=%7B"paddingBottom"%3A"10px"%7D&knob-URLParams%20%28not%20visible%20on%20storybook%29=true&knob-showFilter=true&knob-dataLabel=★%20%20A%20customizable%20UI%20widget%20★&knob-allowAllDates=true&knob-extra=%7B"withFullScreenPortal"%3Atrue%2C"showClearDate"%3Atrue%7D&knob-visible=true&knob-placeholder=Pick%20date&selectedKind=map%2FDateRange&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
-3. [Start a default date](../playground/?selectedKind=DateRange&selectedStory=Default%20date&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel&filterBy=ReactiveMaps)
+2. [Show more than one month](../playground/?knob-title=Date%20Range&knob-URLParams%20%28not%20visible%20in%20storybook%29=false&knob-filterLabel=Date%20range&knob-defaultSelected=default&knob-queryFormat=date&knob-numberOfMonths=3&knob-componentStyle=%7B"paddingBottom"%3A"10px"%7D&knob-URLParams%20%28not%20visible%20on%20storybook%29=true&knob-showFilter=true&knob-dataLabel=★%20%20A%20customizable%20UI%20widget%20★&knob-allowAllDates=true&knob-extra=%7B"withFullScreenPortal"%3Atrue%2C"showClearDate"%3Atrue%7D&knob-visible=true&knob-placeholder=Pick%20date&selectedKind=map%2FDateRange&selectedStory=Show%20more%20than%201%20month&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
-4. [Enable days only starting today onwards](../playground/?selectedKind=DateRange&selectedStory=Enable%20days%20from%20today%20only&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel&filterBy=ReactiveMaps)
+3. [With default date](../playground/?knob-title=Date%20Range&knob-URLParams%20%28not%20visible%20in%20storybook%29=false&knob-filterLabel=Date%20range&knob-defaultSelected=default&knob-queryFormat=date&knob-numberOfMonths=3&knob-componentStyle=%7B"paddingBottom"%3A"10px"%7D&knob-URLParams%20%28not%20visible%20on%20storybook%29=true&knob-showFilter=true&knob-dataLabel=★%20%20A%20customizable%20UI%20widget%20★&knob-allowAllDates=true&knob-extra=%7B"withFullScreenPortal"%3Atrue%2C"showClearDate"%3Atrue%7D&knob-visible=true&knob-placeholder=Pick%20date&selectedKind=map%2FDateRange&selectedStory=Default%20date&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
-5. [An example using `extra` prop](../playground/?selectedKind=DateRange&selectedStory=Using%20extra%20prop%20object&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel&filterBy=ReactiveMaps)
+4. [Enable days only starting today onwards](../playground/?knob-title=Date%20Range&knob-URLParams%20%28not%20visible%20in%20storybook%29=false&knob-filterLabel=Date%20range&knob-defaultSelected=default&knob-queryFormat=date&knob-numberOfMonths=3&knob-componentStyle=%7B"paddingBottom"%3A"10px"%7D&knob-URLParams%20%28not%20visible%20on%20storybook%29=true&knob-showFilter=true&knob-dataLabel=★%20%20A%20customizable%20UI%20widget%20★&knob-allowAllDates=false&knob-extra=%7B"withFullScreenPortal"%3Atrue%2C"showClearDate"%3Atrue%7D&knob-visible=true&knob-placeholder=Pick%20date&selectedKind=map%2FDateRange&selectedStory=Enable%20days%20from%20today%20only&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
-6. [Playground mode](../playground/?knob-title=Date%20Range&knob-numberOfMonths=2&knob-allowAllDates=true&selectedKind=DateRange&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel&filterBy=ReactiveMaps)
+5. [An example using `extra` prop](../playground/?knob-title=Date%20Range&knob-URLParams%20%28not%20visible%20in%20storybook%29=false&knob-filterLabel=Date%20range&knob-defaultSelected=default&knob-queryFormat=date&knob-numberOfMonths=3&knob-componentStyle=%7B"paddingBottom"%3A"10px"%7D&knob-URLParams%20%28not%20visible%20on%20storybook%29=true&knob-showFilter=true&knob-dataLabel=★%20%20A%20customizable%20UI%20widget%20★&knob-allowAllDates=false&knob-extra=%7B"withFullScreenPortal"%3Atrue%2C"showClearDate"%3Atrue%7D&knob-visible=true&knob-placeholder=Pick%20date&selectedKind=map%2FDateRange&selectedStory=Using%20extra%20prop%20object&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+
+6. [Playground mode](../playground/?knob-title=Date%20Range&knob-URLParams%20%28not%20visible%20in%20storybook%29=false&knob-filterLabel=Date%20range&knob-defaultSelected=default&knob-queryFormat=epoch_millis&knob-numberOfMonths=2&knob-componentStyle=%7B"paddingBottom"%3A"10px"%7D&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&knob-showFilter=true&knob-dataLabel=★%20%20A%20customizable%20UI%20widget%20★&knob-allowAllDates=true&knob-extra=%7B"withFullScreenPortal"%3Atrue%2C"showClearDate"%3Atrue%7D&knob-visible=true&knob-placeholder=Pick%20date&selectedKind=map%2FDateRange&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
