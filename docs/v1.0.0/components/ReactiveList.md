@@ -31,9 +31,10 @@ Example uses:
 <ReactiveList
   componentId="SearchResult"
   appbaseField="ratings"
+  title="ReactiveList"
   stream={true}
   pagination={false}
-  title="ReactiveList"
+  paginationAt="bottom"
   sortBy="desc"
   from={0}
   size={10}
@@ -60,7 +61,7 @@ Example uses:
     pagination <> infinite scroll switcher. Defaults to `false`, i.e. an infinite scroll based view. When set to `true`, a pagination based list view with page numbers will appear.
 - **paginationAt** `String` [optional]  
     Determines the position where to show the pagination, only applicable when **pagination** prop is set to `true`. Accepts one of `top`, `bottom` or `both` as valid values. Defaults to `bottom`.
--  **sortBy** `String` [optional]  
+- **sortBy** `String` [optional]  
     sort the results by either `asc` or `desc` order. It is an alternative to `sortOptions`, both can't be used together.
 - **sortOptions** `Object Array` [optional]  
     an alternative to the `sortBy` prop, `sortOptions` creates a sorting view in the ReactiveList component's UI. Each array element is an object that takes three keys:
@@ -81,6 +82,44 @@ Example uses:
     show custom result stats using a function that takes two parameters for `time_taken` and `total_results` and returns a string.
 - **react** `Object` [optional]  
     a dependency object defining how this component should react based on the state changes in the sensor components.
+- **onData** `Function` [optional]  
+    returns a list element object to be rendered based on the `res` data object. This callback function prop is called for each data item rendered in the **ReactiveList** component's view. For example,
+    ```js
+    onData={
+      function(res) {
+        const marker = res._source;
+    		return (
+    			<a
+    				className="full_row single-record single_record_for_clone"
+    				key={markerData._id}
+    			>
+    				<div className="text-container full_row" style={{ paddingLeft: "10px" }}>
+    					<div className="text-head text-overflow full_row">
+    						<span className="text-head-info text-overflow">
+    							{marker.name ? marker.name : ""} - {marker.brand ? marker.brand : ""}
+    						</span>
+    						<span className="text-head-city">{marker.brand ? marker.brand : ""}</span>
+    					</div>
+    					<div className="text-description text-overflow full_row">
+    						<ul className="highlight_tags">
+    							{marker.price ? `Priced at $${marker.price}` : "Free Test Drive"}
+    						</ul>
+    					</div>
+    				</div>
+    			</a>
+    		);
+      }
+    }
+    ```
+- **onAllData** `Function` [optional]  
+    works like **onData** prop but all the data objects are passed to the callback function.
+- **pageURLParams** `Boolean` [optional]  
+    whether to display the page number in the URL. Defaults to `false`. **pageURLParams** works only with **pagination** enabled. Useful for sharing links to a page.
+
+### Syntax
+
+<p data-height="500" data-theme-id="light" data-slug-hash="EmmKVZ" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ReactiveSearch ReactiveList" class="codepen">See <a href="http://codepen.io/sids-aquarius/pen/EmmKVZ/">ReactiveSearch ReactiveList</a> on codepen.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 ### Styles
 
@@ -125,5 +164,11 @@ All reactivebase components are `rbc` namespaced.
 
 <p data-height="500" data-theme-id="light" data-slug-hash="EmmKVZ" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ReactiveSearch ReactiveList" class="codepen">See <a href="http://codepen.io/sids-aquarius/pen/EmmKVZ/">ReactiveSearch ReactiveList</a> on codepen.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+1. [ReactiveList basic usage](../playground/?knob-title=Topics&knob-URLParams%20%28not%20visible%20in%20storybook%29=false&knob-filterLabel=Custom%20Filter%20Name&knob-defaultSelected%5B0%5D=Social&knob-defaultSelected%5B1%5D=Travel&knob-selectAllLabel=Select%20All&knob-showRadio=true&knob-queryFormat=or&knob-numberOfMonths=2&knob-componentStyle=%7B"paddingBottom"%3A"10px"%7D&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&knob-showFilter=true&knob-sortBy=count&knob-dataLabel=★%20%20A%20customizable%20UI%20widget%20★&knob-allowAllDates=true&knob-showCheckbox=true&knob-size=100&knob-extra=%7B"withFullScreenPortal"%3Atrue%2C"showClearDate"%3Atrue%7D&knob-visible=true&knob-showCount=true&knob-placeholder=Search%20topics&knob-showSearch=true&selectedKind=search%2FReactiveList&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+2. [With streaming](../playground/?knob-title=People&knob-URLParams%20%28not%20visible%20in%20storybook%29=false&knob-filterLabel=Custom%20Filter%20Name&knob-defaultSelected%5B0%5D=Social&knob-defaultSelected%5B1%5D=Travel&knob-selectAllLabel=Select%20All&knob-showRadio=true&knob-queryFormat=or&knob-numberOfMonths=2&knob-componentStyle=%7B"paddingBottom"%3A"10px"%7D&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&knob-showFilter=true&knob-sortBy=count&knob-dataLabel=★%20%20A%20customizable%20UI%20widget%20★&knob-allowAllDates=true&knob-stream=true&knob-showCheckbox=true&knob-size=100&knob-extra=%7B"withFullScreenPortal"%3Atrue%2C"showClearDate"%3Atrue%7D&knob-visible=true&knob-showCount=true&knob-placeholder=Search%20topics&knob-showSearch=true&selectedKind=search%2FReactiveList&selectedStory=With%20Streaming%20Enabled&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+3. [With pagination](../playground/?knob-title=People&knob-paginationAt=bottom&knob-URLParams%20%28not%20visible%20in%20storybook%29=false&knob-filterLabel=Custom%20Filter%20Name&knob-defaultSelected%5B0%5D=Social&knob-defaultSelected%5B1%5D=Travel&knob-selectAllLabel=Select%20All&knob-showRadio=true&knob-queryFormat=or&knob-numberOfMonths=2&knob-componentStyle=%7B"paddingBottom"%3A"10px"%7D&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&knob-showFilter=true&knob-sortBy=count&knob-pages=5&knob-pagination=true&knob-dataLabel=★%20%20A%20customizable%20UI%20widget%20★&knob-allowAllDates=true&knob-stream=true&knob-showCheckbox=true&knob-size=100&knob-extra=%7B"withFullScreenPortal"%3Atrue%2C"showClearDate"%3Atrue%7D&knob-visible=true&knob-showCount=true&knob-placeholder=Search%20topics&knob-showSearch=true&selectedKind=search%2FReactiveList&selectedStory=With%20pagination&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+4. [With sortOptions](../playground/?knob-title=People&knob-paginationAt=bottom&knob-URLParams%20%28not%20visible%20in%20storybook%29=false&knob-filterLabel=Custom%20Filter%20Name&knob-defaultSelected%5B0%5D=Social&knob-defaultSelected%5B1%5D=Travel&knob-selectAllLabel=Select%20All&knob-showRadio=true&knob-queryFormat=or&knob-numberOfMonths=2&knob-componentStyle=%7B"paddingBottom"%3A"10px"%7D&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&knob-showFilter=true&knob-sortBy=count&knob-pages=5&knob-pagination=true&knob-dataLabel=★%20%20A%20customizable%20UI%20widget%20★&knob-allowAllDates=true&knob-stream=true&knob-showCheckbox=true&knob-size=100&knob-extra=%7B"withFullScreenPortal"%3Atrue%2C"showClearDate"%3Atrue%7D&knob-visible=true&knob-showCount=true&knob-placeholder=Search%20topics&knob-showSearch=true&selectedKind=search%2FReactiveList&selectedStory=With%20Sort%20Options&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+5. [Playground (with all knob actions)](../playground/?knob-initialLoader=Loading%20results..&knob-title=ReactiveList%3A%20Results&knob-from=0&knob-paginationAt=bottom&knob-URLParams%20%28not%20visible%20in%20storybook%29=false&knob-filterLabel=Custom%20Filter%20Name&knob-defaultSelected%5B0%5D=Social&knob-defaultSelected%5B1%5D=Travel&knob-selectAllLabel=Select%20All&knob-showRadio=true&knob-queryFormat=or&knob-numberOfMonths=2&knob-componentStyle=%7B"paddingBottom"%3A"10px"%7D&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&knob-showFilter=true&knob-sortBy=default&knob-pages=5&knob-showResultStats=true&knob-pagination=true&knob-dataLabel=★%20%20A%20customizable%20UI%20widget%20★&knob-allowAllDates=true&knob-stream=false&knob-showCheckbox=true&knob-size=5&knob-extra=%7B"withFullScreenPortal"%3Atrue%2C"showClearDate"%3Atrue%7D&knob-visible=true&knob-showCount=true&knob-placeholder=Select%20from%20list&knob-showSearch=true&knob-noResults=No%20results%20found%21&selectedKind=search%2FReactiveList&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
 {% endraw %}
