@@ -43,7 +43,7 @@ Example uses:
 ### Props
 
 - **componentId** `String`  
-    unique id of the sensor, can be referenced in an actuator's `react` prop.
+    unique identifier of the component, can be referenced in other components' `react` prop.
 - **appbaseField** `String`  
     DB data field to be mapped with the component's UI view, used when a database query is made on this field.
 - **title** `String or HTML` [optional]  

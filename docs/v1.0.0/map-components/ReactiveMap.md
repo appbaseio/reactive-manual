@@ -79,7 +79,7 @@ Example uses:
 ### Props
 
 - **componentId** `String`  
-    unique id of the component, can be referenced in another actuator's `react` prop.
+    unique identifier of the component, can be referenced in other components' `react` prop.
 - **appbaseField** `String`  
     DB data field to be mapped with the component's UI view, usually of a geopoint (i.e. location) data type and used for rendering the markers on the map.
 - **title** `String or HTML` [optional]  

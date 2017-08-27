@@ -4,7 +4,7 @@
 
 ![Image to be displayed](https://i.imgur.com/0fnMNaz.png)
 
-A `TextField` sensor component creates a simple text input field. It is useful for taking generic user inputs that can be used with a custom query.
+`TextField` creates a simple text input field component that is optionally data connected. It can be further extended by specifying a user defined query on the input data.
 
 ### Usage
 
@@ -35,9 +35,9 @@ A `TextField` sensor component creates a simple text input field. It is useful f
 ### Props
 
 - **componentId** `String`  
-    unique id of the sensor, can be referenced in an actuator's `react` prop.
+    unique identifier of the component, can be referenced in other components' `react` prop.
 - **appbaseField** `String`  
-    data field to be mapped with the component's UI view.
+    data field to be connected to the component's UI view.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **defaultSelected** `Number` [optional]  

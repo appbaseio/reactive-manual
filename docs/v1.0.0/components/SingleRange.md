@@ -4,11 +4,13 @@
 
 ![Image to be displayed](https://i.imgur.com/55jFax6.png)
 
-A `SingleRange` sensor component creates a numeric range selector UI widget. It is like a list widget, but for numeric data.
+`SingleRange` creates a numeric range selector UI component that is connected to a database field.
+
+`Note:` It is similar to a [SingleList](/v1.0.0/components/SingleList.html), except it is suited for numeric data.
 
 Example uses:
 * filtering search results by prices in an e-commerce or food delivery experience.
-* browsing movies by a ratings filter.
+* browsing a movies listing site using a ratings filter.
 
 ### Usage
 
@@ -52,9 +54,9 @@ Example uses:
 ### Props
 
 - **componentId** `String`  
-    unique id of the sensor, can be referenced in an actuator's `react` prop.
+    unique identifier of the component, can be referenced in other components' `react` prop.
 - **appbaseField** `String`  
-    data field to be mapped with the component's UI view. The range items are filtered by a database query on this field.
+    data field to be connected to the component's UI view. The range items are filtered by a database query on this field.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **defaultSelected** `String` [optional]  
@@ -64,7 +66,7 @@ Example uses:
 - **data** `Object Array`  
     collection of UI `labels` with associated `start` and `end` range values.
 - **showFilter** `Boolean` [optional]  
-    show as filter when a value is selected in a global selected filters view. Defaults to `true`.
+    show the selected item as a filter in the [selected filters view](/v1/component/MultiList.html). Defaults to `true`.
 - **filterLabel** `String` [optional]  
     An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
 - **URLParams** `Boolean` [optional]  

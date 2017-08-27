@@ -4,9 +4,9 @@
 
 ![Image to be displayed](https://i.imgur.com/ZZ0MG6N.png)
 
-A `MultiDropdownList` sensor component creates a multiple select dropdown based list UI widget. It is used for filtering results based on the current selection from a list of items.
+`MultiDropdownList` creates a  dropdown based multiple selection list UI component that is connected to a database field. It is used for filtering results based on the current selection from a list of items.
 
-`Note:` This component is exactly like the [MultiList](/v1/component/MultiList.html) component except the UI is based on a dropdown, ideal for showing additional UI filters while conserving screen space.
+`Note:` This component is exactly like the [MultiList](/v1.0.0/components/MultiList.html) component except the UI is based on a dropdown, ideal for showing additional UI filters while conserving screen space.
 
 Example uses:
 * create an e-commerce facet like search experience.
@@ -46,7 +46,7 @@ Example uses:
 ### Props
 
 - **componentId** `String`  
-    unique id of the sensor, can be referenced when creating a combined query context in an actuator's `react` prop.  
+    unique identifier of the component, can be referenced in other components' `react` prop.
 - **appbaseField** `String`  
     DB data field to be mapped with the component's UI view. The dropdown list items are filtered by a database query on this field.
 - **title** `String or HTML` [optional]  
@@ -54,9 +54,16 @@ Example uses:
 - **size** `Number` [optional]  
     control how many items to display in the List. Defaults to 100.
 -  **sortBy** `String` [optional]  
-    property that decides on how to sort the list items, accepts one of `count`, `asc` or `desc` as valid values. `count` sorts the list based on the count occurences, with highest value at the top. `asc` sorts the list in the ascending order of the list item (Alphabetical). `desc` sorts the list in the descending order of the term. Defaulted to `count`.
+    property that decides on how to sort the list items, accepts one of `count`, `asc` or `desc` as valid values.
+    * `count` sorts the list based on the count occurences, with highest value at the top.
+    * `asc` sorts the list in the ascending order of the list item (Alphabetical).
+    * `desc` sorts the list in the descending order of the term. Defaulted to `count`.
 - **defaultSelected** `Array` [optional]  
     pre-select one or more options from the dropdown list. Accepts an `Array` object containing the items that should be selected. It is important for the passed value(s) exactly match with the field value(s) as stored in appbase.io app.
+- **queryFormat** `String` [optional]  
+    queries the selected items from the list in one of two modes: `or`, `and`.
+    * Defaults to `or` which queries for results where any of the selected list items are present.
+    * In `and` mode, the applied query filters results where all of the selected items are present.
 - **showCount** `Boolean` [optional]  
     show count of number of occurences besides an item. Defaults to `true`.
 - **placeholder** `String` [optional]  
@@ -139,12 +146,12 @@ All reactivebase components are `rbc` namespaced.
 <p data-height="500" data-theme-id="light" data-slug-hash="rzvrqd" data-default-tab="result" data-user="divyanshu013" data-embed-version="2" data-pen-title="MultiDropdownList docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/rzvrqd/">MultiDropdownList docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-1. [List with all the default props](../playground/?knob-title=SingleDropdownList&knob-defaultSelected=London&knob-selectAllLabel=All%20Cities&knob-queryFormat=or&knob-sortBy=count&knob-showCheckbox=true&knob-size=100&knob-showCount=true&knob-placeholder=Select%20a%20City&knob-showSearch=true&selectedKind=map%2FMultiDropdownList&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+1. [List with all the default props]
 
-2. [List with a placeholder](../playground/?knob-title=SingleDropdownList&knob-defaultSelected=London&knob-selectAllLabel=All%20Cities&knob-queryFormat=or&knob-sortBy=count&knob-showCheckbox=true&knob-size=100&knob-showCount=true&knob-placeholder=Select%20Cities&knob-showSearch=true&selectedKind=map%2FMultiDropdownList&selectedStory=With%20Placeholder&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+2. [List with a placeholder]
 
-3. [List with a 'Select All' option](../playground/?knob-title=SingleDropdownList&knob-defaultSelected=London&knob-selectAllLabel=All%20Cities&knob-queryFormat=or&knob-sortBy=count&knob-showCheckbox=true&knob-size=100&knob-showCount=true&knob-placeholder=Select%20Cities&knob-showSearch=true&selectedKind=map%2FMultiDropdownList&selectedStory=With%20Select%20All&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+3. [List with a 'Select All' option]
 
-4. [List with pre-selected options](../playground/?knob-title=SingleDropdownList&knob-defaultSelected%5B0%5D=London&knob-defaultSelected%5B1%5D=Melbourne&knob-selectAllLabel=All%20Cities&knob-queryFormat=or&knob-sortBy=count&knob-showCheckbox=true&knob-size=100&knob-showCount=true&knob-placeholder=Select%20Cities&knob-showSearch=true&selectedKind=map%2FMultiDropdownList&selectedStory=With%20Default%20Selected&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+4. [List with pre-selected options]
 
-5. [Playground (with all knob actions)](../playground/?knob-title=MultiDropdownList&knob-defaultSelected%5B0%5D=London&knob-defaultSelected%5B1%5D=Melbourne&knob-selectAllLabel=All%20Cities&knob-queryFormat=or&knob-sortBy=count&knob-showCheckbox=true&knob-size=100&knob-showCount=true&knob-placeholder=Select%20Cities&knob-showSearch=true&selectedKind=map%2FMultiDropdownList&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+5. [Playground (with all knob actions)]

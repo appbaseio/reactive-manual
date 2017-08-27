@@ -31,7 +31,7 @@ Example uses:
 ### Props
 
 - **componentId** `String`  
-    unique id of the sensor, can be referenced in an actuator's `react` prop.
+    unique identifier of the component, can be referenced in other components' `react` prop.
 - **appbaseField** `Array`  
     data fields to be mapped with the component's UI view. MultiLevelMenu component supports three (3) fields passed as an Array for Outer List > Category List > Items Sub List, in that order.
 - **title** `String or HTML` [optional]  

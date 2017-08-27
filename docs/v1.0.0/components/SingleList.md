@@ -47,9 +47,9 @@ Example uses:
 ### Props
 
 - **componentId** `String`  
-    unique id of the sensor, can be referenced in an actuator's `react` prop.
+    unique identifier of the component, can be referenced in other components' `react` prop.
 - **appbaseField** `String`  
-    data field to be mapped with the component's UI view. The list items are filtered by a database query on this field.
+    data field to be connected to the component's UI view. The list items are filtered by a database query on this field.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **size** `Number` [optional]  

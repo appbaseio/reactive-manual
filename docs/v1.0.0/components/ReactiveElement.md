@@ -6,7 +6,7 @@
 
 ![Image to be displayed](https://i.imgur.com/hwjCLss.png)
 
-A `ReactiveElement` is a generic actuator component for creating a result component. It allows the user to define a custom UI for displaying the results.
+`ReactiveElement` is a user defined data-driven UI component. It allows the user to define a custom UI for displaying the results, and can reactively update its UI on data changes in other components.
 
 Example uses:
 
@@ -33,11 +33,11 @@ Example uses:
 ### Props
 
 - **componentId** `String`  
-    unique id of the sensor, can be referenced in an actuator's `react` prop.
+    unique identifier of the component, can be referenced in other components' `react` prop.
 - **title** `String or HTML` [optional]  
     title of the component, to be shown in the UI.
 - **stream** `Boolean` [optional]  
-    whether to stream new result updates in the UI. Defaults to `false`.
+    whether to stream new results in the UI based on the database updates. Defaults to `false`.
 - **from** `Number` [optional]  
     starting point from where to fetch the results. Useful in a pagination context. Defaults to 0.
 - **size** `Number` [optional]  
@@ -53,9 +53,9 @@ Example uses:
 
 ### Styles
 
-All reactivebase components are `rbc` namespaced.
+All reactivebase components are `rbc` name spaced.
 
-![Annotated image](https://i.imgur.com/KtDriR7.png)
+![Annotated image]()
 
 ### Extending
 

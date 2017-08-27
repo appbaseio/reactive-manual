@@ -4,7 +4,7 @@
 
 ![Image to be displayed](https://i.imgur.com/KuSUJyX.png)
 
-`MultiList` creates a multiple selection based list UI component that is connected to a database field. It is similar to a SingleList except can support multiple selections.
+`MultiList` creates a multiple selection based list UI component that is connected to a database field. It is similar to a [SingleList](/v1.0.0/components/SingleList.html) except it can support multiple item selections.
 
 Example uses:
 
@@ -49,9 +49,9 @@ Example uses:
 ### Props
 
 - **componentId** `String`  
-    unique id of the sensor, can be referenced in an actuator's `react` prop.
+    unique identifier of the component, can be referenced in other components' `react` prop.
 - **appbaseField** `String`  
-    data field to be mapped with the component's UI view. The list items are filtered by a database query on this field.
+    data field to be connected to the component's UI view.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI. Defaults to no title being shown.
 - **size** `Number` [optional]  
@@ -97,6 +97,7 @@ All reactivebase components are `rbc` namespaced.
 ### Extending
 
 `MultiList` component can be extended to
+
 1. customize the look and feel with `componentStyle`,
 2. update the underlying DB query with `customQuery`,
 3. connect with external interfaces using `beforeValueChange` and `onValueChange`.

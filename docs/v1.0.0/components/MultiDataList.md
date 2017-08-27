@@ -4,13 +4,13 @@
 
 ![Image to be displayed](https://i.imgur.com/cEAUorS.png)
 
-A `MultiDataList` sensor component creates a multiple checkbox list UI widget. It is used for filtering results based on the current selection(s) from a list of data items.
+`MultiDataList` creates a multiple checkbox list UI component that is connected to a database field. It is used for filtering results based on the current selection(s) from a list of data items.
 
-`Note:` This component is like the [MultiList](/v1/component/MultiList.html) component except the filters are set based on the `data` prop, ideal for showing custom UI filters in a list layout.
+`Note:` This component behaves similar to the [MultiList](/v1.0.0/components/MultiList.html) component except the list items are user defined with the `data` prop, ideal for showing curated items in a list layout.
 
 Example uses:
-* select category(s) from a list of categories for filtering e-commerce search results.
-* filtering restaurants by a cuisine choice.
+* select one or multiple items from a list of categories for filtering e-commerce search results.
+* filtering restaurants by one or more cuisine choices.
 
 ### Usage
 
@@ -69,13 +69,13 @@ Example uses:
 ### Props
 
 - **componentId** `String`  
-    unique id of the sensor, can be referenced when creating a combined query context in an actuator's `react` prop.  
+    unique identifier of the component, can be referenced in other components' `react` prop.
 - **appbaseField** `String`  
-    DB data field to be mapped with the component's UI options.
+    data field to be connected to the component's UI view.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **data** `Object Array`  
-    collection of UI `labels` with associated `value`.
+    collection of UI `labels` with associated `value` to be matched against the database field.
 - **showSearch** `Boolean` [optional]  
     whether to display a searchbox to filter the data list. Defaults to `false`.
 - **showCheckbox** `Boolean` [optional]  

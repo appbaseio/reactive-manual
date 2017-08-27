@@ -4,7 +4,9 @@
 
 ![Image to be displayed](https://i.imgur.com/XqRjLSS.png)
 
-A `MultiRange` component creates a multiple checkbox based numeric range selector. It is like a MultiList widget but for numeric data.
+`MultiRange` creates a multiple checkbox based numeric range UI component.
+
+`Note:` It is similar to a [MultiList](/v1.0.0/components/MultiList.html) component but for numeric data fields.
 
 Example uses:
 * filtering search results by prices in an e-commerce or food delivery experience.
@@ -52,9 +54,9 @@ Example uses:
 ### Props
 
 - **componentId** `String`  
-    unique id of the sensor, can be referenced in an actuator's `react` prop.
+    unique identifier of the component, can be referenced in other components' `react` prop.
 - **appbaseField** `String`  
-    data field to be mapped with the component's UI view. The range items are filtered by a database query on this field.
+    data field to be connected to the component's UI view. The range items are filtered by a database query on this field.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **defaultSelected** `Array` [optional]  
@@ -139,8 +141,8 @@ All reactivebase components are `rbc` namespaced.
 <p data-height="500" data-theme-id="light" data-slug-hash="zdjJGM" data-default-tab="result" data-user="divyanshu013" data-embed-version="2" data-pen-title="MultiRange docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/zdjJGM/">MultiRange docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-1. [Range with all the default props](../playground/?knob-title=SingleRange%3A%20Earthquake%20Filter&knob-defaultSelected=Moderate&knob-selectAllLabel=All%20cities&knob-showRadio=true&knob-sortBy=count&knob-size=100&knob-showCount=true&knob-placeholder=Search%20City&knob-showSearch=true&selectedKind=map%2FMultiRange&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+1. [Range with all the default props]
 
-2. [Range with pre-selected items](../playground/?knob-title=SingleRange%3A%20Earthquake%20Filter&knob-defaultSelected%5B0%5D=Major&knob-defaultSelected%5B1%5D=Moderate&knob-selectAllLabel=All%20cities&knob-showRadio=true&knob-sortBy=count&knob-size=100&knob-showCount=true&knob-placeholder=Search%20City&knob-showSearch=true&selectedKind=map%2FMultiRange&selectedStory=With%20Default%20Selected&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+2. [Range with pre-selected items]
 
-3. [Playground (with all knob actions)](../playground/?knob-title=MultiRange%3A%20Filter&knob-defaultSelected%5B0%5D=Major&knob-defaultSelected%5B1%5D=Moderate&knob-selectAllLabel=All%20cities&knob-showRadio=true&knob-sortBy=count&knob-showCheckbox=true&knob-size=100&knob-showCount=true&knob-placeholder=Search%20City&knob-showSearch=true&selectedKind=map%2FMultiRange&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+3. [Playground (with all knob actions)]

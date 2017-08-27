@@ -4,14 +4,14 @@
 
 ![Image to be displayed](https://i.imgur.com/Lj5O2qg.png)
 
-As the name suggests, a `DataContoller` component creates a UI optional filter. There are many cases where filtering of results is controlled by query preferences not visible in the view. A Data Controller comes in handy there.
+As the name suggests, a `DataContoller` component creates a UI optional component connected with a custom database query.
 
-A `DataController` also provides a way to provide a customized UI widget with a generic query, as defined by <a href="https://www.elastic.co/guide/en/elasticsearch/reference/2.4/query-dsl.html">Elasticsearch's Query DSL</a>.
+There are many cases where filtering of results is controlled by query preferences not visible in the view. A Data Controller comes in handy there.
 
 Example uses:
 
-* Showing personalized feeds based on user's global preferences that are not visible in the current UI view, like in meetup.com's meetup recommendations to users.
-* Extending the existing UI components to perform a generic query.
+* Showing personalized feeds based on user's global preferences that are not visible in the current UI view, like in meetup.com's recommendations to users.
+* Extending the existing UI components to perform a user defined database query.
 
 ### Usage
 
@@ -52,6 +52,12 @@ Example uses:
     set the UI markup. Accepts a string or an HTML element. This prop is only applicable when **visible** is set to `true`.
 - **defaultSelected** `string` [optional]  
     pre-select a value in the data controller.
+- **showFilter** `Boolean` [optional]  
+    show as filter when a value is selected in a global selected filters view. Defaults to `true`.
+- **filterLabel** `String` [optional]  
+    An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
+- **URLParams** `Boolean` [optional]  
+    enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
 
 ### Syntax
 

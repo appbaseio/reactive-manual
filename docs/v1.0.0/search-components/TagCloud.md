@@ -39,7 +39,7 @@ Example uses:
 ### Props
 
 - **componentId** `String`  
-    unique id for the component, can be referenced in an actuator's `react` prop.
+    unique identifier of the component, can be referenced in other components' `react` prop.
 - **appbaseField** `String`  
     data field(s) to be mapped with the component's UI view.
 - **title** `String or HTML` [optional]  

@@ -4,7 +4,9 @@
 
 ![Image to be displayed](https://i.imgur.com/A23Iu2w.png)
 
-A `SingleDropdownRange` sensor component creates a dropdown based numeric range selector UI widget. It is like a SingleList widget but for numeric data. It is also like SingleRange widget except displayed in a dropdown format.
+`SingleDropdownRange` creates a dropdown based numeric range UI component.
+
+`Note:` This component is exactly like the [SingleRange](/v1.0.0/components/SingleRange.html) component except the UI is based on a dropdown, ideal for showing additional UI filters while conserving screen space.
 
 Example uses:
 * filtering search results by prices in an e-commerce or food delivery experience.
@@ -43,6 +45,8 @@ Example uses:
      {"start": 51, "end": 1000, "label": "First Date"}]
   }
   placeholder="Select price range"
+  showFilter={false}
+  filterLabel="Price"
   URLParams={false}
 />
 ```
@@ -50,9 +54,9 @@ Example uses:
 ### Props
 
 - **componentId** `String`  
-    unique id of the sensor, can be referenced in an actuator's `react` prop.
+    unique identifier of the component, can be referenced in other components' `react` prop.
 - **appbaseField** `String`  
-    data field to be mapped with the component's UI view. The range items are filtered by a database query on this field.
+    data field to be connected to the component's UI view. The range items are filtered by a database query on this field.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **defaultSelected** `String` [optional]  
@@ -61,6 +65,10 @@ Example uses:
     collection of UI `labels` with associated `start` and `end` range values.
 - **placeholder** `String` [optional]  
     set the placeholder to show for the dropdown UI, useful when no option is `defaultSelected`. The default placeholder value is set to "Select...".
+- **showFilter** `Boolean` [optional]  
+    show as filter when a value is selected in a global selected filters view. Defaults to `true`.
+- **filterLabel** `String` [optional]  
+    An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
 

@@ -77,7 +77,7 @@ Example uses:
 ### Props
 
 - **componentId** `String`  
-    unique id of the component, can be referenced in another component's `react` prop.
+    unique identifier of the component, can be referenced in other components' `react` prop.
 - **appbaseField** `String`  
     data field to be mapped with `ResultCard`'s UI view, used for providing a sorting context.
 - **title** `String or HTML` [optional]  

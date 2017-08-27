@@ -4,7 +4,9 @@
 
 ![Image to be displayed](https://i.imgur.com/Xwo2Aog.png)
 
-A `MultiDropdownRange` sensor component creates a dropdown based multiple numeric range selector UI widget. It is like a MultiList widget but for numeric data. It is also like a MultiRange widget but displayed in a dropdown format.
+`MultiDropdownRange` creates a dropdown based multiple numeric range UI component that is connected to a database field.
+
+`Note:` It is exactly like the [MultiRange](/v1.0.0/components/MultiRange.html) component but displayed in a dropdown, ideal for showing additional UI filters while conserving screen space
 
 Example uses:
 * filtering search results by prices in an e-commerce or food delivery experience.
@@ -43,6 +45,8 @@ Example uses:
      {"start": 51, "end": 1000, "label": "First Date"}]
   }
   placeholder="Select price ranges"
+  showFilter={true}
+  filterLabel="Price"
   URLParams={false}
 />
 ```
@@ -50,9 +54,9 @@ Example uses:
 ### Props
 
 - **componentId** `String`  
-    unique id of the sensor, can be referenced in an actuator's `react` prop.
+    unique identifier of the component, can be referenced in other components' `react` prop.
 - **appbaseField** `String`  
-    data field to be mapped with the component's UI view. The range items are filtered by a database query on this field.
+    data field to be connected to the component's UI view. The range items are filtered by a database query on this field.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **defaultSelected** `Array` [optional]  
@@ -61,6 +65,10 @@ Example uses:
     collection of UI `labels` with associated `start` and `end` range values.
 - **placeholder** `String` [optional]  
     set the placeholder to show for the dropdown UI, useful when no option is `defaultSelected`. The default placeholder value is set to "Select...".
+- **showFilter** `Boolean` [optional]  
+    show as filter when a value is selected in a global selected filters view. Defaults to `true`.
+- **filterLabel** `String` [optional]  
+    An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
 
@@ -133,8 +141,8 @@ All reactivebase components are `rbc` namespaced.
 <p data-height="500" data-theme-id="light" data-slug-hash="brKeGP" data-default-tab="result" data-user="divyanshu013" data-embed-version="2" data-pen-title="MultiDropdownRange docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/brKeGP/">MultiDropdownRange docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-1. [Range with default props](../playground/?knob-title=SingleDropdownRange%3A%20Filter&knob-defaultSelected=Moderate&knob-selectAllLabel=All%20cities&knob-showRadio=true&knob-sortBy=count&knob-showCheckbox=true&knob-size=100&knob-showCount=true&knob-placeholder=Search%20prices&knob-showSearch=true&selectedKind=map%2FMultiDropdownRange&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+1. [Range with default props]
 
-2. [Range with pre-selected values](../playground/?knob-title=SingleDropdownRange%3A%20Filter&knob-defaultSelected=Moderate&knob-selectAllLabel=All%20cities&knob-showRadio=true&knob-sortBy=count&knob-showCheckbox=true&knob-size=100&knob-showCount=true&knob-placeholder=Search%20prices&knob-showSearch=true&selectedKind=map%2FMultiDropdownRange&selectedStory=With%20Default%20Selected&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+2. [Range with pre-selected values]
 
-3. [Playground (with all knob actions)](../playground/?knob-title=MultiDropdownRange%3A%20Earthquake%20Magnitude&knob-defaultSelected=Moderate&knob-selectAllLabel=All%20cities&knob-showRadio=true&knob-sortBy=count&knob-showCheckbox=true&knob-size=100&knob-showCount=true&knob-placeholder=Search%20places&knob-showSearch=true&selectedKind=map%2FMultiDropdownRange&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+3. [Playground (with all knob actions)]

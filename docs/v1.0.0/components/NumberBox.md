@@ -4,7 +4,7 @@
 
 ![Image to be displayed](https://i.imgur.com/0Xfg8pM.png)
 
-A `NumberBox` sensor component creates a NumberBox UI widget. It is used for filtering results based on a numeric query.
+`NumberBox` creates a box (or button) based numeric UI component. It is used for filtering results based on a numeric query.
 
 Example uses:
 * filtering hotel listings based on the number of guests,
@@ -42,9 +42,9 @@ Example uses:
 ### Props
 
 - **componentId** `String`  
-    unique id of the sensor, can be referenced in an actuator's `react` prop.
+    unique identifier of the component, can be referenced in other components' `react` prop.
 - **appbaseField** `String`  
-    DB data field to be mapped with the component's UI view.The selected buttons create a database query on this field.
+    DB data field to be mapped with the component's UI view. The selected box value creates a database query on this field.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **defaultSelected** `Number` [optional]  
@@ -54,7 +54,12 @@ Example uses:
 - **labelPosition** `String` [optional]  
     position where label is shown, one of "left", "top", "right", "bottom". Defaults to `left`.
 - **queryFormat** `String` [optional]  
-    type of query to perform, one of "exact", "gte" (greater than or equal), "lte" (less than or equal) . Defaults to `gte`.
+    type of query to perform, one of `exact`, `gte` and `lte`:
+    * `exact` implies a query match with the exact value as the one selected in the UI view,
+    * `gte` implies a query match that satisfies all values that are greater than or equal to the one selected in the UI view.
+    * `lte` implies a query match that satisfies all values that are less than or equal to the one selected in the UI view.  
+
+    Defaults to `gte`.
 - **showFilter** `Boolean` [optional]  
     show as filter when a value is selected in a global selected filters view. Defaults to `true`.
 - **filterLabel** `String` [optional]  

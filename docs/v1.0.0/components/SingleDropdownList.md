@@ -4,9 +4,9 @@
 
 ![Image to be displayed](https://i.imgur.com/PGYPXf6.png)
 
-A `SingleDropdownList` sensor component creates a dropdown list UI widget. It is used for filtering results based on the current selection from a list of items.
+`SingleDropdownList` creates a dropdown list based single select UI component. It is used for filtering results based on the current selection from a list of items.
 
-`Note:` This component is exactly like the [SingleList](/v1/component/SingleList.html) component except the UI is based on a dropdown, ideal for showing additional UI filters while conserving screen space.
+`Note:` This component is exactly like the [SingleList](/v1.0.0/component/SingleList.html) component except the UI is based on a dropdown, ideal for showing additional UI filters while conserving screen space.
 
 Example uses:
 * select a category from a list of categories for filtering e-commerce search results.
@@ -46,9 +46,9 @@ Example uses:
 ### Props
 
 - **componentId** `String`  
-    unique id of the sensor, can be referenced when creating a combined query context in an actuator's `react` prop.  
+    unique identifier of the component, can be referenced in other components' `react` prop.
 - **appbaseField** `String`  
-    DB data field to be mapped with the component's UI options.
+    data field to be connected to the component's UI view.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **size** `Number` [optional]  

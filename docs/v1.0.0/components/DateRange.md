@@ -4,7 +4,7 @@
 
 ![Image to be displayed](https://i.imgur.com/Tl2xXNS.png)
 
-A `DateRange` sensor component creates a calendar view based UI widget. It is used for filtering results by a date like property.
+`DateRange` creates a calendar view based UI component that is connected to date fields. It is used for filtering results by a date like property.
 
 Example uses:
 * picking a date range for booking a hotel room.
@@ -47,9 +47,11 @@ Example uses:
 ### Props
 
 - **componentId** `String`  
-    unique id of the sensor, can be referenced when creating a combined query context in an actuator's `react` prop.  
-- **appbaseField** `String`  
-    DB data field to be mapped with the component's UI options.
+    unique identifier of the component, can be referenced in other components' `react` prop.
+- **appbaseField** `String or Array`  
+    database field(s) to be connected to the component's UI view.
+    * If passed as an `Array` of length 2, the first `String` element is used for the upper bound and the second `String` element is used for the lower bound of the range.
+    * If passed as a `String`, the field is used for both lower and upper bounds match based on the selected values from the component UI view.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **defaultSelected** `Object` [optional]  

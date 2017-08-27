@@ -4,7 +4,7 @@
 
 ![Image to be displayed](https://i.imgur.com/HnZexE9.png)
 
-A `DatePicker` sensor component creates a calender view based UI widget. It is used for filtering results by a date like property.
+`DatePicker` creates a calender view based UI component that is connected to a database date field. It is used for filtering results by a date like property.
 
 Example uses:
 * finding flights departing on a particular day.
@@ -46,9 +46,9 @@ Example uses:
 ### Props
 
 - **componentId** `String`  
-    unique id of the sensor, can be referenced when creating a combined query context in an actuator's `react` prop.  
+    unique identifier of the component, can be referenced in other components' `react` prop.
 - **appbaseField** `String`  
-    DB data field to be mapped with the component's UI options.
+    data field to be connected to the component's UI view.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **defaultSelected** `Object of Moment` [optional]  

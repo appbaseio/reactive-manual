@@ -6,12 +6,14 @@
 
 ![Image to be displayed](https://i.imgur.com/GcUFZjh.png)
 
-`ReactiveList` creates a result list UI component where results from all the applied filters are shown. It forms the base for building more specific actuators like [`ResultCard`](v1.0.0/search-components/ResultCard.html) or [`ResultList`](v1.0.0/search-components/ResultList.html) and provides a lot of rich functionalities out of the box.
+`ReactiveList` creates a data-driven result list UI component. This list can reactively update itself based on changes in other components or changes in the database itself.
+
+This component forms the base for building more specific result display components like [`ResultCard`](v1.0.0/search-components/ResultCard.html) or [`ResultList`](v1.0.0/search-components/ResultList.html).
 
 Example uses:
 
-* showing a feed of results based on the applied search criterias.
-* streaming realtime feed updates based on applied criterias like in a newsfeed.
+* showing a feed of results based on the applied search criteria.
+* streaming realtime feed updates based on applied criteria like in a newsfeed.
 
 ### Usage
 
@@ -50,9 +52,9 @@ Example uses:
 ### Props
 
 - **componentId** `String`  
-    unique id of the sensor, can be referenced in an actuator's `react` prop.
+    unique identifier of the component, can be referenced in other components' `react` prop.
 - **appbaseField** `String`  
-    data field to be mapped with the `ReactiveList`'s UI view, used for providing a sorting context.
+    data field to be connected to the component's UI view. It is useful for providing a sorting context.
 - **title** `String or HTML` [optional]  
     title of the component, to be shown in the UI.
 - **stream** `Boolean` [optional]  
@@ -114,7 +116,7 @@ Example uses:
 - **onAllData** `Function` [optional]  
     works like **onData** prop but all the data objects are passed to the callback function.
 - **pageURLParams** `Boolean` [optional]  
-    whether to display the page number in the URL. Defaults to `false`. **pageURLParams** works only with **pagination** enabled. Useful for sharing links to a page.
+    whether to display the page number in the URL. Defaults to `false`. **pageURLParams** works only with **pagination** enabled. Useful for sharing the view of a particular page.
 
 ### Syntax
 

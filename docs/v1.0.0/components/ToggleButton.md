@@ -4,7 +4,7 @@
 
 ![Image to be displayed](https://i.imgur.com/Zyooy5N.png)
 
-`ToggleButton` sensor component creates a toggle button UI widget. It is used for filtering results based on a fixed set of toggleable options.
+`ToggleButton` creates a toggle button UI component that is connected to a database field. It is used for filtering results based on a fixed set of toggle-able options.
 
 Example uses:
 * filter movies by ratings between 1 and 5,
@@ -50,15 +50,15 @@ Example uses:
 ### Props
 
 - **componentId** `String`  
-    unique id of the sensor, can be referenced in an actuator's `react` prop.
+    unique identifier of the component, can be referenced in other components' `react` prop.
 - **appbaseField** `String`  
-    DB data field to be mapped with the component's UI view.The selected buttons create a database query on this field.
+    data field to be connected to the component's UI view.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **defaultSelected** `Array` [optional]  
     an array of default selected label(s) to pre-select one or more buttons.
 - **data** `Object Array`  
-    an object array of {label:label, value:value} kv pairs, `label` is displayed in the UI and `value` is the corresponding actual field value in the database.
+    collection of UI `labels` with associated `value` to be matched against the database field.
 - **multiSelect** `Boolean` [optional]  
     whether multiple buttons can be selected, defaults to **true**. When set to **false**, only one button can be selected.
 - **showFilter** `Boolean` [optional]  

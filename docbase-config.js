@@ -77,10 +77,6 @@ var docbaseConfig ={
             "label":"Search Components",
             "files":[
                {
-                  "name":"ToggleList",
-                  "label":"Toggle List"
-               },
-               {
                   "name":"NestedList",
                   "label":"Nested List"
                },

@@ -4,9 +4,9 @@
 
 ![Image to be displayed](https://i.imgur.com/pAnNBmo.png)
 
-A `SingleDataList` sensor component creates a radio select list UI widget. It is used for filtering results based on the current selection from a list of data items.
+`SingleDataList` creates a radio select list UI component. It is used for filtering results based on the current selection from a list of data items.
 
-`Note:` This component is like the [SingleList](/v1/component/SingleList.html) component except the filters are set based on the `data` prop, ideal for showing custom UI filters in a list layout.
+`Note:` This component is like the [SingleList](/v1.0.0/components/SingleList.html) component except the filters are set based on the `data` prop, ideal for showing custom UI filters in a list layout.
 
 Example uses:
 * select a category from a list of categories for filtering e-commerce search results.
@@ -69,13 +69,13 @@ Example uses:
 ### Props
 
 - **componentId** `String`  
-    unique id of the sensor, can be referenced when creating a combined query context in an actuator's `react` prop.  
+    unique identifier of the component, can be referenced in other components' `react` prop.
 - **appbaseField** `String`  
-    DB data field to be mapped with the component's UI options.
+    data field to be connected to the component's UI view.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **data** `Object Array`  
-    collection of UI `labels` with associated `value`.
+    collection of UI `labels` with associated `value` to be matched against the database field.
 - **showSearch** `Boolean` [optional]  
     whether to display a searchbox to filter the data list. Defaults to `false`.
 - **showRadio** `Boolean` [optional]  

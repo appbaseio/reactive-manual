@@ -4,7 +4,7 @@
 
 ![Image to be displayed](https://i.imgur.com/dLeyahL.png)
 
-A `DataSearch` sensor component creates a searchbox UI widget with an autocomplete functionality. It is used for applying full-text search across one or more fields.
+`DataSearch` creates a search box UI component that is connected to one or more database fields.
 
 Example uses:
 * Searching for a rental listing by its `name` or `description` field.
@@ -46,27 +46,29 @@ Example uses:
 ### Props
 
 - **componentId** `String`  
-    unique id of the sensor, can be referenced in an actuator’s react prop.
-- **appbaseField** `String or Array`  
-    data field(s) on which the search query will be applied to. If you want to search across multiple fields, pass them as an `Array`.
+    unique identifier of the component, can be referenced in other components' `react` prop.
 - **title** `String or HTML` [optional]  
-    Sets the title of the component to be shown in the UI.
+    set the title of the component to be shown in the UI.
+- **appbaseField** `String or Array`  
+    database field(s) to be connected to the component's UI view. DataSearch accepts an Array in addition to String, useful for applying search across multiple fields.
+- **searchWeight** `Array` [optional]  
+    set the search weight for the database fields, useful when appbaseField is an Array of more than one field. This prop accepts an array of numbers. A higher number implies a higher relevance weight for the corresponding field in the search results.
 - **defaultSelected** `string` [optional]  
-    pre-select a value in the search bar.
-- **weights** `Array` [optional]  
-    Sets the weights for the appbaseFields being searched on, accepts an array of numbers. A higher weight will give higher relevance to the corresponding **appbaseField** in the search results.
+    preset the search query text in the search box.
 - **placeholder** `String` [optional]  
-    Sets the placeholder text to be shown in the searhbox input field. Defaults to "Search".
+    set the placeholder text to be shown in the searchbox input field. Defaults to "Search".
 - **autoSuggest** `Boolean` [optional]  
-    Sets whether the autosuggest functionality should be enabled or disabled. Defaults to true.
-- **initialSuggestions** `Array` [optional]
-    Sets the initial search suggestions when the search field is empty which show up on focus. Accepts an array of objects each having a **label** and **value** property.
+    set whether the autosuggest functionality should be enabled or disabled. Defaults to `true`.
+- **defaultSuggestions** `Array` [optional]
+    preset search suggestions to be shown on focus when the search box does not have any search query text set. Accepts an array of objects each having a **label** and **value** property. The label can contain either String or an HTML element.
 - **highlight** `Boolean` [optional]  
-    Whether highlighting should be enabled in the returned results.
+    whether highlighting should be enabled in the returned results.
 - **highlightField** `String or Array` [optional]  
-    When highlighting is enabled, this prop allows specifying the fields which should be returned with the matching highlights. When not specified, it defaults to applying highlights on the field(s) specified in the **appbaseField** prop.
+    when highlighting is enabled, this prop allows specifying the fields which should be returned with the matching highlights. When not specified, it defaults to applying highlights on the field(s) specified in the **appbaseField** prop.
 - **queryFormat** `String` [optional]
-    Sets the query format, can be **or** or **and**. Defaults to **or**. **or** returns all the results matching **any** of the search parameters, **and** returns the results matching **all** of the search parameters. For example, searching for "bat man" with **or** will return all the results matching either "bat" or "man", on the other hand with **and** only results matching both "bat" and "man" will be returned.
+    Sets the query format, can be **or** or **and**. Defaults to **or**.
+    * **or** returns all the results matching **any** of the search query text's parameters. For example, searching for "bat man" with **or** will return all the results matching either "bat" or "man".
+    * On the other hand with **and**, only results matching both "bat" and "man" will be returned. It returns the results matching **all** of the search query text's parameters.
 - **fuzziness** `String or Number` [optional]
     Sets a maximum edit distance on the search parameters, can be **0**, **1**, **2** or **"AUTO"**. Useful for showing the correct results for an incorrect search parameter by taking the fuzziness into account. For example, with a substitution of one character, **fox** can become **box**. Read more about it in the elastic search [docs](https://www.elastic.co/guide/en/elasticsearch/guide/current/fuzziness.html).
 - **showFilter** `Boolean` [optional]  
