@@ -37,6 +37,7 @@ Example uses:
   stream={true}
   pagination={false}
   paginationAt="bottom"
+  pages={5}
   sortBy="desc"
   from={0}
   size={10}
@@ -63,6 +64,8 @@ Example uses:
     pagination <> infinite scroll switcher. Defaults to `false`, i.e. an infinite scroll based view. When set to `true`, a pagination based list view with page numbers will appear.
 - **paginationAt** `String` [optional]  
     Determines the position where to show the pagination, only applicable when **pagination** prop is set to `true`. Accepts one of `top`, `bottom` or `both` as valid values. Defaults to `bottom`.
+- **pages** `Number` [optional]  
+    number of user selectable pages to be displayed when pagination is enabled. Defaults to 5.
 - **sortBy** `String` [optional]  
     sort the results by either `asc` or `desc` order. It is an alternative to `sortOptions`, both can't be used together.
 - **sortOptions** `Object Array` [optional]  
