@@ -175,16 +175,20 @@ var docbaseConfig ={
                   "label":"Data Search"
                },
                {
-                  "name":"DataController",
-                  "label":"Data Controller"
-               },
-               {
                   "name":"DatePicker",
                   "label":"Date Picker"
                },
                {
                   "name":"DateRange",
                   "label":"Date Range"
+               },
+               {
+                  "name":"SelectedFilters",
+                  "label":"Selected Filters"
+               },
+               {
+                  "name":"DataController",
+                  "label":"Data Controller"
                },
                {
                   "name":"ReactiveList",
