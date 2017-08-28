@@ -6,7 +6,7 @@
 
 ![ReactiveMap Image](https://i.imgur.com/faAZ5v8.png)
 
-A `ReactiveMap` actuator component creates a map UI widget. It is the key component for building map based experiences.
+A `ReactiveMap` creates a data-driven map UI component. It is the key component for build map based experiences.
 
 Example uses:
 * showing a map of user checkins by city and topics for powering discovery based experiences.
@@ -14,11 +14,23 @@ Example uses:
 
 ### Usage
 
+#### Basic Usage
+
 ```js
 <ReactiveMap
-    componentId="ReactiveMapActuator"
+    componentId="MapUI"
     appbaseField="location"
-    title="ReactiveMap"
+    title="Venue Location Map"
+/>
+```
+
+#### Usage With All Props
+
+```js
+<ReactiveMap
+    componentId="MapUI"
+    appbaseField="location"
+    title="Venue Location Map"
 
     size={100}
     defaultZoom={13}
@@ -81,7 +93,7 @@ Example uses:
 - **componentId** `String`  
     unique identifier of the component, can be referenced in other components' `react` prop.
 - **appbaseField** `String`  
-    DB data field to be mapped with the component's UI view, usually of a geopoint (i.e. location) data type and used for rendering the markers on the map.
+    DB data field to be connected to the component's UI view, usually of a geopoint (i.e. location) data type and used for rendering the markers on the map.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **size** `Number` [optional]  
@@ -159,7 +171,11 @@ ReactiveMap component exposes many events to provide a good listening mechanism 
 and also user can return the markup which will be append inside map (as ex. Polygon, circles, rectangles can be return using [react-component](https://github.com/tomchentw/react-google-maps) ).
 
 
-### CSS Styles
+### Syntax
+
+TBD
+
+### Styles
 
 ![Annotated Image](https://i.imgur.com/YPRoLch.png)
 
