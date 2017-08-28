@@ -76,7 +76,7 @@ Example uses:
 
 All reactivebase components are `rbc` namespaced.
 
-![Annotated image]()
+![Annotated image](https://i.imgur.com/DV7hKyN.png)
 
 
 ### Extending

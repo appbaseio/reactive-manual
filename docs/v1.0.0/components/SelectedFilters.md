@@ -30,7 +30,7 @@ As an example, check [MultiList usage](/v1.0.0/components/MultiList.html#-multil
 
 All reactivebase components are `rbc` namespaced.
 
-![Annotated image]()
+![Annotated image](https://i.imgur.com/DzFn900.png)
 
 ### Extending
 
