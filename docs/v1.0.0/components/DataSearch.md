@@ -29,7 +29,7 @@ Example uses:
   appbaseField={["group_venue", "group_city"]}
   title="Search"
   defaultSelected="Songwriting"
-  weights={[1, 3]}
+  searchWeight={[1, 3]}
   placeholder="Search for cities or venues"
   autoSuggest={true}
   initialSuggestions={[{label: "Songwriting", value: "Songwriting"}, {label: "Musicians", value: "Musicians"}]}
@@ -51,10 +51,10 @@ Example uses:
     set the title of the component to be shown in the UI.
 - **appbaseField** `String or Array`  
     database field(s) to be connected to the component's UI view. DataSearch accepts an Array in addition to String, useful for applying search across multiple fields.
-- **searchWeight** `Array` [optional]  
-    set the search weight for the database fields, useful when appbaseField is an Array of more than one field. This prop accepts an array of numbers. A higher number implies a higher relevance weight for the corresponding field in the search results.
 - **defaultSelected** `string` [optional]  
     preset the search query text in the search box.
+- **searchWeight** `Array` [optional]  
+    set the search weight for the database fields, useful when appbaseField is an Array of more than one field. This prop accepts an array of numbers. A higher number implies a higher relevance weight for the corresponding field in the search results.
 - **placeholder** `String` [optional]  
     set the placeholder text to be shown in the searchbox input field. Defaults to "Search".
 - **autoSuggest** `Boolean` [optional]  
@@ -149,5 +149,5 @@ All reactivebase components are `rbc` namespaced.
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 1. [DataSearch with all the default props](../playground/?selectedKind=map%2FDataSearch&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-2. [DataSearch with autocomplete turned off](../playground/?knob-autoSuggest=false&selectedKind=map%2FDataSearch&selectedStory=Without%20autoSuggest&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+2. [DataSearch with autoSuggest disabled](../playground/?knob-autoSuggest=false&selectedKind=map%2FDataSearch&selectedStory=Without%20autoSuggest&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 3. [Playground (with all knob actions)](../playground/?knob-autoSuggest=true&knob-title=DataSearch%3A%20Places&knob-placeholder=Search%20Places&knob-defaultSelected=&knob-weights%5B0%5D=1&knob-weights%5B1%5D=3&knob-fuzziness=1&selectedKind=map%2FDataSearch&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
