@@ -11,7 +11,7 @@ npm install --save @appbaseio/reactivesearch
 ```
 
 ```html
-<!-- Your choice of CSS framework, can be materialize, boostrap or something else -->
+<!-- Your choice of CSS framework, can be materialize, bootstrap or something else -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
 <!-- Add browser style for reactivesearch -->
 <link rel="stylesheet" href="node_modules/@appbaseio/reactivesearch/dist/css/style.min.css">
