@@ -83,7 +83,7 @@ Example uses:
 
 ### Syntax
 
-<p data-height="500" data-theme-id="light" data-slug-hash="dWoVOd" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ReactiveSearch Category Search" class="codepen">See <a href="http://codepen.io/sids-aquarius/pen/dWoVOd/">ReactiveSearch Category Search</a> on codepen.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="mMQaza" data-default-tab="js" data-user="divyanshu013" data-embed-version="2" data-pen-title="CategorySearch docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/mMQaza/">CategorySearch docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 ### Styles
@@ -147,7 +147,7 @@ All reactivebase components are `rbc` namespaced.
 
 ### Examples
 
-<p data-height="500" data-theme-id="light" data-slug-hash="dWoVOd" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ReactiveSearch Category Search" class="codepen">See <a href="http://codepen.io/sids-aquarius/pen/dWoVOd/">ReactiveSearch Category Search</a> on codepen.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="mMQaza" data-default-tab="result" data-user="divyanshu013" data-embed-version="2" data-pen-title="CategorySearch docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/mMQaza/">CategorySearch docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 1. [CategorySearch with all the default props](../playground/?selectedKind=search%2FCategorySearch&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
