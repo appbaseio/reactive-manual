@@ -19,7 +19,6 @@ Example uses:
 <GeoDistanceDropdown
   componentId="LocationUI"
   appbaseField="location"
-  title="Location Dropdown Selector"
   data={
     [
       { "start": 0, "end": 20, "label": "< 20 miles" },
@@ -81,11 +80,12 @@ Example uses:
 - **filterLabel** `String` [optional]  
     An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
 - **URLParams** `Boolean` [optional]  
-    enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
+    enable creating a URL query string parameter based on the selected value from the dropdown. This is useful for sharing URLs with the component state. Defaults to `false`.
 
 ### Syntax
 
-TBD
+<p data-height="500" data-theme-id="light" data-slug-hash="PKxroW" data-default-tab="js" data-user="divyanshu013" data-embed-version="2" data-pen-title="GeoDistanceDropdown docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/PKxroW/">GeoDistanceDropdown docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 ### Styles
 
@@ -153,13 +153,15 @@ All reactivebase and reactivemaps components are `rbc` namespaced.
 - **onValueChange** `Function`  
     is a callback function which accepts component's current **value** as a parameter. It is called every time the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example:  You want to show a pop-up modal with the valid discount coupon code when a user searches within a specific location area.
 
-
 ### Examples
 
-1. GeoDistance dropdown with all the default props
+<p data-height="500" data-theme-id="light" data-slug-hash="PKxroW" data-default-tab="result" data-user="divyanshu013" data-embed-version="2" data-pen-title="GeoDistanceDropdown docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/PKxroW/">GeoDistanceDropdown docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-2. GeoDistance dropdown with a title
+1. [GeoDistance dropdown with all the default props](../playground/?knob-title=Geo%20Distance%20Slider&knob-filterLabel=GeoDistance%20filter&knob-defaultSelected=%7B"location"%3A"London"%2C"distance"%3A5%7D&knob-rangeLabels=%7B"start"%3A"Start"%2C"end"%3A"End"%7D&knob-range=%7B"start"%3A0%2C"end"%3A50%7D&knob-URLParams%20%28not%20visible%20on%20storybook%29=true&knob-showFilter=true&knob-stepValue=1&knob-autoLocation=true&knob-unit=mi&knob-placeholder=Search%20Location&selectedKind=map%2FGeoDistanceDropdown&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
-3. GeoDistance dropdown with a defaultSelected value
+2. [GeoDistance dropdown with a title](../playground/?knob-title=Geo%20Distance%20Slider&knob-filterLabel=GeoDistance%20filter&knob-defaultSelected=%7B"location"%3A"London"%2C"distance"%3A5%7D&knob-rangeLabels=%7B"start"%3A"Start"%2C"end"%3A"End"%7D&knob-range=%7B"start"%3A0%2C"end"%3A50%7D&knob-URLParams%20%28not%20visible%20on%20storybook%29=true&knob-showFilter=true&knob-stepValue=1&knob-autoLocation=true&knob-unit=mi&knob-placeholder=Search%20Location&selectedKind=map%2FGeoDistanceDropdown&selectedStory=With%20Title&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
-4. Playground (with all knob actions)
+3. [GeoDistance dropdown with a defaultSelected value](../playground/?knob-title=Geo%20Distance%20Slider&knob-filterLabel=GeoDistance%20filter&knob-defaultSelected=%7B"label"%3A"Less%20than%20100%20miles"%2C"location"%3A"London"%7D&knob-rangeLabels=%7B"start"%3A"Start"%2C"end"%3A"End"%7D&knob-range=%7B"start"%3A0%2C"end"%3A50%7D&knob-URLParams%20%28not%20visible%20on%20storybook%29=true&knob-showFilter=true&knob-stepValue=1&knob-autoLocation=true&knob-unit=mi&knob-placeholder=Search%20Location&selectedKind=map%2FGeoDistanceDropdown&selectedStory=With%20Default%20Selected&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+
+4. [Playground (with all knob actions)](../playground/?knob-title=Geo%20Distance%20Slider&knob-URLParams%20%28not%20visible%20in%20storybook%29=true&knob-filterLabel=GeoDistance%20filter&knob-defaultSelected=%7B"label"%3A"Less%20than%20100%20miles"%2C"location"%3A"London"%7D&knob-rangeLabels=%7B"start"%3A"Start"%2C"end"%3A"End"%7D&knob-range=%7B"start"%3A0%2C"end"%3A50%7D&knob-URLParams%20%28not%20visible%20on%20storybook%29=true&knob-showFilter=true&knob-placeholderDropdown=Select%20radius&knob-stepValue=1&knob-autoLocation=true&knob-unit=mi&knob-placeholder=Search%20Location&selectedKind=map%2FGeoDistanceDropdown&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
