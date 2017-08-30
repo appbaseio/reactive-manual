@@ -33,15 +33,17 @@ Example uses:
 ```js
 <ResultList
   componentId="ResultList01"
-  title="Result List"
   appbaseField="ratings"
+  title="Result List"
   stream={true}  
   sortBy="desc"
   from={0}
   size={8}
   pagination={true}
   paginationAt="bottom"
+  pages={5}
   showResultStats={true}
+  placeholder="Select a rating"
   initialLoader="Loading Results.."
   noResults="No Matching Results Found!"
   react={{
@@ -56,15 +58,16 @@ Example uses:
 ```js
 <ResultList
   componentId="ResultList01"
-  title="Result List"
   appbaseField="ratings"
+  title="Result List"
   stream={true}  
   sortBy="desc"
   from={0}
   size={8}
   pagination={false}
-  scrollOnWindow={true}
+  scrollOnTarget={window}
   showResultStats={true}
+  placeholder="Select a rating"
   initialLoader="Loading Results.."
   noResults="No Matching Results Found!"
   react={{
@@ -86,9 +89,13 @@ Example uses:
     whether to stream new result updates in the UI. Defaults to `false`.
 - **pagination** `Boolean` [optional]  
     pagination <> infinite scroll switcher. Defaults to `false`, i.e. an infinite scroll based view. When set to `true`, a pagination based list view with page numbers will appear.
+- **scrollOnTarget** `Object` [optional]  
+    accepts an object to set the infinite loading reference to the passed object, for example setting it to `window` will load new results when the `window` is scrolled.
 - **paginationAt** `String` [optional]  
     Determines the position where to show the pagination, only applicable when **pagination** prop is set to `true`. Accepts one of `top`, `bottom` or `both` as valid values. Defaults to `bottom`.
--  **sortBy** `String` [optional]  
+- **pages** `Number` [optional]  
+    number of pages to show at at time, defaults to 5.
+- **sortBy** `String` [optional]  
     sort the results by either `asc` or `desc` order. It is an alternative to `sortOptions`, both can't be used together.
 - **sortOptions** `Object Array` [optional]  
     an alternative to the `sortBy` prop, `sortOptions` creates a sorting view in the ResultList component's UI. Each array element is an object that takes three keys:
@@ -99,6 +106,8 @@ Example uses:
     starting point from where to fetch the results. Useful in a pagination context. Defaults to 0.
 - **size** `Number` [optional]  
     number of results to show per view. Defaults to 20.
+- **placeholder** `String or HTML` [optional]  
+    display to show the user when there is nothing selected in the sensor components, accepts `String` or `HTML` markup.
 - **initialLoader** `String or HTML` [optional]  
     display to show the user while the data is loading, accepts `String` or `HTML` markup.
 - **noResults** `String or HTML` [optional]  
@@ -132,7 +141,7 @@ Example uses:
 
 ### Syntax
 
-<p data-height="500" data-theme-id="light" data-slug-hash="MmmyYa" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ReactiveSearch ResultList" class="codepen">See <a href="http://codepen.io/sids-aquarius/pen/MmmyYa/">ReactiveSearch ResultList</a> on codepen.</p>
+<p data-height="265" data-theme-id="light" data-slug-hash="YxRgYp" data-default-tab="js" data-user="divyanshu013" data-embed-version="2" data-pen-title="ResultList docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/YxRgYp/">ResultList docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 ### Styles
@@ -190,13 +199,13 @@ All reactivebase components are `rbc` namespaced.
 
 ### Examples
 
-<p data-height="500" data-theme-id="light" data-slug-hash="MmmyYa" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ReactiveSearch ResultList" class="codepen">See <a href="http://codepen.io/sids-aquarius/pen/MmmyYa/">ReactiveSearch ResultList</a> on codepen.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="YxRgYp" data-default-tab="result" data-user="divyanshu013" data-embed-version="2" data-pen-title="ResultList docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/YxRgYp/">ResultList docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 See more stories for ResultList on playground.
 
-1. [ResultList with infinite scroll](../playground/?selectedKind=s%2FResultList&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveSearch)
+1. [ResultList with infinite scroll](../playground/?knob-title=Cars%20result&knob-data=%5B%7B"start"%3A4%2C"end"%3A5%2C"label"%3A"4%20stars%20and%20up"%7D%2C%7B"start"%3A3%2C"end"%3A5%2C"label"%3A"3%20stars%20and%20up"%7D%2C%7B"start"%3A2%2C"end"%3A5%2C"label"%3A"2%20stars%20and%20up"%7D%2C%7B"start"%3A1%2C"end"%3A5%2C"label"%3A">%201%20stars"%7D%5D&knob-paginationAt=bottom&knob-filterLabel=Cities%20filter&knob-defaultSelected%5B0%5D=Auckland&knob-blacklist%5B0%5D=golf&knob-blacklist%5B1%5D=unknown&knob-maxCategories=10&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&knob-showFilter=true&knob-sortBy=count&knob-showResultStats=true&knob-stepValue=1&filterBy=ReactiveSearch&knob-showHistogram=true&knob-pagination=true&knob-maxItems=4&knob-size=5&knob-showCount=true&knob-placeholder=Search%20Cars&knob-showSearch=true&knob-multiSelect=true&selectedKind=search%2FResultList&selectedStory=With%20infinite%20loading&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
-2. [ResultList with pagination](../playground/?selectedKind=s%2FResultList&selectedStory=With+Pagination&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveSearch).
+2. [ResultList with pagination](../playground/?knob-title=Cars%20result&knob-data=%5B%7B"start"%3A4%2C"end"%3A5%2C"label"%3A"4%20stars%20and%20up"%7D%2C%7B"start"%3A3%2C"end"%3A5%2C"label"%3A"3%20stars%20and%20up"%7D%2C%7B"start"%3A2%2C"end"%3A5%2C"label"%3A"2%20stars%20and%20up"%7D%2C%7B"start"%3A1%2C"end"%3A5%2C"label"%3A">%201%20stars"%7D%5D&knob-paginationAt=bottom&knob-filterLabel=Cities%20filter&knob-defaultSelected%5B0%5D=Auckland&knob-blacklist%5B0%5D=golf&knob-blacklist%5B1%5D=unknown&knob-maxCategories=10&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&knob-showFilter=true&knob-sortBy=count&knob-showResultStats=true&knob-stepValue=1&filterBy=ReactiveSearch&knob-showHistogram=true&knob-pagination=true&knob-maxItems=4&knob-size=5&knob-showCount=true&knob-placeholder=Search%20Cars&knob-showSearch=true&knob-multiSelect=true&selectedKind=search%2FResultList&selectedStory=With%20pagination&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs).
 
 {% endraw %}
