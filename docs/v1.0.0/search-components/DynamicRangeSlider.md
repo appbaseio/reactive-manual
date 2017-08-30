@@ -70,7 +70,7 @@ While `DynamicRangeSlider` only requires the above props to be used, it comes wi
 - **initialLoader** `String or HTML` [optional]  
     display text while the data is being fetched, accepts `String` or `HTML` markup.
 - **URLParams** `Boolean` [optional]  
-    enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
+    enable creating a URL query string parameter based on the selected range of the slider. This is useful for sharing URLs with the component state. Defaults to `false`.
 
 ### Syntax
 

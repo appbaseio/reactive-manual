@@ -79,7 +79,7 @@ Example uses:
 - **filterLabel** `String` [optional]  
     An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
 - **URLParams** `Boolean` [optional]  
-    enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
+    enable creating a URL query string parameter based on the current value of the search. This is useful for sharing URLs with the component state. Defaults to `false`.
 
 ### Syntax
 
