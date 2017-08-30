@@ -45,6 +45,7 @@ While `DynamicRangeSlider` only requires the above props to be used, it comes wi
   showHistogram={true}
   interval={2}
   initialLoader="Rendering the histogram.."
+  URLParams={true}
 />
 ```
 
@@ -68,10 +69,12 @@ While `DynamicRangeSlider` only requires the above props to be used, it comes wi
     set the histogram bar interval, applicable when *showHistogram* is `true`. Defaults to `(range.end - range.start) / 10`.
 - **initialLoader** `String or HTML` [optional]  
     display text while the data is being fetched, accepts `String` or `HTML` markup.
+- **URLParams** `Boolean` [optional]  
+    enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
 
 ### Syntax
 
-<p data-height="500" data-theme-id="light" data-slug-hash="PmGmOW" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ReactiveSearch RangeSlider" class="codepen">See <a href="http://codepen.io/sids-aquarius/pen/PmGmOW/">ReactiveSearch DynamicRangeSlider</a> on codepen.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="jLQXdW" data-default-tab="js" data-user="divyanshu013" data-embed-version="2" data-pen-title="DynamicRangeSlider docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/jLQXdW/">DynamicRangeSlider docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 ### Styles
@@ -83,9 +86,9 @@ All reactivebase components are `rbc` namespaced.
 ### Extending
 
 `DynamicRangeSlider` component can be extended to
-1. customize the look and feel with `componentStyle`,
-2. update the underlying DB query with `customQuery`,
-3. connect with external interfaces using `onValueChange`,
+1. customize the look and feel with `componentStyle`.
+2. update the underlying DB query with `customQuery`.
+3. connect with external interfaces using `beforeValueChange` and `onValueChange`.
 4. filter data using a combined query context via the `react` prop.
 
 ```
@@ -110,6 +113,17 @@ All reactivebase components are `rbc` namespaced.
       // use the value with other js code
     }
   }
+  beforeValueChange={
+    function(value) {
+      // called before the value is set
+      // returns a promise
+      return new Promise((resolve, reject) => {
+        // update state or component props
+        resolve()
+        // or reject()
+      })
+    }
+  }
   react={{
     "and": ["ListSensor"]
   }}
@@ -121,8 +135,10 @@ All reactivebase components are `rbc` namespaced.
 - **customQuery** `Function`  
     takes **value** as a parameter and **returns** the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.
     `Note:` customQuery is called on value changes in the **DynamicRangeSlider** component as long as the component is a part of `react` dependency of at least one other component.
+- **beforeValueChange** `Function`  
+    is a callback function which accepts component's future **value** as a parameter and **returns** a promise. It is called everytime before a component's value changes. The promise, if and when resolved, triggers the execution of the component's query and if rejected, kills the query execution. This method can act as a gatekeeper for query execution, since it only executes the query after the provided promise has been resolved.
 - **onValueChange** `Function`  
-    is called every time the component's **value** changes and is passed in as a parameter to the function. This can be used for updating other UI components when **DynamicRangeSlider's** value changes.
+    is a callback function which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when a user selects a particular range in a DynamicRangeSlider.
 - **react** `Object`  
     specify dependent components to reactively update **DynamicRangeSlider's** data view.
     - **key** `String`  
@@ -137,17 +153,17 @@ All reactivebase components are `rbc` namespaced.
 
 ### Examples
 
-<p data-height="500" data-theme-id="light" data-slug-hash="PmGmOW" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ReactiveSearch RangeSlider" class="codepen">See <a href="http://codepen.io/sids-aquarius/pen/PmGmOW/">ReactiveSearch DynamicRangeSlider</a> on codepen.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="jLQXdW" data-default-tab="result" data-user="divyanshu013" data-embed-version="2" data-pen-title="DynamicRangeSlider docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/jLQXdW/">DynamicRangeSlider docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 See more stories for DynamicRangeSlider on playground.
 
-1. [DynamicRangeSlider with default props](../playground/?filterBy=ReactiveSearch&selectedKind=s%2FDynamicRangeSlider&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs)
+1. [DynamicRangeSlider with default props](../playground/?knob-title=Guests&knob-data=%5B%7B"label"%3A"Volkswagen"%2C"value"%3A"volkswagen"%7D%2C%7B"label"%3A"BMW"%2C"value"%3A"bmw"%7D%5D&knob-filterLabel=Cars&knob-defaultSelected%5B0%5D=bmw&knob-defaultSelected%5B1%5D=x%20series&knob-blacklist%5B0%5D=golf&knob-blacklist%5B1%5D=unknown&knob-maxCategories=10&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&knob-showFilter=true&knob-sortBy=count&filterBy=ReactiveSearch&knob-maxItems=4&knob-size=100&knob-showCount=true&knob-placeholder=Search%20Cars&knob-showSearch=true&selectedKind=search%2FDynamicRangeSlider&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
-2. [DynamicRangeSlider without histogram](../playground/?filterBy=ReactiveSearch&knob-showHistogram=false&selectedKind=s%2FDynamicRangeSlider&selectedStory=Without+histogram&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs)
+2. [DynamicRangeSlider without histogram](../playground/?knob-title=Guests&knob-data=%5B%7B"label"%3A"Volkswagen"%2C"value"%3A"volkswagen"%7D%2C%7B"label"%3A"BMW"%2C"value"%3A"bmw"%7D%5D&knob-filterLabel=Cars&knob-defaultSelected%5B0%5D=bmw&knob-defaultSelected%5B1%5D=x%20series&knob-blacklist%5B0%5D=golf&knob-blacklist%5B1%5D=unknown&knob-maxCategories=10&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&knob-showFilter=true&knob-sortBy=count&filterBy=ReactiveSearch&knob-showHistogram=false&knob-maxItems=4&knob-size=100&knob-showCount=true&knob-placeholder=Search%20Cars&knob-showSearch=true&selectedKind=search%2FDynamicRangeSlider&selectedStory=Without%20histogram&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
-3. [With Range Labels](../playground/?filterBy=ReactiveSearch&selectedKind=s%2FDynamicRangeSlider&selectedStory=With+RangeLabels&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs)
+3. [With Range Labels](../playground/?knob-title=Guests&knob-data=%5B%7B"label"%3A"Volkswagen"%2C"value"%3A"volkswagen"%7D%2C%7B"label"%3A"BMW"%2C"value"%3A"bmw"%7D%5D&knob-filterLabel=Cars&knob-defaultSelected%5B0%5D=bmw&knob-defaultSelected%5B1%5D=x%20series&knob-blacklist%5B0%5D=golf&knob-blacklist%5B1%5D=unknown&knob-maxCategories=10&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&knob-showFilter=true&knob-sortBy=count&filterBy=ReactiveSearch&knob-showHistogram=false&knob-maxItems=4&knob-size=100&knob-showCount=true&knob-placeholder=Search%20Cars&knob-showSearch=true&selectedKind=search%2FDynamicRangeSlider&selectedStory=With%20RangeLabels&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
-4. [With defaultSelected](../playground/?filterBy=ReactiveSearch&selectedKind=s%2FDynamicRangeSlider&selectedStory=With+defaultSelected&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs)
+4. [With defaultSelected](../playground/?knob-title=DynamicRangeSlider%3A%20Guest%20RSVPs&knob-data=%5B%7B"label"%3A"Volkswagen"%2C"value"%3A"volkswagen"%7D%2C%7B"label"%3A"BMW"%2C"value"%3A"bmw"%7D%5D&knob-filterLabel=Cars&knob-defaultSelected%5B0%5D=bmw&knob-defaultSelected%5B1%5D=x%20series&knob-blacklist%5B0%5D=golf&knob-blacklist%5B1%5D=unknown&knob-maxCategories=10&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&knob-showFilter=true&knob-sortBy=count&knob-stepValue=1&filterBy=ReactiveSearch&knob-showHistogram=true&knob-maxItems=4&knob-size=100&knob-showCount=true&knob-placeholder=Search%20Cars&knob-showSearch=true&selectedKind=search%2FDynamicRangeSlider&selectedStory=With%20defaultSelected&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
-4. [Playground (with all knob actions)](../playground/?filterBy=ReactiveSearch&knob-showHistogram=true&knob-title=DynamicRangeSlider%3A+Guest+RSVPs&knob-stepValue=1&selectedKind=s%2FDynamicRangeSlider&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs)
+4. [Playground (with all knob actions)](../playground/?knob-title=DynamicRangeSlider%3A%20Guest%20RSVPs&knob-data=%5B%7B"label"%3A"Volkswagen"%2C"value"%3A"volkswagen"%7D%2C%7B"label"%3A"BMW"%2C"value"%3A"bmw"%7D%5D&knob-filterLabel=Cars&knob-defaultSelected%5B0%5D=bmw&knob-defaultSelected%5B1%5D=x%20series&knob-blacklist%5B0%5D=golf&knob-blacklist%5B1%5D=unknown&knob-maxCategories=10&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&knob-showFilter=true&knob-sortBy=count&knob-stepValue=1&filterBy=ReactiveSearch&knob-showHistogram=true&knob-maxItems=4&knob-size=100&knob-showCount=true&knob-placeholder=Search%20Cars&knob-showSearch=true&selectedKind=search%2FDynamicRangeSlider&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
