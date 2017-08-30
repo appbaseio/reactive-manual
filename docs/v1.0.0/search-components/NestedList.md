@@ -32,8 +32,11 @@ Example uses:
   defaultSelected=["ford", "galaxy"]
   showCount={true}
   showSearch={false}
-  searchPlaceholder="Search"
+  placeholder="Search"
   initialLoader="Fetching cars.."
+  showFilter={true}
+  filterLabel="Cars filter"
+  URLParams={false}
 />
 ```
 
@@ -50,15 +53,21 @@ Example uses:
 - **sortBy** `String` [optional]  
     sort the list items by one of `count`, `asc`, or `desc`. Defaults to `count`, which sorts the list by the frequency of count     value, most first.
 - **defaultSelected** `Array` [optional]  
-    pre-select a nested list item. Accepts an `Array` object containing the hierarchy of items to be selected. It is important that the passed value(s) exactly match the field value(s) as stored in the DB.
+    pre-select nested list item(s). Accepts an `Array` object containing the hierarchy of items to be selected. It is important that the passed value(s) exactly match the field value(s) as stored in the DB.
 - **showCount** `Boolean` [optional]  
     show a count of the number of occurences besides each list item. Defaults to `true`.
 - **showSearch** `Boolean` [optional]  
     whether to show a searchbox to filter the list items locally. Defaults to true.
-- **searchPlaceholder** `String` [optional]  
+- **placeholder** `String` [optional]  
     placeholder to be displayed in the searchbox, only applicable when the `showSearch` prop is set to `true`. When applicable, the default placeholder value is set to "Search".
 - **initialLoader** `String or HTML` [optional]  
     display text while the data is being fetched, accepts `String` or `HTML` markup.
+- **showFilter** `Boolean` [optional]  
+    show as filter when a value is selected in a global selected filters view. Defaults to `true`.
+- **filterLabel** `String` [optional]  
+    An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
+- **URLParams** `Boolean` [optional]  
+    enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
 
 **Note:** A NestedList component's props are exactly like a SingleList component except for the `appbaseField` prop which takes an Array to denote the level of nesting.
 
@@ -78,7 +87,7 @@ All reactivebase components are `rbc` namespaced.
 `NestedList` component can be extended to
 1. customize the look and feel with `componentStyle`,
 2. update the underlying DB query with `customQuery`,
-3. connect with external interfaces using `onValueChange`,
+3. connect with external interfaces using `beforeValueChange` and `onValueChange`.
 4. filter data using a combined query context via the `react` prop.
 
 ```
@@ -94,6 +103,17 @@ All reactivebase components are `rbc` namespaced.
           }
         }
       }
+    }
+  }
+  beforeValueChange={
+    function(value) {
+      // called before the value is set
+      // returns a promise
+      return new Promise((resolve, reject) => {
+        // update state or component props
+        resolve()
+        // or reject()
+      })
     }
   }
   onValueChange={
@@ -114,8 +134,10 @@ All reactivebase components are `rbc` namespaced.
 - **customQuery** `Function`  
     takes **value** as a parameter and **returns** the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.
     `Note:` customQuery is called on value changes in the **NestedList** component as long as the component is a part of `react` dependency of at least one other component.
+- **beforeValueChange** `Function`  
+    is a callback function which accepts component's future **value** as a parameter and **returns** a promise. It is called everytime before a component's value changes. The promise, if and when resolved, triggers the execution of the component's query and if rejected, kills the query execution. This method can act as a gatekeeper for query execution, since it only executes the query after the provided promise has been resolved.
 - **onValueChange** `Function`  
-    is called every time the component's **value** changes and is passed in as a parameter to the function. This can be used for updating other UI components when **NestedList's** value changes.
+    is a callback function which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when a user selects a product in a NestedList.
 - **react** `Object`  
     specify dependent components to reactively update **NestedList's** data view.
     - **key** `String`  
@@ -133,10 +155,10 @@ All reactivebase components are `rbc` namespaced.
 <p data-height="500" data-theme-id="light" data-slug-hash="EmmKVZ" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ReactiveSearch NestedList" class="codepen">See <a href="http://codepen.io/sids-aquarius/pen/EmmKVZ/">ReactiveSearch NestedList</a> on codepen.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-1. [NestedList with all the default props](../playground/?selectedKind=s%2FNestedList&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveSearch),
+1. [NestedList with all the default props](../playground/?filterBy=ReactiveSearch&selectedKind=search%2FNestedList&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
-2. [NestedList with title](../playground/?knob-title=Car+Category&selectedKind=s%2FNestedList&selectedStory=With+Title&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveSearch),
+2. [NestedList with title](../playground/?filterBy=ReactiveSearch&knob-title=Car%20Category&selectedKind=search%2FNestedList&selectedStory=With%20Title&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
-3. [NestedList with default selection](../playground/?knob-title=Car+Category&knob-defaultSelected%5B0%5D=bmw&knob-defaultSelected%5B1%5D=x+series&selectedKind=s%2FNestedList&selectedStory=Default+selection&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveSearch),
+3. [NestedList with default selection](../playground/?filterBy=ReactiveSearch&knob-title=Car%20Category&knob-defaultSelected%5B0%5D=bmw&knob-defaultSelected%5B1%5D=x%20series&selectedKind=search%2FNestedList&selectedStory=Default%20selection&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
-4. [Playground (with all knob actions)](../playground/?knob-title=NestedList%3A+Car+Filter&knob-defaultSelected%5B0%5D=bmw&knob-defaultSelected%5B1%5D=x+series&knob-size=100&knob-sortBy=count&knob-showCount=true&knob-showSearch=true&knob-placeholder=Search+Cars&selectedKind=s%2FNestedList&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=kadirahq%2Fstorybook-addon-knobs&filterBy=ReactiveSearch).
+4. [Playground (with all knob actions)](../playground/?knob-title=NestedList%3A%20Car%20Filter&knob-filterLabel=Cars&knob-defaultSelected%5B0%5D=bmw&knob-defaultSelected%5B1%5D=x%20series&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&knob-showFilter=true&knob-sortBy=count&filterBy=ReactiveSearch&knob-size=100&knob-showCount=true&knob-placeholder=Search%20Cars&knob-showSearch=true&selectedKind=search%2FNestedList&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
