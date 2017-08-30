@@ -73,7 +73,7 @@ Example uses:
 
 ### Syntax
 
-<p data-height="500" data-theme-id="light" data-slug-hash="EmmKVZ" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ReactiveSearch NestedList" class="codepen">See <a href="http://codepen.io/sids-aquarius/pen/EmmKVZ/">ReactiveSearch NestedList</a> on codepen.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="brQOry" data-default-tab="js" data-user="divyanshu013" data-embed-version="2" data-pen-title="NestedList docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/brQOry/">NestedList docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 ### Styles
@@ -152,7 +152,7 @@ All reactivebase components are `rbc` namespaced.
 
 ### Examples
 
-<p data-height="500" data-theme-id="light" data-slug-hash="EmmKVZ" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ReactiveSearch NestedList" class="codepen">See <a href="http://codepen.io/sids-aquarius/pen/EmmKVZ/">ReactiveSearch NestedList</a> on codepen.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="brQOry" data-default-tab="result" data-user="divyanshu013" data-embed-version="2" data-pen-title="NestedList docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/brQOry/">NestedList docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 1. [NestedList with all the default props](../playground/?filterBy=ReactiveSearch&selectedKind=search%2FNestedList&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
