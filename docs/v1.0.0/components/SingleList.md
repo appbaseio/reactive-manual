@@ -38,6 +38,9 @@ Example uses:
   showSearch={true}
   placeholder="Search City"
   initialLoader="Loading cities list.."
+  react={{
+    and: ["CategoryFilter", "SearchFilter"]
+  }}
   showFilter={true}
   filterLabel="City"
   URLParams={false}
@@ -70,6 +73,8 @@ Example uses:
     placeholder to be displayed in the searchbox, only applicable when the `showSearch` prop is set to true. When applicable, the default placeholder value is set to "Search".
 - **initialLoader** `String or HTML` [optional]  
     display text while the data is being fetched, accepts `String` or `HTML` markup.
+- **react** `Object`  
+    a dependency object defining how this component should react based on the state changes in the specified components. You can read more about how to specify this prop over [here](v1.0.0/advanced/React.html).
 - **showFilter** `Boolean` [optional]  
     show as filter when a value is selected in a global selected filters view. Defaults to `true`.
 - **filterLabel** `String` [optional]  
@@ -95,6 +100,7 @@ All reactivebase components are `rbc` namespaced.
 1. customize the look and feel with `componentStyle`,
 2. update the underlying DB query with `customQuery`,
 3. connect with external interfaces using `beforeValueChange` and `onValueChange`.
+4. specify how options should be filtered or updated using `react` prop.
 
 ```
 <SingleList
@@ -129,7 +135,11 @@ All reactivebase components are `rbc` namespaced.
       // use the value with other js code
     }
   }
-
+  // specify how and which options are filtered using `react` prop.
+  react={
+    "and": ["pricingFilter", "dateFilter"],
+    "or": ["searchFilter"]
+  }
 />
 ```
 
@@ -142,6 +152,17 @@ All reactivebase components are `rbc` namespaced.
     is a callback function which accepts component's future **value** as a parameter and **returns** a promise. It is called everytime before a component's value changes. The promise, if and when resolved, triggers the execution of the component's query and if rejected, kills the query execution. This method can act as a gatekeeper for query execution, since it only executes the query after the provided promise has been resolved.
 - **onValueChange** `Function`  
     is a callback function which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when a list item is selected in a "Discounted Price" SingleList.
+- **react** `Object`  
+    specify dependent components to reactively update **SingleList's** options.
+    - **key** `String`  
+        one of `and`, `or`, `not` defines the combining clause.
+        - **and** clause implies that the results will be filtered by matches from **all** of the associated component states.
+        - **or** clause implies that the results will be filtered by matches from **at least one** of the associated component states.
+        - **not** clause implies that the results will be filtered by an **inverse** match of the associated component states.
+    - **value** `String or Array or Object`  
+        - `String` is used for specifying a single component by its `componentId`.
+        - `Array` is used for specifying multiple components by their `componentId`.
+        - `Object` is used for nesting other key clauses.
 
 ### Examples
 
