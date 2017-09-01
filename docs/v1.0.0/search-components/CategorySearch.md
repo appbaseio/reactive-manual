@@ -38,6 +38,9 @@ Example uses:
   highlightFields="group_city"
   queryFormat="or"
   fuzziness={0}
+  react={{
+    and: ["CategoryFilter", "SearchFilter"]
+  }}
   showFilter={true}
   filterLabel="Venue filter"
   URLParams={false}
@@ -74,6 +77,8 @@ Example uses:
     * On the other hand with **and**, only results matching both "bat" and "man" will be returned. It returns the results matching **all** of the search query text's parameters.
 - **fuzziness** `String or Number` [optional]
     Sets a maximum edit distance on the search parameters, can be **0**, **1**, **2** or **"AUTO"**. Useful for showing the correct results for an incorrect search parameter by taking the fuzziness into account. For example, with a substitution of one character, **fox** can become **box**. Read more about it in the elastic search [docs](https://www.elastic.co/guide/en/elasticsearch/guide/current/fuzziness.html).
+- **react** `Object`  
+    a dependency object defining how this component should react based on the state changes in the specified components. You can read more about how to specify this prop over [here](v1.0.0/advanced/React.html).
 - **showFilter** `Boolean` [optional]  
     show as filter when a value is selected in a global selected filters view. Defaults to `true`.
 - **filterLabel** `String` [optional]  
@@ -98,6 +103,7 @@ All reactivebase components are `rbc` namespaced.
 1. customize the look and feel with `componentStyle`,
 2. update the underlying DB query with `customQuery`,
 3. connect with external interfaces using `beforeValueChange` and `onValueChange`.
+4. specify how search suggestions should be filtered using `react` prop.
 
 ```
 <CategorySearch
@@ -132,6 +138,11 @@ All reactivebase components are `rbc` namespaced.
       // use the value with other js code
     }
   }
+  // specify how and which suggestions are filtered using `react` prop.
+  react={
+    "and": ["pricingFilter", "dateFilter"],
+    "or": ["searchFilter"]
+  }
 />
 ```
 
@@ -144,6 +155,17 @@ All reactivebase components are `rbc` namespaced.
     is a callback function which accepts component's future **value** as a parameter and **returns** a promise. It is called everytime before a component's value changes. The promise, if and when resolved, triggers the execution of the component's query and if rejected, kills the query execution. This method can act as a gatekeeper for query execution, since it only executes the query after the provided promise has been resolved.
 - **onValueChange** `Function`  
     is a callback function which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when a user searches for a product in a CategorySearch.
+- **react** `Object`  
+    specify dependent components to reactively update **CategorySearch's** suggestions.
+    - **key** `String`  
+        one of `and`, `or`, `not` defines the combining clause.
+        - **and** clause implies that the results will be filtered by matches from **all** of the associated component states.
+        - **or** clause implies that the results will be filtered by matches from **at least one** of the associated component states.
+        - **not** clause implies that the results will be filtered by an **inverse** match of the associated component states.
+    - **value** `String or Array or Object`  
+        - `String` is used for specifying a single component by its `componentId`.
+        - `Array` is used for specifying multiple components by their `componentId`.
+        - `Object` is used for nesting other key clauses.
 
 ### Examples
 

@@ -34,6 +34,9 @@ Example uses:
   showSearch={false}
   placeholder="Search"
   initialLoader="Fetching cars.."
+  react={{
+    and: ["CategoryFilter", "SearchFilter"]
+  }}
   showFilter={true}
   filterLabel="Cars filter"
   URLParams={false}
@@ -62,6 +65,8 @@ Example uses:
     placeholder to be displayed in the searchbox, only applicable when the `showSearch` prop is set to `true`. When applicable, the default placeholder value is set to "Search".
 - **initialLoader** `String or HTML` [optional]  
     display text while the data is being fetched, accepts `String` or `HTML` markup.
+- **react** `Object`  
+    a dependency object defining how this component should react based on the state changes in the specified components. You can read more about how to specify this prop over [here](v1.0.0/advanced/React.html).
 - **showFilter** `Boolean` [optional]  
     show as filter when a value is selected in a global selected filters view. Defaults to `true`.
 - **filterLabel** `String` [optional]  

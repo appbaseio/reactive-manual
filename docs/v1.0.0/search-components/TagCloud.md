@@ -33,6 +33,9 @@ Example uses:
   multiSelect={true}
   defaultSelected={["Auckland", "Atlanta"]}
   initialLoader="Fetching cities.."
+  react={{
+    and: ["CategoryFilter", "SearchFilter"]
+  }}
   showFilter={true}
   filterLabel="Cities"
   URLParams={false}
@@ -57,6 +60,8 @@ Example uses:
     pre-select tag(s) from the tag cloud. An Array is accepted when *multiSelect* mode is enabled.
 - **initialLoader** `String or HTML` [optional]  
     text or layout to be displayed while the data is being fetched, accepts `String` or `HTML` markup.
+- **react** `Object`  
+    a dependency object defining how this component should react based on the state changes in the specified components. You can read more about how to specify this prop over [here](v1.0.0/advanced/React.html).
 - **showFilter** `Boolean` [optional]  
     show as filter when a value is selected in a global selected filters view. Defaults to `true`.
 - **filterLabel** `String` [optional]  
@@ -81,6 +86,7 @@ All reactivebase components are `rbc` namespaced.
 1. customize the look and feel with `componentStyle`,
 2. update the underlying DB query with `customQuery`,
 3. connect with external interfaces using `beforeValueChange` and `onValueChange`.
+4. filter data using a combined query context via the `react` prop.
 
 ```
 <TagCloud
@@ -115,6 +121,9 @@ All reactivebase components are `rbc` namespaced.
       // use the value with other js code
     }
   }
+  react={{
+    "and": ["PriceFilter"]
+  }}
 />
 ```
 
@@ -127,6 +136,17 @@ All reactivebase components are `rbc` namespaced.
     is a callback function which accepts component's future **value** as a parameter and **returns** a promise. It is called everytime before a component's value changes. The promise, if and when resolved, triggers the execution of the component's query and if rejected, kills the query execution. This method can act as a gatekeeper for query execution, since it only executes the query after the provided promise has been resolved.
 - **onValueChange** `Function`  
     is a callback function which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when a user picks a category in a TagCloud.
+- **react** `Object`  
+    specify dependent components to reactively update **TagCloud's** data view.
+    - **key** `String`  
+        one of `and`, `or`, `not` defines the combining clause.
+        - **and** clause implies that the results will be filtered by matches from **all** of the associated component states.
+        - **or** clause implies that the results will be filtered by matches from **at least one** of the associated component states.
+        - **not** clause implies that the results will be filtered by an **inverse** match of the associated component states.
+    - **value** `String or Array or Object`  
+        - `String` is used for specifying a single component by its `componentId`.
+        - `Array` is used for specifying multiple components by their `componentId`.
+        - `Object` is used for nesting other key clauses.
 
 ### Examples
 

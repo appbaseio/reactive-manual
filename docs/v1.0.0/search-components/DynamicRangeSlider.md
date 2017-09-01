@@ -45,6 +45,9 @@ While `DynamicRangeSlider` only requires the above props to be used, it comes wi
   showHistogram={true}
   interval={2}
   initialLoader="Rendering the histogram.."
+  react={{
+    and: ["CategoryFilter", "SearchFilter"]
+  }}
   URLParams={true}
 />
 ```
@@ -69,6 +72,8 @@ While `DynamicRangeSlider` only requires the above props to be used, it comes wi
     set the histogram bar interval, applicable when *showHistogram* is `true`. Defaults to `(range.end - range.start) / 10`.
 - **initialLoader** `String or HTML` [optional]  
     display text while the data is being fetched, accepts `String` or `HTML` markup.
+- **react** `Object`  
+    a dependency object defining how this component should react based on the state changes in the specified components. You can read more about how to specify this prop over [here](v1.0.0/advanced/React.html).
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected range of the slider. This is useful for sharing URLs with the component state. Defaults to `false`.
 
