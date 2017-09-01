@@ -1,20 +1,21 @@
 {"bigh3": true}
 
-## NestedList
+## NestedMultiList
 
 ![Image to be displayed](https://i.imgur.com/f5aO5HP.png)
 
-`NestedList` creates a nested list UI component. It is used for filtering items by a hierarchy of categories.
+`NestedMultiList` creates a nested multiple selection list UI component. It is used for filtering items by a hierarchy of categories.
 
 Example uses:
 * show a two-level or three-level category list for an e-commerce search experience.
+* building an e-learning system with multiple courses based selections.
 
 ### Usage
 
 #### Basic Usage
 
 ```js
-<NestedList
+<NestedMultiList
   componentId="CarCategorySensor"
   appbaseField={["brand.raw", "model.raw"]}
 />
@@ -22,7 +23,7 @@ Example uses:
 
 #### Usage With All Props
 ```js
-<NestedList
+<NestedMultiList
   componentId="CarCategorySensor"
   appbaseField={["brand.raw", "model.raw"]}
   title="List of Brand > Model"
@@ -56,7 +57,6 @@ Example uses:
     sort the list items by one of `count`, `asc`, or `desc`. Defaults to `count`, which sorts the list by the frequency of count     value, most first.
 - **defaultSelected** `Array` [optional]  
     pre-select nested list item(s). Accepts an `Array` object containing the hierarchy of items to be selected. It is important that the passed value(s) exactly match the field value(s) as stored in the DB.
-    Example:
 - **showCount** `Boolean` [optional]  
     show a count of the number of occurrences besides each list item. Defaults to `true`.
 - **showSearch** `Boolean` [optional]  
@@ -72,12 +72,11 @@ Example uses:
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
 
-**Note:** A NestedList component's props are exactly like a SingleList component except for the `appbaseField` prop which takes an Array to denote the level of nesting.
+**Note:** A NestedMultiList component's props are exactly like a [NestedList component](/v1.0.0/search-components/NestedList.html) except for the `defaultSelected` prop which can take an Array with multiple selections like `{["Car", ["ford", "galaxy"]]}`.
 
 ### Syntax
 
-<p data-height="500" data-theme-id="light" data-slug-hash="brQOry" data-default-tab="js" data-user="divyanshu013" data-embed-version="2" data-pen-title="NestedList docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/brQOry/">NestedList docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+TBD: Add codepen.
 
 ### Styles
 
@@ -87,14 +86,14 @@ All reactivebase components are `rbc` namespaced.
 
 ### Extending
 
-`NestedList` component can be extended to
+`NestedMultiList` component can be extended to
 1. customize the look and feel with `componentStyle`,
 2. update the underlying DB query with `customQuery`,
 3. connect with external interfaces using `beforeValueChange` and `onValueChange`.
 4. filter data using a combined query context via the `react` prop.
 
 ```
-<NestedList
+<NestedMultiList
   ...
   componentStyle={{"paddingBottom": "10px"}}
   customQuery={
@@ -133,16 +132,16 @@ All reactivebase components are `rbc` namespaced.
 ```
 
 - **componentStyle** `Object`  
-    CSS styles to be applied to the **NestedList** component.
+    CSS styles to be applied to the **NestedMultiList** component.
 - **customQuery** `Function`  
     takes **value** as a parameter and **returns** the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.
-    `Note:` customQuery is called on value changes in the **NestedList** component as long as the component is a part of `react` dependency of at least one other component.
+    `Note:` customQuery is called on value changes in the **NestedMultiList** component as long as the component is a part of `react` dependency of at least one other component.
 - **beforeValueChange** `Function`  
-    is a callback function which accepts component's future **value** as a parameter and **returns** a promise. It is called everytime before a component's value changes. The promise, if and when resolved, triggers the execution of the component's query and if rejected, kills the query execution. This method can act as a gatekeeper for query execution, since it only executes the query after the provided promise has been resolved.
+    is a callback function which accepts component's future **value** as a parameter and **returns** a promise. It is called every time before a component's value changes. The promise, if and when resolved, triggers the execution of the component's query and if rejected, kills the query execution. This method can act as a gatekeeper for query execution, since it only executes the query after the provided promise has been resolved.
 - **onValueChange** `Function`  
-    is a callback function which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when a user selects a product in a NestedList.
+    is a callback function which accepts component's current **value** as a parameter. It is called every time the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when a user selects a product in a NestedMultiList.
 - **react** `Object`  
-    specify dependent components to reactively update **NestedList's** data view.
+    specify dependent components to reactively update **NestedMultiList's** data view.
     - **key** `String`  
         one of `and`, `or`, `not` defines the combining clause.
         - **and** clause implies that the results will be filtered by matches from **all** of the associated component states.
@@ -155,13 +154,12 @@ All reactivebase components are `rbc` namespaced.
 
 ### Examples
 
-<p data-height="500" data-theme-id="light" data-slug-hash="brQOry" data-default-tab="result" data-user="divyanshu013" data-embed-version="2" data-pen-title="NestedList docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/brQOry/">NestedList docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+TBD: Add codepen.
 
-1. [NestedList with all the default props](../playground/?filterBy=ReactiveSearch&selectedKind=search%2FNestedList&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+1. NestedMultiList with all the default props
 
-2. [NestedList with title](../playground/?filterBy=ReactiveSearch&knob-title=Car%20Category&selectedKind=search%2FNestedList&selectedStory=With%20Title&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+2. NestedMultiList with title
 
-3. [NestedList with default selection](../playground/?filterBy=ReactiveSearch&knob-title=Car%20Category&knob-defaultSelected%5B0%5D=bmw&knob-defaultSelected%5B1%5D=x%20series&selectedKind=search%2FNestedList&selectedStory=Default%20selection&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+3. NestedMultiList with default selection
 
-4. [Playground (with all knob actions)](../playground/?knob-title=NestedList%3A%20Car%20Filter&knob-filterLabel=Cars&knob-defaultSelected%5B0%5D=bmw&knob-defaultSelected%5B1%5D=x%20series&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&knob-showFilter=true&knob-sortBy=count&filterBy=ReactiveSearch&knob-size=100&knob-showCount=true&knob-placeholder=Search%20Cars&knob-showSearch=true&selectedKind=search%2FNestedList&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+4. Playground (with all knob actions)
