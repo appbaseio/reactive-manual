@@ -1,6 +1,6 @@
 {"bigh3": true}
 
-## NestedMultiList
+# NestedMultiList
 
 ![Image to be displayed](https://i.imgur.com/f5aO5HP.png)
 
@@ -10,9 +10,9 @@ Example uses:
 * show a two-level or three-level category list for an e-commerce search experience.
 * building an e-learning system with multiple courses based selections.
 
-### Usage
+## Usage
 
-#### Basic Usage
+### Basic Usage
 
 ```js
 <NestedMultiList
@@ -21,7 +21,8 @@ Example uses:
 />
 ```
 
-#### Usage With All Props
+### Usage With All Props
+
 ```js
 <NestedMultiList
   componentId="CarCategorySensor"
@@ -43,7 +44,7 @@ Example uses:
 />
 ```
 
-### Props
+## Props
 
 - **componentId** `String`  
     unique identifier of the component, can be referenced in other components' `react` prop.
@@ -74,17 +75,18 @@ Example uses:
 
 **Note:** A NestedMultiList component's props are exactly like a [NestedList component](/v1.0.0/search-components/NestedList.html) except for the `defaultSelected` prop which can take an Array with multiple selections like `{["Car", ["ford", "galaxy"]]}`.
 
-### Syntax
+## Syntax
 
-TBD: Add codepen.
+<p data-height="500" data-theme-id="light" data-slug-hash="ayXeyv" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="NestedMultiList docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/ayXeyv/">NestedMultiList docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-### Styles
+## Styles
 
 All reactivebase components are `rbc` namespaced.
 
 ![Annotated image](https://i.imgur.com/vClQmZU.png)
 
-### Extending
+## Extending
 
 `NestedMultiList` component can be extended to
 1. customize the look and feel with `componentStyle`,
@@ -152,9 +154,10 @@ All reactivebase components are `rbc` namespaced.
         - `Array` is used for specifying multiple components by their `componentId`.
         - `Object` is used for nesting other key clauses.
 
-### Examples
+## Examples
 
-TBD: Add codepen.
+<p data-height="500" data-theme-id="light" data-slug-hash="ayXeyv" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="NestedMultiList docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/ayXeyv/">NestedMultiList docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 1. NestedMultiList with all the default props
 
