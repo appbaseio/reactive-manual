@@ -13,9 +13,9 @@ Example uses:
 * Showing personalized feeds based on user's global preferences that are not visible in the current UI view, like in meetup.com's recommendations to users.
 * Extending the existing UI components to perform a user defined database query.
 
-### Usage
+## Usage
 
-#### Basic Usage
+### Basic Usage
 
 ```js
 <DataController
@@ -23,7 +23,7 @@ Example uses:
 />
 ```
 
-#### Usage With All Props
+### Usage With All Props
 
 ```js
 <DataController
@@ -40,7 +40,7 @@ Example uses:
 />
 ```
 
-### Props
+## Props
 
 - **componentId** `String`  
     unique id of the sensor, can be referenced in another component's **react** prop.
@@ -59,18 +59,18 @@ Example uses:
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
 
-### Syntax
+## Syntax
 
-<p data-height="500" data-theme-id="light" data-slug-hash="JyBNpG" data-default-tab="js" data-user="divyanshu013" data-embed-version="2" data-pen-title="DataController docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/JyBNpG/">DataController docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="QMoWqM" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="DataController docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/QMoWqM/">DataController docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-### Styles
+## Styles
 
 All reactivebase components are `rbc` namespaced.
 
 ![Annotated Image](http://i.imgur.com/ow7MEdG.png)
 
-### Extending
+## Extending
 
 `DataController` component can be extended to
 1. customize the look and feel with `componentStyle`,
@@ -123,9 +123,9 @@ All reactivebase components are `rbc` namespaced.
 - **onValueChange** `Function`  
     is a callback function which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when a user searches for a product via a DataController.
 
-### Examples
+## Examples
 
-<p data-height="500" data-theme-id="light" data-slug-hash="JyBNpG" data-default-tab="result" data-user="divyanshu013" data-embed-version="2" data-pen-title="DataController docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/JyBNpG/">DataController docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="QMoWqM" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="DataController docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/QMoWqM/">DataController docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 1. [DataController with all the default props](../playground/?knob-visible=true&selectedKind=map%2FDataController&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)

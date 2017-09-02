@@ -4,31 +4,31 @@
 
 ![Image to be displayed](https://i.imgur.com/KuSUJyX.png)
 
-`MultiList` creates a multiple selection based list UI component that is connected to a database field. It is similar to a [SingleList](/v1.0.0/components/SingleList.html) except it can support multiple item selections.
+`MultiList` creates a multiple selection based list UI component that is connected to a database field. It is similar to a [SingleList](v1.0.0/components/SingleList.html) except it can support multiple item selections.
 
 Example uses:
 
 * select category items from a list of categories in an e-commerce website.
 * selecting airlines to fly by in a flight booking experience.
 
-### Usage
+## Usage
 
-#### Basic Usage
+### Basic Usage
 
 ```js
 <MultiList
   componentId="CitySensor"
-  appbaseField="group_city.raw"
+  dataField="group_city.raw"
   title="Cities"
 />
 ```
 
-#### Usage With All Props
+### Usage With All Props
 
 ```js
 <MultiList
   componentId="CitySensor"
-  appbaseField="group_city.raw"
+  dataField="group_city.raw"
   title="Cities"
   size={100}
   sortBy="asc"
@@ -49,11 +49,11 @@ Example uses:
 />
 ```
 
-### Props
+## Props
 
 - **componentId** `String`  
     unique identifier of the component, can be referenced in other components' `react` prop.
-- **appbaseField** `String`  
+- **dataField** `String`  
     data field to be connected to the component's UI view.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI. Defaults to no title being shown.
@@ -79,8 +79,6 @@ Example uses:
     placeholder to be displayed in the searchbox, only applicable when the `showSearch` prop is set to `true`. When applicable, the default placeholder value is set to "Search".
 - **initialLoader** `String or HTML` [optional]  
     display text while the data is being fetched, accepts `String` or `HTML` markup.
-- **react** `Object`  
-    a dependency object defining how this component should react based on the state changes in the specified components. You can read more about how to specify this prop over [here](v1.0.0/advanced/React.html).
 - **showFilter** `Boolean` [optional]  
     show as filter when a value is selected in a global selected filters view. Defaults to `true`.
 - **filterLabel** `String` [optional]  
@@ -88,18 +86,18 @@ Example uses:
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
 
-### Syntax
+## Syntax
 
-<p data-height="500" data-theme-id="light" data-slug-hash="vJjaWM" data-default-tab="js" data-user="divyanshu013" data-embed-version="2" data-pen-title="MultiList docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/vJjaWM/">MultiList docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="GveKLV" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="MultiList docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/GveKLV/">MultiList docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-### Styles
+## Styles
 
 All reactivebase components are `rbc` namespaced.
 
 ![Annotated image](https://i.imgur.com/qJZgfvI.png)
 
-### Extending
+## Extending
 
 `MultiList` component can be extended to
 
@@ -171,9 +169,9 @@ All reactivebase components are `rbc` namespaced.
         - `Array` is used for specifying multiple components by their `componentId`.
         - `Object` is used for nesting other key clauses.
 
-### Examples
+## Examples
 
-<p data-height="500" data-theme-id="light" data-slug-hash="vJjaWM" data-default-tab="result" data-user="divyanshu013" data-embed-version="2" data-pen-title="MultiList docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/vJjaWM/">MultiList docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="GveKLV" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="MultiList docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/GveKLV/">MultiList docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 1. [List with all the default props](../playground/?knob-title=&selectedKind=map%2FMultiList&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)

@@ -6,30 +6,30 @@
 
 `MultiDropdownList` creates a  dropdown based multiple selection list UI component that is connected to a database field. It is used for filtering results based on the current selection from a list of items.
 
-`Note:` This component is exactly like the [MultiList](/v1.0.0/components/MultiList.html) component except the UI is based on a dropdown, ideal for showing additional UI filters while conserving screen space.
+`Note:` This component is exactly like the [MultiList](v1.0.0/components/MultiList.html) component except the UI is based on a dropdown, ideal for showing additional UI filters while conserving screen space.
 
 Example uses:
 * create an e-commerce facet like search experience.
 * create a filter for airlines to fly by in a flight booking experience.
 
-### Usage
+## Usage
 
-#### Basic Usage
+### Basic Usage
 
 ```js
 <MultiDropdownList
   componentId="CitySensor"
-  appbaseField="group.group_city.raw"
+  dataField="group.group_city.raw"
   title="Cities"
 />
 ```
 
-#### Usage With All Props
+### Usage With All Props
 
 ```js
 <MultiDropdownList
   componentId="CitySensor"
-  appbaseField="group.group_city.raw"
+  dataField="group.group_city.raw"
   title="Cities"
   size={100}
   sortBy="count"
@@ -46,11 +46,11 @@ Example uses:
 />
 ```
 
-### Props
+## Props
 
 - **componentId** `String`  
     unique identifier of the component, can be referenced in other components' `react` prop.
-- **appbaseField** `String`  
+- **dataField** `String`  
     DB data field to be mapped with the component's UI view. The dropdown list items are filtered by a database query on this field.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
@@ -73,8 +73,6 @@ Example uses:
     placeholder to be displayed in the dropdown searchbox.
 - **initialLoader** `String or HTML` [optional]  
     display text while the data is being fetched, accepts `String` or `HTML` markup.
-- **react** `Object`  
-    a dependency object defining how this component should react based on the state changes in the specified components. You can read more about how to specify this prop over [here](v1.0.0/advanced/React.html).
 - **showFilter** `Boolean` [optional]  
     show as filter when a value is selected in a global selected filters view. Defaults to `true`.
 - **filterLabel** `String` [optional]  
@@ -82,18 +80,18 @@ Example uses:
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
 
-### Syntax
+## Syntax
 
-<p data-height="500" data-theme-id="light" data-slug-hash="rzvrqd" data-default-tab="js" data-user="divyanshu013" data-embed-version="2" data-pen-title="MultiDropdownList docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/rzvrqd/">MultiDropdownList docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="NvJKQN" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="MultiDropdownList docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/NvJKQN/">MultiDropdownList docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-### Styles
+## Styles
 
 All reactivebase components are `rbc` namespaced.
 
 ![Annotated image](https://i.imgur.com/TqKvRhF.png)
 
-### Extending
+## Extending
 
 `MultiDropdownList` component can be extended to
 1. customize the look and feel with `componentStyle`,
@@ -163,9 +161,9 @@ All reactivebase components are `rbc` namespaced.
         - `Array` is used for specifying multiple components by their `componentId`.
         - `Object` is used for nesting other key clauses.
 
-### Examples
+## Examples
 
-<p data-height="500" data-theme-id="light" data-slug-hash="rzvrqd" data-default-tab="result" data-user="divyanshu013" data-embed-version="2" data-pen-title="MultiDropdownList docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/rzvrqd/">MultiDropdownList docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="NvJKQN" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="MultiDropdownList docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/NvJKQN/">MultiDropdownList docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 1. [List with all the default props](../playground/?selectedKind=map%2FMultiDropdownList&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)

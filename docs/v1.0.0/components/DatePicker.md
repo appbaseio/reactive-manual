@@ -10,23 +10,23 @@ Example uses:
 * finding flights departing on a particular day.
 * picking your date of birth for an online application form.
 
-### Usage
+## Usage
 
-#### Basic Usage
+### Basic Usage
 
 ```js
 <DatePicker
   componentId="DateSensor"
-  appbaseField="mtime"
+  dataField="mtime"
 />
 ```
 
-#### Usage With All Props
+### Usage With All Props
 
 ```js
 <DatePicker
   componentId="DateSensor"
-  appbaseField="mtime"
+  dataField="mtime"
   title="DatePicker"
   defaultSelected={moment()}
   focused={true}
@@ -43,11 +43,11 @@ Example uses:
 />
 ```
 
-### Props
+## Props
 
 - **componentId** `String`  
     unique identifier of the component, can be referenced in other components' `react` prop.
-- **appbaseField** `String`  
+- **dataField** `String`  
     data field to be connected to the component's UI view.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
@@ -78,18 +78,18 @@ Example uses:
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
 
-### Syntax
+## Syntax
 
-<p data-height="500" data-theme-id="light" data-slug-hash="YxjJJV" data-default-tab="js" data-user="divyanshu013" data-embed-version="2" data-pen-title="DatePicker docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/YxjJJV/">DatePicker docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="VzRwmJ" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="DatePicker docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/VzRwmJ/">DatePicker docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-### Styles
+## Styles
 
 All reactivebase components are `rbc` namespaced.
 
 ![Annotated image](https://i.imgur.com/bSei4w3.png)
 
-### Extending
+## Extending
 
 `DatePicker` component can be extended to
 1. customize the look and feel with `componentStyle`,
@@ -142,9 +142,9 @@ All reactivebase components are `rbc` namespaced.
 - **onValueChange** `Function`  
     is a callback function which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when a particular date is selected in a DatePicker.
 
-### Examples
+## Examples
 
-<p data-height="500" data-theme-id="light" data-slug-hash="YxjJJV" data-default-tab="result" data-user="divyanshu013" data-embed-version="2" data-pen-title="DatePicker docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/YxjJJV/">DatePicker docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="VzRwmJ" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="DatePicker docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/VzRwmJ/">DatePicker docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 1. [Basic component example](../playground/?knob-visible=true&knob-title=DataController&knob-dataLabel=★%20%20A%20customizable%20UI%20widget%20★&knob-defaultSelected=default&knob-componentStyle=%7B"paddingBottom"%3A"10px"%7D&knob-showFilter=true&knob-filterLabel=Custom%20Filter%20Name&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&selectedKind=map%2FDatePicker&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)

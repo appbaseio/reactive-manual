@@ -10,23 +10,23 @@ Example uses:
 * picking a date range for booking a hotel room.
 * finding search results from a database based on date range.
 
-### Usage
+## Usage
 
-#### Basic Usage
+### Basic Usage
 
 ```js
 <DateRange
   componentId="DateSensor"
-  appbaseField="mtime"
+  dataField="mtime"
 />
 ```
 
-#### Usage With All Props
+### Usage With All Props
 
 ```js
 <DateRange
   componentId="DateSensor"
-  appbaseField="mtime"
+  dataField="mtime"
   title="DateRange"
   defaultSelected={{
     start: moment('2017-01-01'),
@@ -44,11 +44,11 @@ Example uses:
 />
 ```
 
-### Props
+## Props
 
 - **componentId** `String`  
     unique identifier of the component, can be referenced in other components' `react` prop.
-- **appbaseField** `String or Array`  
+- **dataField** `String or Array`  
     database field(s) to be connected to the component's UI view.
     * If passed as an `Array` of length 2, the first `String` element is used for the upper bound and the second `String` element is used for the lower bound of the range.
     * If passed as a `String`, the field is used for both lower and upper bounds match based on the selected values from the component UI view.
@@ -77,18 +77,18 @@ Example uses:
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
 
-### Syntax
+## Syntax
 
-<p data-height="500" data-theme-id="light" data-slug-hash="oeMJBJ" data-default-tab="js" data-user="divyanshu013" data-embed-version="2" data-pen-title="DateRange docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/oeMJBJ/">DateRange docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="prYoRW" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="DateRange docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/prYoRW/">DateRange docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-### Styles
+## Styles
 
 All reactivebase components are `rbc` namespaced.
 
 ![Annotated image](https://i.imgur.com/tEwBtgX.png)
 
-### Extending
+## Extending
 
 `DateRange` component can be extended to
 1. customize the look and feel with `componentStyle`,
@@ -141,9 +141,9 @@ All reactivebase components are `rbc` namespaced.
 - **onValueChange** `Function`  
     is a callback function which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when a particular date range is selected in a DateRange.
 
-### Examples
+## Examples
 
-<p data-height="500" data-theme-id="light" data-slug-hash="oeMJBJ" data-default-tab="result" data-user="divyanshu013" data-embed-version="2" data-pen-title="DateRange docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/oeMJBJ/">DateRange docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="prYoRW" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="DateRange docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/prYoRW/">DateRange docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 1. [Basic component example](../playground/?knob-title=Date%20Range&knob-URLParams%20%28not%20visible%20in%20storybook%29=false&knob-filterLabel=Date%20range&knob-defaultSelected=default&knob-queryFormat=date&knob-numberOfMonths=2&knob-componentStyle=%7B"paddingBottom"%3A"10px"%7D&knob-URLParams%20%28not%20visible%20on%20storybook%29=true&knob-showFilter=true&knob-dataLabel=★%20%20A%20customizable%20UI%20widget%20★&knob-allowAllDates=true&knob-extra=%7B"withFullScreenPortal"%3Atrue%2C"showClearDate"%3Atrue%7D&knob-visible=true&knob-placeholder=Pick%20date&selectedKind=map%2FDateRange&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)

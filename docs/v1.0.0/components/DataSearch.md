@@ -10,23 +10,23 @@ Example uses:
 * Searching for a rental listing by its `name` or `description` field.
 * Creating an e-commerce search box for finding products by their listing properties.
 
-### Usage
+## Usage
 
-#### Basic Usage
+### Basic Usage
 
 ```js
 <DataSearch
   componentId="SearchSensor"
-  appbaseField={["group_venue", "group_city"]}
+  dataField={["group_venue", "group_city"]}
 />
 ```
 
-#### Usage With All Props
+### Usage With All Props
 
 ```js
 <DataSearch
   componentId="SearchSensor"
-  appbaseField={["group_venue", "group_city"]}
+  dataField={["group_venue", "group_city"]}
   title="Search"
   defaultSelected="Songwriting"
   searchWeight={[1, 3]}
@@ -46,18 +46,18 @@ Example uses:
 />
 ```
 
-### Props
+## Props
 
 - **componentId** `String`  
     unique identifier of the component, can be referenced in other components' `react` prop.
 - **title** `String or HTML` [optional]  
     set the title of the component to be shown in the UI.
-- **appbaseField** `String or Array`  
+- **dataField** `String or Array`  
     database field(s) to be connected to the component's UI view. DataSearch accepts an Array in addition to String, useful for applying search across multiple fields.
 - **defaultSelected** `string` [optional]  
     preset the search query text in the search box.
 - **searchWeight** `Array` [optional]  
-    set the search weight for the database fields, useful when appbaseField is an Array of more than one field. This prop accepts an array of numbers. A higher number implies a higher relevance weight for the corresponding field in the search results.
+    set the search weight for the database fields, useful when dataField is an Array of more than one field. This prop accepts an array of numbers. A higher number implies a higher relevance weight for the corresponding field in the search results.
 - **placeholder** `String` [optional]  
     set the placeholder text to be shown in the searchbox input field. Defaults to "Search".
 - **autoSuggest** `Boolean` [optional]  
@@ -67,15 +67,13 @@ Example uses:
 - **highlight** `Boolean` [optional]  
     whether highlighting should be enabled in the returned results.
 - **highlightField** `String or Array` [optional]  
-    when highlighting is enabled, this prop allows specifying the fields which should be returned with the matching highlights. When not specified, it defaults to applying highlights on the field(s) specified in the **appbaseField** prop.
+    when highlighting is enabled, this prop allows specifying the fields which should be returned with the matching highlights. When not specified, it defaults to applying highlights on the field(s) specified in the **dataField** prop.
 - **queryFormat** `String` [optional]
     Sets the query format, can be **or** or **and**. Defaults to **or**.
     * **or** returns all the results matching **any** of the search query text's parameters. For example, searching for "bat man" with **or** will return all the results matching either "bat" or "man".
     * On the other hand with **and**, only results matching both "bat" and "man" will be returned. It returns the results matching **all** of the search query text's parameters.
 - **fuzziness** `String or Number` [optional]
     Sets a maximum edit distance on the search parameters, can be **0**, **1**, **2** or **"AUTO"**. Useful for showing the correct results for an incorrect search parameter by taking the fuzziness into account. For example, with a substitution of one character, **fox** can become **box**. Read more about it in the elastic search [docs](https://www.elastic.co/guide/en/elasticsearch/guide/current/fuzziness.html).
-- **react** `Object`  
-    a dependency object defining how this component should react based on the state changes in the specified components. You can read more about how to specify this prop over [here](v1.0.0/advanced/React.html).
 - **showFilter** `Boolean` [optional]  
     show as filter when a value is selected in a global selected filters view. Defaults to `true`.
 - **filterLabel** `String` [optional]  
@@ -83,18 +81,18 @@ Example uses:
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
 
-### Syntax
+## Syntax
 
-<p data-height="500" data-theme-id="light" data-slug-hash="VzdKyL" data-default-tab="js" data-user="divyanshu013" data-embed-version="2" data-pen-title="DataSearch docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/VzdKyL/">DataSearch docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="rzRNWv" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="DataSearch docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/rzRNWv/">DataSearch docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-### Styles
+## Styles
 
 All reactivebase components are `rbc` namespaced.
 
 ![Annotated Image](https://i.imgur.com/ysbmr3Gg.png)
 
-### Extending
+## Extending
 
 `DataSearch` component can be extended to
 1. customize the look and feel with `componentStyle`,
@@ -164,9 +162,9 @@ All reactivebase components are `rbc` namespaced.
         - `Array` is used for specifying multiple components by their `componentId`.
         - `Object` is used for nesting other key clauses.
 
-### Examples
+## Examples
 
-<p data-height="500" data-theme-id="light" data-slug-hash="VzdKyL" data-default-tab="result" data-user="divyanshu013" data-embed-version="2" data-pen-title="DataSearch docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/VzdKyL/">DataSearch docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="rzRNWv" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="DataSearch docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/rzRNWv/">DataSearch docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 1. [DataSearch with all the default props](../playground/?selectedKind=map%2FDataSearch&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)

@@ -6,20 +6,20 @@
 
 `SingleRange` creates a numeric range selector UI component that is connected to a database field.
 
-`Note:` It is similar to a [SingleList](/v1.0.0/components/SingleList.html), except it is suited for numeric data.
+`Note:` It is similar to a [SingleList](v1.0.0/components/SingleList.html), except it is suited for numeric data.
 
 Example uses:
 * filtering search results by prices in an e-commerce or food delivery experience.
 * browsing a movies listing site using a ratings filter.
 
-### Usage
+## Usage
 
-#### Basic Usage
+### Basic Usage
 
 ```js
 <SingleRange
   componentId="PriceSensor"
-  appbaseField="price"
+  dataField="price"
   title="Prices"
   data={
     [{"start": 0, "end": 10, "label": "Cheap"},
@@ -30,12 +30,12 @@ Example uses:
 />
 ```
 
-#### Usage With All Props
+### Usage With All Props
 
 ```js
 <SingleRange
   componentId="PriceSensor"
-  appbaseField="price"
+  dataField="price"
   title="Prices"
   defaultSelected="Cheap"
   showRadio={true}
@@ -51,11 +51,11 @@ Example uses:
 />
 ```
 
-### Props
+## Props
 
 - **componentId** `String`  
     unique identifier of the component, can be referenced in other components' `react` prop.
-- **appbaseField** `String`  
+- **dataField** `String`  
     data field to be connected to the component's UI view. The range items are filtered by a database query on this field.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
@@ -72,18 +72,18 @@ Example uses:
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the range. This is useful for sharing URLs with the component state. Defaults to `false`.
 
-### Syntax
+## Syntax
 
-<p data-height="500" data-theme-id="light" data-slug-hash="gxzjNP" data-default-tab="js" data-user="divyanshu013" data-embed-version="2" data-pen-title="SingleRange docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/gxzjNP/">SingleRange docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="Jyzjja" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="SingleRange docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/Jyzjja/">SingleRange docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-### Styles
+## Styles
 
 All reactivebase components are `rbc` namespaced.
 
 ![Annotated image](https://i.imgur.com/CIOLTQo.png)
 
-### Extending
+## Extending
 
 `SingleRange` component can be extended to
 1. customize the look and feel with `componentStyle`,
@@ -136,9 +136,9 @@ All reactivebase components are `rbc` namespaced.
 - **onValueChange** `Function`  
     is a callback function which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when a range item is selected in a "Prices" SingleRange.
 
-### Examples
+## Examples
 
-<p data-height="500" data-theme-id="light" data-slug-hash="gxzjNP" data-default-tab="result" data-user="divyanshu013" data-embed-version="2" data-pen-title="SingleRange docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/gxzjNP/">SingleRange docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="Jyzjja" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="SingleRange docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/Jyzjja/">SingleRange docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 1. [Range with all the default props](../playground/?knob-title=SingleRange%3A%20Price%20Filter&knob-defaultSelected=Cheap&knob-selectAllLabel=All%20cities&knob-showRadio=true&knob-sortBy=count&knob-size=100&knob-showCount=true&knob-placeholder=Search%20City&knob-showSearch=true&selectedKind=map%2FSingleRange&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)

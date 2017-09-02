@@ -15,9 +15,9 @@ Example uses:
 * showing a feed of results based on the applied search criteria.
 * streaming realtime feed updates based on applied criteria like in a newsfeed.
 
-### Usage
+## Usage
 
-#### Basic Usage
+### Basic Usage
 
 ```js
 <ReactiveList
@@ -27,12 +27,12 @@ Example uses:
 />
 ```
 
-#### Usage With All Props
+### Usage With All Props
 
 ```js
 <ReactiveList
   componentId="SearchResult"
-  appbaseField="ratings"
+  dataField="ratings"
   title="ReactiveList"
   stream={true}
   pagination={false}
@@ -44,17 +44,20 @@ Example uses:
   initialLoader="Loading Results.."
   noResults="No Results Found!"
   showResultStats={true}
+  onResultStats={(total, took) => {
+    return "found " + total + " results in " + took + "ms."
+  }}
   react={{
     and: ["CitySensor", "SearchSensor"]
   }}
 />
 ```
 
-### Props
+## Props
 
 - **componentId** `String`  
     unique identifier of the component, can be referenced in other components' `react` prop.
-- **appbaseField** `String`  
+- **dataField** `String`  
     data field to be connected to the component's UI view. It is useful for providing a sorting context.
 - **title** `String or HTML` [optional]  
     title of the component, to be shown in the UI.
@@ -71,7 +74,7 @@ Example uses:
 - **sortOptions** `Object Array` [optional]  
     an alternative to the `sortBy` prop, `sortOptions` creates a sorting view in the ReactiveList component's UI. Each array element is an object that takes three keys:
     - `label` - label to be displayed in the UI.
-    - `appbaseField` - data field to use for applying the sorting criteria on.
+    - `dataField` - data field to use for applying the sorting criteria on.
     - `sortBy` - specified as either `asc` or `desc`.
 - **from** `Number` [optional]  
     starting point from where to fetch the results. Useful in a pagination context. Defaults to 0.
@@ -121,12 +124,12 @@ Example uses:
 - **pageURLParams** `Boolean` [optional]  
     whether to display the page number in the URL. Defaults to `false`. **pageURLParams** works only with **pagination** enabled. Useful for sharing the view of a particular page.
 
-### Syntax
+## Syntax
 
 <p data-height="500" data-theme-id="light" data-slug-hash="EmmKVZ" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ReactiveSearch ReactiveList" class="codepen">See <a href="http://codepen.io/sids-aquarius/pen/EmmKVZ/">ReactiveSearch ReactiveList</a> on codepen.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-### Styles
+## Styles
 
 All reactivebase components are `rbc` namespaced.
 
@@ -134,7 +137,7 @@ All reactivebase components are `rbc` namespaced.
 
 ![Annotated Image](https://i.imgur.com/TPP2Zuh.png)
 
-### Extending
+## Extending
 
 `ReactiveList` component can be extended to
 1. customize the look and feel with `componentStyle`,
@@ -165,7 +168,7 @@ All reactivebase components are `rbc` namespaced.
 - **onAllData** `Function` [optional]  
     an alternative callback function to `onData`, where user can define how to render the view based on all the data changes.
 
-### Examples
+## Examples
 
 <p data-height="500" data-theme-id="light" data-slug-hash="EmmKVZ" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ReactiveSearch ReactiveList" class="codepen">See <a href="http://codepen.io/sids-aquarius/pen/EmmKVZ/">ReactiveSearch ReactiveList</a> on codepen.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>

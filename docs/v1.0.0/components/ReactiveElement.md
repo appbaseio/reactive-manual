@@ -13,24 +13,40 @@ Example uses:
 * showing current trending topics based on the incoming data.
 * showing a chart of financial stocks data.
 
-### Usage
+## Usage
+
+### Basic Usage
 
 ```js
 <ReactiveElement
-  componentId="ReactiveElementID"
-  title="Reactive Element"
-  from={0}
-  size={10}
-  initialLoader="Loading Results.."
-  noResults="No Results Found!"
-  showResultStats={true}
   react={{
     or: ["CitySensor", "SearchSensor"]
   }}
 />
 ```
 
-### Props
+### Usage With All Props
+
+```js
+<ReactiveElement
+  componentId="ReactiveElementID"
+  title="Reactive Element"
+  stream={false}
+  from={0}
+  size={10}
+  initialLoader="Loading Results.."
+  noResults="No Results Found!"
+  showResultStats={true}
+  onResultStats={(total, took) => {
+    return "found " + total + " results in " + took + "ms."
+  }}
+  react={{
+    or: ["CitySensor", "SearchSensor"]
+  }}
+/>
+```
+
+## Props
 
 - **componentId** `String`  
     unique identifier of the component, can be referenced in other components' `react` prop.
@@ -48,16 +64,18 @@ Example uses:
     display to show the user when no results are found, accepts `String` or `HTML` markup.
 - **showResultStats** `Boolean` [optional]  
     whether to show result stats in the form of results found and time taken. Defaults to `true`.
+- **onResultStats** `Function` [optional]  
+    show custom result stats using a function that takes two parameters for `time_taken` and `total_results` and returns a string.
 - **react** `Object` [optional]  
     a dependency object defining how this component should react based on the state changes in the sensor components.
 
-### Styles
+## Styles
 
-All reactivebase components are `rbc` name spaced.
+All reactivebase components are `rbc` namespaced.
 
 ![Annotated image]()
 
-### Extending
+## Extending
 
 `ReactiveElement` component can be extended to
 1. customize the look and feel with `componentStyle`,
@@ -90,7 +108,7 @@ All reactivebase components are `rbc` name spaced.
 - **onAllData** `Function`  
     an extension of the onData() function which contains the entire result data and returns an array of HTML elements to be rendered in the component view.
 
-### Examples
+## Examples
 
 1. ReactiveElement with all the default props with a single sensor filter.
 

@@ -11,13 +11,13 @@ Example uses:
 * filtering products from a price range in an e-commerce shopping experience.
 * filtering flights from a range of departure and arrival times.
 
-### Usage
+## Usage
 
-#### Basic Usage
+### Basic Usage
 ```js
 <RangeSlider
   componentId="RangeSliderSensor"
-  appbaseField="guests"
+  dataField="guests"
   range={{
     "start": 0,
     "end": 10
@@ -27,11 +27,11 @@ Example uses:
 
 While `RangeSlider` only requires the above props to be used, it comes with many additional props for pre-setting default range values, setting the step value of the range slider, specifying labels for the range endpoints, whether to display histogram etc.
 
-#### Usage With All Props
+### Usage With All Props
 ```js
 <RangeSlider
   componentId="RangeSliderSensor"
-  appbaseField="guests"
+  dataField="guests"
   title="Guests"
   range={{
     "start": 0,
@@ -56,11 +56,11 @@ While `RangeSlider` only requires the above props to be used, it comes with many
 />
 ```
 
-### Props
+## Props
 
 - **componentId** `String`  
     unique identifier of the component, can be referenced in other components' `react` prop.
-- **appbaseField** `String`  
+- **dataField** `String`  
     DB data field to be mapped with the component's UI view. The selected range creates a database query on this field.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
@@ -78,23 +78,21 @@ While `RangeSlider` only requires the above props to be used, it comes with many
     set the histogram bar interval, applicable when *showHistogram* is `true`. Defaults to `(range.end - range.start) / 10`.
 - **initialLoader** `String or HTML` [optional]  
     display text while the data is being fetched, accepts `String` or `HTML` markup.
-- **react** `Object`  
-    a dependency object defining how this component should react based on the state changes in the specified components. You can read more about how to specify this prop over [here](v1.0.0/advanced/React.html).
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
 
-### Syntax
+## Syntax
 
-<p data-height="500" data-theme-id="light" data-slug-hash="GvGjRJ" data-default-tab="js" data-user="divyanshu013" data-embed-version="2" data-pen-title="RangeSlider docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/GvGjRJ/">RangeSlider docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="mModrd" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="RangeSlider docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/mModrd/">RangeSlider docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-### Styles
+## Styles
 
 All reactivebase components are `rbc` namespaced.
 
 ![Annotated image](https://i.imgur.com/jXeI9W1.png)
 
-### Extending
+## Extending
 
 `RangeSlider` component can be extended to
 1. customize the look and feel with `componentStyle`,
@@ -162,9 +160,9 @@ All reactivebase components are `rbc` namespaced.
         - `Array` is used for specifying multiple components by their `componentId`.
         - `Object` is used for nesting other key clauses.
 
-### Examples
+## Examples
 
-<p data-height="500" data-theme-id="light" data-slug-hash="GvGjRJ" data-default-tab="result" data-user="divyanshu013" data-embed-version="2" data-pen-title="RangeSlider docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/GvGjRJ/">RangeSlider docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="mModrd" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="RangeSlider docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/mModrd/">RangeSlider docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 See more stories for RangeSlider on playground.
