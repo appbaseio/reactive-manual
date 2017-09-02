@@ -1,6 +1,6 @@
 {"bigh3": true}
 
-## GeoDistanceDropdown
+# GeoDistanceDropdown
 
 ![Image to be displayed](https://i.imgur.com/SidQoYY.png)
 
@@ -11,14 +11,14 @@ Example uses:
 * finding restaurants in walking distance from your location.
 * discovering things to do near a landmark.
 
-### Usage
+## Usage
 
-#### Basic Usage
+### Basic Usage
 
 ```js
 <GeoDistanceDropdown
   componentId="LocationUI"
-  appbaseField="location"
+  dataField="location"
   data={
     [
       { "start": 0, "end": 20, "label": "< 20 miles" },
@@ -29,12 +29,12 @@ Example uses:
 />
 ```
 
-#### Usage With All Props
+### Usage With All Props
 
 ```js
 <GeoDistanceDropdown
   componentId="locationUI"
-  appbaseField="location"
+  dataField="location"
   title="Location Dropdown Selector"
   data={
     [
@@ -56,11 +56,11 @@ Example uses:
 />
 ```
 
-### Props
+## Props
 
 - **componentId** `String`  
     unique identifier of the component, can be referenced in other components' `react` prop.
-- **appbaseField** `String`  
+- **dataField** `String`  
     data field to be connected to the component's UI view.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
@@ -82,9 +82,9 @@ Example uses:
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value from the dropdown. This is useful for sharing URLs with the component state. Defaults to `false`.
 
-### Syntax
+## Syntax
 
-<p data-height="500" data-theme-id="light" data-slug-hash="PKxroW" data-default-tab="js" data-user="divyanshu013" data-embed-version="2" data-pen-title="GeoDistanceDropdown docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/PKxroW/">GeoDistanceDropdown docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="OjqLjY" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="GeoDistanceDropdown docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/OjqLjY/">GeoDistanceDropdown docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 ### Styles
@@ -94,7 +94,7 @@ All reactivebase and reactivemaps components are `rbc` namespaced.
 ![Annotated image](https://i.imgur.com/St1dgTz.png)
 
 
-### Extending
+## Extending
 
 `GeoDistanceDropdown` component can be extended to
 1. customize the look and feel with `componentStyle`,
@@ -113,7 +113,7 @@ All reactivebase and reactivemaps components are `rbc` namespaced.
           geo_distance: {
             distance: (value.end - value.start)
                       + value.unit,
-            location_appbaseField: {
+            location_dataField: {
               lat: value.location.split(",")[0]
               lon: value.location.split(",")[1]
             }
@@ -153,9 +153,9 @@ All reactivebase and reactivemaps components are `rbc` namespaced.
 - **onValueChange** `Function`  
     is a callback function which accepts component's current **value** as a parameter. It is called every time the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example:  You want to show a pop-up modal with the valid discount coupon code when a user searches within a specific location area.
 
-### Examples
+## Examples
 
-<p data-height="500" data-theme-id="light" data-slug-hash="PKxroW" data-default-tab="result" data-user="divyanshu013" data-embed-version="2" data-pen-title="GeoDistanceDropdown docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/PKxroW/">GeoDistanceDropdown docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="OjqLjY" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="GeoDistanceDropdown docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/OjqLjY/">GeoDistanceDropdown docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 1. [GeoDistance dropdown with all the default props](../playground/?knob-title=Geo%20Distance%20Slider&knob-filterLabel=GeoDistance%20filter&knob-defaultSelected=%7B"location"%3A"London"%2C"distance"%3A5%7D&knob-rangeLabels=%7B"start"%3A"Start"%2C"end"%3A"End"%7D&knob-range=%7B"start"%3A0%2C"end"%3A50%7D&knob-URLParams%20%28not%20visible%20on%20storybook%29=true&knob-showFilter=true&knob-stepValue=1&knob-autoLocation=true&knob-unit=mi&knob-placeholder=Search%20Location&selectedKind=map%2FGeoDistanceDropdown&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)

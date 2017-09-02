@@ -1,6 +1,6 @@
 {"bigh3": true}
 
-## GeoDistanceSlider
+# GeoDistanceSlider
 
 ![Image to be displayed](
 https://i.imgur.com/FU4s0PQ.png)
@@ -12,14 +12,14 @@ Example uses:
 * finding restaurants in walking distance from your location.
 * discovering things to do near a landmark.
 
-### Usage
+## Usage
 
-#### Basic Usage
+### Basic Usage
 
 ```js
 <GeoDistanceSlider
   componentId="locationUI"
-  appbaseField="location"
+  dataField="location"
   range={
     {
       "start": 0,
@@ -29,12 +29,12 @@ Example uses:
 />
 ```
 
-#### Usage With All Props
+### Usage With All Props
 
 ```js
 <GeoDistanceSlider
   componentId="GeoDistanceSensor"
-  appbaseField="location"
+  dataField="location"
   title="Geo Distance Slider"
   range={
     {
@@ -62,11 +62,11 @@ Example uses:
 />
 ```
 
-### Props
+## Props
 
 - **componentId** `String`  
     unique identifier of the component, can be referenced in other components' `react` prop.
-- **appbaseField** `String`  
+- **dataField** `String`  
     data field to be connected to the component's UI view.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
@@ -92,18 +92,18 @@ Example uses:
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected location from the slider. This is useful for sharing URLs with the component state. Defaults to `false`.
 
-### Syntax
+## Syntax
 
-<p data-height="500" data-theme-id="light" data-slug-hash="VzVNMX" data-default-tab="js" data-user="divyanshu013" data-embed-version="2" data-pen-title="GeoDistanceSlider docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/VzVNMX/">GeoDistanceSlider docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="ZJPzaB" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="GeoDistanceSlider docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/ZJPzaB/">GeoDistanceSlider docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-### Styles
+## Styles
 
 All reactivebase and reactivemaps components are `rbc` namespaced.
 
 ![Annotated image](https://i.imgur.com/0si7fn1.png)
 
-### Extending
+## Extending
 
 `GeoDistanceSlider` component can be extended to
 1. customize the look and feel with `componentStyle`,
@@ -122,7 +122,7 @@ All reactivebase and reactivemaps components are `rbc` namespaced.
           geo_distance: {
             distance: (value.end - value.start)
                       + value.unit,
-            location_appbaseField: {
+            location_dataField: {
               lat: value.location.split(",")[0]
               lon: value.location.split(",")[1]
             }
@@ -162,9 +162,9 @@ All reactivebase and reactivemaps components are `rbc` namespaced.
 - **onValueChange** `Function`  
     is a callback function which accepts component's current **value** as a parameter. It is called every time the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example:  You want to show a pop-up modal with the valid discount coupon code when a user searches within a specific location area.
 
-### Examples
+## Examples
 
-<p data-height="500" data-theme-id="light" data-slug-hash="VzVNMX" data-default-tab="result" data-user="divyanshu013" data-embed-version="2" data-pen-title="GeoDistanceSlider docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/VzVNMX/">GeoDistanceSlider docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="ZJPzaB" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="GeoDistanceSlider docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/ZJPzaB/">GeoDistanceSlider docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 1. [GeoDistance slider with all the default props](../playground/?selectedKind=map%2FGeoDistanceSlider&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)

@@ -19,7 +19,7 @@ Example uses:
 ```js
 <ReactiveMap
     componentId="MapUI"
-    appbaseField="location"
+    dataField="location"
     title="Venue Location Map"
 />
 ```
@@ -29,7 +29,7 @@ Example uses:
 ```js
 <ReactiveMap
     componentId="MapUI"
-    appbaseField="location"
+    dataField="location"
     title="Venue Location Map"
 
     size={100}
@@ -92,7 +92,7 @@ Example uses:
 
 - **componentId** `String`  
     unique identifier of the component, can be referenced in other components' `react` prop.
-- **appbaseField** `String`  
+- **dataField** `String`  
     DB data field to be connected to the component's UI view, usually of a geopoint (i.e. location) data type and used for rendering the markers on the map.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
@@ -173,7 +173,7 @@ and also user can return the markup which will be append inside map (as ex. Poly
 
 ### Syntax
 
-<p data-height="500" data-theme-id="light" data-slug-hash="BdGgwm" data-default-tab="js" data-user="divyanshu013" data-embed-version="2" data-pen-title="ReactiveMap docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/BdGgwm/">ReactiveMap docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="qXvWpo" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ReactiveMap docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/qXvWpo/">ReactiveMap docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 ### Styles
@@ -182,7 +182,7 @@ and also user can return the markup which will be append inside map (as ex. Poly
 
 ### Examples
 
-<p data-height="500" data-theme-id="light" data-slug-hash="BdGgwm" data-default-tab="result" data-user="divyanshu013" data-embed-version="2" data-pen-title="ReactiveMap docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/BdGgwm/">ReactiveMap docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="qXvWpo" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ReactiveMap docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/qXvWpo/">ReactiveMap docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 1. [ReactiveMap with all the default props](../playground/?knob-title=Reactive%20maps&knob-URLParams%20%28not%20visible%20in%20storybook%29=true&knob-showMarkers=true&knob-filterLabel=GeoDistance%20filter&knob-defaultSelected=%7B"label"%3A"Less%20than%20100%20miles"%2C"location"%3A"London"%7D&knob-rangeLabels=%7B"start"%3A"Start"%2C"end"%3A"End"%7D&knob-range=%7B"start"%3A0%2C"end"%3A50%7D&knob-autoMarkerPosition=true&knob-streamMarkerImage=https%3A%2F%2Fcdn.rawgit.com%2Fappbaseio%2Freactivemaps%2F6500c73a%2Fdist%2Fimages%2Fstream-pin.png&knob-showMapStyles=false&knob-URLParams%20%28not%20visible%20on%20storybook%29=true&knob-showFilter=true&knob-autoMapRender=false&knob-placeholderDropdown=Select%20radius&knob-stepValue=1&knob-showPopoverOn=mouseover&knob-setMarkerCluster=true&knob-streamTTL=5&knob-setSearchAsMove=false&knob-defaultMarkerImage=https%3A%2F%2Fcdn.rawgit.com%2Fappbaseio%2Freactivemaps%2F6500c73a%2Fdist%2Fimages%2Fhistoric-pin.png&knob-size=100&knob-autoLocation=true&knob-streamAutoCenter=true&knob-unit=mi&knob-autoCenter=true&knob-placeholder=Search%20Location&knob-defaultZoom=5&knob-showSearchAsMove=true&knob-defaultMapStyle=Standard&knob-defaultCenter=%7B"lat"%3A37.74%2C"lon"%3A-122.45%2C"lng"%3A-122.45%7D&selectedKind=map%2FReactiveMap&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
