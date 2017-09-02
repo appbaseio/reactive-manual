@@ -73,7 +73,7 @@ Example uses:
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
 
-**Note:** A NestedMultiList component's props are exactly like a [NestedList component](/v1.0.0/search-components/NestedList.html) except for the `defaultSelected` prop which can take an Array with multiple selections like `{["Car", ["ford", "galaxy"]]}`.
+**Note:** A NestedMultiList component's props are exactly like a [NestedList component](v1.0.0/search-components/NestedList.html) except for the `defaultSelected` prop which can take an Array with multiple selections like `{["Car", ["ford", "galaxy"]]}`.
 
 ## Syntax
 

@@ -3,7 +3,8 @@
 # CategorySearch
 
 ![Image to be displayed](https://i.imgur.com/wRErIC9.png)
-A `CategorySearch` sensor component creates a category search UI widget with an autocomplete functionality. It is used for applying full-text search across one or more fields.
+
+`CategorySearch` creates a category based data search UI component with an autosuggest functionality. It is used for applying full-text search across one or more fields.
 
 Example uses:
 * Searching for a rental listing by its `name` or `description` field.

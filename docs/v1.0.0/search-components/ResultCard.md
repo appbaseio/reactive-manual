@@ -13,7 +13,7 @@ Example uses:
 * showing e-commerce search results in a card layout.
 * showing filtered hotel booking results in a card layout.
 
-`Note:` An alternative layout to ResultCard is a [**ResultList**](/v1.0.0/search-components/ResultList.html), which displays result data in a list format.
+`Note:` An alternative layout to ResultCard is a [**ResultList**](v1.0.0/search-components/ResultList.html), which displays result data in a list format.
 
 ## Usage
 
