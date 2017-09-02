@@ -77,20 +77,12 @@ var docbaseConfig ={
             "label":"Search Components",
             "files":[
                {
-                  "name":"NestedList",
-                  "label":"Nested List"
-               },
-               {
-                  "name":"NestedMultiList",
-                  "label":"Nested Multi List"
+                  "name":"CategorySearch",
+                  "label":"Category Search"
                },
                {
                   "name":"MultiLevelMenu",
                   "label":"MultiLevel Menu"
-               },
-               {
-                  "name":"CategorySearch",
-                  "label":"Category Search"
                },
                {
                   "name":"DynamicRangeSlider",
@@ -103,6 +95,14 @@ var docbaseConfig ={
                {
                   "name":"TagCloud",
                   "label":"Tag Cloud"
+               },
+               {
+                  "name":"NestedList",
+                  "label":"Nested List"
+               },
+               {
+                  "name":"NestedMultiList",
+                  "label":"Nested Multi List"
                },
                {
                   "name":"ResultCard",
