@@ -9,24 +9,24 @@ Example uses:
 * Searching for a rental listing by its `name` or `description` field.
 * Creating an e-commerce search box for finding products by their listing properties.
 
-### Usage
+## Usage
 
-#### Basic Usage
+### Basic Usage
 
 ```js
 <CategorySearch
   componentId="SearchSensor"
-  appbaseField={["group_venue", "group_city"]}
+  dataField={["group_venue", "group_city"]}
   categoryField="group_topics"
 />
 ```
 
-#### Usage With All Props
+### Usage With All Props
 
 ```js
 <CategorySearch
   componentId="SearchSensor"
-  appbaseField={["group_venue", "group_city"]}
+  dataField={["group_venue", "group_city"]}
   categoryField="group_topics"
   title="Search"
   defaultSelected="Music"
@@ -47,11 +47,11 @@ Example uses:
 />
 ```
 
-### Props
+## Props
 
 - **componentId** `String`  
     unique identifier of the component, can be referenced in other components' `react` prop.
-- **appbaseField** `String or Array`  
+- **dataField** `String or Array`  
     data field(s) on which the search query will be applied to. If you want to search across multiple fields, pass them as an `Array`.
 - **categoryField** `String` [optional]  
     data field which has the category values mapped.
@@ -60,7 +60,7 @@ Example uses:
 - **defaultSelected** `string` [optional]  
     preset the search query text in the search box.
 - **weights** `Array` [optional]  
-    set the search weight for the database fields, useful when appbaseField is an Array of more than one field. This prop accepts an array of numbers. A higher number implies a higher relevance weight for the corresponding field in the search results.
+    set the search weight for the database fields, useful when dataField is an Array of more than one field. This prop accepts an array of numbers. A higher number implies a higher relevance weight for the corresponding field in the search results.
 - **placeholder** `String` [optional]  
     Sets the placeholder text to be shown in the searhbox input field. Defaults to "Search".
 - **autoSuggest** `Boolean` [optional]  
@@ -70,15 +70,13 @@ Example uses:
 - **highlight** `Boolean` [optional]  
     Whether highlighting should be enabled in the returned results. Defaults to `false`.
 - **highlightFields** `Array` [optional]  
-    When highlighting is enabled, this prop allows specifying the fields which should be returned with the matching highlights. When not specified, it defaults to applying highlights on the field(s) specified in the **appbaseField** prop.
+    When highlighting is enabled, this prop allows specifying the fields which should be returned with the matching highlights. When not specified, it defaults to applying highlights on the field(s) specified in the **dataField** prop.
 - **queryFormat** `String` [optional]
     Sets the query format, can be **or** or **and**. Defaults to **or**.
     * **or** returns all the results matching **any** of the search query text's parameters. For example, searching for "bat man" with **or** will return all the results matching either "bat" or "man".
     * On the other hand with **and**, only results matching both "bat" and "man" will be returned. It returns the results matching **all** of the search query text's parameters.
 - **fuzziness** `String or Number` [optional]
     Sets a maximum edit distance on the search parameters, can be **0**, **1**, **2** or **"AUTO"**. Useful for showing the correct results for an incorrect search parameter by taking the fuzziness into account. For example, with a substitution of one character, **fox** can become **box**. Read more about it in the elastic search [docs](https://www.elastic.co/guide/en/elasticsearch/guide/current/fuzziness.html).
-- **react** `Object`  
-    a dependency object defining how this component should react based on the state changes in the specified components. You can read more about how to specify this prop over [here](v1.0.0/advanced/React.html).
 - **showFilter** `Boolean` [optional]  
     show as filter when a value is selected in a global selected filters view. Defaults to `true`.
 - **filterLabel** `String` [optional]  
@@ -86,18 +84,18 @@ Example uses:
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the current value of the search. This is useful for sharing URLs with the component state. Defaults to `false`.
 
-### Syntax
+## Syntax
 
-<p data-height="500" data-theme-id="light" data-slug-hash="mMQaza" data-default-tab="js" data-user="divyanshu013" data-embed-version="2" data-pen-title="CategorySearch docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/mMQaza/">CategorySearch docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="265" data-theme-id="light" data-slug-hash="prGMdY" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="CategorySearch docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/prGMdY/">CategorySearch docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-### Styles
+## Styles
 
 All reactivebase components are `rbc` namespaced.
 
 ![Annotated Image](https://i.imgur.com/IWHVT1i.png)
 
-### Extending
+## Extending
 
 `CategorySearch` component can be extended to
 1. customize the look and feel with `componentStyle`,
@@ -167,11 +165,11 @@ All reactivebase components are `rbc` namespaced.
         - `Array` is used for specifying multiple components by their `componentId`.
         - `Object` is used for nesting other key clauses.
 
-### Examples
+## Examples
 
-<p data-height="500" data-theme-id="light" data-slug-hash="mMQaza" data-default-tab="result" data-user="divyanshu013" data-embed-version="2" data-pen-title="CategorySearch docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/mMQaza/">CategorySearch docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="prGMdY" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="CategorySearch docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/prGMdY/">CategorySearch docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 1. [CategorySearch with all the default props](../playground/?selectedKind=search%2FCategorySearch&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 2. [CategorySearch with autoSuggest disabled](../playground/?knob-autoSuggest=false&selectedKind=search%2FCategorySearch&selectedStory=Without%20autoSuggest&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-3. [Playground (with all knob actions)](../playground/?knob-title=CategorySearch&knob-weights%5B0%5D=1&knob-weights%5B1%5D=3&knob-filterLabel=Cars%20filter&knob-defaultSelected=&knob-categoryField=brand.raw&knob-queryFormat=or&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&knob-showFilter=true&knob-fuzziness=1&knob-placeholder=Search%20Car&knob-highlight=false&knob-autoSuggest=true&knob-appbaseField%5B0%5D=name&selectedKind=search%2FCategorySearch&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+3. [Playground (with all knob actions)](../playground/?knob-title=CategorySearch&knob-weights%5B0%5D=1&knob-weights%5B1%5D=3&knob-filterLabel=Cars%20filter&knob-defaultSelected=&knob-categoryField=brand.raw&knob-queryFormat=or&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&knob-showFilter=true&knob-fuzziness=1&knob-placeholder=Search%20Car&knob-highlight=false&knob-autoSuggest=true&knob-dataField%5B0%5D=name&selectedKind=search%2FCategorySearch&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)

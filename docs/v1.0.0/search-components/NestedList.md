@@ -1,6 +1,6 @@
 {"bigh3": true}
 
-## NestedList
+# NestedList
 
 ![Image to be displayed](https://i.imgur.com/f5aO5HP.png)
 
@@ -9,22 +9,22 @@
 Example uses:
 * show a two-level or three-level category list for an e-commerce search experience.
 
-### Usage
+## Usage
 
-#### Basic Usage
+### Basic Usage
 
 ```js
 <NestedList
   componentId="CarCategorySensor"
-  appbaseField={["brand.raw", "model.raw"]}
+  dataField={["brand.raw", "model.raw"]}
 />
 ```
 
-#### Usage With All Props
+### Usage With All Props
 ```js
 <NestedList
   componentId="CarCategorySensor"
-  appbaseField={["brand.raw", "model.raw"]}
+  dataField={["brand.raw", "model.raw"]}
   title="List of Brand > Model"
   size={100}
   sortBy="asc"
@@ -42,11 +42,11 @@ Example uses:
 />
 ```
 
-### Props
+## Props
 
 - **componentId** `String`  
     unique identifier of the component, can be referenced in other components' `react` prop.
-- **appbaseField** `Array`  
+- **dataField** `Array`  
     data field(s) to be mapped with the component's UI view. A nested list component supports multiple fields passed as an Array denoting the order of nesting.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
@@ -72,20 +72,20 @@ Example uses:
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
 
-**Note:** A NestedList component's props are exactly like a SingleList component except for the `appbaseField` prop which takes an Array to denote the level of nesting.
+**Note:** A NestedList component's props are exactly like a SingleList component except for the `dataField` prop which takes an Array to denote the level of nesting.
 
-### Syntax
+## Syntax
 
-<p data-height="500" data-theme-id="light" data-slug-hash="brQOry" data-default-tab="js" data-user="divyanshu013" data-embed-version="2" data-pen-title="NestedList docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/brQOry/">NestedList docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="ZJwgXd" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="NestedList docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/ZJwgXd/">NestedList docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-### Styles
+## Styles
 
 All reactivebase components are `rbc` namespaced.
 
 ![Annotated image](https://i.imgur.com/vClQmZU.png)
 
-### Extending
+## Extending
 
 `NestedList` component can be extended to
 1. customize the look and feel with `componentStyle`,
@@ -153,9 +153,9 @@ All reactivebase components are `rbc` namespaced.
         - `Array` is used for specifying multiple components by their `componentId`.
         - `Object` is used for nesting other key clauses.
 
-### Examples
+## Examples
 
-<p data-height="500" data-theme-id="light" data-slug-hash="brQOry" data-default-tab="result" data-user="divyanshu013" data-embed-version="2" data-pen-title="NestedList docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/brQOry/">NestedList docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="ZJwgXd" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="NestedList docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/ZJwgXd/">NestedList docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 1. [NestedList with all the default props](../playground/?filterBy=ReactiveSearch&selectedKind=search%2FNestedList&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)

@@ -1,6 +1,6 @@
 {"bigh3": true}
 
-## RatingsFilter
+# RatingsFilter
 
 ![Image to be displayed](https://i.imgur.com/KO1bJQw.png)
 
@@ -11,14 +11,14 @@ Example uses:
 * filtering movie listings by their ratings.
 * filtering items in an e-commerce search listing based on its ratings.
 
-### Usage
+## Usage
 
-#### Basic Usage
+### Basic Usage
 
 ```js
 <RatingsFilter
   componentId="ratingsSensor"
-  appbaseField="ratings"
+  dataField="ratings"
   data={[
     {"start": 4, "end": 5, "label": "4 & up"},
     {"start": 3, "end": 5, "label": "3 & up"},
@@ -27,12 +27,12 @@ Example uses:
 />
 ```
 
-#### Usage With All Props
+### Usage With All Props
 
 ```js
 <RatingsFilter
   componentId="CarCategorySensor"
-  appbaseField="ratings"
+  dataField="ratings"
   title="Ratings Filter"
   data={[
     {"start": 4, "end": 5, "label": "4 & up"},
@@ -48,11 +48,11 @@ Example uses:
 />
 ```
 
-### Props
+## Props
 
 - **componentId** `String`  
     unique identifier of the component, can be referenced in other components' `react` prop.
-- **appbaseField** `String`  
+- **dataField** `String`  
     data field to be mapped with the component's UI view.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
@@ -67,18 +67,18 @@ Example uses:
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected rating. This is useful for sharing URLs with the component state. Defaults to `false`.
 
-### Syntax
+## Syntax
 
-<p data-height="500" data-theme-id="light" data-slug-hash="rzQPNz" data-default-tab="js" data-user="divyanshu013" data-embed-version="2" data-pen-title="RatingsFilter docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/rzQPNz/">RatingsFilter docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="Ljqwrx" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="RatingsFilter docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/Ljqwrx/">RatingsFilter docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-### Styles
+## Styles
 
 All reactivebase components are `rbc` namespaced.
 
 ![Annotated image](https://i.imgur.com/eBNY5rZ.png)
 
-### Extending
+## Extending
 
 `RatingsFilter` component can be extended to
 1. customize the look and feel with `componentStyle`,
@@ -131,9 +131,9 @@ All reactivebase components are `rbc` namespaced.
 - **onValueChange** `Function`  
     is a callback function which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when a user searches for a product with a specific rating in a RatingsFilter.
 
-### Examples
+## Examples
 
-<p data-height="500" data-theme-id="light" data-slug-hash="rzQPNz" data-default-tab="result" data-user="divyanshu013" data-embed-version="2" data-pen-title="RatingsFilter docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/rzQPNz/">RatingsFilter docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="Ljqwrx" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="RatingsFilter docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/Ljqwrx/">RatingsFilter docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 See more stories for RatingsFilter on playground.

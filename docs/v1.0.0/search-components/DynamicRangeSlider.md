@@ -1,6 +1,6 @@
 {"bigh3": true}
 
-## DynamicRangeSlider
+# DynamicRangeSlider
 
 ![Image to be displayed](https://i.imgur.com/PGHsWpA.png)
 
@@ -11,23 +11,25 @@ Example uses:
 * filtering products from a price range in an e-commerce shopping experience.
 * filtering flights from a range of departure and arrival times.
 
-### Usage
+`Note:` This component behaves similar to the [RangeSlider](/v1.0.0/components/RangeSlider.html) except that the range is computed dynamically based on actual data.
 
-#### Basic Usage
+## Usage
+
+### Basic Usage
 ```js
 <DynamicRangeSlider
   componentId="DynamicRangeSensor"
-  appbaseField="guests"
+  dataField="guests"
 />
 ```
 
 While `DynamicRangeSlider` only requires the above props to be used, it comes with many additional props for pre-selecting range values, setting the step value of the range slider, specifying labels for the range endpoints, whether to display histogram etc.
 
-#### Usage With All Props
+### Usage With All Props
 ```js
 <DynamicRangeSlider
   componentId="DynamicRangeSensor"
-  appbaseField="guests"
+  dataField="guests"
   title="Guests"
   defaultSelected={(min, max) => (
     {
@@ -52,11 +54,11 @@ While `DynamicRangeSlider` only requires the above props to be used, it comes wi
 />
 ```
 
-### Props
+## Props
 
 - **componentId** `String`  
     unique identifier of the component, can be referenced in other components' `react` prop.
-- **appbaseField** `String`  
+- **dataField** `String`  
     DB data field to be mapped with the component's UI view.The selected range creates a database query on this field.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
@@ -72,23 +74,21 @@ While `DynamicRangeSlider` only requires the above props to be used, it comes wi
     set the histogram bar interval, applicable when *showHistogram* is `true`. Defaults to `(range.end - range.start) / 10`.
 - **initialLoader** `String or HTML` [optional]  
     display text while the data is being fetched, accepts `String` or `HTML` markup.
-- **react** `Object`  
-    a dependency object defining how this component should react based on the state changes in the specified components. You can read more about how to specify this prop over [here](v1.0.0/advanced/React.html).
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected range of the slider. This is useful for sharing URLs with the component state. Defaults to `false`.
 
-### Syntax
+## Syntax
 
-<p data-height="500" data-theme-id="light" data-slug-hash="jLQXdW" data-default-tab="js" data-user="divyanshu013" data-embed-version="2" data-pen-title="DynamicRangeSlider docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/jLQXdW/">DynamicRangeSlider docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="BdMXeG" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ResultList docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/BdMXeG/">ResultList docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-### Styles
+## Styles
 
 All reactivebase components are `rbc` namespaced.
 
 ![Annotated image](https://i.imgur.com/jBkvYft.png)
 
-### Extending
+## Extending
 
 `DynamicRangeSlider` component can be extended to
 1. customize the look and feel with `componentStyle`.
@@ -156,9 +156,9 @@ All reactivebase components are `rbc` namespaced.
         - `Array` is used for specifying multiple components by their `componentId`.
         - `Object` is used for nesting other key clauses.
 
-### Examples
+## Examples
 
-<p data-height="500" data-theme-id="light" data-slug-hash="jLQXdW" data-default-tab="result" data-user="divyanshu013" data-embed-version="2" data-pen-title="DynamicRangeSlider docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/jLQXdW/">DynamicRangeSlider docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="BdMXeG" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ResultList docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/BdMXeG/">ResultList docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 See more stories for DynamicRangeSlider on playground.

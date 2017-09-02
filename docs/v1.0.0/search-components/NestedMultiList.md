@@ -17,7 +17,7 @@ Example uses:
 ```js
 <NestedMultiList
   componentId="CarCategorySensor"
-  appbaseField={["brand.raw", "model.raw"]}
+  dataField={["brand.raw", "model.raw"]}
 />
 ```
 
@@ -26,7 +26,7 @@ Example uses:
 ```js
 <NestedMultiList
   componentId="CarCategorySensor"
-  appbaseField={["brand.raw", "model.raw"]}
+  dataField={["brand.raw", "model.raw"]}
   title="List of Brand > Model"
   size={100}
   sortBy="asc"
@@ -48,7 +48,7 @@ Example uses:
 
 - **componentId** `String`  
     unique identifier of the component, can be referenced in other components' `react` prop.
-- **appbaseField** `Array`  
+- **dataField** `Array`  
     data field(s) to be mapped with the component's UI view. A nested list component supports multiple fields passed as an Array denoting the order of nesting.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.

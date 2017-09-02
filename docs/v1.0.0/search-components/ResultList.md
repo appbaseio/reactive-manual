@@ -2,7 +2,7 @@
 
 {% raw %}
 
-## ResultList
+# ResultList
 
 ![Image to be displayed](https://i.imgur.com/X3WPi1k.png)
 
@@ -13,11 +13,11 @@ Example uses:
 * showing e-commerce search listings.
 * showing filtered hotel booking results.
 
-`Note:` An alternative layout to ResultList is a [**ResultCard**](v1.0.0/search-components/ResultCard.html), which displays result data in a card layout.
+`Note:` An alternative layout to ResultList is a [**ResultCard**](/v1.0.0/search-components/ResultCard.html), which displays result data in a card layout.
 
-### Usage
+## Usage
 
-#### Basic Usage
+### Basic Usage
 
 ```js
 <ResultList
@@ -28,12 +28,12 @@ Example uses:
 />
 ```
 
-#### Pagination Usage With All Props
+### Pagination Usage With All Props
 
 ```js
 <ResultList
   componentId="ResultList01"
-  appbaseField="ratings"
+  dataField="ratings"
   title="Result List"
   stream={true}  
   sortBy="desc"
@@ -53,12 +53,12 @@ Example uses:
 />
 ```
 
-#### Infinite Scroll Usage With All Props
+### Infinite Scroll Usage With All Props
 
 ```js
 <ResultList
   componentId="ResultList01"
-  appbaseField="ratings"
+  dataField="ratings"
   title="Result List"
   stream={true}  
   sortBy="desc"
@@ -77,11 +77,11 @@ Example uses:
 />
 ```
 
-### Props
+## Props
 
 - **componentId** `String`  
     unique identifier of the component, can be referenced in other components' `react` prop.
-- **appbaseField** `String`  
+- **dataField** `String`  
     data field to be mapped with `ResultList`'s UI view, used for providing a sorting context.
 - **title** `String or HTML` [optional]  
     title of the component, to be shown in the UI.
@@ -100,7 +100,7 @@ Example uses:
 - **sortOptions** `Object Array` [optional]  
     an alternative to the `sortBy` prop, `sortOptions` creates a sorting view in the ResultList component's UI. Each array element is an object that takes three keys:
     - `label` - label to be displayed in the UI.
-    - `appbaseField` - data field to use for applying the sorting criteria on.
+    - `dataField` - data field to use for applying the sorting criteria on.
     - `sortBy` - specified as either `asc` or `desc`.
 - **from** `Number` [optional]  
     starting point from where to fetch the results. Useful in a pagination context. Defaults to 0.
@@ -139,18 +139,18 @@ Example uses:
     ```
     The return format for the callback function is an object with `image`, `image_size`, `title`, `desc` and `url` fields.
 
-### Syntax
+## Syntax
 
-<p data-height="265" data-theme-id="light" data-slug-hash="YxRgYp" data-default-tab="js" data-user="divyanshu013" data-embed-version="2" data-pen-title="ResultList docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/YxRgYp/">ResultList docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="BdMXeG" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ResultList docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/BdMXeG/">ResultList docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-### Styles
+## Styles
 
 All reactivebase components are `rbc` namespaced.
 
 ![Annotated image](https://i.imgur.com/ngVXOoB.png)
 
-### Extending
+## Extending
 
 `ResultList` component can be extended to
 1. customize the look and feel with `componentStyle` prop,
@@ -197,9 +197,9 @@ All reactivebase components are `rbc` namespaced.
         - `Object` is used for nesting other key clauses.
 
 
-### Examples
+## Examples
 
-<p data-height="500" data-theme-id="light" data-slug-hash="YxRgYp" data-default-tab="result" data-user="divyanshu013" data-embed-version="2" data-pen-title="ResultList docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/YxRgYp/">ResultList docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="BdMXeG" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ResultList docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/BdMXeG/">ResultList docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 See more stories for ResultList on playground.

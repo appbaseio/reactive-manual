@@ -1,6 +1,6 @@
 {"bigh3": true}
 
-## TagCloud
+# TagCloud
 
 ![Image to be displayed](https://i.imgur.com/cQgqeiv.png)
 
@@ -10,23 +10,23 @@ Example uses:
 * news websites and blogs displaying related tags to a current post.
 * show an e-commerce listings filter of user generated tags.
 
-### Usage
+## Usage
 
-#### Basic Usage
+### Basic Usage
 
 ```js
 <TagCloud
   componentId="TagCloud01"
-  appbaseField="cities"
+  dataField="cities"
 />
 ```
 
-#### Usage With All Props
+### Usage With All Props
 
 ```js
 <TagCloud
   componentId="CitiesSensor"
-  appbaseField="cities"
+  dataField="cities"
   title="City Cloud"
   size={32}
   showCount={true}
@@ -42,11 +42,11 @@ Example uses:
 />
 ```
 
-### Props
+## Props
 
 - **componentId** `String`  
     unique identifier of the component, can be referenced in other components' `react` prop.
-- **appbaseField** `String`  
+- **dataField** `String`  
     data field(s) to be mapped with the component's UI view.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
@@ -60,8 +60,6 @@ Example uses:
     pre-select tag(s) from the tag cloud. An Array is accepted when *multiSelect* mode is enabled.
 - **initialLoader** `String or HTML` [optional]  
     text or layout to be displayed while the data is being fetched, accepts `String` or `HTML` markup.
-- **react** `Object`  
-    a dependency object defining how this component should react based on the state changes in the specified components. You can read more about how to specify this prop over [here](v1.0.0/advanced/React.html).
 - **showFilter** `Boolean` [optional]  
     show as filter when a value is selected in a global selected filters view. Defaults to `true`.
 - **filterLabel** `String` [optional]  
@@ -69,18 +67,18 @@ Example uses:
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the tag(s). This is useful for sharing URLs with the component state. Defaults to `false`.
 
-### Syntax
+## Syntax
 
 <p data-height="500" data-theme-id="light" data-slug-hash="QMJYGG" data-default-tab="js" data-user="divyanshu013" data-embed-version="2" data-pen-title="TagCloud docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/QMJYGG/">TagCloud docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-### Styles
+## Styles
 
 All reactivebase components are `rbc` namespaced.
 
 ![Annotated image](https://i.imgur.com/Lz0NTnd.png)
 
-### Extending
+## Extending
 
 `TagCloud` component can be extended to
 1. customize the look and feel with `componentStyle`,
@@ -148,7 +146,7 @@ All reactivebase components are `rbc` namespaced.
         - `Array` is used for specifying multiple components by their `componentId`.
         - `Object` is used for nesting other key clauses.
 
-### Examples
+## Examples
 
 <p data-height="500" data-theme-id="light" data-slug-hash="QMJYGG" data-default-tab="result" data-user="divyanshu013" data-embed-version="2" data-pen-title="TagCloud docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/QMJYGG/">TagCloud docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
