@@ -1,6 +1,6 @@
 {"bigh3": true}
 
-## SelectedFilters
+# SelectedFilters
 
 ![Image to be displayed](https://i.imgur.com/DyW5jJ2.png)
 
@@ -10,15 +10,15 @@ Example uses:
 * displaying all the user selected facet filters together in the main view area for better accessibility.
 * building mobile responsive views where it is not practical to show all the UI components in the main view.
 
-### Usage
+## Usage
 
-#### Basic Usage
+### Basic Usage
 
 ```js
 <SelectedFilters />
 ```
 
-### Props
+## Props
 
 The `SelectedFilters` component itself doesn't have any props.
 
@@ -26,13 +26,13 @@ Facet type components have a prop `showFilter` (defaults to `true`) which can be
 
 As an example, check [MultiList usage](/v1.0.0/components/MultiList.html#-multilist-usage) to see how `showFilter` and `filterLabel` can be used.
 
-### Styles
+## Styles
 
 All reactivebase components are `rbc` namespaced.
 
 ![Annotated image](https://i.imgur.com/DzFn900.png)
 
-### Extending
+## Extending
 
 `SelectedFilters` component can be extended to customize the look and feel with `componentStyle`.
 
