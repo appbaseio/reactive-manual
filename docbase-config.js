@@ -12,7 +12,7 @@ var docbaseConfig ={
       "repo":"reactivebase-manual",
       "path":"docs",
       "branch":"master",
-      "access_token":"OTAwNDU5MTk4M2NlYzViYzQxNzFlN2E3Yjk1MWQ2ZjhkODRjMTg5Yg=="
+      "access_token":"YjRkY2JlNmMyOTU0MmFmMDY3MzdlMDI4ZDIxMjlmNmVhYmRjM2JmNA=="
    },
    "indexHtml":"./html/main.html",
    "flatdocHtml":"./bower_components/docbase/html/flatdoc.html",
