@@ -159,10 +159,10 @@ All reactivebase components are `rbc` namespaced.
 <p data-height="500" data-theme-id="light" data-slug-hash="ayXeyv" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="NestedMultiList docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/ayXeyv/">NestedMultiList docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-1. NestedMultiList with all the default props
+1. [NestedMultiList with all the default props](../playground/?knob-showFilter=true&knob-filterLabel=City%20filter&selectedKind=search%2FNestedMultiList&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
-2. NestedMultiList with title
+2. [NestedMultiList with title](../playground/?knob-showFilter=true&knob-filterLabel=City%20filter&knob-title=Car%20Category&selectedKind=search%2FNestedMultiList&selectedStory=With%20Title&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
-3. NestedMultiList with default selection
+3. [NestedMultiList with default selection](../playground/?knob-showFilter=true&knob-filterLabel=City%20filter&knob-title=Car%20Category&knob-defaultSelected%5B0%5D=bmw&knob-defaultSelected%5B1%5D=x%20series&selectedKind=search%2FNestedMultiList&selectedStory=Default%20selection&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
-4. Playground (with all knob actions)
+4. [Playground (with all knob actions)](../playground/?knob-title=NestedMultiList%3A%20Car%20Filter&knob-filterLabel=Cars&knob-defaultSelected%5B0%5D=bmw&knob-defaultSelected%5B1%5D=x%20series&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&knob-showFilter=true&knob-sortBy=count&knob-size=100&knob-showCount=true&knob-placeholder=Search%20Cars&knob-showSearch=true&selectedKind=search%2FNestedMultiList&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
