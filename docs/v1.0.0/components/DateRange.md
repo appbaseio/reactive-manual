@@ -29,11 +29,12 @@ Example uses:
   dataField="mtime"
   title="DateRange"
   defaultSelected={{
-    start: moment('2017-01-01'),
-    end: moment('2017-07-01')
+    start: moment('2017-04-01'),
+    end: moment('2017-04-07')
   }}
   numberOfMonths={2}
   allowAllDates={true}
+  queryFormat="basic_date"
   extra={{
     "withFullScreenPortal": false,
     "showClearDate": true
@@ -50,7 +51,7 @@ Example uses:
     unique identifier of the component, can be referenced in other components' `react` prop.
 - **dataField** `String or Array`  
     database field(s) to be connected to the component's UI view.
-    * If passed as an `Array` of length 2, the first `String` element is used for the upper bound and the second `String` element is used for the lower bound of the range.
+    * If passed as an `Array` of length 2, the first `String` element is used for the lower bound and the second `String` element is used for the upper bound of the range.
     * If passed as a `String`, the field is used for both lower and upper bounds match based on the selected values from the component UI view.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
@@ -60,6 +61,18 @@ Example uses:
     number of months to be shown in the calendar view. Defaults to 2.
 - **allowAllDates** `Boolean` [optional]  
     whether to all all dates or dates starting from today. Defaults to `true`, i.e. allowing all dates.
+- **queryFormat** `String` [optional]  
+    sets the date format to be used in the query, can accept one of the following:
+    * `epoch_millis` (default) date is expressed as milliseconds since epoch.
+    * `epoch_seconds` date is expressed as seconds since epoch.
+    * `date` date expressed in yyyy-MM-dd format.
+    * `date_time` date expressed using a combination of date and time separated by T: yyyy-MM-dd'T'HH:mm:ss.SSSZ.
+    * `date_time_no_millis` date expressed using a combination of date and time without milliseconds separated by T: yyyy-MM-dd'T'HH:mm:ssZ.
+    * `basic_date` date expressed in yyyyMMdd format.
+    * `basic_date_time` date expressed in yyyyMMdd*T*HH:mm:ss.SSSZ format.
+    * `basic_date_tiime_no_millis` date expressed in yyyyMMdd*T*HH:mm:ssZ format.
+    * `basic_time` date expressed as just time in the HHmmss.SSZ format.
+    * `basic_time_no_millis` date expressed as just time but without milliseconds in the HHmmss format.
 - **extra** `Object` [optional]  
     supports the full gauntlet of props as defined in airbnb's [react-dates](https://github.com/airbnb/react-dates) component.
     An example `extra` prop object would look like:
@@ -103,8 +116,8 @@ All reactivebase components are `rbc` namespaced.
     function(value) {
       return {
         query: {
-          match: {
-            data_field: "this is a test"
+          range: {
+            lte: 
           }
         }
       }

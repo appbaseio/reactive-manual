@@ -28,10 +28,11 @@ Example uses:
   componentId="DateSensor"
   dataField="mtime"
   title="DatePicker"
-  defaultSelected={moment()}
+  defaultSelected={moment('2017-04-01')}
   focused={true}
   numberOfMonths={1}
   allowAllDates={true}
+  queryFormat="basic_date"
   extra={{
     "withFullScreenPortal": false,
     "showClearDate": true
@@ -59,6 +60,18 @@ Example uses:
     number of months to be shown in the calendar view. Defaults to 1.
 - **allowAllDates** `Boolean` [optional]  
     whether to allow selecting all dates or dates starting from today. Defaults to `true`, i.e. allowing all dates.
+- **queryFormat** `String` [optional]  
+    sets the date format to be used in the query, can accept one of the following:
+    * `epoch_millis` (default) date is expressed as milliseconds since epoch.
+    * `epoch_seconds` date is expressed as seconds since epoch.
+    * `date` date expressed in yyyy-MM-dd format.
+    * `date_time` date expressed using a combination of date and time separated by T: yyyy-MM-dd'T'HH:mm:ss.SSSZ.
+    * `date_time_no_millis` date expressed using a combination of date and time without milliseconds separated by T: yyyy-MM-dd'T'HH:mm:ssZ.
+    * `basic_date` date expressed in yyyyMMdd format.
+    * `basic_date_time` date expressed in yyyyMMdd*T*HH:mm:ss.SSSZ format.
+    * `basic_date_tiime_no_millis` date expressed in yyyyMMdd*T*HH:mm:ssZ format.
+    * `basic_time` date expressed as just time in the HHmmss.SSZ format.
+    * `basic_time_no_millis` date expressed as just time but without milliseconds in the HHmmss format.
 - **extra** `Object` [optional]  
     supports the full gauntlet of props as defined in airbnb's [react-dates](https://github.com/airbnb/react-dates) component.
     An example `extra` prop object would look like:
