@@ -22,8 +22,10 @@ This is the first component you will need to add.
 
 - **app** `String`  
     app name as it appears on the dashboard.
-- **credentials** `String`  
-    app credentials as they appear on the dashboard. It should be a string of the format "username:password" and is used for authenticating the app.
+- **credentials** `String` [optional]  
+    app credentials as they appear on the dashboard. It should be a string of the format "username:password" and is used for authenticating the app. If you are not using an appbase.io app, credentials may not be necessary - although having an open-access Elasticsearch cluster is not recommended.
+- **url** `String` [optional]  
+    URL where Elasticsearch cluster is hosted, only needed if your app uses a non appbase.io URL.
 - **type** `String` [optional]  
     defines which types should the queries run on. Multiple types can be passed as comma separated. The default behavior is to search on all the app types.
 - **theme** `String` [optional]  
@@ -36,4 +38,3 @@ Once you have added the **ReactiveBase** component, you can get started with add
 * Map specific components can be found [here](v1.0.0/map-components/ReactiveMap.html).
 * Search specific components can be found [here](v1.0.0/search-components/CategorySearch.html).
 * Generic components can be found [here](v1.0.0/components/SingleList.html).
-
