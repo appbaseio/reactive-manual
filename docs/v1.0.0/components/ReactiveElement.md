@@ -2,7 +2,7 @@
 
 {% raw %}
 
-## ReactiveElement
+# ReactiveElement
 
 ![Image to be displayed](https://i.imgur.com/hwjCLss.png)
 

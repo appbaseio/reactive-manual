@@ -1,6 +1,6 @@
 {"bigh3": true}
 
-## MultiRange
+# MultiRange
 
 ![Image to be displayed](https://i.imgur.com/XqRjLSS.png)
 

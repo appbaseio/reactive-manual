@@ -1,6 +1,6 @@
 {"bigh3": true}
 
-## DataSearch
+# DataSearch
 
 ![Image to be displayed](https://i.imgur.com/dLeyahL.png)
 

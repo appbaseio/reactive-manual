@@ -1,6 +1,6 @@
 {"bigh3": true}
 
-## MultiDropdownList
+# MultiDropdownList
 
 ![Image to be displayed](https://i.imgur.com/ZZ0MG6N.png)
 

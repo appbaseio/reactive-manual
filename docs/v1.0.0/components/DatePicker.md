@@ -1,6 +1,6 @@
 {"bigh3": true}
 
-## DatePicker
+# DatePicker
 
 ![Image to be displayed](https://i.imgur.com/HnZexE9.png)
 

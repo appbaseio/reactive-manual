@@ -1,6 +1,6 @@
 {"bigh3": true}
 
-## SingleDropdownRange
+# SingleDropdownRange
 
 ![Image to be displayed](https://i.imgur.com/A23Iu2w.png)
 

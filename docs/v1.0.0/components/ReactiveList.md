@@ -2,7 +2,7 @@
 
 {% raw %}
 
-## ReactiveList
+# ReactiveList
 
 ![Image to be displayed](https://i.imgur.com/GcUFZjh.png)
 

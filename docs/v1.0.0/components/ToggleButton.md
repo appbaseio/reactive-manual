@@ -1,6 +1,6 @@
 {"bigh3": true}
 
-## ToggleButton
+# ToggleButton
 
 ![Image to be displayed](https://i.imgur.com/Zyooy5N.png)
 

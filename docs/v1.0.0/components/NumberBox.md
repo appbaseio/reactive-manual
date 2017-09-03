@@ -1,6 +1,6 @@
 {"bigh3": true}
 
-## NumberBox
+# NumberBox
 
 ![Image to be displayed](https://i.imgur.com/0Xfg8pM.png)
 

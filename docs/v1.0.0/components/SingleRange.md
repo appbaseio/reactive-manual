@@ -1,6 +1,6 @@
 {"bigh3": true}
 
-## SingleRange
+# SingleRange
 
 ![Image to be displayed](https://i.imgur.com/55jFax6.png)
 

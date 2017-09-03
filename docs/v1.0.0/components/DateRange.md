@@ -1,6 +1,6 @@
 {"bigh3": true}
 
-## DateRange
+# DateRange
 
 ![Image to be displayed](https://i.imgur.com/Tl2xXNS.png)
 
@@ -117,7 +117,7 @@ All reactivebase components are `rbc` namespaced.
       return {
         query: {
           range: {
-            lte: 
+            lte:
           }
         }
       }

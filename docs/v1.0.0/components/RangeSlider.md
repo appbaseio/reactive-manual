@@ -1,6 +1,6 @@
 {"bigh3": true}
 
-## RangeSlider
+# RangeSlider
 
 ![Image to be displayed](https://i.imgur.com/OYUWZHL.png)
 
