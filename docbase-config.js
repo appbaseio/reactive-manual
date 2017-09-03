@@ -119,28 +119,20 @@ var docbaseConfig ={
             "label":"Base Components",
             "files":[
                {
+                  "name":"TextField",
+                  "label":"Text Field"
+               },
+               {
+                  "name":"ToggleButton",
+                  "label":"Toggle Button"
+               },
+               {
                   "name":"SingleList",
                   "label":"Single List"
                },
                {
                   "name":"MultiList",
                   "label":"Multi List"
-               },
-               {
-                  "name":"SingleDropdownList",
-                  "label":"Single Dropdown List"
-               },
-               {
-                  "name":"MultiDropdownList",
-                  "label":"Multi Dropdown List"
-               },
-               {
-                  "name":"SingleDataList",
-                  "label":"Single Data List"
-               },
-               {
-                  "name":"MultiDataList",
-                  "label":"Multi Data List"
                },
                {
                   "name":"SingleRange",
@@ -151,28 +143,12 @@ var docbaseConfig ={
                   "label":"Multi Range"
                },
                {
-                  "name":"SingleDropdownRange",
-                  "label":"Single Dropdown Range"
-               },
-               {
-                  "name":"MultiDropdownRange",
-                  "label":"Multi Dropdown Range"
-               },
-               {
-                  "name":"ToggleButton",
-                  "label":"Toggle Button"
-               },
-               {
                   "name":"RangeSlider",
                   "label":"Range Slider"
                },
                {
                   "name":"NumberBox",
                   "label":"Number Box"
-               },
-               {
-                  "name":"TextField",
-                  "label":"Text Field"
                },
                {
                   "name":"DataSearch",
@@ -187,10 +163,6 @@ var docbaseConfig ={
                   "label":"Date Range"
                },
                {
-                  "name":"SelectedFilters",
-                  "label":"Selected Filters"
-               },
-               {
                   "name":"DataController",
                   "label":"Data Controller"
                },
@@ -201,6 +173,34 @@ var docbaseConfig ={
                {
                   "name":"ReactiveElement",
                   "label":"Reactive Element"
+               },
+               {
+                  "name":"SingleDataList",
+                  "label":"Single Data List"
+               },
+               {
+                  "name":"MultiDataList",
+                  "label":"Multi Data List"
+               },
+               {
+                  "name":"SingleDropdownList",
+                  "label":"Single Dropdown List"
+               },
+               {
+                  "name":"MultiDropdownList",
+                  "label":"Multi Dropdown List"
+               },
+               {
+                  "name":"SingleDropdownRange",
+                  "label":"Single Dropdown Range"
+               },
+               {
+                  "name":"MultiDropdownRange",
+                  "label":"Multi Dropdown Range"
+               },
+               {
+                  "name":"SelectedFilters",
+                  "label":"Selected Filters"
                }
             ]
          },
