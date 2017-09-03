@@ -4,7 +4,7 @@
 
 ### Data Aware UI components
 
-One of the key ideas behind Reactive Maps is the abstraction of a query interface.
+One of the key ideas behind Reactive Search and Reactive Maps is the abstraction of a query interface.
 
 The UI components are already associated with the data queries. For instance,
 

@@ -4,7 +4,7 @@
 
 ## React
 
-One of the key ideas behind Reactive Maps is the sensor / actuator design pattern, which allows defining how an actuator component reacts to changes in the states of the sensors.
+One of the key ideas behind Reactive Search and Reactive Maps is the reactive design pattern, which allows defining how a component reacts to changes in the states of the sensors.
 
 ### Usage
 
@@ -21,7 +21,7 @@ One of the key ideas behind Reactive Maps is the sensor / actuator design patter
 ### Props
 
 - **react** `Object`  
-    `react` prop is available in components whose data view should reactively update when on or more dependent components change their states, e.g. [`ReactiveMap`](http://opensource.appbase.io/reactivemaps/manual/v1.0.0/map-components/ReactiveMap.html), [`ReactiveList`](https://opensource.appbase.io/reactivemaps/manual/v1.0.0/components/ReactiveList.html).
+    `react` prop is available in components whose data view should reactively update when on or more dependent components change their states, e.g. [`ReactiveMap`](v1.0.0/map-components/ReactiveMap.html), [`ReactiveList`](v1.0.0/components/ReactiveList.html).
   - **key** `String`  
       one of `and`, `or`, `not` defines the combining clause.
       - **and** clause implies that the results will be filtered by matches from **all** of the associated component states.
