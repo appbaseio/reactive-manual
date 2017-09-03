@@ -11,7 +11,7 @@ The UI components are already associated with the data queries. For instance,
 - **SingleList** and **MultiList** components create a exact term match query based on the selected items.
 - A **RangeSlider** component creates a numeric range query based on the selected `start` and `end` values.
 
-Components rely on the `appbaseField` prop for selecting the database field on which the query needs to be applied.
+Components rely on the `dataField` prop for selecting the database field on which the query needs to be applied.
 
 However, there are cases where you would wish to override the associated query with your own. For example,
 

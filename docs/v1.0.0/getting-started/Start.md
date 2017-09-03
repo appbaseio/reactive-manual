@@ -52,7 +52,7 @@ class HelloWorld extends Component {
 					<SingleList
 						title="SingleList Sensor"
 						componentId="SingleListSensor"
-						appbaseField="group.group_city"
+						dataField="group.group_city"
 						size={50}
 						showSearch={true}
 					/>
@@ -61,7 +61,7 @@ class HelloWorld extends Component {
 					<ReactiveMap
 						title="ReactiveMap Actuator"
 						componentId="ReactiveMapActuator"
-						appbaseField="venue"
+						dataField="venue"
 						react={{
 							"and": "SingleListSensor"
 						}}

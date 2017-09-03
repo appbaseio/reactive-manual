@@ -65,16 +65,16 @@ class HelloWorld extends Component {
 						<div className="col s12 col-xs-12">
 							<CategorySearch
 								componentId="SearchSensor"
-								appbaseField="name"
+								dataField="name"
 								categoryField="brand.raw"
 								placeholder="Search Cars"
-								autocomplete={false}
+								autosuggest={false}
 							/>
 						</div>
 						<div className="col s12 col-xs-12">
 							<RatingsFilter
 								componentId="RatingsSensor"
-								appbaseField="rating"
+								dataField="rating"
 								title="RatingsFilter"
 								data={
 								[{ start: 4, end: 5, label: "4 stars and up" },
@@ -93,7 +93,7 @@ class HelloWorld extends Component {
 					<div className="col s6 col-xs-6">
 						<ResultCard
 							componentId="SearchResult"
-							appbaseField="name"
+							dataField="name"
 							title="Results"
 							from={0}
 							size={20}
@@ -101,17 +101,17 @@ class HelloWorld extends Component {
 							sortOptions={[
 								{
 									label: "Lowest Price First",
-									appbaseField: "price",
+									dataField: "price",
 									sortBy: "asc"
 								},
 								{
 									label: "Highest Price First",
-									appbaseField: "price",
+									dataField: "price",
 									sortBy: "desc"
 								},
 								{
 									label: "Most rated",
-									appbaseField: "rating",
+									dataField: "rating",
 									sortBy: "desc"
 								}
 							]}
