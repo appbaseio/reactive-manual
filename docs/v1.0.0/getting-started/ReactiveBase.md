@@ -35,6 +35,6 @@ This is the first component you will need to add.
 
 Once you have added the **ReactiveBase** component, you can get started with adding other components as its children.
 
-* Map specific components can be found [here](v1.0.0/map-components/ReactiveMap.html).
-* Search specific components can be found [here](v1.0.0/search-components/CategorySearch.html).
-* Generic components can be found [here](v1.0.0/components/SingleList.html).
+* Map specific components can be found [here](v1.0.0/map-components/index.html).
+* Search specific components can be found [here](v1.0.0/search-components/index.html).
+* Generic components can be found [here](v1.0.0/components/index.html).
