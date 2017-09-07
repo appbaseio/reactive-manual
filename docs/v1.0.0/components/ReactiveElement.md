@@ -110,12 +110,12 @@ All reactivebase components are `rbc` namespaced.
 
 ## Examples
 
-1. ReactiveElement with all the default props with a single sensor filter.
+1. [ReactiveElement with all the default props with a single sensor filter](../playground/?knob-title=ReactiveElement&selectedKind=search%2FReactiveElement&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
-2. ReactiveElement with a search and a filter sensor.
+2. [ReactiveElement with a search and a filter sensor](../playground/?knob-title=ReactiveElement&selectedKind=search%2FReactiveElement&selectedStory=With%20title&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
-3. ReactiveElement that shows streaming updates.
+3. [ReactiveElement that shows streaming updates](../playground/?knob-title=ReactiveElement&knob-placeholder=Select%20city%20from%20the%20list&knob-showResultStats=false&selectedKind=search%2FReactiveElement&selectedStory=Stream&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
-4. Playground (with all knob actions).
+4. [Playground (with all knob actions)](../playground/?knob-title=ReactiveElement&knob-placeholder=Select%20city%20from%20the%20list&knob-showResultStats=true&knob-from=0&knob-size=5&knob-initialLoader=Loading%20results..&knob-noResults=No%20results%20found%21%20Try%20a%20different%20filter%20duh..&knob-stream=false&selectedKind=search%2FReactiveElement&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
 {% endraw %}
