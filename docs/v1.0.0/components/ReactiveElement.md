@@ -69,6 +69,11 @@ Example uses:
 - **react** `Object` [optional]  
     a dependency object defining how this component should react based on the state changes in the sensor components.
 
+## Syntax
+
+<p data-height="500" data-theme-id="light" data-slug-hash="EvBoRO" data-default-tab="js" data-user="divyanshu013" data-embed-version="2" data-pen-title="ReactiveElement docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/EvBoRO/">ReactiveElement docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
 ## Styles
 
 All reactivebase components are `rbc` namespaced.
@@ -109,6 +114,9 @@ All reactivebase components are `rbc` namespaced.
     an extension of the onData() function which contains the entire result data and returns an array of HTML elements to be rendered in the component view.
 
 ## Examples
+
+<p data-height="500" data-theme-id="light" data-slug-hash="EvBoRO" data-default-tab="result" data-user="divyanshu013" data-embed-version="2" data-pen-title="ReactiveElement docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/EvBoRO/">ReactiveElement docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 1. [ReactiveElement with all the default props with a single sensor filter](../playground/?knob-title=ReactiveElement&selectedKind=search%2FReactiveElement&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
