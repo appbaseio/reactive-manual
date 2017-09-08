@@ -82,7 +82,7 @@ Example uses:
     autoMapRender={true}
     autoCenter={true}
     autoMarkerPosition={true}
-    componentStyle={{
+    style={{
       height: '700px';
     }}
 />
@@ -138,7 +138,7 @@ Example uses:
     whether map view should be rendered automatically. Defaults to `true` and is what you want most of the time. There are certain cases however where you want to re-render the map view manually.
 - **autoMarkerPosition** `Boolean` [optional]  
     whether to set the rotation angle of the marker image based on the delta changes in its location, useful when displaying realtime traffic data. Defaults to `false`.
-- **componentStyle** `Object` [optional]  
+- **style** `Object` [optional]  
     CSS style object to be applied to the `ReactiveMap` component.
 - **onData** `function`  
     event fired when one or more markers are indexed, updated or removed from the map. It takes an object with the following properties:

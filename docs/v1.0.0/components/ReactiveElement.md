@@ -83,7 +83,7 @@ All reactivebase components are `rbc` namespaced.
 ## Extending
 
 `ReactiveElement` component can be extended to
-1. customize the look and feel with `componentStyle`,
+1. customize the look and feel with `style`,
 2. render individual result data items using `onData`,
 3. render the entire result data using  `onAllData`.
 
@@ -93,7 +93,7 @@ All reactivebase components are `rbc` namespaced.
 // Register a callback function with the `onData` prop.
 <ReactiveElement
   ...
-  componentStyle={{"paddingBottom": "10px"}}
+  style={{"paddingBottom": "10px"}}
   onData={
     function(res) {
       return(
@@ -106,7 +106,7 @@ All reactivebase components are `rbc` namespaced.
 />
 ```
 
-- **componentStyle** `Object`  
+- **style** `Object`  
     CSS styles to be applied to the **ReactiveElement** component.
 - **onData** `Function`  
     takes one parameter which contains the result object and returns a HTML element to be rendered in the component view.
