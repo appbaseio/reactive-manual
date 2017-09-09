@@ -53,6 +53,8 @@ Example uses:
     database field(s) to be connected to the component's UI view.
     * If passed as an `Array` of length 2, the first `String` element is used for the lower bound and the second `String` element is used for the upper bound of the range.
     * If passed as a `String`, the field is used for both lower and upper bounds match based on the selected values from the component UI view.
+- **className** `String` [optional]  
+    css class to be injected on the component container.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **defaultSelected** `Object` [optional]  

@@ -53,6 +53,8 @@ Example uses:
     unique identifier of the component, can be referenced in other components' `react` prop.
 - **dataField** `String`  
     data field to be connected to the component's UI view. The list items are filtered by a database query on this field.
+- **className** `String` [optional]  
+    css class to be injected on the component container.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **size** `Number` [optional]  

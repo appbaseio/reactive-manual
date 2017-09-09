@@ -50,6 +50,8 @@ Example uses:
 
 - **componentId** `String`  
     unique identifier of the component, can be referenced in other components' `react` prop.
+- **className** `String` [optional]  
+    css class to be injected on the component container.
 - **title** `String or HTML` [optional]  
     set the title of the component to be shown in the UI.
 - **dataField** `String or Array`  
