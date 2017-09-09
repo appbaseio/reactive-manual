@@ -38,9 +38,9 @@ Example uses:
   dataField="price"
   data={
     [{"start": 0, "end": 10, "label": "Cheap"},
-    {"start": 11, "end": 20, "label": "Moderate"},
-    {"start": 21, "end": 50, "label": "Pricey"},
-    {"start": 51, "end": 1000, "label": "First Date"}]
+     {"start": 11, "end": 20, "label": "Moderate"},
+     {"start": 21, "end": 50, "label": "Pricey"},
+     {"start": 51, "end": 1000, "label": "First Date"}]
   }
   title="Prices"
   defaultSelected={["Cheap", "Moderate"]}

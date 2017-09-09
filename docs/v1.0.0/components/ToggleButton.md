@@ -35,8 +35,8 @@ Example uses:
   dataField="group_topics.topic_name.raw"
   data={
     [{"label": "Social",   "value": "Social"},
-    {"label": "Travel",   "value": "Travel"},
-    {"label": "Outdoors", "value": "Outdoors"}]
+     {"label": "Travel",   "value": "Travel"},
+     {"label": "Outdoors", "value": "Outdoors"}]
   }
   title="Meetups"
   defaultSelected=["Social"]
