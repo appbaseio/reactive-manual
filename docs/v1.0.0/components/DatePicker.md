@@ -69,7 +69,7 @@ Example uses:
     * `date_time_no_millis` date expressed using a combination of date and time without milliseconds separated by T: yyyy-MM-dd'T'HH:mm:ssZ.
     * `basic_date` date expressed in yyyyMMdd format.
     * `basic_date_time` date expressed in yyyyMMdd*T*HH:mm:ss.SSSZ format.
-    * `basic_date_tiime_no_millis` date expressed in yyyyMMdd*T*HH:mm:ssZ format.
+    * `basic_date_time_no_millis` date expressed in yyyyMMdd*T*HH:mm:ssZ format.
     * `basic_time` date expressed as just time in the HHmmss.SSZ format.
     * `basic_time_no_millis` date expressed as just time but without milliseconds in the HHmmss format.
 - **extra** `Object` [optional]  
