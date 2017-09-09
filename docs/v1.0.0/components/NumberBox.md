@@ -49,7 +49,7 @@ Example uses:
     title of the component to be shown in the UI.
 - **defaultSelected** `Number` [optional]  
     preset a valid value within the [start, end] range.
-- **data** `Object`  
+- **data** `Object` [optional]
     an object with `start` and `end` values and optionally an associated `label` to be displayed in the UI.
 - **labelPosition** `String` [optional]  
     position where label is shown, one of "left", "top", "right", "bottom". Defaults to `left`.

@@ -63,7 +63,7 @@ Example uses:
     pre-select a label from the `data` array.
 - **showRadio** `Boolean` [optional]  
     show radio button icon for each range item. Defaults to `true`.
-- **data** `Object Array`  
+- **data** `Object Array` [optional]
     collection of UI `labels` with associated `start` and `end` range values.
 - **showFilter** `Boolean` [optional]  
     show the selected item as a filter in the [selected filters view](/v1/component/MultiList.html). Defaults to `true`.

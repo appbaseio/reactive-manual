@@ -61,7 +61,7 @@ Example uses:
     title of the component to be shown in the UI.
 - **defaultSelected** `String` [optional]  
     pre-select a label from the `data` array.
-- **data** `Object Array`  
+- **data** `Object Array` [optional]
     collection of UI `labels` with associated `start` and `end` range values.
 - **placeholder** `String` [optional]  
     set the placeholder to show for the dropdown UI, useful when no option is `defaultSelected`. The default placeholder value is set to "Select...".
