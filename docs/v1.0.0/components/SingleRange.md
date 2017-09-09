@@ -57,14 +57,14 @@ Example uses:
     unique identifier of the component, can be referenced in other components' `react` prop.
 - **dataField** `String`  
     data field to be connected to the component's UI view. The range items are filtered by a database query on this field.
+- **data** `Object Array`  
+    collection of UI `labels` with associated `start` and `end` range values.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **defaultSelected** `String` [optional]  
     pre-select a label from the `data` array.
 - **showRadio** `Boolean` [optional]  
     show radio button icon for each range item. Defaults to `true`.
-- **data** `Object Array` [optional]  
-    collection of UI `labels` with associated `start` and `end` range values.
 - **showFilter** `Boolean` [optional]  
     show the selected item as a filter in the [selected filters view](/v1/component/MultiList.html). Defaults to `true`.
 - **filterLabel** `String` [optional]  
