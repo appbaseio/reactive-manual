@@ -33,13 +33,13 @@ Example uses:
 <ToggleButton
   componentId="MeetupTops"
   dataField="group_topics.topic_name.raw"
-  title="Meetups"
-  defaultSelected=["Social"]
   data={
     [{"label": "Social",   "value": "Social"},
-     {"label": "Travel",   "value": "Travel"},
-     {"label": "Outdoors", "value": "Outdoors"}]
+    {"label": "Travel",   "value": "Travel"},
+    {"label": "Outdoors", "value": "Outdoors"}]
   }
+  title="Meetups"
+  defaultSelected=["Social"]
   multiSelect={true}
   showFilter={true}
   filterLabel="City"

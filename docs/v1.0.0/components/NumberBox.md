@@ -28,9 +28,9 @@ Example uses:
 <NumberBox
   componentId="NumberBoxSensor"
   dataField="guests"
+  data={{ "label": "Guests", "start": 0, "end": 5 }}
   title="NumberBox component"
   defaultSelected={0}
-  data={{ "label": "Guests", "start": 0, "end": 5 }}
   labelPosition="left"
   queryFormat="gte"
   showFilter={true}

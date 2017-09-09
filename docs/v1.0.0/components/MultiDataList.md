@@ -20,7 +20,6 @@ Example uses:
 <MultiDataList
   componentId="MeetupTops"
   dataField="group.group_topics.topic_name_raw.raw"
-  title="Meetups"
   data={
     [{
       label: "Social",
@@ -33,6 +32,7 @@ Example uses:
       value: "Outdoors"
     }]
   }
+  title="Meetups"
 />
 ```
 
@@ -42,7 +42,6 @@ Example uses:
 <MultiDataList
   componentId="MeetupTops"
   dataField="group.group_topics.topic_name_raw.raw"
-  title="Meetups"
   data={
     [{
       label: "Social",
@@ -55,6 +54,7 @@ Example uses:
       value: "Outdoors"
     }]
   }
+  title="Meetups"
   showSearch={true}
   showCheckbox={true}
   placeholder="Filter meetups"

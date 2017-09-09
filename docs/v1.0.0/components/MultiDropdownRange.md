@@ -20,13 +20,13 @@ Example uses:
 <MultiDropdownRange
   componentId="PriceSensor"
   dataField="price"
-  title="Prices"
   data={
     [{"start": 0, "end": 10, "label": "Cheap"},
      {"start": 11, "end": 20, "label": "Moderate"},
      {"start": 21, "end": 50, "label": "Pricey"},
      {"start": 51, "end": 1000, "label": "First Date"}]
   }
+  title="Prices"
 />
 ```
 
@@ -36,14 +36,14 @@ Example uses:
 <MultiDropdownRange
   componentId="PriceSensor"
   dataField="price"
-  title="Prices"
-  defaultSelected={["Cheap", "Moderate"]}
   data={
     [{"start": 0, "end": 10, "label": "Cheap"},
-     {"start": 11, "end": 20, "label": "Moderate"},
-     {"start": 21, "end": 50, "label": "Pricey"},
-     {"start": 51, "end": 1000, "label": "First Date"}]
+    {"start": 11, "end": 20, "label": "Moderate"},
+    {"start": 21, "end": 50, "label": "Pricey"},
+    {"start": 51, "end": 1000, "label": "First Date"}]
   }
+  title="Prices"
+  defaultSelected={["Cheap", "Moderate"]}
   placeholder="Select price ranges"
   showFilter={true}
   filterLabel="Price"

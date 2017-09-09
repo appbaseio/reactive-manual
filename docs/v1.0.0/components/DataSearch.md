@@ -50,10 +50,10 @@ Example uses:
 
 - **componentId** `String`  
     unique identifier of the component, can be referenced in other components' `react` prop.
-- **title** `String or HTML` [optional]  
-    set the title of the component to be shown in the UI.
 - **dataField** `String or Array`  
     database field(s) to be connected to the component's UI view. DataSearch accepts an Array in addition to String, useful for applying search across multiple fields.
+- **title** `String or HTML` [optional]  
+    set the title of the component to be shown in the UI.
 - **defaultSelected** `string` [optional]  
     preset the search query text in the search box.
 - **searchWeight** `Array` [optional]  

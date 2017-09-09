@@ -20,13 +20,13 @@ Example uses:
 <MultiRange
   componentId="PriceSensor"
   dataField="price"
-  title="Prices"
   data={
     [{"start": 0, "end": 10, "label": "Cheap"},
      {"start": 11, "end": 20, "label": "Moderate"},
      {"start": 21, "end": 50, "label": "Pricey"},
      {"start": 51, "end": 1000, "label": "First Date"}]
   }
+  title="Prices"
 />
 ```
 
@@ -36,15 +36,15 @@ Example uses:
 <MultiRange
   componentId="PriceSensor"
   dataField="price"
+  data={
+    [{"start": 0, "end": 10, "label": "Cheap"},
+    {"start": 11, "end": 20, "label": "Moderate"},
+    {"start": 21, "end": 50, "label": "Pricey"},
+    {"start": 51, "end": 1000, "label": "First Date"}]
+  }
   title="Prices"
   defaultSelected={["Cheap", "Moderate"]}
   showCheckbox={true}
-  data={
-    [{"start": 0, "end": 10, "label": "Cheap"},
-     {"start": 11, "end": 20, "label": "Moderate"},
-     {"start": 21, "end": 50, "label": "Pricey"},
-     {"start": 51, "end": 1000, "label": "First Date"}]
-  }
   showFilter={true}
   filterLabel="Prices"
   URLParams={false}
