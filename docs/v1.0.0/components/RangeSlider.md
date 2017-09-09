@@ -18,6 +18,7 @@ Example uses:
 <RangeSlider
   componentId="RangeSliderSensor"
   dataField="guests"
+  title="Guests"
   range={{
     "start": 0,
     "end": 10

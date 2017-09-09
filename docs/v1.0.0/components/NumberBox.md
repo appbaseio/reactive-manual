@@ -19,6 +19,7 @@ Example uses:
   componentId="NumberBoxSensor"
   dataField="guests"
   data={{ "label": "Guests", "start": 0, "end": 5 }}
+  title="NumberBox component"
 />
 ```
 
