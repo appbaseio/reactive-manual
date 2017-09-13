@@ -64,6 +64,8 @@ Example uses:
     data field to be connected to the component's UI view.
 - **data** `Object Array`  
     collection of UI `labels` with associated `start` and `end` range values.
+- **className** `String` [optional]  
+    css class to be injected on the component container.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **defaultSelected** `Object` [optional]  

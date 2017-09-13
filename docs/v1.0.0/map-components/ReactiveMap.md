@@ -92,6 +92,8 @@ Example uses:
     unique identifier of the component, can be referenced in other components' `react` prop.
 - **dataField** `String`  
     DB data field to be connected to the component's UI view, usually of a geopoint (i.e. location) data type and used for rendering the markers on the map.
+- **className** `String` [optional]  
+    css class to be injected on the component container.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **size** `Number` [optional]  
