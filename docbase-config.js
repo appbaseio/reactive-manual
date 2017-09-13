@@ -111,6 +111,10 @@ var docbaseConfig ={
                {
                   "name":"ResultList",
                   "label":"Result List"
+               },
+               {
+                  "name":"ViewSwitcher",
+                  "label":"View Switcher"
                }
             ]
          },
