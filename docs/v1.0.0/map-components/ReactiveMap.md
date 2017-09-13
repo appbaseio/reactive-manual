@@ -31,11 +31,9 @@ Example uses:
     componentId="MapUI"
     dataField="location"
     title="Venue Location Map"
-
     size={100}
     defaultZoom={13}
     defaultCenter={{ lat: 37.74, lon: -122.45 }}
-
     showMapStyles={true}
     defaultMapStyle="Standard"
     showMarkers={true}
