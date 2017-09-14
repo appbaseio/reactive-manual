@@ -137,7 +137,7 @@ Example uses:
 - **autoMarkerPosition** `Boolean` [optional]  
     whether to set the rotation angle of the marker image based on the delta changes in its location, useful when displaying realtime traffic data. Defaults to `false`.
 - **className** `String`  
-    css class to be injected on the component container.
+    CSS class to be injected on the component container.
 - **style** `Object`  
     CSS style object to be applied to the `ReactiveMap` component.
 - **onData** `function`  

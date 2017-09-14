@@ -63,7 +63,7 @@ TBD
 ```
 
 - **className** `String`  
-    css class to be injected on the component container.
+    CSS class to be injected on the component container.
 - **style** `Object`  
     CSS Styles to be applied to the **ResultCard** component.
 
