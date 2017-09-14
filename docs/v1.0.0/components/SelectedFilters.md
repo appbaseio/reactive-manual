@@ -43,10 +43,13 @@ All reactivebase components are `rbc` namespaced.
 
 ```
 <SelectedFilters
+  className="custom-class"
   style={{"paddingBottom": "10px"}}
 />
 ```
 
+- **className** `String`  
+    css class to be injected on the component container.
 - **style** `Object`
     CSS styles to be applied to the **TextField** component.
 
