@@ -101,7 +101,7 @@ All reactivebase components are `rbc` namespaced.
 
 `MultiList` component can be extended to
 
-1. customize the look and feel with `style`,
+1. customize the look and feel with `className`, `style`,
 2. update the underlying DB query with `customQuery`,
 3. connect with external interfaces using `beforeValueChange` and `onValueChange`.
 4. specify how options should be filtered or updated using `react` prop.
@@ -109,6 +109,7 @@ All reactivebase components are `rbc` namespaced.
 ```
 <MultiList
   ...
+  className="custom-class"
   style={{"paddingBottom": "10px"}}
   customQuery={
     function(value) {

@@ -39,7 +39,7 @@ All reactivebase components are `rbc` namespaced.
 
 ## Extending
 
-`SelectedFilters` component can be extended to customize the look and feel with `style`.
+`SelectedFilters` component can be extended to customize the look and feel with `className`, `style`.
 
 ```
 <SelectedFilters

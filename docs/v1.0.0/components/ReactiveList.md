@@ -142,7 +142,7 @@ All reactivebase components are `rbc` namespaced.
 ## Extending
 
 `ReactiveList` component can be extended to
-1. customize the look and feel with `style`,
+1. customize the look and feel with `className`, `style`,
 2. render individual result data items using `onData`,
 3. render the entire result data using  `onAllData`.
 
@@ -150,6 +150,7 @@ All reactivebase components are `rbc` namespaced.
 // Register a callback function with the `onData` prop.
 <ReactiveList
   ...
+  className="custom-class"
   style={{"paddingBottom": "10px"}}
   onData={
     function(res) {

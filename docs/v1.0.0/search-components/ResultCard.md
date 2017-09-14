@@ -151,13 +151,14 @@ All reactivebase components are `rbc` namespaced.
 ## Extending
 
 `ResultCard` component can be extended to
-1. customize the look and feel with `style` prop,
+1. customize the look and feel with `className`, `style`,
 2. render individual result data items using `onData`,
-3. specify how results should be filtered using `react` prop.
+3. specify how results should be filtered using `react`.
 
 ```js
 <ResultCard
   ...
+  className="custom-class"
   // specify any number of custom styles.
   style={{"paddingBottom": "10px"}}
   // register a callback function with the `onData` prop.
