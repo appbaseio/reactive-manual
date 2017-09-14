@@ -180,9 +180,9 @@ All reactivebase components are `rbc` namespaced.
 />
 ```
 
-- **className** `String` [optional]  
+- **className** `String`  
     css class to be injected on the component container.
-- **style** `Object` [optional]  
+- **style** `Object`  
     CSS Styles to be applied to the **ResultList** component.
 - **onData** `Function` [optional]  
     a callback function where user can define how to render the view based on the data changes. In `ResultList`'s case, the expected return format is an object with `image`, `image_size`, `title`, `url` and `desc` keys.

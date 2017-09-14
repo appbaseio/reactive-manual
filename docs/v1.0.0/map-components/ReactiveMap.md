@@ -136,9 +136,9 @@ Example uses:
     whether map view should be rendered automatically. Defaults to `true` and is what you want most of the time. There are certain cases however where you want to re-render the map view manually.
 - **autoMarkerPosition** `Boolean` [optional]  
     whether to set the rotation angle of the marker image based on the delta changes in its location, useful when displaying realtime traffic data. Defaults to `false`.
-- **className** `String` [optional]  
+- **className** `String`  
     css class to be injected on the component container.
-- **style** `Object` [optional]  
+- **style** `Object`  
     CSS style object to be applied to the `ReactiveMap` component.
 - **onData** `function`  
     event fired when one or more markers are indexed, updated or removed from the map. It takes an object with the following properties:
