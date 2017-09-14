@@ -54,8 +54,6 @@ Example uses:
     unique identifier of the component, can be referenced in other components' `react` prop.
 - **dataField** `String or Array`  
     data field(s) on which the search query will be applied to. If you want to search across multiple fields, pass them as an `Array`.
-- **className** `String` [optional]  
-    css class to be injected on the component container.
 - **categoryField** `String` [optional]  
     data field which has the category values mapped.
 - **title** `String or HTML` [optional]  
@@ -147,6 +145,8 @@ All reactivebase components are `rbc` namespaced.
 />
 ```
 
+- **className** `String` [optional]  
+    css class to be injected on the component container.
 - **componentStyle** `Object`
     CSS styles to be applied to the **CategorySearch** component.
 - **customQuery** `Function`

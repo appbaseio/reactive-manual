@@ -64,8 +64,6 @@ Example uses:
     data field to be connected to the component's UI view.
 - **data** `Object Array`  
     collection of UI `labels` with associated `start` and `end` range values.
-- **className** `String` [optional]  
-    css class to be injected on the component container.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **defaultSelected** `Object` [optional]  
@@ -145,6 +143,8 @@ All reactivebase and reactivemaps components are `rbc` namespaced.
 />
 ```
 
+- **className** `String` [optional]  
+    css class to be injected on the component container.
 - **componentStyle** `Object`  
     CSS styles to be applied to the **GeoDistanceDropdown** component.
 - **customQuery** `Function`  

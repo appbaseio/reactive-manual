@@ -44,8 +44,6 @@ Example uses:
 
 - **componentId** `String`  
     unique id of the sensor, can be referenced in another component's **react** prop.
-- **className** `String` [optional]  
-    css class to be injected on the component container.
 - **title** `String or HTML` [optional]  
     Sets the title of the component to be shown in the UI, applicable when **visible** is set to `true`.
 - **visible** `Boolean` [optional]  
@@ -115,6 +113,8 @@ All reactivebase components are `rbc` namespaced.
 />
 ```
 
+- **className** `String` [optional]  
+    css class to be injected on the component container.
 - **componentStyle** `Object`  
     CSS styles to be applied to the **DataController** component. This prop is only applicable when **visible** prop is set to `true`.
 - **customQuery** `Function`  

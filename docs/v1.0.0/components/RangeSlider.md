@@ -62,8 +62,6 @@ While `RangeSlider` only requires the above props to be used, it comes with many
     unique identifier of the component, can be referenced in other components' `react` prop.
 - **dataField** `String`  
     DB data field to be mapped with the component's UI view. The selected range creates a database query on this field.
-- **className** `String` [optional]  
-    css class to be injected on the component container.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **range** `Object`  
@@ -141,6 +139,8 @@ All reactivebase components are `rbc` namespaced.
 />
 ```
 
+- **className** `String` [optional]  
+    css class to be injected on the component container.
 - **componentStyle** `Object`  
     CSS styles to be applied to the **RangeSlider** component.
 - **customQuery** `Function`  

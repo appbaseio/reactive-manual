@@ -92,8 +92,6 @@ Example uses:
     unique identifier of the component, can be referenced in other components' `react` prop.
 - **dataField** `String`  
     DB data field to be connected to the component's UI view, usually of a geopoint (i.e. location) data type and used for rendering the markers on the map.
-- **className** `String` [optional]  
-    css class to be injected on the component container.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **size** `Number` [optional]  
@@ -138,6 +136,8 @@ Example uses:
     whether map view should be rendered automatically. Defaults to `true` and is what you want most of the time. There are certain cases however where you want to re-render the map view manually.
 - **autoMarkerPosition** `Boolean` [optional]  
     whether to set the rotation angle of the marker image based on the delta changes in its location, useful when displaying realtime traffic data. Defaults to `false`.
+- **className** `String` [optional]  
+    css class to be injected on the component container.
 - **componentStyle** `Object` [optional]  
     CSS style object to be applied to the `ReactiveMap` component.
 - **onData** `function`  

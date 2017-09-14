@@ -44,8 +44,6 @@ Example uses:
     unique identifier of the component, can be referenced in other components' `react` prop.
 - **dataField** `String`  
     DB data field to be mapped with the component's UI view, used when a database query is made on this field.
-- **className** `String` [optional]  
-    css class to be injected on the component container.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **placeholder** `String` [optional]  
@@ -121,6 +119,8 @@ All reactivebase and reactivemaps components are `rbc` namespaced.
 />
 ```
 
+- **className** `String` [optional]  
+    css class to be injected on the component container.
 - **componentStyle** `Object`  
     CSS styles to be applied to the **PlacesSearch** component.
 - **customQuery** `Function`  

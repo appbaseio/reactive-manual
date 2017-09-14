@@ -50,8 +50,6 @@ Example uses:
 
 - **componentId** `String`  
     unique identifier of the component, can be referenced in other components' `react` prop.
-- **className** `String` [optional]  
-    css class to be injected on the component container.
 - **title** `String or HTML` [optional]  
     set the title of the component to be shown in the UI.
 - **dataField** `String or Array`  
@@ -143,6 +141,8 @@ All reactivebase components are `rbc` namespaced.
 />
 ```
 
+- **className** `String` [optional]  
+    css class to be injected on the component container.
 - **componentStyle** `Object`  
     CSS styles to be applied to the **DataSearch** component.
 - **customQuery** `Function`  
