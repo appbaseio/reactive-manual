@@ -73,13 +73,14 @@ All reactivebase components are `rbc` namespaced.
 ## Extending
 
 `DataController` component can be extended to
-1. customize the look and feel with `componentStyle`,
+1. customize the look and feel with `className`, `componentStyle`,
 2. update the underlying DB query with `customQuery`,
 3. connect with external interfaces using `beforeValueChange` and `onValueChange`.
 
 ```
 <DataController
   ...
+  className="custom-class"
   componentStyle={{"paddingBottom": "10px"}}
   customQuery={
     function(value) {
