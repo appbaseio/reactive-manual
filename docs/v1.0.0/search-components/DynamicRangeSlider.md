@@ -91,7 +91,7 @@ All reactivebase components are `rbc` namespaced.
 ## Extending
 
 `DynamicRangeSlider` component can be extended to
-1. customize the look and feel with `componentStyle`.
+1. customize the look and feel with `style`.
 2. update the underlying DB query with `customQuery`.
 3. connect with external interfaces using `beforeValueChange` and `onValueChange`.
 4. filter data using a combined query context via the `react` prop.
@@ -99,7 +99,7 @@ All reactivebase components are `rbc` namespaced.
 ```
 <DynamicRangeSlider
   ...
-  componentStyle={{"paddingBottom": "10px"}}
+  style={{"paddingBottom": "10px"}}
   customQuery={
     function(value) {
       return {
@@ -137,7 +137,7 @@ All reactivebase components are `rbc` namespaced.
 
 - **className** `String` [optional]  
     css class to be injected on the component container.
-- **componentStyle** `Object`  
+- **style** `Object`  
     CSS styles to be applied to the **DynamicRangeSlider** component.
 - **customQuery** `Function`  
     takes **value** as a parameter and **returns** the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.

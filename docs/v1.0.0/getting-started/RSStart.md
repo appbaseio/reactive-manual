@@ -68,7 +68,7 @@ class HelloWorld extends Component {
 								dataField="name"
 								categoryField="brand.raw"
 								placeholder="Search Cars"
-								autosuggest={false}
+								autoSuggest={false}
 							/>
 						</div>
 						<div className="col s12 col-xs-12">

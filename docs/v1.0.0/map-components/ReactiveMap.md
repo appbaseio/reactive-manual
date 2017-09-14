@@ -80,7 +80,7 @@ Example uses:
     autoMapRender={true}
     autoCenter={true}
     autoMarkerPosition={true}
-    componentStyle={{
+    style={{
       height: '700px';
     }}
 />
@@ -138,7 +138,7 @@ Example uses:
     whether to set the rotation angle of the marker image based on the delta changes in its location, useful when displaying realtime traffic data. Defaults to `false`.
 - **className** `String` [optional]  
     css class to be injected on the component container.
-- **componentStyle** `Object` [optional]  
+- **style** `Object` [optional]  
     CSS style object to be applied to the `ReactiveMap` component.
 - **onData** `function`  
     event fired when one or more markers are indexed, updated or removed from the map. It takes an object with the following properties:
