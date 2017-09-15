@@ -95,7 +95,7 @@ All reactivebase components are `rbc` namespaced.
 ## Extending
 
 `RangeSlider` component can be extended to
-1. customize the look and feel with `style`,
+1. customize the look and feel with `className`, `style`,
 2. update the underlying DB query with `customQuery`,
 3. connect with external interfaces using `beforeValueChange`, `onValueChange` and `onQueryChange`,
 4. filter data using a combined query context via the `react` prop.
@@ -103,6 +103,7 @@ All reactivebase components are `rbc` namespaced.
 ```
 <RangeSlider
   ...
+  className="custom-class"
   style={{"paddingBottom": "10px"}}
   customQuery={
     function(value) {
@@ -146,6 +147,8 @@ All reactivebase components are `rbc` namespaced.
 />
 ```
 
+- **className** `String`  
+    CSS class to be injected on the component container.
 - **style** `Object`  
     CSS styles to be applied to the **RangeSlider** component.
 - **customQuery** `Function`  

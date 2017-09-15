@@ -82,13 +82,14 @@ All reactivebase components are `rbc` namespaced.
 ## Extending
 
 `NumberBox` component can be extended to
-1. customize the look and feel with `style`,
+1. customize the look and feel with `className`, `style`,
 2. update the underlying DB query with `customQuery`,
 3. connect with external interfaces using `beforeValueChange`, `onValueChange` and `onQueryChange`.
 
 ```
 <NumberBox
   ...
+  className="custom-class"
   style={{"paddingBottom": "10px"}}
   customQuery={
     function(value) {
@@ -129,6 +130,8 @@ All reactivebase components are `rbc` namespaced.
 />
 ```
 
+- **className** `String`  
+    CSS class to be injected on the component container.
 - **style** `Object`  
     CSS styles to be applied to the **NumberBox** component.
 - **customQuery** `Function`  

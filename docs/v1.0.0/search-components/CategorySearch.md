@@ -99,7 +99,7 @@ All reactivebase components are `rbc` namespaced.
 ## Extending
 
 `CategorySearch` component can be extended to
-1. customize the look and feel with `style`,
+1. customize the look and feel with `className`, `style`,
 2. update the underlying DB query with `customQuery`,
 3. connect with external interfaces using `beforeValueChange` and `onValueChange`.
 4. specify how search suggestions should be filtered using `react` prop.
@@ -107,6 +107,7 @@ All reactivebase components are `rbc` namespaced.
 ```
 <CategorySearch
   ...
+  className="custom-class"
   style={{"paddingBottom": "10px"}}
   customQuery={
     function(value) {
@@ -145,6 +146,8 @@ All reactivebase components are `rbc` namespaced.
 />
 ```
 
+- **className** `String`  
+    CSS class to be injected on the component container.
 - **style** `Object`
     CSS styles to be applied to the **CategorySearch** component.
 - **customQuery** `Function`

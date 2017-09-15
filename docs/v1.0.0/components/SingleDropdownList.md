@@ -87,7 +87,7 @@ All reactivebase components are `rbc` namespaced.
 ## Extending
 
 `SingleDropdownList` component can be extended to
-1. customize the look and feel with `style`,
+1. customize the look and feel with `className`, `style`,
 2. update the underlying DB query with `customQuery`,
 3. connect with external interfaces using `beforeValueChange`, `onValueChange` and `onQueryChange`,
 4. specify how options should be filtered or updated using `react` prop.
@@ -95,6 +95,7 @@ All reactivebase components are `rbc` namespaced.
 ```
 <SingleDropdownList
   ...
+  className="custom-class"
   style={{"paddingBottom": "10px"}}
   customQuery={
     function(value) {
@@ -140,6 +141,8 @@ All reactivebase components are `rbc` namespaced.
 />
 ```
 
+- **className** `String`  
+    CSS class to be injected on the component container.
 - **style** `Object`
     CSS styles to be applied to the **SingleDropdownList** component.
 - **customQuery** `Function`

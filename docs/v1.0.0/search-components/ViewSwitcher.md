@@ -52,17 +52,20 @@ TBD
 ## Extending
 
 `ViewSwitcher` component can be extended to
-1. customize the look and feel with `style` prop,
+1. customize the look and feel with `className`, `style`,
 
 ```js
 <ViewSwitcher
   ...
+  className="custom-class"
   // specify any number of custom styles.
   style={{"paddingBottom": "10px"}}
 />
 ```
 
-- **style** `Object` [optional]  
+- **className** `String`  
+    CSS class to be injected on the component container.
+- **style** `Object`  
     CSS Styles to be applied to the **ResultCard** component.
 
 ## Examples
