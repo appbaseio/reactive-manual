@@ -54,10 +54,10 @@ Example uses:
     unique identifier of the component, can be referenced in other components' `react` prop.
 - **dataField** `String`  
     data field to be mapped with the component's UI view.
-- **title** `String or HTML` [optional]  
-    title of the component to be shown in the UI.
 - **data** `Object Array`  
     collection of UI `label` with associated with `start` and `end` ratings values.
+- **title** `String or HTML` [optional]  
+    title of the component to be shown in the UI.
 - **defaultSelected** `Object` [optional]  
     pre-select a ratings value using `start` and `end` key values from one of the data elements.
 - **showFilter** `Boolean` [optional]  

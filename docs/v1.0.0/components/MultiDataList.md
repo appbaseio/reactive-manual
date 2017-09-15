@@ -20,7 +20,6 @@ Example uses:
 <MultiDataList
   componentId="MeetupTops"
   dataField="group.group_topics.topic_name_raw.raw"
-  title="Meetups"
   data={
     [{
       label: "Social",
@@ -33,6 +32,7 @@ Example uses:
       value: "Outdoors"
     }]
   }
+  title="Meetups"
 />
 ```
 
@@ -42,7 +42,6 @@ Example uses:
 <MultiDataList
   componentId="MeetupTops"
   dataField="group.group_topics.topic_name_raw.raw"
-  title="Meetups"
   data={
     [{
       label: "Social",
@@ -55,6 +54,7 @@ Example uses:
       value: "Outdoors"
     }]
   }
+  title="Meetups"
   showSearch={true}
   showCheckbox={true}
   placeholder="Filter meetups"
@@ -72,10 +72,10 @@ Example uses:
     unique identifier of the component, can be referenced in other components' `react` prop.
 - **dataField** `String`  
     data field to be connected to the component's UI view.
-- **title** `String or HTML` [optional]  
-    title of the component to be shown in the UI.
 - **data** `Object Array`  
     collection of UI `labels` with associated `value` to be matched against the database field.
+- **title** `String or HTML` [optional]  
+    title of the component to be shown in the UI.
 - **showSearch** `Boolean` [optional]  
     whether to display a searchbox to filter the data list. Defaults to `false`.
 - **showCheckbox** `Boolean` [optional]  

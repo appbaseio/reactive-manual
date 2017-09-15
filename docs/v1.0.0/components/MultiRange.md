@@ -20,13 +20,13 @@ Example uses:
 <MultiRange
   componentId="PriceSensor"
   dataField="price"
-  title="Prices"
   data={
     [{"start": 0, "end": 10, "label": "Cheap"},
      {"start": 11, "end": 20, "label": "Moderate"},
      {"start": 21, "end": 50, "label": "Pricey"},
      {"start": 51, "end": 1000, "label": "First Date"}]
   }
+  title="Prices"
 />
 ```
 
@@ -36,15 +36,15 @@ Example uses:
 <MultiRange
   componentId="PriceSensor"
   dataField="price"
-  title="Prices"
-  defaultSelected={["Cheap", "Moderate"]}
-  showCheckbox={true}
   data={
     [{"start": 0, "end": 10, "label": "Cheap"},
      {"start": 11, "end": 20, "label": "Moderate"},
      {"start": 21, "end": 50, "label": "Pricey"},
      {"start": 51, "end": 1000, "label": "First Date"}]
   }
+  title="Prices"
+  defaultSelected={["Cheap", "Moderate"]}
+  showCheckbox={true}
   showFilter={true}
   filterLabel="Prices"
   URLParams={false}
@@ -57,14 +57,14 @@ Example uses:
     unique identifier of the component, can be referenced in other components' `react` prop.
 - **dataField** `String`  
     data field to be connected to the component's UI view. The range items are filtered by a database query on this field.
+- **data** `Object Array`  
+    collection of UI `labels` with associated `start` and `end` range values.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **defaultSelected** `Array` [optional]  
     pre-select one or more labels from the `data` array.
 - **showCheckbox** `Boolean` [optional]  
     show checkbox icon for each range item. Defaults to `true`.
-- **data** `Object Array`  
-    collection of UI `labels` with associated `start` and `end` range values.
 - **showFilter** `Boolean` [optional]  
     show as filter when a value is selected in a global selected filters view. Defaults to `true`.
 - **filterLabel** `String` [optional]  

@@ -33,13 +33,13 @@ Example uses:
 <ToggleButton
   componentId="MeetupTops"
   dataField="group_topics.topic_name.raw"
-  title="Meetups"
-  defaultSelected=["Social"]
   data={
     [{"label": "Social",   "value": "Social"},
      {"label": "Travel",   "value": "Travel"},
      {"label": "Outdoors", "value": "Outdoors"}]
   }
+  title="Meetups"
+  defaultSelected=["Social"]
   multiSelect={true}
   showFilter={true}
   filterLabel="City"
@@ -53,12 +53,12 @@ Example uses:
     unique identifier of the component, can be referenced in other components' `react` prop.
 - **dataField** `String`  
     data field to be connected to the component's UI view.
+- **data** `Object Array`  
+    collection of UI `labels` with associated `value` to be matched against the database field.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **defaultSelected** `Array` [optional]  
     an array of default selected label(s) to pre-select one or more buttons.
-- **data** `Object Array`  
-    collection of UI `labels` with associated `value` to be matched against the database field.
 - **multiSelect** `Boolean` [optional]  
     whether multiple buttons can be selected, defaults to **true**. When set to **false**, only one button can be selected.
 - **showFilter** `Boolean` [optional]  
