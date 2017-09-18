@@ -93,7 +93,7 @@ All reactivebase components are `rbc` namespaced.
 `DynamicRangeSlider` component can be extended to
 1. customize the look and feel with `className`, `style`.
 2. update the underlying DB query with `customQuery`.
-3. connect with external interfaces using `beforeValueChange` and `onValueChange`.
+3. connect with external interfaces using `beforeValueChange`, `onValueChange` and `onQueryChange`,
 4. filter data using a combined query context via the `react` prop.
 
 ```
@@ -117,6 +117,13 @@ All reactivebase components are `rbc` namespaced.
       console.log("current value: ", value)
       // set the state
       // use the value with other js code
+    }
+  }
+  onQueryChange={
+    function(prevQuery, nextQuery) {
+      // use the query with other js code
+      console.log('prevQuery', prevQuery);
+      console.log('nextQuery', nextQuery);
     }
   }
   beforeValueChange={
@@ -147,6 +154,8 @@ All reactivebase components are `rbc` namespaced.
     is a callback function which accepts component's future **value** as a parameter and **returns** a promise. It is called everytime before a component's value changes. The promise, if and when resolved, triggers the execution of the component's query and if rejected, kills the query execution. This method can act as a gatekeeper for query execution, since it only executes the query after the provided promise has been resolved.
 - **onValueChange** `Function`  
     is a callback function which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when a user selects a particular range in a DynamicRangeSlider.
+- **onQueryChange** `Function`  
+    is a callback function which accepts component's **prevQuery** and **nextQuery** as parameters. It is called everytime the component's query changes. This prop is handy in cases where you want to generate a side-effect whenever the component's query would change.
 - **react** `Object`  
     specify dependent components to reactively update **DynamicRangeSlider's** data view.
     - **key** `String`  
