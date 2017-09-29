@@ -79,7 +79,7 @@ While `DynamicRangeSlider` only requires the above props to be used, it comes wi
 
 ## Syntax
 
-<p data-height="500" data-theme-id="light" data-slug-hash="BdMXeG" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ResultList docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/BdMXeG/">ResultList docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="KvJOZE" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="DynamicRangeSlider docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/KvJOZE/">DynamicRangeSlider docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 ## Styles
@@ -170,7 +170,7 @@ All reactivebase components are `rbc` namespaced.
 
 ## Examples
 
-<p data-height="500" data-theme-id="light" data-slug-hash="BdMXeG" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ResultList docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/BdMXeG/">ResultList docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="KvJOZE" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="DynamicRangeSlider docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/KvJOZE/">DynamicRangeSlider docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 See more stories for DynamicRangeSlider on playground.
