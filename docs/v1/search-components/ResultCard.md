@@ -2,25 +2,25 @@
 
 {% raw %}
 
-# ResultList
+# ResultCard
 
-![Image to be displayed](https://i.imgur.com/X3WPi1k.png)
+![Image to be displayed](https://i.imgur.com/aeQs0nn.png)
 
-`ResultList` creates a result list UI component to display results in a list layout, suited for data that needs a compact display.
+`ResultCard` creates a result card UI component to display results in a card layout, suited for data that have an associated image.
 
 Example uses:
 
-* showing e-commerce search listings.
-* showing filtered hotel booking results.
+* showing e-commerce search results in a card layout.
+* showing filtered hotel booking results in a card layout.
 
-`Note:` An alternative layout to ResultList is a [**ResultCard**](v1.0.0/search-components/ResultCard.html), which displays result data in a card layout.
+`Note:` An alternative layout to ResultCard is a [**ResultList**](v1/search-components/ResultList.html), which displays result data in a list format.
 
 ## Usage
 
 ### Basic Usage
 
 ```js
-<ResultList
+<ResultCard
   react={{
     "and": ["PriceFilter", "SearchFilter"]
   }}
@@ -31,10 +31,10 @@ Example uses:
 ### Pagination Usage With All Props
 
 ```js
-<ResultList
-  componentId="ResultList01"
+<ResultCard
+  componentId="ResultCard01"
   dataField="ratings"
-  title="Result List"
+  title="Result Card"
   stream={true}  
   sortBy="desc"
   from={0}
@@ -56,10 +56,10 @@ Example uses:
 ### Infinite Scroll Usage With All Props
 
 ```js
-<ResultList
-  componentId="ResultList01"
+<ResultCard
+  componentId="ResultCard01"
   dataField="ratings"
-  title="Result List"
+  title="Result Card"
   stream={true}  
   sortBy="desc"
   from={0}
@@ -82,7 +82,7 @@ Example uses:
 - **componentId** `String`  
     unique identifier of the component, can be referenced in other components' `react` prop.
 - **dataField** `String`  
-    data field to be mapped with `ResultList`'s UI view, used for providing a sorting context.
+    data field to be mapped with `ResultCard`'s UI view, used for providing a sorting context.
 - **title** `String or HTML` [optional]  
     title of the component, to be shown in the UI.
 - **stream** `Boolean` [optional]  
@@ -94,11 +94,11 @@ Example uses:
 - **paginationAt** `String` [optional]  
     Determines the position where to show the pagination, only applicable when **pagination** prop is set to `true`. Accepts one of `top`, `bottom` or `both` as valid values. Defaults to `bottom`.
 - **pages** `Number` [optional]  
-    number of pages to show at at time, defaults to 5.
-- **sortBy** `String` [optional]  
+    number of pages to show at a time, defaults to 5.
+-  **sortBy** `String` [optional]  
     sort the results by either `asc` or `desc` order. It is an alternative to `sortOptions`, both can't be used together.
 - **sortOptions** `Object Array` [optional]  
-    an alternative to the `sortBy` prop, `sortOptions` creates a sorting view in the ResultList component's UI. Each array element is an object that takes three keys:
+    an alternative to the `sortBy` prop, `sortOptions` creates a sorting view in the ResultCard component's UI. Each array element is an object that takes three keys:
     - `label` - label to be displayed in the UI.
     - `dataField` - data field to use for applying the sorting criteria on.
     - `sortBy` - specified as either `asc` or `desc`.
@@ -116,10 +116,8 @@ Example uses:
     whether to show result stats in the form of results found and time taken. Defaults to `true`.
 - **onResultStats** `Function` [optional]  
     show custom result stats using a function that takes two parameters for `time_taken` and `total_results` and returns a string.
-- **react** `Object`  
-    a dependency object defining how this component should react based on the state changes in the sensor components. You can read more about how to specify this prop over [here](v1.0.0/advanced/React.html).
 - **onData** `Function` [optional]  
-    returns a card element object to be rendered based on the `res` data object. This callback function prop is called for each data item rendered in the **ResultList** component's view.
+    returns a card element object to be rendered based on the `res` data object. This callback function prop is called for each data item rendered in the **ResultCard** component's view.
     ```js
     onData={
       function(res) {
@@ -137,28 +135,28 @@ Example uses:
       }
     }
     ```
-    The return format for the callback function is an object with `image`, `image_size`, `title`, `desc` and `url` fields.
+    The return format for the callback function is an object with `image`, `title`, `desc` and `url` fields.
 
 ## Syntax
 
-<p data-height="500" data-theme-id="light" data-slug-hash="BdMXeG" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ResultList docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/BdMXeG/">ResultList docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="NvoQBE" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ResultCard docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/NvoQBE/">ResultCard docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 ## Styles
 
 All reactivebase components are `rbc` namespaced.
 
-![Annotated image](https://i.imgur.com/ngVXOoB.png)
+![Annotated image](https://i.imgur.com/E8u43mG.png)
 
 ## Extending
 
-`ResultList` component can be extended to
+`ResultCard` component can be extended to
 1. customize the look and feel with `className`, `style`,
 2. render individual result data items using `onData`,
 3. specify how results should be filtered using `react`.
 
 ```js
-<ResultList
+<ResultCard
   ...
   className="custom-class"
   // specify any number of custom styles.
@@ -184,11 +182,11 @@ All reactivebase components are `rbc` namespaced.
 - **className** `String`  
     CSS class to be injected on the component container.
 - **style** `Object`  
-    CSS Styles to be applied to the **ResultList** component.
+    CSS Styles to be applied to the **ResultCard** component.
 - **onData** `Function` [optional]  
-    a callback function where user can define how to render the view based on the data changes. In `ResultList`'s case, the expected return format is an object with `image`, `image_size`, `title`, `url` and `desc` keys.
+    a callback function where user can define how to render the view based on the data changes. In `ResultCard`'s case, the expected return format is an object with `image`, `title`, `url` and `desc` keys.
 - **react** `Object`  
-    specify dependent components to reactively update **ResultList's** data view.
+    specify dependent components to reactively update **ResultCard's** data view.
     - **key** `String`  
         one of `and`, `or`, `not` defines the combining clause.
         - **and** clause implies that the results will be filtered by matches from **all** of the associated component states.
@@ -199,16 +197,21 @@ All reactivebase components are `rbc` namespaced.
         - `Array` is used for specifying multiple components by their `componentId`.
         - `Object` is used for nesting other key clauses.
 
-
 ## Examples
 
-<p data-height="500" data-theme-id="light" data-slug-hash="BdMXeG" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ResultList docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/BdMXeG/">ResultList docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="NvoQBE" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ResultCard docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/NvoQBE/">ResultCard docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-See more stories for ResultList on playground.
+See more stories for ResultCard on playground.
 
-1. [ResultList with infinite scroll](../playground/?knob-title=Cars%20result&knob-data=%5B%7B"start"%3A4%2C"end"%3A5%2C"label"%3A"4%20stars%20and%20up"%7D%2C%7B"start"%3A3%2C"end"%3A5%2C"label"%3A"3%20stars%20and%20up"%7D%2C%7B"start"%3A2%2C"end"%3A5%2C"label"%3A"2%20stars%20and%20up"%7D%2C%7B"start"%3A1%2C"end"%3A5%2C"label"%3A">%201%20stars"%7D%5D&knob-paginationAt=bottom&knob-filterLabel=Cities%20filter&knob-defaultSelected%5B0%5D=Auckland&knob-blacklist%5B0%5D=golf&knob-blacklist%5B1%5D=unknown&knob-maxCategories=10&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&knob-showFilter=true&knob-sortBy=count&knob-showResultStats=true&knob-stepValue=1&filterBy=ReactiveSearch&knob-showHistogram=true&knob-pagination=true&knob-maxItems=4&knob-size=5&knob-showCount=true&knob-placeholder=Search%20Cars&knob-showSearch=true&knob-multiSelect=true&selectedKind=search%2FResultList&selectedStory=With%20infinite%20loading&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+1. [ResultCard with basic usage](../playground/?selectedKind=search%2FResultCard&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
-2. [ResultList with pagination](../playground/?knob-title=Cars%20result&knob-data=%5B%7B"start"%3A4%2C"end"%3A5%2C"label"%3A"4%20stars%20and%20up"%7D%2C%7B"start"%3A3%2C"end"%3A5%2C"label"%3A"3%20stars%20and%20up"%7D%2C%7B"start"%3A2%2C"end"%3A5%2C"label"%3A"2%20stars%20and%20up"%7D%2C%7B"start"%3A1%2C"end"%3A5%2C"label"%3A">%201%20stars"%7D%5D&knob-paginationAt=bottom&knob-filterLabel=Cities%20filter&knob-defaultSelected%5B0%5D=Auckland&knob-blacklist%5B0%5D=golf&knob-blacklist%5B1%5D=unknown&knob-maxCategories=10&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&knob-showFilter=true&knob-sortBy=count&knob-showResultStats=true&knob-stepValue=1&filterBy=ReactiveSearch&knob-showHistogram=true&knob-pagination=true&knob-maxItems=4&knob-size=5&knob-showCount=true&knob-placeholder=Search%20Cars&knob-showSearch=true&knob-multiSelect=true&selectedKind=search%2FResultList&selectedStory=With%20pagination&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs).
+2. [ResultCard with size prop](../playground/?knob-title=Cars%20result&knob-size=5&selectedKind=search%2FResultCard&selectedStory=With%20size&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+
+3. [ResultCard with infinite scroll](../playground/?knob-title=Cars%20result&knob-data=%5B%7B"start"%3A4%2C"end"%3A5%2C"label"%3A"4%20stars%20and%20up"%7D%2C%7B"start"%3A3%2C"end"%3A5%2C"label"%3A"3%20stars%20and%20up"%7D%2C%7B"start"%3A2%2C"end"%3A5%2C"label"%3A"2%20stars%20and%20up"%7D%2C%7B"start"%3A1%2C"end"%3A5%2C"label"%3A">%201%20stars"%7D%5D&knob-paginationAt=bottom&knob-filterLabel=Cities%20filter&knob-defaultSelected%5B0%5D=Auckland&knob-blacklist%5B0%5D=golf&knob-blacklist%5B1%5D=unknown&knob-maxCategories=10&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&knob-showFilter=true&knob-sortBy=count&knob-showResultStats=true&knob-stepValue=1&filterBy=ReactiveSearch&knob-showHistogram=true&knob-pagination=false&knob-maxItems=4&knob-size=5&knob-showCount=true&knob-placeholder=Search%20Cars&knob-showSearch=true&knob-multiSelect=true&selectedKind=search%2FResultCard&selectedStory=With%20infinite%20loading&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+
+4. [ResultCard with pagination](../playground/?knob-title=Cars%20result&knob-size=5&knob-showResultStats=false&knob-pagination=true&knob-paginationAt=bottom&selectedKind=search%2FResultCard&selectedStory=With%20pagination&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+
+5. [ResultCard playground](../playground/?knob-title=Cars%20result&knob-size=5&knob-showResultStats=true&knob-pagination=true&knob-paginationAt=bottom&selectedKind=search%2FResultCard&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
 {% endraw %}

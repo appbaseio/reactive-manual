@@ -6,7 +6,7 @@
 
 `SingleDropdownList` creates a dropdown list based single select UI component. It is used for filtering results based on the current selection from a list of items.
 
-`Note:` This component is exactly like the [SingleList](v1.0.0/component/SingleList.html) component except the UI is based on a dropdown, ideal for showing additional UI filters while conserving screen space.
+`Note:` This component is exactly like the [SingleList](v1/component/SingleList.html) component except the UI is based on a dropdown, ideal for showing additional UI filters while conserving screen space.
 
 Example uses:
 * select a category from a list of categories for filtering e-commerce search results.

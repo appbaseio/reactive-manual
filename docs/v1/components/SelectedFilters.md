@@ -24,7 +24,7 @@ The `SelectedFilters` component itself doesn't have any props.
 
 Facet type components have a prop `showFilter` (defaults to `true`) which can be used to control whether the component's selected state appears in the SelectedFilters component. There is also a `filterLabel` prop which controls how that component is displayed.
 
-As an example, check [MultiList usage](v1.0.0/components/MultiList.html#-multilist-usage) to see how `showFilter` and `filterLabel` can be used.
+As an example, check [MultiList usage](v1/components/MultiList.html#-multilist-usage) to see how `showFilter` and `filterLabel` can be used.
 
 ### Syntax
 

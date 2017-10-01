@@ -21,7 +21,7 @@ One of the key ideas behind Reactive Search and Reactive Maps is the reactive de
 ### Props
 
 - **react** `Object`  
-    `react` prop is available in components whose data view should reactively update when on or more dependent components change their states, e.g. [`ReactiveMap`](v1.0.0/map-components/ReactiveMap.html), [`ReactiveList`](v1.0.0/components/ReactiveList.html).
+    `react` prop is available in components whose data view should reactively update when on or more dependent components change their states, e.g. [`ReactiveMap`](v1/map-components/ReactiveMap.html), [`ReactiveList`](v1/components/ReactiveList.html).
   - **key** `String`  
       one of `and`, `or`, `not` defines the combining clause.
       - **and** clause implies that the results will be filtered by matches from **all** of the associated component states.

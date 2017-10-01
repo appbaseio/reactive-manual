@@ -6,7 +6,7 @@
 
 `MultiRange` creates a multiple checkbox based numeric range UI component.
 
-`Note:` It is similar to a [MultiList](v1.0.0/components/MultiList.html) component but for numeric data fields.
+`Note:` It is similar to a [MultiList](v1/components/MultiList.html) component but for numeric data fields.
 
 Example uses:
 * filtering search results by prices in an e-commerce or food delivery experience.

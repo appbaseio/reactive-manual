@@ -6,7 +6,7 @@
 
 `MultiDropdownList` creates a  dropdown based multiple selection list UI component that is connected to a database field. It is used for filtering results based on the current selection from a list of items.
 
-`Note:` This component is exactly like the [MultiList](v1.0.0/components/MultiList.html) component except the UI is based on a dropdown, ideal for showing additional UI filters while conserving screen space.
+`Note:` This component is exactly like the [MultiList](v1/components/MultiList.html) component except the UI is based on a dropdown, ideal for showing additional UI filters while conserving screen space.
 
 Example uses:
 * create an e-commerce facet like search experience.

@@ -29,12 +29,12 @@ This is the first component you will need to add.
 - **type** `String` [optional]  
     defines which types should the queries run on. Multiple types can be passed as comma separated. The default behavior is to search on all the app types.
 - **theme** `String` [optional]  
-    specify a UI theme as one of `rbc-blue` or `rbc-dark`. Read more about theming [here](https://opensource.appbase.io/reactivemaps/manual/v1.0.0/advanced/Theming.html).
+    specify a UI theme as one of `rbc-blue` or `rbc-dark`. Read more about theming [here](https://opensource.appbase.io/reactivemaps/manual/v1/advanced/Theming.html).
 
 ### Next Steps
 
 Once you have added the **ReactiveBase** component, you can get started with adding other components as its children.
 
-* Map specific components can be found [here](v1.0.0/map-components/ReactiveMap.html).
-* Search specific components can be found [here](v1.0.0/search-components/CategorySearch.html).
-* Generic components can be found [here](v1.0.0/components/SingleList.html).
+* Map specific components can be found [here](v1/map-components/ReactiveMap.html).
+* Search specific components can be found [here](v1/search-components/CategorySearch.html).
+* Generic components can be found [here](v1/components/SingleList.html).

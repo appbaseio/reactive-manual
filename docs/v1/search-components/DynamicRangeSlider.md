@@ -11,7 +11,7 @@ Example uses:
 * filtering products from a price range in an e-commerce shopping experience.
 * filtering flights from a range of departure and arrival times.
 
-`Note:` This component behaves similar to the [RangeSlider](v1.0.0/components/RangeSlider.html) except that the range is computed dynamically based on actual data.
+`Note:` This component behaves similar to the [RangeSlider](v1/components/RangeSlider.html) except that the range is computed dynamically based on actual data.
 
 ## Usage
 

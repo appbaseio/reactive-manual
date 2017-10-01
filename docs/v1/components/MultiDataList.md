@@ -6,7 +6,7 @@
 
 `MultiDataList` creates a multiple checkbox list UI component that is connected to a database field. It is used for filtering results based on the current selection(s) from a list of data items.
 
-`Note:` This component behaves similar to the [MultiList](v1.0.0/components/MultiList.html) component except the list items are user defined with the `data` prop, ideal for showing curated items in a list layout.
+`Note:` This component behaves similar to the [MultiList](v1/components/MultiList.html) component except the list items are user defined with the `data` prop, ideal for showing curated items in a list layout.
 
 Example uses:
 * select one or multiple items from a list of categories for filtering e-commerce search results.

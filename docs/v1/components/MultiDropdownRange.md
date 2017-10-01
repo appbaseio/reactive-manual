@@ -6,7 +6,7 @@
 
 `MultiDropdownRange` creates a dropdown based multiple numeric range UI component that is connected to a database field.
 
-`Note:` It is exactly like the [MultiRange](v1.0.0/components/MultiRange.html) component but displayed in a dropdown, ideal for showing additional UI filters while conserving screen space
+`Note:` It is exactly like the [MultiRange](v1/components/MultiRange.html) component but displayed in a dropdown, ideal for showing additional UI filters while conserving screen space
 
 Example uses:
 * filtering search results by prices in an e-commerce or food delivery experience.

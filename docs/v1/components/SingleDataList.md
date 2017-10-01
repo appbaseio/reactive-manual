@@ -6,7 +6,7 @@
 
 `SingleDataList` creates a radio select list UI component. It is used for filtering results based on the current selection from a list of data items.
 
-`Note:` This component is like the [SingleList](v1.0.0/components/SingleList.html) component except the filters are set based on the `data` prop, ideal for showing custom UI filters in a list layout.
+`Note:` This component is like the [SingleList](v1/components/SingleList.html) component except the filters are set based on the `data` prop, ideal for showing custom UI filters in a list layout.
 
 Example uses:
 * select a category from a list of categories for filtering e-commerce search results.

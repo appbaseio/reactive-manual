@@ -39,4 +39,4 @@ Make sure to import the stylessheets in the above order.
 
 You're now all set to create an app with ReactiveMaps!
 
-Next, read the [getting started](v1.0.0/getting-started/Start.html) guide to find out how to build your first ReactiveMap based app.
+Next, read the [getting started](v1/getting-started/Start.html) guide to find out how to build your first ReactiveMap based app.

@@ -4,7 +4,7 @@
 
 ![Image to be displayed](https://i.imgur.com/KuSUJyX.png)
 
-`MultiList` creates a multiple selection based list UI component that is connected to a database field. It is similar to a [SingleList](v1.0.0/components/SingleList.html) except it can support multiple item selections.
+`MultiList` creates a multiple selection based list UI component that is connected to a database field. It is similar to a [SingleList](v1/components/SingleList.html) except it can support multiple item selections.
 
 Example uses:
 

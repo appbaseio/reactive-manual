@@ -8,7 +8,7 @@
 
 `ReactiveList` creates a data-driven result list UI component. This list can reactively update itself based on changes in other components or changes in the database itself.
 
-This component forms the base for building more specific result display components like [`ResultCard`](v1.0.0/search-components/ResultCard.html) or [`ResultList`](v1.0.0/search-components/ResultList.html).
+This component forms the base for building more specific result display components like [`ResultCard`](v1/search-components/ResultCard.html) or [`ResultList`](v1/search-components/ResultList.html).
 
 Example uses:
 

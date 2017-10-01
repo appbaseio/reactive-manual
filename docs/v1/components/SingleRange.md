@@ -6,7 +6,7 @@
 
 `SingleRange` creates a numeric range selector UI component that is connected to a database field.
 
-`Note:` It is similar to a [SingleList](v1.0.0/components/SingleList.html), except it is suited for numeric data.
+`Note:` It is similar to a [SingleList](v1/components/SingleList.html), except it is suited for numeric data.
 
 Example uses:
 * filtering search results by prices in an e-commerce or food delivery experience.

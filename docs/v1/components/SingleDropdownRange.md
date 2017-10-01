@@ -6,7 +6,7 @@
 
 `SingleDropdownRange` creates a dropdown based numeric range UI component.
 
-`Note:` This component is exactly like the [SingleRange](v1.0.0/components/SingleRange.html) component except the UI is based on a dropdown, ideal for showing additional UI filters while conserving screen space.
+`Note:` This component is exactly like the [SingleRange](v1/components/SingleRange.html) component except the UI is based on a dropdown, ideal for showing additional UI filters while conserving screen space.
 
 Example uses:
 * filtering search results by prices in an e-commerce or food delivery experience.

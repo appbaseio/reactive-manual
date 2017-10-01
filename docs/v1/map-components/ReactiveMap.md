@@ -129,7 +129,7 @@ Example uses:
 - **streamMarkerImage** `String` [optional]  
     URL of the streaming marker image to be shown. It comes with a default image that's distinct from the defaultMarkerImage. Should be only set if you wish to use a custom marker image.
 - **react** `Object`
-     a dependency object defining how this component should react based on the state changes in the dependent sensor components. You can read more about it [here](v1.0.0/advanced/React.html).
+     a dependency object defining how this component should react based on the state changes in the dependent sensor components. You can read more about it [here](v1/advanced/React.html).
 - **autoCenter** `Boolean` [optional]  
     whether to auto center the map based on the geometric center of all the location markers. Defaults to `true`.
 - **autoMapRender** `Boolean` [optional]  
