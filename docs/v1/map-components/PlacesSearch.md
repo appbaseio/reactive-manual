@@ -4,7 +4,7 @@
 
 ![Image to be displayed](https://i.imgur.com/XnuaS4T.png)
 
-`PlacesSearch` creates a location search UI component that is connected to a database field, which queries the distance around this location.
+`PlacesSearch` creates a location search UI component that is connected to a geopoint type field. It queries for places within proximity of the user selected location landmark in the UI.
 
 Example uses:
 
