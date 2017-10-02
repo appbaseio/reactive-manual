@@ -1,3 +1,5 @@
+{"bigh3": true}
+
 # Components Index
 
 **ReactiveSearch** and **ReactiveMaps** provide composable components for building data-driven user interfaces. This document explains the different kinds of components offered by the library and walks throughs scenarios of when to use which component.
