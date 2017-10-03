@@ -47,6 +47,10 @@ var docbaseConfig ={
                {
                   "name":"ReactiveBase",
                   "label":"Base Component"
+               },
+               {
+                  "name":"ComponentsIndex",
+                  "label":"Components: Overview"
                }
             ]
          },
