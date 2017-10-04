@@ -12,7 +12,7 @@ Components are divided into four broad categories:
 3. **Search components** are part of **ReactiveSearch** and offer more specific or advanced versions of the basic components.
 4. **Result components** offer UI views for displaying the results from the database queries. Database queries are fired by the library based on the interactions of the one of above categories of components.
 
-> Note: **ReactiveSearch** library is currently the superset library which comes with all of the above components (including the map components). We recommend using that for the general use.
+> <span class="fa fa-info-circle"></span> Note: **ReactiveSearch** library is currently the superset library which comes with all of the above components (including the map components). We recommend using that for the general use.
 > > `npm -i @appbaseio/reactivesearch` (or read more on [how to install](v1/getting-started/RSInstallation.html))
 
 ## 1. Basic Components
@@ -26,7 +26,7 @@ Components are divided into four broad categories:
 
 <img src="https://imgur.com/kbnVVkZ.png" style="float:left"> **[DataSearch](v1/components/DataSearch)** displays a search input box. It supports autosuggestions, highlighting of results and querying against more than one fields via props.
 
-> Note: If you are looking to apply a query on a user input, **DataSearch** is preferable over **TextField**.
+> <span class="fa fa-info-circle"></span> Note: If you are looking to apply a query on a user input, **DataSearch** is preferable over **TextField**.
 
 ### List Components
 
@@ -48,7 +48,7 @@ The following are all the possible UI components for a String datatype field in 
 <img src="https://imgur.com/2b1iVDZ.png" style="float:left">
 **[MultiDataList](v1/components/MultiDataList.html)** is useful for displaying a list of user defined values where multiple value items can be selected at a time. Similar to the SingleDataList component, one can curate which items to display.
 
-> List vs DataList: Use-cases where curation is important and only a few items need to be shown should use DataList components. Since it doesn't need to  auto-fetch the results, it also saves a network request.
+> <span class="fa fa-info-circle"></span> List vs DataList: Use-cases where curation is important and only a few items need to be shown should use DataList components. Since it doesn't need to  auto-fetch the results, it also saves a network request.
 
 <img src="https://imgur.com/a1be47e.png" style="float:left">
 **[SingleDropdownList](v1/components/SingleDropdownList.html)** displays a dropdown list UI where only one item can be selected at a time. It is similar to SingleList.
@@ -56,7 +56,7 @@ The following are all the possible UI components for a String datatype field in 
 <img src="https://imgur.com/UVymwfo.png" style="float:left">
 **[MultiDropdownList](v1/components/MultiDropdownList.html)** displays a dropdown list UI where multiple items can be selected at a time. It is similar to MultiList.
 
-> When to use dropdown lists: Dropdown lists take up less space. If you have many filters to display or a smaller display area (like on phones), it is better to use dropdown lists.
+> <span class="fa fa-info-circle"></span> When to use dropdown lists: Dropdown lists take up less space. If you have many filters to display or a smaller display area (like on phones), it is better to use dropdown lists.
 
 #### Numeric Datatype
 
@@ -70,16 +70,15 @@ The following are all the possible UI components for a numeric datatype field in
 
 > Its counterpart for a String datatype would be **MultiDataList** component.
 
-<img src="https://imgur.com/2xxBIUg.png" style="float:left"> **[SingleDropdownRange](v1/components/SingleDropdownRange.html)** displays a dropdown list UI where only one item can be selected at a time.
+<img src="https://imgur.com/2xxBIUg.png" style="float:left"> **[SingleDropdownRange](v1/components/SingleDropdownRange.html)** displays a dropdown list UI where only one item can be selected at a time. Each item in this dropdown list represents a range, specified in the **data** prop of the component.
 
-<img src="https://imgur.com/MrTth88.png" style="float:left">
-**[MultiDropdownRange](v1/components/SingleDropdownRange.html)** displays a dropdown list UI where only multiple items can be selected at a time.
+<img src="https://imgur.com/MrTth88.png" style="float:left"> **[MultiDropdownRange](v1/components/SingleDropdownRange.html)** displays a dropdown list UI where only multiple items can be selected at a time. Each item in this dropdown list represents a range, specified in the **data** prop of the component.
 
 ### RangeSlider
 
 <img src="https://imgur.com/n4HJ8dD.png" style="float:left"> **[RangeSlider](v1/components/RangeSlider.html)** component applies on a numeric datatype (ideally an integer) field and displays a slider UI.
 
-> RangeSlider vs Range lists: A RangeSlider is useful when the selection of values is homogeneous, e.g. price across a set of products.
+> <span class="fa fa-info-circle"></span> RangeSlider vs Range lists: A RangeSlider is useful when the selection of values is homogeneous, e.g. price across a set of products.
 
 ### ToggleButton
 
@@ -111,7 +110,7 @@ Map components are specific to dataset that has a Geopoint datatype, i.e. a (lat
 
 <img src="https://imgur.com/DNdxhB9.png" style="float:left"><img src="https://imgur.com/CfMpulx.png" style="float:left"> **[GeoDistanceDropdown](v1/map-components/GeoDistanceDropdown.html)** and **[GeoDistanceSlider](v1/map-components/GeoDistanceSlider.html)** are UI components for displaying a location search UI where a user can find all the data within a distance range of their selected landmark location.
 
-> Note: These components provide more flexibility than the PlacesSearch component in specifying the distance range as either a slider or a dropdown list.
+> <span class="fa fa-info-circle"></span> Note: These components provide more flexibility than the PlacesSearch component in specifying the distance range as either a slider or a dropdown list.
 
 ## 3. Search Components
 
@@ -140,7 +139,7 @@ Search components are more specific versions of the basic components that are us
 ### TagCloud
 
 <img src="https://imgur.com/lC5KfOK.png" style="float:left">
-**[TagCloud](v1/search-components/TagCloud.html)** is useful for showing a tag cloud for users to select from.
+**[TagCloud](v1/search-components/TagCloud.html)** is useful for showing a weighted tag cloud of items based on the frequency of occurrences.
 
 
 ### MultiLevelMenu
@@ -151,17 +150,25 @@ Search components are more specific versions of the basic components that are us
 
 Result components are used for displaying the results (aka hits).
 
-- **ResultList**  
-    Display the results in a list layout.
+> <span class="fa fa-info-circle"></span> How do result components fetch results by combining queries from multiple components?  
+They do this via [**react**](v1/advanced/React.html) prop, which allows each component to specify their dependent components using a DSL that mirrors Elasticsearch's compound query DSL for bool clause.
 
-- **ResultCard**  
-    Display the results in a card layout.
+### ResultList
 
-- **ReactiveList**  
-    Displays the results in a configurable list layout. This is a low level component (used internally by ResultList and ResultCard) that offers more flexibility in building a unique UI display.
+<img src="https://imgur.com/L8xTmWd.png" style="float:left"> **ResultList** displays the results in a list layout.
 
-- **ReactiveMap**  
-   Display the results on a map. When results contain geopoints (lat,lon), ReactiveMap component can be used to display them on a map interface.
+### ResultCard
 
-- **ReactiveElement**  
-   Display the results in your own HTML DOM element. There are instances where a completely custom UI may be required to display the results, for instance a chart. You can use ReactiveElement component to configure such displays.
+<img src="https://imgur.com/VGra3hs.png" style="float:left"> **ResultCard** displays the results in a card layout.
+
+### ReactiveList
+
+<img src="https://imgur.com/PCBwK7t.png" style="float:left"> **ReactiveList** displays the results in a configurable list layout. This is a more flexible display component (used internally by both ResultList and ResultCard) that allows more customization than ResultList and ResultCard.
+
+### ReactiveMap
+
+<img src="https://imgur.com/38hL346.png" style="float:left"> **ReactiveMap** displays the results on a map. When results contain geopoints (lat,lon), ReactiveMap component can be used to display them on a map interface.
+
+### ReactiveElement
+
+<img src="https://imgur.com/QgjzJv5.png" style="float:left"> **ReactiveElement** displays the results in a user defined DOM element. There are instances where a completely custom UI may be required to display the results, e.g. a line chart. You can use ReactiveElement component to configure such displays.
