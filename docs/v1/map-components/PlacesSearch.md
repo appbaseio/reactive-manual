@@ -146,4 +146,4 @@ All reactivebase and reactivemaps components are `rbc` namespaced.
 <p data-height="500" data-theme-id="light" data-slug-hash="OjaeXg" data-default-tab="result" data-user="divyanshu013" data-embed-version="2" data-pen-title="PlacesSearch docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/OjaeXg/">PlacesSearch docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-1. [Using PlacesSearch for navigating directions from Point A to Point B](../playground/?knob-showFilter=true&knob-filterLabel=City%20filter&selectedKind=map%2FPlacesSearch&selectedStory=Basic%20-%20Direction%20Demo&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel)
+1. [Using PlacesSearch for finding nearby places](../playground/?selectedKind=map%2FPlacesSearch&selectedStory=Finding%20nearby%20places&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
