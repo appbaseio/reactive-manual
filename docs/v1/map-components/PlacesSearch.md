@@ -62,7 +62,7 @@ Example uses:
 
 ## Syntax
 
-<p data-height="500" data-theme-id="light" data-slug-hash="prYzpy" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="PlacesSearch docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/prYzpy/">PlacesSearch docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="OjaeXg" data-default-tab="js" data-user="divyanshu013" data-embed-version="2" data-pen-title="PlacesSearch docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/OjaeXg/">PlacesSearch docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 ## Styles
@@ -143,7 +143,7 @@ All reactivebase and reactivemaps components are `rbc` namespaced.
 
 ## Examples
 
-<p data-height="500" data-theme-id="light" data-slug-hash="prYzpy" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="PlacesSearch docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/prYzpy/">PlacesSearch docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="500" data-theme-id="light" data-slug-hash="OjaeXg" data-default-tab="result" data-user="divyanshu013" data-embed-version="2" data-pen-title="PlacesSearch docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/OjaeXg/">PlacesSearch docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-1. [Using PlacesSearch for navigating directions from Point A to Point B](../playground/?knob-title=Geo%20Distance%20Slider&knob-URLParams%20%28not%20visible%20in%20storybook%29=true&knob-filterLabel=GeoDistance%20filter&knob-defaultSelected=%7B"label"%3A"Less%20than%20100%20miles"%2C"location"%3A"London"%7D&knob-rangeLabels=%7B"start"%3A"Start"%2C"end"%3A"End"%7D&knob-range=%7B"start"%3A0%2C"end"%3A50%7D&knob-URLParams%20%28not%20visible%20on%20storybook%29=true&knob-showFilter=true&knob-placeholderDropdown=Select%20radius&knob-stepValue=1&knob-autoLocation=true&knob-unit=mi&knob-placeholder=Search%20Location&selectedKind=map%2FPlacesSearch&selectedStory=Basic%20-%20Direction%20Demo&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+1. [Using PlacesSearch for navigating directions from Point A to Point B](../playground/?knob-showFilter=true&knob-filterLabel=City%20filter&selectedKind=map%2FPlacesSearch&selectedStory=Basic%20-%20Direction%20Demo&full=0&down=1&left=1&panelRight=0&downPanel=tuchk4%2Freadme%2Fpanel)
