@@ -71,8 +71,8 @@ Example uses:
     * `basic_date` date expressed in yyyyMMdd format.
     * `basic_date_time` date expressed in yyyyMMdd*T*HH:mm:ss.SSSZ format.
     * `basic_date_time_no_millis` date expressed in yyyyMMdd*T*HH:mm:ssZ format.
-    * `basic_time` date expressed as just time in the HHmmss.SSZ format.
-    * `basic_time_no_millis` date expressed as just time but without milliseconds in the HHmmss format.
+    * `basic_time` date expressed as just time in the HHmmss.SSSZ format.
+    * `basic_time_no_millis` date expressed as just time but without milliseconds in the HHmmssZ format.
 - **extra** `Object` [optional]  
     supports the full gauntlet of props as defined in airbnb's [react-dates](https://github.com/airbnb/react-dates) component.
     An example `extra` prop object would look like:
