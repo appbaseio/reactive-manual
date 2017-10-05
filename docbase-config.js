@@ -51,6 +51,10 @@ var docbaseConfig ={
                {
                   "name":"ComponentsIndex",
                   "label":"Components: Overview"
+               },
+               {
+                  "name":"WritingData",
+                  "label":"Writing Data"
                }
             ]
          },
