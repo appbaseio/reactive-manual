@@ -58,18 +58,16 @@ Example uses:
     // map events
     onData={this.onData}
     onIdle={this.onIdle}
-    onMouseover={this.onMouseover}
-    onMouseout={this.onMouseout}
+    onMouseOver={this.onMouseOver}
+    onMouseOut={this.onMouseOut}
+    onMouseMove={this.onMouseMove}
     onClick={this.onClick}
-    onDblclick={this.onDblclick}
+    onDblClick={this.onDblClick}
     onDrag={this.onDrag}
-    onDragstart={this.onDragstart}
-    onDragend={this.onDragend}
-    onMousemove={this.onMousemove}
-    onMouseout={this.onMouseout}
-    onMouseover={this.onMouseover}
+    onDragStart={this.onDragStart}
+    onDragEnd={this.onDragEnd}
     onResize={this.onResize}
-    onRightclick={this.onRightclick}
+    onRightClick={this.onRightClick}
     onBoundsChanged={this.onBoundsChanged}
     onCenterChanged={this.onCenterChanged}
     onProjectionChanged={this.onProjectionChanged}
