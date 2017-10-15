@@ -59,76 +59,8 @@ var docbaseConfig ={
             ]
          },
          {
-            "name":"map-components",
-            "label":"Map Components",
-            "files":[
-               {
-                  "name":"GeoDistanceSlider",
-                  "label":"Geo Distance Slider"
-               },
-               {
-                  "name":"GeoDistanceDropdown",
-                  "label":"Geo Distance Dropdown"
-               },
-               {
-                  "name":"PlacesSearch",
-                  "label":"Places Search"
-               },
-               {
-                  "name":"ReactiveMap",
-                  "label":"Reactive Map"
-               }
-            ]
-         },
-         {
-            "name":"search-components",
-            "label":"Search Components",
-            "files":[
-               {
-                  "name":"CategorySearch",
-                  "label":"Category Search"
-               },
-               {
-                  "name":"MultiLevelMenu",
-                  "label":"MultiLevel Menu"
-               },
-               {
-                  "name":"DynamicRangeSlider",
-                  "label":"DynamicRange Slider"
-               },
-               {
-                  "name":"RatingsFilter",
-                  "label":"Ratings Filter"
-               },
-               {
-                  "name":"TagCloud",
-                  "label":"Tag Cloud"
-               },
-               {
-                  "name":"NestedList",
-                  "label":"Nested List"
-               },
-               {
-                  "name":"NestedMultiList",
-                  "label":"Nested Multi List"
-               },
-               {
-                  "name":"ResultCard",
-                  "label":"Result Card"
-               },
-               {
-                  "name":"ResultList",
-                  "label":"Result List"
-               },
-               {
-                  "name":"ViewSwitcher",
-                  "label":"View Switcher"
-               }
-            ]
-         },
-         {
             "name":"components",
-            "label":"Base Components",
+            "label":"Basic Components",
             "files":[
                {
                   "name":"TextField",
@@ -217,8 +149,76 @@ var docbaseConfig ={
             ]
          },
          {
+            "name":"map-components",
+            "label":"Map Components",
+            "files":[
+               {
+                  "name":"GeoDistanceSlider",
+                  "label":"Geo Distance Slider"
+               },
+               {
+                  "name":"GeoDistanceDropdown",
+                  "label":"Geo Distance Dropdown"
+               },
+               {
+                  "name":"PlacesSearch",
+                  "label":"Places Search"
+               },
+               {
+                  "name":"ReactiveMap",
+                  "label":"Reactive Map"
+               }
+            ]
+         },
+         {
+            "name":"search-components",
+            "label":"Search Components",
+            "files":[
+               {
+                  "name":"CategorySearch",
+                  "label":"Category Search"
+               },
+               {
+                  "name":"MultiLevelMenu",
+                  "label":"MultiLevel Menu"
+               },
+               {
+                  "name":"DynamicRangeSlider",
+                  "label":"DynamicRange Slider"
+               },
+               {
+                  "name":"RatingsFilter",
+                  "label":"Ratings Filter"
+               },
+               {
+                  "name":"TagCloud",
+                  "label":"Tag Cloud"
+               },
+               {
+                  "name":"NestedList",
+                  "label":"Nested List"
+               },
+               {
+                  "name":"NestedMultiList",
+                  "label":"Nested Multi List"
+               },
+               {
+                  "name":"ResultCard",
+                  "label":"Result Card"
+               },
+               {
+                  "name":"ResultList",
+                  "label":"Result List"
+               },
+               {
+                  "name":"ViewSwitcher",
+                  "label":"View Switcher"
+               }
+            ]
+         },
+         {
             "name":"advanced",
-            "label":"Advanced Topics",
+            "label":"Advanced",
             "files":[
                {
                   "name":"CustomQuery",
