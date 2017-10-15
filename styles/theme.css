@@ -5,11 +5,11 @@
 	color: #1281ca;
 }
 a:active, a:hover, .menu a:hover{
-	color: #1281ca;	
+	color: #1281ca;
 }
  .tt-menu:before {
  	border-bottom-color: #1281ca;
- } 
+ }
 .paginationLink {
 	border-color: #1281ca;
 }
@@ -24,4 +24,23 @@ a:active, a:hover, .menu a:hover{
 .menu a.active, .menu a.active:visited, .menu a.active:hover {
 	color: #1281ca !important;
 	font-weight: normal !important;
+}
+.list a {
+	line-height: 60px;
+	height: 50px;
+	color: #1281ca;
+	background: none;
+	font-size: 1.2rem;
+}
+.list-group {
+	border-radius: 0px;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+}
+.list-group-item:first-child,.list-group-item:last-child {
+	border-radius: 0px;
+}
+.landing h3 {
+	font-size: 1.5rem;
+	margin: 1rem;
 }
