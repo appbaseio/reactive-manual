@@ -44,3 +44,6 @@ a:active, a:hover, .menu a:hover{
 	font-size: 1.5rem;
 	margin: 1rem;
 }
+.folder-li li.dropdown>a {
+	max-width: 180px;
+}
