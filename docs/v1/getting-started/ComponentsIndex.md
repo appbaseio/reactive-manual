@@ -7,10 +7,10 @@
 All components are children (or sub-children) of the **ReactiveBase** component which connects the UI view to an appbase.io app (or an index in Elasticsearch).
 
 Components are divided into four broad categories:  
-1. **Basic components** are primitives that are useful across different types of UIs.
-2. **Map components** are specific to a map based UI and are available under **ReactiveMaps** library.
-3. **Search components** are part of **ReactiveSearch** and offer more specific or advanced versions of the basic components.
-4. **Result components** offer UI views for displaying the results from the database queries. Database queries are fired by the library based on the interactions of the one of above categories of components.
+1. `Basic components` are primitives that are useful across different types of UIs.
+2. `Map components` are specific to a map based UI and are available under **ReactiveMaps** library.
+3. `Search components` are part of **ReactiveSearch** and offer more specific or advanced versions of the basic components.
+4. `Result components` offer UI views for displaying the results from the database queries. Database queries are fired by the library based on the interactions of the one of above categories of components.
 
 > <span class="fa fa-info-circle"></span> Note: **ReactiveSearch** library is currently the superset library which comes with all of the above components (including the map components). We recommend using that for the general use.
 > > `npm -i @appbaseio/reactivesearch` (or read more on [how to install](v1/getting-started/RSInstallation.html))
@@ -43,15 +43,15 @@ The following are all the possible UI components for a String datatype field in 
 **[MultiList](v1/components/SingleList.html)** is useful for displaying a list of values where multiple values can be selected at a time. Similar to SingleList, these values are retrieved by a database query on the field specified in the **dataField** prop.
 
 <img src="https://imgur.com/b9l8Mhd.png" style="float:left">
-**[SingleDataList](v1/components/SingleDataList.html)** is useful for displaying a list of user defined values where only one value item can be selected at a time. Unlike SingleList and MultiList where the values are auto-fetched, here the **data** prop allows one to curate which values to display.
+**[SingleDataList](v1/components/SingleDataList.html)** is useful for displaying a list of user defined values where only one value item can be selected at a time. Unlike SingleList and MultiList where the values are auto-fetched, here the **data** prop allows curation of which values to display.
 
 <img src="https://imgur.com/2b1iVDZ.png" style="float:left">
-**[MultiDataList](v1/components/MultiDataList.html)** is useful for displaying a list of user defined values where multiple value items can be selected at a time. Similar to the SingleDataList component, one can curate which items to display.
+**[MultiDataList](v1/components/MultiDataList.html)** is useful for displaying a list of user defined values where multiple value items can be selected at a time. Similar to the SingleDataList component, the **data** prop allows curation of which values to display.
 
 > <span class="fa fa-info-circle"></span> List vs DataList: Use-cases where curation is important and only a few items need to be shown should use DataList components. Since it doesn't need to  auto-fetch the results, it also saves a network request.
 
 <img src="https://imgur.com/a1be47e.png" style="float:left">
-**[SingleDropdownList](v1/components/SingleDropdownList.html)** displays a dropdown list UI where only one item can be selected at a time. It is similar to SingleList.
+**[SingleDropdownList](v1/components/SingleDropdownList.html)** displays a dropdown list UI where only one item can be selected at a time. It is similar to SingleList but is presented in a dropdown format to save space.
 
 <img src="https://imgur.com/UVymwfo.png" style="float:left">
 **[MultiDropdownList](v1/components/MultiDropdownList.html)** displays a dropdown list UI where multiple items can be selected at a time. It is similar to MultiList.
