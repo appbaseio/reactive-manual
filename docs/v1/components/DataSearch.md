@@ -98,7 +98,7 @@ All reactivebase components are `rbc` namespaced.
 1. customize the look and feel with `className`, `style`,
 2. update the underlying DB query with `customQuery`,
 3. connect with external interfaces using `beforeValueChange`, `onValueChange` and `onQueryChange`,
-4. specify how search suggestions should be filtered using `react` prop.
+4. specify how search suggestions should be filtered using `react` prop,
 5. add the following [synthetic events](https://reactjs.org/docs/events.html) to the underlying `input` element:
     - onBlur
     - onFocus

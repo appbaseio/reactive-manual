@@ -67,7 +67,14 @@ All reactivebase components are `rbc` namespaced.
 `TextField` component can be extended to
 1. customize the look and feel with `className`, `style`,
 2. update the underlying DB query with `customQuery`,
-3. connect with external interfaces using `beforeValueChange`, `onValueChange` and `onQueryChange`.
+3. connect with external interfaces using `beforeValueChange`, `onValueChange` and `onQueryChange`,
+4. add the following [synthetic events](https://reactjs.org/docs/events.html) to the underlying `input` element:
+    - onBlur
+    - onFocus
+    - onKeyPress
+    - onKeyDown
+    - onKeyUp
+    - autoFocus
 
 ```
 <TextField
