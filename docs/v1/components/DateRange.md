@@ -117,7 +117,7 @@ All reactivebase components are `rbc` namespaced.
     function(value) {
       return {
         range: {
-          lte:
+          lte: "now"
         }
       }
     }
