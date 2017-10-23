@@ -27,9 +27,7 @@ Each component has a `customQuery` prop that accepts a function. The function sh
 
 this.customQuery=function() {
   return {
-    "query": {
-      "match": { "fieldName": "text to match" }
-    }
+    "match": { "fieldName": "text to match" }
   }
 }
 ```
@@ -44,12 +42,10 @@ Here is another example that applies a match_phrase_prefix query.
 
 this.customQuery=function() {
   return {
-    "query": {
-      "match_phrase_prefix": {
-        "fieldName": {
-          "query": "hello world",
-          "max_expansions": 10
-        }
+    "match_phrase_prefix": {
+      "fieldName": {
+        "query": "hello world",
+        "max_expansions": 10
       }
     }
   }

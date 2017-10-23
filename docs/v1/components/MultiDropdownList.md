@@ -107,10 +107,8 @@ All reactivebase components are `rbc` namespaced.
   customQuery={
     function(value) {
       return {
-        query: {
-          match: {
-            data_field: "this is a test"
-          }
+        match: {
+          data_field: "this is a test"
         }
       }
     }

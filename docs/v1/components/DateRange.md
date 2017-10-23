@@ -116,10 +116,8 @@ All reactivebase components are `rbc` namespaced.
   customQuery={
     function(value) {
       return {
-        query: {
-          range: {
-            lte:
-          }
+        range: {
+          lte:
         }
       }
     }
