@@ -118,15 +118,13 @@ All reactivebase and reactivemaps components are `rbc` namespaced.
   customQuery={
     function(value) {
       return {
-        query: {
-          // query in the format of Elasticsearch Query DSL
-          geo_distance: {
-            distance: (value.end - value.start)
-                      + value.unit,
-            location_dataField: {
-              lat: value.location.split(",")[0]
-              lon: value.location.split(",")[1]
-            }
+        // query in the format of Elasticsearch Query DSL
+        geo_distance: {
+          distance: (value.end - value.start)
+                    + value.unit,
+          location_dataField: {
+            lat: value.location.split(",")[0]
+            lon: value.location.split(",")[1]
           }
         }
       }
