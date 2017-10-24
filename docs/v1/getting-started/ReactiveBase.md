@@ -30,6 +30,15 @@ This is the first component you will need to add.
     defines which types should the queries run on. Multiple types can be passed as comma separated. The default behavior is to search on all the app types.
 - **theme** `String` [optional]  
     specify a UI theme as one of `rbc-blue` or `rbc-dark`. Read more about theming [here](https://opensource.appbase.io/reactivemaps/manual/v1/advanced/Theming.html).
+    
+`Note:` If you are using an Elasticsearch cluster, ensure that your ReactiveSearch app can access the cluster. Typically, you will need to configure CORS in elasticsearch.yml to enable access.
+
+```
+http.cors.enabled: true
+http.cors.allow-credentials: true
+http.cors.allow-origin: "http://reactive-search-app-domain.com:port"
+http.cors.allow-headers: X-Requested-With, X-Auth-Token, Content-Type, Content-Length, Authorization, Access-Control-Allow-Headers, Accept
+```
 
 ### Next Steps
 
