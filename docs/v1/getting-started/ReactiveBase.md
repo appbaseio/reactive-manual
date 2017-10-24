@@ -31,7 +31,7 @@ This is the first component you will need to add.
 - **theme** `String` [optional]  
     specify a UI theme as one of `rbc-blue` or `rbc-dark`. Read more about theming [here](https://opensource.appbase.io/reactivemaps/manual/v1/advanced/Theming.html).
     
-`Note:` If you are using an Elasticsearch cluster, ensure that your ReactiveSearch app can access the cluster. Typically, you will need to configure CORS in elasticsearch.yml to enable access.
+`Note:` If you are using the **url** prop for an Elasticsearch cluster, ensure that your ReactiveSearch app can access the cluster. Typically, you will need to configure CORS in elasticsearch.yml to enable access.
 
 ```
 http.cors.enabled: true
