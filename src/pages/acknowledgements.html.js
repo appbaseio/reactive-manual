@@ -7,6 +7,8 @@ import {sharedStyles} from 'theme';
 
 // import names from '../../content/acknowledgements.yml';
 
+const names = [];
+
 const Acknowlegements = ({data, location}) => (
   <Container>
     <div css={sharedStyles.articleLayout.container}>
