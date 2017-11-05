@@ -1,40 +1,16 @@
 import ButtonLink from './components/ButtonLink';
 import Container from 'components/Container';
 import Flex from 'components/Flex';
-import mountCodeExample from 'utils/mountCodeExample';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import TitleAndMetaTags from 'components/TitleAndMetaTags';
 import {colors, media, sharedStyles} from 'theme';
 import createOgUrl from 'utils/createOgUrl';
-import loadScript from 'utils/loadScript';
-import {babelURL} from 'site-constants';
-import ReactDOM from 'react-dom';
 
 class Home extends Component {
-  componentDidMount() {
-    renderExamplePlaceholder('helloExample');
-    renderExamplePlaceholder('timerExample');
-    renderExamplePlaceholder('todoExample');
-    renderExamplePlaceholder('markdownExample');
-
-    function mountCodeExamples() {
-      mountCodeExample('helloExample', HELLO_COMPONENT);
-      mountCodeExample('timerExample', TIMER_COMPONENT);
-      mountCodeExample('todoExample', TODO_COMPONENT);
-      mountCodeExample('markdownExample', MARKDOWN_COMPONENT);
-    }
-
-    loadScript(babelURL).then(mountCodeExamples, error => {
-      console.error('Babel failed to load.');
-
-      mountCodeExamples();
-    });
-  }
-
   render() {
     const {data} = this.props;
-    const title = 'React - A JavaScript library for building user interfaces';
+    const title = 'Reactive Manual - Data-driven components for building Maps and Search UIs';
 
     return (
       <div css={{width: '100%'}}>
@@ -57,16 +33,16 @@ class Home extends Component {
                 paddingBottom: 70,
               },
 
+              [media.greaterThan('large')]: {
+                backgroundColor: colors.dark,
+                backgroundImage: `url("data:image/svg+xml,%3Csvg width='48' height='64' viewBox='0 0 48 64' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M48 28v-4L36 12 24 24 12 12 0 24v4l4 4-4 4v4l12 12 12-12 12 12 12-12v-4l-4-4 4-4zM8 32l-6-6 10-10 10 10-6 6 6 6-10 10L2 38l6-6zm12 0l4-4 4 4-4 4-4-4zm12 0l-6-6 10-10 10 10-6 6 6 6-10 10-10-10 6-6zM0 16L10 6 4 0h4l4 4 4-4h4l-6 6 10 10L34 6l-6-6h4l4 4 4-4h4l-6 6 10 10v4L36 8 24 20 12 8 0 20v-4zm0 32l10 10-6 6h4l4-4 4 4h4l-6-6 10-10 10 10-6 6h4l4-4 4 4h4l-6-6 10-10v-4L36 56 24 44 12 56 0 44v4z' fill='%23373940' fill-opacity='0.25' fill-rule='evenodd'/%3E%3C/svg%3E")`,
+              },
+
               [media.greaterThan('xlarge')]: {
                 paddingTop: 95,
                 paddingBottom: 85,
-                maxWidth: 1500, // Positioning of background logo
                 marginLeft: 'auto',
                 marginRight: 'auto',
-                backgroundImage: 'url(/large-logo.svg)',
-                backgroundRepeat: 'no-repeat',
-                backgroundPosition: '100% 100px',
-                backgroundSize: '50% auto',
               },
             }}>
             <Container>
@@ -119,12 +95,12 @@ class Home extends Component {
                 }}>
                 <CtaItem>
                   <ButtonLink to="/docs/hello-world.html" type="primary">
-                    Get Started
+                    Docs
                   </ButtonLink>
                 </CtaItem>
                 <CtaItem>
                   <ButtonLink to="/tutorial/tutorial.html" type="secondary">
-                    Take the Tutorial
+                    Getting Started
                   </ButtonLink>
                 </CtaItem>
               </Flex>
@@ -138,29 +114,6 @@ class Home extends Component {
             dangerouslySetInnerHTML={{__html: data.markdownRemark.html}}
           />
         </Container>
-
-        <section
-          css={{
-            background: colors.dark,
-            color: colors.white,
-            paddingTop: 45,
-            paddingBottom: 45,
-          }}>
-          <Container>
-            <Flex valign="center">
-              <CtaItem>
-                <ButtonLink to="/docs/hello-world.html" type="primary">
-                  Get Started
-                </ButtonLink>
-              </CtaItem>
-              <CtaItem>
-                <ButtonLink to="/tutorial/tutorial.html" type="secondary">
-                  Take the Tutorial
-                </ButtonLink>
-              </CtaItem>
-            </Flex>
-          </Container>
-        </section>
       </div>
     );
   }
@@ -170,16 +123,6 @@ Home.propTypes = {
   data: PropTypes.object.isRequired,
   location: PropTypes.object.isRequired,
 };
-
-// TODO Improve this temporarily placeholder as part of
-// converting the home page from markdown template to a Gatsby
-// page (see issue #2)
-function renderExamplePlaceholder(containerId) {
-  ReactDOM.render(
-    <h4>Loading code example...</h4>,
-    document.getElementById(containerId),
-  );
-}
 
 const CtaItem = ({children, primary = false}) => (
   <div
@@ -329,157 +272,3 @@ const markdownStyles = {
     },
   },
 };
-
-// TODO Move these hard-coded examples into example files and out of the template?
-// Alternately, move them into the markdown and transform them during build?
-// This could be done via a new Gatsby transform plug-in that auto-converts to runnable REPLs?
-const name = Math.random() > 0.5 ? 'John' : 'Jane';
-const HELLO_COMPONENT = `
-class HelloMessage extends React.Component {
-  render() {
-    return (
-      <div>
-        Hello {this.props.name}
-      </div>
-    );
-  }
-}
-
-ReactDOM.render(
-  <HelloMessage name="${name}" />,
-  mountNode
-);
-`.trim();
-
-const TIMER_COMPONENT = `
-class Timer extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { seconds: 0 };
-  }
-
-  tick() {
-    this.setState(prevState => ({
-      seconds: prevState.seconds + 1
-    }));
-  }
-
-  componentDidMount() {
-    this.interval = setInterval(() => this.tick(), 1000);
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.interval);
-  }
-
-  render() {
-    return (
-      <div>
-        Seconds: {this.state.seconds}
-      </div>
-    );
-  }
-}
-
-ReactDOM.render(<Timer />, mountNode);
-`.trim();
-
-var TODO_COMPONENT = `
-class TodoApp extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { items: [], text: '' };
-    this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  render() {
-    return (
-      <div>
-        <h3>TODO</h3>
-        <TodoList items={this.state.items} />
-        <form onSubmit={this.handleSubmit}>
-          <input
-            onChange={this.handleChange}
-            value={this.state.text}
-          />
-          <button>
-            Add #{this.state.items.length + 1}
-          </button>
-        </form>
-      </div>
-    );
-  }
-
-  handleChange(e) {
-    this.setState({ text: e.target.value });
-  }
-
-  handleSubmit(e) {
-    e.preventDefault();
-    if (!this.state.text.length) {
-      return;
-    }
-    const newItem = {
-      text: this.state.text,
-      id: Date.now()
-    };
-    this.setState(prevState => ({
-      items: prevState.items.concat(newItem),
-      text: ''
-    }));
-  }
-}
-
-class TodoList extends React.Component {
-  render() {
-    return (
-      <ul>
-        {this.props.items.map(item => (
-          <li key={item.id}>{item.text}</li>
-        ))}
-      </ul>
-    );
-  }
-}
-
-ReactDOM.render(<TodoApp />, mountNode);
-`.trim();
-
-var MARKDOWN_COMPONENT = `
-class MarkdownEditor extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleChange = this.handleChange.bind(this);
-    this.state = { value: 'Type some *markdown* here!' };
-  }
-
-  handleChange(e) {
-    this.setState({ value: e.target.value });
-  }
-
-  getRawMarkup() {
-    const md = new Remarkable();
-    return { __html: md.render(this.state.value) };
-  }
-
-  render() {
-    return (
-      <div className="MarkdownEditor">
-        <h3>Input</h3>
-        <textarea
-          onChange={this.handleChange}
-          defaultValue={this.state.value}
-        />
-        <h3>Output</h3>
-        <div
-          className="content"
-          dangerouslySetInnerHTML={this.getRawMarkup()}
-        />
-      </div>
-    );
-  }
-}
-
-ReactDOM.render(<MarkdownEditor />, mountNode);
-`.trim();

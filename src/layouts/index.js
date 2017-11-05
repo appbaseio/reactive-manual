@@ -13,7 +13,6 @@ import {media} from 'theme';
 import '../prism-styles';
 import 'glamor/reset';
 import 'css/reset.css';
-import 'css/algolia.css';
 
 class Template extends Component {
   render() {

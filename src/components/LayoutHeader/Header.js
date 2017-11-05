@@ -2,10 +2,7 @@ import Container from 'components/Container';
 import HeaderLink from './HeaderLink';
 import Link from 'gatsby-link';
 import React from 'react';
-import {colors, fonts, media} from 'theme';
-import {version} from 'site-constants';
-import ExternalLinkSvg from 'templates/components/ExternalLinkSvg';
-import DocSearch from './DocSearch';
+import {colors, media} from 'theme';
 
 import logoSvg from 'icons/logo.svg';
 
@@ -55,7 +52,7 @@ const Header = ({location}) => (
             },
           }}
           to="/">
-          <img src={logoSvg} alt="" height="20" />
+          <img src={logoSvg} alt="" height="40" />
           <span
             css={{
               color: 'inherit',
@@ -86,6 +83,8 @@ const Header = ({location}) => (
         <nav
           css={{
             display: 'flex',
+            flex: 1,
+            justifyContent: 'flex-end',
             flexDirection: 'row',
             alignItems: 'stretch',
             overflowX: 'auto',
@@ -116,78 +115,17 @@ const Header = ({location}) => (
             title="Getting Started"
             to="/tutorial/tutorial.html"
           />
-          {/* <HeaderLink
+          <HeaderLink
             isActive={location.pathname.includes('/community/')}
             title="Community"
             to="/community/support.html"
-          /> */}
+          />
           <HeaderLink
             isActive={location.pathname.includes('/blog')}
             title="Blog"
             to="/blog/"
           />
         </nav>
-
-        <div
-          css={{
-            [media.lessThan('medium')]: {
-              display: 'none',
-            },
-            [media.greaterThan('large')]: {
-              width: 'calc(100% / 6)',
-            },
-          }}>
-          <a
-            css={{
-              padding: '5px 10px',
-              whiteSpace: 'nowrap',
-              ...fonts.small,
-
-              ':hover': {
-                color: colors.brand,
-              },
-
-              ':focus': {
-                outline: 0,
-                backgroundColor: colors.lighter,
-                borderRadius: 15,
-              },
-            }}
-            href="https://github.com/facebook/react/releases"
-            target="_blank"
-            rel="noopener">
-            v{version}
-          </a>
-          <a
-            css={{
-              padding: '5px 10px',
-              marginLeft: 10,
-              whiteSpace: 'nowrap',
-              ...fonts.small,
-
-              ':hover': {
-                color: colors.brand,
-              },
-
-              ':focus': {
-                outline: 0,
-                backgroundColor: colors.lighter,
-                borderRadius: 15,
-              },
-            }}
-            href="https://github.com/facebook/react/"
-            target="_blank"
-            rel="noopener">
-            GitHub
-            <ExternalLinkSvg
-              cssProps={{
-                marginLeft: 5,
-                verticalAlign: -2,
-                color: colors.subtle,
-              }}
-            />
-          </a>
-        </div>
       </div>
     </Container>
   </header>
