@@ -44,15 +44,22 @@ const Header = ({location}) => (
               color: colors.white,
             },
 
-            [media.greaterThan('small')]: {
-              width: 'calc(100% / 6)',
-            },
             [media.lessThan('small')]: {
               flex: '0 0 auto',
             },
           }}
           to="/">
-          <img src={logoSvg} alt="" height="40" />
+          <img
+            src={logoSvg}
+            alt="Reactive Manual Logo"
+            css={{
+              height: 40,
+
+              [media.lessThan('small')]: {
+                height: 30,
+              },
+            }}
+          />
           <span
             css={{
               color: 'inherit',

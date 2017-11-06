@@ -118,7 +118,9 @@ Map components are specific to dataset that has a Geopoint datatype, i.e. a (lat
 
 <img src="https://imgur.com/DNdxhB9.png" style="float:left"><img src="https://imgur.com/CfMpulx.png" style="float:left"> **[GeoDistanceDropdown](v1/map-components/GeoDistanceDropdown.html)** and **[GeoDistanceSlider](v1/map-components/GeoDistanceSlider.html)** are UI components for displaying a location search UI where a user can find all the data within a distance range of their selected landmark location.
 
-> <span class="fa fa-info-circle"></span> Note: These components provide more flexibility than the PlacesSearch component in specifying the distance range as either a slider or a dropdown list.
+> <span class="fa fa-info-circle"></span> Note
+>
+> These components provide more flexibility than the PlacesSearch component in specifying the distance range as either a slider or a dropdown list.
 
 ## 3. Search Components
 
