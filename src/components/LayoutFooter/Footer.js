@@ -40,14 +40,7 @@ const Footer = ({layoutHasSidebar = false}) => (
           css={{
             flexWrap: 'wrap',
             display: 'flex',
-
-            [media.lessThan('large')]: {
-              width: '100%',
-            },
-            [media.greaterThan('xlarge')]: {
-              width: 'calc(100% / 3 * 2)',
-              paddingLeft: 40,
-            },
+            width: '100%',
           }}>
           <FooterNav layoutHasSidebar={layoutHasSidebar}>
             <MetaTitle onDark={true}>Docs</MetaTitle>
@@ -132,26 +125,6 @@ const Footer = ({layoutHasSidebar = false}) => (
             </FooterLink>
           </FooterNav>
         </div>
-        <section
-          css={{
-            paddingTop: 40,
-            display: 'block !important', // Override 'Installation' <style> specifics
-
-            [media.greaterThan('xlarge')]: {
-              width: 'calc(100% / 3)',
-              order: -1,
-            },
-            [media.greaterThan('large')]: {
-              order: -1,
-              width: layoutHasSidebar ? null : 'calc(100% / 3)',
-            },
-            [media.lessThan('large')]: {
-              textAlign: 'center',
-              width: '100%',
-              paddingTop: 40,
-            },
-          }}>
-        </section>
       </div>
     </Container>
   </footer>

@@ -14,6 +14,10 @@ const FooterNav = ({children, title, layoutHasSidebar = false}) => (
         paddingTop: 0,
         width: '25%',
       },
+
+      [media.greaterThan('large')]: {
+        width: '25%',
+      },
     }}>
     <div
       css={{
