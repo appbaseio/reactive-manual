@@ -1,6 +1,6 @@
 ---
 id: start
-title: "Getting Started"
+title: "ReactiveMaps Getting Started"
 layout: tutorial
 sectionid: started
 permalink: getting-started/start.html
@@ -24,7 +24,7 @@ npm install --save @appbaseio/reactivemaps
 <link rel="stylesheet" href="node_modules/@appbaseio/reactivemaps/dist/css/style.min.css">
 ```
 
-You can read more about the installation steps [here](v1/getting-started/Installation.html).
+You can read more about the installation steps [here](/getting-started/installation.html).
 
 ### Creating an App
 
@@ -40,12 +40,11 @@ import {
 } from '@appbaseio/reactivemaps';
 ```
 
-Next, we will create a [`ReactiveBase`](v1/getting-started/ReactiveBase.html) component for connecting our UI view with data, where the data source is an [appbase.io](https://appbase.io) app. This quick GIF will help with creating an app and getting its credentials.  
+Next, we will create a [`ReactiveBase`](/getting-started/ReactiveBase.html) component for connecting our UI view with data, where the data source is an [appbase.io](https://appbase.io) app. This quick GIF will help with creating an app and getting its credentials.
 
 ![create an appbase.io app](https://i.imgur.com/Y6HiHnJ.gif)
 
-{% raw %}
-```
+```js
 class HelloWorld extends Component {
   render() {
 	return(
@@ -78,7 +77,6 @@ class HelloWorld extends Component {
   }
 }
 ```
-{% endraw %}
 
 Next, we have created a `SingleList` component with New York city selected by default and have added a `ReactiveMap` component which updates reactively every time the SingleList component's selected value changes.
 

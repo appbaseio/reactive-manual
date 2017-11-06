@@ -1,8 +1,11 @@
 - title: Getting Started
   items:
     - id: installation
-      title: Installation
+      title: ReactiveMaps Installation
       href: /getting-started/installation.html
     - id: start
-      title: Getting Started
+      title: ReactiveMaps Getting Started
       href: /getting-started/start.html
+    - id: rsinstallation
+      title: ReactiveSearch Installation
+      href: /getting-started/rsinstallation.html

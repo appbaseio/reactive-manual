@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import {colors, fonts, media} from 'theme';
 
-const NavigationFooter = ({next, prev, location}) => {
+const NavigationFooter = ({next, prev, location, nextTitle, prevTitle}) => {
   return (
     <div
       css={{
@@ -40,7 +40,7 @@ const NavigationFooter = ({next, prev, location}) => {
                     paddingTop: 10,
                   }}>
                   <PrimaryLink location={location} to={prev}>
-                    {linkToTitle(prev)}
+                    {prevTitle}
                   </PrimaryLink>
                 </div>
               </div>
@@ -61,7 +61,7 @@ const NavigationFooter = ({next, prev, location}) => {
                     paddingTop: 10,
                   }}>
                   <PrimaryLink location={location} to={next}>
-                    {linkToTitle(next)}
+                    {nextTitle}
                   </PrimaryLink>
                 </div>
               </div>
@@ -76,11 +76,11 @@ const NavigationFooter = ({next, prev, location}) => {
 NavigationFooter.propTypes = {
   next: PropTypes.string,
   prev: PropTypes.string,
+  nextTitle: PropTypes.string,
+  prevTitle: PropTypes.string,
 };
 
 export default NavigationFooter;
-
-const linkToTitle = link => link.replace(/-/g, ' ').replace('.html', '');
 
 const PrimaryLink = ({children, to, location}) => {
   // quick fix

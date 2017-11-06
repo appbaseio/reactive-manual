@@ -1,6 +1,12 @@
-{"bigh3": true}
-
-## Installation
+---
+id: installation
+title: "ReactiveSearch Installation"
+layout: tutorial
+sectionid: getting-started
+permalink: getting-started/rsinstallation.html
+prev: start.html
+prevTitle: "strart"
+---
 
 ### Step 1: Install reactivesearch via NPM
 

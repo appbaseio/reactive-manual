@@ -37,6 +37,7 @@ const MarkdownPage = ({
 }: Props) => {
   const hasAuthors = authors.length > 0;
   const titlePrefix = markdownRemark.frontmatter.title || '';
+  console.log(markdownRemark)
 
   return (
     <Flex
@@ -115,12 +116,13 @@ const MarkdownPage = ({
         </Container>
       </div>
 
-      {/* TODO Read prev/next from index map, not this way */}
       {(markdownRemark.frontmatter.next || markdownRemark.frontmatter.prev) && (
         <NavigationFooter
           location={location}
           next={markdownRemark.frontmatter.next}
+          nextTitle={markdownRemark.frontmatter.nextTitle}
           prev={markdownRemark.frontmatter.prev}
+          prevTitle={markdownRemark.frontmatter.prevTitle}
         />
       )}
     </Flex>

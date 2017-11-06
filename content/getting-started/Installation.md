@@ -1,10 +1,11 @@
 ---
 id: installation
-title: "Installation"
+title: "ReactiveMaps Installation"
 layout: tutorial
 sectionid: getting-started
 permalink: getting-started/installation.html
 next: start.html
+nextTitle: "ReactiveMaps Getting Started"
 ---
 
 ### Step 1: Install reactivemaps via NPM
