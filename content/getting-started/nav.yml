@@ -21,3 +21,6 @@
     - id: componentsindex
       title: Components Overview
       href: /getting-started/componentsindex.html
+    - id: writingdata
+      title: Writing Data
+      href: /gettting-started/writingdata.html

@@ -1,4 +1,12 @@
-# Writing and Editing Data
+---
+id: writingdata
+title: "Writing and Editing Data"
+layout: tutorial
+sectionid: getting-started
+permalink: getting-started/writingdata.html
+prev: componentsindex.html
+prevTitle: "Components Overview"
+---
 
 Writing and updating data is a common operation that is triggered from app UIs.
 

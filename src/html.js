@@ -10,7 +10,7 @@ if (process.env.NODE_ENV === `production`) {
 }
 
 const JS_NPM_URLS = [
-  '//unpkg.com/docsearch.js@2.4.1/dist/cdn/docsearch.min.js',
+  '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
 ];
 
 export default class HTML extends Component {

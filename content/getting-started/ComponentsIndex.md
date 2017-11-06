@@ -1,11 +1,13 @@
 ---
-id: components-index
+id: componentsindex
 title: "Components Index"
 layout: tutorial
 sectionid: getting-started
 permalink: getting-started/componentsindex.html
 prev: reactivebase.html
 prevTitle: "Base Component"
+next: writingdata.html
+nextTitle: "Writing Data"
 ---
 
 **ReactiveSearch** and **ReactiveMaps** provide composable components for building data-driven user interfaces. This document explains the different kinds of components offered by the library and walks throughs scenarios of when to use which component.
