@@ -22,7 +22,7 @@ class Template extends Component {
     let layoutHasSidebar = false;
     if (
       location.pathname.match(
-        /^\/(docs|tutorial|community|blog|contributing|warnings)/,
+        /^\/(docs|getting-started|community|blog|contributing|warnings)/,
       )
     ) {
       layoutHasSidebar = true;

@@ -226,7 +226,7 @@ const sharedStyles = {
     },
 
     '& p > code, & li > code': {
-      background: hex2rgba(colors.note, 0.3),
+      background: hex2rgba(colors.note, 0.4),
       padding: '0 3px',
       fontSize: 'inherit',
       color: colors.text,

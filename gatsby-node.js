@@ -69,7 +69,7 @@ exports.createPages = async ({graphql, boundActionCreators}) => {
       slug.includes('community/') ||
       slug.includes('contributing/') ||
       slug.includes('docs/') ||
-      slug.includes('tutorial/') ||
+      slug.includes('getting-started/') ||
       slug.includes('warnings/')
     ) {
       let template;
@@ -83,7 +83,7 @@ exports.createPages = async ({graphql, boundActionCreators}) => {
         slug.includes('warnings/')
       ) {
         template = docsTemplate;
-      } else if (slug.includes('tutorial/')) {
+      } else if (slug.includes('getting-started/')) {
         template = tutorialTemplate;
       }
 

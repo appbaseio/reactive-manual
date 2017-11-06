@@ -16,12 +16,10 @@ const Tutorial = ({data, location}) => {
 
   return (
     <MarkdownPage
-      enableScrollSync
       createLink={createLinkTutorial}
       location={location}
       markdownRemark={data.markdownRemark}
       sectionList={sectionListTutorial}
-      titlePostfix=" - React"
     />
   );
 };
