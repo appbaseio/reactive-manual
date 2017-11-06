@@ -20,10 +20,10 @@ Components are divided into four broad categories:
 3. `Search components` are part of **ReactiveSearch** and offer more specific or advanced versions of the basic components.
 4. `Result components` offer UI views for displaying the results from the database queries. Database queries are fired by the library based on the interactions of the one of above categories of components.
 
-> Note
+> Note <i class="fa-info"></i>
 >
-> **ReactiveSearch** library is currently the superset library which comes with all of the above components (including the map components). We recommend using that for the general use.
-> `npm -i @appbaseio/reactivesearch` (or read more on [how to install](/getting-started/rsinstallation.html))
+> **ReactiveSearch** library is currently the superset library which comes with all of the above components (including the map components). We recommend using that for the general use.  
+`npm -i @appbaseio/reactivesearch` (or read more on [how to install](/getting-started/rsinstallation.html))
 
 ## 1. Basic Components
 
