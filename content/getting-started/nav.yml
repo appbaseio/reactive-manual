@@ -9,3 +9,15 @@
     - id: rsinstallation
       title: ReactiveSearch Installation
       href: /getting-started/rsinstallation.html
+    - id: rsstart
+      title: ReactiveSearch Getting Started
+      href: /getting-started/rsstart.html
+    - id: data
+      title: Importing Data
+      href: /getting-started/data.html
+    - id: reactivebase
+      title: Base Component
+      href: /getting-started/reactivebase.html
+    - id: componentsindex
+      title: Components Overview
+      href: /getting-started/componentsindex.html

@@ -1,6 +1,14 @@
-{"bigh3": true}
-
-## ReactiveBase
+---
+id: reactivebase
+title: "ReactiveBase"
+layout: tutorial
+sectionid: getting-started
+permalink: getting-started/reactivebase.html
+prev: data.html
+prevTitle: "Importing Data"
+next: componentsindex.html
+nextTitle: "Components Overview"
+---
 
 **ReactiveBase** is the **base** component for all `ReactiveMaps` and `ReactiveSearch` apps. It binds the backend app (data source) with the UI view components (child elements to ReactiveBase), allowing the UI views to be reactively updated every time there is a change in the data source or in the UI view components.
 
@@ -31,9 +39,11 @@ This is the first component you will need to add.
 - **theme** `String` [optional]  
     specify a UI theme as one of `rbc-blue` or `rbc-dark`. Read more about theming [here](https://opensource.appbase.io/reactivemaps/manual/v1/advanced/Theming.html).
     
-`Note:` If you are using the **url** prop for an Elasticsearch cluster, ensure that your ReactiveSearch app can access the cluster. Typically, you will need to configure CORS in elasticsearch.yml to enable access.
+> Note
+>
+> If you are using the **url** prop for an Elasticsearch cluster, ensure that your ReactiveSearch app can access the cluster. Typically, you will need to configure CORS in **elasticsearch.yml** to enable access.
 
-```
+```yaml
 http.cors.enabled: true
 http.cors.allow-credentials: true
 http.cors.allow-origin: "http://reactive-search-app-domain.com:port"
@@ -48,4 +58,4 @@ Once you have added the **ReactiveBase** component, you can get started with add
 * Search specific components can be found [here](v1/search-components/CategorySearch.html).
 * Generic components can be found [here](v1/components/SingleList.html).
 
-You can read more about when to use which components in the overview guide [here](v1/getting-started/ComponentsIndex.html).
+You can read more about when to use which components in the overview guide [here](/getting-started/ComponentsIndex.html).

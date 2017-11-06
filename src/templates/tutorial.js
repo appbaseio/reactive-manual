@@ -13,7 +13,6 @@ const Tutorial = ({data, location}) => {
   if (typeof window !== 'undefined' && typeof window.location !== 'undefined') {
     location.hash = window.location.hash;
   }
-  console.log('go', data.markdownRemark)
 
   return (
     <MarkdownPage

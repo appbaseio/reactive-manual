@@ -37,7 +37,6 @@ const MarkdownPage = ({
 }: Props) => {
   const hasAuthors = authors.length > 0;
   const titlePrefix = markdownRemark.frontmatter.title || '';
-  console.log(markdownRemark)
 
   return (
     <Flex

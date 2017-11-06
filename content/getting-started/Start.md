@@ -5,6 +5,9 @@ layout: tutorial
 sectionid: started
 permalink: getting-started/start.html
 prev: installation.html
+prevTitle: "ReactiveMaps Installation"
+next: rsinstallation.html
+nextTitle: "ReactiveSearch Installation"
 ---
 
 ### Installation Recap

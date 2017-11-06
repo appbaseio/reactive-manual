@@ -1,12 +1,20 @@
-{"bigh3": true}
-
-## Getting Started
+---
+id: rsstart
+title: "ReactiveSearch Getting Started"
+layout: tutorial
+sectionid: getting-started
+permalink: getting-started/rsstart.html
+prev: start.html
+prevTitle: "ReactiveMaps Getting Started"
+next: data.html
+nextTitle: "Importing Data"
+---
 
 ### Installation Recap
 
-We install the library and then add the relevant browser dependencies in the index.html file.
+We install the library and then add the relevant browser dependencies in the **index.html** file.
 
-```sh
+```bash
 npm install --save @appbaseio/reactivesearch
 ```
 
@@ -17,7 +25,7 @@ npm install --save @appbaseio/reactivesearch
 <link rel="stylesheet" href="node_modules/@appbaseio/reactivesearch/dist/css/style.min.css">
 ```
 
-You can read more about the installation steps [here](v1/getting-started/RSInstallation.html).
+You can read more about the installation steps [here](/getting-started/rsinstallation.html).
 
 ### Creating an App
 
@@ -34,12 +42,11 @@ import {
 } from '@appbaseio/reactivesearch';
 ```
 
-Next, we will create a [`ReactiveBase`](v1/getting-started/ReactiveBase.html) component for connecting our UI view with data, where the data source is an [appbase.io](https://appbase.io) app. This quick GIF will help with creating an app and getting its credentials.  
+Next, we will create a [`ReactiveBase`](/getting-started/ReactiveBase.html) component for connecting our UI view with data, where the data source is an [appbase.io](https://appbase.io) app. This quick GIF will help with creating an app and getting its credentials.
 
 ![create an appbase.io app](https://i.imgur.com/Y6HiHnJ.gif)
 
-{% raw %}
-```
+```js
 class HelloWorld extends Component {
 
 	onData(res) {
@@ -126,7 +133,6 @@ class HelloWorld extends Component {
 	}
 }
 ```
-{% endraw %}
 
 Here, we have created a `CategorySearch` component along with a `RatingsFilter` component (first half of the screen) to show the filters.
 
