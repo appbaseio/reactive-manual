@@ -5,17 +5,17 @@
 import hex2rgba from 'hex2rgba';
 
 const colors = {
-  lighter: '#373940', // light blue
+  lighter: '#3f4b63', // light blue
   dark: '#282c34', // dark blue
-  darker: '#20232a', // really dark blue
-  brand: '#61dafb', // electric blue
-  brandLight: '#bbeffd',
+  darker: '#232e44', // really dark blue
+  brand: '#86ddf8', // electric blue
+  brandLight: '#b6ef7e',
   text: '#1a1a1a', // very dark grey / black substitute
   subtle: '#6d6d6d', // light grey for text
   subtleOnDark: '#999',
   divider: '#ececec', // very light grey
-  note: '#ffe564', // yellow
-  error: '#ff6464', // yellow
+  note: '#fea', // yellow
+  error: '#ff8484', // yellow
   white: '#ffffff',
   black: '#000000',
 };
@@ -349,7 +349,7 @@ const sharedStyles = {
     },
 
     '& blockquote': {
-      backgroundColor: hex2rgba('#ffe564', 0.3),
+      backgroundColor: hex2rgba(colors.note, 0.5),
       borderLeftColor: colors.note,
       borderLeftWidth: 9,
       borderLeftStyle: 'solid',
