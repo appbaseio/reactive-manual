@@ -18,7 +18,6 @@ class Template extends Component {
   render() {
     const {children, location} = this.props;
 
-    // TODO - is there a better way to check if we need we have a sidebar?
     let layoutHasSidebar = false;
     if (
       location.pathname.match(

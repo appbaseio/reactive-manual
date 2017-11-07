@@ -1,8 +1,13 @@
 import navCommunity from '../../content/community/nav.yml';
-import navDocs from '../../content/docs/nav.yml';
+import navBasic from '../../content/docs/components/nav.yml';
 import navTutorial from '../../content/getting-started/nav.yml';
 
-const sectionListDocs = navDocs.map(item => ({
+const nav = [
+  ...navTutorial,
+  ...navBasic,
+];
+
+const sectionListDocs = nav.map(item => ({
   ...item,
   directory: 'docs',
 }));
@@ -12,7 +17,7 @@ const sectionListCommunity = navCommunity.map(item => ({
   directory: 'community',
 }));
 
-const sectionListTutorial = navTutorial.map(item => ({
+const sectionListTutorial = nav.map(item => ({
   ...item,
   directory: 'getting-started',
 }));

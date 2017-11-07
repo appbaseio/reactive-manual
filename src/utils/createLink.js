@@ -1,7 +1,6 @@
 import Link from 'gatsby-link';
 import React from 'react';
 import ExternalLinkSvg from 'templates/components/ExternalLinkSvg';
-import slugify from 'utils/slugify';
 import {colors, media} from 'theme';
 
 const createLinkBlog = ({isActive, item, section}) => {
@@ -36,11 +35,12 @@ const createLinkCommunity = ({isActive, item, section}) => {
   });
 };
 
-const createLinkDocs = ({isActive, item, section}) => {
+const createLinkDocs = ({isActive, item, onLinkClick, section}) => {
   return (
     <Link
       css={[linkCss, isActive && activeLinkCss]}
-      to={slugify(item.id, section.directory)}>
+      onClick={onLinkClick}
+      to={item.href}>
       {isActive && <span css={activeLinkBefore} />}
       {item.title}
     </Link>
