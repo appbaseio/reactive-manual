@@ -77,7 +77,7 @@ const Section = ({
                 <li key={subitem.id}>
                   {createLink({
                     isActive: isScrollSync
-                      ? activeItemId === subitem.id
+                      ? (activeItemId === subitem.id && isItemActive(location, item))
                       : isItemActive(location, subitem),
                     item: subitem,
                     location,
