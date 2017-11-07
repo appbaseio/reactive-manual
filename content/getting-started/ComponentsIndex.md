@@ -20,7 +20,7 @@ Components are divided into four broad categories:
 3. `Search components` are part of **ReactiveSearch** and offer more specific or advanced versions of the basic components.
 4. `Result components` offer UI views for displaying the results from the database queries. Database queries are fired by the library based on the interactions of the one of above categories of components.
 
-> Note <i class="fa-info"></i>
+> <i class="fa fa-info-circle"></i> Note
 >
 > **ReactiveSearch** library is currently the superset library which comes with all of the above components (including the map components). We recommend using that for the general use.  
 `npm -i @appbaseio/reactivesearch` (or read more on [how to install](/getting-started/rsinstallation.html))
@@ -43,7 +43,7 @@ Components are divided into four broad categories:
 **[DataSearch](v1/components/DataSearch)** displays a search input box. It supports autosuggestions, highlighting of results and querying against more than one fields via props.
 </p>
 
-> Note
+> <i class="fa fa-info-circle"></i> Note
 >
 > If you are looking to apply a query on a user input, **DataSearch** is preferable over **TextField**.
 
@@ -110,7 +110,7 @@ The following are all the possible UI components for a numeric datatype field in
 **[SingleRange](v1/components/SingleRange.html)** displays a curated list of items where only one item can be selected at a time. Each item represents a range of values, specified in the **data** prop of the component.
 </p>
 
-> Note
+> <i class="fa fa-info-circle"></i> Note
 >
 > Its counterpart for a String datatype would be **SingleDataList** component.
 
@@ -120,7 +120,7 @@ The following are all the possible UI components for a numeric datatype field in
 **[MultiRange](v1/components/MultiRange.html)** displays a curated list of items where multiple items can be selected at a time. Each item represents a range of values, specified in the **data** prop of the component.
 </p>
 
-> Note
+> <i class="fa fa-info-circle"></i> Note
 >
 > Its counterpart for a String datatype would be **MultiDataList** component.
 
@@ -200,7 +200,7 @@ Map components are specific to dataset that has a Geopoint datatype, i.e. a (lat
 **[GeoDistanceDropdown](v1/map-components/GeoDistanceDropdown.html)** and **[GeoDistanceSlider](v1/map-components/GeoDistanceSlider.html)** are UI components for displaying a location search UI where a user can find all the data within a distance range of their selected landmark location.
 </p>
 
-> Note
+> <i class="fa fa-info-circle"></i> Note
 >
 > These components provide more flexibility than the PlacesSearch component in specifying the distance range as either a slider or a dropdown list.
 

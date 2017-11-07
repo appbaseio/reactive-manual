@@ -172,8 +172,6 @@ const sharedStyles = {
 
     '& .gatsby-highlight': {
       marginTop: 25,
-      marginLeft: -30,
-      marginRight: -30,
       marginBottom: 25,
       paddingLeft: 15,
       paddingRight: 15,
@@ -356,8 +354,6 @@ const sharedStyles = {
       padding: '20px 45px 20px 26px',
       marginBottom: 30,
       marginTop: 20,
-      marginLeft: -30,
-      marginRight: -30,
 
       [media.lessThan('small')]: {
         marginLeft: -20,

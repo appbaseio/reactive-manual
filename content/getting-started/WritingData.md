@@ -20,7 +20,9 @@ In this post, we talk about a few ways to perform the Create, Update and Delete 
 
 We recommend using appbase-js on a Node.JS middleware to perform the write operations.
 
-> Note: It is important to perform write operations from a secure environment, as you don't want to expose the write credentials publically.
+> Note
+>
+> It is important to perform write operations from a secure environment, as you don't want to expose the write credentials publically.
 
 ## REST API
 

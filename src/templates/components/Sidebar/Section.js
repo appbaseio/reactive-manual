@@ -63,7 +63,7 @@ const Section = ({
           }}>
           {createLink({
             isActive: isScrollSync
-              ? activeItemId === item.id
+              ? (isItemActive(location, item) && activeItemId === '')
               : isItemActive(location, item),
             item,
             location,
@@ -71,7 +71,7 @@ const Section = ({
             section,
           })}
 
-          {item.subitems && (
+          {item.subitems && isItemActive(location, item) && (
             <ul css={{marginLeft: 20}}>
               {item.subitems.map(subitem => (
                 <li key={subitem.id}>

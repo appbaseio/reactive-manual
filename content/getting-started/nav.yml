@@ -6,6 +6,16 @@
     - id: start
       title: ReactiveMaps Getting Started
       href: /getting-started/start.html
+      forceInternal: true
+      subitems:
+        - id: installation-recap
+          title: Installation Recap
+          href: /getting-started/start.html#installation-recap
+          forceInternal: true
+        - id: creating-an-app
+          title: Creating an App
+          href: /getting-started/start.html#creating-an-app
+          forceInternal: true
     - id: rsinstallation
       title: ReactiveSearch Installation
       href: /getting-started/rsinstallation.html

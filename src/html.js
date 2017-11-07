@@ -10,7 +10,7 @@ if (process.env.NODE_ENV === `production`) {
 }
 
 const JS_NPM_URLS = [
-  '//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css',
+  '//use.fontawesome.com/655968a3e7.js',
 ];
 
 export default class HTML extends Component {
