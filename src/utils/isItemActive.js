@@ -5,12 +5,11 @@ const toAnchor = (href = '') => {
   return index >= 0 ? href.substr(index) : '';
 };
 
-// TODO Account for redirect_from URLs somehow; they currently won't match.
-// This comment should not be true anymore since we're using 300 redirects
-
 const isItemActive = (location, item) => {
   if (location.hash) {
-    if (item.href) {
+    if (item.subitems && item.subitems.length) {
+      return item.subitems.some(subitem => location.hash === toAnchor(subitem.href));
+    } else if (item.href) {
       return location.hash === toAnchor(item.href);
     }
   } else if (item.id.includes('html')) {
