@@ -60,10 +60,6 @@ exports.createPages = async ({graphql, boundActionCreators}) => {
           slug,
         },
       });
-    } else if (slug === 'docs/error-decoder.html') {
-      // No-op so far as markdown templates go.
-      // Error codes are managed by a page in src/pages
-      // (which gets created by Gatsby during a separate phase).
     } else if (
       slug.includes('blog/') ||
       slug.includes('community/') ||
