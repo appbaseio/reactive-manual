@@ -1,6 +1,14 @@
-{"bigh3": true}
-
-# RangeSlider
+---
+id: rangeslider
+title: "RangeSlider"
+layout: docs
+sectionid: docs
+permalink: docs/basic-components/rangeslider.html
+prev: multirange.html
+prevTitle: "MultiRange"
+next: numberbox.html
+nextTitle: "NumberBox"
+---
 
 ![Image to be displayed](https://i.imgur.com/OYUWZHL.png)
 
@@ -84,8 +92,10 @@ While `RangeSlider` only requires the above props to be used, it comes with many
 
 ## Syntax
 
-<p data-height="500" data-theme-id="light" data-slug-hash="mModrd" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="RangeSlider docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/mModrd/">RangeSlider docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<br>
+
+<iframe height='500' scrolling='no' title='RangeSlider docs example' src='//codepen.io/sids-aquarius/embed/mModrd/?height=500&theme-id=light&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/mModrd/'>RangeSlider docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ## Styles
 
@@ -101,7 +111,7 @@ All reactivebase components are `rbc` namespaced.
 3. connect with external interfaces using `beforeValueChange`, `onValueChange` and `onQueryChange`,
 4. filter data using a combined query context via the `react` prop.
 
-```
+```js
 <RangeSlider
   ...
   className="custom-class"
@@ -173,8 +183,10 @@ All reactivebase components are `rbc` namespaced.
 
 ## Examples
 
-<p data-height="500" data-theme-id="light" data-slug-hash="mModrd" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="RangeSlider docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/mModrd/">RangeSlider docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<br>
+
+<iframe height='500' scrolling='no' title='RangeSlider docs example' src='//codepen.io/sids-aquarius/embed/mModrd/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/mModrd/'>RangeSlider docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 See more stories for RangeSlider on playground.
 

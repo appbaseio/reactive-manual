@@ -1,12 +1,22 @@
-{"bigh3": true}
-
-# MultiDataList
+---
+id: multidatalist
+title: "MultiDataList"
+layout: docs
+sectionid: docs
+permalink: docs/basic-components/multidatalist.html
+prev: singledatalist.html
+prevTitle: "SingleDataList"
+next: singledropdownlist.html
+nextTitle: "SingleDropdownList"
+---
 
 ![Image to be displayed](https://i.imgur.com/cEAUorS.png)
 
 `MultiDataList` creates a multiple checkbox list UI component that is connected to a database field. It is used for filtering results based on the current selection(s) from a list of data items.
 
-`Note:` This component behaves similar to the [MultiList](v1/components/MultiList.html) component except the list items are user defined with the `data` prop, ideal for showing curated items in a list layout.
+> Note
+>
+> This component behaves similar to the [MultiList](/docs/basic-components/multilist.html) component except the list items are user defined with the `data` prop, ideal for showing curated items in a list layout.
 
 Example uses:
 * select one or multiple items from a list of categories for filtering e-commerce search results.
@@ -95,8 +105,10 @@ Example uses:
 
 ## Syntax
 
-<p data-height="500" data-theme-id="light" data-slug-hash="vJPYBw" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="MultiDataList docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/vJPYBw/">MultiDataList docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<br>
+
+<iframe height='500' scrolling='no' title='MultiDataList docs example' src='//codepen.io/sids-aquarius/embed/vJPYBw/?height=500&theme-id=light&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/vJPYBw/'>MultiDataList docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ## Styles
 
@@ -111,7 +123,7 @@ All reactivebase components are `rbc` namespaced.
 2. update the underlying DB query with `customQuery`,
 3. connect with external interfaces using `beforeValueChange`, `onValueChange` and `onQueryChange`.
 
-```
+```js
 <MultiDataList
   ...
   className="custom-class"
@@ -169,8 +181,10 @@ All reactivebase components are `rbc` namespaced.
 
 ## Examples
 
-<p data-height="500" data-theme-id="light" data-slug-hash="vJPYBw" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="MultiDataList docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/vJPYBw/">MultiDataList docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<br>
+
+<iframe height='500' scrolling='no' title='MultiDataList docs example' src='//codepen.io/sids-aquarius/embed/vJPYBw/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/vJPYBw/'>MultiDataList docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 1. [List with all the default props](../playground/?knob-title=Topics&knob-URLParams%20%28not%20visible%20in%20storybook%29=false&knob-filterLabel=Custom%20Filter%20Name&knob-defaultSelected=Social&knob-selectAllLabel=Select%20All&knob-showRadio=true&knob-queryFormat=epoch_millis&knob-numberOfMonths=2&knob-style=%7B"paddingBottom"%3A"10px"%7D&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&knob-showFilter=true&knob-sortBy=count&knob-dataLabel=★%20%20A%20customizable%20UI%20widget%20★&knob-allowAllDates=true&knob-size=100&knob-extra=%7B"withFullScreenPortal"%3Atrue%2C"showClearDate"%3Atrue%7D&knob-visible=true&knob-showCount=true&knob-placeholder=Search%20topics&knob-showSearch=true&selectedKind=search%2FMultiDataList&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 

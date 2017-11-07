@@ -1,12 +1,22 @@
-{"bigh3": true}
-
-# MultiRange
+---
+id: multirange
+title: "MultiRange"
+layout: docs
+sectionid: docs
+permalink: docs/basic-components/multirange.html
+prev: singlerange.html
+prevTitle: "SingleRange"
+next: rangeslider.html
+nextTitle: "RangeSlider"
+---
 
 ![Image to be displayed](https://i.imgur.com/XqRjLSS.png)
 
 `MultiRange` creates a multiple checkbox based numeric range UI component.
 
-`Note:` It is similar to a [MultiList](v1/components/MultiList.html) component but for numeric data fields.
+> Note
+>
+> It is similar to a [MultiList](/docs/basic-components/multilist.html) component but for numeric data fields.
 
 Example uses:
 * filtering search results by prices in an e-commerce or food delivery experience.
@@ -74,8 +84,10 @@ Example uses:
 
 ## Syntax
 
-<p data-height="500" data-theme-id="light" data-slug-hash="WEmNvo" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="MultiRange docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/WEmNvo/">MultiRange docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<br>
+
+<iframe height='500' scrolling='no' title='MultiRange docs example' src='//codepen.io/sids-aquarius/embed/WEmNvo/?height=500&theme-id=light&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/WEmNvo/'>MultiRange docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ## Styles
 
@@ -90,7 +102,7 @@ All reactivebase components are `rbc` namespaced.
 2. update the underlying DB query with `customQuery`,
 3. connect with external interfaces using `beforeValueChange`, `onValueChange` and `onQueryChange`.
 
-```
+```js
 <MultiRange
   ...
   className="custom-class"
@@ -148,8 +160,10 @@ All reactivebase components are `rbc` namespaced.
 
 ## Examples
 
-<p data-height="500" data-theme-id="light" data-slug-hash="WEmNvo" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="MultiRange docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/WEmNvo/">MultiRange docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<br>
+
+<iframe height='500' scrolling='no' title='MultiRange docs example' src='//codepen.io/sids-aquarius/embed/WEmNvo/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/WEmNvo/'>MultiRange docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 1. [Range with all the default props](../playground/?knob-title=MultiDropdownRange%3A%20Earthquake%20Magnitude&knob-URLParams%20%28not%20visible%20in%20storybook%29=false&knob-filterLabel=City%20filter&knob-defaultSelected%5B0%5D=London&knob-defaultSelected%5B1%5D=Melbourne&knob-selectAllLabel=All%20Cities&knob-showFilter=true&knob-sortBy=count&knob-size=100&knob-showCount=true&knob-placeholder=Search%20places&selectedKind=map%2FMultiRange&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 

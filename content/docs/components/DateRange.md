@@ -1,6 +1,14 @@
-{"bigh3": true}
-
-# DateRange
+---
+id: daterange
+title: "DateRange"
+layout: docs
+sectionid: docs
+permalink: docs/basic-components/daterange.html
+prev: datepicker.html
+prevTitle: "DatePicker"
+next: datacontroller.html
+nextTitle: "DataController"
+---
 
 ![Image to be displayed](https://i.imgur.com/Tl2xXNS.png)
 
@@ -63,16 +71,16 @@ Example uses:
     whether to all all dates or dates starting from today. Defaults to `true`, i.e. allowing all dates.
 - **queryFormat** `String` [optional]  
     sets the date format to be used in the query, can accept one of the following:
-    * `epoch_millis` (default) date is expressed as milliseconds since epoch.
-    * `epoch_seconds` date is expressed as seconds since epoch.
-    * `date` date expressed in yyyy-MM-dd format.
-    * `date_time` date expressed using a combination of date and time separated by T: yyyy-MM-dd'T'HH:mm:ss.SSSZ.
-    * `date_time_no_millis` date expressed using a combination of date and time without milliseconds separated by T: yyyy-MM-dd'T'HH:mm:ssZ.
-    * `basic_date` date expressed in yyyyMMdd format.
-    * `basic_date_time` date expressed in yyyyMMdd*T*HH:mm:ss.SSSZ format.
-    * `basic_date_time_no_millis` date expressed in yyyyMMdd*T*HH:mm:ssZ format.
-    * `basic_time` date expressed as just time in the HHmmss.SSSZ format.
-    * `basic_time_no_millis` date expressed as just time but without milliseconds in the HHmmssZ format.
+    * `epoch_millis` (default) date is expressed as **milliseconds** since epoch.
+    * `epoch_seconds` date is expressed as **seconds** since epoch.
+    * `date` date expressed in `yyyy-MM-dd` format.
+    * `date_time` date expressed using a combination of date and time separated by **T**: `yyyy-MM-ddTHH:mm:ss.SSSZ`.
+    * `date_time_no_millis` date expressed using a combination of date and time without milliseconds separated by **T**: `yyyy-MM-ddTHH:mm:ssZ`.
+    * `basic_date` date expressed in `yyyyMMdd` format.
+    * `basic_date_time` date expressed in `yyyyMMddTHH:mm:ss.SSSZ` format.
+    * `basic_date_time_no_millis` date expressed in `yyyyMMddTHH:mm:ssZ` format.
+    * `basic_time` date expressed as just time in the `HHmmss.SSSZ` format.
+    * `basic_time_no_millis` date expressed as just time but without milliseconds in the `HHmmssZ` format.
 - **extra** `Object` [optional]  
     supports the full gauntlet of props as defined in airbnb's [react-dates](https://github.com/airbnb/react-dates) component.
     An example `extra` prop object would look like:
@@ -92,8 +100,10 @@ Example uses:
 
 ## Syntax
 
-<p data-height="500" data-theme-id="light" data-slug-hash="prYoRW" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="DateRange docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/prYoRW/">DateRange docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<br>
+
+<iframe height='500' scrolling='no' title='DateRange docs example' src='//codepen.io/sids-aquarius/embed/prYoRW/?height=500&theme-id=light&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/prYoRW/'>DateRange docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ## Styles
 
@@ -108,7 +118,7 @@ All reactivebase components are `rbc` namespaced.
 2. update the underlying DB query with `customQuery`,
 3. connect with external interfaces using `beforeValueChange`, `onValueChange` and `onQueryChange`.
 
-```
+```js
 <DataSearch
   ...
   className="custom-class"
@@ -166,8 +176,10 @@ All reactivebase components are `rbc` namespaced.
 
 ## Examples
 
-<p data-height="500" data-theme-id="light" data-slug-hash="prYoRW" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="DateRange docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/prYoRW/">DateRange docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<br>
+
+<iframe height='500' scrolling='no' title='DateRange docs example' src='//codepen.io/sids-aquarius/embed/prYoRW/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/prYoRW/'>DateRange docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 1. [Basic component example](../playground/?knob-title=Date%20Range&knob-URLParams%20%28not%20visible%20in%20storybook%29=false&knob-filterLabel=Date%20range&knob-defaultSelected=default&knob-queryFormat=date&knob-numberOfMonths=2&knob-style=%7B"paddingBottom"%3A"10px"%7D&knob-URLParams%20%28not%20visible%20on%20storybook%29=true&knob-showFilter=true&knob-dataLabel=★%20%20A%20customizable%20UI%20widget%20★&knob-allowAllDates=true&knob-extra=%7B"withFullScreenPortal"%3Atrue%2C"showClearDate"%3Atrue%7D&knob-visible=true&knob-placeholder=Pick%20date&selectedKind=map%2FDateRange&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 

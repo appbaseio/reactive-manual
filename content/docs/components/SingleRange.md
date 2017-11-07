@@ -1,12 +1,22 @@
-{"bigh3": true}
-
-# SingleRange
+---
+id: singlerange
+title: "SingleRange"
+layout: docs
+sectionid: docs
+permalink: docs/basic-components/singlerange.html
+prev: multilist.html
+prevTitle: "MultiList"
+next: multirange.html
+nextTitle: "MultiRange"
+---
 
 ![Image to be displayed](https://i.imgur.com/55jFax6.png)
 
 `SingleRange` creates a numeric range selector UI component that is connected to a database field.
 
-`Note:` It is similar to a [SingleList](v1/components/SingleList.html), except it is suited for numeric data.
+> Note
+>
+> It is similar to a [SingleList](/docs/basic-components/singlelist.html), except it is suited for numeric data.
 
 Example uses:
 * filtering search results by prices in an e-commerce or food delivery experience.
@@ -66,7 +76,7 @@ Example uses:
 - **showRadio** `Boolean` [optional]  
     show radio button icon for each range item. Defaults to `true`.
 - **showFilter** `Boolean` [optional]  
-    show the selected item as a filter in the [selected filters view](/v1/component/MultiList.html). Defaults to `true`.
+    show the selected item as a filter in the [selected filters view](/docs/basic-components/multilist.html). Defaults to `true`.
 - **filterLabel** `String` [optional]  
     An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
 - **URLParams** `Boolean` [optional]  
@@ -74,8 +84,10 @@ Example uses:
 
 ## Syntax
 
-<p data-height="500" data-theme-id="light" data-slug-hash="Jyzjja" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="SingleRange docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/Jyzjja/">SingleRange docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<br>
+
+<iframe height='500' scrolling='no' title='SingleRange docs example' src='//codepen.io/sids-aquarius/embed/Jyzjja/?height=500&theme-id=light&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/Jyzjja/'>SingleRange docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ## Styles
 
@@ -90,7 +102,7 @@ All reactivebase components are `rbc` namespaced.
 2. update the underlying DB query with `customQuery`,
 3. connect with external interfaces using `beforeValueChange`, `onValueChange` and `onQueryChange`.
 
-```
+```js
 <SingleRange
   ...
   className="custom-class"
@@ -148,8 +160,10 @@ All reactivebase components are `rbc` namespaced.
 
 ## Examples
 
-<p data-height="500" data-theme-id="light" data-slug-hash="Jyzjja" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="SingleRange docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/Jyzjja/">SingleRange docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<br>
+
+<iframe height='500' scrolling='no' title='SingleRange docs example' src='//codepen.io/sids-aquarius/embed/Jyzjja/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/Jyzjja/'>SingleRange docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 1. [Range with all the default props](../playground/?knob-title=SingleRange%3A%20Price%20Filter&knob-defaultSelected=Cheap&knob-selectAllLabel=All%20cities&knob-showRadio=true&knob-sortBy=count&knob-size=100&knob-showCount=true&knob-placeholder=Search%20City&knob-showSearch=true&selectedKind=map%2FSingleRange&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 

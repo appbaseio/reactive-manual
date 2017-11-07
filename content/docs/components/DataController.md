@@ -1,6 +1,14 @@
-{"bigh3": true}
-
-# DataController
+---
+id: datacontroller
+title: "DataController"
+layout: docs
+sectionid: docs
+permalink: docs/basic-components/datacontroller.html
+prev: daterange.html
+prevTitle: "DateRange"
+next: reactivelist.html
+nextTitle: "ReactiveList"
+---
 
 ![Image to be displayed](https://i.imgur.com/Lj5O2qg.png)
 
@@ -61,8 +69,10 @@ Example uses:
 
 ## Syntax
 
-<p data-height="500" data-theme-id="light" data-slug-hash="QMoWqM" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="DataController docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/QMoWqM/">DataController docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<br>
+
+<iframe height='500' scrolling='no' title='DataController docs example' src='//codepen.io/sids-aquarius/embed/QMoWqM/?height=500&theme-id=light&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/QMoWqM/'>DataController docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ## Styles
 
@@ -77,7 +87,7 @@ All reactivebase components are `rbc` namespaced.
 2. update the underlying DB query with `customQuery`,
 3. connect with external interfaces using `beforeValueChange`, `onValueChange` and `onQueryChange`.
 
-```
+```js
 <DataController
   ...
   className="custom-class"
@@ -135,8 +145,10 @@ All reactivebase components are `rbc` namespaced.
 
 ## Examples
 
-<p data-height="500" data-theme-id="light" data-slug-hash="QMoWqM" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="DataController docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/QMoWqM/">DataController docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<br>
+
+<iframe height='500' scrolling='no' title='DataController docs example' src='//codepen.io/sids-aquarius/embed/QMoWqM/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/QMoWqM/'>DataController docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 1. [DataController with all the default props](../playground/?knob-visible=true&selectedKind=map%2FDataController&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 2. [DataController with UI](../playground/?knob-visible=true&selectedKind=map%2FDataController&selectedStory=With%20UI&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)

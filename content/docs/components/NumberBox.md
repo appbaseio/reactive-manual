@@ -1,6 +1,14 @@
-{"bigh3": true}
-
-# NumberBox
+---
+id: numberbox
+title: "NumberBox"
+layout: docs
+sectionid: docs
+permalink: docs/basic-components/numberbox.html
+prev: rangeslider.html
+prevTitle: "RangeSlider"
+next: datasearch.html
+nextTitle: "DataSearch"
+---
 
 ![Image to be displayed](https://i.imgur.com/0Xfg8pM.png)
 
@@ -70,8 +78,10 @@ Example uses:
 
 ## Syntax
 
-<p data-height="500" data-theme-id="light" data-slug-hash="qXvBag" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="NumberBox docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/qXvBag/">NumberBox docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<br>
+
+<iframe height='500' scrolling='no' title='NumberBox docs example' src='//codepen.io/sids-aquarius/embed/qXvBag/?height=500&theme-id=light&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/qXvBag/'>NumberBox docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ## Styles
 
@@ -87,7 +97,7 @@ All reactivebase components are `rbc` namespaced.
 2. update the underlying DB query with `customQuery`,
 3. connect with external interfaces using `beforeValueChange`, `onValueChange` and `onQueryChange`.
 
-```
+```js
 <NumberBox
   ...
   className="custom-class"
@@ -146,8 +156,10 @@ All reactivebase components are `rbc` namespaced.
 
 ## Examples
 
-<p data-height="500" data-theme-id="light" data-slug-hash="qXvBag" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="NumberBox docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/qXvBag/">NumberBox docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<br>
+
+<iframe height='500' scrolling='no' title='NumberBox docs example' src='//codepen.io/sids-aquarius/embed/qXvBag/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/qXvBag/'>NumberBox docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 1. [A NumberBox component with defaults](../playground/?knob-title=Number%20of%20Guests&knob-defaultSelected=2&selectedKind=search%2FNumberBox&selectedStory=With%20defaultSelected&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 

@@ -1,6 +1,14 @@
-{"bigh3": true}
-
-# SingleList
+---
+id: singlelist
+title: "SingleList"
+layout: docs
+sectionid: docs
+permalink: docs/basic-components/singlelist.html
+prev: togglebutton.html
+prevTitle: "ToggleButton"
+next: multilist.html
+nextTitle: "MultiList"
+---
 
 ![Image to be displayed](https://i.imgur.com/hFKkYws.png)
 
@@ -82,8 +90,10 @@ Example uses:
 
 ## Syntax
 
-<p data-height="500" data-theme-id="light" data-slug-hash="zdbOLE" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="SingleList docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/zdbOLE/">SingleList docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<br>
+
+<iframe height='500' scrolling='no' title='SingleList docs example' src='//codepen.io/sids-aquarius/embed/zdbOLE/?height=500&theme-id=light&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/zdbOLE/'>SingleList docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ## Styles
 
@@ -100,7 +110,7 @@ All reactivebase components are `rbc` namespaced.
 3. connect with external interfaces using `beforeValueChange`, `onValueChange` and `onQueryChange`,
 4. specify how options should be filtered or updated using `react` prop.
 
-```
+```js
 <SingleList
   ...
   className="custom-class"
@@ -174,8 +184,10 @@ All reactivebase components are `rbc` namespaced.
 
 ## Examples
 
-<p data-height="500" data-theme-id="light" data-slug-hash="zdbOLE" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="SingleList docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/zdbOLE/">SingleList docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<br>
+
+<iframe height='500' scrolling='no' title='SingleList docs example' src='//codepen.io/sids-aquarius/embed/zdbOLE/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/zdbOLE/'>SingleList docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 1. [List with all the default props](../playground/?selectedKind=map%2FSingleList&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 

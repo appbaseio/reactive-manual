@@ -1,10 +1,18 @@
-{"bigh3": true}
-
-# MultiList
+---
+id: multilist
+title: "MultiList"
+layout: docs
+sectionid: docs
+permalink: docs/basic-components/multilist.html
+prev: singlelist.html
+prevTitle: "SingleList"
+next: singlerange.html
+nextTitle: "SingleRange"
+---
 
 ![Image to be displayed](https://i.imgur.com/KuSUJyX.png)
 
-`MultiList` creates a multiple selection based list UI component that is connected to a database field. It is similar to a [SingleList](v1/components/SingleList.html) except it can support multiple item selections.
+`MultiList` creates a multiple selection based list UI component that is connected to a database field. It is similar to a [SingleList](/docs/basic-components/singlelist.html) except it can support multiple item selections.
 
 Example uses:
 
@@ -88,8 +96,10 @@ Example uses:
 
 ## Syntax
 
-<p data-height="500" data-theme-id="light" data-slug-hash="GveKLV" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="MultiList docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/GveKLV/">MultiList docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<br>
+
+<iframe height='500' scrolling='no' title='MultiList docs example' src='//codepen.io/sids-aquarius/embed/GveKLV/?height=500&theme-id=light&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/GveKLV/'>MultiList docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ## Styles
 
@@ -106,7 +116,7 @@ All reactivebase components are `rbc` namespaced.
 3. connect with external interfaces using `beforeValueChange`, `onValueChange` and `onQueryChange`,
 4. specify how options should be filtered or updated using `react` prop.
 
-```
+```js
 <MultiList
   ...
   className="custom-class"
@@ -181,8 +191,10 @@ All reactivebase components are `rbc` namespaced.
 
 ## Examples
 
-<p data-height="500" data-theme-id="light" data-slug-hash="GveKLV" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="MultiList docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/GveKLV/">MultiList docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<br>
+
+<iframe height='500' scrolling='no' title='MultiList docs example' src='//codepen.io/sids-aquarius/embed/GveKLV/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/GveKLV/'>MultiList docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 1. [List with all the default props](../playground/?knob-title=&selectedKind=map%2FMultiList&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 

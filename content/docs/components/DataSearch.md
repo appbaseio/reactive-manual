@@ -1,6 +1,14 @@
-{"bigh3": true}
-
-# DataSearch
+---
+id: datasearch
+title: "DataSearch"
+layout: docs
+sectionid: docs
+permalink: docs/basic-components/datasearch.html
+prev: numberbox.html
+prevTitle: "NumberBox"
+next: datepicker.html
+nextTitle: "DatePicker"
+---
 
 ![Image to be displayed](https://i.imgur.com/dLeyahL.png)
 
@@ -83,8 +91,10 @@ Example uses:
 
 ## Syntax
 
-<p data-height="500" data-theme-id="light" data-slug-hash="rzRNWv" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="DataSearch docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/rzRNWv/">DataSearch docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<br>
+
+<iframe height='500' scrolling='no' title='DataSearch docs example' src='//codepen.io/sids-aquarius/embed/rzRNWv/?height=500&theme-id=light&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/rzRNWv/'>DataSearch docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ## Styles
 
@@ -107,7 +117,7 @@ All reactivebase components are `rbc` namespaced.
     - onKeyUp
     - autoFocus
 
-```
+```js
 <DataSearch
   ...
   className="custom-class"
@@ -181,8 +191,10 @@ All reactivebase components are `rbc` namespaced.
 
 ## Examples
 
-<p data-height="500" data-theme-id="light" data-slug-hash="rzRNWv" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="DataSearch docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/rzRNWv/">DataSearch docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<br>
+
+<iframe height='500' scrolling='no' title='DataSearch docs example' src='//codepen.io/sids-aquarius/embed/rzRNWv/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/rzRNWv/'>DataSearch docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 1. [DataSearch with all the default props](../playground/?selectedKind=map%2FDataSearch&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 2. [DataSearch with autoSuggest disabled](../playground/?knob-autoSuggest=false&selectedKind=map%2FDataSearch&selectedStory=Without%20autoSuggest&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)

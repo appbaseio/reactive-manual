@@ -1,14 +1,20 @@
-{"bigh3": true}
-
-{% raw %}
-
-# ReactiveList
+---
+id: reactivelist
+title: "ReactiveList"
+layout: docs
+sectionid: docs
+permalink: docs/basic-components/reactivelist.html
+prev: datacontroller.html
+prevTitle: "DataController"
+next: reactiveelement.html
+nextTitle: "ReactiveElement"
+---
 
 ![Image to be displayed](https://i.imgur.com/GcUFZjh.png)
 
 `ReactiveList` creates a data-driven result list UI component. This list can reactively update itself based on changes in other components or changes in the database itself.
 
-This component forms the base for building more specific result display components like [`ResultCard`](v1/search-components/ResultCard.html) or [`ResultList`](v1/search-components/ResultList.html).
+This component forms the base for building more specific result display components like [`ResultCard`](/docs/search-components/resultcard.html) or [`ResultList`](/docs/search-components/resultlist.html).
 
 Example uses:
 
@@ -128,8 +134,10 @@ Example uses:
 
 ## Syntax
 
-<p data-height="500" data-theme-id="light" data-slug-hash="EmmKVZ" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ReactiveSearch ReactiveList" class="codepen">See <a href="http://codepen.io/sids-aquarius/pen/EmmKVZ/">ReactiveSearch ReactiveList</a> on codepen.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<br>
+
+<iframe height='500' scrolling='no' title='ReactiveSearch NestedList <> ReactiveList' src='//codepen.io/sids-aquarius/embed/EmmKVZ/?height=500&theme-id=light&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/EmmKVZ/'>ReactiveSearch NestedList <> ReactiveList</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ## Styles
 
@@ -175,13 +183,13 @@ All reactivebase components are `rbc` namespaced.
 
 ## Examples
 
-<p data-height="500" data-theme-id="light" data-slug-hash="EmmKVZ" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="ReactiveSearch ReactiveList" class="codepen">See <a href="http://codepen.io/sids-aquarius/pen/EmmKVZ/">ReactiveSearch ReactiveList</a> on codepen.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<br>
+
+<iframe height='500' scrolling='no' title='ReactiveSearch NestedList <> ReactiveList' src='//codepen.io/sids-aquarius/embed/EmmKVZ/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/EmmKVZ/'>ReactiveSearch NestedList <> ReactiveList</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 1. [ReactiveList basic usage](../playground/?knob-title=Topics&knob-URLParams%20%28not%20visible%20in%20storybook%29=false&knob-filterLabel=Custom%20Filter%20Name&knob-defaultSelected%5B0%5D=Social&knob-defaultSelected%5B1%5D=Travel&knob-selectAllLabel=Select%20All&knob-showRadio=true&knob-queryFormat=or&knob-numberOfMonths=2&knob-style=%7B"paddingBottom"%3A"10px"%7D&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&knob-showFilter=true&knob-sortBy=count&knob-dataLabel=★%20%20A%20customizable%20UI%20widget%20★&knob-allowAllDates=true&knob-showCheckbox=true&knob-size=100&knob-extra=%7B"withFullScreenPortal"%3Atrue%2C"showClearDate"%3Atrue%7D&knob-visible=true&knob-showCount=true&knob-placeholder=Search%20topics&knob-showSearch=true&selectedKind=search%2FReactiveList&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 2. [With streaming](../playground/?knob-title=People&knob-URLParams%20%28not%20visible%20in%20storybook%29=false&knob-filterLabel=Custom%20Filter%20Name&knob-defaultSelected%5B0%5D=Social&knob-defaultSelected%5B1%5D=Travel&knob-selectAllLabel=Select%20All&knob-showRadio=true&knob-queryFormat=or&knob-numberOfMonths=2&knob-style=%7B"paddingBottom"%3A"10px"%7D&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&knob-showFilter=true&knob-sortBy=count&knob-dataLabel=★%20%20A%20customizable%20UI%20widget%20★&knob-allowAllDates=true&knob-stream=true&knob-showCheckbox=true&knob-size=100&knob-extra=%7B"withFullScreenPortal"%3Atrue%2C"showClearDate"%3Atrue%7D&knob-visible=true&knob-showCount=true&knob-placeholder=Search%20topics&knob-showSearch=true&selectedKind=search%2FReactiveList&selectedStory=With%20Streaming%20Enabled&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 3. [With pagination](../playground/?knob-title=People&knob-paginationAt=bottom&knob-URLParams%20%28not%20visible%20in%20storybook%29=false&knob-filterLabel=Custom%20Filter%20Name&knob-defaultSelected%5B0%5D=Social&knob-defaultSelected%5B1%5D=Travel&knob-selectAllLabel=Select%20All&knob-showRadio=true&knob-queryFormat=or&knob-numberOfMonths=2&knob-style=%7B"paddingBottom"%3A"10px"%7D&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&knob-showFilter=true&knob-sortBy=count&knob-pages=5&knob-pagination=true&knob-dataLabel=★%20%20A%20customizable%20UI%20widget%20★&knob-allowAllDates=true&knob-stream=true&knob-showCheckbox=true&knob-size=100&knob-extra=%7B"withFullScreenPortal"%3Atrue%2C"showClearDate"%3Atrue%7D&knob-visible=true&knob-showCount=true&knob-placeholder=Search%20topics&knob-showSearch=true&selectedKind=search%2FReactiveList&selectedStory=With%20pagination&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 4. [With sortOptions](../playground/?knob-title=People&knob-paginationAt=bottom&knob-URLParams%20%28not%20visible%20in%20storybook%29=false&knob-filterLabel=Custom%20Filter%20Name&knob-defaultSelected%5B0%5D=Social&knob-defaultSelected%5B1%5D=Travel&knob-selectAllLabel=Select%20All&knob-showRadio=true&knob-queryFormat=or&knob-numberOfMonths=2&knob-style=%7B"paddingBottom"%3A"10px"%7D&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&knob-showFilter=true&knob-sortBy=count&knob-pages=5&knob-pagination=true&knob-dataLabel=★%20%20A%20customizable%20UI%20widget%20★&knob-allowAllDates=true&knob-stream=true&knob-showCheckbox=true&knob-size=100&knob-extra=%7B"withFullScreenPortal"%3Atrue%2C"showClearDate"%3Atrue%7D&knob-visible=true&knob-showCount=true&knob-placeholder=Search%20topics&knob-showSearch=true&selectedKind=search%2FReactiveList&selectedStory=With%20Sort%20Options&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 5. [Playground (with all knob actions)](../playground/?knob-initialLoader=Loading%20results..&knob-title=ReactiveList%3A%20Results&knob-from=0&knob-paginationAt=bottom&knob-URLParams%20%28not%20visible%20in%20storybook%29=false&knob-filterLabel=Custom%20Filter%20Name&knob-defaultSelected%5B0%5D=Social&knob-defaultSelected%5B1%5D=Travel&knob-selectAllLabel=Select%20All&knob-showRadio=true&knob-queryFormat=or&knob-numberOfMonths=2&knob-style=%7B"paddingBottom"%3A"10px"%7D&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&knob-showFilter=true&knob-sortBy=default&knob-pages=5&knob-showResultStats=true&knob-pagination=true&knob-dataLabel=★%20%20A%20customizable%20UI%20widget%20★&knob-allowAllDates=true&knob-stream=false&knob-showCheckbox=true&knob-size=5&knob-extra=%7B"withFullScreenPortal"%3Atrue%2C"showClearDate"%3Atrue%7D&knob-visible=true&knob-showCount=true&knob-placeholder=Select%20from%20list&knob-showSearch=true&knob-noResults=No%20results%20found%21&selectedKind=search%2FReactiveList&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-{% endraw %}

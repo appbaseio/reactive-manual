@@ -1,8 +1,14 @@
-{"bigh3": true}
-
-{% raw %}
-
-# ReactiveElement
+---
+id: reactiveelement
+title: "ReactiveElement"
+layout: docs
+sectionid: docs
+permalink: docs/basic-components/reactiveelement.html
+prev: reactivelist.html
+prevTitle: "ReactiveList"
+next: singledatalist.html
+nextTitle: "SingleDataList"
+---
 
 ![Image to be displayed](https://i.imgur.com/hwjCLss.png)
 
@@ -71,8 +77,10 @@ Example uses:
 
 ## Syntax
 
-<p data-height="500" data-theme-id="light" data-slug-hash="EvBoRO" data-default-tab="js" data-user="divyanshu013" data-embed-version="2" data-pen-title="ReactiveElement docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/EvBoRO/">ReactiveElement docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<br>
+
+<iframe height='500' scrolling='no' title='ReactiveElement docs example' src='//codepen.io/divyanshu013/embed/EvBoRO/?height=500&theme-id=light&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/divyanshu013/pen/EvBoRO/'>ReactiveElement docs example</a> by Divyanshu (<a href='https://codepen.io/divyanshu013'>@divyanshu013</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ## Styles
 
@@ -118,8 +126,10 @@ All reactivebase components are `rbc` namespaced.
 
 ## Examples
 
-<p data-height="500" data-theme-id="light" data-slug-hash="EvBoRO" data-default-tab="result" data-user="divyanshu013" data-embed-version="2" data-pen-title="ReactiveElement docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/EvBoRO/">ReactiveElement docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<br>
+
+<iframe height='500' scrolling='no' title='ReactiveElement docs example' src='//codepen.io/divyanshu013/embed/EvBoRO/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/divyanshu013/pen/EvBoRO/'>ReactiveElement docs example</a> by Divyanshu (<a href='https://codepen.io/divyanshu013'>@divyanshu013</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 1. [ReactiveElement with all the default props with a single sensor filter](../playground/?knob-title=ReactiveElement&selectedKind=search%2FReactiveElement&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
@@ -128,5 +138,3 @@ All reactivebase components are `rbc` namespaced.
 3. [ReactiveElement that shows streaming updates](../playground/?knob-title=ReactiveElement&knob-placeholder=Select%20city%20from%20the%20list&knob-showResultStats=false&selectedKind=search%2FReactiveElement&selectedStory=Stream&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
 4. [Playground (with all knob actions)](../playground/?knob-title=ReactiveElement&knob-placeholder=Select%20city%20from%20the%20list&knob-showResultStats=true&knob-from=0&knob-size=5&knob-initialLoader=Loading%20results..&knob-noResults=No%20results%20found%21%20Try%20a%20different%20filter%20duh..&knob-stream=false&selectedKind=search%2FReactiveElement&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-{% endraw %}
