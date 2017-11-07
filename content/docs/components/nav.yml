@@ -29,3 +29,32 @@
           title: Examples
           href: /docs/basic-components/textfield.html#examples
           forceInternal: true
+    - id: togglebutton
+      title: ToggleButton
+      href: /docs/basic-components/togglebutton.html
+      forceInternal: true
+      subitems:
+        - id: usage
+          title: Usage
+          href: /docs/basic-components/togglebutton.html#usage
+          forceInternal: true
+        - id: props
+          title: Props
+          href: /docs/basic-components/togglebutton.html#props
+          forceInternal: true
+        - id: syntax
+          title: Syntax
+          href: /docs/basic-components/togglebutton.html#syntax
+          forceInternal: true
+        - id: styles
+          title: Styles
+          href: /docs/basic-components/togglebutton.html#styles
+          forceInternal: true
+        - id: extending
+          title: Extending
+          href: /docs/basic-components/togglebutton.html#extending
+          forceInternal: true
+        - id: examples
+          title: Examples
+          href: /docs/basic-components/togglebutton.html#examples
+          forceInternal: true

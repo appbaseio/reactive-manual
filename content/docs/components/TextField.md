@@ -7,6 +7,8 @@ permalink: docs/basic-components/textfield.html
 redirect_from:
     - "docs"
     - "docs/basic-components"
+next: togglebutton.html
+nextTitle: "ToggleButton"
 ---
 
 ![Image to be displayed](https://i.imgur.com/0fnMNaz.png)

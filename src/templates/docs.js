@@ -39,6 +39,8 @@ export const pageQuery = graphql`
         title
         next
         prev
+        nextTitle
+        prevTitle
       }
       fields {
         path

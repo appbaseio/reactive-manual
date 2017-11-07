@@ -1,6 +1,10 @@
-{"bigh3": true}
-
-# ToggleButton
+---
+id: togglebutton
+title: "ToggleButton"
+layout: docs
+sectionid: docs
+permalink: docs/basic-components/togglebutton.html
+---
 
 ![Image to be displayed](https://i.imgur.com/Zyooy5N.png)
 
