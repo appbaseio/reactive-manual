@@ -16,7 +16,7 @@ nextTitle: "MultiDropdownList"
 
 > Note
 >
-> This component is exactly like the [SingleList](/docs/basic-component/SingleList.html) component except the UI is based on a dropdown, ideal for showing additional UI filters while conserving screen space.
+> This component is exactly like the [SingleList](/docs/basic-component/singlelist.html) component except the UI is based on a dropdown, ideal for showing additional UI filters while conserving screen space.
 
 Example uses:
 * select a category from a list of categories for filtering e-commerce search results.

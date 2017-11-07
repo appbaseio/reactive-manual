@@ -493,3 +493,119 @@
           title: Examples
           href: /docs/basic-components/singledropdownlist.html#examples
           forceInternal: true
+    - id: multidropdownlist
+      title: MultiDropdownList
+      href: /docs/basic-components/multidropdownlist.html
+      forceInternal: true
+      subitems:
+        - id: usage
+          title: Usage
+          href: /docs/basic-components/multidropdownlist.html#usage
+          forceInternal: true
+        - id: props
+          title: Props
+          href: /docs/basic-components/multidropdownlist.html#props
+          forceInternal: true
+        - id: syntax
+          title: Syntax
+          href: /docs/basic-components/multidropdownlist.html#syntax
+          forceInternal: true
+        - id: styles
+          title: Styles
+          href: /docs/basic-components/multidropdownlist.html#styles
+          forceInternal: true
+        - id: extending
+          title: Extending
+          href: /docs/basic-components/multidropdownlist.html#extending
+          forceInternal: true
+        - id: examples
+          title: Examples
+          href: /docs/basic-components/multidropdownlist.html#examples
+          forceInternal: true
+    - id: singledropdownrange
+      title: SingleDropdownRange
+      href: /docs/basic-components/singledropdownrange.html
+      forceInternal: true
+      subitems:
+        - id: usage
+          title: Usage
+          href: /docs/basic-components/singledropdownrange.html#usage
+          forceInternal: true
+        - id: props
+          title: Props
+          href: /docs/basic-components/singledropdownrange.html#props
+          forceInternal: true
+        - id: syntax
+          title: Syntax
+          href: /docs/basic-components/singledropdownrange.html#syntax
+          forceInternal: true
+        - id: styles
+          title: Styles
+          href: /docs/basic-components/singledropdownrange.html#styles
+          forceInternal: true
+        - id: extending
+          title: Extending
+          href: /docs/basic-components/singledropdownrange.html#extending
+          forceInternal: true
+        - id: examples
+          title: Examples
+          href: /docs/basic-components/singledropdownrange.html#examples
+          forceInternal: true
+    - id: multidropdownrange
+      title: MultiDropdownRange
+      href: /docs/basic-components/multidropdownrange.html
+      forceInternal: true
+      subitems:
+        - id: usage
+          title: Usage
+          href: /docs/basic-components/multidropdownrange.html#usage
+          forceInternal: true
+        - id: props
+          title: Props
+          href: /docs/basic-components/multidropdownrange.html#props
+          forceInternal: true
+        - id: syntax
+          title: Syntax
+          href: /docs/basic-components/multidropdownrange.html#syntax
+          forceInternal: true
+        - id: styles
+          title: Styles
+          href: /docs/basic-components/multidropdownrange.html#styles
+          forceInternal: true
+        - id: extending
+          title: Extending
+          href: /docs/basic-components/multidropdownrange.html#extending
+          forceInternal: true
+        - id: examples
+          title: Examples
+          href: /docs/basic-components/multidropdownrange.html#examples
+          forceInternal: true
+    - id: selectedfilters
+      title: SelectedFilters
+      href: /docs/basic-components/selectedfilters.html
+      forceInternal: true
+      subitems:
+        - id: usage
+          title: Usage
+          href: /docs/basic-components/selectedfilters.html#usage
+          forceInternal: true
+        - id: props
+          title: Props
+          href: /docs/basic-components/selectedfilters.html#props
+          forceInternal: true
+        - id: syntax
+          title: Syntax
+          href: /docs/basic-components/selectedfilters.html#syntax
+          forceInternal: true
+        - id: styles
+          title: Styles
+          href: /docs/basic-components/selectedfilters.html#styles
+          forceInternal: true
+        - id: extending
+          title: Extending
+          href: /docs/basic-components/selectedfilters.html#extending
+          forceInternal: true
+        - id: examples
+          title: Examples
+          href: /docs/basic-components/selectedfilters.html#examples
+          forceInternal: true

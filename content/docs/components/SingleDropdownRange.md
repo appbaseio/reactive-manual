@@ -1,12 +1,22 @@
-{"bigh3": true}
-
-# SingleDropdownRange
+---
+id: singledropdownrange
+title: "SingleDropdownRange"
+layout: docs
+sectionid: docs
+permalink: docs/basic-components/singledropdownrange.html
+prev: multidropdownlist.html
+prevTitle: "MultiDropdownList"
+next: multidropdownrange.html
+nextTitle: "MultiDropdownRange"
+---
 
 ![Image to be displayed](https://i.imgur.com/A23Iu2w.png)
 
 `SingleDropdownRange` creates a dropdown based numeric range UI component.
 
-`Note:` This component is exactly like the [SingleRange](v1/components/SingleRange.html) component except the UI is based on a dropdown, ideal for showing additional UI filters while conserving screen space.
+> Note
+>
+> This component is exactly like the [SingleRange](/docs/basic-components/singlerange.html) component except the UI is based on a dropdown, ideal for showing additional UI filters while conserving screen space.
 
 Example uses:
 * filtering search results by prices in an e-commerce or food delivery experience.
@@ -74,8 +84,10 @@ Example uses:
 
 ## Syntax
 
-<p data-height="500" data-theme-id="light" data-slug-hash="dzryYr" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="SingleDropdownRange docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/dzryYr/">SingleDropdownRange docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<br>
+
+<iframe height='500' scrolling='no' title='SingleDropdownRange docs example' src='//codepen.io/sids-aquarius/embed/dzryYr/?height=500&theme-id=light&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/dzryYr/'>SingleDropdownRange docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ## Styles
 
@@ -90,7 +102,7 @@ All reactivebase components are `rbc` namespaced.
 2. update the underlying DB query with `customQuery`,
 3. connect with external interfaces using `beforeValueChange`, `onValueChange` and `onQueryChange`.
 
-```
+```js
 <SingleDropdownRange
   ...
   className="custom-class"
@@ -148,8 +160,10 @@ All reactivebase components are `rbc` namespaced.
 
 ## Examples
 
-<p data-height="500" data-theme-id="light" data-slug-hash="dzryYr" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="SingleDropdownRange docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/dzryYr/">SingleDropdownRange docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<br>
+
+<iframe height='500' scrolling='no' title='SingleDropdownRange docs example' src='//codepen.io/sids-aquarius/embed/dzryYr/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/dzryYr/'>SingleDropdownRange docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 1. [Range with all the default props](../playground/?knob-title=SingleList%3A%20City%20Filter&knob-defaultSelected=San%20Francisco&knob-selectAllLabel=All%20cities&knob-showRadio=true&knob-sortBy=count&knob-showCheckbox=true&knob-size=100&knob-showCount=true&knob-placeholder=s&knob-showSearch=true&selectedKind=map%2FSingleDropdownRange&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 

@@ -1,6 +1,12 @@
-{"bigh3": true}
-
-# SelectedFilters
+---
+id: selectedfilters
+title: "SelectedFilters"
+layout: docs
+sectionid: docs
+permalink: docs/basic-components/selectedfilters.html
+prev: multidropdownrange.html
+prevTitle: "MultiDropdownRange"
+---
 
 ![Image to be displayed](https://i.imgur.com/DyW5jJ2.png)
 
@@ -24,12 +30,14 @@ The `SelectedFilters` component itself doesn't have any props.
 
 Facet type components have a prop `showFilter` (defaults to `true`) which can be used to control whether the component's selected state appears in the SelectedFilters component. There is also a `filterLabel` prop which controls how that component is displayed.
 
-As an example, check [MultiList usage](v1/components/MultiList.html#-multilist-usage) to see how `showFilter` and `filterLabel` can be used.
+As an example, check [MultiList usage](/docs/basic-components/multilist.html#usage) to see how `showFilter` and `filterLabel` can be used.
 
 ### Syntax
 
-<p data-height="500" data-theme-id="light" data-slug-hash="ayMNZW" data-default-tab="js" data-user="divyanshu013" data-embed-version="2" data-pen-title="SelectedFilters docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/ayMNZW/">SelectedFilters docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<br>
+
+<iframe height='500' scrolling='no' title='SelectedFilters docs example' src='//codepen.io/divyanshu013/embed/ayMNZW/?height=500&theme-id=light&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/divyanshu013/pen/ayMNZW/'>SelectedFilters docs example</a> by Divyanshu (<a href='https://codepen.io/divyanshu013'>@divyanshu013</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ### Styles
 
@@ -41,7 +49,7 @@ All reactivebase components are `rbc` namespaced.
 
 `SelectedFilters` component can be extended to customize the look and feel with `className`, `style`.
 
-```
+```js
 <SelectedFilters
   className="custom-class"
   style={{"paddingBottom": "10px"}}
@@ -55,8 +63,10 @@ All reactivebase components are `rbc` namespaced.
 
 ### Examples
 
-<p data-height="500" data-theme-id="light" data-slug-hash="ayMNZW" data-default-tab="result" data-user="divyanshu013" data-embed-version="2" data-pen-title="SelectedFilters docs example" class="codepen">See the Pen <a href="https://codepen.io/divyanshu013/pen/ayMNZW/">SelectedFilters docs example</a> by Divyanshu (<a href="https://codepen.io/divyanshu013">@divyanshu013</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<br>
+
+<iframe height='500' scrolling='no' title='SelectedFilters docs example' src='//codepen.io/divyanshu013/embed/ayMNZW/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/divyanshu013/pen/ayMNZW/'>SelectedFilters docs example</a> by Divyanshu (<a href='https://codepen.io/divyanshu013'>@divyanshu013</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 1. [Filters with all the default props](../playground/?selectedKind=search%2FSelectedFilters&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 

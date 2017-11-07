@@ -1,12 +1,22 @@
-{"bigh3": true}
-
-# MultiDropdownList
+---
+id: multidropdownlist
+title: "MultiDropdownList"
+layout: docs
+sectionid: docs
+permalink: docs/basic-components/multidropdownlist.html
+prev: singledropdownlist.html
+prevTitle: "SingleDropdownList"
+next: singledropdownrange.html
+nextTitle: "SingleDropdownRange"
+---
 
 ![Image to be displayed](https://i.imgur.com/ZZ0MG6N.png)
 
 `MultiDropdownList` creates a  dropdown based multiple selection list UI component that is connected to a database field. It is used for filtering results based on the current selection from a list of items.
 
-`Note:` This component is exactly like the [MultiList](v1/components/MultiList.html) component except the UI is based on a dropdown, ideal for showing additional UI filters while conserving screen space.
+> Note
+>
+> This component is exactly like the [MultiList](/docs/basic-components/multilist.html) component except the UI is based on a dropdown, ideal for showing additional UI filters while conserving screen space.
 
 Example uses:
 * create an e-commerce facet like search experience.
@@ -82,8 +92,10 @@ Example uses:
 
 ## Syntax
 
-<p data-height="500" data-theme-id="light" data-slug-hash="NvJKQN" data-default-tab="js" data-user="sids-aquarius" data-embed-version="2" data-pen-title="MultiDropdownList docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/NvJKQN/">MultiDropdownList docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<br>
+
+<iframe height='500' scrolling='no' title='MultiDropdownList docs example' src='//codepen.io/sids-aquarius/embed/NvJKQN/?height=500&theme-id=light&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/NvJKQN/'>MultiDropdownList docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ## Styles
 
@@ -99,7 +111,7 @@ All reactivebase components are `rbc` namespaced.
 3. connect with external interfaces using `beforeValueChange`, `onValueChange` and `onQueryChange`,
 4. specify how options should be filtered or updated using `react` prop.
 
-```
+```js
 <MultiDropdownList
   ...
   className="custom-class"
@@ -173,8 +185,10 @@ All reactivebase components are `rbc` namespaced.
 
 ## Examples
 
-<p data-height="500" data-theme-id="light" data-slug-hash="NvJKQN" data-default-tab="result" data-user="sids-aquarius" data-embed-version="2" data-pen-title="MultiDropdownList docs example" class="codepen">See the Pen <a href="https://codepen.io/sids-aquarius/pen/NvJKQN/">MultiDropdownList docs example</a> by Siddharth Kothari (<a href="https://codepen.io/sids-aquarius">@sids-aquarius</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<br>
+
+<iframe height='500' scrolling='no' title='MultiDropdownList docs example' src='//codepen.io/sids-aquarius/embed/NvJKQN/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/NvJKQN/'>MultiDropdownList docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 1. [List with all the default props](../playground/?selectedKind=map%2FMultiDropdownList&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
