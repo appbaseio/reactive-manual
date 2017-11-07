@@ -63,7 +63,7 @@ const Section = ({
           }}>
           {createLink({
             isActive: isScrollSync
-              ? (isItemActive(location, item) && activeItemId === '')
+              ? isItemActive(location, item) && activeItemId === ''
               : isItemActive(location, item),
             item,
             location,
@@ -71,23 +71,25 @@ const Section = ({
             section,
           })}
 
-          {item.subitems && isItemActive(location, item) && (
-            <ul css={{marginLeft: 20}}>
-              {item.subitems.map(subitem => (
-                <li key={subitem.id}>
-                  {createLink({
-                    isActive: isScrollSync
-                      ? (activeItemId === subitem.id && isItemActive(location, item))
-                      : isItemActive(location, subitem),
-                    item: subitem,
-                    location,
-                    onLinkClick,
-                    section,
-                  })}
-                </li>
-              ))}
-            </ul>
-          )}
+          {item.subitems &&
+            isItemActive(location, item) && (
+              <ul css={{marginLeft: 20}}>
+                {item.subitems.map(subitem => (
+                  <li key={subitem.id}>
+                    {createLink({
+                      isActive: isScrollSync
+                        ? activeItemId === subitem.id &&
+                          isItemActive(location, item)
+                        : isItemActive(location, subitem),
+                      item: subitem,
+                      location,
+                      onLinkClick,
+                      section,
+                    })}
+                  </li>
+                ))}
+              </ul>
+            )}
         </li>
       ))}
     </ul>

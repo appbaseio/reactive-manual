@@ -7,8 +7,14 @@ const toAnchor = (href = '') => {
 
 const isItemActive = (location, item) => {
   if (location.hash) {
-    if (item.subitems && item.subitems.length && item.href === location.pathname) {
-      return item.subitems.some(subitem => location.hash === toAnchor(subitem.href));
+    if (
+      item.subitems &&
+      item.subitems.length &&
+      item.href === location.pathname
+    ) {
+      return item.subitems.some(
+        subitem => location.hash === toAnchor(subitem.href),
+      );
     } else if (item.href) {
       return location.hash === toAnchor(item.href);
     }

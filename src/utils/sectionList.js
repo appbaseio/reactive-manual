@@ -1,11 +1,9 @@
 import navCommunity from '../../content/community/nav.yml';
 import navBasic from '../../content/docs/components/nav.yml';
+import navMap from '../../content/docs/map-components/nav.yml';
 import navTutorial from '../../content/getting-started/nav.yml';
 
-const nav = [
-  ...navTutorial,
-  ...navBasic,
-];
+const nav = [...navTutorial, ...navBasic, ...navMap];
 
 const sectionListDocs = nav.map(item => ({
   ...item,
@@ -22,8 +20,4 @@ const sectionListTutorial = nav.map(item => ({
   directory: 'getting-started',
 }));
 
-export {
-  sectionListCommunity,
-  sectionListDocs,
-  sectionListTutorial,
-};
+export {sectionListCommunity, sectionListDocs, sectionListTutorial};

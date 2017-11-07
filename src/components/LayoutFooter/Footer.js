@@ -48,7 +48,9 @@ const Footer = ({layoutHasSidebar = false}) => (
             <FooterLink to="/docs/thinking-in-react.html">
               Thinking in React
             </FooterLink>
-            <FooterLink to="/getting-started/tutorial.html">Tutorial</FooterLink>
+            <FooterLink to="/getting-started/tutorial.html">
+              Tutorial
+            </FooterLink>
             <FooterLink to="/docs/jsx-in-depth.html">
               Advanced Guides
             </FooterLink>

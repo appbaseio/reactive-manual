@@ -10,7 +10,8 @@ import createOgUrl from 'utils/createOgUrl';
 class Home extends Component {
   render() {
     const {data} = this.props;
-    const title = 'Reactive Manual - Data-driven components for building Maps and Search UIs';
+    const title =
+      'Reactive Manual - Data-driven components for building Maps and Search UIs';
 
     return (
       <div css={{width: '100%'}}>
@@ -94,7 +95,9 @@ class Home extends Component {
                   </ButtonLink>
                 </CtaItem>
                 <CtaItem>
-                  <ButtonLink to="/getting-started/installation.html" type="secondary">
+                  <ButtonLink
+                    to="/getting-started/installation.html"
+                    type="secondary">
                     Getting Started
                   </ButtonLink>
                 </CtaItem>

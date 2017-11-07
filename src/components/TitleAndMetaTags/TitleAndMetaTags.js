@@ -1,7 +1,8 @@
 import Helmet from 'react-helmet';
 import React from 'react';
 
-const defaultDescription = 'Data-driven components for building Maps and Search UIs';
+const defaultDescription =
+  'Data-driven components for building Maps and Search UIs';
 
 type Props = {
   title: string,

@@ -1,9 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: 'Reactive Manual: Data-driven components for building Maps and Search UIs',
+    title:
+      'Reactive Manual: Data-driven components for building Maps and Search UIs',
     siteUrl: 'https://divyanshu013.github.io/reactive-manual-new',
     rssFeedTitle: 'Reactive Manual',
-    rssFeedDescription: 'Data-driven components for building Maps and Search UIs',
+    rssFeedDescription:
+      'Data-driven components for building Maps and Search UIs',
   },
   mapping: {
     'MarkdownRemark.frontmatter.author': 'AuthorYaml',

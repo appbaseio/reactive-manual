@@ -118,9 +118,14 @@ const Header = ({location}) => (
             to="/getting-started/installation.html"
           />
           <HeaderLink
-            isActive={location.pathname.includes('/docs/')}
+            isActive={location.pathname.includes('/basic-components/')}
             title="Basic Components"
             to="/docs/basic-components"
+          />
+          <HeaderLink
+            isActive={location.pathname.includes('/map-components/')}
+            title="Map Components"
+            to="/docs/map-components"
           />
           <HeaderLink
             isActive={location.pathname.includes('/community/')}
