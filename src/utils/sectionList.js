@@ -1,9 +1,10 @@
 import navCommunity from '../../content/community/nav.yml';
 import navBasic from '../../content/docs/components/nav.yml';
 import navMap from '../../content/docs/map-components/nav.yml';
+import navSearch from '../../content/docs/search-components/nav.yml';
 import navTutorial from '../../content/getting-started/nav.yml';
 
-const nav = [...navTutorial, ...navBasic, ...navMap];
+const nav = [...navTutorial, ...navBasic, ...navMap, ...navSearch];
 
 const sectionListDocs = nav.map(item => ({
   ...item,

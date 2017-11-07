@@ -128,6 +128,11 @@ const Header = ({location}) => (
             to="/docs/map-components"
           />
           <HeaderLink
+            isActive={location.pathname.includes('/search-components/')}
+            title="Search Components"
+            to="/docs/search-components"
+          />
+          <HeaderLink
             isActive={location.pathname.includes('/community/')}
             title="Community"
             to="/community/support.html"
