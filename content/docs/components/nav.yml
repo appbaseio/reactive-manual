@@ -464,3 +464,32 @@
           title: Examples
           href: /docs/basic-components/multidatalist.html#examples
           forceInternal: true
+    - id: singledropdownlist
+      title: SingleDropdownList
+      href: /docs/basic-components/singledropdownlist.html
+      forceInternal: true
+      subitems:
+        - id: usage
+          title: Usage
+          href: /docs/basic-components/singledropdownlist.html#usage
+          forceInternal: true
+        - id: props
+          title: Props
+          href: /docs/basic-components/singledropdownlist.html#props
+          forceInternal: true
+        - id: syntax
+          title: Syntax
+          href: /docs/basic-components/singledropdownlist.html#syntax
+          forceInternal: true
+        - id: styles
+          title: Styles
+          href: /docs/basic-components/singledropdownlist.html#styles
+          forceInternal: true
+        - id: extending
+          title: Extending
+          href: /docs/basic-components/singledropdownlist.html#extending
+          forceInternal: true
+        - id: examples
+          title: Examples
+          href: /docs/basic-components/singledropdownlist.html#examples
+          forceInternal: true
