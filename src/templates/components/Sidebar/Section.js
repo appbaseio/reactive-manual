@@ -59,7 +59,7 @@ const Section = ({
         <li
           key={item.id}
           css={{
-            marginTop: 5,
+            marginTop: 8,
           }}>
           {createLink({
             isActive: isScrollSync
