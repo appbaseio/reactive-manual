@@ -9,13 +9,9 @@ const PageNotFound = () => (
     <div css={sharedStyles.articleLayout.container}>
       <div css={sharedStyles.articleLayout.content}>
         <Header>Page Not Found</Header>
-        <TitleAndMetaTags title="React - Page Not Found" />
+        <TitleAndMetaTags title="Reactive Manual - Page Not Found" />
         <div css={sharedStyles.markdown}>
           <p>We couldn't find what you were looking for.</p>
-          <p>
-            Please contact the owner of the site that linked you to the original
-            URL and let them know their link is broken.
-          </p>
         </div>
       </div>
     </div>

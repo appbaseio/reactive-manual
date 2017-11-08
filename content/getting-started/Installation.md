@@ -6,6 +6,8 @@ sectionid: getting-started
 permalink: getting-started/installation.html
 next: start.html
 nextTitle: "ReactiveMaps Getting Started"
+redirect_from:
+    - "getting-started"
 ---
 
 ### Step 1: Install reactivemaps via NPM

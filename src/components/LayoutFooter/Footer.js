@@ -44,15 +44,18 @@ const Footer = ({layoutHasSidebar = false}) => (
           }}>
           <FooterNav layoutHasSidebar={layoutHasSidebar}>
             <MetaTitle onDark={true}>Docs</MetaTitle>
-            <FooterLink to="/docs/hello-world.html">Quick Start</FooterLink>
-            <FooterLink to="/docs/thinking-in-react.html">
-              Thinking in React
+            <FooterLink to="/getting-started">Quick Start</FooterLink>
+            <FooterLink to="/docs/basic-components">
+              Basic Components
             </FooterLink>
-            <FooterLink to="/getting-started/tutorial.html">
-              Tutorial
+            <FooterLink to="/docs/map-components">
+              Map Components
             </FooterLink>
-            <FooterLink to="/docs/jsx-in-depth.html">
-              Advanced Guides
+            <FooterLink to="/docs/search-components">
+              Search Components
+            </FooterLink>
+            <FooterLink to="/docs/advanced">
+              Advanced
             </FooterLink>
           </FooterNav>
           <FooterNav layoutHasSidebar={layoutHasSidebar}>
