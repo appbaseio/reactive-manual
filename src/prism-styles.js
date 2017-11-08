@@ -34,8 +34,8 @@ css.global(
   {
     height: 'auto !important',
     margin: '1rem',
-    fontSize: 14,
-    lineHeight: '20px',
+    fontSize: 16,
+    lineHeight: '21px',
     whiteSpace: 'pre-wrap',
     wordBreak: 'break-word',
   },

@@ -38,6 +38,10 @@ Data-driven components for building Maps and Search UIs
   1. Changes to markdown files in `content` will hot-reload
   1. If working with plugins, you may need to remove the `.cache` directory and restart the server
 
+### Tips
+
+- For highlighting specific section of a code use the following format **```js{8-11}**
+
 ### Test the change
 
 1. If possible, test any visual changes in all latest versions of common browsers, on both desktop and mobile.

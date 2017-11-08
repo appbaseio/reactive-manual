@@ -71,17 +71,6 @@ const Header = ({location}) => (
                 fontSize: 16,
                 marginTop: 1,
               },
-              [media.lessThan('small')]: {
-                // Visually hidden
-                position: 'absolute',
-                overflow: 'hidden',
-                clip: 'rect(0 0 0 0)',
-                height: 1,
-                width: 1,
-                margin: -1,
-                padding: 0,
-                border: 0,
-              },
             }}>
             Reactive Manual
           </span>
@@ -110,6 +99,9 @@ const Header = ({location}) => (
             [media.lessThan('small')]: {
               maskImage:
                 'linear-gradient(to right, transparent, black 20px, black 90%, transparent)',
+            },
+            [media.lessThan('medium')]: {
+              display: 'none',
             },
           }}>
           <HeaderLink
