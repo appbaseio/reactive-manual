@@ -61,73 +61,59 @@ const Footer = ({layoutHasSidebar = false}) => (
           <FooterNav layoutHasSidebar={layoutHasSidebar}>
             <MetaTitle onDark={true}>Community</MetaTitle>
             <ExternalFooterLink
-              href="http://stackoverflow.com/questions/tagged/reactjs"
+              href="https://gitter.im/appbaseio/reactivesearch"
               target="_blank"
               rel="noopener">
-              Stack Overflow
+              Chat on Gitter
             </ExternalFooterLink>
             <ExternalFooterLink
-              href="https://discuss.reactjs.org"
+              href="https://slack.appbase.io/"
               target="_blank"
               rel="noopener">
-              Discussion Forum
+              Join us on Slack
             </ExternalFooterLink>
             <ExternalFooterLink
-              href="https://discord.gg/0ZcbPKXt5bZjGY5n"
-              target="_blank"
-              rel="noopener">
-              Reactiflux Chat
-            </ExternalFooterLink>
-            <ExternalFooterLink
-              href="https://www.facebook.com/react"
-              target="_blank"
-              rel="noopener">
-              Facebook
-            </ExternalFooterLink>
-            <ExternalFooterLink
-              href="https://twitter.com/reactjs"
+              href="https://twitter.com/appbaseio"
               target="_blank"
               rel="noopener">
               Twitter
             </ExternalFooterLink>
           </FooterNav>
           <FooterNav layoutHasSidebar={layoutHasSidebar}>
-            <MetaTitle onDark={true}>Resources</MetaTitle>
-            <FooterLink to="/community/conferences.html">
-              Conferences
-            </FooterLink>
-            <FooterLink to="/community/videos.html">Videos</FooterLink>
+            <MetaTitle onDark={true}>Tools</MetaTitle>
             <ExternalFooterLink
-              href="https://github.com/facebook/react/wiki/Examples"
+              href="https://opensource.appbase.io/dejavu/"
               target="_blank"
               rel="noopener">
-              Examples
+              DejaVu
             </ExternalFooterLink>
             <ExternalFooterLink
-              href="https://github.com/facebook/react/wiki/Complementary-Tools"
+              href="https://opensource.appbase.io/mirage/"
               target="_blank"
               rel="noopener">
-              Complementary Tools
+              Mirage
+            </ExternalFooterLink>
+            <ExternalFooterLink
+              href="https://opensource.appbase.io/gem/"
+              target="_blank"
+              rel="noopener">
+              Gem
             </ExternalFooterLink>
           </FooterNav>
           <FooterNav layoutHasSidebar={layoutHasSidebar}>
             <MetaTitle onDark={true}>More</MetaTitle>
-            <FooterLink to="/blog/">Blog</FooterLink>
             <ExternalFooterLink
-              href="https://github.com/facebook/react"
+              href="https://medium.appbase.io/"
+              target="_blank"
+              rel="noopener">
+              Blog
+            </ExternalFooterLink>
+            <ExternalFooterLink
+              href="https://github.com/appbaseio"
               target="_blank"
               rel="noopener">
               GitHub
             </ExternalFooterLink>
-            <ExternalFooterLink
-              href="http://facebook.github.io/react-native/"
-              target="_blank"
-              rel="noopener">
-              React Native
-            </ExternalFooterLink>
-            <FooterLink to="/acknowledgements.html">
-              Acknowledgements
-            </FooterLink>
           </FooterNav>
         </div>
       </div>
