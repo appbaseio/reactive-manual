@@ -64,15 +64,18 @@ function getTokens(text) {
   return tokenize(sanitizedText);
 }
 
-function getHashId(heading, tableOfContents) {
-  const headingPos = tableOfContents.indexOf(heading);
+function getHashId(heading, tableOfContents, startFrom = 0) {
+  const headingPos = tableOfContents.indexOf(heading, startFrom);
   const hashPos = tableOfContents.lastIndexOf('#', headingPos);
 
   if (headingPos === -1 || hashPos === -1) {
     return null;
   }
   const end = headingPos - 2;  // subtract 2 for ">
-  return tableOfContents.substring(hashPos, end);
+  return {
+    hashId: tableOfContents.substring(hashPos, end),
+    endsAt: headingPos + heading.length,
+  };
 }
 
 exports.createPages = async ({ graphql }) => {
@@ -91,43 +94,44 @@ exports.createPages = async ({ graphql }) => {
     if (headings.length) {
       let prevHashIndex = 0;
       let prevHashId = '';
-      headings.forEach(({ value }) => {
-        const hashId = getHashId(value, tableOfContents);
+      let prevEndsAt = 0; // keep track of last matched heading
+      headings.forEach(({ value }, index) => {
+        const hashObject = getHashId(value, tableOfContents, prevEndsAt);
+        const { hashId, endsAt } = hashObject;
         if (hashId) {
           const hashPos = html.indexOf(hashId, prevHashIndex);
           searchData.push({
             title,
-            slug,
+            heading: prevHashId === '' ? '' : headings[index - 1].value,
             tokens: getTokens(html.substring(prevHashIndex, hashPos)),
-            hash: prevHashId,
-            id: slug + prevHashId,
+            url: slug + prevHashId,
           });
           prevHashIndex = hashPos;
           prevHashId = hashId;
+          prevEndsAt = endsAt;
         }
       });
       // push for the last heading
       searchData.push({
         title,
-        slug,
+        heading: prevHashId === '' ? '' : headings[headings.length - 1].value,
         tokens: getTokens(html.substring(prevHashIndex)),
-        hash: prevHashId,
-        id: slug + prevHashId,
+        url: slug + prevHashId,
       });
     } else {
       searchData.push({
         title,
-        slug,
+        heading: '',
         tokens: getTokens(html),
-        hash: '', // no hash since result should match the root url
-        id: slug,
+        url: slug, // no hash since result should match the root url
       });
     }
   });
 
-  const path = join(process.cwd(), './search.index.json');
+  const dir = process.cwd() + '/src/data';
+  const path = join(dir, './search.index.json');
   const data = JSON.stringify(searchData);
 
   writeFileSync(path, data);
-  console.log('Created search index at', process.cwd());
+  console.log('Created search index at', dir);
 };
