@@ -1,6 +1,7 @@
 import ButtonLink from './components/ButtonLink';
 import Container from 'components/Container';
 import Flex from 'components/Flex';
+import SearchBox from 'components/SearchBox';
 import PropTypes from 'prop-types';
 import React, {Component} from 'react';
 import TitleAndMetaTags from 'components/TitleAndMetaTags';
@@ -81,10 +82,22 @@ class Home extends Component {
                 Data-driven components for building Maps and Search UIs
               </p>
               <Flex
+                halign="center"
+                css={{
+                  paddingTop: 40,
+                  
+                  [media.greaterThan('xlarge')]: {
+                    paddingTop: 65,
+                  },
+                }}
+              >
+                <SearchBox />
+              </Flex>
+              <Flex
                 valign="center"
                 css={{
                   paddingTop: 40,
-
+                  
                   [media.greaterThan('xlarge')]: {
                     paddingTop: 65,
                   },
