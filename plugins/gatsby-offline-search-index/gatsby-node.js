@@ -65,16 +65,16 @@ function getTokens(text) {
 }
 
 function getHashId(heading, tableOfContents, startFrom = 0) {
-  const headingPos = tableOfContents.indexOf(heading, startFrom);
+  const headingPos = tableOfContents.indexOf(`>${heading}<`, startFrom);
   const hashPos = tableOfContents.lastIndexOf('#', headingPos);
 
   if (headingPos === -1 || hashPos === -1) {
     return null;
   }
-  const end = headingPos - 2;  // subtract 2 for ">
+  const end = headingPos - 1;  // subtract 1 for "
   return {
     hashId: tableOfContents.substring(hashPos, end),
-    endsAt: headingPos + heading.length,
+    endsAt: headingPos + heading.length - 2,  // subtract 2 for > and <
   };
 }
 
@@ -133,5 +133,5 @@ exports.createPages = async ({ graphql }) => {
   const data = JSON.stringify(searchData);
 
   writeFileSync(path, data);
-  console.log('Created search index at', dir);
+  console.log('Created search index at', dir);  // eslint-disable-line
 };
