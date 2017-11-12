@@ -16,4 +16,4 @@ const sectionListTutorial = nav.map(item => ({
   directory: 'getting-started',
 }));
 
-export {sectionListDocs, sectionListTutorial};
+export {sectionListDocs, sectionListTutorial, nav};

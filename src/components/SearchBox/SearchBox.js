@@ -6,6 +6,8 @@ import {navigateTo} from 'gatsby-link';
 import data from 'data/search.index.json';
 import {colors} from 'theme';
 import Flex from 'components/Flex';
+
+import { nav } from 'utils/sectionList';
 import './styles.css';
 
 const search = new Search('url');
@@ -13,6 +15,16 @@ search.addIndex('title');
 search.addIndex('heading');
 search.addIndex('tokens');
 search.addDocuments(data);
+
+const getSection = value => {
+  let currentSection = null;
+  nav.forEach(section => {
+    if (section.items.some(item => item.title === value)) {
+      currentSection = section.title;
+    }
+  });
+  return currentSection;
+};
 
 const getSuggestions = value => {
   const inputValue = value.trim().toLowerCase();
@@ -63,7 +75,7 @@ const renderSuggestion = suggestion => (
         flexShrink: 0,
       }}
     >
-      Getting Started
+      {getSection(suggestion.title)}
     </div>
   </Flex>
 );
