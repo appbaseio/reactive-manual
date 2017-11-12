@@ -18,6 +18,7 @@ const colors = {
   error: '#ff8484', // yellow
   white: '#ffffff',
   black: '#000000',
+  blurred: hex2rgba('#000', 0.8),
 };
 
 const SIZES = {
