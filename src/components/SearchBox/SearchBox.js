@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import Autosuggest from 'react-autosuggest';
-import { Search } from 'js-search';
-import { navigateTo } from 'gatsby-link';
+import {Search} from 'js-search';
+import {navigateTo} from 'gatsby-link';
 
 import data from 'data/search.index.json';
-import { colors } from 'theme';
+import {colors} from 'theme';
+import Flex from 'components/Flex';
 import './styles.css';
 
 const search = new Search('url');
@@ -17,7 +18,9 @@ const getSuggestions = value => {
   const inputValue = value.trim().toLowerCase();
   const inputLength = inputValue.length;
   let topResults = search.search(inputValue).slice(0, 8);
-  const exactMatchIndex = topResults.findIndex(item => (item.title.toLowerCase() === inputValue) && !item.heading.length);
+  const exactMatchIndex = topResults.findIndex(
+    item => item.title.toLowerCase() === inputValue && !item.heading.length,
+  );
   if (exactMatchIndex > 0) {
     topResults = [
       topResults[exactMatchIndex],
@@ -28,32 +31,41 @@ const getSuggestions = value => {
   return inputLength === 0 ? [] : topResults;
 };
 
-const getSuggestionValue = suggestion => `${suggestion.heading}${suggestion.heading.length ? ' in ' : ''}${suggestion.title}`;
+const getSuggestionValue = suggestion =>
+  `${suggestion.heading}${suggestion.heading.length
+    ? ' in '
+    : ''}${suggestion.title}`;
 
 // Use your imagination to render suggestions.
 const renderSuggestion = suggestion => (
-  <div>
-    <span
+  <Flex halign="space-between" valign="center">
+    <Flex direction="column">
+      <span
+        css={{
+          color: colors.brand,
+          fontWeight: 'bold',
+          paddingBottom: 5,
+        }}>
+        {suggestion.heading}
+      </span>
+      <span
+        css={{
+          color: colors.subtle,
+        }}>
+        {suggestion.title}
+      </span>
+    </Flex>
+    <div
       css={{
-        color: colors.dark,
-        fontWeight: 'bold',
+        borderLeft: `2px solid ${colors.darker}`,
+        paddingLeft: 5,
+        color: colors.darker,
+        flexShrink: 0,
       }}
     >
-      {suggestion.heading}
-    </span>
-    {
-      !!suggestion.heading.length &&
-        <span> in </span>
-    }
-    <span
-      css={{
-        color: colors.error,
-        fontWeight: 'bold',
-      }}
-    >
-      {suggestion.title}
-    </span>
-  </div>
+      Getting Started
+    </div>
+  </Flex>
 );
 
 class SearchBox extends Component {
@@ -65,13 +77,13 @@ class SearchBox extends Component {
     };
   }
 
-  onChange = (event, { newValue }) => {
+  onChange = (event, {newValue}) => {
     this.setState({
       value: newValue,
     });
   };
 
-  onSuggestionsFetchRequested = ({ value }) => {
+  onSuggestionsFetchRequested = ({value}) => {
     this.setState({
       suggestions: getSuggestions(value),
     });
@@ -83,12 +95,12 @@ class SearchBox extends Component {
     });
   };
 
-  onSuggestionSelected = (e, { suggestion }) => {
+  onSuggestionSelected = (e, {suggestion}) => {
     navigateTo(suggestion.url);
-  }
+  };
 
   render() {
-    const { value, suggestions } = this.state;
+    const {value, suggestions} = this.state;
 
     // Autosuggest will pass through all these props to the input.
     const inputProps = {
