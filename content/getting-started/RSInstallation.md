@@ -4,9 +4,7 @@ title: "ReactiveSearch Installation"
 layout: tutorial
 sectionid: getting-started
 permalink: getting-started/rsinstallation.html
-prev: start.html
-prevTitle: "ReactiveMaps Getting Started"
-next: rsstart.html
+next: getting-started/rsstart.html
 nextTitle: "ReactiveSearch Getting Started"
 ---
 

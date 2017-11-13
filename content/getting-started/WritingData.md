@@ -4,7 +4,7 @@ title: "Writing and Editing Data"
 layout: tutorial
 sectionid: getting-started
 permalink: getting-started/writingdata.html
-prev: componentsindex.html
+prev: getting-started/componentsindex.html
 prevTitle: "Components Overview"
 ---
 

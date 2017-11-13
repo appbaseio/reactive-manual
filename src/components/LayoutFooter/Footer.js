@@ -44,7 +44,7 @@ const Footer = ({layoutHasSidebar = false}) => (
           }}>
           <FooterNav layoutHasSidebar={layoutHasSidebar}>
             <MetaTitle onDark={true}>Docs</MetaTitle>
-            <FooterLink to="/getting-started/installation.html">Quick Start</FooterLink>
+            <FooterLink to="/getting-started/rsinstallation.html">Quick Start</FooterLink>
             <FooterLink to="/docs/basic-components/textfield.html">
               Basic Components
             </FooterLink>

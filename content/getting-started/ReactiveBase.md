@@ -4,9 +4,9 @@ title: "ReactiveBase"
 layout: tutorial
 sectionid: getting-started
 permalink: getting-started/reactivebase.html
-prev: data.html
+prev: getting-started/data.html
 prevTitle: "Importing Data"
-next: componentsindex.html
+next: getting-started/componentsindex.html
 nextTitle: "Components Overview"
 ---
 

@@ -4,9 +4,9 @@ title: "Components Index"
 layout: tutorial
 sectionid: getting-started
 permalink: getting-started/componentsindex.html
-prev: reactivebase.html
+prev: getting-started/reactivebase.html
 prevTitle: "Base Component"
-next: writingdata.html
+next: getting-started/writingdata.html
 nextTitle: "Writing Data"
 ---
 

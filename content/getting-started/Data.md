@@ -4,9 +4,9 @@ title: "Using Your Data"
 layout: tutorial
 sectionid: getting-started
 permalink: getting-started/data.html
-prev: rsstart.html
-prevTitle: "ReactiveSearch Getting Started"
-next: reactivebase.html
+prev: getting-started/start.html
+prevTitle: "ReactiveMaps Getting Started"
+next: getting-started/reactivebase.html
 nextTitle: "Base Component"
 ---
 

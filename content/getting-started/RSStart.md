@@ -4,10 +4,10 @@ title: "ReactiveSearch Getting Started"
 layout: tutorial
 sectionid: getting-started
 permalink: getting-started/rsstart.html
-prev: start.html
-prevTitle: "ReactiveMaps Getting Started"
-next: data.html
-nextTitle: "Importing Data"
+prev: getting-started/rsinstallation.html
+prevTitle: "ReactiveSearch Installation"
+next: getting-started/installation.html
+nextTitle: "ReactiveMaps Installation"
 ---
 
 ### Installation Recap

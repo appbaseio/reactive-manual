@@ -1,5 +1,30 @@
 - title: Getting Started
   items:
+    - id: rsinstallation
+      title: ReactiveSearch Installation
+      href: /getting-started/rsinstallation.html
+      forceInternal: true
+      subitems:
+        - id: step-1-install-reactivesearch-via-npm
+          title: Install reactivesearch via NPM
+          href: /getting-started/rsinstallation.html#step-1-install-reactivesearch-via-npm
+          forceInternal: true
+        - id: step-2-add-reactivesearchs-style-file
+          title: Add ReactiveSearch’s style file
+          href: /getting-started/rsinstallation.html#step-2-add-reactivesearchs-style-file
+          forceInternal: true
+    - id: rsstart
+      title: ReactiveSearch Getting Started
+      href: /getting-started/rsstart.html
+      forceInternal: true
+      subitems:
+        - id: installation-recap
+          title: Installation Recap
+          href: /getting-started/rsstart.html#installation-recap
+          forceInternal: true
+        - id: creating-an-app
+          title: Creating an App
+          href: /getting-started/rsstart.html#creating-an-app
     - id: installation
       title: ReactiveMaps Installation
       href: /getting-started/installation.html
@@ -30,31 +55,6 @@
           title: Creating an App
           href: /getting-started/start.html#creating-an-app
           forceInternal: true
-    - id: rsinstallation
-      title: ReactiveSearch Installation
-      href: /getting-started/rsinstallation.html
-      forceInternal: true
-      subitems:
-        - id: step-1-install-reactivesearch-via-npm
-          title: Install reactivesearch via NPM
-          href: /getting-started/rsinstallation.html#step-1-install-reactivesearch-via-npm
-          forceInternal: true
-        - id: step-2-add-reactivesearchs-style-file
-          title: Add ReactiveSearch’s style file
-          href: /getting-started/rsinstallation.html#step-2-add-reactivesearchs-style-file
-          forceInternal: true
-    - id: rsstart
-      title: ReactiveSearch Getting Started
-      href: /getting-started/rsstart.html
-      forceInternal: true
-      subitems:
-        - id: installation-recap
-          title: Installation Recap
-          href: /getting-started/rsstart.html#installation-recap
-          forceInternal: true
-        - id: creating-an-app
-          title: Creating an App
-          href: /getting-started/rsstart.html#creating-an-app
     - id: data
       title: Importing Data
       href: /getting-started/data.html
