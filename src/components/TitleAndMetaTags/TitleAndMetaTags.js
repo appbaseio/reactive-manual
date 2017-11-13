@@ -16,7 +16,7 @@ const TitleAndMetaTags = ({title, ogDescription, ogUrl}: Props) => {
       <meta property="og:title" content={title} />
       <meta property="og:type" content="website" />
       {ogUrl && <meta property="og:url" content={ogUrl} />}
-      <meta property="og:image" content="reactive-manual/logo-og.png" />
+      <meta property="og:image" content="https://opensource.appbase.io/reactive-manual/logo-og.png" />
       <meta
         property="og:description"
         content={ogDescription || defaultDescription}

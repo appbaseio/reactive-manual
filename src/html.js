@@ -34,7 +34,7 @@ export default class HTML extends Component {
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
-          <link rel="icon" href="reactive-manual/favicon.ico" />
+          <link rel="icon" href="https://opensource.appbase.io/reactive-manual/favicon.ico" />
           {this.props.headComponents}
           {js}
           {css}
