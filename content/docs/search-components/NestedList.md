@@ -3,10 +3,10 @@ id: nestedlist
 title: "NestedList"
 layout: docs
 sectionid: docs
-permalink: docs/search-components/nestedlist.html
-prev: docs/search-components/tagcloud.html
+permalink: search-components/nestedlist.html
+prev: search-components/tagcloud.html
 prevTitle: "TagCloud"
-next: docs/search-components/nestedmultilist.html
+next: search-components/nestedmultilist.html
 nextTitle: "NestedMultiList"
 ---
 

@@ -2,113 +2,113 @@
   items:
     - id: geodistanceslider
       title: GeoDistanceSlider
-      href: /docs/map-components/geodistanceslider.html
+      href: /map-components/geodistanceslider.html
       forceInternal: true
       subitems:
         - id: usage
           title: Usage
-          href: /docs/map-components/geodistanceslider.html#usage
+          href: /map-components/geodistanceslider.html#usage
           forceInternal: true
         - id: props
           title: Props
-          href: /docs/map-components/geodistanceslider.html#props
+          href: /map-components/geodistanceslider.html#props
           forceInternal: true
         - id: syntax
           title: Syntax
-          href: /docs/map-components/geodistanceslider.html#syntax
+          href: /map-components/geodistanceslider.html#syntax
           forceInternal: true
         - id: styles
           title: Styles
-          href: /docs/map-components/geodistanceslider.html#styles
+          href: /map-components/geodistanceslider.html#styles
           forceInternal: true
         - id: extending
           title: Extending
-          href: /docs/map-components/geodistanceslider.html#extending
+          href: /map-components/geodistanceslider.html#extending
           forceInternal: true
         - id: examples
           title: Examples
-          href: /docs/map-components/geodistanceslider.html#examples
+          href: /map-components/geodistanceslider.html#examples
           forceInternal: true
     - id: geodistancedropdown
       title: GeoDistanceDropdown
-      href: /docs/map-components/geodistancedropdown.html
+      href: /map-components/geodistancedropdown.html
       forceInternal: true
       subitems:
         - id: usage
           title: Usage
-          href: /docs/map-components/geodistancedropdown.html#usage
+          href: /map-components/geodistancedropdown.html#usage
           forceInternal: true
         - id: props
           title: Props
-          href: /docs/map-components/geodistancedropdown.html#props
+          href: /map-components/geodistancedropdown.html#props
           forceInternal: true
         - id: syntax
           title: Syntax
-          href: /docs/map-components/geodistancedropdown.html#syntax
+          href: /map-components/geodistancedropdown.html#syntax
           forceInternal: true
         - id: styles
           title: Styles
-          href: /docs/map-components/geodistancedropdown.html#styles
+          href: /map-components/geodistancedropdown.html#styles
           forceInternal: true
         - id: extending
           title: Extending
-          href: /docs/map-components/geodistancedropdown.html#extending
+          href: /map-components/geodistancedropdown.html#extending
           forceInternal: true
         - id: examples
           title: Examples
-          href: /docs/map-components/geodistancedropdown.html#examples
+          href: /map-components/geodistancedropdown.html#examples
           forceInternal: true
     - id: placessearch
       title: PlacesSearch
-      href: /docs/map-components/placessearch.html
+      href: /map-components/placessearch.html
       forceInternal: true
       subitems:
         - id: usage
           title: Usage
-          href: /docs/map-components/placessearch.html#usage
+          href: /map-components/placessearch.html#usage
           forceInternal: true
         - id: props
           title: Props
-          href: /docs/map-components/placessearch.html#props
+          href: /map-components/placessearch.html#props
           forceInternal: true
         - id: syntax
           title: Syntax
-          href: /docs/map-components/placessearch.html#syntax
+          href: /map-components/placessearch.html#syntax
           forceInternal: true
         - id: styles
           title: Styles
-          href: /docs/map-components/placessearch.html#styles
+          href: /map-components/placessearch.html#styles
           forceInternal: true
         - id: extending
           title: Extending
-          href: /docs/map-components/placessearch.html#extending
+          href: /map-components/placessearch.html#extending
           forceInternal: true
         - id: examples
           title: Examples
-          href: /docs/map-components/placessearch.html#examples
+          href: /map-components/placessearch.html#examples
           forceInternal: true
     - id: reactivemap
       title: ReactiveMap
-      href: /docs/map-components/reactivemap.html
+      href: /map-components/reactivemap.html
       forceInternal: true
       subitems:
         - id: usage
           title: Usage
-          href: /docs/map-components/reactivemap.html#usage
+          href: /map-components/reactivemap.html#usage
           forceInternal: true
         - id: props
           title: Props
-          href: /docs/map-components/reactivemap.html#props
+          href: /map-components/reactivemap.html#props
           forceInternal: true
         - id: syntax
           title: Syntax
-          href: /docs/map-components/reactivemap.html#syntax
+          href: /map-components/reactivemap.html#syntax
           forceInternal: true
         - id: styles
           title: Styles
-          href: /docs/map-components/reactivemap.html#styles
+          href: /map-components/reactivemap.html#styles
           forceInternal: true
         - id: examples
           title: Examples
-          href: /docs/map-components/reactivemap.html#examples
+          href: /map-components/reactivemap.html#examples
           forceInternal: true

@@ -3,10 +3,10 @@ id: singledropdownrange
 title: "SingleDropdownRange"
 layout: docs
 sectionid: docs
-permalink: docs/basic-components/singledropdownrange.html
-prev: docs/basic-components/multidropdownlist.html
+permalink: basic-components/singledropdownrange.html
+prev: basic-components/multidropdownlist.html
 prevTitle: "MultiDropdownList"
-next: docs/basic-components/multidropdownrange.html
+next: basic-components/multidropdownrange.html
 nextTitle: "MultiDropdownRange"
 ---
 
@@ -16,7 +16,7 @@ nextTitle: "MultiDropdownRange"
 
 > Note
 >
-> This component is exactly like the [SingleRange](/docs/basic-components/singlerange.html) component except the UI is based on a dropdown, ideal for showing additional UI filters while conserving screen space.
+> This component is exactly like the [SingleRange](/basic-components/singlerange.html) component except the UI is based on a dropdown, ideal for showing additional UI filters while conserving screen space.
 
 Example uses:
 * filtering search results by prices in an e-commerce or food delivery experience.

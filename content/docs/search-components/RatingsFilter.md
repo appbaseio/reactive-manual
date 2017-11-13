@@ -3,10 +3,10 @@ id: ratingsfilter
 title: "RatingsFilter"
 layout: docs
 sectionid: docs
-permalink: docs/search-components/ratingsfilter.html
-prev: docs/search-components/dynamicrangeslider.html
+permalink: search-components/ratingsfilter.html
+prev: search-components/dynamicrangeslider.html
 prevTitle: "DynamicRangeSlider"
-next: docs/search-components/tagcloud.html
+next: search-components/tagcloud.html
 nextTitle: "TagCloud"
 ---
 

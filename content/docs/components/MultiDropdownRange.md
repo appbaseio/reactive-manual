@@ -3,10 +3,10 @@ id: multidropdownrange
 title: "MultiDropdownRange"
 layout: docs
 sectionid: docs
-permalink: docs/basic-components/multidropdownrange.html
-prev: docs/basic-components/singledropdownrange.html
+permalink: basic-components/multidropdownrange.html
+prev: basic-components/singledropdownrange.html
 prevTitle: "SingleDropdownRange"
-next: docs/basic-components/selectedfilters.html
+next: basic-components/selectedfilters.html
 nextTitle: "SelectedFilters"
 ---
 
@@ -16,7 +16,7 @@ nextTitle: "SelectedFilters"
 
 > Note
 >
-> It is exactly like the [MultiRange](/docs/basic-components/multirange.html) component but displayed in a dropdown, ideal for showing additional UI filters while conserving screen space
+> It is exactly like the [MultiRange](/basic-components/multirange.html) component but displayed in a dropdown, ideal for showing additional UI filters while conserving screen space
 
 Example uses:
 * filtering search results by prices in an e-commerce or food delivery experience.

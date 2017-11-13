@@ -3,10 +3,10 @@ id: rangeslider
 title: "RangeSlider"
 layout: docs
 sectionid: docs
-permalink: docs/basic-components/rangeslider.html
-prev: docs/basic-components/multirange.html
+permalink: basic-components/rangeslider.html
+prev: basic-components/multirange.html
 prevTitle: "MultiRange"
-next: docs/basic-components/numberbox.html
+next: basic-components/numberbox.html
 nextTitle: "NumberBox"
 ---
 

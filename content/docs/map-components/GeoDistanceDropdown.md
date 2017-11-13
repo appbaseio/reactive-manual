@@ -3,10 +3,10 @@ id: geodistancedropdown
 title: "GeoDistanceDropdown"
 layout: docs
 sectionid: docs
-permalink: docs/map-components/geodistancedropdown.html
-prev: docs/map-components/geodistanceslider.html
+permalink: map-components/geodistancedropdown.html
+prev: map-components/geodistanceslider.html
 prevTitle: "GeoDistanceSlider"
-next: docs/map-components/placessearch.html
+next: map-components/placessearch.html
 nextTitle: "PlacesSearch"
 ---
 

@@ -3,13 +3,13 @@ id: textfield
 title: "TextField"
 layout: docs
 sectionid: docs
-permalink: docs/basic-components/textfield.html
+permalink: basic-components/textfield.html
 redirect_from:
     - "docs"
-    - "docs/basic-components"
+    - "basic-components"
     - "reactive-manual/docs"
-    - "reactive-manual/docs/basic-components"
-next: docs/basic-components/togglebutton.html
+    - "reactive-manual/basic-components"
+next: basic-components/togglebutton.html
 nextTitle: "ToggleButton"
 ---
 
@@ -81,7 +81,7 @@ All reactivebase components are `rbc` namespaced.
 1. customize the look and feel with `className`, `style`,
 2. update the underlying DB query with `customQuery`,
 3. connect with external interfaces using `beforeValueChange`, `onValueChange` and `onQueryChange`,
-4. add the following [synthetic events](https://reactjs.org/docs/events.html) to the underlying `input` element:
+4. add the following [synthetic events](https://reactjs.org/events.html) to the underlying `input` element:
     - onBlur
     - onFocus
     - onKeyPress

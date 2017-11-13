@@ -3,8 +3,8 @@ id: theming
 title: "Theming"
 layout: docs
 sectionid: docs
-permalink: docs/advanced/theming.html
-prev: docs/advanced/styleguide.html
+permalink: advanced/theming.html
+prev: advanced/styleguide.html
 prevTitle: "Style Guide"
 ---
 

@@ -3,10 +3,10 @@ id: react
 title: "React"
 layout: docs
 sectionid: docs
-permalink: docs/advanced/react.html
-prev: docs/advanced/customquery.html
+permalink: advanced/react.html
+prev: advanced/customquery.html
 prevTitle: "Defining Custom Queries"
-next: docs/advanced/mapping.html
+next: advanced/mapping.html
 nextTitle: "Data Mappings"
 ---
 
@@ -27,7 +27,7 @@ One of the key ideas behind Reactive Search and Reactive Maps is the reactive de
 ### Props
 
 - **react** `Object`  
-    `react` prop is available in components whose data view should reactively update when on or more dependent components change their states, e.g. [`ReactiveMap`](/docs/map-components/reactivemap.html), [`ReactiveList`](/docs/basic-components/reactivelist.html).
+    `react` prop is available in components whose data view should reactively update when on or more dependent components change their states, e.g. [`ReactiveMap`](/map-components/reactivemap.html), [`ReactiveList`](/basic-components/reactivelist.html).
   - **key** `String`  
       one of `and`, `or`, `not` defines the combining clause.
       - **and** clause implies that the results will be filtered by matches from **all** of the associated component states.

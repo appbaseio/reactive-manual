@@ -3,10 +3,10 @@ id: multilevelmenu
 title: "MultiLevelMenu"
 layout: docs
 sectionid: docs
-permalink: docs/search-components/multilevelmenu.html
-prev: docs/search-components/categorysearch.html
+permalink: search-components/multilevelmenu.html
+prev: search-components/categorysearch.html
 prevTitle: "CategorySearch"
-next: docs/search-components/dynamicrangeslider.html
+next: search-components/dynamicrangeslider.html
 nextTitle: "DynamicRangeSlider"
 ---
 

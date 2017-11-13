@@ -3,10 +3,10 @@ id: resultlist
 title: "ResultList"
 layout: docs
 sectionid: docs
-permalink: docs/search-components/resultlist.html
-prev: docs/search-components/resultcard.html
+permalink: search-components/resultlist.html
+prev: search-components/resultcard.html
 prevTitle: "ResultCard"
-next: docs/search-components/viewswitcher.html
+next: search-components/viewswitcher.html
 nextTitle: "ViewSwitcher"
 ---
 
@@ -21,7 +21,7 @@ Example uses:
 
 > Note
 >
-> An alternative layout to ResultList is a [**ResultCard**](/docs/search-components/resultcard.html), which displays result data in a card layout.
+> An alternative layout to ResultList is a [**ResultCard**](/search-components/resultcard.html), which displays result data in a card layout.
 
 ## Usage
 
@@ -125,7 +125,7 @@ Example uses:
 - **onResultStats** `Function` [optional]  
     show custom result stats using a function that takes two parameters for `time_taken` and `total_results` and returns a string.
 - **react** `Object`  
-    a dependency object defining how this component should react based on the state changes in the sensor components. You can read more about how to specify this prop over [here](/docs/advanced/react.html).
+    a dependency object defining how this component should react based on the state changes in the sensor components. You can read more about how to specify this prop over [here](/advanced/react.html).
 - **onData** `Function` [optional]  
     returns a card element object to be rendered based on the `res` data object. This callback function prop is called for each data item rendered in the **ResultList** component's view.
     ```js

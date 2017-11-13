@@ -3,10 +3,10 @@ id: nestedmultilist
 title: "NestedMultiList"
 layout: docs
 sectionid: docs
-permalink: docs/search-components/nestedmultilist.html
-prev: docs/search-components/nestedlist.html
+permalink: search-components/nestedmultilist.html
+prev: search-components/nestedlist.html
 prevTitle: "NestedList"
-next: docs/search-components/resultcard.html
+next: search-components/resultcard.html
 nextTitle: "ResultCard"
 ---
 
@@ -83,7 +83,7 @@ Example uses:
 
 > Note
 >
-> A NestedMultiList component's props are exactly like a [NestedList component](/docs/search-components/nestedlist.html) except for the `defaultSelected` prop which can take an Array with multiple selections like `{["Car", ["ford", "galaxy"]]}`.
+> A NestedMultiList component's props are exactly like a [NestedList component](/search-components/nestedlist.html) except for the `defaultSelected` prop which can take an Array with multiple selections like `{["Car", ["ford", "galaxy"]]}`.
 
 ## Syntax
 

@@ -3,10 +3,10 @@ id: datepicker
 title: "DatePicker"
 layout: docs
 sectionid: docs
-permalink: docs/basic-components/datepicker.html
-prev: docs/basic-components/datasearch.html
+permalink: basic-components/datepicker.html
+prev: basic-components/datasearch.html
 prevTitle: "DataSearch"
-next: docs/basic-components/daterange.html
+next: basic-components/daterange.html
 nextTitle: "DateRange"
 ---
 

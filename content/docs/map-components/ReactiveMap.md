@@ -3,8 +3,8 @@ id: reactivemap
 title: "ReactiveMap"
 layout: docs
 sectionid: docs
-permalink: docs/map-components/reactivemap.html
-prev: docs/map-components/placessearch.html
+permalink: map-components/reactivemap.html
+prev: map-components/placessearch.html
 prevTitle: "PlacesSearch"
 ---
 
@@ -131,7 +131,7 @@ Example uses:
 - **streamMarkerImage** `String` [optional]  
     URL of the streaming marker image to be shown. It comes with a default image that's distinct from the defaultMarkerImage. Should be only set if you wish to use a custom marker image.
 - **react** `Object`
-     a dependency object defining how this component should react based on the state changes in the dependent sensor components. You can read more about it [here](/docs/advanced/react.html).
+     a dependency object defining how this component should react based on the state changes in the dependent sensor components. You can read more about it [here](/advanced/react.html).
 - **autoCenter** `Boolean` [optional]  
     whether to auto center the map based on the geometric center of all the location markers. Defaults to `true`.
 - **autoMapRender** `Boolean` [optional]  

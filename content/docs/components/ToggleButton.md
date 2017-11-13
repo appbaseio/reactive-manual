@@ -3,10 +3,10 @@ id: togglebutton
 title: "ToggleButton"
 layout: docs
 sectionid: docs
-permalink: docs/basic-components/togglebutton.html
-prev: docs/basic-components/textfield.html
+permalink: basic-components/togglebutton.html
+prev: basic-components/textfield.html
 prevTitle: "TextField"
-next: docs/basic-components/singlelist.html
+next: basic-components/singlelist.html
 nextTitle: "SingleList"
 ---
 

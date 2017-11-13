@@ -3,10 +3,10 @@ id: multidatalist
 title: "MultiDataList"
 layout: docs
 sectionid: docs
-permalink: docs/basic-components/multidatalist.html
-prev: docs/basic-components/singledatalist.html
+permalink: basic-components/multidatalist.html
+prev: basic-components/singledatalist.html
 prevTitle: "SingleDataList"
-next: docs/basic-components/singledropdownlist.html
+next: basic-components/singledropdownlist.html
 nextTitle: "SingleDropdownList"
 ---
 
@@ -16,7 +16,7 @@ nextTitle: "SingleDropdownList"
 
 > Note
 >
-> This component behaves similar to the [MultiList](/docs/basic-components/multilist.html) component except the list items are user defined with the `data` prop, ideal for showing curated items in a list layout.
+> This component behaves similar to the [MultiList](/basic-components/multilist.html) component except the list items are user defined with the `data` prop, ideal for showing curated items in a list layout.
 
 Example uses:
 * select one or multiple items from a list of categories for filtering e-commerce search results.

@@ -3,10 +3,10 @@ id: tagcloud
 title: "TagCloud"
 layout: docs
 sectionid: docs
-permalink: docs/search-components/tagcloud.html
-prev: docs/search-components/ratingsfilter.html
+permalink: search-components/tagcloud.html
+prev: search-components/ratingsfilter.html
 prevTitle: "RatingsFilter"
-next: docs/search-components/nestedlist.html
+next: search-components/nestedlist.html
 nextTitle: "NestedList"
 ---
 

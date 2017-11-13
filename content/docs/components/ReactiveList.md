@@ -3,10 +3,10 @@ id: reactivelist
 title: "ReactiveList"
 layout: docs
 sectionid: docs
-permalink: docs/basic-components/reactivelist.html
-prev: docs/basic-components/datacontroller.html
+permalink: basic-components/reactivelist.html
+prev: basic-components/datacontroller.html
 prevTitle: "DataController"
-next: docs/basic-components/reactiveelement.html
+next: basic-components/reactiveelement.html
 nextTitle: "ReactiveElement"
 ---
 
@@ -14,7 +14,7 @@ nextTitle: "ReactiveElement"
 
 `ReactiveList` creates a data-driven result list UI component. This list can reactively update itself based on changes in other components or changes in the database itself.
 
-This component forms the base for building more specific result display components like [`ResultCard`](/docs/search-components/resultcard.html) or [`ResultList`](/docs/search-components/resultlist.html).
+This component forms the base for building more specific result display components like [`ResultCard`](/search-components/resultcard.html) or [`ResultList`](/search-components/resultlist.html).
 
 Example uses:
 

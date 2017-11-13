@@ -3,10 +3,10 @@ id: singledatalist
 title: "SingleDataList"
 layout: docs
 sectionid: docs
-permalink: docs/basic-components/singledatalist.html
-prev: docs/basic-components/reactiveelement.html
+permalink: basic-components/singledatalist.html
+prev: basic-components/reactiveelement.html
 prevTitle: "ReactiveElement"
-next: docs/basic-components/multidatalist.html
+next: basic-components/multidatalist.html
 nextTitle: "MultiDataList"
 ---
 
@@ -16,7 +16,7 @@ nextTitle: "MultiDataList"
 
 > Note
 >
-> This component is like the [SingleList](/docs/basic-components/singlelist.html) component except the filters are set based on the `data` prop, ideal for showing custom UI filters in a list layout.
+> This component is like the [SingleList](/basic-components/singlelist.html) component except the filters are set based on the `data` prop, ideal for showing custom UI filters in a list layout.
 
 Example uses:
 * select a category from a list of categories for filtering e-commerce search results.

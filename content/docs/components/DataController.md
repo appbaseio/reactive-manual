@@ -3,10 +3,10 @@ id: datacontroller
 title: "DataController"
 layout: docs
 sectionid: docs
-permalink: docs/basic-components/datacontroller.html
-prev: docs/basic-components/daterange.html
+permalink: basic-components/datacontroller.html
+prev: basic-components/daterange.html
 prevTitle: "DateRange"
-next: docs/basic-components/reactivelist.html
+next: basic-components/reactivelist.html
 nextTitle: "ReactiveList"
 ---
 

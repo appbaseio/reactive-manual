@@ -3,10 +3,10 @@ id: singlelist
 title: "SingleList"
 layout: docs
 sectionid: docs
-permalink: docs/basic-components/singlelist.html
-prev: docs/basic-components/togglebutton.html
+permalink: basic-components/singlelist.html
+prev: basic-components/togglebutton.html
 prevTitle: "ToggleButton"
-next: docs/basic-components/multilist.html
+next: basic-components/multilist.html
 nextTitle: "MultiList"
 ---
 

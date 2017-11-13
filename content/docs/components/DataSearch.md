@@ -3,10 +3,10 @@ id: datasearch
 title: "DataSearch"
 layout: docs
 sectionid: docs
-permalink: docs/basic-components/datasearch.html
-prev: docs/basic-components/numberbox.html
+permalink: basic-components/datasearch.html
+prev: basic-components/numberbox.html
 prevTitle: "NumberBox"
-next: docs/basic-components/datepicker.html
+next: basic-components/datepicker.html
 nextTitle: "DatePicker"
 ---
 
@@ -109,7 +109,7 @@ All reactivebase components are `rbc` namespaced.
 2. update the underlying DB query with `customQuery`,
 3. connect with external interfaces using `beforeValueChange`, `onValueChange` and `onQueryChange`,
 4. specify how search suggestions should be filtered using `react` prop,
-5. add the following [synthetic events](https://reactjs.org/docs/events.html) to the underlying `input` element:
+5. add the following [synthetic events](https://reactjs.org/events.html) to the underlying `input` element:
     - onBlur
     - onFocus
     - onKeyPress

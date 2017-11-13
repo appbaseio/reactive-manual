@@ -3,10 +3,10 @@ id: multidropdownlist
 title: "MultiDropdownList"
 layout: docs
 sectionid: docs
-permalink: docs/basic-components/multidropdownlist.html
-prev: docs/basic-components/singledropdownlist.html
+permalink: basic-components/multidropdownlist.html
+prev: basic-components/singledropdownlist.html
 prevTitle: "SingleDropdownList"
-next: docs/basic-components/singledropdownrange.html
+next: basic-components/singledropdownrange.html
 nextTitle: "SingleDropdownRange"
 ---
 
@@ -16,7 +16,7 @@ nextTitle: "SingleDropdownRange"
 
 > Note
 >
-> This component is exactly like the [MultiList](/docs/basic-components/multilist.html) component except the UI is based on a dropdown, ideal for showing additional UI filters while conserving screen space.
+> This component is exactly like the [MultiList](/basic-components/multilist.html) component except the UI is based on a dropdown, ideal for showing additional UI filters while conserving screen space.
 
 Example uses:
 * create an e-commerce facet like search experience.

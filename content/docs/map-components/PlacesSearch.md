@@ -3,10 +3,10 @@ id: placessearch
 title: "PlacesSearch"
 layout: docs
 sectionid: docs
-permalink: docs/map-components/placessearch.html
-prev: docs/map-components/geodistancedropdown.html
+permalink: map-components/placessearch.html
+prev: map-components/geodistancedropdown.html
 prevTitle: "GeoDistanceDropdown"
-next: docs/map-components/reactivemap.html
+next: map-components/reactivemap.html
 nextTitle: "ReactiveMap"
 ---
 

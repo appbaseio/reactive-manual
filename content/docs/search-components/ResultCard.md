@@ -3,10 +3,10 @@ id: resultcard
 title: "ResultCard"
 layout: docs
 sectionid: docs
-permalink: docs/search-components/resultcard.html
-prev: docs/search-components/nestedmultilist.html
+permalink: search-components/resultcard.html
+prev: search-components/nestedmultilist.html
 prevTitle: "NestedMultiList"
-next: docs/search-components/resultlist.html
+next: search-components/resultlist.html
 nextTitle: "ResultList"
 ---
 
@@ -21,7 +21,7 @@ Example uses:
 
 > Note
 >
-> An alternative layout to ResultCard is a [**ResultList**](/docs/search-components/resultlist.html), which displays result data in a list format.
+> An alternative layout to ResultCard is a [**ResultList**](/search-components/resultlist.html), which displays result data in a list format.
 
 ## Usage
 

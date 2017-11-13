@@ -3,10 +3,10 @@ id: daterange
 title: "DateRange"
 layout: docs
 sectionid: docs
-permalink: docs/basic-components/daterange.html
-prev: docs/basic-components/datepicker.html
+permalink: basic-components/daterange.html
+prev: basic-components/datepicker.html
 prevTitle: "DatePicker"
-next: docs/basic-components/datacontroller.html
+next: basic-components/datacontroller.html
 nextTitle: "DataController"
 ---
 

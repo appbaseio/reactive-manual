@@ -3,8 +3,8 @@ id: viewswitcher
 title: "ViewSwitcher"
 layout: docs
 sectionid: docs
-permalink: docs/search-components/viewswitcher.html
-prev: docs/search-components/resultlist.html
+permalink: search-components/viewswitcher.html
+prev: search-components/resultlist.html
 prevTitle: "ResultList"
 ---
 

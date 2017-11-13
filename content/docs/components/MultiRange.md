@@ -3,10 +3,10 @@ id: multirange
 title: "MultiRange"
 layout: docs
 sectionid: docs
-permalink: docs/basic-components/multirange.html
-prev: docs/basic-components/singlerange.html
+permalink: basic-components/multirange.html
+prev: basic-components/singlerange.html
 prevTitle: "SingleRange"
-next: docs/basic-components/rangeslider.html
+next: basic-components/rangeslider.html
 nextTitle: "RangeSlider"
 ---
 
@@ -16,7 +16,7 @@ nextTitle: "RangeSlider"
 
 > Note
 >
-> It is similar to a [MultiList](/docs/basic-components/multilist.html) component but for numeric data fields.
+> It is similar to a [MultiList](/basic-components/multilist.html) component but for numeric data fields.
 
 Example uses:
 * filtering search results by prices in an e-commerce or food delivery experience.

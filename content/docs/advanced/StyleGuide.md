@@ -3,10 +3,10 @@ id: styleguide
 title: "Style Guide"
 layout: docs
 sectionid: docs
-permalink: docs/advanced/styleguide.html
-prev: docs/advanced/mapping.html
+permalink: advanced/styleguide.html
+prev: advanced/mapping.html
 prevTitle: "Data Mappings"
-next: docs/advanced/theming.html
+next: advanced/theming.html
 nextTitle: "Theming"
 ---
 

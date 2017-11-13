@@ -3,10 +3,10 @@ id: singlerange
 title: "SingleRange"
 layout: docs
 sectionid: docs
-permalink: docs/basic-components/singlerange.html
-prev: docs/basic-components/multilist.html
+permalink: basic-components/singlerange.html
+prev: basic-components/multilist.html
 prevTitle: "MultiList"
-next: docs/basic-components/multirange.html
+next: basic-components/multirange.html
 nextTitle: "MultiRange"
 ---
 
@@ -16,7 +16,7 @@ nextTitle: "MultiRange"
 
 > Note
 >
-> It is similar to a [SingleList](/docs/basic-components/singlelist.html), except it is suited for numeric data.
+> It is similar to a [SingleList](/basic-components/singlelist.html), except it is suited for numeric data.
 
 Example uses:
 * filtering search results by prices in an e-commerce or food delivery experience.
@@ -76,7 +76,7 @@ Example uses:
 - **showRadio** `Boolean` [optional]  
     show radio button icon for each range item. Defaults to `true`.
 - **showFilter** `Boolean` [optional]  
-    show the selected item as a filter in the [selected filters view](/docs/basic-components/multilist.html). Defaults to `true`.
+    show the selected item as a filter in the [selected filters view](/basic-components/multilist.html). Defaults to `true`.
 - **filterLabel** `String` [optional]  
     An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
 - **URLParams** `Boolean` [optional]  

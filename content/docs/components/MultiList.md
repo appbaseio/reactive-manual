@@ -3,16 +3,16 @@ id: multilist
 title: "MultiList"
 layout: docs
 sectionid: docs
-permalink: docs/basic-components/multilist.html
-prev: docs/basic-components/singlelist.html
+permalink: basic-components/multilist.html
+prev: basic-components/singlelist.html
 prevTitle: "SingleList"
-next: docs/basic-components/singlerange.html
+next: basic-components/singlerange.html
 nextTitle: "SingleRange"
 ---
 
 ![Image to be displayed](https://i.imgur.com/KuSUJyX.png)
 
-`MultiList` creates a multiple selection based list UI component that is connected to a database field. It is similar to a [SingleList](/docs/basic-components/singlelist.html) except it can support multiple item selections.
+`MultiList` creates a multiple selection based list UI component that is connected to a database field. It is similar to a [SingleList](/basic-components/singlelist.html) except it can support multiple item selections.
 
 Example uses:
 

@@ -3,12 +3,12 @@ id: geodistanceslider
 title: "GeoDistanceSlider"
 layout: docs
 sectionid: docs
-permalink: docs/map-components/geodistanceslider.html
-next: docs/map-components/geodistancedropdown.html
+permalink: map-components/geodistanceslider.html
+next: map-components/geodistancedropdown.html
 nextTitle: "GeoDistanceDropdown"
 redirect_from:
-    - "docs/map-components"
-    - "reactive-manual/docs/map-components"
+    - "map-components"
+    - "reactive-manual/map-components"
 ---
 
 ![Image to be displayed](

@@ -3,10 +3,10 @@ id: reactiveelement
 title: "ReactiveElement"
 layout: docs
 sectionid: docs
-permalink: docs/basic-components/reactiveelement.html
-prev: docs/basic-components/reactivelist.html
+permalink: basic-components/reactiveelement.html
+prev: basic-components/reactivelist.html
 prevTitle: "ReactiveList"
-next: docs/basic-components/singledatalist.html
+next: basic-components/singledatalist.html
 nextTitle: "SingleDataList"
 ---
 

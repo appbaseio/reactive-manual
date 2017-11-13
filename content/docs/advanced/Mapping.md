@@ -3,10 +3,10 @@ id: mapping
 title: "Elasticsearch Mapping"
 layout: docs
 sectionid: docs
-permalink: docs/advanced/mapping.html
-prev: docs/advanced/react.html
+permalink: advanced/mapping.html
+prev: advanced/react.html
 prevTitle: "Reactive Chaining"
-next: docs/advanced/styleguide.html
+next: advanced/styleguide.html
 nextTitle: "Style Guide"
 ---
 

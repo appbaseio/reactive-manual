@@ -3,12 +3,12 @@ id: customquery
 title: "Custom Queries"
 layout: docs
 sectionid: docs
-permalink: docs/advanced/customquery.html
-next: docs/advanced/react.html
+permalink: advanced/customquery.html
+next: advanced/react.html
 nextTitle: "Reactive Chaining"
 redirect_from:
-    - "docs/advanced"
-    - "reactive-manual/docs/advanced"
+    - "advanced"
+    - "reactive-manual/advanced"
 ---
 
 ### Data Aware UI components
@@ -63,7 +63,7 @@ this.customQuery=function() {
 
 ### Data Controller Component
 
-Reactive Maps UI library comes with a specific component that is designed to be truly customizable, [**Data Controller**](/docs/basic-components/datacontroller.html). It's a UI optional component that requires defining the `customQuery` prop.
+Reactive Maps UI library comes with a specific component that is designed to be truly customizable, [**Data Controller**](/basic-components/datacontroller.html). It's a UI optional component that requires defining the `customQuery` prop.
 
 For example, let's say you want to apply a query filter to represent an end-user's global preferences within the UI without adding a widget. Data Controller allows you to define a query without needing a UI widget.
 
