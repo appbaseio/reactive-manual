@@ -61,16 +61,16 @@ const Footer = ({layoutHasSidebar = false}) => (
           <FooterNav layoutHasSidebar={layoutHasSidebar}>
             <MetaTitle onDark={true}>Community</MetaTitle>
             <ExternalFooterLink
-              href="https://gitter.im/appbaseio/reactivesearch"
+              href="https://github.com/appbaseio/reactivesearch/"
               target="_blank"
               rel="noopener">
-              Chat on Gitter
+              Github
             </ExternalFooterLink>
             <ExternalFooterLink
               href="https://slack.appbase.io/"
               target="_blank"
               rel="noopener">
-              Join us on Slack
+              Slack
             </ExternalFooterLink>
             <ExternalFooterLink
               href="https://twitter.com/appbaseio"
@@ -80,24 +80,18 @@ const Footer = ({layoutHasSidebar = false}) => (
             </ExternalFooterLink>
           </FooterNav>
           <FooterNav layoutHasSidebar={layoutHasSidebar}>
-            <MetaTitle onDark={true}>Tools</MetaTitle>
+            <MetaTitle onDark={true}>Helpful Tools</MetaTitle>
             <ExternalFooterLink
               href="https://opensource.appbase.io/dejavu/"
               target="_blank"
               rel="noopener">
-              DejaVu
+              Data browser
             </ExternalFooterLink>
             <ExternalFooterLink
               href="https://opensource.appbase.io/mirage/"
               target="_blank"
               rel="noopener">
-              Mirage
-            </ExternalFooterLink>
-            <ExternalFooterLink
-              href="https://opensource.appbase.io/gem/"
-              target="_blank"
-              rel="noopener">
-              Gem
+              GUI Query Builder
             </ExternalFooterLink>
           </FooterNav>
           <FooterNav layoutHasSidebar={layoutHasSidebar}>
@@ -106,13 +100,25 @@ const Footer = ({layoutHasSidebar = false}) => (
               href="https://medium.appbase.io/"
               target="_blank"
               rel="noopener">
-              Blog
+              Medium Publication
             </ExternalFooterLink>
             <ExternalFooterLink
-              href="https://github.com/appbaseio"
+              href="http://docs.appbase.io/"
               target="_blank"
               rel="noopener">
-              GitHub
+              Appbaseio Docs
+            </ExternalFooterLink>
+            <ExternalFooterLink
+              href="https://gitter.im/appbaseio/reactivesearch"
+              target="_blank"
+              rel="noopener">
+              Gitter
+            </ExternalFooterLink>
+            <ExternalFooterLink
+              href="mailto:support@appbase.io"
+              target="_blank"
+              rel="noopener">
+              Support Email
             </ExternalFooterLink>
           </FooterNav>
         </div>
