@@ -9,7 +9,7 @@ redirect_from:
     - "docs/basic-components"
     - "reactive-manual/docs"
     - "reactive-manual/docs/basic-components"
-next: togglebutton.html
+next: docs/basic-components/togglebutton.html
 nextTitle: "ToggleButton"
 ---
 

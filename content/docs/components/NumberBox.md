@@ -4,9 +4,9 @@ title: "NumberBox"
 layout: docs
 sectionid: docs
 permalink: docs/basic-components/numberbox.html
-prev: rangeslider.html
+prev: docs/basic-components/rangeslider.html
 prevTitle: "RangeSlider"
-next: datasearch.html
+next: docs/basic-components/datasearch.html
 nextTitle: "DataSearch"
 ---
 

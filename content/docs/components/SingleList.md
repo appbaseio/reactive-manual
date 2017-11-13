@@ -4,9 +4,9 @@ title: "SingleList"
 layout: docs
 sectionid: docs
 permalink: docs/basic-components/singlelist.html
-prev: togglebutton.html
+prev: docs/basic-components/togglebutton.html
 prevTitle: "ToggleButton"
-next: multilist.html
+next: docs/basic-components/multilist.html
 nextTitle: "MultiList"
 ---
 

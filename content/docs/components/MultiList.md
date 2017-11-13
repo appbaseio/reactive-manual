@@ -4,9 +4,9 @@ title: "MultiList"
 layout: docs
 sectionid: docs
 permalink: docs/basic-components/multilist.html
-prev: singlelist.html
+prev: docs/basic-components/singlelist.html
 prevTitle: "SingleList"
-next: singlerange.html
+next: docs/basic-components/singlerange.html
 nextTitle: "SingleRange"
 ---
 

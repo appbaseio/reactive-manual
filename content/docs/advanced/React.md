@@ -4,9 +4,9 @@ title: "React"
 layout: docs
 sectionid: docs
 permalink: docs/advanced/react.html
-prev: customquery.html
+prev: docs/advanced/customquery.html
 prevTitle: "Defining Custom Queries"
-next: mapping.html
+next: docs/advanced/mapping.html
 nextTitle: "Data Mappings"
 ---
 

@@ -83,10 +83,6 @@ NavigationFooter.propTypes = {
 export default NavigationFooter;
 
 const PrimaryLink = ({children, to, location}) => {
-  // quick fix
-  // TODO: replace this with better method of getting correct full url
-  const updatedUrl =
-    (location && location.pathname.replace(/\/[^/]+\.html/, '/' + to)) || to;
   return (
     <Link
       css={{
@@ -108,7 +104,7 @@ const PrimaryLink = ({children, to, location}) => {
           borderColor: colors.white,
         },
       }}
-      to={updatedUrl}>
+      to={to}>
       {children}
     </Link>
   );

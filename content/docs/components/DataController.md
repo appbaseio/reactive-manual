@@ -4,9 +4,9 @@ title: "DataController"
 layout: docs
 sectionid: docs
 permalink: docs/basic-components/datacontroller.html
-prev: daterange.html
+prev: docs/basic-components/daterange.html
 prevTitle: "DateRange"
-next: reactivelist.html
+next: docs/basic-components/reactivelist.html
 nextTitle: "ReactiveList"
 ---
 

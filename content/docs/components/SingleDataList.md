@@ -4,9 +4,9 @@ title: "SingleDataList"
 layout: docs
 sectionid: docs
 permalink: docs/basic-components/singledatalist.html
-prev: reactiveelement.html
+prev: docs/basic-components/reactiveelement.html
 prevTitle: "ReactiveElement"
-next: multidatalist.html
+next: docs/basic-components/multidatalist.html
 nextTitle: "MultiDataList"
 ---
 

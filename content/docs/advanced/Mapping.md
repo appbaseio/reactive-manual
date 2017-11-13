@@ -4,9 +4,9 @@ title: "Elasticsearch Mapping"
 layout: docs
 sectionid: docs
 permalink: docs/advanced/mapping.html
-prev: react.html
+prev: docs/advanced/react.html
 prevTitle: "Reactive Chaining"
-next: styleguide.html
+next: docs/advanced/styleguide.html
 nextTitle: "Style Guide"
 ---
 

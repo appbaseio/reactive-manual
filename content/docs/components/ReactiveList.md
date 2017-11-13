@@ -4,9 +4,9 @@ title: "ReactiveList"
 layout: docs
 sectionid: docs
 permalink: docs/basic-components/reactivelist.html
-prev: datacontroller.html
+prev: docs/basic-components/datacontroller.html
 prevTitle: "DataController"
-next: reactiveelement.html
+next: docs/basic-components/reactiveelement.html
 nextTitle: "ReactiveElement"
 ---
 

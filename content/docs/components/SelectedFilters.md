@@ -4,7 +4,7 @@ title: "SelectedFilters"
 layout: docs
 sectionid: docs
 permalink: docs/basic-components/selectedfilters.html
-prev: multidropdownrange.html
+prev: docs/basic-components/multidropdownrange.html
 prevTitle: "MultiDropdownRange"
 ---
 

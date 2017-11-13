@@ -4,9 +4,9 @@ title: "MultiDropdownRange"
 layout: docs
 sectionid: docs
 permalink: docs/basic-components/multidropdownrange.html
-prev: singledropdownrange.html
+prev: docs/basic-components/singledropdownrange.html
 prevTitle: "SingleDropdownRange"
-next: selectedfilters.html
+next: docs/basic-components/selectedfilters.html
 nextTitle: "SelectedFilters"
 ---
 

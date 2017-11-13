@@ -4,9 +4,9 @@ title: "MultiDataList"
 layout: docs
 sectionid: docs
 permalink: docs/basic-components/multidatalist.html
-prev: singledatalist.html
+prev: docs/basic-components/singledatalist.html
 prevTitle: "SingleDataList"
-next: singledropdownlist.html
+next: docs/basic-components/singledropdownlist.html
 nextTitle: "SingleDropdownList"
 ---
 

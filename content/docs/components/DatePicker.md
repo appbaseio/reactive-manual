@@ -4,9 +4,9 @@ title: "DatePicker"
 layout: docs
 sectionid: docs
 permalink: docs/basic-components/datepicker.html
-prev: datasearch.html
+prev: docs/basic-components/datasearch.html
 prevTitle: "DataSearch"
-next: daterange.html
+next: docs/basic-components/daterange.html
 nextTitle: "DateRange"
 ---
 

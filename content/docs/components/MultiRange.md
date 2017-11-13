@@ -4,9 +4,9 @@ title: "MultiRange"
 layout: docs
 sectionid: docs
 permalink: docs/basic-components/multirange.html
-prev: singlerange.html
+prev: docs/basic-components/singlerange.html
 prevTitle: "SingleRange"
-next: rangeslider.html
+next: docs/basic-components/rangeslider.html
 nextTitle: "RangeSlider"
 ---
 

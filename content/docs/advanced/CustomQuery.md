@@ -4,7 +4,7 @@ title: "Custom Queries"
 layout: docs
 sectionid: docs
 permalink: docs/advanced/customquery.html
-next: react.html
+next: docs/advanced/react.html
 nextTitle: "Reactive Chaining"
 redirect_from:
     - "docs/advanced"

@@ -4,9 +4,9 @@ title: "SingleRange"
 layout: docs
 sectionid: docs
 permalink: docs/basic-components/singlerange.html
-prev: multilist.html
+prev: docs/basic-components/multilist.html
 prevTitle: "MultiList"
-next: multirange.html
+next: docs/basic-components/multirange.html
 nextTitle: "MultiRange"
 ---
 

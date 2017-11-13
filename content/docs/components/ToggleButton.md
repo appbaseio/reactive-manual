@@ -4,9 +4,9 @@ title: "ToggleButton"
 layout: docs
 sectionid: docs
 permalink: docs/basic-components/togglebutton.html
-prev: textfield.html
+prev: docs/basic-components/textfield.html
 prevTitle: "TextField"
-next: singlelist.html
+next: docs/basic-components/singlelist.html
 nextTitle: "SingleList"
 ---
 

@@ -4,9 +4,9 @@ title: "DataSearch"
 layout: docs
 sectionid: docs
 permalink: docs/basic-components/datasearch.html
-prev: numberbox.html
+prev: docs/basic-components/numberbox.html
 prevTitle: "NumberBox"
-next: datepicker.html
+next: docs/basic-components/datepicker.html
 nextTitle: "DatePicker"
 ---
 

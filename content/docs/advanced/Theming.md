@@ -4,7 +4,7 @@ title: "Theming"
 layout: docs
 sectionid: docs
 permalink: docs/advanced/theming.html
-prev: styleguide.html
+prev: docs/advanced/styleguide.html
 prevTitle: "Style Guide"
 ---
 

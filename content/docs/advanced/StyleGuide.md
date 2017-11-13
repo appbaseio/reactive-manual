@@ -4,9 +4,9 @@ title: "Style Guide"
 layout: docs
 sectionid: docs
 permalink: docs/advanced/styleguide.html
-prev: mapping.html
+prev: docs/advanced/mapping.html
 prevTitle: "Data Mappings"
-next: theming.html
+next: docs/advanced/theming.html
 nextTitle: "Theming"
 ---
 
