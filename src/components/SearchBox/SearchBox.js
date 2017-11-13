@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Autosuggest from 'react-autosuggest';
-import {Search} from 'js-search';
+import * as JsSearch from 'js-search';
 import {navigateTo} from 'gatsby-link';
 
 import data from 'data/search.index.json';
@@ -10,7 +10,10 @@ import Flex from 'components/Flex';
 import { nav } from 'utils/sectionList';
 import './styles.css';
 
-const search = new Search('url');
+const search = new JsSearch.Search('url');
+search.tokenizer =
+new JsSearch.StopWordsTokenizer(
+    new JsSearch.SimpleTokenizer());
 search.addIndex('title');
 search.addIndex('heading');
 search.addIndex('tokens');
