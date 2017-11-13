@@ -8,6 +8,7 @@ next: react.html
 nextTitle: "Reactive Chaining"
 redirect_from:
     - "docs/advanced"
+    - "reactive-manual/docs/advanced"
 ---
 
 ### Data Aware UI components

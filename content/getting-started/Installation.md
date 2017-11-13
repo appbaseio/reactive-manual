@@ -8,6 +8,7 @@ next: start.html
 nextTitle: "ReactiveMaps Getting Started"
 redirect_from:
     - "getting-started"
+    - "reactive-manual/getting-started"
 ---
 
 ### Step 1: Install reactivemaps via NPM

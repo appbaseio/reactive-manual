@@ -8,6 +8,7 @@ next: multilevelmenu.html
 nextTitle: "MultiLevelMenu"
 redirect_from:
     - "docs/search-components"
+    - "reactive-manual/docs/search-components"
 ---
 
 ![Image to be displayed](https://i.imgur.com/wRErIC9.png)

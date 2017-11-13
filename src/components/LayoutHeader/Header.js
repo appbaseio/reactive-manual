@@ -88,7 +88,7 @@ class Header extends Component {
               to="/">
               <img
                 src={logoSvg}
-                alt="Reactive Manual Logo"
+                alt="Logo"
                 css={{
                   marginBottom: 10,
                   height: 40,
@@ -171,7 +171,7 @@ class Header extends Component {
                 to="/docs/advanced"
               />
             </nav>
-            {location.pathname !== '/' && !this.state.showSearch && (
+            {(location.pathname !== '/' || location.pathname !== '/reactive-manual/') && !this.state.showSearch && (
               <div onClick={this.toggleSearch} role="button" tabIndex="0" css={{ cursor: 'pointer' }}>
                 <SearchSvg />
               </div>

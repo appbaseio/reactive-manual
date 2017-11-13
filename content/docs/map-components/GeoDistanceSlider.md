@@ -8,6 +8,7 @@ next: geodistancedropdown.html
 nextTitle: "GeoDistanceDropdown"
 redirect_from:
     - "docs/map-components"
+    - "reactive-manual/docs/map-components"
 ---
 
 ![Image to be displayed](
