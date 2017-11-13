@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title:
       'Reactive Manual: Data-driven components for building Maps and Search UIs',
-    siteUrl: 'https://divyanshu013.github.io/reactive-manual-new',
+    siteUrl: 'https://github.com/appbaseio/reactive-manual',
     rssFeedTitle: 'Reactive Manual',
     rssFeedDescription:
       'Data-driven components for building Maps and Search UIs',
