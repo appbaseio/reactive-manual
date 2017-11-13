@@ -83,6 +83,12 @@ NavigationFooter.propTypes = {
 export default NavigationFooter;
 
 const PrimaryLink = ({children, to, location}) => {
+  let url = to;
+  if (location.pathname.match(
+    /^\/reactive-manual/,
+  )) {
+    url = `/${to}`;
+  }
   return (
     <Link
       css={{
@@ -104,7 +110,7 @@ const PrimaryLink = ({children, to, location}) => {
           borderColor: colors.white,
         },
       }}
-      to={to}>
+      to={url}>
       {children}
     </Link>
   );

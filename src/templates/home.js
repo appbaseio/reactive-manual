@@ -196,7 +196,6 @@ const markdownStyles = {
     [media.lessThan('medium')]: {
       marginTop: 0,
       marginBottom: 0,
-      overflowX: 'auto',
       paddingTop: 30,
       WebkitOverflowScrolling: 'touch',
       position: 'relative',
@@ -215,9 +214,10 @@ const markdownStyles = {
   '& .marketing-row': {
     display: 'flex',
     flexDirection: 'row',
-
+    
     [media.lessThan('medium')]: {
-      display: 'block',
+      paddingLeft: 10,
+      flexDirection: 'column',
       whiteSpace: 'nowrap',
     },
   },
