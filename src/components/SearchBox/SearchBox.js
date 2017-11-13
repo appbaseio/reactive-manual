@@ -4,7 +4,7 @@ import {Search} from 'js-search';
 import {navigateTo} from 'gatsby-link';
 
 import data from 'data/search.index.json';
-import {colors} from 'theme';
+import {colors, media} from 'theme';
 import Flex from 'components/Flex';
 
 import { nav } from 'utils/sectionList';
@@ -73,6 +73,10 @@ const renderSuggestion = suggestion => (
         paddingLeft: 5,
         color: colors.darker,
         flexShrink: 0,
+
+        [media.lessThan('small')]: {
+          display: 'none',
+        },
       }}
     >
       {getSection(suggestion.title)}
@@ -120,6 +124,11 @@ class SearchBox extends Component {
       value,
       onChange: this.onChange,
       autoFocus: true,
+      onBlur: () => {
+        if (this.props.handleBlur) {
+          this.props.handleBlur();
+        }
+      },
     };
 
     // Finally, render it!

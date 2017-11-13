@@ -98,20 +98,23 @@ class Header extends Component {
                   },
                 }}
               />
-              <span
-                css={{
-                  color: 'inherit',
-                  marginLeft: 10,
-                  fontWeight: 700,
-                  fontSize: 20,
-                  lineHeight: '20px',
-                  [media.lessThan('large')]: {
-                    fontSize: 16,
-                    marginTop: 1,
-                  },
-                }}>
-                Reactive Manual
-              </span>
+              {
+                !this.state.showSearch &&
+                <span
+                  css={{
+                    color: 'inherit',
+                    marginLeft: 10,
+                    fontWeight: 700,
+                    fontSize: 20,
+                    lineHeight: '20px',
+                    [media.lessThan('large')]: {
+                      fontSize: 16,
+                      marginTop: 1,
+                    },
+                  }}>
+                  Reactive Manual
+                </span>
+              }
             </Link>
 
             <nav
@@ -168,56 +171,27 @@ class Header extends Component {
                 to="/docs/advanced"
               />
             </nav>
-            {location.pathname !== '/' && (
+            {location.pathname !== '/' && !this.state.showSearch && (
               <div onClick={this.toggleSearch} role="button" tabIndex="0" css={{ cursor: 'pointer' }}>
                 <SearchSvg />
               </div>
             )}
+            {
+              this.state.showSearch &&
+              <div
+                css={{
+                  display: 'flex',
+                  justifyContent: 'flex-end',
+                  [media.lessThan('small')]: {
+                    width: '100%',
+                  },
+                }}
+              >
+                <SearchBox handleBlur={this.toggleSearch} />
+              </div>
+            }
           </div>
         </Container>
-        {this.state.showSearch && (
-          <div
-            css={{
-              position: 'absolute',
-              display: 'flex',
-              justifyContent: 'center',
-              color: 'black',
-              height: '100vh',
-              width: '100%',
-              background: colors.blurred,
-            }}>
-            <div
-              css={{
-                paddingTop: 80,
-              }}>
-              <SearchBox />
-            </div>
-            <i
-              className="fa fa-times"
-              css={{
-                color: colors.white,
-                fontSize: '3em',
-                cursor: 'pointer',
-                position: 'absolute',
-                textAlign: 'right',
-                paddingRight: 20,
-                paddingTop: 20,
-                width: '100%',
-
-                [media.greaterThan('medium')]: {
-                  width: '90%',
-                },
-          
-                [media.size('xxlarge')]: {
-                  maxWidth: 1260,
-                },
-              }}
-              onClick={this.toggleSearch}
-              role="button"
-              tabIndex="0"
-            />
-          </div>
-        )}
       </header>
     );
   }

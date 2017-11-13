@@ -54,3 +54,33 @@
 .react-autosuggest__suggestion--highlighted {
     background-color: #ddd;
 }
+
+@media all and (max-width: 1279px) {
+    .react-autosuggest__input {
+        height: 40px;
+    }
+
+    .react-autosuggest__suggestions-container--open {
+        top: 41px;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .react-autosuggest__input {
+        height: 35px;
+    }
+
+    .react-autosuggest__suggestions-container--open {
+        top: 36px;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .react-autosuggest__input {
+        width: 100%;
+    }
+
+    .react-autosuggest__suggestions-container--open {
+        width: 100%;
+    }
+}
