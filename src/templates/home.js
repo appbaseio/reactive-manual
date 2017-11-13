@@ -10,7 +10,7 @@ import createOgUrl from 'utils/createOgUrl';
 
 class Home extends Component {
   render() {
-    const {data} = this.props;
+    const {data, location} = this.props;
     const title =
       'Reactive Manual - Data-driven components for building Maps and Search UIs';
 
@@ -91,7 +91,7 @@ class Home extends Component {
                   },
                 }}
               >
-                <SearchBox />
+                <SearchBox prefixSlash={location.pathname.includes('/reactive-manual/')} />
               </Flex>
               <Flex
                 valign="center"
@@ -103,7 +103,7 @@ class Home extends Component {
                   },
                 }}>
                 <CtaItem>
-                  <ButtonLink to="/docs" type="primary">
+                  <ButtonLink to="/docs/basic-components/textfield.html" type="primary">
                     Docs
                   </ButtonLink>
                 </CtaItem>

@@ -112,7 +112,8 @@ class SearchBox extends Component {
   };
 
   onSuggestionSelected = (e, {suggestion}) => {
-    navigateTo(suggestion.url);
+    const prefix = this.props.prefixSlash ? '/' : '';
+    navigateTo(prefix + suggestion.url);
   };
 
   render() {
@@ -145,5 +146,9 @@ class SearchBox extends Component {
     );
   }
 }
+
+SearchBox.defaultProps = {
+  prefixSlash: false,
+};
 
 export default SearchBox;
