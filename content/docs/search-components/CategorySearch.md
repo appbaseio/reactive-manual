@@ -4,7 +4,7 @@ title: "CategorySearch"
 layout: docs
 sectionid: docs
 permalink: docs/search-components/categorysearch.html
-next: multilevelmenu.html
+next: docs/search-components/multilevelmenu.html
 nextTitle: "MultiLevelMenu"
 redirect_from:
     - "docs/search-components"

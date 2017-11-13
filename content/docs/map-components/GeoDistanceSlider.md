@@ -4,7 +4,7 @@ title: "GeoDistanceSlider"
 layout: docs
 sectionid: docs
 permalink: docs/map-components/geodistanceslider.html
-next: geodistancedropdown.html
+next: docs/map-components/geodistancedropdown.html
 nextTitle: "GeoDistanceDropdown"
 redirect_from:
     - "docs/map-components"

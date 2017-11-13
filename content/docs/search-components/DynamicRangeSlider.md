@@ -4,9 +4,9 @@ title: "DynamicRangeSlider"
 layout: docs
 sectionid: docs
 permalink: docs/search-components/dynamicrangeslider.html
-prev: multilevelmenu.html
+prev: docs/search-components/multilevelmenu.html
 prevTitle: "MultiLevelMenu"
-next: ratingsfilter.html
+next: docs/search-components/ratingsfilter.html
 nextTitle: "RatingsFilter"
 ---
 

@@ -4,9 +4,9 @@ title: "GeoDistanceDropdown"
 layout: docs
 sectionid: docs
 permalink: docs/map-components/geodistancedropdown.html
-prev: geodistanceslider.html
+prev: docs/map-components/geodistanceslider.html
 prevTitle: "GeoDistanceSlider"
-next: placessearch.html
+next: docs/map-components/placessearch.html
 nextTitle: "PlacesSearch"
 ---
 

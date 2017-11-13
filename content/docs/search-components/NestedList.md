@@ -4,9 +4,9 @@ title: "NestedList"
 layout: docs
 sectionid: docs
 permalink: docs/search-components/nestedlist.html
-prev: tagcloud.html
+prev: docs/search-components/tagcloud.html
 prevTitle: "TagCloud"
-next: nestedmultilist.html
+next: docs/search-components/nestedmultilist.html
 nextTitle: "NestedMultiList"
 ---
 

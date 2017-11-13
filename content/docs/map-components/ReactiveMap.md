@@ -4,7 +4,7 @@ title: "ReactiveMap"
 layout: docs
 sectionid: docs
 permalink: docs/map-components/reactivemap.html
-prev: placessearch.html
+prev: docs/map-components/placessearch.html
 prevTitle: "PlacesSearch"
 ---
 

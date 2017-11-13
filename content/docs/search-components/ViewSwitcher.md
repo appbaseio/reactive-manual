@@ -4,7 +4,7 @@ title: "ViewSwitcher"
 layout: docs
 sectionid: docs
 permalink: docs/search-components/viewswitcher.html
-prev: resultlist.html
+prev: docs/search-components/resultlist.html
 prevTitle: "ResultList"
 ---
 

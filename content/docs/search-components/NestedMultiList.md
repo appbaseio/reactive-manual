@@ -4,9 +4,9 @@ title: "NestedMultiList"
 layout: docs
 sectionid: docs
 permalink: docs/search-components/nestedmultilist.html
-prev: nestedlist.html
+prev: docs/search-components/nestedlist.html
 prevTitle: "NestedList"
-next: resultcard.html
+next: docs/search-components/resultcard.html
 nextTitle: "ResultCard"
 ---
 

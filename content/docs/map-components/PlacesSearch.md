@@ -4,9 +4,9 @@ title: "PlacesSearch"
 layout: docs
 sectionid: docs
 permalink: docs/map-components/placessearch.html
-prev: geodistancedropdown.html
+prev: docs/map-components/geodistancedropdown.html
 prevTitle: "GeoDistanceDropdown"
-next: reactivemap.html
+next: docs/map-components/reactivemap.html
 nextTitle: "ReactiveMap"
 ---
 

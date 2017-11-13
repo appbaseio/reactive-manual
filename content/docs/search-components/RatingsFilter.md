@@ -4,9 +4,9 @@ title: "RatingsFilter"
 layout: docs
 sectionid: docs
 permalink: docs/search-components/ratingsfilter.html
-prev: dynamicrangeslider.html
+prev: docs/search-components/dynamicrangeslider.html
 prevTitle: "DynamicRangeSlider"
-next: tagcloud.html
+next: docs/search-components/tagcloud.html
 nextTitle: "TagCloud"
 ---
 

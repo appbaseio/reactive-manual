@@ -4,9 +4,9 @@ title: "MultiLevelMenu"
 layout: docs
 sectionid: docs
 permalink: docs/search-components/multilevelmenu.html
-prev: categorysearch.html
+prev: docs/search-components/categorysearch.html
 prevTitle: "CategorySearch"
-next: dynamicrangeslider.html
+next: docs/search-components/dynamicrangeslider.html
 nextTitle: "DynamicRangeSlider"
 ---
 

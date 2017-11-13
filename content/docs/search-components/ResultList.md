@@ -4,9 +4,9 @@ title: "ResultList"
 layout: docs
 sectionid: docs
 permalink: docs/search-components/resultlist.html
-prev: resultcard.html
+prev: docs/search-components/resultcard.html
 prevTitle: "ResultCard"
-next: viewswitcher.html
+next: docs/search-components/viewswitcher.html
 nextTitle: "ViewSwitcher"
 ---
 

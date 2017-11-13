@@ -4,9 +4,9 @@ title: "TagCloud"
 layout: docs
 sectionid: docs
 permalink: docs/search-components/tagcloud.html
-prev: ratingsfilter.html
+prev: docs/search-components/ratingsfilter.html
 prevTitle: "RatingsFilter"
-next: nestedlist.html
+next: docs/search-components/nestedlist.html
 nextTitle: "NestedList"
 ---
 
