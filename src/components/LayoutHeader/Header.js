@@ -43,7 +43,7 @@ class Header extends Component {
       <header
         onKeyDown={this.handleKeyDown}
         css={{
-          backgroundColor: colors.darker,
+          backgroundColor: colors.blueDark,
           color: colors.white,
           position: 'fixed',
           zIndex: 1,
@@ -90,6 +90,7 @@ class Header extends Component {
                 src={logoSvg}
                 alt="Reactive Manual Logo"
                 css={{
+                  marginBottom: 10,
                   height: 40,
 
                   [media.lessThan('small')]: {

@@ -6,7 +6,7 @@ const MarkdownHeader = ({title}: {title: string}) => (
   <Flex type="header" halign="space-between" valign="baseline">
     <h1
       css={{
-        color: colors.dark,
+        color: colors.blueDark,
         marginBottom: 0,
         marginTop: 40,
         ...fonts.header,

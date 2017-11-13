@@ -119,6 +119,7 @@ class SearchBox extends Component {
       placeholder: 'Search Docs',
       value,
       onChange: this.onChange,
+      autoFocus: true,
     };
 
     // Finally, render it!
