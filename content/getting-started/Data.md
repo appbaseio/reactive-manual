@@ -1,6 +1,6 @@
 ---
 id: data
-title: "Using Your Data"
+title: "Importing Data"
 layout: tutorial
 sectionid: getting-started
 permalink: getting-started/data.html

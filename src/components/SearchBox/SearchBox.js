@@ -76,6 +76,7 @@ const renderSuggestion = suggestion => (
         paddingLeft: 5,
         color: colors.darker,
         flexShrink: 0,
+        flexBasis: 100,
 
         [media.lessThan('small')]: {
           display: 'none',

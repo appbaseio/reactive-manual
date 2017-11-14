@@ -35,7 +35,7 @@ css.global(
     height: 'auto !important',
     margin: '1rem',
     fontSize: 16,
-    lineHeight: '21px',
+    lineHeight: '26px',
     whiteSpace: 'pre-wrap',
     wordBreak: 'break-word',
   },

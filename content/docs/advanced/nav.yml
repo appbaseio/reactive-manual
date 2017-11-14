@@ -1,7 +1,7 @@
 - title: Advanced
   items:
     - id: customquery
-      title: Defining Custom Queries
+      title: Custom Queries
       href: /advanced/customquery.html
       forceInternal: true
       subitems:
@@ -35,7 +35,7 @@
           href: /advanced/react.html#props
           forceInternal: true
     - id: mapping
-      title: Data Mappings
+      title: Elasticsearch Mapping
       href: /advanced/mapping.html
       forceInternal: true
     - id: styleguide

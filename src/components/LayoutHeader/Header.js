@@ -46,7 +46,7 @@ class Header extends Component {
           backgroundColor: colors.blueDark,
           color: colors.white,
           position: 'fixed',
-          zIndex: 1,
+          zIndex: (location.pathname !== '/' && location.pathname !== '/reactive-manual/') ? 1 : 3,
           width: '100%',
           top: 0,
           left: 0,

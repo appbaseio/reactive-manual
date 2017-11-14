@@ -16,8 +16,9 @@ id: home
       <p>It fits in perfectly with <b>ReactiveSearch</b> for building a variety of search experiences.</p>
     </div>
     <div class="marketing-col">
-      <h3>Native Components</h3>
-      <p><b>ReactiveSearch</b> now also provides <a href="https://facebook.github.io/react-native/">React Native</a> components.</p>
+      <h3>Appbase.io</h3>
+      <p><a href="https://appbase.io/">Appbase.io</a> is a hosted API for consuming, querying and subscribing to streaming and historical data. The API is Elasticsearch Query DSL compatible.</p>
+      <p>Find more about it in the <a href="http://docs.appbase.io/">docs</a>.</p>
     </div>
   </div>
 </section>

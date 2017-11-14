@@ -1,6 +1,6 @@
 ---
 id: componentsindex
-title: "Components Index"
+title: "Components Overview"
 layout: tutorial
 sectionid: getting-started
 permalink: getting-started/componentsindex.html
