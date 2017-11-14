@@ -85,7 +85,7 @@ class Home extends Component {
                 halign="center"
                 css={{
                   paddingTop: 40,
-                  
+
                   [media.greaterThan('xlarge')]: {
                     paddingTop: 65,
                   },
@@ -97,7 +97,7 @@ class Home extends Component {
                 valign="center"
                 css={{
                   paddingTop: 40,
-                  
+
                   [media.greaterThan('xlarge')]: {
                     paddingTop: 65,
                   },
@@ -109,7 +109,7 @@ class Home extends Component {
                 </CtaItem>
                 <CtaItem>
                   <ButtonLink
-                    to="/getting-started/rsinstallation.html"
+                    to="/getting-started/install.html"
                     type="secondary">
                     Getting Started
                   </ButtonLink>
@@ -214,7 +214,7 @@ const markdownStyles = {
   '& .marketing-row': {
     display: 'flex',
     flexDirection: 'row',
-    
+
     [media.lessThan('medium')]: {
       paddingLeft: 10,
       flexDirection: 'column',

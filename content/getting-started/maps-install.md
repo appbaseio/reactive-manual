@@ -1,12 +1,12 @@
 ---
-id: installation
+id: maps-installation
 title: "ReactiveMaps Installation"
 layout: tutorial
 sectionid: getting-started
-permalink: getting-started/installation.html
-next: getting-started/start.html
+permalink: getting-started/maps-install.html
+next: getting-started/maps-start.html
 nextTitle: "ReactiveMaps Getting Started"
-prev: getting-started/rsstart.html
+prev: getting-started/start.html
 prevTitle: "ReactiveSearch Getting Started"
 ---
 

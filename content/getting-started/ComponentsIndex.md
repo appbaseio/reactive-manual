@@ -23,7 +23,7 @@ Components are divided into four broad categories:
 > <i class="fa fa-info-circle"></i> Note
 >
 > **ReactiveSearch** library is currently the superset library which comes with all of the above components (including the map components). We recommend using that for the general use.  
-`npm -i @appbaseio/reactivesearch` (or read more on [how to install](/getting-started/rsinstallation.html))
+`npm -i @appbaseio/reactivesearch` (or read more on [how to install](/getting-started/install.html))
 
 ## 1. Basic Components
 

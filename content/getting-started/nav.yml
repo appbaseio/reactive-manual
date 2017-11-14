@@ -1,49 +1,20 @@
 - title: Getting Started
   items:
-    - id: rsinstallation
+    - id: install
       title: ReactiveSearch Installation
-      href: /getting-started/rsinstallation.html
+      href: /getting-started/install.html
       forceInternal: true
       subitems:
         - id: step-1-install-reactivesearch-via-npm
           title: Install reactivesearch via NPM
-          href: /getting-started/rsinstallation.html#step-1-install-reactivesearch-via-npm
+          href: /getting-started/install.html#step-1-install-reactivesearch-via-npm
           forceInternal: true
         - id: step-2-add-reactivesearchs-style-file
           title: Add ReactiveSearch’s style file
-          href: /getting-started/rsinstallation.html#step-2-add-reactivesearchs-style-file
-          forceInternal: true
-    - id: rsstart
-      title: ReactiveSearch Getting Started
-      href: /getting-started/rsstart.html
-      forceInternal: true
-      subitems:
-        - id: installation-recap
-          title: Installation Recap
-          href: /getting-started/rsstart.html#installation-recap
-          forceInternal: true
-        - id: creating-an-app
-          title: Creating an App
-          href: /getting-started/rsstart.html#creating-an-app
-    - id: installation
-      title: ReactiveMaps Installation
-      href: /getting-started/installation.html
-      forceInternal: true
-      subitems:
-        - id: step-1-install-reactivemaps-via-npm
-          title: Install reactivemaps via NPM
-          href: /getting-started/installation.html#step-1-install-reactivemaps-via-npm
-          forceInternal: true
-        - id: step-2-add-google-maps-js-lib
-          title: Add Google Maps JS lib
-          href: /getting-started/installation.html#step-2-add-google-maps-js-lib
-          forceInternal: true
-        - id: step-3-add-reactivemaps-style-file
-          title: Add ReactiveMap’s style file
-          href: /getting-started/installation.html#step-3-add-reactivemaps-style-file
+          href: /getting-started/install.html#step-2-add-reactivesearchs-style-file
           forceInternal: true
     - id: start
-      title: ReactiveMaps Getting Started
+      title: ReactiveSearch Getting Started
       href: /getting-started/start.html
       forceInternal: true
       subitems:
@@ -54,6 +25,35 @@
         - id: creating-an-app
           title: Creating an App
           href: /getting-started/start.html#creating-an-app
+    - id: maps-install
+      title: ReactiveMaps Installation
+      href: /getting-started/maps-install.html
+      forceInternal: true
+      subitems:
+        - id: step-1-install-reactivemaps-via-npm
+          title: Install reactivemaps via NPM
+          href: /getting-started/maps-install.html#step-1-install-reactivemaps-via-npm
+          forceInternal: true
+        - id: step-2-add-google-maps-js-lib
+          title: Add Google Maps JS lib
+          href: /getting-started/maps-install.html#step-2-add-google-maps-js-lib
+          forceInternal: true
+        - id: step-3-add-reactivemaps-style-file
+          title: Add ReactiveMap’s style file
+          href: /getting-started/maps-install.html#step-3-add-reactivemaps-style-file
+          forceInternal: true
+    - id: maps-start
+      title: ReactiveMaps Getting Started
+      href: /getting-started/maps-start.html
+      forceInternal: true
+      subitems:
+        - id: installation-recap
+          title: Installation Recap
+          href: /getting-started/maps-start.html#installation-recap
+          forceInternal: true
+        - id: creating-an-app
+          title: Creating an App
+          href: /getting-started/maps-start.html#creating-an-app
           forceInternal: true
     - id: data
       title: Importing Data

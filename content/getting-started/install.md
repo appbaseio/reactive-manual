@@ -1,10 +1,10 @@
 ---
-id: rsinstallation
+id: installation
 title: "ReactiveSearch Installation"
 layout: tutorial
 sectionid: getting-started
-permalink: getting-started/rsinstallation.html
-next: getting-started/rsstart.html
+permalink: getting-started/install.html
+next: getting-started/start.html
 nextTitle: "ReactiveSearch Getting Started"
 redirect_from:
     - "getting-started/"
