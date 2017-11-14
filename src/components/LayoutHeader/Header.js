@@ -153,26 +153,26 @@ class Header extends Component {
               <HeaderLink
                 isActive={location.pathname.includes('/basic-components/')}
                 title="Basic Components"
-                to="/docs/basic-components/textfield.html"
+                to="/basic-components/textfield.html"
               />
               <HeaderLink
                 isActive={location.pathname.includes('/map-components/')}
                 title="Map Components"
-                to="/docs/map-components/geodistanceslider.html"
+                to="/map-components/geodistanceslider.html"
               />
               <HeaderLink
                 isActive={location.pathname.includes('/search-components/')}
                 title="Search Components"
-                to="/docs/search-components/categorysearch.html"
+                to="/search-components/categorysearch.html"
               />
               <HeaderLink
                 isActive={location.pathname.includes('/advanced/')}
                 title="Advanced"
-                to="/docs/advanced/customquery.html"
+                to="/advanced/customquery.html"
               />
             </nav>
             {location.pathname !== '/' && location.pathname !== '/reactive-manual/' && !this.state.showSearch && (
-              <div onClick={this.toggleSearch} role="button" tabIndex="0" css={{ cursor: 'pointer' }}>
+              <div onClick={this.toggleSearch} role="button" tabIndex="0" css={{ cursor: 'pointer', paddingLeft: 10 }}>
                 <SearchSvg />
               </div>
             )}

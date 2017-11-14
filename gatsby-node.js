@@ -66,6 +66,10 @@ exports.createPages = async ({graphql, boundActionCreators}) => {
       slug.includes('contributing/') ||
       slug.includes('docs/') ||
       slug.includes('getting-started/') ||
+      slug.includes('basic-components/') ||
+      slug.includes('search-components/') ||
+      slug.includes('map-components/') ||
+      slug.includes('advanced/') ||
       slug.includes('warnings/')
     ) {
       let template;
@@ -76,6 +80,10 @@ exports.createPages = async ({graphql, boundActionCreators}) => {
       } else if (
         slug.includes('contributing/') ||
         slug.includes('docs/') ||
+        slug.includes('basic-components/') ||
+        slug.includes('search-components/') ||
+        slug.includes('map-components/') ||
+        slug.includes('advanced/') ||
         slug.includes('warnings/')
       ) {
         template = docsTemplate;

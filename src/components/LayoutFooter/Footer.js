@@ -45,16 +45,16 @@ const Footer = ({layoutHasSidebar = false}) => (
           <FooterNav layoutHasSidebar={layoutHasSidebar}>
             <MetaTitle onDark={true}>Docs</MetaTitle>
             <FooterLink to="/getting-started/rsinstallation.html">Quick Start</FooterLink>
-            <FooterLink to="/docs/basic-components/textfield.html">
+            <FooterLink to="/basic-components/textfield.html">
               Basic Components
             </FooterLink>
-            <FooterLink to="/docs/map-components/geodistanceslider.html">
+            <FooterLink to="/map-components/geodistanceslider.html">
               Map Components
             </FooterLink>
-            <FooterLink to="/docs/search-components/categorysearch.html">
+            <FooterLink to="/search-components/categorysearch.html">
               Search Components
             </FooterLink>
-            <FooterLink to="/docs/advanced/customquery.html">
+            <FooterLink to="/advanced/customquery.html">
               Advanced
             </FooterLink>
           </FooterNav>

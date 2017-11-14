@@ -103,7 +103,7 @@ class Home extends Component {
                   },
                 }}>
                 <CtaItem>
-                  <ButtonLink to="/docs/basic-components/textfield.html" type="primary">
+                  <ButtonLink to="/basic-components/textfield.html" type="primary">
                     Docs
                   </ButtonLink>
                 </CtaItem>
