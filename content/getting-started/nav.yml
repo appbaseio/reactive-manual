@@ -77,7 +77,7 @@
           href: /getting-started/data.html#data-mapping
           forceInternal: true
     - id: reactivebase
-      title: Base Component
+      title: ReactiveBase
       href: /getting-started/reactivebase.html
       forceInternal: true
       subitems:
@@ -115,7 +115,7 @@
           href: /getting-started/componentsindex.html#4-result-components
           forceInternal: true
     - id: writingdata
-      title: Writing Data
+      title: Writing and Editing Data
       href: /getting-started/writingdata.html
       forceInternal: true
       subitems:

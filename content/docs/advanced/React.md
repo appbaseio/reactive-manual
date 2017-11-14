@@ -1,6 +1,6 @@
 ---
 id: react
-title: "React"
+title: "Reactive Chaining"
 layout: docs
 sectionid: docs
 permalink: advanced/react.html
