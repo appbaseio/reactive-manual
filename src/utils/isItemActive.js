@@ -10,7 +10,7 @@ const isItemActive = (location, item) => {
     if (
       item.subitems &&
       item.subitems.length &&
-      item.href === location.pathname
+      location.pathname.includes(item.href)
     ) {
       return item.subitems.some(
         subitem => location.hash === toAnchor(subitem.href),
