@@ -6,6 +6,9 @@ sectionid: getting-started
 permalink: getting-started/rsinstallation.html
 next: getting-started/rsstart.html
 nextTitle: "ReactiveSearch Getting Started"
+redirect_from:
+    - "getting-started/"
+    - "reactive-manual/getting-started/"
 ---
 
 ### Step 1: Install reactivesearch via NPM
