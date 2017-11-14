@@ -156,4 +156,4 @@ All reactivebase and reactivemaps components are `rbc` namespaced.
 <iframe height='500' scrolling='no' title='PlacesSearch docs example' src='//codepen.io/divyanshu013/embed/OjaeXg/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/divyanshu013/pen/OjaeXg/'>PlacesSearch docs example</a> by Divyanshu (<a href='https://codepen.io/divyanshu013'>@divyanshu013</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-1. [Using PlacesSearch for finding nearby places](../playground/?selectedKind=map%2FPlacesSearch&selectedStory=Finding%20nearby%20places&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+1. [Using PlacesSearch for finding nearby places](https://opensource.appbase.io/playground/?selectedKind=map%2FPlacesSearch&selectedStory=Finding%20nearby%20places&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)

@@ -80,4 +80,4 @@ All reactivebase components are `rbc` namespaced.
 <iframe height='500' scrolling='no' title='ViewSwitcher docs example' src='//codepen.io/divyanshu013/embed/xLoQjX/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/divyanshu013/pen/xLoQjX/'>ViewSwitcher docs example</a> by Divyanshu (<a href='https://codepen.io/divyanshu013'>@divyanshu013</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-1. [ViewSwitcher basic usage](../playground/?selectedKind=search%2FViewSwitcher&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+1. [ViewSwitcher basic usage](https://opensource.appbase.io/playground/?selectedKind=search%2FViewSwitcher&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
