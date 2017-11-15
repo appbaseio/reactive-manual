@@ -69,7 +69,7 @@ const renderSuggestion = suggestion => (
     >
       <span
         css={{
-          color: colors.brand,
+          color: colors.darker,
           fontWeight: 'bold',
           paddingBottom: 5,
         }}>
@@ -84,7 +84,7 @@ const renderSuggestion = suggestion => (
     </div>
     <div
       css={{
-        borderLeft: `2px solid ${colors.darker}`,
+        borderLeft: `2px solid ${colors.brand}`,
         paddingLeft: 5,
         color: colors.darker,
         flexShrink: 0,
@@ -106,6 +106,7 @@ const renderInputComponent = inputProps => (
       css={{
         position: 'absolute',
         padding: 17,
+        color: colors.darker,
 
         [media.lessThan('xlarge')]: {
           padding: 12,
