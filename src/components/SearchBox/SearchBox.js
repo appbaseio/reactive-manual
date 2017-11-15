@@ -5,9 +5,9 @@ import {navigateTo} from 'gatsby-link';
 
 import data from 'data/search.index.json';
 import {colors, media} from 'theme';
-import Flex from 'components/Flex';
 
 import { nav } from 'utils/sectionList';
+import SearchSvg from '../LayoutHeader/SearchSvg';
 import './styles.css';
 
 const search = new JsSearch.Search('url');
@@ -53,8 +53,20 @@ const getSuggestionValue = suggestion =>
 
 // Use your imagination to render suggestions.
 const renderSuggestion = suggestion => (
-  <Flex halign="space-between" valign="center">
-    <Flex direction="column">
+  <div
+    css={{
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      outlineBottom: '1px solid #ddd',
+    }}
+  >
+    <div
+      css={{
+        display: 'flex',
+        flexDirection: 'column',
+      }}
+    >
       <span
         css={{
           color: colors.brand,
@@ -69,7 +81,7 @@ const renderSuggestion = suggestion => (
         }}>
         {suggestion.title}
       </span>
-    </Flex>
+    </div>
     <div
       css={{
         borderLeft: `2px solid ${colors.darker}`,
@@ -85,7 +97,29 @@ const renderSuggestion = suggestion => (
     >
       {getSection(suggestion.title)}
     </div>
-  </Flex>
+  </div>
+);
+
+const renderInputComponent = inputProps => (
+  <div>
+    <div
+      css={{
+        position: 'absolute',
+        padding: 17,
+
+        [media.lessThan('xlarge')]: {
+          padding: 12,
+        },
+
+        [media.lessThan('medium')]: {
+          padding: 10,
+        },
+      }}
+    >
+      <SearchSvg />
+    </div>
+    <input {...inputProps} />
+  </div>
 );
 
 class SearchBox extends Component {
@@ -146,6 +180,7 @@ class SearchBox extends Component {
         renderSuggestion={renderSuggestion}
         inputProps={inputProps}
         onSuggestionSelected={this.onSuggestionSelected}
+        renderInputComponent={renderInputComponent}
       />
     );
   }
