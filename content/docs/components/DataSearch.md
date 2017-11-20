@@ -40,7 +40,7 @@ Example uses:
   searchWeight={[1, 3]}
   placeholder="Search for cities or venues"
   autoSuggest={true}
-  initialSuggestions={[{label: "Songwriting", value: "Songwriting"}, {label: "Musicians", value: "Musicians"}]}
+  defaultSuggestions={[{label: "Songwriting", value: "Songwriting"}, {label: "Musicians", value: "Musicians"}]}
   highlight={true}
   highlightField="group_city"
   queryFormat="or"
