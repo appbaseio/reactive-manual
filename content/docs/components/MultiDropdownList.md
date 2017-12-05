@@ -46,7 +46,7 @@ Example uses:
   defaultSelected={["London"]}
   showCount={true}
   placeholder="Search City"
-  initialLoader="Loading cities list.."
+  loader="Loading cities list.."
   react={{
     and: ["CategoryFilter", "SearchFilter"]
   }}
@@ -81,7 +81,7 @@ Example uses:
     show count of number of occurences besides an item. Defaults to `true`.
 - **placeholder** `String` [optional]  
     placeholder to be displayed in the dropdown searchbox.
-- **initialLoader** `String or HTML` [optional]  
+- **loader** `String or HTML` [optional]  
     display text while the data is being fetched, accepts `String` or `HTML` markup.
 - **showFilter** `Boolean` [optional]  
     show as filter when a value is selected in a global selected filters view. Defaults to `true`.

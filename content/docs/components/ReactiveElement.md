@@ -40,7 +40,7 @@ Example uses:
   stream={false}
   from={0}
   size={10}
-  initialLoader="Loading Results.."
+  loader="Loading Results.."
   noResults="No Results Found!"
   showResultStats={true}
   onResultStats={(total, took) => {
@@ -64,7 +64,7 @@ Example uses:
     starting point from where to fetch the results. Useful in a pagination context. Defaults to 0.
 - **size** `Number` [optional]  
     number of results to show per view. Defaults to 20.
-- **initialLoader** `String or HTML` [optional]  
+- **loader** `String or HTML` [optional]  
     display to show the user while the data is loading, accepts `String` or `HTML` markup.
 - **noResults** `String or HTML` [optional]  
     display to show the user when no results are found, accepts `String` or `HTML` markup.
@@ -137,4 +137,4 @@ All reactivebase components are `rbc` namespaced.
 
 3. [ReactiveElement that shows streaming updates](https://opensource.appbase.io/playground/?knob-title=ReactiveElement&knob-placeholder=Select%20city%20from%20the%20list&knob-showResultStats=false&selectedKind=search%2FReactiveElement&selectedStory=Stream&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
-4. [Playground (with all knob actions)](https://opensource.appbase.io/playground/?knob-title=ReactiveElement&knob-placeholder=Select%20city%20from%20the%20list&knob-showResultStats=true&knob-from=0&knob-size=5&knob-initialLoader=Loading%20results..&knob-noResults=No%20results%20found%21%20Try%20a%20different%20filter%20duh..&knob-stream=false&selectedKind=search%2FReactiveElement&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+4. [Playground (with all knob actions)](https://opensource.appbase.io/playground/?knob-title=ReactiveElement&knob-placeholder=Select%20city%20from%20the%20list&knob-showResultStats=true&knob-from=0&knob-size=5&knob-loader=Loading%20results..&knob-noResults=No%20results%20found%21%20Try%20a%20different%20filter%20duh..&knob-stream=false&selectedKind=search%2FReactiveElement&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)

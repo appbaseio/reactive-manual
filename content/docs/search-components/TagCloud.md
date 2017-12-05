@@ -40,7 +40,7 @@ Example uses:
   showCount={true}
   multiSelect={true}
   defaultSelected={["Auckland", "Atlanta"]}
-  initialLoader="Fetching cities.."
+  loader="Fetching cities.."
   react={{
     and: ["CategoryFilter", "SearchFilter"]
   }}
@@ -66,7 +66,7 @@ Example uses:
     whether to support multiple tag selections. Defaults to `false`.
 - **defaultSelected** `String or Array` [optional]  
     pre-select tag(s) from the tag cloud. An Array is accepted when *multiSelect* mode is enabled.
-- **initialLoader** `String or HTML` [optional]  
+- **loader** `String or HTML` [optional]  
     text or layout to be displayed while the data is being fetched, accepts `String` or `HTML` markup.
 - **showFilter** `Boolean` [optional]  
     show as filter when a value is selected in a global selected filters view. Defaults to `true`.

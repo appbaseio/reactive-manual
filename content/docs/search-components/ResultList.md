@@ -50,7 +50,7 @@ Example uses:
   paginationAt="bottom"
   pages={5}
   showResultStats={true}
-  initialLoader="Loading Results.."
+  loader="Loading Results.."
   noResults="No Matching Results Found!"
   react={{
     and: ["PriceFilter", "SearchFilter"]
@@ -72,7 +72,7 @@ Example uses:
   pagination={false}
   scrollOnTarget={window}
   showResultStats={true}
-  initialLoader="Loading Results.."
+  loader="Loading Results.."
   noResults="No Matching Results Found!"
   react={{
     and: ["PriceFilter", "SearchFilter"]
@@ -108,7 +108,7 @@ Example uses:
     starting point from where to fetch the results. Useful in a pagination context. Defaults to 0.
 - **size** `Number` [optional]  
     number of results to show per view. Defaults to 20.
-- **initialLoader** `String or HTML` [optional]  
+- **loader** `String or HTML` [optional]  
     display to show the user while the data is loading, accepts `String` or `HTML` markup.
 - **noResults** `String or HTML` [optional]  
     display to show the user when no results are found, accepts `String` or `HTML` markup.
