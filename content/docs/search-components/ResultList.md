@@ -42,7 +42,6 @@ Example uses:
 <ResultList
   componentId="ResultList01"
   dataField="ratings"
-  title="Result List"
   stream={true}  
   sortBy="desc"
   from={0}
@@ -67,7 +66,6 @@ Example uses:
 <ResultList
   componentId="ResultList01"
   dataField="ratings"
-  title="Result List"
   stream={true}  
   sortBy="desc"
   from={0}
@@ -91,8 +89,6 @@ Example uses:
     unique identifier of the component, can be referenced in other components' `react` prop.
 - **dataField** `String`  
     data field to be mapped with `ResultList`'s UI view, used for providing a sorting context.
-- **title** `String or HTML` [optional]  
-    title of the component, to be shown in the UI.
 - **stream** `Boolean` [optional]  
     whether to stream new result updates in the UI. Defaults to `false`.
 - **pagination** `Boolean` [optional]  

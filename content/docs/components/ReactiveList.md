@@ -39,7 +39,6 @@ Example uses:
 <ReactiveList
   componentId="SearchResult"
   dataField="ratings"
-  title="ReactiveList"
   stream={true}
   pagination={false}
   paginationAt="bottom"
@@ -65,8 +64,6 @@ Example uses:
     unique identifier of the component, can be referenced in other components' `react` prop.
 - **dataField** `String`  
     data field to be connected to the component's UI view. It is useful for providing a sorting context.
-- **title** `String or HTML` [optional]  
-    title of the component, to be shown in the UI.
 - **stream** `Boolean` [optional]  
     whether to stream new result updates in the UI. Defaults to `false`.
 - **scrollOnTarget** `Object` [optional]
