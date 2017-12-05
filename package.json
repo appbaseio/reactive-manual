@@ -1,5 +1,5 @@
 {
-  "name": "reactive-manual-new",
+  "name": "reactive-manual",
   "description": "Data-driven components for building Maps and Search UIs",
   "author": {
     "name": "Divyanshu Maithani",
@@ -21,7 +21,7 @@
   "version": "0.0.1",
   "private": false,
   "bugs": {
-    "url": "https://github.com/divyanshu013/reactive-manual-new"
+    "url": "https://github.com/appbaseio/reactive-manual/issues"
   },
   "resolutions": {
     "gatsby/graphql": "0.10.5",
@@ -80,7 +80,7 @@
   "engines": {
     "node": ">=8.4.0"
   },
-  "homepage": "https://divyanshu013.github.io/reactive-manual-new",
+  "homepage": "https://opensource.appbase.io/reactive-manual",
   "keywords": [
     "appbaseio",
     "reactive",
@@ -93,7 +93,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/divyanshu013/reactive-manual-new.git"
+    "url": "git+https://github.com/appbaseio/reactive-manual.git"
   },
   "scripts": {
     "build": "gatsby build --prefix-paths",
