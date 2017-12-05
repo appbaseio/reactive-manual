@@ -42,8 +42,6 @@ Example uses:
   defaultSelected={0}
   labelPosition="left"
   queryFormat="gte"
-  showFilter={true}
-  filterLabel="City"
   URLParams={false}
 />
 ```
@@ -69,10 +67,6 @@ Example uses:
     * `lte` implies a query match that satisfies all values that are less than or equal to the one selected in the UI view.  
 
     Defaults to `gte`.
-- **showFilter** `Boolean` [optional]  
-    show as filter when a value is selected in a global selected filters view. Defaults to `true`.
-- **filterLabel** `String` [optional]  
-    An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the number. This is useful for sharing URLs with the component state. Defaults to `false`.
 
