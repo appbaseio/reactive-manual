@@ -2,19 +2,21 @@
 
 Data-driven components for building Maps and Search UIs
 
-## Getting started
+Reactive Manual contains the docs for all the Reactive components from [appbase.io](https://appbase.io) including **ReactiveSearch** and **ReactiveMaps**.
+
+## Contributing
 
 ### Prerequisites
 
 1. Git
 1. Node: install version 8.4 or greater
 1. Yarn: See [Yarn website for installation instructions](https://yarnpkg.com/lang/en/docs/install/)
-1. A clone of the [repo](https://github.com/divyanshu013/reactive-manual-new) on your local machine
+1. A clone of the [repo](https://github.com/appbaseio/reactive-manual) on your local machine
 1. A fork of the repo (for any contributions)
 
 ### Installation
 
-1. `cd reactive-manual-new` to go into the project root
+1. `cd reactive-manual` to go into the project root
 1. `yarn` to install the website's npm dependencies
 
 ### Running locally
@@ -26,7 +28,7 @@ Data-driven components for building Maps and Search UIs
 
 ### Create a branch
 
-1. `git checkout master` from any folder in your local `reactive-manual-new` repository
+1. `git checkout master` from any folder in your local `reactive-manual` repository
 1. `git pull origin master` to ensure you have the latest main code
 1. `git checkout -b my-awesome-branch` (replacing `my-awesome-branch` with a suitable name) to create a branch
 
@@ -51,7 +53,7 @@ Data-driven components for building Maps and Search UIs
 
 1. `git add -A && git commit -m "My awesome message"` (replacing `My awesome message` with a commit message, such as `Fixed a really awesome bug with UI`) to stage and commit your changes
 1. `git push my-fork my-awesome-branch`
-1. Go to the [repo](https://github.com/divyanshu013/reactive-manual-new) and you should see recently pushed branches.
+1. Go to the [repo](https://github.com/appbaseio/reactive-manual) and you should see recently pushed branches.
 1. Follow GitHub's instructions.
 
 ## Troubleshooting
