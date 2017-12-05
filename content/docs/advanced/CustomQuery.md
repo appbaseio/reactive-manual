@@ -61,6 +61,28 @@ this.customQuery=function() {
 }
 ```
 
+### Extending a Custom Query
+
+When you pass a function to the `customQuery` prop, it receives two parameters, `value` (current value of the component) and `props` (current props of the component). Using these parameters, you can construct a query as per your needs. For example, if you wish to use a [**TextField**](/basic-components/textfield.html) component to search on any model of a specific car you may write your component as:
+
+
+```js{1-5,12-13}
+const myQuery = (value, props) => ({
+  match: {
+    name: `${props.car} ${value}`
+  }
+});
+
+...
+// in your render function
+
+<TextField
+  ...
+  car="Audi"
+  customQuery={myQuery}
+/>
+```
+
 ### Data Controller Component
 
 Reactive Maps UI library comes with a specific component that is designed to be truly customizable, [**Data Controller**](/basic-components/datacontroller.html). It's a UI optional component that requires defining the `customQuery` prop.

@@ -13,6 +13,10 @@
           title: Defining a Custom Query
           href: /advanced/customquery.html#defining-a-custom-query
           forceInternal: true
+        - id: extending-a-custom-query
+          title: Extending a Custom Query
+          href: /advanced/customquery.html#extending-a-custom-query
+          forceInternal: true
         - id: data-controller-component
           title: Data Controller Component
           href: /advanced/customquery.html#data-controller-component
