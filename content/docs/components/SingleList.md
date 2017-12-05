@@ -116,7 +116,7 @@ All reactivebase components are `rbc` namespaced.
   className="custom-class"
   style={{"paddingBottom": "10px"}}
   customQuery={
-    function(value) {
+    function(value, props) {
       return {
         match: {
           data_field: "this is a test"
