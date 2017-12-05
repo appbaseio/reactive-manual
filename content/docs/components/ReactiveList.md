@@ -176,7 +176,17 @@ All reactivebase components are `rbc` namespaced.
 - **onData** `Function` [optional]  
     a callback function where user can define how to render the view based on the data changes.
 - **onAllData** `Function` [optional]  
-    an alternative callback function to `onData`, where user can define how to render the view based on all the data changes.
+    an alternative callback function to `onData`, where user can define how to render the view based on all the data changes. It accepts two parameters, `items` and a **callback** function which should be called when the results reach the end (on scroll).
+
+```js
+onAllData(items, loadMoreData) {
+	// return the list to render
+}
+```
+
+> Note
+>
+> The **callback** function (`loadMoreData` here) will only be executed in case of infinite loading.
 
 ## Examples
 
