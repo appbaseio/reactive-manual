@@ -50,7 +50,6 @@ Example uses:
   paginationAt="bottom"
   pages={5}
   showResultStats={true}
-  placeholder="Select a rating"
   initialLoader="Loading Results.."
   noResults="No Matching Results Found!"
   react={{
@@ -73,7 +72,6 @@ Example uses:
   pagination={false}
   scrollOnTarget={window}
   showResultStats={true}
-  placeholder="Select a rating"
   initialLoader="Loading Results.."
   noResults="No Matching Results Found!"
   react={{
@@ -110,8 +108,6 @@ Example uses:
     starting point from where to fetch the results. Useful in a pagination context. Defaults to 0.
 - **size** `Number` [optional]  
     number of results to show per view. Defaults to 20.
-- **placeholder** `String or HTML` [optional]  
-    display to show the user when there is nothing selected in the sensor components, accepts `String` or `HTML` markup.
 - **initialLoader** `String or HTML` [optional]  
     display to show the user while the data is loading, accepts `String` or `HTML` markup.
 - **noResults** `String or HTML` [optional]  
