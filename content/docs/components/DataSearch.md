@@ -37,7 +37,7 @@ Example uses:
   dataField={["group_venue", "group_city"]}
   title="Search"
   defaultSelected="Songwriting"
-  searchWeight={[1, 3]}
+  fieldWeights={[1, 3]}
   placeholder="Search for cities or venues"
   autoSuggest={true}
   defaultSuggestions={[{label: "Songwriting", value: "Songwriting"}, {label: "Musicians", value: "Musicians"}]}
@@ -64,7 +64,7 @@ Example uses:
     set the title of the component to be shown in the UI.
 - **defaultSelected** `string` [optional]  
     preset the search query text in the search box.
-- **searchWeight** `Array` [optional]  
+- **fieldWeights** `Array` [optional]  
     set the search weight for the database fields, useful when dataField is an Array of more than one field. This prop accepts an array of numbers. A higher number implies a higher relevance weight for the corresponding field in the search results.
 - **placeholder** `String` [optional]  
     set the placeholder text to be shown in the searchbox input field. Defaults to "Search".
