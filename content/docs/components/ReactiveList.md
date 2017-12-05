@@ -65,7 +65,7 @@ Example uses:
 - **dataField** `String`  
     data field to be connected to the component's UI view. It is useful for providing a sorting context.
 - **stream** `Boolean` [optional]  
-    whether to stream new result updates in the UI. Defaults to `false`.
+    whether to stream new result updates in the UI. Defaults to `false`. `stream: true` is appended to the streaming hit objects, which can be used to selectively react to streaming changes (eg. showing fade in animation on new streaming hits, Twitter/Facebook like streams, showing the count of new feed items available like *2 New Tweets*)
 - **scrollOnTarget** `Object` [optional]
     accepts an object to set the infinite loading reference to the passed object, for example setting it to `window` will load new results when the `window` is scrolled.
 - **pagination** `Boolean` [optional]  
