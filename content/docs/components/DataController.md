@@ -26,9 +26,9 @@ Example uses:
 ### Basic Usage
 
 ```js
-<DataController
-  componentId="DataControllerSensor"
-/>
+<DataController componentId="DataControllerSensor">
+  <p>A custom 💪 UI component</p>
+</DataController>
 ```
 
 ### Usage With All Props
@@ -37,15 +37,13 @@ Example uses:
 <DataController
   componentId="DataControllerSensor"
   title="Data Controller Component"
-  visible={true}
-  dataLabel={
-    <p>A customizable UI widget</p>
-  }
   defaultSelected="default"
   showFilter={true}
   filterLabel="Venue filter"
   URLParams={false}
-/>
+>
+  <p>A custom 💪 UI component</p>
+</DataController>
 ```
 
 ## Props
@@ -54,10 +52,6 @@ Example uses:
     unique id of the sensor, can be referenced in another component's **react** prop.
 - **title** `String or HTML` [optional]  
     Sets the title of the component to be shown in the UI, applicable when **visible** is set to `true`.
-- **visible** `Boolean` [optional]  
-    whether to show the UI for the component. Defaults to `false`.
-- **dataLabel** `String or HTML` [optional]  
-    set the UI markup. Accepts a string or an HTML element. This prop is only applicable when **visible** is set to `true`.
 - **defaultSelected** `string` [optional]  
     pre-select a value in the data controller.
 - **showFilter** `Boolean` [optional]  
