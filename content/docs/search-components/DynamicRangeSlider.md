@@ -76,6 +76,8 @@ While `DynamicRangeSlider` only requires the above props to be used, it comes wi
     a function that accepts `min` and `max` range values as parameters and returns an object representing current selection from the range with `start` and `end` keys.
 - **rangeLabels** `Function` [optional]  
     a function that accepts `min` and `max` range values as parameters and returns an object representing labels with `start` and `end` keys.
+- **snap** `Boolean` [optional]
+    makes the slider snap on to points depending on the `stepValue` when the slider is released. Defaults to `true`. When set to `false`, `stepValue` is ignored.
 - **stepValue** `Number` [optional]  
     step value specifies the slider stepper. Value should be an integer between 1 and floor(#total-range/2). Defaults to 1.
 - **showHistogram** `Boolean` [optional]  

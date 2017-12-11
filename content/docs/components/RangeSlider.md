@@ -79,6 +79,8 @@ While `RangeSlider` only requires the above props to be used, it comes with many
     an object with `start` and `end` keys and corresponding numeric values denoting the pre-selected range values.
 - **rangeLabels** `Object` [optional]  
     an object with `start` and `end` keys and corresponding `String` labels to show labels near the ends of the `RangeSlider` component.
+- **snap** `Boolean` [optional]
+    makes the slider snap on to points depending on the `stepValue` when the slider is released. Defaults to `true`. When set to `false`, `stepValue` is ignored.
 - **stepValue** `Number` [optional]  
     step value specifies the slider stepper. Value should be an integer between 1 and floor(#total-range/2). Defaults to 1.
 - **showHistogram** `Boolean` [optional]  
