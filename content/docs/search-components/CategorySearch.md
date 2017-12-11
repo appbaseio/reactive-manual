@@ -73,6 +73,12 @@ Example uses:
     set the search weight for the database fields, useful when dataField is an Array of more than one field. This prop accepts an array of numbers. A higher number implies a higher relevance weight for the corresponding field in the search results.
 - **placeholder** `String` [optional]  
     Sets the placeholder text to be shown in the searhbox input field. Defaults to "Search".
+- **showIcon** `Boolean` [optional]
+    whether to display a search or custom icon in the input box. Defaults to `true`.
+- **iconPosition** `String` [optional]
+    sets the position of the search icon. Can be `left` or `right`. Defaults to `right`.
+- **icon** `HTML` [optional]
+    displays a custom search icon instead of the default 🔍
 - **autoSuggest** `Boolean` [optional]  
     set whether the autosuggest functionality should be enabled or disabled. Defaults to `true`.
 - **initialSuggestions** `Array` [optional]
