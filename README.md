@@ -1,6 +1,6 @@
 # Reactive Manual
 
-Data-driven components for building Maps and Search UIs
+Data-driven components for building Maps and Search UIs.
 
 ## Getting started
 
