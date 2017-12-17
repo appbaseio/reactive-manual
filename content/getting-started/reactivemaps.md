@@ -1,35 +1,55 @@
 ---
-id: maps-start
-title: "ReactiveMaps Getting Started"
+id: reactivemaps
+title: "ReactiveMaps Quickstart"
 layout: tutorial
-sectionid: started
-permalink: getting-started/maps-start.html
-prev: getting-started/maps-install.html
-prevTitle: "ReactiveMaps Installation"
+sectionid: getting-started
+permalink: getting-started/reactivemaps.html
 next: getting-started/data.html
 nextTitle: "Importing Data"
+prev: getting-started/reactivesearch.html
+prevTitle: "ReactiveSearch Quickstart"
 ---
 
-### Installation Recap
+> Note
+>
+> ReactiveMaps components are not available under ReactiveSearch.
 
-We install the library and then add the relevant browser dependencies in the **index.html** file.
+### Step 1: Install ReactiveMaps
+
+We will fetch the [`reactivemaps`](https://www.npmjs.com/package/@appbaseio/reactivemaps) module first from npm.
 
 ```bash
 npm install --save @appbaseio/reactivemaps
 ```
 
+### Step 2: Add Google Maps JS lib
+
+ReactiveMaps uses Google Maps to render the maps. For including Google Maps, add the following  `<script>` tag in the `<head>` element.
+
 ```html
-<!-- Google Maps API Key required-->
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=Your_key_here"></script>
-<!-- Your choice of CSS framework, can be materialize, bootstrap or something else -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
-<!-- Add browser style for reactivemaps -->
-<link rel="stylesheet" href="node_modules/@appbaseio/reactivemaps/dist/css/style.min.css">
 ```
 
-You can read more about the installation steps [here](/getting-started/maps-install.html).
+### Step 3: Add ReactiveMap's style file
 
-### Creating an App
+
+If you haven't included any style framework, we recommend adding **materialize**.
+
+```html
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+```
+
+All ReactiveMap styles are present in a single file. We will import it in the `<head>` element as well.
+
+```html
+<link rel="stylesheet" href="https://cdn.rawgit.com/appbaseio/reactivemaps/master/dist/css/style.min.css">
+```
+
+Make sure to import the stylesheets in the above order.
+
+---
+
+### Step 4: Creating an App
 
 Now that we have gotten the installation part out of the way, let's create an app with reactivemaps.
 
@@ -45,7 +65,7 @@ import {
 
 Next, we will create a [`ReactiveBase`](/getting-started/ReactiveBase.html) component for connecting our UI view with data, where the data source is an [appbase.io](https://appbase.io) app. This quick GIF will help with creating an app and getting its credentials.
 
-![create an appbase.io app](https://i.imgur.com/Y6HiHnJ.gif)
+![create an appbase.io app](https://i.imgur.com/r6hWKAG.gif)
 
 ```js
 class HelloWorld extends Component {

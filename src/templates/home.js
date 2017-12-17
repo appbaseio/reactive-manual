@@ -12,7 +12,7 @@ class Home extends Component {
   render() {
     const {data, location} = this.props;
     const title =
-      'Reactive Manual - Data-driven components for building Maps and Search UIs';
+      'Reactive Manual - Data-driven components for building Search UIs';
 
     return (
       <div css={{width: '100%'}}>
@@ -103,15 +103,15 @@ class Home extends Component {
                   },
                 }}>
                 <CtaItem>
-                  <ButtonLink to="/basic-components/textfield.html" type="primary">
-                    Docs
+                  <ButtonLink to="/getting-started/" type="primary">
+                    Getting Started
                   </ButtonLink>
                 </CtaItem>
                 <CtaItem>
                   <ButtonLink
-                    to="/getting-started/install.html"
+                    to="/getting-started/"
                     type="secondary">
-                    Getting Started
+                    Components Overview
                   </ButtonLink>
                 </CtaItem>
               </Flex>

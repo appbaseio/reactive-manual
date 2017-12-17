@@ -148,7 +148,7 @@ class Header extends Component {
               <HeaderLink
                 isActive={location.pathname.includes('/getting-started/')}
                 title="Getting Started"
-                to="/getting-started/install.html"
+                to="/getting-started/"
               />
               <HeaderLink
                 isActive={location.pathname.includes('/basic-components/')}

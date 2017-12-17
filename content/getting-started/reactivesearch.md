@@ -1,31 +1,29 @@
 ---
-id: start
-title: "ReactiveSearch Getting Started"
+id: reactivesearch
+title: "ReactiveSearch Quickstart"
 layout: tutorial
 sectionid: getting-started
-permalink: getting-started/start.html
-prev: getting-started/install.html
-prevTitle: "ReactiveSearch Installation"
-next: getting-started/maps-install.html
-nextTitle: "ReactiveMaps Installation"
+permalink: getting-started/reactivesearch.html
+next: getting-started/data.html
+nextTitle: "Importing Data"
+redirect_from:
+    - "getting-started/"
+    - "reactive-manual/getting-started/"
 ---
 
-### Installation Recap
+### Install ReactiveSearch
 
-We install the library and then add the relevant browser dependencies in the **index.html** file.
+We will fetch the [`reactivesearch`](https://www.npmjs.com/package/@appbaseio/reactivesearch) module first from npm.
 
 ```bash
 npm install --save @appbaseio/reactivesearch
 ```
 
-```html
-<!-- Your choice of CSS framework, can be materialize, bootstrap or something else -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
-<!-- Add browser style for reactivesearch -->
-<link rel="stylesheet" href="node_modules/@appbaseio/reactivesearch/dist/css/style.min.css">
-```
+or
 
-You can read more about the installation steps [here](/getting-started/install.html).
+```bash
+yarn add @appbaseio/reactivesearch
+```
 
 ### Creating an App
 
@@ -44,11 +42,13 @@ import {
 
 Next, we will create a [`ReactiveBase`](/getting-started/ReactiveBase.html) component for connecting our UI view with data, where the data source is an [appbase.io](https://appbase.io) app. This quick GIF will help with creating an app and getting its credentials.
 
-![create an appbase.io app](https://i.imgur.com/Y6HiHnJ.gif)
+![create an appbase.io app](https://i.imgur.com/r6hWKAG.gif)
 
 ```js
 class HelloWorld extends Component {
 
+	// takes one hit response from query and returns it
+	// in the ResultCard format to render UI view.
 	onData(res) {
 		const result = {
 			image: "https://www.enterprise.com/content/dam/global-vehicle-images/cars/FORD_FOCU_2012-1.png",
@@ -64,8 +64,7 @@ class HelloWorld extends Component {
 		return (
 			<ReactiveBase
 				app="car-store"
-				credentials="cf7QByt5e:d2d60548-82a9-43cc-8b40-93cbbe75c34c"
-			>
+				credentials="cf7QByt5e:d2d60548-82a9-43cc-8b40-93cbbe75c34c">
 				<div className="row reverse-labels">
 					<div className="col s6 col-xs-6">
 					<div className="row">
