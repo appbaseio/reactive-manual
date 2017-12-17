@@ -4,8 +4,8 @@ title: "Importing Data"
 layout: tutorial
 sectionid: getting-started
 permalink: getting-started/data.html
-prev: getting-started/start.html
-prevTitle: "ReactiveMaps Getting Started"
+prev: getting-started/reactivesearch.html
+prevTitle: "ReactiveSearch Quickstart"
 next: getting-started/reactivebase.html
 nextTitle: "Base Component"
 ---
@@ -18,7 +18,7 @@ Reactive Maps uses appbase.io, a hosted realtime JSON data store as its database
 
 Here's a short gif walking through the app creation process.
 
-![](https://i.imgur.com/Y6HiHnJ.gif)
+![](https://i.imgur.com/r6hWKAG.gif)
 
 ### Overview of the App Data Model
 
