@@ -45,16 +45,15 @@ Next, we will create a [`ReactiveBase`](/getting-started/ReactiveBase.html) comp
 ![create an appbase.io app](https://i.imgur.com/r6hWKAG.gif)
 
 ```js
-class HelloWorld extends Component {
+class App extends Component {
 
 	// takes one hit response from query and returns it
 	// in the ResultCard format to render UI view.
-	onData(res) {
+	onData({ _source: res }) {
 		const result = {
 			image: "https://www.enterprise.com/content/dam/global-vehicle-images/cars/FORD_FOCU_2012-1.png",
 			title: res.name,
-			rating: res.rating,
-			desc: res.brand,
+			desc: res.brand + " " + "★".repeat(res.rating),
 			url: "#"
 		};
 		return result;
@@ -63,22 +62,20 @@ class HelloWorld extends Component {
 	render() {
 		return (
 			<ReactiveBase
-				app="car-store"
-				credentials="cf7QByt5e:d2d60548-82a9-43cc-8b40-93cbbe75c34c">
-				<div className="row reverse-labels">
-					<div className="col s6 col-xs-6">
-					<div className="row">
-						<div className="col s12 col-xs-12">
+			app="car-store"
+			credentials="cf7QByt5e:d2d60548-82a9-43cc-8b40-93cbbe75c34c">
+				<Flex column={false} className="flex-wrapper">
+					<Flex column w={[1, 1, 1/3]} wrap>
+						<Box m={2} pt={3}>
 							<CategorySearch
 								componentId="SearchSensor"
 								dataField="name"
 								categoryField="brand.raw"
 								placeholder="Search Cars"
-								autoSuggest={false}
 							/>
-						</div>
-						<div className="col s12 col-xs-12">
-							<RatingsFilter
+						</Box>
+						<Box m={2} pt={2}>
+							<SingleRange
 								componentId="RatingsSensor"
 								dataField="rating"
 								title="RatingsFilter"
@@ -88,21 +85,22 @@ class HelloWorld extends Component {
 									{ start: 2, end: 5, label: "2 stars and up" },
 									{ start: 1, end: 5, label: "> 1 stars" }]
 								}
-								defaultSelected={{
-									"start": 3,
-									"end": 5
-								}}
+								defaultSelected={"4 stars and up"}
 							/>
-						</div>
-					</div>
-					</div>
-					<div className="col s6 col-xs-6">
+						</Box>
+					</Flex>
+					<Flex w={[1, 1, 2/3]} wrap>
 						<ResultCard
+							innerClass={{
+								"resultstats": "resultstats"
+							}}
+							className="results"
 							componentId="SearchResult"
 							dataField="name"
 							title="Results"
 							from={0}
-							size={20}
+							size={6}
+							pagination
 							onData={this.onData}
 							sortOptions={[
 								{
@@ -125,23 +123,24 @@ class HelloWorld extends Component {
 								and: ["SearchSensor", "RatingsSensor"]
 							}}
 						/>
-					</div>
-				</div>
+					</Flex>
+				</Flex>
 			</ReactiveBase>
 		);
 	}
 }
+
+export default App;
 ```
 
-Here, we have created a `CategorySearch` component along with a `RatingsFilter` component (first half of the screen) to show the filters.
+Here, we have created a `CategorySearch` component along with a `SingleRange` component (first half of the screen) to show the filters.
 
 In the second half, we have used the `ResultCard` component to display the resulting data.
 
 If you have followed along, you should see something like this:
 
-![Image](http://i.imgur.com/nzK6dXW.png)
+![Image](https://i.imgur.com/Zgp5lGk.png)
 
 You can also checkout a working demo of the above app directly at https://github.com/appbaseio-apps/reactivesearch-starter-app. The repo demonstrates the same example app in different ways:
 1. [`master`](https://github.com/appbaseio-apps/reactivesearch-starter-app/tree/master) - The app as shown in the steps above.
-1. [`browserify`](https://github.com/appbaseio-apps/reactivesearch-starter-app/tree/browserify) - A browserify based build (instead of webpack).
 1. [`umd`](https://github.com/appbaseio-apps/reactivesearch-starter-app/tree/umd) - A completely browser based app with no npm dependencies and webpack / browserify modules.
