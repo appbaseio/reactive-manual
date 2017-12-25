@@ -29,27 +29,6 @@
           title: "ReactiveSearch as UMD"
           href: /getting-started/reactivesearch.html#reactivesearch-as-umd
           forceInternal: true
-    - id: reactivemaps
-      title: ReactiveMaps Quickstart
-      href: /getting-started/reactivemaps.html
-      forceInternal: true
-      subitems:
-        - id: step-1-install-reactivemaps
-          title: Install ReactiveMaps
-          href: /getting-started/reactivemaps.html#step-1-install-reactivemaps
-          forceInternal: true
-        - id: step-2-add-google-maps-js-lib
-          title: Add Google Maps JS lib
-          href: /getting-started/reactivemaps.html#step-2-add-google-maps-js-lib
-          forceInternal: true
-        - id: step-3-add-reactivemaps-style-file
-          title: Add ReactiveMap’s style file
-          href: /getting-started/reactivemaps.html#step-3-add-reactivemaps-style-file
-          forceInternal: true
-        - id: step-4-creating-an-app
-          title: Creating an App
-          href: /getting-started/reactivemaps.html#step-4-creating-an-app
-          forceInternal: true
     - id: data
       title: Importing Data
       href: /getting-started/data.html

@@ -10,9 +10,9 @@ prev: getting-started/reactivesearch.html
 prevTitle: "ReactiveSearch Quickstart"
 ---
 
-> Note
+> Note:
 >
-> ReactiveMaps components are not available under ReactiveSearch.
+> Currently in `v2`, ReactiveMaps components are not available under ReactiveSearch.
 
 ### Step 1: Install ReactiveMaps
 
