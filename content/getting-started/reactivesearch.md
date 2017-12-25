@@ -7,13 +7,13 @@ permalink: getting-started/reactivesearch.html
 next: getting-started/data.html
 nextTitle: "Importing Data"
 redirect_from:
-		- "getting-started/"
-		- "reactive-manual/getting-started/"
-		- "getting-started/reactivesearch"
-		- "reactive-manual/getting-started/reactivesearch"
+    - "getting-started/"
+    - "reactive-manual/getting-started/"
+    - "getting-started/reactivesearch"
+    - "reactive-manual/getting-started/reactivesearch"
 ---
 
-### Install ReactiveSearch
+### Step 0: Install ReactiveSearch
 
 We will fetch and install [`reactivesearch`](https://www.npmjs.com/package/@appbaseio/reactivesearch) module using npm.
 
@@ -27,15 +27,14 @@ or
 yarn add @appbaseio/reactivesearch
 ```
 
-### Creating an App
+### Step 1: Create Boilerplate with CRA
+
 
 In this section, we will create a search UI based on a *cars dataset* with ReactiveSearch components.
 
 ![Image](https://i.imgur.com/Zgp5lGk.png)
 
 **Caption:** Final image of how the app will look.
-
-#### Step 1: Create Boilerplate with CRA
 
 We can either add ReactiveSearch to an existing app or create a boilerplate app with [Create React App (CRA)](https://github.com/facebookincubator/create-react-app). For this quickstart guide, we will use the CRA.
 
@@ -49,7 +48,7 @@ Install the `@appbaseio/reactivesearch` repo if you already haven't.
 npm install --save @appbaseio/reactivesearch
 ```
 
-#### Step 2: Adding the first component
+### Step 2: Adding the first component
 
 Lets add our first ReactiveSearch component: [ReactiveBase](/getting-started/reactivebase.html), it is a backend connector where we can configure the Elasticsearch index / authorization setup.
 
@@ -83,7 +82,7 @@ This is how the app should look after running the `yarn && yarn start` command.
 
 ![](https://i.imgur.com/M7AAhTh.png)
 
-#### Step 3: Adding Filters and Result Components
+### Step 3: Adding Filters and Result Components
 
 For this app, we will be using [CategorySearch](/search-components/categorysearch.html) and [SingleRange](/basic-components/singlerange.html) components for filtering the dataset. And [ResultCard](/search-components/resultcard.html) component for showing the search results.
 
@@ -217,7 +216,7 @@ The only thing missing at this point is the layout, ReactiveSearch doesn't use a
 
 <br/>
 
-#### Step 4: Adding a Layout Grid with Flex
+### Step 4: Adding a Layout Grid with Flex
 
 For this quickstart, we will use a Flex based layout. If you are new to Flex, I recommend a quick read of [this article](https://css-tricks.com/snippets/css/a-guide-to-flexbox/).
 
@@ -233,8 +232,8 @@ class App extends Component {
 				<ReactiveBase
 				app="car-store"
 				credentials="cf7QByt5e:d2d60548-82a9-43cc-8b40-93cbbe75c34c">
-					<div style={{ display: "flex", "flex-direction": "row" }}>
-						<div style={{ display: "flex", "flex-direction": "column", "width": "40%" }}>
+					<div style={{ display: "flex", flexDirection: "row" }}>
+						<div style={{ display: "flex", flexDirection: "column", width: "40%" }}>
 							<CategorySearch
 								componentId="searchbox"
 								dataField="name"
@@ -242,7 +241,7 @@ class App extends Component {
 								placeholder="Search for cars"
 								style={{
 									padding: "5px",
-									"margin-top": "10px"
+									marginTop: "10px"
 								}}
 							/>
 							<SingleRange
@@ -258,7 +257,7 @@ class App extends Component {
 								defaultSelected="4 stars and up"
 								style={{
 									padding: "5px",
-									"margin-top": "10px"
+									marginTop: "10px"
 								}}
 							/>
 						</div>
@@ -279,8 +278,8 @@ class App extends Component {
 								}
 							}}
 							style={{
-								"width": "60%",
-								"text-align": "center"
+								width: "60%",
+								textAlign: "center"
 							}}
 						/>
 					</div>
@@ -297,7 +296,6 @@ If you have followed along, this is how our app should look now.
 ![](https://i.imgur.com/oZglt8L.png)
 
 
----
 
 For convenience, you can checkout the final code from the ReactiveSearch starter github repo - https://github.com/appbaseio-apps/reactivesearch-starter-app.
 
@@ -310,3 +308,26 @@ yarn && yarn start
 # open http://localhost:3000 and you should see the app.
 # The magic sauce is inside **src/App.js** file.
 ```
+
+---
+
+### ReactiveSearch as UMD
+
+It is also possible to run ReactiveSearch without relying on a Node.JS environment tooling for the build setup. Here, I am using `v2.0.0-alpha-06`, this can be replaced with the version you are using.
+
+```html
+<script src="https://cdn.rawgit.com/appbaseio/reactivesearch/v2.0.0-alpha-06/packages/web/umd/reactivesearch.js"></script>
+```
+
+The ReactiveSearch starter project has also been built with the UMD version of the lib, and is available at https://github.com/appbaseio-apps/reactivesearch-starter-app/tree/umd.
+
+You can run it with the following commands:
+
+```bash
+git clone https://github.com/appbaseio-apps/reactivesearch-starter-app
+cd reactivesearch-starter-app
+git checkout umd    # where we have the umd version of the starter app
+python -m SimpleHTTPServer 1234   # now open http://localhost:1234
+```
+
+---

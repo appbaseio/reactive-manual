@@ -5,9 +5,9 @@
       href: /getting-started/reactivesearch.html
       forceInternal: true
       subitems:
-        - id: install-reactivesearch
+        - id: step-0-install-reactivesearch
           title: Install ReactiveSearch
-          href: /getting-started/reactivesearch.html#install-reactivesearch
+          href: /getting-started/reactivesearch.html#step-0-install-reactivesearch
           forceInternal: true
         - id: step-1-create-boilerplate-with-cra
           title: Create Boilerplate with CRA
@@ -24,6 +24,10 @@
         - id: step-4-adding-a-layout-grid-with-flex
           title: "Adding a Layout Grid with Flex"
           href: /getting-started/reactivesearch.html#step-4-adding-a-layout-grid-with-flex
+          forceInternal: true
+        - id: reactivesearch-as-umd
+          title: "ReactiveSearch as UMD"
+          href: /getting-started/reactivesearch.html#reactivesearch-as-umd
           forceInternal: true
     - id: reactivemaps
       title: ReactiveMaps Quickstart
