@@ -14,39 +14,53 @@ The first step in getting started with building a custom project for **ReactiveM
 
 ### Creating an App
 
-Reactive Maps uses appbase.io, a hosted realtime JSON data store as its database system. If you have already created an app via the onboarding process, it will be visible within the appbase.io dashbaord. If not, you can create one by logging in.
+ReactiveSearch uses Elasticsearch as its underlying database system. An app within ReactiveSearch's context refers to an index in Elasticsearch.
 
-Here's a short gif walking through the app creation process.
+Here's a short gif walking through the app creation process in appbase.io, a hosted realtime Elasticsearch service.
 
 ![](https://i.imgur.com/r6hWKAG.gif)
 
+If you are using an Elasticsearch cluster, you would be able to create an index with the following command:
+
+```bash
+curl -XPUT elasticsearch:9200/my_app/
+```
+
+> Note
+>
+> ReactiveSearch is compatible with Elasticsearch v2, v5 and v6.
+
 ### Overview of the App Data Model
 
-The datastore for appbase.io is JSON based, and data within an app is organized as JSON objects that belong to a **type**. Types here are similar to tables in SQL, they provide namespacing for organizing different kinds of data. You can read more about the data model behind appbase [here](http://docs.appbase.io/scalr/concepts/datamodel.html#appbase-data-schema).
+Elasticsearch's data model is JSON based, and data within an app is organized as JSON objects that belong to a **type** (or not if you are using v6). Types provide a logical namespace to the JSON data which can be used while querying data. You can read more about the data model behind Elasticsearch over  [here](https://www.elastic.co/blog/found-elasticsearch-mapping-introduction).
 
 ![Data Store](https://i.imgur.com/LCvdVuu.png)
 
+> Note
+>
+> Elasticsearch v6 removes the concepts of types, where data is simply stored as JSON objects within an index.
+
 ### Importing Custom Data
 
-In this section, we will cover how to add data using two popular approaches.
+In this section, we will cover how to add data using two popular approaches. We will use [Dejavu - a GUI for Elasticsearch](https://opensource.appbase.io/dejavu) for showing the process.
 
 #### CSV or XLS
 
 Let's say you have your data organized as a CSV or XLS file.
 
 1. Use an online tool like http://www.csvjson.com/csv2json to convert your CSV data into a JSON format.
-2. Go to your appbase.io app's **Data Browser** section and click "Add Data".  
+2. Go to your dejavu's **Data Browser** section and click "Add Data".  
 
 ![](https://i.imgur.com/idp5Ia2.png)
-3. Add the data JSON formatted data here, a single object should be added as a JSON object while multiple records can be added using the Array semantics.
+3. Add the JSON formatted data here, a single object should be added as a JSON object while multiple records can be added using the Array semantics.
 
 > Tip
 >
-> Add upto a hundred records at a time for best results. Ideal when your data set is small.
+> Add up to a hundred records at a time for best results. Ideal when your data set is small.
 
 #### via API
 
-appbase.io uses a RESTful API for both indexing and retrieving data. Whether you are using Python or Java or Javascript, you make a HTTP API call there.
+Elasticsearch uses a RESTful API for both indexing and retrieving data. Whether you are using Python or Java or Javascript, you make a HTTP API call there.
 
 This is how a REST call looks to insert a single object into an app inside a type called **books**.
 
@@ -59,14 +73,10 @@ curl -XPUT https://API_CREDENTIAL@scalr.api.appbase.io/$app/books/1 --data-binar
 }'
 ```
 
+`scalr.api.appbase.io` is the domain for the Elasticsearch cluster, you can replace this with the location of your cluster domain.
+
 ### Data Mapping
 
-Data mapping is the process of specifying a schema for your data. While appbase.io auto-detects the schema based on the kind of JSON value, it can't infer a location data because it looks like a *double* value.
+Data mapping is the process of specifying a schema for your data, which determines how it is indexed and stored. While Elasticsearch auto-detects the schema based on the kind of JSON value through a process known as dynamic mapping, it is also possible to set this mapping statically. You can read more about mappings over [here](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/mapping.html).
 
-We have built an open-source tool to infer and set the mappings for data (also present as Step#2 in the onboarding process). You can check it out live at https://opensource.appbase.io/gem. Enter your `app_name` and API credentials in the format `https://API_CREDENTIAL@scalr.api.appbase.io` and you will be able to see your app's mappings.
-
-You can also "Create Mappings" from the bottom left section and add a JSON object that you intend to insert to see the auto-inferred mappings.
-
-![](https://i.imgur.com/rN2vwLY.png)
-
-Here, you can set the appropriate mappings (aka schema) and that tells appbase.io on how to index any future data that you insert.
+Dejavu provides a GUI for setting the mapping of a new field, as well as viewing existing mappings.
