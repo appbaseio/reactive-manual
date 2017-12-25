@@ -4,6 +4,7 @@ node_js:
 branches:
   only:
   - new
+  - v2
 script:
   - yarn run build
 sudo: false
