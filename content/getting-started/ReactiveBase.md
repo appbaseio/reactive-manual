@@ -12,7 +12,7 @@ nextTitle: "Components Overview"
 
 **ReactiveBase** is the **base** component for all `ReactiveMaps` and `ReactiveSearch` apps. It binds the backend app (data source) with the UI view components (child elements to ReactiveBase), allowing the UI views to be reactively updated every time there is a change in the data source or in the UI view components.
 
-This is the first component you will need to add.
+This is the first component you will need to add when using `ReactiveSearch`.
 
 ### Usage
 
@@ -38,7 +38,7 @@ This is the first component you will need to add.
     defines which types should the queries run on. Multiple types can be passed as comma separated. The default behavior is to search on all the app types.
 - **theme** `String` [optional]  
     specify a UI theme as one of `rbc-blue` or `rbc-dark`. Read more about theming [here](https://opensource.appbase.io/reactivemaps/manual/v1/advanced/Theming.html).
-    
+
 > Note
 >
 > If you are using the **url** prop for an Elasticsearch cluster, ensure that your ReactiveSearch app can access the cluster. Typically, you will need to configure CORS in **elasticsearch.yml** to enable access.
