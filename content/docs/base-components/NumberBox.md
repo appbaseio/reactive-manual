@@ -9,9 +9,9 @@ prevTitle: "ToggleButton"
 next: base-components/ratingsfilter.html
 nextTitle: "RatingsFilter"
 redirect_from:
-    - 'basic-components/numberbox.html'
-    - 'base-components/numberbox'
-    - 'numberbox'
+    - 'reactive-manual/basic-components/numberbox.html'
+    - 'reactive-manual/base-components/numberbox'
+    - 'reactive-manual/numberbox'
 ---
 
 ![Image to be displayed](https://i.imgur.com/0Xfg8pM.png)

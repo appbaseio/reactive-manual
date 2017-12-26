@@ -12,8 +12,9 @@ redirect_from:
     - 'reactive-manual/docs'
     - 'reactive-manual/basic-components'
     - 'reactive-manual/base-components'
+    - 'reactive-manual/base-components/'
     - 'reactive-manual/base-components/textfield'
-    - 'textfield'
+    - 'reactive-manual/textfield'
 ---
 
 ![Image to be displayed](https://i.imgur.com/0fnMNaz.png)

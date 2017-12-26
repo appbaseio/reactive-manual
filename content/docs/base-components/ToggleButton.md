@@ -9,9 +9,9 @@ prevTitle: "TextField"
 next: base-components/numberbox.html
 nextTitle: "NumberBox"
 redirect_from:
-    - 'base-components/togglebutton'
-    - 'basic-components/togglebutton.html'
-    - 'togglebutton'
+    - 'reactive-manual/basic-components/togglebutton.html'
+    - 'reactive-manual/base-components/togglebutton'
+    - 'reactive-manual/togglebutton'
 ---
 
 ![Image to be displayed](https://i.imgur.com/Zyooy5N.png)

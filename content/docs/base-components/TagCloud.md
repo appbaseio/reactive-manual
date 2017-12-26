@@ -9,9 +9,9 @@ prevTitle: "RatingsFilter"
 next: base-components/datacontroller.html
 nextTitle: "DataController"
 redirect_from:
-    - 'search-components/tagcloud.html'
-    - 'base-components/tagcloud'
-    - 'tagcloud'
+    - 'reactive-manual/search-components/tagcloud.html'
+    - 'reactive-manual/base-components/tagcloud'
+    - 'reactive-manual/tagcloud'
 ---
 
 ![Image to be displayed](https://i.imgur.com/cQgqeiv.png)
