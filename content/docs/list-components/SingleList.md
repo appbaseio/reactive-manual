@@ -11,7 +11,7 @@ nextTitle: "MultiList"
 redirect_from:
     - "basic-components/singlelist.html"
     - "list-components/singlelist"
-    - "/singlelist"
+    - "singlelist"
 ---
 
 ![Image to be displayed](https://i.imgur.com/hFKkYws.png)

@@ -9,12 +9,10 @@ nextTitle: "ToggleButton"
 redirect_from:
     - 'docs'
     - 'basic-components'
-    - 'reactive-manual/docs'
-    - 'reactive-manual/basic-components'
-    - 'reactive-manual/base-components'
-    - 'reactive-manual/base-components/'
-    - 'reactive-manual/base-components/textfield'
-    - 'reactive-manual/textfield'
+    - 'base-components'
+    - 'base-components/'
+    - 'base-components/textfield'
+    - 'textfield'
 ---
 
 ![Image to be displayed](https://i.imgur.com/0fnMNaz.png)

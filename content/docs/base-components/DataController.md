@@ -9,9 +9,9 @@ prevTitle: "TagCloud"
 next: base-components/selectedfilters.html
 nextTitle: "SelectedFilters"
 redirect_from:
-    - 'reactive-manual/basic-components/datacontroller.html'
-    - 'reactive-manual/base-components/datacontroller'
-    - 'reactive-manual/datacontroller'
+    - 'basic-components/datacontroller.html'
+    - 'base-components/datacontroller'
+    - 'datacontroller'
 ---
 
 ![Image to be displayed](https://i.imgur.com/Lj5O2qg.png)

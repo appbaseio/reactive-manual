@@ -12,6 +12,7 @@ redirect_from:
     - 'advanced/styleguide.html'
     - 'theming/style'
     - 'style'
+    - 'styles'
 ---
 
 ## Introduction

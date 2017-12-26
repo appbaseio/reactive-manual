@@ -9,9 +9,9 @@ prevTitle: "DataController"
 next: list-components/singlelist.html
 nextTitle: "List Components: SingleList"
 redirect_from:
-    - 'reactive-manual/basic-components/selectedfilters.html'
-    - 'reactive-manual/base-components/selectedfilters'
-    - 'reactive-manual/selectedfilters'
+    - 'basic-components/selectedfilters.html'
+    - 'base-components/selectedfilters'
+    - 'selectedfilters'
 ---
 
 ![Image to be displayed](https://i.imgur.com/DyW5jJ2.png)

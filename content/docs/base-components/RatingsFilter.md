@@ -9,9 +9,9 @@ prevTitle: "NumberBox"
 next: base-components/tagcloud.html
 nextTitle: "TagCloud"
 redirect_from:
-    - 'reactive-manual/search-components/ratingsfilter.html'
-    - 'reactive-manual/base-components/ratingsfilter'
-    - 'reactive-manual/ratingsfilter'
+    - 'search-components/ratingsfilter.html'
+    - 'base-components/ratingsfilter'
+    - 'ratingsfilter'
 ---
 
 ![Image to be displayed](https://i.imgur.com/KO1bJQw.png)

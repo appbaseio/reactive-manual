@@ -11,7 +11,7 @@ nextTitle: "Range Components: SingleRange"
 redirect_from:
     - "basic-components/multidatalist.html"
     - "list-components/multidatalist"
-    - "/multidatalist"
+    - "multidatalist"
 ---
 
 ![Image to be displayed](https://i.imgur.com/cEAUorS.png)

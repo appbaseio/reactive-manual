@@ -11,7 +11,7 @@ nextTitle: "MultiDataList"
 redirect_from:
     - "basic-components/singledatalist.html"
     - "list-components/singledatalist"
-    - "/singledatalist"
+    - "singledatalist"
 ---
 
 ![Image to be displayed](https://i.imgur.com/pAnNBmo.png)

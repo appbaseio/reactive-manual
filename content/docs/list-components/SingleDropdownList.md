@@ -11,7 +11,7 @@ nextTitle: "MultiDropdownList"
 redirect_from:
     - "basic-components/singledropdownlist.html"
     - "list-components/singledropdownlist"
-    - "/singledropdownlist"
+    - "singledropdownlist"
 ---
 
 ![Image to be displayed](https://i.imgur.com/PGYPXf6.png)
