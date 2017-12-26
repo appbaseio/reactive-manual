@@ -79,7 +79,7 @@ class Home extends Component {
                     fontSize: 30,
                   },
                 }}>
-                Components for Elasticsearch
+                UI Components for Elasticsearch
               </p>
               <Flex
                 halign="center"
