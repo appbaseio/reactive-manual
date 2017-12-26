@@ -3,11 +3,15 @@ id: resultcard
 title: "ResultCard"
 layout: docs
 sectionid: docs
-permalink: search-components/resultcard.html
-prev: search-components/nestedmultilist.html
-prevTitle: "NestedMultiList"
-next: search-components/resultlist.html
-nextTitle: "ResultList"
+permalink: result-components/resultcard.html
+prev: result-components/resultlist.html
+prevTitle: "ResultList"
+next: result-components/reactivelist.html
+nextTitle: "ReactiveList"
+redirect_from:
+    - 'search-components/resultcard.html'
+    - 'result-components/resultcard'
+    - 'resultcard'
 ---
 
 ![Image to be displayed](https://i.imgur.com/aeQs0nn.png)

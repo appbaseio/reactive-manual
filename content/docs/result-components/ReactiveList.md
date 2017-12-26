@@ -3,11 +3,15 @@ id: reactivelist
 title: "ReactiveList"
 layout: docs
 sectionid: docs
-permalink: basic-components/reactivelist.html
-prev: basic-components/datacontroller.html
-prevTitle: "DataController"
-next: basic-components/reactiveelement.html
-nextTitle: "ReactiveElement"
+permalink: result-components/reactivelist.html
+prev: result-components/resultcard.html
+prevTitle: "ResultCard"
+next: advanced/theming.html
+nextTitle: "Theming"
+redirect_from:
+    - 'basic-components/reactivelist.html'
+    - 'result-components/reactivelist'
+    - 'reactivelist'
 ---
 
 ![Image to be displayed](https://i.imgur.com/GcUFZjh.png)

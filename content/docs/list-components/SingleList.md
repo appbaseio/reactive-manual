@@ -3,11 +3,15 @@ id: singlelist
 title: "SingleList"
 layout: docs
 sectionid: docs
-permalink: basic-components/singlelist.html
-prev: basic-components/togglebutton.html
-prevTitle: "ToggleButton"
-next: basic-components/multilist.html
+permalink: list-components/singlelist.html
+prev: base-components/selectedfilters.html
+prevTitle: "Base Components: SelectedFilters"
+next: list-components/multilist.html
 nextTitle: "MultiList"
+redirect_from:
+    - "basic-components/singlelist.html"
+    - "list-components/singlelist"
+    - "/singlelist"
 ---
 
 ![Image to be displayed](https://i.imgur.com/hFKkYws.png)

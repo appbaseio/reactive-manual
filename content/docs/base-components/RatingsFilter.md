@@ -3,11 +3,15 @@ id: ratingsfilter
 title: "RatingsFilter"
 layout: docs
 sectionid: docs
-permalink: search-components/ratingsfilter.html
-prev: search-components/dynamicrangeslider.html
-prevTitle: "DynamicRangeSlider"
-next: search-components/tagcloud.html
+permalink: base-components/ratingsfilter.html
+prev: base-components/numberbox.html
+prevTitle: "NumberBox"
+next: base-components/tagcloud.html
 nextTitle: "TagCloud"
+redirect_from:
+    - 'search-components/ratingsfilter.html'
+    - 'base-components/ratingsfilter'
+    - 'ratingsfilter'
 ---
 
 ![Image to be displayed](https://i.imgur.com/KO1bJQw.png)

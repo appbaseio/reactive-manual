@@ -3,9 +3,15 @@ id: selectedfilters
 title: "SelectedFilters"
 layout: docs
 sectionid: docs
-permalink: basic-components/selectedfilters.html
-prev: basic-components/multidropdownrange.html
-prevTitle: "MultiDropdownRange"
+permalink: base-components/selectedfilters.html
+prev: basic-components/datacontroller.html
+prevTitle: "DataController"
+next: list-components/singlelist.html
+nextTitle: "List Components: SingleList"
+redirect_from:
+    - 'basic-components/selectedfilters.html'
+    - 'base-components/selectedfilters'
+    - 'selectedfilters'
 ---
 
 ![Image to be displayed](https://i.imgur.com/DyW5jJ2.png)

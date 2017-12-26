@@ -3,11 +3,15 @@ id: daterange
 title: "DateRange"
 layout: docs
 sectionid: docs
-permalink: basic-components/daterange.html
-prev: basic-components/datepicker.html
+permalink: range-components/daterange.html
+prev: range-components/datepicker.html
 prevTitle: "DatePicker"
-next: basic-components/datacontroller.html
-nextTitle: "DataController"
+next: search-components/datasearch.html
+nextTitle: "Search Components: DataSearch"
+redirect_from:
+    - 'basic-components/daterange.html'
+    - 'range-components/daterange'
+    - 'daterange'
 ---
 
 ![Image to be displayed](https://i.imgur.com/Tl2xXNS.png)

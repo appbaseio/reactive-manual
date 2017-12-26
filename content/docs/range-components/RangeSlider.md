@@ -3,11 +3,15 @@ id: rangeslider
 title: "RangeSlider"
 layout: docs
 sectionid: docs
-permalink: basic-components/rangeslider.html
-prev: basic-components/multirange.html
-prevTitle: "MultiRange"
-next: basic-components/numberbox.html
-nextTitle: "NumberBox"
+permalink: range-components/rangeslider.html
+prev: range-components/multidropdownrange.html
+prevTitle: "MultiDropdownRange"
+next: range-components/dynamicrangeslider.html
+nextTitle: "DynamicRangeSlider"
+redirect_from:
+    - 'basic-components/rangeslider.html'
+    - 'range-components/rangeslider'
+    - 'rangeslider'
 ---
 
 ![Image to be displayed](https://i.imgur.com/OYUWZHL.png)

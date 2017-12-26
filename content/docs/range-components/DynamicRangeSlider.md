@@ -3,11 +3,15 @@ id: dynamicrangeslider
 title: "DynamicRangeSlider"
 layout: docs
 sectionid: docs
-permalink: search-components/dynamicrangeslider.html
-prev: search-components/multilevelmenu.html
-prevTitle: "MultiLevelMenu"
-next: search-components/ratingsfilter.html
-nextTitle: "RatingsFilter"
+permalink: range-components/dynamicrangeslider.html
+prev: range-components/rangeslider.html
+prevTitle: "RangeSlider"
+next: range-components/datepicker.html
+nextTitle: "DatePicker"
+redirect_from:
+    - 'search-components/dynamicrangeslider.html'
+    - 'range-components/dynamicrangeslider'
+    - 'dynamicrangeslider'
 ---
 
 ![Image to be displayed](https://i.imgur.com/PGHsWpA.png)
@@ -21,7 +25,7 @@ Example uses:
 
 > Note
 >
-> This component behaves similar to the [RangeSlider](/basic-components/rangeslider.html) except that the range is computed dynamically based on actual data.
+> This component behaves similar to the [RangeSlider](/range-components/rangeslider.html) except that the range is computed dynamically based on actual data.
 
 ## Usage
 

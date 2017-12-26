@@ -12,7 +12,7 @@ class Home extends Component {
   render() {
     const {data, location} = this.props;
     const title =
-      'Reactive Manual - Data-driven components for building Search UIs';
+      'Reactive Manual - React components for building Search UIs';
 
     return (
       <div css={{width: '100%'}}>
@@ -79,7 +79,7 @@ class Home extends Component {
                     fontSize: 30,
                   },
                 }}>
-                Data-driven components for building Maps and Search UIs
+                ReactiveSearch - React components for building Search UIs
               </p>
               <Flex
                 halign="center"

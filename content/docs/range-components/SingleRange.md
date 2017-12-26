@@ -3,11 +3,15 @@ id: singlerange
 title: "SingleRange"
 layout: docs
 sectionid: docs
-permalink: basic-components/singlerange.html
-prev: basic-components/multilist.html
-prevTitle: "MultiList"
-next: basic-components/multirange.html
+permalink: range-components/singlerange.html
+prev: list-components/multidatalist.html
+prevTitle: "List Components: MultiDataList"
+next: range-components/multirange.html
 nextTitle: "MultiRange"
+redirect_from:
+    - 'basic-components/singlerange.html'
+    - 'range-components/singlerange'
+    - 'singlerange'
 ---
 
 ![Image to be displayed](https://i.imgur.com/55jFax6.png)

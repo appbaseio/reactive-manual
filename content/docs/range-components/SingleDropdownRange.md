@@ -1,22 +1,26 @@
 ---
-id: multidropdownrange
-title: "MultiDropdownRange"
+id: singledropdownrange
+title: "SingleDropdownRange"
 layout: docs
 sectionid: docs
-permalink: basic-components/multidropdownrange.html
-prev: basic-components/singledropdownrange.html
-prevTitle: "SingleDropdownRange"
-next: basic-components/selectedfilters.html
-nextTitle: "SelectedFilters"
+permalink: range-components/singledropdownrange.html
+prev: range-components/multirange.html
+prevTitle: "MultiRange"
+next: range-components/multidropdownrange.html
+nextTitle: "MultiDropdownRange"
+redirect_from:
+    - 'basic-components/singledropdownrange.html'
+    - 'range-components/singledropdownrange'
+    - 'singledropdownrange'
 ---
 
-![Image to be displayed](https://i.imgur.com/Xwo2Aog.png)
+![Image to be displayed](https://i.imgur.com/A23Iu2w.png)
 
-`MultiDropdownRange` creates a dropdown based multiple numeric range UI component that is connected to a database field.
+`SingleDropdownRange` creates a dropdown based numeric range UI component.
 
 > Note
 >
-> It is exactly like the [MultiRange](/basic-components/multirange.html) component but displayed in a dropdown, ideal for showing additional UI filters while conserving screen space
+> This component is exactly like the [SingleRange](/basic-components/singlerange.html) component except the UI is based on a dropdown, ideal for showing additional UI filters while conserving screen space.
 
 Example uses:
 * filtering search results by prices in an e-commerce or food delivery experience.
@@ -27,7 +31,7 @@ Example uses:
 ### Basic Usage
 
 ```js
-<MultiDropdownRange
+<SingleDropdownRange
   componentId="PriceSensor"
   dataField="price"
   data={
@@ -43,7 +47,7 @@ Example uses:
 ### Usage With All Props
 
 ```js
-<MultiDropdownRange
+<SingleDropdownRange
   componentId="PriceSensor"
   dataField="price"
   data={
@@ -53,9 +57,9 @@ Example uses:
      {"start": 51, "end": 1000, "label": "First Date"}]
   }
   title="Prices"
-  defaultSelected={["Cheap", "Moderate"]}
-  placeholder="Select price ranges"
-  showFilter={true}
+  defaultSelected="Cheap"
+  placeholder="Select price range"
+  showFilter={false}
   filterLabel="Price"
   URLParams={false}
 />
@@ -71,8 +75,8 @@ Example uses:
     collection of UI `labels` with associated `start` and `end` range values.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
-- **defaultSelected** `Array` [optional]  
-    pre-select one or more labels from the `data` array.
+- **defaultSelected** `String` [optional]  
+    pre-select a label from the `data` array.
 - **placeholder** `String` [optional]  
     set the placeholder to show for the dropdown UI, useful when no option is `defaultSelected`. The default placeholder value is set to "Select...".
 - **showFilter** `Boolean` [optional]  
@@ -86,24 +90,24 @@ Example uses:
 
 <br>
 
-<iframe height='500' scrolling='no' title='MultiDropdownRange docs example' src='//codepen.io/sids-aquarius/embed/prYogw/?height=500&theme-id=light&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/prYogw/'>MultiDropdownRange docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
+<iframe height='500' scrolling='no' title='SingleDropdownRange docs example' src='//codepen.io/sids-aquarius/embed/dzryYr/?height=500&theme-id=light&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/dzryYr/'>SingleDropdownRange docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
 ## Styles
 
 All reactivebase components are `rbc` namespaced.
 
-![Annotated image](https://i.imgur.com/qO1I0Th.png)
+![Annotated image](https://i.imgur.com/iePJDR8.png)
 
 ## Extending
 
-`MultiDropdownRange` component can be extended to
+`SingleDropdownRange` component can be extended to
 1. customize the look and feel with `className`, `style`,
 2. update the underlying DB query with `customQuery`,
 3. connect with external interfaces using `beforeValueChange`, `onValueChange` and `onQueryChange`.
 
 ```js
-<MultiDropdownRange
+<SingleDropdownRange
   ...
   className="custom-class"
   style={{"paddingBottom": "10px"}}
@@ -147,14 +151,14 @@ All reactivebase components are `rbc` namespaced.
 - **className** `String`  
     CSS class to be injected on the component container.
 - **style** `Object`  
-    CSS styles to be applied to the **MultiDropdownRange** component.
+    CSS styles to be applied to the **SingleDropdownRange** component.
 - **customQuery** `Function`  
     takes **value** and **props** as parameters and **returns** the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.
-    `Note:` customQuery is called on value changes in the **MultiDropdownRange** component as long as the component is a part of `react` dependency of at least one other component.
+    `Note:` customQuery is called on value changes in the **SingleDropdownRange** component as long as the component is a part of `react` dependency of at least one other component.
 - **beforeValueChange** `Function`  
     is a callback function which accepts component's future **value** as a parameter and **returns** a promise. It is called everytime before a component's value changes. The promise, if and when resolved, triggers the execution of the component's query and if rejected, kills the query execution. This method can act as a gatekeeper for query execution, since it only executes the query after the provided promise has been resolved.
 - **onValueChange** `Function`  
-    is a callback function which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code(s) when range item(s) is/are selected in a "Prices" MultiDropdownRange.
+    is a callback function which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when a range item is selected in a "Prices" SingleDropdownRange.
 - **onQueryChange** `Function`  
     is a callback function which accepts component's **prevQuery** and **nextQuery** as parameters. It is called everytime the component's query changes. This prop is handy in cases where you want to generate a side-effect whenever the component's query would change.
 
@@ -162,11 +166,11 @@ All reactivebase components are `rbc` namespaced.
 
 <br>
 
-<iframe height='500' scrolling='no' title='MultiDropdownRange docs example' src='//codepen.io/sids-aquarius/embed/prYogw/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/prYogw/'>MultiDropdownRange docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
+<iframe height='500' scrolling='no' title='SingleDropdownRange docs example' src='//codepen.io/sids-aquarius/embed/dzryYr/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/dzryYr/'>SingleDropdownRange docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
 </iframe>
 
-1. [Range with default props](https://opensource.appbase.io/playground/?knob-title=MultiDropdownList&knob-URLParams%20%28not%20visible%20in%20storybook%29=false&knob-filterLabel=City%20filter&knob-defaultSelected%5B0%5D=London&knob-defaultSelected%5B1%5D=Melbourne&knob-selectAllLabel=All%20Cities&knob-showFilter=true&knob-sortBy=count&knob-size=100&knob-showCount=true&knob-placeholder=Select%20Cities&selectedKind=map%2FMultiDropdownRange&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+1. [Range with all the default props](https://opensource.appbase.io/playground/?knob-title=SingleList%3A%20City%20Filter&knob-defaultSelected=San%20Francisco&knob-selectAllLabel=All%20cities&knob-showRadio=true&knob-sortBy=count&knob-showCheckbox=true&knob-size=100&knob-showCount=true&knob-placeholder=s&knob-showSearch=true&selectedKind=map%2FSingleDropdownRange&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
-2. [Range with pre-selected values](https://opensource.appbase.io/playground/?knob-title=MultiDropdownList&knob-URLParams%20%28not%20visible%20in%20storybook%29=false&knob-filterLabel=City%20filter&knob-defaultSelected%5B0%5D=London&knob-defaultSelected%5B1%5D=Melbourne&knob-selectAllLabel=All%20Cities&knob-showFilter=true&knob-sortBy=count&knob-size=100&knob-showCount=true&knob-placeholder=Select%20Cities&selectedKind=map%2FMultiDropdownRange&selectedStory=With%20Default%20Selected&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+2. [Range with pre-selected items](https://opensource.appbase.io/playground/?knob-title=SingleList%3A%20City%20Filter&knob-defaultSelected=Moderate&knob-selectAllLabel=All%20cities&knob-showRadio=true&knob-sortBy=count&knob-showCheckbox=true&knob-size=100&knob-showCount=true&knob-placeholder=s&knob-showSearch=true&selectedKind=map%2FSingleDropdownRange&selectedStory=With%20Default%20Selected&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
-3. [Playground (with all knob actions)](https://opensource.appbase.io/playground/?knob-title=MultiDropdownRange%3A%20Earthquake%20Magnitude&knob-URLParams%20%28not%20visible%20in%20storybook%29=false&knob-filterLabel=City%20filter&knob-defaultSelected%5B0%5D=London&knob-defaultSelected%5B1%5D=Melbourne&knob-selectAllLabel=All%20Cities&knob-showFilter=true&knob-sortBy=count&knob-size=100&knob-showCount=true&knob-placeholder=Search%20places&selectedKind=map%2FMultiDropdownRange&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+3. [Playground (with all knob actions)](https://opensource.appbase.io/playground/?knob-title=SingleDropdownRange%3A%20Filter&knob-defaultSelected=Moderate&knob-selectAllLabel=All%20cities&knob-showRadio=true&knob-sortBy=count&knob-showCheckbox=true&knob-size=100&knob-showCount=true&knob-placeholder=Search%20prices&knob-showSearch=true&selectedKind=map%2FSingleDropdownRange&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)

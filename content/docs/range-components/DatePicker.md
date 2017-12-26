@@ -3,11 +3,15 @@ id: datepicker
 title: "DatePicker"
 layout: docs
 sectionid: docs
-permalink: basic-components/datepicker.html
-prev: basic-components/datasearch.html
-prevTitle: "DataSearch"
-next: basic-components/daterange.html
+permalink: range-components/datepicker.html
+prev: range-components/dynamicrangeslider.html
+prevTitle: "DynamicRangeSlider"
+next: range-components/daterange.html
 nextTitle: "DateRange"
+redirect_from:
+    - 'basic-components/datepicker.html'
+    - 'range-components/datepicker'
+    - 'datepicker'
 ---
 
 ![Image to be displayed](https://i.imgur.com/HnZexE9.png)

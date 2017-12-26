@@ -3,11 +3,15 @@ id: singledropdownlist
 title: "SingleDropdownList"
 layout: docs
 sectionid: docs
-permalink: basic-components/singledropdownlist.html
-prev: basic-components/multidatalist.html
-prevTitle: "MultiDataList"
-next: basic-components/multidropdownlist.html
+permalink: list-components/singledropdownlist.html
+prev: list-components/multilist.html
+prevTitle: "MultiList"
+next: list-components/multidropdownlist.html
 nextTitle: "MultiDropdownList"
+redirect_from:
+    - "basic-components/singledropdownlist.html"
+    - "list-components/singledropdownlist"
+    - "/singledropdownlist"
 ---
 
 ![Image to be displayed](https://i.imgur.com/PGYPXf6.png)
@@ -16,7 +20,7 @@ nextTitle: "MultiDropdownList"
 
 > Note
 >
-> This component is exactly like the [SingleList](/basic-component/singlelist.html) component except the UI is based on a dropdown, ideal for showing additional UI filters while conserving screen space.
+> This component is exactly like the [SingleList](/list-component/singlelist.html) component except the UI is based on a dropdown, ideal for showing additional UI filters while conserving screen space.
 
 Example uses:
 * select a category from a list of categories for filtering e-commerce search results.

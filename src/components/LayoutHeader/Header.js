@@ -151,24 +151,24 @@ class Header extends Component {
                 to="/getting-started/"
               />
               <HeaderLink
-                isActive={location.pathname.includes('/basic-components/')}
-                title="Basic Components"
-                to="/basic-components/textfield.html"
-              />
-              <HeaderLink
-                isActive={location.pathname.includes('/map-components/')}
-                title="Map Components"
-                to="/map-components/geodistanceslider.html"
+                isActive={location.pathname.includes('/base-components/')}
+                title="Components"
+                to="/base-components/textfield.html"
               />
               <HeaderLink
                 isActive={location.pathname.includes('/search-components/')}
-                title="Search Components"
+                title="Theming"
                 to="/search-components/categorysearch.html"
               />
               <HeaderLink
                 isActive={location.pathname.includes('/advanced/')}
                 title="Advanced"
                 to="/advanced/customquery.html"
+              />
+              <HeaderLink
+                isActive={location.pathname.includes('/map-components/')}
+                title="ReactiveMaps"
+                to="/map-components/geodistanceslider.html"
               />
             </nav>
             {location.pathname !== '/' && location.pathname !== '/reactive-manual/' && !this.state.showSearch && (

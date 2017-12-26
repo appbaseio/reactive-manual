@@ -3,11 +3,15 @@ id: datasearch
 title: "DataSearch"
 layout: docs
 sectionid: docs
-permalink: basic-components/datasearch.html
-prev: basic-components/numberbox.html
-prevTitle: "NumberBox"
-next: basic-components/datepicker.html
-nextTitle: "DatePicker"
+permalink: search-components/datasearch.html
+prev: range-components/daterange.html
+prevTitle: "Range Components: DateRange"
+next: search-components/categorysearch.html
+nextTitle: "CategorySearch"
+redirect_from:
+    - 'basic-components/datasearch.html'
+    - 'search-components/datasearch'
+    - 'datasearch'
 ---
 
 ![Image to be displayed](https://i.imgur.com/dLeyahL.png)

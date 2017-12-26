@@ -3,11 +3,15 @@ id: multirange
 title: "MultiRange"
 layout: docs
 sectionid: docs
-permalink: basic-components/multirange.html
-prev: basic-components/singlerange.html
+permalink: range-components/multirange.html
+prev: range-components/singlerange.html
 prevTitle: "SingleRange"
-next: basic-components/rangeslider.html
-nextTitle: "RangeSlider"
+next: range-components/singledropdownrange.html
+nextTitle: "SingleDropdownRange"
+redirect_from:
+    - 'basic-components/multirange.html'
+    - 'range-components/multirange'
+    - 'multirange'
 ---
 
 ![Image to be displayed](https://i.imgur.com/XqRjLSS.png)

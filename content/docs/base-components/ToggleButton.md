@@ -3,11 +3,15 @@ id: togglebutton
 title: "ToggleButton"
 layout: docs
 sectionid: docs
-permalink: basic-components/togglebutton.html
-prev: basic-components/textfield.html
+permalink: base-components/togglebutton.html
+prev: base-components/textfield.html
 prevTitle: "TextField"
-next: basic-components/singlelist.html
-nextTitle: "SingleList"
+next: base-components/numberbox.html
+nextTitle: "NumberBox"
+redirect_from:
+    - 'base-components/togglebutton'
+    - 'basic-components/togglebutton.html'
+    - 'togglebutton'
 ---
 
 ![Image to be displayed](https://i.imgur.com/Zyooy5N.png)

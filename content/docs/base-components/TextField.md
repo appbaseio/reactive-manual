@@ -3,14 +3,17 @@ id: textfield
 title: "TextField"
 layout: docs
 sectionid: docs
-permalink: basic-components/textfield.html
-redirect_from:
-    - "docs"
-    - "basic-components"
-    - "reactive-manual/docs"
-    - "reactive-manual/basic-components"
-next: basic-components/togglebutton.html
+permalink: base-components/textfield.html
+next: base-components/togglebutton.html
 nextTitle: "ToggleButton"
+redirect_from:
+    - 'docs'
+    - 'basic-components'
+    - 'reactive-manual/docs'
+    - 'reactive-manual/basic-components'
+    - 'reactive-manual/base-components'
+    - 'reactive-manual/base-components/textfield'
+    - 'textfield'
 ---
 
 ![Image to be displayed](https://i.imgur.com/0fnMNaz.png)

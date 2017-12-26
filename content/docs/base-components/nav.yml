@@ -1,0 +1,205 @@
+- title: Base Components
+  items:
+    - id: textfield
+      title: TextField
+      href: /base-components/textfield.html
+      forceInternal: true
+      subitems:
+        - id: usage
+          title: Usage
+          href: /base-components/textfield.html#usage
+          forceInternal: true
+        - id: props
+          title: Props
+          href: /base-components/textfield.html#props
+          forceInternal: true
+        - id: syntax
+          title: Syntax
+          href: /base-components/textfield.html#syntax
+          forceInternal: true
+        - id: styles
+          title: Styles
+          href: /base-components/textfield.html#styles
+          forceInternal: true
+        - id: extending
+          title: Extending
+          href: /base-components/textfield.html#extending
+          forceInternal: true
+        - id: examples
+          title: Examples
+          href: /base-components/textfield.html#examples
+          forceInternal: true
+    - id: togglebutton
+      title: ToggleButton
+      href: /base-components/togglebutton.html
+      forceInternal: true
+      subitems:
+        - id: usage
+          title: Usage
+          href: /base-components/togglebutton.html#usage
+          forceInternal: true
+        - id: props
+          title: Props
+          href: /base-components/togglebutton.html#props
+          forceInternal: true
+        - id: syntax
+          title: Syntax
+          href: /base-components/togglebutton.html#syntax
+          forceInternal: true
+        - id: styles
+          title: Styles
+          href: /base-components/togglebutton.html#styles
+          forceInternal: true
+        - id: extending
+          title: Extending
+          href: /base-components/togglebutton.html#extending
+          forceInternal: true
+        - id: examples
+          title: Examples
+          href: /base-components/togglebutton.html#examples
+          forceInternal: true
+    - id: numberbox
+      title: NumberBox
+      href: /base-components/numberbox.html
+      forceInternal: true
+      subitems:
+        - id: usage
+          title: Usage
+          href: /base-components/numberbox.html#usage
+          forceInternal: true
+        - id: props
+          title: Props
+          href: /base-components/numberbox.html#props
+          forceInternal: true
+        - id: syntax
+          title: Syntax
+          href: /base-components/numberbox.html#syntax
+          forceInternal: true
+        - id: styles
+          title: Styles
+          href: /base-components/numberbox.html#styles
+          forceInternal: true
+        - id: extending
+          title: Extending
+          href: /base-components/numberbox.html#extending
+          forceInternal: true
+        - id: examples
+          title: Examples
+          href: /base-components/numberbox.html#examples
+          forceInternal: true
+    - id: ratingsfilter
+      title: RatingsFilter
+      href: /base-components/ratingsfilter.html
+      forceInternal: true
+      subitems:
+        - id: usage
+          title: Usage
+          href: /base-components/ratingsfilter.html#usage
+          forceInternal: true
+        - id: props
+          title: Props
+          href: /base-components/ratingsfilter.html#props
+          forceInternal: true
+        - id: syntax
+          title: Syntax
+          href: /base-components/ratingsfilter.html#syntax
+          forceInternal: true
+        - id: styles
+          title: Styles
+          href: /base-components/ratingsfilter.html#styles
+          forceInternal: true
+        - id: extending
+          title: Extending
+          href: /base-components/ratingsfilter.html#extending
+          forceInternal: true
+        - id: examples
+          title: Examples
+          href: /base-components/ratingsfilter.html#examples
+          forceInternal: true
+    - id: tagcloud
+      title: TagCloud
+      href: /base-components/tagcloud.html
+      forceInternal: true
+      subitems:
+        - id: usage
+          title: Usage
+          href: /base-components/tagcloud.html#usage
+          forceInternal: true
+        - id: props
+          title: Props
+          href: /base-components/tagcloud.html#props
+          forceInternal: true
+        - id: syntax
+          title: Syntax
+          href: /base-components/tagcloud.html#syntax
+          forceInternal: true
+        - id: styles
+          title: Styles
+          href: /base-components/tagcloud.html#styles
+          forceInternal: true
+        - id: extending
+          title: Extending
+          href: /base-components/tagcloud.html#extending
+          forceInternal: true
+        - id: examples
+          title: Examples
+          href: /base-components/tagcloud.html#examples
+          forceInternal: true
+    - id: datacontroller
+      title: DataController
+      href: /base-components/datacontroller.html
+      forceInternal: true
+      subitems:
+        - id: usage
+          title: Usage
+          href: /base-components/datacontroller.html#usage
+          forceInternal: true
+        - id: props
+          title: Props
+          href: /base-components/datacontroller.html#props
+          forceInternal: true
+        - id: syntax
+          title: Syntax
+          href: /base-components/datacontroller.html#syntax
+          forceInternal: true
+        - id: styles
+          title: Styles
+          href: /base-components/datacontroller.html#styles
+          forceInternal: true
+        - id: extending
+          title: Extending
+          href: /base-components/datacontroller.html#extending
+          forceInternal: true
+        - id: examples
+          title: Examples
+          href: /base-components/datacontroller.html#examples
+          forceInternal: true
+    - id: selectedfilters
+      title: SelectedFilters
+      href: /base-components/selectedfilters.html
+      forceInternal: true
+      subitems:
+        - id: usage
+          title: Usage
+          href: /base-components/selectedfilters.html#usage
+          forceInternal: true
+        - id: props
+          title: Props
+          href: /base-components/selectedfilters.html#props
+          forceInternal: true
+        - id: syntax
+          title: Syntax
+          href: /base-components/selectedfilters.html#syntax
+          forceInternal: true
+        - id: styles
+          title: Styles
+          href: /base-components/selectedfilters.html#styles
+          forceInternal: true
+        - id: extending
+          title: Extending
+          href: /base-components/selectedfilters.html#extending
+          forceInternal: true
+        - id: examples
+          title: Examples
+          href: /base-components/selectedfilters.html#examples
+          forceInternal: true

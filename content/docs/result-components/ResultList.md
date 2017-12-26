@@ -3,11 +3,15 @@ id: resultlist
 title: "ResultList"
 layout: docs
 sectionid: docs
-permalink: search-components/resultlist.html
-prev: search-components/resultcard.html
-prevTitle: "ResultCard"
-next: search-components/viewswitcher.html
-nextTitle: "ViewSwitcher"
+permalink: result-components/resultlist.html
+prev: search-components/categorysearch.html
+prevTitle: "Search Components: CategorySearch"
+next: result-components/resultcard.html
+nextTitle: "ResultCard"
+redirect_from:
+    - 'search-components/resultlist.html'
+    - 'result-components/resultlist'
+    - 'resultlist'
 ---
 
 ![Image to be displayed](https://i.imgur.com/X3WPi1k.png)

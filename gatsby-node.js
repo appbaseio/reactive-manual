@@ -66,8 +66,11 @@ exports.createPages = async ({graphql, boundActionCreators}) => {
       slug.includes('contributing/') ||
       slug.includes('docs/') ||
       slug.includes('getting-started/') ||
-      slug.includes('basic-components/') ||
+      slug.includes('base-components/') ||
+      slug.includes('list-components/') ||
+      slug.includes('range-components/') ||
       slug.includes('search-components/') ||
+      slug.includes('result-components/') ||
       slug.includes('map-components/') ||
       slug.includes('advanced/') ||
       slug.includes('warnings/')
@@ -80,8 +83,11 @@ exports.createPages = async ({graphql, boundActionCreators}) => {
       } else if (
         slug.includes('contributing/') ||
         slug.includes('docs/') ||
-        slug.includes('basic-components/') ||
+        slug.includes('base-components/') ||
+        slug.includes('list-components/') ||
+        slug.includes('range-components/') ||
         slug.includes('search-components/') ||
+        slug.includes('result-components/') ||
         slug.includes('map-components/') ||
         slug.includes('advanced/') ||
         slug.includes('warnings/')
@@ -155,7 +161,7 @@ exports.createPages = async ({graphql, boundActionCreators}) => {
       }
     `,
   );
-  
+
   createRedirect({
     fromPath: '/index.html',
     redirectInBrowser: true,

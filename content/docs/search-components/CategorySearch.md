@@ -4,11 +4,15 @@ title: "CategorySearch"
 layout: docs
 sectionid: docs
 permalink: search-components/categorysearch.html
-next: search-components/multilevelmenu.html
-nextTitle: "MultiLevelMenu"
+prev: search-components/datasearch.html
+prevTitle: "DataSearch"
+next: result-components/resultlist.html
+nextTitle: "Result Components: ResultList"
 redirect_from:
-    - "search-components"
-    - "reactive-manual/search-components"
+    - 'search-components'
+    - 'reactive-manual/search-components'
+    - 'search-components/categorysearch'
+    - 'categorysearch'
 ---
 
 ![Image to be displayed](https://i.imgur.com/wRErIC9.png)

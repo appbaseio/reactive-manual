@@ -3,11 +3,15 @@ id: multilist
 title: "MultiList"
 layout: docs
 sectionid: docs
-permalink: basic-components/multilist.html
-prev: basic-components/singlelist.html
+permalink: list-components/multilist.html
+prev: list-components/singlelist.html
 prevTitle: "SingleList"
-next: basic-components/singlerange.html
-nextTitle: "SingleRange"
+next: list-components/singledropdownlist.html
+nextTitle: "SingleDropdownList"
+redirect_from:
+    - "basic-components/multilist.html"
+    - "list-components/multilist"
+    - "/multilist"
 ---
 
 ![Image to be displayed](https://i.imgur.com/KuSUJyX.png)

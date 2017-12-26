@@ -3,11 +3,15 @@ id: datacontroller
 title: "DataController"
 layout: docs
 sectionid: docs
-permalink: basic-components/datacontroller.html
-prev: basic-components/daterange.html
-prevTitle: "DateRange"
-next: basic-components/reactivelist.html
-nextTitle: "ReactiveList"
+permalink: base-components/datacontroller.html
+prev: base-components/tagcloud.html
+prevTitle: "TagCloud"
+next: base-components/selectedfilters.html
+nextTitle: "SelectedFilters"
+redirect_from:
+    - 'basic-components/datacontroller.html'
+    - 'base-components/datacontroller'
+    - 'datacontroller'
 ---
 
 ![Image to be displayed](https://i.imgur.com/Lj5O2qg.png)

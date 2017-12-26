@@ -3,11 +3,15 @@ id: numberbox
 title: "NumberBox"
 layout: docs
 sectionid: docs
-permalink: basic-components/numberbox.html
-prev: basic-components/rangeslider.html
-prevTitle: "RangeSlider"
-next: basic-components/datasearch.html
-nextTitle: "DataSearch"
+permalink: base-components/numberbox.html
+prev: base-components/togglebutton.html
+prevTitle: "ToggleButton"
+next: base-components/ratingsfilter.html
+nextTitle: "RatingsFilter"
+redirect_from:
+    - 'basic-components/numberbox.html'
+    - 'base-components/numberbox'
+    - 'numberbox'
 ---
 
 ![Image to be displayed](https://i.imgur.com/0Xfg8pM.png)
