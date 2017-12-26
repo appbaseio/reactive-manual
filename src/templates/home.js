@@ -79,7 +79,7 @@ class Home extends Component {
                     fontSize: 30,
                   },
                 }}>
-                ReactiveSearch - React components for building Search UIs
+                Components for Elasticsearch
               </p>
               <Flex
                 halign="center"
