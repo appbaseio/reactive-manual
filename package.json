@@ -1,6 +1,6 @@
 {
   "name": "reactive-manual",
-  "description": "Data-driven components for building Maps and Search UIs",
+  "description": "Reactive Manual: React components for Elasticsearch -- Documentation",
   "author": {
     "name": "Divyanshu Maithani",
     "email": "div.blackcat@gmail.com",
@@ -26,7 +26,8 @@
   "resolutions": {
     "gatsby/graphql": "0.10.5",
     "gatsby/react": "16.0.0",
-    "gatsby/react-dom": "16.0.0"
+    "gatsby/react-dom": "16.0.0",
+    "eslint-plugin-relay/graphql": "0.10.5"
   },
   "dependencies": {
     "@gaearon/react-live": "1.7.1-with-safari-fix",
@@ -109,6 +110,6 @@
   },
   "devDependencies": {
     "eslint-config-prettier": "^2.6.0",
-    "gh-pages": "^1.0.0"
+    "gh-pages": "^1.1.0"
   }
 }

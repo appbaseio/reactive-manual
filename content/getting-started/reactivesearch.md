@@ -7,14 +7,14 @@ permalink: getting-started/reactivesearch.html
 next: getting-started/data.html
 nextTitle: "Importing Data"
 redirect_from:
-    - "getting-started/"
-    - "reactive-manual/getting-started/"
-    - "getting-started/reactivesearch"
-    - "reactive-manual/getting-started/reactivesearch"
-    - "reactive-manual/install"
-    - "install"
-    - "reactive-manual/quickstart"
-    - "quickstart"
+    - "/getting-started/"
+    - "/reactive-manual/getting-started/"
+    - "/getting-started/reactivesearch"
+    - "/reactive-manual/getting-started/reactivesearch"
+    - "/reactive-manual/install"
+    - "/install"
+    - "/reactive-manual/quickstart"
+    - "/quickstart"
 ---
 
 ### Step 0: Install ReactiveSearch
