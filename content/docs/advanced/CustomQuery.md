@@ -4,8 +4,10 @@ title: "Custom Queries"
 layout: docs
 sectionid: docs
 permalink: advanced/customquery.html
+prev: theming/class.html
+prevTitle: "Theming: ClassName Injection"
 next: advanced/react.html
-nextTitle: "Reactive Chaining"
+nextTitle: "Reactive Prop"
 redirect_from:
     - "advanced"
     - "reactive-manual/advanced"

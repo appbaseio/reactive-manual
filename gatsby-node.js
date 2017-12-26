@@ -71,8 +71,9 @@ exports.createPages = async ({graphql, boundActionCreators}) => {
       slug.includes('range-components/') ||
       slug.includes('search-components/') ||
       slug.includes('result-components/') ||
-      slug.includes('map-components/') ||
+      slug.includes('theming/') ||
       slug.includes('advanced/') ||
+      slug.includes('map-components/') ||
       slug.includes('warnings/')
     ) {
       let template;
@@ -88,8 +89,9 @@ exports.createPages = async ({graphql, boundActionCreators}) => {
         slug.includes('range-components/') ||
         slug.includes('search-components/') ||
         slug.includes('result-components/') ||
-        slug.includes('map-components/') ||
+        slug.includes('theming/') ||
         slug.includes('advanced/') ||
+        slug.includes('map-components/') ||
         slug.includes('warnings/')
       ) {
         template = docsTemplate;

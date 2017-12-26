@@ -1,13 +1,13 @@
 ---
-id: react
-title: "React Prop"
+id: reactivecomponent
+title: "Reactive Component"
 layout: docs
-sectionid: docs
-permalink: advanced/react.html
-prev: advanced/customquery.html
-prevTitle: "Defining Custom Queries"
-next: advanced/reactivecomponent.html
-nextTitle: "Reactive Component"
+sectionid: reactivecomponent
+permalink: advanced/reactivecomponent.html
+prev: advanced/react.html
+prevTitle: "React Prop"
+next: advanced/mapping.html
+nextTitle: "Indexing and Data Mappings"
 ---
 
 One of the key ideas behind Reactive Search and Reactive Maps is the reactive design pattern, which allows defining how a component reacts to changes in the states of the sensors.

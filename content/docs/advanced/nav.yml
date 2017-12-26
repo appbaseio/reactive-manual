@@ -25,54 +25,33 @@
           title: Not familiar to ElasticSearch?
           href: /advanced/customquery.html#not-familiar-to-elasticsearch
           forceInternal: true
-    - id: react
-      title: Reactive Chaining
-      href: /advanced/react.html
+    - id: reactivecomponent
+      title: Reactive Component
+      href: /advanced/reactivecomponent.html
       forceInternal: true
       subitems:
         - id: usage
           title: Usage
-          href: /advanced/react.html#usage
+          href: /advanced/reactivecomponent.html#usage
           forceInternal: true
         - id: props
           title: Props
-          href: /advanced/react.html#props
+          href: /advanced/reactivecomponent.html#props
           forceInternal: true
+        - id: react
+          title: Reactive Chaining
+          href: /advanced/reactivecomponent.html
+          forceInternal: true
+          subitems:
+            - id: usage
+              title: Usage
+              href: /advanced/reactivecomponent.html#usage
+              forceInternal: true
+            - id: props
+              title: Props
+              href: /advanced/reactivecomponent.html#props
+              forceInternal: true
     - id: mapping
       title: Elasticsearch Mapping
       href: /advanced/mapping.html
       forceInternal: true
-    - id: styleguide
-      title: Style Guide
-      href: /advanced/styleguide.html
-      forceInternal: true
-      subitems:
-        - id: principles
-          title: Principles
-          href: /advanced/styleguide.html#principles
-          forceInternal: true
-        - id: class-api
-          title: Class API
-          href: /advanced/styleguide.html#class-api
-          forceInternal: true
-        - id: styling-within-components
-          title: Styling within Components
-          href: /advanced/styleguide.html#styling-within-components
-          forceInternal: true
-    - id: theming
-      title: Theming
-      href: /advanced/theming.html
-      forceInternal: true
-      subitems:
-        - id: introduction
-          title: Introduction
-          href: /advanced/theming.html#introduction
-          forceInternal: true
-        - id: usage
-          title: Usage
-          href: /advanced/theming.html#usage
-          forceInternal: true
-        - id: examples
-          title: Examples
-          href: /advanced/theming.html#examples
-          forceInternal: true

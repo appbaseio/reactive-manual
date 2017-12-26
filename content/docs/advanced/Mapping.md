@@ -1,13 +1,11 @@
 ---
 id: mapping
-title: "Elasticsearch Mapping"
+title: "Indexing and Data Mapping"
 layout: docs
 sectionid: docs
 permalink: advanced/mapping.html
-prev: advanced/react.html
-prevTitle: "Reactive Chaining"
-next: advanced/styleguide.html
-nextTitle: "Style Guide"
+prev: advanced/reactivecomponent.html
+prevTitle: "Reactive Component"
 ---
 
 1. Close the Index:      
@@ -107,7 +105,7 @@ curl 'http://scalr.api.appbase.io/map_demo/_mapping/meetupdata1?ignore_conflicts
           "group_city": {
             "type": "string",
             "fields": {
-              "raw": { 
+              "raw": {
                 "type":  "string",
                 "index": "not_analyzed"
               }
@@ -146,10 +144,10 @@ curl 'http://scalr.api.appbase.io/map_demo/_mapping/meetupdata1?ignore_conflicts
             "search_analyzer": "whitespace_analyzer"
           }
         }
-        
+
       }
     }
-    
+
   }
 }
 
