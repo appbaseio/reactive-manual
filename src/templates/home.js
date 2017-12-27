@@ -109,7 +109,7 @@ class Home extends Component {
                 </CtaItem>
                 <CtaItem>
                   <ButtonLink
-                    to="/getting-started/"
+                    to="/getting-started/componentsindex.html"
                     type="secondary">
                     Components Overview
                   </ButtonLink>
