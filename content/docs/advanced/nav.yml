@@ -25,6 +25,19 @@
           title: Not familiar to ElasticSearch?
           href: /advanced/customquery.html#not-familiar-to-elasticsearch
           forceInternal: true
+    - id: react
+      title: React Prop
+      href: /advanced/react.html
+      forceInternal: true
+      subitems:
+        - id: usage
+          title: Usage
+          href: /advanced/react.html#usage
+          forceInternal: true
+        - id: props
+          title: Props
+          href: /advanced/react.html#props
+          forceInternal: true
     - id: reactivecomponent
       title: Reactive Component
       href: /advanced/reactivecomponent.html
@@ -38,19 +51,6 @@
           title: Props
           href: /advanced/reactivecomponent.html#props
           forceInternal: true
-        - id: react
-          title: Reactive Chaining
-          href: /advanced/reactivecomponent.html
-          forceInternal: true
-          subitems:
-            - id: usage
-              title: Usage
-              href: /advanced/reactivecomponent.html#usage
-              forceInternal: true
-            - id: props
-              title: Props
-              href: /advanced/reactivecomponent.html#props
-              forceInternal: true
     - id: mapping
       title: Elasticsearch Mapping
       href: /advanced/mapping.html

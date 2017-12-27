@@ -11,6 +11,8 @@ nextTitle: "Styles"
 redirect_from:
     - 'advanced/theming.html'
     - 'theming/themes'
+    - 'theming/'
+    - 'theming'
     - 'themes'
 ---
 
