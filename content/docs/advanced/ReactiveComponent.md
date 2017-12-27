@@ -8,6 +8,9 @@ prev: advanced/react.html
 prevTitle: "React Prop"
 next: advanced/mapping.html
 nextTitle: "Indexing and Data Mappings"
+redirect_from:
+    - "advanced/reactivecomponent"
+    - "reactivecomponent"
 ---
 
 One of the key ideas behind Reactive Search and Reactive Maps is the reactive design pattern, which allows defining how a component reacts to changes in the states of the sensors.
