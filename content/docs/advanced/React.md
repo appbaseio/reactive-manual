@@ -8,6 +8,9 @@ prev: advanced/customquery.html
 prevTitle: "Defining Custom Queries"
 next: advanced/reactivecomponent.html
 nextTitle: "Reactive Component"
+redirect_from:
+    - 'advanced/react'
+    - 'react'
 ---
 
 One of the key ideas behind Reactive Search and Reactive Maps is the reactive design pattern, which allows defining how a component reacts to changes in the states of the sensors.
