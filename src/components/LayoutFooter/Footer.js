@@ -124,6 +124,20 @@ const Footer = ({layoutHasSidebar = false}) => (
         </div>
       </div>
     </Container>
+    <div
+      css={{
+        position: 'absolute',
+        margin: '20px 0 0 0',
+        padding: '10px 0',
+        backgroundColor: colors.blueDark,
+        textAlign: 'center',
+        width: '100%',
+        bottom: 0,
+      }}
+    >
+      Made with <a href="https://github.com/gatsbyjs/gatsby" target="_blank">GatsbyJS</a>
+      , <a href="https://github.com/reactjs/reactjs.org" target="_blank">Reactjs</a> and ❤️
+    </div>
   </footer>
 );
 
