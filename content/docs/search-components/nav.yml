@@ -13,9 +13,9 @@
           title: Props
           href: /search-components/datasearch.html#props
           forceInternal: true
-        - id: syntax
-          title: Syntax
-          href: /search-components/datasearch.html#syntax
+        - id: demo
+          title: Demo
+          href: /search-components/datasearch.html#demo
           forceInternal: true
         - id: styles
           title: Styles
@@ -42,9 +42,9 @@
           title: Props
           href: /search-components/categorysearch.html#props
           forceInternal: true
-        - id: syntax
-          title: Syntax
-          href: /search-components/categorysearch.html#syntax
+        - id: demo
+          title: Demo
+          href: /search-components/categorysearch.html#demo
           forceInternal: true
         - id: styles
           title: Styles

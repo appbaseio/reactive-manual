@@ -13,9 +13,9 @@
           title: Props
           href: /range-components/singlerange.html#props
           forceInternal: true
-        - id: syntax
-          title: Syntax
-          href: /range-components/singlerange.html#syntax
+        - id: demo
+          title: Demo
+          href: /range-components/singlerange.html#demo
           forceInternal: true
         - id: styles
           title: Styles
@@ -42,9 +42,9 @@
           title: Props
           href: /range-components/multirange.html#props
           forceInternal: true
-        - id: syntax
-          title: Syntax
-          href: /range-components/multirange.html#syntax
+        - id: demo
+          title: Demo
+          href: /range-components/multirange.html#demo
           forceInternal: true
         - id: styles
           title: Styles
@@ -71,9 +71,9 @@
           title: Props
           href: /range-components/singledropdownrange.html#props
           forceInternal: true
-        - id: syntax
-          title: Syntax
-          href: /range-components/singledropdownrange.html#syntax
+        - id: demo
+          title: Demo
+          href: /range-components/singledropdownrange.html#demo
           forceInternal: true
         - id: styles
           title: Styles
@@ -100,9 +100,9 @@
           title: Props
           href: /range-components/multidropdownrange.html#props
           forceInternal: true
-        - id: syntax
-          title: Syntax
-          href: /range-components/multidropdownrange.html#syntax
+        - id: demo
+          title: Demo
+          href: /range-components/multidropdownrange.html#demo
           forceInternal: true
         - id: styles
           title: Styles
@@ -129,9 +129,9 @@
           title: Props
           href: /range-components/rangeslider.html#props
           forceInternal: true
-        - id: syntax
-          title: Syntax
-          href: /range-components/rangeslider.html#syntax
+        - id: demo
+          title: Demo
+          href: /range-components/rangeslider.html#demo
           forceInternal: true
         - id: styles
           title: Styles
@@ -158,9 +158,9 @@
           title: Props
           href: /range-components/dynamicrangeslider.html#props
           forceInternal: true
-        - id: syntax
-          title: Syntax
-          href: /range-components/dynamicrangeslider.html#syntax
+        - id: demo
+          title: Demo
+          href: /range-components/dynamicrangeslider.html#demo
           forceInternal: true
         - id: styles
           title: Styles
@@ -187,9 +187,9 @@
           title: Props
           href: /range-components/datepicker.html#props
           forceInternal: true
-        - id: syntax
-          title: Syntax
-          href: /range-components/datepicker.html#syntax
+        - id: demo
+          title: Demo
+          href: /range-components/datepicker.html#demo
           forceInternal: true
         - id: styles
           title: Styles
@@ -216,9 +216,9 @@
           title: Props
           href: /range-components/daterange.html#props
           forceInternal: true
-        - id: syntax
-          title: Syntax
-          href: /range-components/daterange.html#syntax
+        - id: demo
+          title: Demo
+          href: /range-components/daterange.html#demo
           forceInternal: true
         - id: styles
           title: Styles
