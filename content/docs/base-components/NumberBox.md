@@ -52,33 +52,34 @@ Example uses:
 
 ## Props
 
-- **componentId** `String`
+- **componentId** `String`  
     unique identifier of the component, can be referenced in other components' `react` prop.
-- **dataField** `String`
+- **dataField** `String`  
     DB data field to be mapped with the component's UI view. The selected box value creates a database query on this field.
-- **data** `Object`
+- **data** `Object`  
     an object with `start` and `end` values and optionally an associated `label` to be displayed in the UI.
-- **title** `String or HTML` [optional]
+- **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
-- **defaultSelected** `Number` [optional]
+- **defaultSelected** `Number` [optional]  
     preset a valid value within the [start, end] range.
-- **labelPosition** `String` [optional]
+- **labelPosition** `String` [optional]  
     position where label is shown, one of "left", "top", "right", "bottom". Defaults to `left`.
-- **queryFormat** `String` [optional]
+- **queryFormat** `String` [optional]  
     type of query to perform, one of `exact`, `gte` and `lte`:
     * `exact` implies a query match with the exact value as the one selected in the UI view,
     * `gte` implies a query match that satisfies all values that are greater than or equal to the one selected in the UI view.
-    * `lte` implies a query match that satisfies all values that are less than or equal to the one selected in the UI view.
+    * `lte` implies a query match that satisfies all values that are less than or equal to the one selected in the UI view.  
 
     Defaults to `gte`.
-- **URLParams** `Boolean` [optional]
+- **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the number. This is useful for sharing URLs with the component state. Defaults to `false`.
 
-## CodeSandbox Demo
+## Syntax
 
-<br />
+<br>
 
-<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/dev/packages/web/examples/NumberBox" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+<iframe height='500' scrolling='no' title='NumberBox docs example' src='//codepen.io/sids-aquarius/embed/qXvBag/?height=500&theme-id=light&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/qXvBag/'>NumberBox docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ## Styles
 
@@ -136,22 +137,27 @@ All reactivebase components are `rbc` namespaced.
 />
 ```
 
-- **className** `String`
+- **className** `String`  
     CSS class to be injected on the component container.
-- **style** `Object`
+- **style** `Object`  
     CSS styles to be applied to the **NumberBox** component.
-- **customQuery** `Function`
+- **customQuery** `Function`  
     takes **value** and **props** as parameters and **returns** the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.
     `Note:` customQuery is called on value changes in the **NumberBox** component as long as the component is a part of `react` dependency of at least one other component.
-- **beforeValueChange** `Function`
+- **beforeValueChange** `Function`  
     is a callback function which accepts component's future **value** as a parameter and **returns** a promise. It is called everytime before a component's value changes. The promise, if and when resolved, triggers the execution of the component's query and if rejected, kills the query execution. This method can act as a gatekeeper for query execution, since it only executes the query after the provided promise has been resolved.
-- **onValueChange** `Function`
+- **onValueChange** `Function`  
     is a callback function which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when a number is selected in a NumberBox.
-- **onQueryChange** `Function`
+- **onQueryChange** `Function`  
     is a callback function which accepts component's **prevQuery** and **nextQuery** as parameters. It is called everytime the component's query changes. This prop is handy in cases where you want to generate a side-effect whenever the component's query would change.
 
 
 ## Examples
+
+<br>
+
+<iframe height='500' scrolling='no' title='NumberBox docs example' src='//codepen.io/sids-aquarius/embed/qXvBag/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/qXvBag/'>NumberBox docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 1. [A NumberBox component with defaults](https://opensource.appbase.io/playground/?knob-title=Number%20of%20Guests&knob-defaultSelected=2&selectedKind=search%2FNumberBox&selectedStory=With%20defaultSelected&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 

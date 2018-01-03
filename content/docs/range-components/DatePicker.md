@@ -58,21 +58,21 @@ Example uses:
 
 ## Props
 
-- **componentId** `String`
+- **componentId** `String`  
     unique identifier of the component, can be referenced in other components' `react` prop.
-- **dataField** `String`
+- **dataField** `String`  
     data field to be connected to the component's UI view.
-- **title** `String or HTML` [optional]
+- **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
-- **defaultSelected** `Object of Moment` [optional]
+- **defaultSelected** `Object of Moment` [optional]  
     pre-select a default date based on a [moment](https://github.com/moment/moment/) object representing a date.
-- **focused** `Boolean` [optional]
+- **focused** `Boolean` [optional]  
     whether to display the calendar view on initial load. Defaults to `true`.
-- **numberOfMonths** `Number` [optional]
+- **numberOfMonths** `Number` [optional]  
     number of months to be shown in the calendar view. Defaults to 1.
-- **allowAllDates** `Boolean` [optional]
+- **allowAllDates** `Boolean` [optional]  
     whether to allow selecting all dates or dates starting from today. Defaults to `true`, i.e. allowing all dates.
-- **queryFormat** `String` [optional]
+- **queryFormat** `String` [optional]  
     sets the date format to be used in the query, can accept one of the following:
     * `epoch_millis` (default) date is expressed as **milliseconds** since epoch.
     * `epoch_seconds` date is expressed as **seconds** since epoch.
@@ -84,7 +84,7 @@ Example uses:
     * `basic_date_time_no_millis` date expressed in `yyyyMMddTHH:mm:ssZ` format.
     * `basic_time` date expressed as just time in the `HHmmss.SSSZ` format.
     * `basic_time_no_millis` date expressed as just time but without milliseconds in the `HHmmssZ` format.
-- **extra** `Object` [optional]
+- **extra** `Object` [optional]  
     supports the full gauntlet of props as defined in airbnb's [react-dates](https://github.com/airbnb/react-dates) component.
     An example `extra` prop object would look like:
 
@@ -94,20 +94,21 @@ Example uses:
       "showClearDate": true
     }}
     ```
-- **placeholder** `String` [optional]
+- **placeholder** `String` [optional]  
     placeholder to be shown in the field when no date is selected. Defaults to "Select Date".
-- **showFilter** `Boolean` [optional]
+- **showFilter** `Boolean` [optional]  
     show as filter when a value is selected in a global selected filters view. Defaults to `true`.
-- **filterLabel** `String` [optional]
+- **filterLabel** `String` [optional]  
     An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
-- **URLParams** `Boolean` [optional]
+- **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
 
-## CodeSandbox Demo
+## Syntax
 
-<br />
+<br>
 
-<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/dev/packages/web/examples/DatePicker" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+<iframe height='500' scrolling='no' title='DatePicker docs example' src='//codepen.io/sids-aquarius/embed/VzRwmJ/?height=500&theme-id=light&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/VzRwmJ/'>DatePicker docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ## Styles
 
@@ -164,21 +165,26 @@ All reactivebase components are `rbc` namespaced.
 />
 ```
 
-- **className** `String`
+- **className** `String`  
     CSS class to be injected on the component container.
-- **style** `Object`
+- **style** `Object`  
     CSS styles to be applied to the **DatePicker** component.
-- **customQuery** `Function`
+- **customQuery** `Function`  
     takes **value** and **props** as parameters and **returns** the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.
     `Note:` customQuery is called on value changes in the **DatePicker** component as long as the component is a part of `react` dependency of at least one other component.
-- **beforeValueChange** `Function`
+- **beforeValueChange** `Function`  
     is a callback function which accepts component's future **value** as a parameter and **returns** a promise. It is called everytime before a component's value changes. The promise, if and when resolved, triggers the execution of the component's query and if rejected, kills the query execution. This method can act as a gatekeeper for query execution, since it only executes the query after the provided promise has been resolved.
-- **onValueChange** `Function`
+- **onValueChange** `Function`  
     is a callback function which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when a particular date is selected in a DatePicker.
-- **onQueryChange** `Function`
+- **onQueryChange** `Function`  
     is a callback function which accepts component's **prevQuery** and **nextQuery** as parameters. It is called everytime the component's query changes. This prop is handy in cases where you want to generate a side-effect whenever the component's query would change.
 
 ## Examples
+
+<br>
+
+<iframe height='500' scrolling='no' title='DatePicker docs example' src='//codepen.io/sids-aquarius/embed/VzRwmJ/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/VzRwmJ/'>DatePicker docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 1. [Basic component example](https://opensource.appbase.io/playground/?knob-visible=true&knob-title=DataController&knob-dataLabel=★%20%20A%20customizable%20UI%20widget%20★&knob-defaultSelected=default&knob-style=%7B"paddingBottom"%3A"10px"%7D&knob-showFilter=true&knob-filterLabel=Custom%20Filter%20Name&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&selectedKind=map%2FDatePicker&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 
