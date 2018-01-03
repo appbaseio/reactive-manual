@@ -71,38 +71,36 @@ While `RangeSlider` only requires the above props to be used, it comes with many
 
 ## Props
 
-- **componentId** `String`  
+- **componentId** `String`
     unique identifier of the component, can be referenced in other components' `react` prop.
-- **dataField** `String`  
+- **dataField** `String`
     DB data field to be mapped with the component's UI view. The selected range creates a database query on this field.
 - **range** `Object`
     an object with `start` and `end` keys and corresponding numeric values denoting the minimum and maximum possible slider values.
-- **title** `String or HTML` [optional]  
+- **title** `String or HTML` [optional]
     title of the component to be shown in the UI.
-- **defaultSelected** `Object` [optional]  
+- **defaultSelected** `Object` [optional]
     an object with `start` and `end` keys and corresponding numeric values denoting the pre-selected range values.
-- **rangeLabels** `Object` [optional]  
+- **rangeLabels** `Object` [optional]
     an object with `start` and `end` keys and corresponding `String` labels to show labels near the ends of the `RangeSlider` component.
 - **snap** `Boolean` [optional]
     makes the slider snap on to points depending on the `stepValue` when the slider is released. Defaults to `true`. When set to `false`, `stepValue` is ignored.
-- **stepValue** `Number` [optional]  
+- **stepValue** `Number` [optional]
     step value specifies the slider stepper. Value should be an integer between 1 and floor(#total-range/2). Defaults to 1.
-- **showHistogram** `Boolean` [optional]  
+- **showHistogram** `Boolean` [optional]
     whether to display the range histogram or not. Defaults to `true`.
-- **interval** `Number` [optional]  
+- **interval** `Number` [optional]
     set the histogram bar interval, applicable when *showHistogram* is `true`. Defaults to `(range.end - range.start) / 10`.
-- **loader** `String or HTML` [optional]  
+- **loader** `String or HTML` [optional]
     display text while the data is being fetched, accepts `String` or `HTML` markup.
-- **URLParams** `Boolean` [optional]  
+- **URLParams** `Boolean` [optional]
     enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
 
-## Syntax
+## CodeSandbox Demo
 
-<br>
+<br />
 
-<iframe height='500' scrolling='no' title='RangeSlider docs example' src='//codepen.io/sids-aquarius/embed/mModrd/?height=500&theme-id=light&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/mModrd/'>RangeSlider docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
-
+<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/dev/packages/web/examples/RangeSlider" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 ## Styles
 
 All reactivebase components are `rbc` namespaced.
@@ -162,37 +160,32 @@ All reactivebase components are `rbc` namespaced.
 />
 ```
 
-- **className** `String`  
+- **className** `String`
     CSS class to be injected on the component container.
-- **style** `Object`  
+- **style** `Object`
     CSS styles to be applied to the **RangeSlider** component.
-- **customQuery** `Function`  
+- **customQuery** `Function`
     takes **value** and **props** as parameters and **returns** the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.
     `Note:` customQuery is called on value changes in the **RangeSlider** component as long as the component is a part of `react` dependency of at least one other component.
-- **beforeValueChange** `Function`  
+- **beforeValueChange** `Function`
     is a callback function which accepts component's future **value** as a parameter and **returns** a promise. It is called everytime before a component's value changes. The promise, if and when resolved, triggers the execution of the component's query and if rejected, kills the query execution. This method can act as a gatekeeper for query execution, since it only executes the query after the provided promise has been resolved.
-- **onValueChange** `Function`  
+- **onValueChange** `Function`
     is a callback function which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when some range is selected in a "Discounted Price" RangeSlider.
-- **onQueryChange** `Function`  
+- **onQueryChange** `Function`
     is a callback function which accepts component's **prevQuery** and **nextQuery** as parameters. It is called everytime the component's query changes. This prop is handy in cases where you want to generate a side-effect whenever the component's query would change.
-- **react** `Object`  
+- **react** `Object`
     specify dependent components to reactively update **RangeSlider's** data view.
-    - **key** `String`  
+    - **key** `String`
         one of `and`, `or`, `not` defines the combining clause.
         - **and** clause implies that the results will be filtered by matches from **all** of the associated component states.
         - **or** clause implies that the results will be filtered by matches from **at least one** of the associated component states.
         - **not** clause implies that the results will be filtered by an **inverse** match of the associated component states.
-    - **value** `String or Array or Object`  
+    - **value** `String or Array or Object`
         - `String` is used for specifying a single component by its `componentId`.
         - `Array` is used for specifying multiple components by their `componentId`.
         - `Object` is used for nesting other key clauses.
 
 ## Examples
-
-<br>
-
-<iframe height='500' scrolling='no' title='RangeSlider docs example' src='//codepen.io/sids-aquarius/embed/mModrd/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/mModrd/'>RangeSlider docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
 
 See more stories for RangeSlider on playground.
 
