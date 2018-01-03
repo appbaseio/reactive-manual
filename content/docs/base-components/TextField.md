@@ -64,12 +64,11 @@ redirect_from:
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the text field. This is useful for sharing URLs with the component state. Defaults to `false`.
 
-## Syntax
+## Demo
 
-<br>
+<br />
 
-<iframe height='500' scrolling='no' title='TextField docs example' src='//codepen.io/sids-aquarius/embed/OjqJbN/?height=500&theme-id=light&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/OjqJbN/'>TextField docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/dev/packages/web/examples/TextField" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 ## Styles
 
@@ -148,11 +147,6 @@ All reactivebase components are `rbc` namespaced.
     is a callback function which accepts component's **prevQuery** and **nextQuery** as parameters. It is called everytime the component's query changes. This prop is handy in cases where you want to generate a side-effect whenever the component's query would change.
 
 ## Examples
-
-<br>
-
-<iframe height='500' scrolling='no' title='TextField docs example' src='//codepen.io/sids-aquarius/embed/OjqJbN/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/OjqJbN/'>TextField docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
 
 1. [Text field  with default props](https://opensource.appbase.io/playground/?knob-title=Number%20of%20Guests&knob-defaultSelected=Nissan&knob-data=%7B"start"%3A1%2C"end"%3A16%2C"label"%3A"Guests"%7D&knob-labelPosition=right&knob-queryFormat=exact&selectedKind=search%2FTextField&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 

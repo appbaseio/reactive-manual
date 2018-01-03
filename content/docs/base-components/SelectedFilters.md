@@ -38,12 +38,11 @@ Facet type components have a prop `showFilter` (defaults to `true`) which can be
 
 As an example, check [MultiList usage](/basic-components/multilist.html#usage) to see how `showFilter` and `filterLabel` can be used.
 
-### Syntax
+### Demo
 
-<br>
+<br />
 
-<iframe height='500' scrolling='no' title='SelectedFilters docs example' src='//codepen.io/divyanshu013/embed/ayMNZW/?height=500&theme-id=light&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/divyanshu013/pen/ayMNZW/'>SelectedFilters docs example</a> by Divyanshu (<a href='https://codepen.io/divyanshu013'>@divyanshu013</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/dev/packages/web/examples/SelectedFilters" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 ### Styles
 
@@ -68,11 +67,6 @@ All reactivebase components are `rbc` namespaced.
     CSS styles to be applied to the **SelectedFilters** component.
 
 ### Examples
-
-<br>
-
-<iframe height='500' scrolling='no' title='SelectedFilters docs example' src='//codepen.io/divyanshu013/embed/ayMNZW/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/divyanshu013/pen/ayMNZW/'>SelectedFilters docs example</a> by Divyanshu (<a href='https://codepen.io/divyanshu013'>@divyanshu013</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
 
 1. [Filters with all the default props](https://opensource.appbase.io/playground/?selectedKind=search%2FSelectedFilters&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
 

@@ -143,12 +143,11 @@ Example uses:
     ```
     The return format for the callback function is an object with `image`, `image_size`, `title`, `desc` and `url` fields.
 
-## Syntax
+## Demo
 
-<br>
+<br />
 
-<iframe height='500' scrolling='no' title='ResultList docs example' src='//codepen.io/sids-aquarius/embed/BdMXeG/?height=500&theme-id=light&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/BdMXeG/'>ResultList docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/dev/packages/web/examples/ResultList" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 ## Styles
 
@@ -219,11 +218,6 @@ onAllData(items, loadMoreData) {
 
 
 ## Examples
-
-<br>
-
-<iframe height='500' scrolling='no' title='ResultList docs example' src='//codepen.io/sids-aquarius/embed/BdMXeG/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/BdMXeG/'>ResultList docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
 
 See more stories for ResultList on playground.
 
