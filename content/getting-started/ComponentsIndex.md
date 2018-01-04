@@ -259,13 +259,13 @@ Search components are more specific versions of the basic components that are us
 **[TagCloud](/search-components/tagcloud.html)** is useful for showing a weighted tag cloud of items based on the frequency of occurrences.
 </p>
 
-### MultiLevelMenu
+<!-- ### MultiLevelMenu
 
 <p>
 <img src="https://imgur.com/oErIN7V.png" style="float:left">
 
 **[MultiLevelMenu](/search-components/multilevelmenu.html)** is useful for showing an e-commerce app's main navigation menu based on the database field.
-</p>
+</p> -->
 
 ## 4. Result Components
 
