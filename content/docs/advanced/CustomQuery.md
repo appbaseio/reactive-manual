@@ -87,7 +87,7 @@ const myQuery = (value, props) => ({
 
 ### Data Controller Component
 
-Reactive Maps UI library comes with a specific component that is designed to be truly customizable, [**Data Controller**](/basic-components/datacontroller.html). It's a UI optional component that requires defining the `customQuery` prop.
+Reactive Maps UI library comes with a specific component that is designed to be truly customizable, [**DataController**](/basic-components/datacontroller.html). It's a UI optional component that requires defining the `customQuery` prop.
 
 For example, let's say you want to apply a query filter to represent an end-user's global preferences within the UI without adding a widget. Data Controller allows you to define a query without needing a UI widget.
 
