@@ -280,7 +280,7 @@ Result components are used for displaying the results (aka hits).
 <p>
 <img src="https://imgur.com/L8xTmWd.png" style="float:left">
 
-**ResultList** displays the results in a list layout.
+**[ResultList](/result-components/resultlist.html)** displays the results in a list layout.
 </p>
 
 ### ResultCard
@@ -288,7 +288,7 @@ Result components are used for displaying the results (aka hits).
 <p>
 <img src="https://imgur.com/VGra3hs.png" style="float:left">
 
-**ResultCard** displays the results in a card layout.
+**[ResultCard](/result-components/resultcard.html)** displays the results in a card layout.
 </p>
 
 ### ReactiveList
@@ -296,7 +296,7 @@ Result components are used for displaying the results (aka hits).
 <p>
 <img src="https://imgur.com/PCBwK7t.png" style="float:left">
 
-**ReactiveList** displays the results in a configurable list layout. This is a more flexible display component (used internally by both ResultList and ResultCard) that allows more customization than ResultList and ResultCard.
+**[ReactiveList](/result-components/reactivelist.html)** displays the results in a configurable list layout. This is a more flexible display component (used internally by both ResultList and ResultCard) that allows more customization than ResultList and ResultCard.
 </p>
 
 ### ReactiveMap
@@ -304,7 +304,7 @@ Result components are used for displaying the results (aka hits).
 <p>
 <img src="https://imgur.com/38hL346.png" style="float:left">
 
-**ReactiveMap** displays the results on a map. When results contain geopoints (lat,lon), ReactiveMap component can be used to display them on a map interface.
+**[ReactiveMap](/map-components/reactivemap.html)** displays the results on a map. When results contain geopoints (lat,lon), ReactiveMap component can be used to display them on a map interface.
 </p>
 
 ### ReactiveElement

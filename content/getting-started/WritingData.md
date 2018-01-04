@@ -10,15 +10,15 @@ prevTitle: "Components Overview"
 
 Writing and updating data is a common operation that is triggered from app UIs.
 
-ReactiveSearch and ReactiveMaps only offer components for creating read based search UIs.
+[ReactiveSearch](https://opensource.appbase.io/reactivesearch/) and [ReactiveMaps](https://opensource.appbase.io/reactivemaps/) only offer components for creating read based search UIs.
 
 In this post, we talk about a few ways to perform the Create, Update and Delete operations on the data.
 
 ## appbase-js
 
-`appbase-js` is the javascript library from appbase.io that runs on Node.JS, UMD, React and React Native environments.
+[`appbase-js`](https://github.com/appbaseio/appbase-js) is the javascript library from appbase.io that runs on Node.JS, UMD, React and React Native environments.
 
-We recommend using appbase-js on a Node.JS middleware to perform the write operations.
+We recommend using appbase-js on a [Node.JS middleware](http://expressjs.com/en/guide/using-middleware.html) to perform the write operations.
 
 > Note
 >

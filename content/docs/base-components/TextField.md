@@ -11,6 +11,7 @@ redirect_from:
     - 'basic-components'
     - 'base-components'
     - 'base-components/'
+    - 'basic-components/textfield.html'
     - 'base-components/textfield'
     - 'textfield'
 ---
