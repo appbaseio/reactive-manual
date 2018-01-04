@@ -39,7 +39,7 @@ In this section, we will create a search UI based on a *cars dataset* with React
 We can either add ReactiveSearch to an existing app or create a boilerplate app with [Create React App (CRA)](https://github.com/facebookincubator/create-react-app). For this quickstart guide, we will use the CRA.
 
 ```bash
-create-react-app some-dir && cd some-dir
+create-react-app my-awesome-search && cd my-awesome-search
 ```
 
 Install the `@appbaseio/reactivesearch` repo if you already haven't.
