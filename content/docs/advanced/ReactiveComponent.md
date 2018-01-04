@@ -37,7 +37,7 @@ Now, let's assume that we have all these hex-codes stored as `keywords` in an El
 ```javascript
 <ReactiveComponent
     componentId="myColorPicker"   // a unique id we will refer to later
-    defaultQuery={{
+    defaultQuery={() => {(
         aggs: {
             color: {
                 terms: {
@@ -45,7 +45,7 @@ Now, let's assume that we have all these hex-codes stored as `keywords` in an El
                 }
             }
         }
-    }}
+    })}
 >
     <ColorPickerWrapper />
 </ReactiveComponent>
