@@ -307,10 +307,10 @@ Result components are used for displaying the results (aka hits).
 **[ReactiveMap](/map-components/reactivemap.html)** displays the results on a map. When results contain geopoints (lat,lon), ReactiveMap component can be used to display them on a map interface.
 </p>
 
-### ReactiveElement
+### ReactiveComponent
 
 <p>
 <img src="https://imgur.com/QgjzJv5.png" style="float:left">
 
-**ReactiveElement** displays the results in a user defined DOM element. There are instances where a completely custom UI may be required to display the results, e.g. a line chart. You can use ReactiveElement component to configure such displays.
+**ReactiveComponent** is a wrapper component that allows you to connect custom component(s) (passed as children) with the Reactivesearch ecosystem, e.g. if we are building an e-commerce store where we have a react component called `ColorPicker` which renders the `colors` passed to it as tiles, allowing us to filter the products by their colors.
 </p>
