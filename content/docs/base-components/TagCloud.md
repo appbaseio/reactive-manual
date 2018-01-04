@@ -79,12 +79,11 @@ Example uses:
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the tag(s). This is useful for sharing URLs with the component state. Defaults to `false`.
 
-## Syntax
+## Demo
 
-<br>
+<br />
 
-<iframe height='500' scrolling='no' title='TagCloud docs example' src='//codepen.io/divyanshu013/embed/QMJYGG/?height=500&theme-id=light&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/divyanshu013/pen/QMJYGG/'>TagCloud docs example</a> by Divyanshu (<a href='https://codepen.io/divyanshu013'>@divyanshu013</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/dev/packages/web/examples/TagCloud" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 ## Styles
 
@@ -171,11 +170,6 @@ All reactivebase components are `rbc` namespaced.
         - `Object` is used for nesting other key clauses.
 
 ## Examples
-
-<br>
-
-<iframe height='500' scrolling='no' title='TagCloud docs example' src='//codepen.io/divyanshu013/embed/QMJYGG/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/divyanshu013/pen/QMJYGG/'>TagCloud docs example</a> by Divyanshu (<a href='https://codepen.io/divyanshu013'>@divyanshu013</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
 
 See more stories for TagCloud on playground.
 

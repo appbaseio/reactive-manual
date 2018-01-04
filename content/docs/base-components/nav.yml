@@ -13,9 +13,9 @@
           title: Props
           href: /base-components/textfield.html#props
           forceInternal: true
-        - id: syntax
-          title: Syntax
-          href: /base-components/textfield.html#syntax
+        - id: demo
+          title: Demo
+          href: /base-components/textfield.html#demo
           forceInternal: true
         - id: styles
           title: Styles
@@ -42,9 +42,9 @@
           title: Props
           href: /base-components/togglebutton.html#props
           forceInternal: true
-        - id: syntax
-          title: Syntax
-          href: /base-components/togglebutton.html#syntax
+        - id: demo
+          title: Demo
+          href: /base-components/togglebutton.html#demo
           forceInternal: true
         - id: styles
           title: Styles
@@ -71,9 +71,9 @@
           title: Props
           href: /base-components/numberbox.html#props
           forceInternal: true
-        - id: syntax
-          title: Syntax
-          href: /base-components/numberbox.html#syntax
+        - id: demo
+          title: Demo
+          href: /base-components/numberbox.html#demo
           forceInternal: true
         - id: styles
           title: Styles
@@ -100,9 +100,9 @@
           title: Props
           href: /base-components/ratingsfilter.html#props
           forceInternal: true
-        - id: syntax
-          title: Syntax
-          href: /base-components/ratingsfilter.html#syntax
+        - id: demo
+          title: Demo
+          href: /base-components/ratingsfilter.html#demo
           forceInternal: true
         - id: styles
           title: Styles
@@ -129,9 +129,9 @@
           title: Props
           href: /base-components/tagcloud.html#props
           forceInternal: true
-        - id: syntax
-          title: Syntax
-          href: /base-components/tagcloud.html#syntax
+        - id: demo
+          title: Demo
+          href: /base-components/tagcloud.html#demo
           forceInternal: true
         - id: styles
           title: Styles
@@ -158,9 +158,9 @@
           title: Props
           href: /base-components/datacontroller.html#props
           forceInternal: true
-        - id: syntax
-          title: Syntax
-          href: /base-components/datacontroller.html#syntax
+        - id: demo
+          title: Demo
+          href: /base-components/datacontroller.html#demo
           forceInternal: true
         - id: styles
           title: Styles
@@ -187,9 +187,9 @@
           title: Props
           href: /base-components/selectedfilters.html#props
           forceInternal: true
-        - id: syntax
-          title: Syntax
-          href: /base-components/selectedfilters.html#syntax
+        - id: demo
+          title: Demo
+          href: /base-components/selectedfilters.html#demo
           forceInternal: true
         - id: styles
           title: Styles

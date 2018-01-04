@@ -93,12 +93,11 @@ While `DynamicRangeSlider` only requires the above props to be used, it comes wi
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected range of the slider. This is useful for sharing URLs with the component state. Defaults to `false`.
 
-## Syntax
+## Demo
 
-<br>
+<br />
 
-<iframe height='500' scrolling='no' title='DynamicRangeSlider docs example' src='//codepen.io/sids-aquarius/embed/KvJOZE/?height=500&theme-id=light&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/KvJOZE/'>DynamicRangeSlider docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/dev/packages/web/examples/DynamicRangeSlider" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 ## Styles
 
@@ -185,11 +184,6 @@ All reactivebase components are `rbc` namespaced.
         - `Object` is used for nesting other key clauses.
 
 ## Examples
-
-<br>
-
-<iframe height='500' scrolling='no' title='DynamicRangeSlider docs example' src='//codepen.io/sids-aquarius/embed/KvJOZE/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/KvJOZE/'>DynamicRangeSlider docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
 
 See more stories for DynamicRangeSlider on playground.
 

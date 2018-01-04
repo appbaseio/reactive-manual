@@ -13,9 +13,9 @@
           title: Props
           href: /result-components/resultlist.html#props
           forceInternal: true
-        - id: syntax
-          title: Syntax
-          href: /result-components/resultlist.html#syntax
+        - id: demo
+          title: Demo
+          href: /result-components/resultlist.html#demo
           forceInternal: true
         - id: styles
           title: Styles
@@ -42,9 +42,9 @@
           title: Props
           href: /result-components/resultcard.html#props
           forceInternal: true
-        - id: syntax
-          title: Syntax
-          href: /result-components/resultcard.html#syntax
+        - id: demo
+          title: Demo
+          href: /result-components/resultcard.html#demo
           forceInternal: true
         - id: styles
           title: Styles
@@ -71,9 +71,9 @@
           title: Props
           href: /result-components/reactivelist.html#props
           forceInternal: true
-        - id: syntax
-          title: Syntax
-          href: /result-components/reactivelist.html#syntax
+        - id: demo
+          title: Demo
+          href: /result-components/reactivelist.html#demo
           forceInternal: true
         - id: styles
           title: Styles

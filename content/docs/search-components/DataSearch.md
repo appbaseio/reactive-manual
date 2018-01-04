@@ -99,7 +99,7 @@ Example uses:
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
 
-## CodeSandbox Demo
+## Demo
 
 <br />
 

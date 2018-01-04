@@ -13,9 +13,9 @@
           title: Props
           href: /list-components/singlelist.html#props
           forceInternal: true
-        - id: syntax
-          title: Syntax
-          href: /list-components/singlelist.html#syntax
+        - id: demo
+          title: Demo
+          href: /list-components/singlelist.html#demo
           forceInternal: true
         - id: styles
           title: Styles
@@ -42,9 +42,9 @@
           title: Props
           href: /list-components/multilist.html#props
           forceInternal: true
-        - id: syntax
-          title: Syntax
-          href: /list-components/multilist.html#syntax
+        - id: demo
+          title: Demo
+          href: /list-components/multilist.html#demo
           forceInternal: true
         - id: styles
           title: Styles
@@ -71,9 +71,9 @@
           title: Props
           href: /list-components/singledropdownlist.html#props
           forceInternal: true
-        - id: syntax
-          title: Syntax
-          href: /list-components/singledropdownlist.html#syntax
+        - id: demo
+          title: Demo
+          href: /list-components/singledropdownlist.html#demo
           forceInternal: true
         - id: styles
           title: Styles
@@ -100,9 +100,9 @@
           title: Props
           href: /list-components/multidropdownlist.html#props
           forceInternal: true
-        - id: syntax
-          title: Syntax
-          href: /list-components/multidropdownlist.html#syntax
+        - id: demo
+          title: Demo
+          href: /list-components/multidropdownlist.html#demo
           forceInternal: true
         - id: styles
           title: Styles
@@ -129,9 +129,9 @@
           title: Props
           href: /list-components/singledatalist.html#props
           forceInternal: true
-        - id: syntax
-          title: Syntax
-          href: /list-components/singledatalist.html#syntax
+        - id: demo
+          title: Demo
+          href: /list-components/singledatalist.html#demo
           forceInternal: true
         - id: styles
           title: Styles
@@ -158,9 +158,9 @@
           title: Props
           href: /list-components/multidatalist.html#props
           forceInternal: true
-        - id: syntax
-          title: Syntax
-          href: /list-components/multidatalist.html#syntax
+        - id: demo
+          title: Demo
+          href: /list-components/multidatalist.html#demo
           forceInternal: true
         - id: styles
           title: Styles
