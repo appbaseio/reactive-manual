@@ -19,7 +19,7 @@ With `ReactiveComponent`, you can convert any React Component into a Reactivesea
 
 > How does this work?
 >
-> `ReactiveComponent` is a Higher-Order-Component(HOC) that allows you to connect custom component(s) (passed as children) with the Reactivesearch ecosystem.
+> `ReactiveComponent` is a wrapper component that allows you to connect custom component(s) (passed as children) with the Reactivesearch ecosystem.
 
 For example, let's suppose that we are building an e-commerce store where we have a react component called `ColorPicker` which renders the `colors` passed to it as tiles, allowing us to filter the products by their colors.
 
