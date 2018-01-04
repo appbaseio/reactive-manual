@@ -39,7 +39,7 @@ In this section, we will create a search UI based on a *cars dataset* with React
 We can either add ReactiveSearch to an existing app or create a boilerplate app with [Create React App (CRA)](https://github.com/facebookincubator/create-react-app). For this quickstart guide, we will use the CRA.
 
 ```bash
-create-react-app some-dir && cd some-dir
+create-react-app my-awesome-search && cd my-awesome-search
 ```
 
 Install the `@appbaseio/reactivesearch` repo if you already haven't.
@@ -66,14 +66,16 @@ import { ReactiveBase } from '@appbaseio/reactivesearch';
 class App extends Component {
 
 	render() {
-		<ReactiveBase
-			app="car-store"
-			credentials="cf7QByt5e:d2d60548-82a9-43cc-8b40-93cbbe75c34c">
-			// other components will go here.
-			<div>
-				Hello ReactiveSearch!
-			</div>
-		</ReactiveBase>
+		return (
+			<ReactiveBase
+				app="car-store"
+				credentials="cf7QByt5e:d2d60548-82a9-43cc-8b40-93cbbe75c34c">
+				// other components will go here.
+				<div>
+					Hello ReactiveSearch!
+				</div>
+			</ReactiveBase>
+		);
 	}
 }
 ```
@@ -313,11 +315,13 @@ yarn && yarn start
 
 ### ReactiveSearch as UMD
 
-It is also possible to run ReactiveSearch without relying on a Node.JS environment tooling for the build setup. Here, I am using `v2.0.0-alpha-06`, this can be replaced with the version you are using.
+It is also possible to run ReactiveSearch without relying on a Node.JS environment tooling for the build setup. Here, I am using `v2.0.0-beta`, this can be replaced with the version you are using.
 
 ```html
-<script src="https://cdn.rawgit.com/appbaseio/reactivesearch/v2.0.0-alpha-06/packages/web/umd/reactivesearch.js"></script>
+<script src="https://cdn.rawgit.com/appbaseio/reactivesearch/v2.0.0-beta/packages/web/umd/reactivesearch.js"></script>
 ```
+
+A GZip version (134KB in size) is also available at https://cdn.rawgit.com/appbaseio/reactivesearch/v2.0.0-beta/packages/web/umd/reactivesearch.js.gzip.
 
 The ReactiveSearch starter project has also been built with the UMD version of the lib, and is available at https://github.com/appbaseio-apps/reactivesearch-starter-app/tree/umd.
 
