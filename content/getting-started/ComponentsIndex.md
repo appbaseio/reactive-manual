@@ -13,22 +13,17 @@ redirect_from:
     - "components"
 ---
 
-**ReactiveSearch** and **ReactiveMaps** provide composable components for building data-driven user interfaces. This document explains the different kinds of components offered by the library and walks throughs scenarios of when to use which component.
-
-All components are children (or sub-children) of the **ReactiveBase** component which connects the UI view to an appbase.io app (or an index in Elasticsearch).
+**ReactiveSearch** provides React UI components for Elasticsearch. This document explains the different kinds of components offered by the library and walks throughs scenarios of when to use which component.
 
 Components are divided into four broad categories:  
-1. `Basic components` are primitives that are useful across different types of UIs.
-2. `Map components` are specific to a map based UI and are available under **ReactiveMaps** library.
-3. `Search components` are part of **ReactiveSearch** and offer more specific or advanced versions of the basic components.
-4. `Result components` offer UI views for displaying the results from the database queries. Database queries are fired by the library based on the interactions of the one of above categories of components.
+1. `List components` represent all kinds of list related UI components which typically create a term query. 
+2. `Range components` represent all kinds of numbers and dates related UI components which typically create a range based query.
+3. `Search components` represent searchbar UIs, which typically apply search on full-text data.
+4. `Result components` are components for displaying results (aka hits) from queries created by other components.
 
-> <i class="fa fa-info-circle"></i> Note
->
-> **ReactiveSearch** library is currently the superset library which comes with all of the above components (including the map components). We recommend using that for the general use.  
-`npm -i @appbaseio/reactivesearch` (or read more on [how to install](/getting-started/install.html))
+Besides these four specific categories, we also have `Base components` that are useful primitives and components that don't belong to any of the above categories.
 
-## 1. Basic Components
+## 1. Base Components
 
 ### TextField
 
