@@ -16,65 +16,45 @@ redirect_from:
 **ReactiveSearch** provides React UI components for Elasticsearch. This document explains the different kinds of components offered by the library and walks throughs scenarios of when to use which component.
 
 Components are divided into four broad categories:  
-1. `List components` represent all kinds of list related UI components which typically create a term query. 
+1. `List components` represent all kinds of list related UI components which typically create a term query.
 2. `Range components` represent all kinds of numbers and dates related UI components which typically create a range based query.
 3. `Search components` represent searchbar UIs, which typically apply search on full-text data.
 4. `Result components` are components for displaying results (aka hits) from queries created by other components.
 
 Besides these four specific categories, we also have `Base components` that are useful primitives and components that don't belong to any of the above categories.
 
-## 1. Base Components
-
-### TextField
-
-<p>
-<img src="https://imgur.com/PgOi2QY.png" style="float:left">
-
-**[TextField](/basic-components/textfield.html)** displays a text input field. It applies a **match** database query on the entered text.
-</p>
-
-### DataSearch
-
-<p>
-<img src="https://imgur.com/kbnVVkZ.png" style="float:left">
-
-**[DataSearch](/basic-components/datasearch.html)** displays a search input box. It supports autosuggestions, highlighting of results and querying against more than one fields via props.
-</p>
-
-> <i class="fa fa-info-circle"></i> Note
->
-> If you are looking to apply a query on a user input, **DataSearch** is preferable over **TextField**.
-
-### List Components
+## 1. List Components
 
 List is one of the most used data-driven UI displays and hence naturally, we offer a variety of ways to use this UI style.
 
 #### String or Text Datatype
 
-The following are all the possible UI components for a String datatype field in your appbase.io app. These apply a **term** or **terms** database query on the selected item(s).
+The following are all the possible UI components for a `Text` or `String` datatype field in your appbase.io app. These apply a **term** or **terms** database query on the selected item(s).
+
+The components can also be used with `Numeric` datatype fields.
 
 <p>
 <img src="https://imgur.com/p2PBKh6.png" style="float:left">
 
-**[SingleList](/basic-components/singlelist.html)** is useful for displaying a list of values where only one item can be selected at a time, and the values are retrieved by a database query on the field specified in the **dataField** prop.
+**[SingleList](/list-components/singlelist.html)** is useful for displaying a list of values where only one item can be selected at a time, and the values are retrieved by a database query on the field specified in the **dataField** prop.
 </p>
 
 <p>
 <img src="https://imgur.com/waVNdgr.png" style="float:left">
 
-**[MultiList](/basic-components/multilist.html)** is useful for displaying a list of values where multiple values can be selected at a time. Similar to SingleList, these values are retrieved by a database query on the field specified in the **dataField** prop.
+**[MultiList](/list-components/multilist.html)** is useful for displaying a list of values where multiple values can be selected at a time. Similar to SingleList, these values are retrieved by a database query on the field specified in the **dataField** prop.
 </p>
 
 <p>
 <img src="https://imgur.com/b9l8Mhd.png" style="float:left">
 
-**[SingleDataList](/basic-components/singledatalist.html)** is useful for displaying a list of user defined values where only one value item can be selected at a time. Unlike SingleList and MultiList where the values are auto-fetched, here the **data** prop allows curation of which values to display.
+**[SingleDataList](/list-components/singledatalist.html)** is useful for displaying a list of user defined values where only one value item can be selected at a time. Unlike SingleList and MultiList where the values are auto-fetched, here the **data** prop allows curation of which values to display.
 </p>
 
 <p>
 <img src="https://imgur.com/2b1iVDZ.png" style="float:left">
 
-**[MultiDataList](/basic-components/multidatalist.html)** is useful for displaying a list of user defined values where multiple value items can be selected at a time. Similar to the SingleDataList component, the **data** prop allows curation of which values to display.
+**[MultiDataList](/list-components/multidatalist.html)** is useful for displaying a list of user defined values where multiple value items can be selected at a time. Similar to the SingleDataList component, the **data** prop allows curation of which values to display.
 </p>
 
 > List vs DataList
@@ -84,13 +64,13 @@ The following are all the possible UI components for a String datatype field in 
 <p>
 <img src="https://imgur.com/a1be47e.png" style="float:left">
 
-**[SingleDropdownList](/basic-components/singledropdownlist.html)** displays a dropdown list UI where only one item can be selected at a time. It is similar to SingleList but is presented in a dropdown format to save space.
+**[SingleDropdownList](/list-components/singledropdownlist.html)** displays a dropdown list UI where only one item can be selected at a time. It is similar to SingleList but is presented in a dropdown format to save space.
 </p>
 
 <p>
 <img src="https://imgur.com/UVymwfo.png" style="float:left">
 
-**[MultiDropdownList](/basic-components/multidropdownlist.html)** displays a dropdown list UI where multiple items can be selected at a time. It is similar to MultiList.
+**[MultiDropdownList](/list-components/multidropdownlist.html)** displays a dropdown list UI where multiple items can be selected at a time. It is similar to MultiList.
 </p>
 <br>
 
@@ -98,14 +78,14 @@ The following are all the possible UI components for a String datatype field in 
 >
 > Dropdown lists take up less space. If you have many filters to display or a smaller display area (like on phones), it is better to use dropdown lists.
 
-#### Numeric Datatype
+## 2. Range Components
 
 The following are all the possible UI components for a numeric datatype field in your appbase.io app. These apply a **range** database query on the selected item(s).
 
 <p>
 <img src="https://imgur.com/tPi76EU.png" style="float:left">
 
-**[SingleRange](/basic-components/singlerange.html)** displays a curated list of items where only one item can be selected at a time. Each item represents a range of values, specified in the **data** prop of the component.
+**[SingleRange](/range-components/singlerange.html)** displays a curated list of items where only one item can be selected at a time. Each item represents a range of values, specified in the **data** prop of the component.
 </p>
 
 > <i class="fa fa-info-circle"></i> Note
@@ -115,7 +95,7 @@ The following are all the possible UI components for a numeric datatype field in
 <p>
 <img src="https://imgur.com/ulEoXvy.png" style="float:left">
 
-**[MultiRange](/basic-components/multirange.html)** displays a curated list of items where multiple items can be selected at a time. Each item represents a range of values, specified in the **data** prop of the component.
+**[MultiRange](/range-components/multirange.html)** displays a curated list of items where multiple items can be selected at a time. Each item represents a range of values, specified in the **data** prop of the component.
 </p>
 
 > <i class="fa fa-info-circle"></i> Note
@@ -125,13 +105,13 @@ The following are all the possible UI components for a numeric datatype field in
 <p>
 <img src="https://imgur.com/2xxBIUg.png" style="float:left">
 
-**[SingleDropdownRange](/basic-components/singledropdownrange.html)** displays a dropdown list UI where only one item can be selected at a time. Each item in this dropdown list represents a range, specified in the **data** prop of the component.
+**[SingleDropdownRange](/range-components/singledropdownrange.html)** displays a dropdown list UI where only one item can be selected at a time. Each item in this dropdown list represents a range, specified in the **data** prop of the component.
 </p>
 
 <p>
 <img src="https://imgur.com/MrTth88.png" style="float:left">
 
-**[MultiDropdownRange](/basic-components/multidropdownrange.html)** displays a dropdown list UI where only multiple items can be selected at a time. Each item in this dropdown list represents a range, specified in the **data** prop of the component.
+**[MultiDropdownRange](/range-components/multidropdownrange.html)** displays a dropdown list UI where only multiple items can be selected at a time. Each item in this dropdown list represents a range, specified in the **data** prop of the component.
 </p>
 
 ### RangeSlider
@@ -139,19 +119,20 @@ The following are all the possible UI components for a numeric datatype field in
 <p>
 <img src="https://imgur.com/n4HJ8dD.png" style="float:left">
 
-**[RangeSlider](/basic-components/rangeslider.html)** component applies on a numeric datatype (ideally an integer) field and displays a slider UI.
+**[RangeSlider](/range-components/rangeslider.html)** component applies on a numeric datatype (ideally an integer) field and displays a slider UI.
 </p>
 
 > RangeSlider vs Range lists
 >
 > A RangeSlider is useful when the selection of values is homogeneous, e.g. price across a set of products.
 
-### ToggleButton
+
+### DynamicRangeSlider
 
 <p>
-<img src="https://imgur.com/Ocb9Sir.png" style="float:left">
+<img src="https://imgur.com/n4HJ8dD.png" style="float:left">
 
-**[ToggleButton](/basic-components/togglebutton.html)** component applies on a String or Text datatype field where you want users to select a choice (or choices) amongst a small number of total choices.
+**[DynamicRangeSlider](/range-components/dynamicrangeslider.html)** is a more specific version of the [RangeSlider](/range-components/rangeslider.html) component where the available range is dynamically pre-determined based on the sub-set of data filtered by other components in the view.
 </p>
 
 ### NumberBox
@@ -159,7 +140,7 @@ The following are all the possible UI components for a numeric datatype field in
 <p>
 <img src="https://imgur.com/svE3sly.png" style="float:left">
 
-**[NumberBox](/basic-components/numberbox.html)** component applies on a numeric datatype field where you want to display a selectable field value that can be incrementally increased or decreased, e.g. no of guests field in a hotel booking app.
+**[NumberBox](/range-components/numberbox.html)** component applies on a numeric datatype field where you want to display a selectable field value that can be incrementally increased or decreased, e.g. no of guests field in a hotel booking app.
 </p>
 
 ### DatePicker and DateRange
@@ -167,44 +148,24 @@ The following are all the possible UI components for a numeric datatype field in
 <p>
 <img src="https://imgur.com/rJsL0mK.png" style="float:left"><img src="https://imgur.com/7dKLsNO.png" style="float:left">
 
-**[DatePicker](/basic-components/datepicker.html)** and **[DateRange](/basic-components/daterange.html)** components are useful for showing selectable date fields. They apply to Date datatype field, and internally apply a date range query on the database.
+**[DatePicker](/range-components/datepicker.html)** and **[DateRange](/range-components/daterange.html)** components are useful for showing selectable date fields. They apply to Date datatype field, and internally apply a date range query on the database.
 </p>
 
-### DataController
+## 3. Search Components
+
+The following are UI components that represent searchbar UIs. The datatype for the `dataField` in these components should be a `Text` (or `String`) or `Keyword`, along with custom analyzer (like ngrams) based mappings defined in sub-fields.
+
+### DataSearch
 
 <p>
-<img src="https://imgur.com/qdxEIAz.png" style="float:left">
+<img src="https://imgur.com/kbnVVkZ.png" style="float:left">
 
-**[DataController](/basic-components/datacontroller.html)** is a UI optional component for adding additional queries, e.g. a query based on current URL page path, a default query, a query based on user's global profile preferences. At the same time, it can also have a UI - this is a catchall component to display something that doesn't fit within other components.
-</p>
-
-## 2. Map Components
-
-Map components are specific to dataset that has a Geopoint datatype, i.e. a (lat, lon) co-ordinate available in at least one field.
-
-### PlacesSearch
-
-<p>
-<img src="https://imgur.com/8KcudGi.png" style="float:left">
-
-**[PlacesSearch](/map-components/placessearch.html)** is a UI component for selecting places from the database based on proximity to a user selected landmark location.
-</p>
-
-### GeoDistanceDropdown and GeoDistanceSlider
-
-<p>
-<img src="https://imgur.com/DNdxhB9.png" style="float:left"><img src="https://imgur.com/CfMpulx.png" style="float:left">
-
-**[GeoDistanceDropdown](/map-components/geodistancedropdown.html)** and **[GeoDistanceSlider](/map-components/geodistanceslider.html)** are UI components for displaying a location search UI where a user can find all the data within a distance range of their selected landmark location.
+**[DataSearch](/search-components/datasearch.html)** displays a search input box. It supports autosuggestions, highlighting of results and querying against more than one fields via props.
 </p>
 
 > <i class="fa fa-info-circle"></i> Note
 >
-> These components provide more flexibility than the PlacesSearch component in specifying the distance range as either a slider or a dropdown list.
-
-## 3. Search Components
-
-Search components are more specific versions of the basic components that are useful with an e-commerce or aggregator kind of app.
+> If you are looking to apply a query on a user input, **DataSearch** is preferable over **TextField**.
 
 ### CategorySearch
 
@@ -213,54 +174,6 @@ Search components are more specific versions of the basic components that are us
 
 **[CategorySearch](/search-components/categorysearch.html)** is a more specific version of the  [DataSearch](/basic-components/datasearch.html) component. The main difference is that it can show suggestions within specific categories besides the general auto-suggestions that appear in the search dropdown.
 </p>
-
-### DynamicRangeSlider
-
-<p>
-<img src="https://imgur.com/n4HJ8dD.png" style="float:left">
-
-**[DynamicRangeSlider](/search-components/dynamicrangeslider.html)** is a more specific version of the [RangeSlider](/basic-components/rangeslider.html) component where the available range is dynamically pre-determined based on the sub-set of data filtered by other components in the view.
-</p>
-
-### NestedList
-
-<p>
-<img src="https://imgur.com/XvjkvCZ.png" style="float:left">
-
-**[NestedList](/search-components/nestedlist.html)** is a list with more sub-lists within each list. It is useful for displaying a menu of categories and sub-categories in an e-commerce setting.
-</p>
-
-### NestedMultiList
-
-<p>
-<img src="https://imgur.com/XvjkvCZ.png" style="float:left">
-
-**[NestedMultiList](/search-components/nestedmultilist.html)** takes NestedList to the next level by allowing selection of multiple items within the list.
-</p>
-
-### RatingsFilter
-
-<p>
-<img src="https://imgur.com/BxizhXe.png" style="float:left">
-
-**[RatingsFilter](/search-components/ratingsfilter.html)** is useful for showing a UI selection choice based on ratings score. To be applied on a numeric datatype field.
-</p>
-
-### TagCloud
-
-<p>
-<img src="https://imgur.com/lC5KfOK.png" style="float:left">
-
-**[TagCloud](/search-components/tagcloud.html)** is useful for showing a weighted tag cloud of items based on the frequency of occurrences.
-</p>
-
-<!-- ### MultiLevelMenu
-
-<p>
-<img src="https://imgur.com/oErIN7V.png" style="float:left">
-
-**[MultiLevelMenu](/search-components/multilevelmenu.html)** is useful for showing an e-commerce app's main navigation menu based on the database field.
-</p> -->
 
 ## 4. Result Components
 
@@ -294,18 +207,56 @@ Result components are used for displaying the results (aka hits).
 **[ReactiveList](/result-components/reactivelist.html)** displays the results in a configurable list layout. This is a more flexible display component (used internally by both ResultList and ResultCard) that allows more customization than ResultList and ResultCard.
 </p>
 
-### ReactiveMap
-
-<p>
-<img src="https://imgur.com/38hL346.png" style="float:left">
-
-**[ReactiveMap](/map-components/reactivemap.html)** displays the results on a map. When results contain geopoints (lat,lon), ReactiveMap component can be used to display them on a map interface.
-</p>
-
 ### ReactiveComponent
 
 <p>
 <img src="https://imgur.com/QgjzJv5.png" style="float:left">
 
-**ReactiveComponent** is a wrapper component that allows you to connect custom component(s) (passed as children) with the Reactivesearch ecosystem, e.g. if we are building an e-commerce store where we have a react component called `ColorPicker` which renders the `colors` passed to it as tiles, allowing us to filter the products by their colors.
+**[ReactiveComponent](/advanced/reactivecomponent.html)** is a wrapper component that allows you to connect custom component(s) (passed as children) with the Reactivesearch ecosystem, e.g. if we are building an e-commerce store where we have a react component called `ColorPicker` which renders the `colors` passed to it as tiles, allowing us to filter the products by their colors.
 </p>
+
+## 5. Base Components
+
+### TextField
+
+<p>
+<img src="https://imgur.com/PgOi2QY.png" style="float:left">
+
+**[TextField](/base-components/textfield.html)** displays a text input field. It applies a **match** database query on the entered text.
+</p>
+
+### ToggleButton
+
+<p>
+<img src="https://imgur.com/Ocb9Sir.png" style="float:left">
+
+**[ToggleButton](/base-components/togglebutton.html)** component applies on a String or Text datatype field where you want users to select a choice (or choices) amongst a small number of total choices.
+</p>
+
+### RatingsFilter
+
+<p>
+<img src="https://imgur.com/BxizhXe.png" style="float:left">
+
+**[RatingsFilter](/base-components/ratingsfilter.html)** is useful for showing a UI selection choice based on ratings score. To be applied on a numeric datatype field.
+</p>
+
+### TagCloud
+
+<p>
+<img src="https://imgur.com/lC5KfOK.png" style="float:left">
+
+**[TagCloud](/base-components/tagcloud.html)** is useful for showing a weighted tag cloud of items based on the frequency of occurrences.
+</p>
+
+### DataController
+
+<p>
+<img src="https://imgur.com/qdxEIAz.png" style="float:left">
+
+**[DataController](/base-components/datacontroller.html)** is a UI optional component for adding additional queries, e.g. a query based on current URL page path, a default query, a query based on user's global profile preferences. At the same time, it can also have a UI - this is a catchall component to display something that doesn't fit within other components.
+</p>
+
+### SelectedFilters
+
+**[SelectedFilters](/base-components/selectedfilters.html)** is a selection component to render the selected values from other components with a "Clear All" option.
