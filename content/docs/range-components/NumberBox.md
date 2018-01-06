@@ -6,7 +6,7 @@ sectionid: docs
 permalink: range-components/numberbox.html
 prev: range-components/dynamicrangeslider.html
 prevTitle: "DynamicRangeSlider"
-next: base-components/datepicker.html
+next: range-components/datepicker.html
 nextTitle: "DatePicker"
 redirect_from:
     - 'basic-components/numberbox.html'
