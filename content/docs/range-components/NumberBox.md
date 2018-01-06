@@ -3,14 +3,16 @@ id: numberbox
 title: "NumberBox"
 layout: docs
 sectionid: docs
-permalink: base-components/numberbox.html
-prev: base-components/togglebutton.html
-prevTitle: "ToggleButton"
-next: base-components/ratingsfilter.html
-nextTitle: "RatingsFilter"
+permalink: range-components/numberbox.html
+prev: range-components/dynamicrangeslider.html
+prevTitle: "DynamicRangeSlider"
+next: base-components/datepicker.html
+nextTitle: "DatePicker"
 redirect_from:
     - 'basic-components/numberbox.html'
+    - 'base-components/numberbox.html'
     - 'base-components/numberbox'
+    - 'range-components/numberbox'
     - 'numberbox'
 ---
 

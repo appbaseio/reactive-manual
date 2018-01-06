@@ -5,8 +5,8 @@ layout: docs
 sectionid: docs
 permalink: range-components/datepicker.html
 prev: range-components/dynamicrangeslider.html
-prevTitle: "DynamicRangeSlider"
-next: range-components/daterange.html
+prevTitle: "NumberBox"
+next: range-components/numberbox.html
 nextTitle: "DateRange"
 redirect_from:
     - 'basic-components/datepicker.html'
