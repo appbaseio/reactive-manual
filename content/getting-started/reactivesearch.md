@@ -186,6 +186,7 @@ class App extends Component {
 					<ResultCard
 						componentId="result"
 						title="Results"
+						dataField="name"
 						from={0}
 						size={5}
 						pagination={true}
@@ -266,6 +267,7 @@ class App extends Component {
 						<ResultCard
 							componentId="result"
 							title="Results"
+							dataField="name"
 							from={0}
 							size={6}
 							pagination={true}
@@ -315,13 +317,13 @@ yarn && yarn start
 
 ### ReactiveSearch as UMD
 
-It is also possible to run ReactiveSearch without relying on a Node.JS environment tooling for the build setup. Here, I am using `v2.0.0-beta`, this can be replaced with the version you are using.
+It is also possible to run ReactiveSearch without relying on a Node.JS environment tooling for the build setup. Here, I am using `v2.0.0-rc`, this can be replaced with the version you are using.
 
 ```html
-<script src="https://cdn.rawgit.com/appbaseio/reactivesearch/v2.0.0-beta/packages/web/umd/reactivesearch.js"></script>
+<script src="https://cdn.rawgit.com/appbaseio/reactivesearch/v2.0.0-rc/packages/web/umd/reactivesearch.js"></script>
 ```
 
-A GZip version (134KB in size) is also available at https://cdn.rawgit.com/appbaseio/reactivesearch/v2.0.0-beta/packages/web/umd/reactivesearch.js.gzip.
+A GZip version (134KB in size) is also available at https://cdn.rawgit.com/appbaseio/reactivesearch/v2.0.0-rc/packages/web/umd/reactivesearch.js.gzip.
 
 The ReactiveSearch starter project has also been built with the UMD version of the lib, and is available at https://github.com/appbaseio-apps/reactivesearch-starter-app/tree/umd.
 
