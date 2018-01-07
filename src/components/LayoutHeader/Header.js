@@ -68,7 +68,7 @@ class Header extends Component {
                 justifyContent: 'space-between',
               },
             }}>
-            <Link
+            <a
               css={{
                 display: 'flex',
                 marginRight: 10,
@@ -85,7 +85,7 @@ class Header extends Component {
                   flex: '0 0 auto',
                 },
               }}
-              to="/">
+              href="https://opensource.appbase.io/reactivesearch">
               <img
                 src={logoSvg}
                 alt="Logo"
@@ -112,10 +112,10 @@ class Header extends Component {
                       marginTop: 1,
                     },
                   }}>
-                  Reactive Manual
+                  ReactiveSearch
                 </span>
               }
-            </Link>
+            </a>
 
             <nav
               css={{
@@ -146,6 +146,11 @@ class Header extends Component {
                 },
               }}>
               <HeaderLink
+                isActive={location.pathname === '/' || location.pathname === '/reactive-manual/' || location.pathname === '/reactive-manual'}
+                title="Home"
+                to="/"
+              />
+              <HeaderLink
                 isActive={location.pathname.includes('/getting-started/')}
                 title="Getting Started"
                 to="/getting-started/"
@@ -156,7 +161,7 @@ class Header extends Component {
                 to="/base-components/textfield.html"
               />
               <HeaderLink
-                isActive={location.pathname.includes('/search-components/')}
+                isActive={location.pathname.includes('/theming/')}
                 title="Theming"
                 to="/theming/themes.html"
               />
@@ -164,11 +169,6 @@ class Header extends Component {
                 isActive={location.pathname.includes('/advanced/')}
                 title="Advanced"
                 to="/advanced/customquery.html"
-              />
-              <HeaderLink
-                isActive={location.pathname.includes('/map-components/')}
-                title="ReactiveMaps"
-                to="/map-components/geodistanceslider.html"
               />
             </nav>
             {location.pathname !== '/' && location.pathname !== '/reactive-manual/' && !this.state.showSearch && (

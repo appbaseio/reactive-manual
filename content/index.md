@@ -7,13 +7,12 @@ id: home
 <section class="light home-section">
   <div class="marketing-row">
     <div class="marketing-col">
-      <h3>Search Components</h3>
-      <p><b>ReactiveSearch</b> provides 20+ React components for building amazing search UIs.</p>
+      <h3>UI Components</h3>
+      <p><b>ReactiveSearch</b> provides 20+ prebuilt components for building amazing search UIs with Elasticsearch.</p>
     </div>
     <div class="marketing-col">
-      <h3>Map Components</h3>
-      <p><b>ReactiveMaps</b> provides React components for building maps UI the change reactively with your data.</p>
-      <p>It fits in perfectly with <b>ReactiveSearch</b> for building a variety of search experiences.</p>
+      <h3>Bring your own components</h3>
+      <p>You can use your own components and make them reactive. Read more at <a href="/advanced/reactivecomponent.html"><b>ReactiveComponent</b></a>.</p>
     </div>
     <div class="marketing-col">
       <h3>Appbase.io</h3>
