@@ -220,6 +220,11 @@ const markdownStyles = {
     display: 'flex',
     flexDirection: 'row',
 
+    [media.lessThan('small')]: {
+      textAlign: 'center',
+      paddingLeft: '0px !important',
+    },
+
     [media.lessThan('medium')]: {
       paddingLeft: 10,
       flexDirection: 'column',
@@ -239,6 +244,10 @@ const markdownStyles = {
       [media.lessThan('medium')]: {
         marginLeft: 10,
       },
+    },
+
+    [media.lessThan('small')]: {
+      width: 'inherit !important',
     },
 
     [media.lessThan('medium')]: {
