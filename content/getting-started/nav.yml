@@ -72,13 +72,13 @@
       href: /getting-started/componentsindex.html
       forceInternal: true
       subitems:
-        - id: 1-basic-components
-          title: Basic Components
-          href: /getting-started/componentsindex.html#1-basic-components
+        - id: 1-list-components
+          title: List Components
+          href: /getting-started/componentsindex.html#1-list-components
           forceInternal: true
-        - id: 2-map-components
-          title: Map Components
-          href: /getting-started/componentsindex.html#2-map-components
+        - id: 2-range-components
+          title: Range Components
+          href: /getting-started/componentsindex.html#2-range-components
           forceInternal: true
         - id: 3-search-components
           title: Search Components
@@ -87,6 +87,10 @@
         - id: 4-result-components
           title: Result Components
           href: /getting-started/componentsindex.html#4-result-components
+          forceInternal: true
+        - id: 5-base-components
+          title: Base Components
+          href: /getting-started/componentsindex.html#5-base-components
           forceInternal: true
     - id: writingdata
       title: Writing and Editing Data
