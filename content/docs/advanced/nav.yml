@@ -51,7 +51,3 @@
           title: Props
           href: /advanced/reactivecomponent.html#props
           forceInternal: true
-    - id: mapping
-      title: Elasticsearch Mapping
-      href: /advanced/mapping.html
-      forceInternal: true
