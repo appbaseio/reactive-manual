@@ -6,8 +6,8 @@ sectionid: getting-started
 permalink: getting-started/componentsindex.html
 prev: getting-started/reactivebase.html
 prevTitle: "Base Component"
-next: getting-started/writingdata.html
-nextTitle: "Writing Data"
+next: list-components/singlelist.html
+nextTitle: "Single List"
 redirect_from:
     - "componentsindex"
     - "components"

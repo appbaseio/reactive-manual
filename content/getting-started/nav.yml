@@ -92,16 +92,3 @@
           title: Base Components
           href: /getting-started/componentsindex.html#5-base-components
           forceInternal: true
-    - id: writingdata
-      title: Writing and Editing Data
-      href: /getting-started/writingdata.html
-      forceInternal: true
-      subitems:
-        - id: appbase-js
-          title: Appbase-js
-          href: /getting-started/writingdata.html#appbase-js
-          forceInternal: true
-        - id: rest-api
-          title: REST API
-          href: /getting-started/writingdata.html#rest-api
-          forceInternal: true

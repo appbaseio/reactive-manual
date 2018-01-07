@@ -6,8 +6,8 @@ sectionid: reactivecomponent
 permalink: advanced/reactivecomponent.html
 prev: advanced/react.html
 prevTitle: "React Prop"
-next: advanced/mapping.html
-nextTitle: "Indexing and Data Mappings"
+next: advanced/writingdata.html
+nextTitle: "Writing Data"
 redirect_from:
     - "advanced/reactivecomponent"
     - "reactivecomponent"
@@ -20,6 +20,8 @@ With `ReactiveComponent`, you can convert any React Component into a Reactivesea
 > How does this work?
 >
 > `ReactiveComponent` is a wrapper component that allows you to connect custom component(s) (passed as children) with the Reactivesearch ecosystem.
+
+### Usage
 
 For example, let's suppose that we are building an e-commerce store where we have a react component called `ColorPicker` which renders the `colors` passed to it as tiles, allowing us to filter the products by their colors.
 

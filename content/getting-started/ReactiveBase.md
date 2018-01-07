@@ -10,7 +10,7 @@ next: getting-started/componentsindex.html
 nextTitle: "Components Overview"
 ---
 
-**ReactiveBase** is the **base** component for all `ReactiveMaps` and `ReactiveSearch` apps. It binds the backend app (data source) with the UI view components (child elements to ReactiveBase), allowing the UI views to be reactively updated every time there is a change in the data source or in the UI view components.
+**ReactiveBase** is a container component that wraps all the `ReactiveSearch` components together. It binds the backend app (data source) with the UI view components (elements wrapped within ReactiveBase), allowing a UI component to be reactively updated every time there is a change in the data source or in other UI components.
 
 This is the first component you will need to add when using `ReactiveSearch`.
 
@@ -20,9 +20,9 @@ This is the first component you will need to add when using `ReactiveSearch`.
 <ReactiveBase
   app="appname"
   credentials="abcdef123:abcdef12-ab12-ab12-ab12-abcdef123456"
-  theme="rbc-blue">
-    <ChildComponent1 .. />
-    <ChildComponent2 .. />
+>
+    <Component1 .. />
+    <Component2 .. />
 </ReactiveBase>
 ```
 
@@ -35,9 +35,9 @@ This is the first component you will need to add when using `ReactiveSearch`.
 - **url** `String` [optional]  
     URL where Elasticsearch cluster is hosted, only needed if your app uses a non appbase.io URL.
 - **type** `String` [optional]  
-    defines which types should the queries run on. Multiple types can be passed as comma separated. The default behavior is to search on all the app types.
-- **theme** `String` [optional]  
-    specify a UI theme as one of `rbc-blue` or `rbc-dark`. Read more about theming [here](https://opensource.appbase.io/reactivemaps/manual/v1/advanced/Theming.html).
+    types on which the queries should run on. Multiple types can be passed as comma separated values. The default behavior here is to search on all the app types.
+- **theme** `Object` [optional]  
+    // TODO: Update usage of theme.
 
 > Note
 >
@@ -54,8 +54,10 @@ http.cors.allow-headers: X-Requested-With, X-Auth-Token, Content-Type, Content-L
 
 Once you have added the **ReactiveBase** component, you can get started with adding other components as its children.
 
-* Map specific components can be found [here](v1/map-components/ReactiveMap.html).
-* Search specific components can be found [here](v1/search-components/CategorySearch.html).
-* Generic components can be found [here](v1/components/SingleList.html).
+* List specific components can be found  [here](/list-components/singlelist.html).
+* Range specific components can be found  [here](/list-components/singlerange.html).
+* Search specific components can be found [here](/search-components/datasearch.html).
+* Result specific components can be found
+[here](/result-components/resultlist.html).
 
 You can read more about when to use which components in the overview guide [here](/getting-started/ComponentsIndex.html).

@@ -51,3 +51,16 @@
           title: Props
           href: /advanced/reactivecomponent.html#props
           forceInternal: true
+    - id: writingdata
+      title: Writing and Editing Data
+      href: /getting-started/writingdata.html
+      forceInternal: true
+      subitems:
+        - id: appbase-js
+          title: Appbase-js
+          href: /getting-started/writingdata.html#appbase-js
+          forceInternal: true
+        - id: rest-api
+          title: REST API
+          href: /getting-started/writingdata.html#rest-api
+          forceInternal: true

@@ -2,15 +2,15 @@
 id: writingdata
 title: "Writing and Editing Data"
 layout: tutorial
-sectionid: getting-started
-permalink: getting-started/writingdata.html
-prev: getting-started/componentsindex.html
-prevTitle: "Components Overview"
+sectionid: writingdata
+permalink: advanced/writingdata.html
+prev: advanced/reactivecomponent.html
+prevTitle: "Reactive Component"
 ---
 
 Writing and updating data is a common operation that is triggered from app UIs.
 
-[ReactiveSearch](https://opensource.appbase.io/reactivesearch/) and [ReactiveMaps](https://opensource.appbase.io/reactivemaps/) only offer components for creating read based search UIs.
+[ReactiveSearch](https://opensource.appbase.io/reactivesearch/) offers components for creating read based search UIs.
 
 In this post, we will talk about a few ways to perform Create, Update and Delete operations on the data.
 
