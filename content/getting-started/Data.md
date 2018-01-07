@@ -93,11 +93,11 @@ Dejavu provides a GUI for setting the mapping of a new field, as well as viewing
 >
 > If you are coming from a SQL background, there are two things to keep in mind regarding [Elasticsearch mappings](https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping.html):
 > 1. They are immutable. Once specified (or dynamically set), they can't be changed.
-> 2. Being a full-text search engine, Elasticsearch supports specifying multiple mappings for a field.
+> 2. Being a full-text search engine as well as an aggregations engine, Elasticsearch supports specifying multiple mappings for a field. This allows it to store the same field in different ways, thus allowing for versatile querying.
 
 #### Custom Analyzers
 
-We recommend adding the following custom analyzers for applying to data fields to be used with search UI components.
+We recommend adding the following custom analyzers to your Elasticsearch index. We will use them when specifying mappings for a `$dataField` to be used for searching.
 
 The `autosuggest_analyzer` indexes the field by breaking each word into tokens of length [1, 20] always beginning with the first character of the word. This allows for fast suggestions retrieval in a [`DataSearch`](/search-components/datasearch.html) or [`CategorySearch`](/search-components/categorysearch.html) UI.
 
