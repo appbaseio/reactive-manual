@@ -139,9 +139,10 @@ const CtaItem = ({children, primary = false}) => (
   <div
     css={{
       width: '50%',
+      paddingLeft: 15,
 
       [media.between('small', 'large')]: {
-        paddingLeft: 20,
+        paddingLeft: 30,
       },
 
       [media.greaterThan('xlarge')]: {
