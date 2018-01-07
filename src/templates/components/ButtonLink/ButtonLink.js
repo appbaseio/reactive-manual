@@ -54,6 +54,10 @@ const primaryStyle = {
   whiteSpace: 'nowrap',
   transition: 'background-color 0.2s ease-out',
 
+  [media.between('xsmall', 'small')]: {
+    padding: '10px 12px',
+  },
+
   [media.greaterThan('xlarge')]: {
     paddingTop: 15,
     paddingBottom: 15,

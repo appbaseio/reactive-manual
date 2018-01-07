@@ -69,7 +69,7 @@ class Home extends Component {
 
                   [media.size('xsmall')]: {
                     fontSize: 16,
-                    maxWidth: '12em',
+                    maxWidth: '16em',
                     marginLeft: 'auto',
                     marginRight: 'auto',
                   },
@@ -152,6 +152,10 @@ const CtaItem = ({children, primary = false}) => (
       '&:first-child': {
         textAlign: 'right',
         paddingRight: 15,
+        [media.between('xsmall', 'small')]: {
+          paddingLeft: 0,
+          paddingRight: 0,
+        },
       },
 
       '&:nth-child(2)': {
