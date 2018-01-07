@@ -10,7 +10,7 @@ next: getting-started/reactivebase.html
 nextTitle: "Base Component"
 ---
 
-The first step in getting started with building a custom project for **ReactiveMaps** or **ReactiveSearch** is to add your own data. In this guide, we explain how you can import your data with the correct schema.
+The first step in getting started with building a custom project for **ReactiveSearch** is to add your own data. In this guide, we explain how you can import your data with the correct schema.
 
 ### Creating an App
 
@@ -42,9 +42,17 @@ Elasticsearch's data model is JSON based, and data within an app is organized as
 
 ### Importing Custom Data
 
-In this section, we will cover how to add data using two popular approaches. We will use [Dejavu - a GUI for Elasticsearch](https://opensource.appbase.io/dejavu) for showing the process.
+In this section, we will cover how to add data using three different approaches. We will use [Dejavu - a GUI for Elasticsearch](https://opensource.appbase.io/dejavu) for showing the process.
 
-#### CSV or XLS
+#### via Importer
+
+![](https://cdn-images-1.medium.com/max/800/1*y8TyLrxQwjvMKTrzb5p4oQ.gif)
+
+Importer is the most recommended way to index data into an Elasticsearch index. It works with JSON and CSV file types, and also supports cloning an existing app.
+
+Importer also allows you to configure mappings prior to indexing the data.
+
+#### via Dejavu GUI
 
 Let's say you have your data organized as a CSV or XLS file.
 
@@ -77,6 +85,102 @@ curl -XPUT https://API_CREDENTIAL@scalr.api.appbase.io/$app/books/1 --data-binar
 
 ### Data Mapping
 
-Data mapping is the process of specifying a schema for your data, which determines how it is indexed and stored. While Elasticsearch auto-detects the schema based on the kind of JSON value through a process known as dynamic mapping, it is also possible to set this mapping statically. You can read more about mappings over [here](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/mapping.html).
+Data mapping is the process of specifying a schema for your data, which determines how fields are indexed and stored. While Elasticsearch auto-detects the schema based on the kind of JSON value through a process known as dynamic mapping, it is also possible to set this mapping statically. You can read more about mappings over [here](https://www.elastic.co/guide/en/elasticsearch/reference/5.6/mapping.html).
 
 Dejavu provides a GUI for setting the mapping of a new field, as well as viewing existing mappings.
+
+> **Note**
+>
+> If you are coming from a SQL background, there are two things to keep in mind regarding [Elasticsearch mappings](https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping.html):
+> 1. They are immutable. Once specified (or dynamically set), they can't be changed.
+> 2. Being a full-text search engine, Elasticsearch supports specifying multiple mappings for a field.
+
+#### Custom Analyzers
+
+We recommend adding the following custom analyzers for applying to data fields to be used with search UI components.
+
+The `autosuggest_analyzer` indexes the field by breaking each word into tokens of length [1, 20] always beginning with the first character of the word. This allows for fast suggestions retrieval in a [`DataSearch`](/search-components/datasearch.html) or [`CategorySearch`](/search-components/categorysearch.html) UI.
+
+> **Note**
+>
+> If you are using dejavu/importer for indexing data, it already supports these custom analyzers with the `Text` and `SearchableText` datatypes.
+
+Adding custom analyzers requires you to first close the index with the following command:
+
+```
+POST /:index/_close
+```
+
+followed by the actual addition of analyzers with:
+
+```js
+PUT /:index/_settings
+{
+  "analysis" : {
+    "analyzer":{
+        "autosuggest_analyzer": {
+            "filter": [
+                "lowercase",
+                "asciifolding",
+                "autosuggest_filter"
+            ],
+            "tokenizer": "standard",
+            "type": "custom"
+        },
+        "ngram_analyzer": {
+            "filter": [
+                "lowercase",
+                "asciifolding",
+                "ngram_filter"
+            ],
+            "tokenizer": "standard",
+            "type": "custom"
+        }
+    },
+    "filter": {
+        "autosuggest_filter": {
+            "max_gram": "20",
+            "min_gram": "1",
+            "token_chars": [
+                "letter",
+                "digit",
+                "punctuation",
+                "symbol"
+            ],
+            "type": "edge_ngram"
+        },
+        "ngram_filter": {
+            "max_gram": "9",
+            "min_gram": "2",
+            "token_chars": [
+                "letter",
+                "digit",
+                "punctuation",
+                "symbol"
+            ],
+            "type": "ngram"
+        }
+    }
+  }
+}
+```
+
+followed by opening of the index. It is important to open the index up for any indexing and search operations to occur.
+
+```
+POST /:index/_open
+```
+
+You can read more about this [over here](https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-update-settings.html).
+
+#### Text Datatype in Search v/s Aggregations
+
+There are two different types of use-cases that Elasticsearch supports:
+1. **Search** - We talked about this use-case in the above section. Here, we typically apply a search specific analyzer to get fast and accurate search results back. The field to be applied in the `dataField` prop for search specific components is of `Text` type (v5 and above) or of `String` analyzed type (v2).
+2. **Aggregations** - Aggregations and sorting are operations that require using a non-analyzed string. The field to be applied in the `dataField` prop for aggregation specific components such as Lists is of `Keyword` type (v5 and above) or of `String` not-analyzed type (v2).
+
+> **Note**
+>
+> If a `$dataField` is to be used both for searching and aggregating, it is recommended to create a `.raw` sub-field for a Text datatype field whose datatype is set as Keyword. And when aggregating (or sorting) is required, use `$dataField.raw` instead of `$dataField`.
+>
+> Starting with `v5`, Elasticsearch supports this as a default.
