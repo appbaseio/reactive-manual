@@ -64,3 +64,7 @@
           title: REST API
           href: /advanced/writingdata.html#rest-api
           forceInternal: true
+    - id: comparison
+      title: Comparison with Other projects
+      href: /advanced/comparison.html
+      forceInternal: true
