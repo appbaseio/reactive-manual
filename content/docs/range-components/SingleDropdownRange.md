@@ -14,7 +14,7 @@ redirect_from:
     - 'singledropdownrange'
 ---
 
-![Image to be displayed](https://i.imgur.com/A23Iu2w.png)
+![Image to be displayed](https://i.imgur.com/xiwVBBU.png)
 
 `SingleDropdownRange` creates a dropdown based numeric range UI component.
 
@@ -94,9 +94,14 @@ Example uses:
 
 ## Styles
 
-All reactivebase components are `rbc` namespaced.
+`SingleDropdownRange` component supports `innerClass` prop with the following keys:    
 
-![Annotated image](https://i.imgur.com/iePJDR8.png)
+- `title`
+- `select`
+- `list`
+- `icon`
+ 
+Read more about it [here](/theming/class.html).
 
 ## Extending
 
@@ -163,8 +168,4 @@ All reactivebase components are `rbc` namespaced.
 
 ## Examples
 
-1. [Range with all the default props](https://opensource.appbase.io/playground/?knob-title=SingleList%3A%20City%20Filter&knob-defaultSelected=San%20Francisco&knob-selectAllLabel=All%20cities&knob-showRadio=true&knob-sortBy=count&knob-showCheckbox=true&knob-size=100&knob-showCount=true&knob-placeholder=s&knob-showSearch=true&selectedKind=map%2FSingleDropdownRange&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-2. [Range with pre-selected items](https://opensource.appbase.io/playground/?knob-title=SingleList%3A%20City%20Filter&knob-defaultSelected=Moderate&knob-selectAllLabel=All%20cities&knob-showRadio=true&knob-sortBy=count&knob-showCheckbox=true&knob-size=100&knob-showCount=true&knob-placeholder=s&knob-showSearch=true&selectedKind=map%2FSingleDropdownRange&selectedStory=With%20Default%20Selected&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-3. [Playground (with all knob actions)](https://opensource.appbase.io/playground/?knob-title=SingleDropdownRange%3A%20Filter&knob-defaultSelected=Moderate&knob-selectAllLabel=All%20cities&knob-showRadio=true&knob-sortBy=count&knob-showCheckbox=true&knob-size=100&knob-showCount=true&knob-placeholder=Search%20prices&knob-showSearch=true&selectedKind=map%2FSingleDropdownRange&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+<a href="https://opensource.appbase.io/playground/?selectedKind=Range%20components%2FSingleDropdownRange" target="_blank">SingleDropdownRange with default props</a>
