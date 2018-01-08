@@ -18,7 +18,7 @@ redirect_from:
 We will fetch and install [`reactivesearch`](https://www.npmjs.com/package/@appbaseio/reactivesearch) module using npm.
 
 ```bash
-npm install --save @appbaseio/reactivesearch
+npm install @appbaseio/reactivesearch
 ```
 
 or
@@ -45,7 +45,7 @@ create-react-app my-awesome-search && cd my-awesome-search
 Install the `@appbaseio/reactivesearch` repo if you already haven't.
 
 ```bash
-npm install --save @appbaseio/reactivesearch
+npm install @appbaseio/reactivesearch
 ```
 
 ### Step 2: Adding the first component
