@@ -6,8 +6,8 @@ sectionid: themes
 permalink: theming/themes.html
 prev: result-components/reactivelist.html
 prevTitle: "Result Components: ReactiveList"
-next: theming/styles.html
-nextTitle: "Styles"
+next: theming/style.html
+nextTitle: "Style"
 redirect_from:
     - 'advanced/theming.html'
     - 'theming/themes'

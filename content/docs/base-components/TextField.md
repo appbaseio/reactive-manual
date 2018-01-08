@@ -150,8 +150,4 @@ You can add the following class names to `TextField` component:
 
 ## Examples
 
-1. [Text field  with default props](https://opensource.appbase.io/playground/?knob-title=Number%20of%20Guests&knob-defaultSelected=Nissan&knob-data=%7B"start"%3A1%2C"end"%3A16%2C"label"%3A"Guests"%7D&knob-labelPosition=right&knob-queryFormat=exact&selectedKind=search%2FTextField&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-2. [Text field with a default selected value](https://opensource.appbase.io/playground/?knob-title=Number%20of%20Guests&knob-defaultSelected=Nissan&knob-data=%7B"start"%3A1%2C"end"%3A16%2C"label"%3A"Guests"%7D&knob-labelPosition=right&knob-queryFormat=exact&selectedKind=search%2FTextField&selectedStory=DefaultSelected&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-3. [Playground (with all knob actions)](https://opensource.appbase.io/playground/?knob-title=TextField%3A%20Car%20Search&knob-defaultSelected=nissan&knob-data=%7B"start"%3A1%2C"end"%3A16%2C"label"%3A"Guests"%7D&knob-labelPosition=right&knob-queryFormat=exact&knob-placeholder=Type%20a%20car%20name&selectedKind=search%2FTextField&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+[Text field  with default props](https://opensource.appbase.io/playground/?selectedKind=Base%20components%2FTextField)

@@ -18,10 +18,6 @@
       href: /theming/style.html
       forceInternal: true
       subitems:
-        - id: introduction
-          title: Introduction
-          href: /theming/style.html#introduction
-          forceInternal: true
         - id: usage
           title: Usage
           href: /theming/style.html#usage
