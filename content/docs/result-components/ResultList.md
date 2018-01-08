@@ -192,6 +192,8 @@ All reactivebase components are `rbc` namespaced.
     CSS Styles to be applied to the **ResultList** component.
 - **onData** `Function` [optional]  
     a callback function where user can define how to render the view based on the data changes. In `ResultList`'s case, the expected return format is an object with `image`, `image_size`, `title`, `url` and `description` keys.
+- **target** `string` [optional]    
+    This prop is equivalent to the `target` attribute of html `a` tags. It is only valid when `url` key is present in `onData()`'s returned object structure. It defaults to `_blank`.
 - **react** `Object`  
     specify dependent components to reactively update **ResultList's** data view.
     - **key** `String`  
