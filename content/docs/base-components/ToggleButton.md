@@ -6,8 +6,8 @@ sectionid: docs
 permalink: base-components/togglebutton.html
 prev: base-components/textfield.html
 prevTitle: "TextField"
-next: base-components/numberbox.html
-nextTitle: "NumberBox"
+next: base-components/tagcloud.html
+nextTitle: "TagCloud"
 redirect_from:
     - 'basic-components/togglebutton.html'
     - 'base-components/togglebutton'
