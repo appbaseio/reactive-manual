@@ -63,6 +63,10 @@
           title: Props
           href: /getting-started/reactivebase.html#props
           forceInternal: true
+        - id: connect-to-elasticsearch
+          title: Connect to Elasticsearch
+          href: /getting-started/reactivebase.html#connect-to-elasticsearch
+          forceInternal: true
         - id: next-steps
           title: Next Steps
           href: /getting-started/reactivebase.html#next-steps
