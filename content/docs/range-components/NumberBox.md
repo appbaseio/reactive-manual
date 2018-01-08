@@ -158,6 +158,6 @@ Read more about it [here](/theming/class.html).
 
 ## Examples
 
-1. [A NumberBox component with defaults](https://opensource.appbase.io/playground/?knob-title=Number%20of%20Guests&knob-defaultSelected=2&selectedKind=search%2FNumberBox&selectedStory=With%20defaultSelected&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+See more stories for NumberBox on playground.
 
-2. [Playground (with all knob actions)](https://opensource.appbase.io/playground/?knob-title=Number%20of%20Guests&knob-defaultSelected=3&knob-data=%7B"start"%3A1%2C"end"%3A16%2C"label"%3A"Guests"%7D&knob-labelPosition=right&knob-queryFormat=exact&selectedKind=search%2FNumberBox&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+<a href="https://opensource.appbase.io/playground/?selectedKind=Range%20components%2FNumberBox" target="_blank">NumberBox with default props</a>

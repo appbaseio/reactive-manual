@@ -178,3 +178,13 @@ Now, the components which will have `myColorPicker` present in their `react` pro
       - `String` is used for specifying a single component by its `componentId`.
       - `Array` is used for specifying multiple components by their `componentId`.
       - `Object` is used for nesting other key clauses.
+
+### Examples
+
+<br />
+
+<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/dev/packages/web/examples/ReactiveComponent" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+
+See storybook for ReactiveComponent on playground.
+
+<a href="https://opensource.appbase.io/playground/?selectedKind=Base%20components%2FReactiveComponent&selectedStory=A%20custom%20component" target="_blank">A custom component using ReactiveComponent</a>
