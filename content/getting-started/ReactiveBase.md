@@ -37,7 +37,7 @@ This is the first component you will need to add when using `ReactiveSearch`.
 - **type** `String` [optional]  
     types on which the queries should run on. Multiple types can be passed as comma separated values. The default behavior here is to search on all the app types.
 - **theme** `Object` [optional]  
-    // TODO: Update usage of theme.
+    allows over-writing of default styles by providing the respective key/values. You can read more about its usage [here](theming/themes.html)
 
 > Note
 >
