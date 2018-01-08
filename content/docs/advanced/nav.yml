@@ -51,6 +51,10 @@
           title: Props
           href: /advanced/reactivecomponent.html#props
           forceInternal: true
+        - id: examples
+          title: Examples
+          href: /advanced/reactivecomponent.html#examples
+          forceInternal: true
     - id: writingdata
       title: Writing and Editing Data
       href: /advanced/writingdata.html
