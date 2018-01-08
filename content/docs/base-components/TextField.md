@@ -73,10 +73,12 @@ redirect_from:
 
 ## Styles
 
-You can add the following class names to `TextField` component:
+`TextField` component supports `innerClass` prop with the following keys:    
 
 - title
 - input
+
+Read more about it [here](/theming/class.html).
 
 ## Extending
 
@@ -150,4 +152,4 @@ You can add the following class names to `TextField` component:
 
 ## Examples
 
-<a href="https://opensource.appbase.io/playground/?selectedKind=Base%20components%2FTextField" target="_blank">Text field  with default props</a>
+<a href="https://opensource.appbase.io/playground/?selectedKind=Base%20components%2FTextField" target="_blank">TextField with default props</a>

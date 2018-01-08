@@ -14,7 +14,7 @@ redirect_from:
     - "singlelist"
 ---
 
-![Image to be displayed](https://i.imgur.com/hFKkYws.png)
+![Image to be displayed](https://i.imgur.com/eAUEx7k.png)
 
 `SingleList` creates a single selection based list UI component that is connected to a database field.
 
@@ -100,9 +100,15 @@ Example uses:
 
 ## Styles
 
-All reactivebase components are `rbc` namespaced.
+`SingleList` component supports `innerClass` prop with the following keys:    
 
-![Annotated image](https://i.imgur.com/tDrawXi.png)
+- `title`
+- `input`
+- `list`
+- `radio`
+- `label`
+ 
+Read more about it [here](/theming/class.html).
 
 
 ## Extending
@@ -187,14 +193,4 @@ All reactivebase components are `rbc` namespaced.
 
 ## Examples
 
-1. [List with all the default props](https://opensource.appbase.io/playground/?selectedKind=map%2FSingleList&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-2. [List without search UI](https://opensource.appbase.io/playground/?selectedKind=map%2FSingleList&selectedStory=Without%20Search&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-3. [List with pre-selected items](https://opensource.appbase.io/playground/?selectedKind=map%2FSingleList&selectedStory=Default%20Selected&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-4. [List with a custom sort order](https://opensource.appbase.io/playground/?selectedKind=map%2FSingleList&selectedStory=Custom%20Sort&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-5. [List with a 'Select All' item](https://opensource.appbase.io/playground/?selectedKind=map%2FSingleList&selectedStory=With%20Select%20All&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-6. [Playground (with all knob actions)](https://opensource.appbase.io/playground/?knob-title=SingleList%3A%20City%20Filter&knob-size=100&knob-sortBy=count&knob-defaultSelected=San%20Francisco&knob-showCount=true&knob-showSearch=true&knob-placeholder=Search%20City&knob-selectAllLabel=All%20cities&selectedKind=map%2FSingleList&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+<a href="https://opensource.appbase.io/playground/?selectedKind=List%20components%2FSingleList" target="_blank">SingleList with default props</a>

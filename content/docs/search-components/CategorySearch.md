@@ -15,7 +15,7 @@ redirect_from:
     - 'categorysearch'
 ---
 
-![Image to be displayed](https://i.imgur.com/wRErIC9.png)
+![Image to be displayed](https://i.imgur.com/IsmEuyr.png)
 
 `CategorySearch` creates a category based data search UI component with an autosuggest functionality. It is used for applying full-text search across one or more fields.
 
@@ -112,9 +112,13 @@ Example uses:
 
 ## Styles
 
-All reactivebase components are `rbc` namespaced.
+`CategorySearch` component supports `innerClass` prop with the following keys:    
 
-![Annotated Image](https://i.imgur.com/IWHVT1i.png)
+- `title`
+- `input`
+- `list`
+ 
+Read more about it [here](/theming/class.html).
 
 ## Extending
 
@@ -205,6 +209,4 @@ All reactivebase components are `rbc` namespaced.
 
 ## Examples
 
-1. [CategorySearch with all the default props](https://opensource.appbase.io/playground/?selectedKind=search%2FCategorySearch&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-2. [CategorySearch with autoSuggest disabled](https://opensource.appbase.io/playground/?knob-autoSuggest=false&selectedKind=search%2FCategorySearch&selectedStory=Without%20autoSuggest&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-3. [Playground (with all knob actions)](https://opensource.appbase.io/playground/?knob-title=CategorySearch&knob-weights%5B0%5D=1&knob-weights%5B1%5D=3&knob-filterLabel=Cars%20filter&knob-defaultSelected=&knob-categoryField=brand.raw&knob-queryFormat=or&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&knob-showFilter=true&knob-fuzziness=1&knob-placeholder=Search%20Car&knob-highlight=false&knob-autoSuggest=true&knob-dataField%5B0%5D=name&selectedKind=search%2FCategorySearch&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+<a href="https://opensource.appbase.io/playground/?selectedKind=Search%20components%2FCategorySearch" target="_blank">CategorySearch with default props</a>

@@ -14,7 +14,7 @@ redirect_from:
     - "multilist"
 ---
 
-![Image to be displayed](https://i.imgur.com/KuSUJyX.png)
+![Image to be displayed](https://i.imgur.com/2OFmUsk.png)
 
 `MultiList` creates a multiple selection based list UI component that is connected to a database field. It is similar to a [SingleList](/basic-components/singlelist.html) except it can support multiple item selections.
 
@@ -106,9 +106,15 @@ Example uses:
 
 ## Styles
 
-All reactivebase components are `rbc` namespaced.
+`MultiList` component supports `innerClass` prop with the following keys:    
 
-![Annotated image](https://i.imgur.com/qJZgfvI.png)
+- `title`
+- `input`
+- `list`
+- `checkbox`
+- `label`
+ 
+Read more about it [here](/theming/class.html).
 
 ## Extending
 
@@ -194,14 +200,4 @@ All reactivebase components are `rbc` namespaced.
 
 ## Examples
 
-1. [List with all the default props](https://opensource.appbase.io/playground/?knob-title=&selectedKind=map%2FMultiList&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-2. [List without search](https://opensource.appbase.io/playground/?knob-title=&knob-showCount=false&knob-showSearch=false&selectedKind=map%2FMultiList&selectedStory=Without%20Search&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-3. [List with pre-selected items](https://opensource.appbase.io/playground/?knob-title=&knob-showCount=false&knob-showSearch=false&knob-defaultSelected%5B0%5D=London&knob-defaultSelected%5B1%5D=Sydney&selectedKind=map%2FMultiList&selectedStory=Default%20Selected&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-4. [List with a custom sort order](https://opensource.appbase.io/playground/?knob-title=&knob-showCount=false&knob-showSearch=false&knob-defaultSelected%5B0%5D=London&knob-defaultSelected%5B1%5D=Sydney&knob-sortBy=count&selectedKind=map%2FMultiList&selectedStory=Custom%20Sort&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-5. [List with a 'Select All' item](https://opensource.appbase.io/playground/?knob-title=&knob-showCount=false&knob-showSearch=false&knob-defaultSelected%5B0%5D=London&knob-defaultSelected%5B1%5D=Sydney&knob-sortBy=count&knob-selectAllLabel=All%20cities&selectedKind=map%2FMultiList&selectedStory=With%20Select%20All&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-6. [Playground (with all knob actions)](https://opensource.appbase.io/playground/?knob-title=MultiList%3A%20City%20Filter&knob-defaultSelected%5B0%5D=London&knob-defaultSelected%5B1%5D=Sydney&knob-selectAllLabel=All%20cities&knob-queryFormat=or&knob-sortBy=count&knob-showCheckbox=true&knob-size=10&knob-showCount=true&knob-placeholder=Search%20City&knob-showSearch=true&selectedKind=map%2FMultiList&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+<a href="https://opensource.appbase.io/playground/?selectedKind=List%20components%2FMultiList" target="_blank">MultiList with default props</a>

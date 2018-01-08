@@ -14,7 +14,7 @@ redirect_from:
     - 'togglebutton'
 ---
 
-![Image to be displayed](https://i.imgur.com/Zyooy5N.png)
+![Image to be displayed](https://i.imgur.com/33dxDWT.png)
 
 `ToggleButton` creates a toggle button UI component that is connected to a database field. It is used for filtering results based on a fixed set of toggle-able options.
 
@@ -88,9 +88,12 @@ Example uses:
 
 ## Styles
 
-All reactivebase components are `rbc` namespaced.
+`ToggleButton` component supports `innerClass` prop with the following keys:    
 
-![Annotated image](https://i.imgur.com/lMbqk2H.png)
+- `title`
+- `button`
+ 
+Read more about it [here](/theming/class.html).
 
 ## Extending
 
@@ -157,8 +160,4 @@ All reactivebase components are `rbc` namespaced.
 
 ## Examples
 
-1. [Toggle button with default props](https://opensource.appbase.io/playground/?selectedKind=map%2FToggleButton&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-2. [A multiple toggle button with specific default selected labels](https://opensource.appbase.io/playground/?knob-defaultSelected%5B0%5D=Social&knob-defaultSelected%5B1%5D=Travel&selectedKind=map%2FToggleButton&selectedStory=With%20Default%20Selected&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-3. [Playground (with all knob actions)](https://opensource.appbase.io/playground/?knob-defaultSelected%5B0%5D=Social&knob-defaultSelected%5B1%5D=Travel&knob-title=ToggleButton%3A%20Meetup%20Categories&knob-multiSelect=true&selectedKind=map%2FToggleButton&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+<a href="https://opensource.appbase.io/playground/?selectedKind=Base%20components%2FToggleButton" target="_blank">ToggleButton with default props</a>

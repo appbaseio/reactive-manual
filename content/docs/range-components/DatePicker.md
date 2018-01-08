@@ -14,7 +14,7 @@ redirect_from:
     - 'datepicker'
 ---
 
-![Image to be displayed](https://i.imgur.com/HnZexE9.png)
+![Image to be displayed](https://i.imgur.com/apwzR2X.png)
 
 `DatePicker` creates a calender view based UI component that is connected to a database date field. It is used for filtering results by a date like property.
 
@@ -111,9 +111,14 @@ Example uses:
 
 ## Styles
 
-All reactivebase components are `rbc` namespaced.
+`DatePicker` component supports `innerClass` prop with the following keys:    
 
-![Annotated image](https://i.imgur.com/bSei4w3.png)
+- `title`
+- `daypicker-container`
+- `daypicker-overlay-wrapper`
+- `daypicker-overlay`
+ 
+Read more about it [here](/theming/class.html).
 
 ## Extending
 
@@ -180,14 +185,4 @@ All reactivebase components are `rbc` namespaced.
 
 ## Examples
 
-1. [Basic component example](https://opensource.appbase.io/playground/?knob-visible=true&knob-title=DataController&knob-dataLabel=★%20%20A%20customizable%20UI%20widget%20★&knob-defaultSelected=default&knob-style=%7B"paddingBottom"%3A"10px"%7D&knob-showFilter=true&knob-filterLabel=Custom%20Filter%20Name&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&selectedKind=map%2FDatePicker&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-2. [Show more than one month](https://opensource.appbase.io/playground/?knob-title=DataController&knob-filterLabel=Custom%20Filter%20Name&knob-defaultSelected=default&knob-numberOfMonths=2&knob-style=%7B"paddingBottom"%3A"10px"%7D&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&knob-showFilter=true&knob-dataLabel=★%20%20A%20customizable%20UI%20widget%20★&knob-visible=true&selectedKind=map%2FDatePicker&selectedStory=Show%20more%20than%201%20month&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-3. [Start with a default date](https://opensource.appbase.io/playground/?knob-title=DataController&knob-filterLabel=Custom%20Filter%20Name&knob-defaultSelected=default&knob-numberOfMonths=2&knob-style=%7B"paddingBottom"%3A"10px"%7D&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&knob-showFilter=true&knob-dataLabel=★%20%20A%20customizable%20UI%20widget%20★&knob-visible=true&selectedKind=map%2FDatePicker&selectedStory=Default%20date&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-4. [Enable days from today only](https://opensource.appbase.io/playground/?knob-title=DataController&knob-filterLabel=Custom%20Filter%20Name&knob-defaultSelected=default&knob-numberOfMonths=2&knob-style=%7B"paddingBottom"%3A"10px"%7D&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&knob-showFilter=true&knob-dataLabel=★%20%20A%20customizable%20UI%20widget%20★&knob-allowAllDates=false&knob-visible=true&selectedKind=map%2FDatePicker&selectedStory=Enable%20days%20from%20today%20only&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-5. [An example using `extra` prop](https://opensource.appbase.io/playground/?knob-title=DataController&knob-filterLabel=Custom%20Filter%20Name&knob-defaultSelected=default&knob-numberOfMonths=2&knob-style=%7B"paddingBottom"%3A"10px"%7D&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&knob-showFilter=true&knob-dataLabel=★%20%20A%20customizable%20UI%20widget%20★&knob-allowAllDates=false&knob-extra=%7B"withFullScreenPortal"%3Atrue%2C"showClearDate"%3Atrue%7D&knob-visible=true&selectedKind=map%2FDatePicker&selectedStory=Using%20extra%20prop%20object&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-6. [Playground mode](https://opensource.appbase.io/playground/?knob-title=Date%20Picker&knob-URLParams%20%28not%20visible%20in%20storybook%29=false&knob-filterLabel=Date&knob-defaultSelected=default&knob-queryFormat=epoch_millis&knob-numberOfMonths=1&knob-style=%7B"paddingBottom"%3A"10px"%7D&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&knob-showFilter=true&knob-dataLabel=★%20%20A%20customizable%20UI%20widget%20★&knob-allowAllDates=true&knob-extra=%7B"withFullScreenPortal"%3Afalse%2C"showClearDate"%3Afalse%7D&knob-visible=true&knob-placeholder=Pick%20date&selectedKind=map%2FDatePicker&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+<a href="https://opensource.appbase.io/playground/?selectedKind=Range%20components%2FDatePicker" target="_blank">DatePicker with default props</a>

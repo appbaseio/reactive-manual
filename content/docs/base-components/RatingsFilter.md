@@ -14,7 +14,7 @@ redirect_from:
     - 'ratingsfilter'
 ---
 
-![Image to be displayed](https://i.imgur.com/KO1bJQw.png)
+![Image to be displayed](https://i.imgur.com/7GHyqJp.png)
 
 `RatingsFilter` creates a Ratings Filter UI component. It is used for filtering results based on a ratings score.
 
@@ -87,9 +87,11 @@ Example uses:
 
 ## Styles
 
-All reactivebase components are `rbc` namespaced.
+`RatingsFilter` component supports `innerClass` prop with the following keys:    
 
-![Annotated image](https://i.imgur.com/eBNY5rZ.png)
+- `title`
+ 
+Read more about it [here](/theming/class.html).
 
 ## Extending
 
@@ -158,8 +160,4 @@ All reactivebase components are `rbc` namespaced.
 
 See more stories for RatingsFilter on playground.
 
-1. [RatingsFilter with basic props](https://opensource.appbase.io/playground/?knob-title=DynamicRangeSlider%3A%20Guest%20RSVPs&knob-data=%5B%7B"label"%3A"Volkswagen"%2C"value"%3A"volkswagen"%7D%2C%7B"label"%3A"BMW"%2C"value"%3A"bmw"%7D%5D&knob-filterLabel=Cars&knob-defaultSelected%5B0%5D=bmw&knob-defaultSelected%5B1%5D=x%20series&knob-blacklist%5B0%5D=golf&knob-blacklist%5B1%5D=unknown&knob-maxCategories=10&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&knob-showFilter=true&knob-sortBy=count&knob-stepValue=1&filterBy=ReactiveSearch&knob-showHistogram=true&knob-maxItems=4&knob-size=100&knob-showCount=true&knob-placeholder=Search%20Cars&knob-showSearch=true&selectedKind=search%2FRatingsFilter&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-2. [RatingsFilter with defaultSelected](https://opensource.appbase.io/playground/?knob-title=DynamicRangeSlider%3A%20Guest%20RSVPs&knob-data=%5B%7B"label"%3A"Volkswagen"%2C"value"%3A"volkswagen"%7D%2C%7B"label"%3A"BMW"%2C"value"%3A"bmw"%7D%5D&knob-filterLabel=Cars&knob-defaultSelected=%7B"start"%3A2%2C"end"%3A5%7D&knob-blacklist%5B0%5D=golf&knob-blacklist%5B1%5D=unknown&knob-maxCategories=10&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&knob-showFilter=true&knob-sortBy=count&knob-stepValue=1&filterBy=ReactiveSearch&knob-showHistogram=true&knob-maxItems=4&knob-size=100&knob-showCount=true&knob-placeholder=Search%20Cars&knob-showSearch=true&selectedKind=search%2FRatingsFilter&selectedStory=With%20defaultSelected&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-3. [Playground (with all knob actions)](https://opensource.appbase.io/playground/?knob-title=RatingsFilter&knob-data=%5B%7B"start"%3A4%2C"end"%3A5%2C"label"%3A"4%20stars%20and%20up"%7D%2C%7B"start"%3A3%2C"end"%3A5%2C"label"%3A"3%20stars%20and%20up"%7D%2C%7B"start"%3A2%2C"end"%3A5%2C"label"%3A"2%20stars%20and%20up"%7D%2C%7B"start"%3A1%2C"end"%3A5%2C"label"%3A">%201%20stars"%7D%5D&knob-filterLabel=Ratings%20filter&knob-defaultSelected=%7B"start"%3A2%2C"end"%3A5%7D&knob-blacklist%5B0%5D=golf&knob-blacklist%5B1%5D=unknown&knob-maxCategories=10&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&knob-showFilter=true&knob-sortBy=count&knob-stepValue=1&filterBy=ReactiveSearch&knob-showHistogram=true&knob-maxItems=4&knob-size=100&knob-showCount=true&knob-placeholder=Search%20Cars&knob-showSearch=true&selectedKind=search%2FRatingsFilter&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+<a href="https://opensource.appbase.io/playground/?selectedKind=Range%20components%2FRatingsFilter" target="_blank">RatingsFilter with default props</a>

@@ -84,10 +84,13 @@ Example uses:
 
 ## Styles
 
-All reactivebase components are `rbc` namespaced.
+`NumberBox` component supports `innerClass` prop with the following keys:    
 
-![Annotated image](https://i.imgur.com/DV7hKyN.png)
-
+- `title`
+- `label`
+- `button`
+ 
+Read more about it [here](/theming/class.html).
 
 ## Extending
 

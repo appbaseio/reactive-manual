@@ -14,7 +14,7 @@ redirect_from:
     - 'multidropdownrange'
 ---
 
-![Image to be displayed](https://i.imgur.com/Xwo2Aog.png)
+![Image to be displayed](https://i.imgur.com/VdWiHD3.png)
 
 `MultiDropdownRange` creates a dropdown based multiple numeric range UI component that is connected to a database field.
 
@@ -94,9 +94,14 @@ Example uses:
 
 ## Styles
 
-All reactivebase components are `rbc` namespaced.
+`MultiDropdownRange` component supports `innerClass` prop with the following keys:    
 
-![Annotated image](https://i.imgur.com/qO1I0Th.png)
+- `title`
+- `select`
+- `list`
+- `icon`
+ 
+Read more about it [here](/theming/class.html).
 
 ## Extending
 
@@ -163,8 +168,4 @@ All reactivebase components are `rbc` namespaced.
 
 ## Examples
 
-1. [Range with default props](https://opensource.appbase.io/playground/?knob-title=MultiDropdownList&knob-URLParams%20%28not%20visible%20in%20storybook%29=false&knob-filterLabel=City%20filter&knob-defaultSelected%5B0%5D=London&knob-defaultSelected%5B1%5D=Melbourne&knob-selectAllLabel=All%20Cities&knob-showFilter=true&knob-sortBy=count&knob-size=100&knob-showCount=true&knob-placeholder=Select%20Cities&selectedKind=map%2FMultiDropdownRange&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-2. [Range with pre-selected values](https://opensource.appbase.io/playground/?knob-title=MultiDropdownList&knob-URLParams%20%28not%20visible%20in%20storybook%29=false&knob-filterLabel=City%20filter&knob-defaultSelected%5B0%5D=London&knob-defaultSelected%5B1%5D=Melbourne&knob-selectAllLabel=All%20Cities&knob-showFilter=true&knob-sortBy=count&knob-size=100&knob-showCount=true&knob-placeholder=Select%20Cities&selectedKind=map%2FMultiDropdownRange&selectedStory=With%20Default%20Selected&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-3. [Playground (with all knob actions)](https://opensource.appbase.io/playground/?knob-title=MultiDropdownRange%3A%20Earthquake%20Magnitude&knob-URLParams%20%28not%20visible%20in%20storybook%29=false&knob-filterLabel=City%20filter&knob-defaultSelected%5B0%5D=London&knob-defaultSelected%5B1%5D=Melbourne&knob-selectAllLabel=All%20Cities&knob-showFilter=true&knob-sortBy=count&knob-size=100&knob-showCount=true&knob-placeholder=Search%20places&selectedKind=map%2FMultiDropdownRange&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+<a href="https://opensource.appbase.io/playground/?selectedKind=Range%20components%2FMultiDropdownRange" target="_blank">MultiDropdownRange with default props</a>

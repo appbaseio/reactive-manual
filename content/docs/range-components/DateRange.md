@@ -14,7 +14,7 @@ redirect_from:
     - 'daterange'
 ---
 
-![Image to be displayed](https://i.imgur.com/Tl2xXNS.png)
+![Image to be displayed](https://i.imgur.com/4c94MBh.png)
 
 `DateRange` creates a calendar view based UI component that is connected to date fields. It is used for filtering results by a date like property.
 
@@ -110,9 +110,15 @@ Example uses:
 
 ## Styles
 
-All reactivebase components are `rbc` namespaced.
+`DateRange` component supports `innerClass` prop with the following keys:    
 
-![Annotated image](https://i.imgur.com/tEwBtgX.png)
+- `title`
+- `input-container`
+- `daypicker-container`
+- `daypicker-overlay-wrapper`
+- `daypicker-overlay`
+ 
+Read more about it [here](/theming/class.html).
 
 ## Extending
 
@@ -179,14 +185,4 @@ All reactivebase components are `rbc` namespaced.
 
 ## Examples
 
-1. [Basic component example](https://opensource.appbase.io/playground/?knob-title=Date%20Range&knob-URLParams%20%28not%20visible%20in%20storybook%29=false&knob-filterLabel=Date%20range&knob-defaultSelected=default&knob-queryFormat=date&knob-numberOfMonths=2&knob-style=%7B"paddingBottom"%3A"10px"%7D&knob-URLParams%20%28not%20visible%20on%20storybook%29=true&knob-showFilter=true&knob-dataLabel=★%20%20A%20customizable%20UI%20widget%20★&knob-allowAllDates=true&knob-extra=%7B"withFullScreenPortal"%3Atrue%2C"showClearDate"%3Atrue%7D&knob-visible=true&knob-placeholder=Pick%20date&selectedKind=map%2FDateRange&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-2. [Show more than one month](https://opensource.appbase.io/playground/?knob-title=Date%20Range&knob-URLParams%20%28not%20visible%20in%20storybook%29=false&knob-filterLabel=Date%20range&knob-defaultSelected=default&knob-queryFormat=date&knob-numberOfMonths=3&knob-style=%7B"paddingBottom"%3A"10px"%7D&knob-URLParams%20%28not%20visible%20on%20storybook%29=true&knob-showFilter=true&knob-dataLabel=★%20%20A%20customizable%20UI%20widget%20★&knob-allowAllDates=true&knob-extra=%7B"withFullScreenPortal"%3Atrue%2C"showClearDate"%3Atrue%7D&knob-visible=true&knob-placeholder=Pick%20date&selectedKind=map%2FDateRange&selectedStory=Show%20more%20than%201%20month&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-3. [With default date](https://opensource.appbase.io/playground/?knob-title=Date%20Range&knob-URLParams%20%28not%20visible%20in%20storybook%29=false&knob-filterLabel=Date%20range&knob-defaultSelected=default&knob-queryFormat=date&knob-numberOfMonths=3&knob-style=%7B"paddingBottom"%3A"10px"%7D&knob-URLParams%20%28not%20visible%20on%20storybook%29=true&knob-showFilter=true&knob-dataLabel=★%20%20A%20customizable%20UI%20widget%20★&knob-allowAllDates=true&knob-extra=%7B"withFullScreenPortal"%3Atrue%2C"showClearDate"%3Atrue%7D&knob-visible=true&knob-placeholder=Pick%20date&selectedKind=map%2FDateRange&selectedStory=Default%20date&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-4. [Enable days only starting today onwards](https://opensource.appbase.io/playground/?knob-title=Date%20Range&knob-URLParams%20%28not%20visible%20in%20storybook%29=false&knob-filterLabel=Date%20range&knob-defaultSelected=default&knob-queryFormat=date&knob-numberOfMonths=3&knob-style=%7B"paddingBottom"%3A"10px"%7D&knob-URLParams%20%28not%20visible%20on%20storybook%29=true&knob-showFilter=true&knob-dataLabel=★%20%20A%20customizable%20UI%20widget%20★&knob-allowAllDates=false&knob-extra=%7B"withFullScreenPortal"%3Atrue%2C"showClearDate"%3Atrue%7D&knob-visible=true&knob-placeholder=Pick%20date&selectedKind=map%2FDateRange&selectedStory=Enable%20days%20from%20today%20only&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-5. [An example using `extra` prop](https://opensource.appbase.io/playground/?knob-title=Date%20Range&knob-URLParams%20%28not%20visible%20in%20storybook%29=false&knob-filterLabel=Date%20range&knob-defaultSelected=default&knob-queryFormat=date&knob-numberOfMonths=3&knob-style=%7B"paddingBottom"%3A"10px"%7D&knob-URLParams%20%28not%20visible%20on%20storybook%29=true&knob-showFilter=true&knob-dataLabel=★%20%20A%20customizable%20UI%20widget%20★&knob-allowAllDates=false&knob-extra=%7B"withFullScreenPortal"%3Atrue%2C"showClearDate"%3Atrue%7D&knob-visible=true&knob-placeholder=Pick%20date&selectedKind=map%2FDateRange&selectedStory=Using%20extra%20prop%20object&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-6. [Playground mode](https://opensource.appbase.io/playground/?knob-title=Date%20Range&knob-URLParams%20%28not%20visible%20in%20storybook%29=false&knob-filterLabel=Date%20range&knob-defaultSelected=default&knob-queryFormat=epoch_millis&knob-numberOfMonths=2&knob-style=%7B"paddingBottom"%3A"10px"%7D&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&knob-showFilter=true&knob-dataLabel=★%20%20A%20customizable%20UI%20widget%20★&knob-allowAllDates=true&knob-extra=%7B"withFullScreenPortal"%3Atrue%2C"showClearDate"%3Atrue%7D&knob-visible=true&knob-placeholder=Pick%20date&selectedKind=map%2FDateRange&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+<a href="https://opensource.appbase.io/playground/?selectedKind=Range%20components%2FDateRange" target="_blank">DateRange with default props</a>

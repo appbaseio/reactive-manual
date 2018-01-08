@@ -71,12 +71,6 @@ Example uses:
 
 <iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/dev/packages/web/examples/DataController" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
-## Styles
-
-All reactivebase components are `rbc` namespaced.
-
-![Annotated Image](http://i.imgur.com/ow7MEdG.png)
-
 ## Extending
 
 `DataController` component can be extended to
@@ -142,6 +136,4 @@ All reactivebase components are `rbc` namespaced.
 
 ## Examples
 
-1. [DataController with all the default props](https://opensource.appbase.io/playground/?knob-visible=true&selectedKind=map%2FDataController&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-2. [DataController with UI](https://opensource.appbase.io/playground/?knob-visible=true&selectedKind=map%2FDataController&selectedStory=With%20UI&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-3. [Playground (with all knob actions)](https://opensource.appbase.io/playground/?knob-visible=true&knob-title=DataController&knob-dataLabel=★%20%20A%20customizable%20UI%20widget%20★&knob-defaultSelected=default&knob-style=%7B"paddingBottom"%3A"10px"%7D&knob-showFilter=true&knob-filterLabel=Custom%20Filter%20Name&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&selectedKind=map%2FDataController&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+<a href="https://opensource.appbase.io/playground/?selectedKind=Base%20components%2FDataController" target="_blank">DataController with default props</a>
