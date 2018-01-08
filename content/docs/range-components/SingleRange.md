@@ -14,7 +14,7 @@ redirect_from:
     - 'singlerange'
 ---
 
-![Image to be displayed](https://i.imgur.com/55jFax6.png)
+![Image to be displayed](https://i.imgur.com/d6u5asg.png)
 
 `SingleRange` creates a numeric range selector UI component that is connected to a database field.
 
@@ -94,9 +94,14 @@ Example uses:
 
 ## Styles
 
-All reactivebase components are `rbc` namespaced.
+`SingleRange` component supports `innerClass` prop with the following keys:    
 
-![Annotated image](https://i.imgur.com/CIOLTQo.png)
+- `title`
+- `list`
+- `radio`
+- `label`
+ 
+Read more about it [here](/theming/class.html).
 
 ## Extending
 
@@ -163,8 +168,4 @@ All reactivebase components are `rbc` namespaced.
 
 ## Examples
 
-1. [Range with all the default props](https://opensource.appbase.io/playground/?knob-title=SingleRange%3A%20Price%20Filter&knob-defaultSelected=Cheap&knob-selectAllLabel=All%20cities&knob-showRadio=true&knob-sortBy=count&knob-size=100&knob-showCount=true&knob-placeholder=Search%20City&knob-showSearch=true&selectedKind=map%2FSingleRange&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-2. [Range with a pre-selected item](https://opensource.appbase.io/playground/?knob-title=SingleRange%3A%20Price%20Filter&knob-defaultSelected=Moderate&knob-selectAllLabel=All%20cities&knob-showRadio=true&knob-sortBy=count&knob-size=100&knob-showCount=true&knob-placeholder=Search%20City&knob-showSearch=true&selectedKind=map%2FSingleRange&selectedStory=With%20Default%20Selected&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-3. [Playground (with all knob actions)](https://opensource.appbase.io/playground/?knob-title=SingleRange%3A%20Earthquake%20Filter&knob-defaultSelected=Moderate&knob-selectAllLabel=All%20cities&knob-showRadio=true&knob-sortBy=count&knob-size=100&knob-showCount=true&knob-placeholder=Search%20City&knob-showSearch=true&selectedKind=map%2FSingleRange&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+<a href="https://opensource.appbase.io/playground/?selectedKind=Range%20components%2FSingleRange" target="_blank">SingleRange with default props</a>
