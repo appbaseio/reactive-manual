@@ -1,70 +1,70 @@
 ---
-id: dynamicrangeslider
-title: "DynamicRangeSlider"
+id: rangeinput
+title: "RangeInput"
 layout: docs
 sectionid: docs
-permalink: range-components/dynamicrangeslider.html
-prev: range-components/rangeslider.html
-prevTitle: "RangeSlider"
-next: range-components/rangeinput.html
-nextTitle: "RangeInput"
+permalink: range-components/rangeinput.html
+prev: range-components/dynamicrangeslider.html
+prevTitle: "DynamicRangeSlider"
+next: range-components/numberbox.html
+nextTitle: "NumberBox"
 redirect_from:
-    - 'search-components/dynamicrangeslider.html'
-    - 'range-components/dynamicrangeslider'
-    - 'dynamicrangeslider'
+    - 'basic-components/rangeinput.html'
+    - 'range-components/rangeinput'
+    - 'rangeinput'
 ---
 
-![Image to be displayed](https://i.imgur.com/SkutEkT.png)
+![Image to be displayed](https://imgur.com/N5WZEPi.png)
 
-`DynamicRangeSlider` creates a numeric range slider UI component. It is used for granular filtering of numeric data.
+`RangeInput` creates a numeric range slider UI component with input fields. It works in the same way as [RangeSlider](range-components/RangeSlider.html).
 
 Example uses:
 
 * filtering products from a price range in an e-commerce shopping experience.
 * filtering flights from a range of departure and arrival times.
 
-> Note
->
-> This component behaves similar to the [RangeSlider](/range-components/rangeslider.html) except that the range is computed dynamically based on actual data.
-
 ## Usage
 
 ### Basic Usage
 ```js
-<DynamicRangeSlider
-  componentId="DynamicRangeSensor"
-  dataField="guests"
+<RangeInput
+  componentId="RangeInputComponent"
+  dataField="rating"
+  title="Ratings"
+  range={{
+    "start": 3000,
+    "end": 50000
+  }}
 />
 ```
 
-While `DynamicRangeSlider` only requires the above props to be used, it comes with many additional props for pre-selecting range values, setting the step value of the range slider, specifying labels for the range endpoints, whether to display histogram etc.
+`RangeInput` provides all the props supported by [RangeSlider](range-components/RangeSlider.html).
 
 ### Usage With All Props
 ```js
-<DynamicRangeSlider
-  componentId="DynamicRangeSensor"
-  dataField="guests"
-  title="Guests"
-  defaultSelected={(min, max) => (
-    {
-      "start": min,
-      "end": Math.min(min + 5, max)
-    }
-  )}
-  rangeLabels={(min, max) => (
-    {
-      "start": min + " guest",
-      "end": max + " guests"
-    }
-  )}
+<RangeInput
+  componentId="RangeInputSensor"
+  dataField="rating"
+  title="Ratings"
+  range={{
+    "start": 3000,
+    "end": 50000
+  }}
+  defaultSelected={{
+    "start": 4000,
+    "end": 10000
+  }}
+  rangeLabels={{
+    "start": "Start",
+    "end": "End"
+  }}
   stepValue={1}
   showHistogram={true}
   interval={2}
-  loader="Rendering the histogram.."
   react={{
     and: ["CategoryFilter", "SearchFilter"]
   }}
-  URLParams={true}
+  URLParams={false}
 />
 ```
 
@@ -73,13 +73,15 @@ While `DynamicRangeSlider` only requires the above props to be used, it comes wi
 - **componentId** `String`  
     unique identifier of the component, can be referenced in other components' `react` prop.
 - **dataField** `String`  
-    DB data field to be mapped with the component's UI view.The selected range creates a database query on this field.
+    DB data field to be mapped with the component's UI view. The selected range creates a database query on this field.
+- **range** `Object`
+    an object with `start` and `end` keys and corresponding numeric values denoting the minimum and maximum possible slider values.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
-- **defaultSelected** `Function` [optional]  
-    a function that accepts `min` and `max` range values as parameters and returns an object representing current selection from the range with `start` and `end` keys.
-- **rangeLabels** `Function` [optional]  
-    a function that accepts `min` and `max` range values as parameters and returns an object representing labels with `start` and `end` keys.
+- **defaultSelected** `Object` [optional]  
+    an object with `start` and `end` keys and corresponding numeric values denoting the pre-selected range values.
+- **rangeLabels** `Object` [optional]  
+    an object with `start` and `end` keys and corresponding `String` labels to show labels near the ends of the `RangeInput` component.
 - **snap** `Boolean` [optional]
     makes the slider snap on to points depending on the `stepValue` when the slider is released. Defaults to `true`. When set to `false`, `stepValue` is ignored.
 - **stepValue** `Number` [optional]  
@@ -88,37 +90,34 @@ While `DynamicRangeSlider` only requires the above props to be used, it comes wi
     whether to display the range histogram or not. Defaults to `true`.
 - **interval** `Number` [optional]  
     set the histogram bar interval, applicable when *showHistogram* is `true`. Defaults to `Math.ceil((props.range.end - props.range.start) / 100) || 1`.
-- **loader** `String or HTML` [optional]  
-    display text while the data is being fetched, accepts `String` or `HTML` markup.
 - **URLParams** `Boolean` [optional]  
-    enable creating a URL query string parameter based on the selected range of the slider. This is useful for sharing URLs with the component state. Defaults to `false`.
+    enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
 
 ## Demo
 
 <br />
 
-<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/dev/packages/web/examples/DynamicRangeSlider" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/dev/packages/web/examples/RangeInput" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 ## Styles
 
-`DynamicRangeSlider` component supports `innerClass` prop with the following keys:    
+`RangeInput` component supports `innerClass` prop with the following keys:    
 
-- `title`
-- `slider`
-- `label`
- 
-Read more about it [here](/theming/class.html).
+- `slider-container`
+- `input-container`
+
+The other `innerClass` properties are the same as supported by [RangeSlider](range-components/RangeSlider.html#styles).
 
 ## Extending
 
-`DynamicRangeSlider` component can be extended to
-1. customize the look and feel with `className`, `style`.
-2. update the underlying DB query with `customQuery`.
+`RangeInput` component can be extended to
+1. customize the look and feel with `className`, `style`,
+2. update the underlying DB query with `customQuery`,
 3. connect with external interfaces using `beforeValueChange`, `onValueChange` and `onQueryChange`,
 4. filter data using a combined query context via the `react` prop.
 
 ```js
-<DynamicRangeSlider
+<RangeInput
   ...
   className="custom-class"
   style={{"paddingBottom": "10px"}}
@@ -129,6 +128,17 @@ Read more about it [here](/theming/class.html).
           data_field: "this is a test"
         }
       }
+    }
+  }
+  beforeValueChange={
+    function(value) {
+      // called before the value is set
+      // returns a promise
+      return new Promise((resolve, reject) => {
+        // update state or component props
+        resolve()
+        // or reject()
+      })
     }
   }
   onValueChange={
@@ -145,17 +155,6 @@ Read more about it [here](/theming/class.html).
       console.log('nextQuery', nextQuery);
     }
   }
-  beforeValueChange={
-    function(value) {
-      // called before the value is set
-      // returns a promise
-      return new Promise((resolve, reject) => {
-        // update state or component props
-        resolve()
-        // or reject()
-      })
-    }
-  }
   react={{
     "and": ["ListSensor"]
   }}
@@ -165,18 +164,18 @@ Read more about it [here](/theming/class.html).
 - **className** `String`  
     CSS class to be injected on the component container.
 - **style** `Object`  
-    CSS styles to be applied to the **DynamicRangeSlider** component.
+    CSS styles to be applied to the **RangeInput** component.
 - **customQuery** `Function`  
     takes **value** and **props** as parameters and **returns** the data query to be applied to the component, as defined in Elasticsearch Query DSL.
-    `Note:` customQuery is called on value changes in the **DynamicRangeSlider** component as long as the component is a part of `react` dependency of at least one other component.
+    `Note:` customQuery is called on value changes in the **RangeInput** component as long as the component is a part of `react` dependency of at least one other component.
 - **beforeValueChange** `Function`  
     is a callback function which accepts component's future **value** as a parameter and **returns** a promise. It is called everytime before a component's value changes. The promise, if and when resolved, triggers the execution of the component's query and if rejected, kills the query execution. This method can act as a gatekeeper for query execution, since it only executes the query after the provided promise has been resolved.
 - **onValueChange** `Function`  
-    is a callback function which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when a user selects a particular range in a DynamicRangeSlider.
+    is a callback function which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when some range is selected in a "Discounted Price" RangeInput.
 - **onQueryChange** `Function`  
     is a callback function which accepts component's **prevQuery** and **nextQuery** as parameters. It is called everytime the component's query changes. This prop is handy in cases where you want to generate a side-effect whenever the component's query would change.
 - **react** `Object`  
-    specify dependent components to reactively update **DynamicRangeSlider's** data view.
+    specify dependent components to reactively update **RangeInput's** data view.
     - **key** `String`  
         one of `and`, `or`, `not` defines the combining clause.
         - **and** clause implies that the results will be filtered by matches from **all** of the associated component states.
@@ -189,6 +188,6 @@ Read more about it [here](/theming/class.html).
 
 ## Examples
 
-See more stories for DynamicRangeSlider on playground.
+See more stories for RangeInput on playground.
 
-<a href="https://opensource.appbase.io/playground/?selectedKind=Range%20components%2FDynamicRangeSlider" target="_blank">DynamicRangeSlider with default props</a>
+<a href="https://opensource.appbase.io/playground/?selectedKind=Range%20components%2FRangeInput" target="_blank">RangeInput with default props</a>

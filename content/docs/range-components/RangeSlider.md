@@ -86,11 +86,11 @@ While `RangeSlider` only requires the above props to be used, it comes with many
 - **snap** `Boolean` [optional]
     makes the slider snap on to points depending on the `stepValue` when the slider is released. Defaults to `true`. When set to `false`, `stepValue` is ignored.
 - **stepValue** `Number` [optional]  
-    step value specifies the slider stepper. Value should be an integer between 1 and floor(#total-range/2). Defaults to 1.
+    step value specifies the slider stepper. Value should be an integer greater than or equal to `1` and less than `Math.floor((range.end - range.start) / 2)`. Defaults to 1.
 - **showHistogram** `Boolean` [optional]  
     whether to display the range histogram or not. Defaults to `true`.
 - **interval** `Number` [optional]  
-    set the histogram bar interval, applicable when *showHistogram* is `true`. Defaults to `(range.end - range.start) / 10`.
+    set the histogram bar interval, applicable when *showHistogram* is `true`. Defaults to `Math.ceil((props.range.end - props.range.start) / 100) || 1`.
 - **loader** `String or HTML` [optional]  
     display text while the data is being fetched, accepts `String` or `HTML` markup.
 - **URLParams** `Boolean` [optional]  
@@ -170,7 +170,7 @@ Read more about it [here](/theming/class.html).
 - **style** `Object`  
     CSS styles to be applied to the **RangeSlider** component.
 - **customQuery** `Function`  
-    takes **value** and **props** as parameters and **returns** the data query to be applied to the component, as defined in Elasticsearch v2.4 Query DSL.
+    takes **value** and **props** as parameters and **returns** the data query to be applied to the component, as defined in Elasticsearch Query DSL.
     `Note:` customQuery is called on value changes in the **RangeSlider** component as long as the component is a part of `react` dependency of at least one other component.
 - **beforeValueChange** `Function`  
     is a callback function which accepts component's future **value** as a parameter and **returns** a promise. It is called everytime before a component's value changes. The promise, if and when resolved, triggers the execution of the component's query and if rejected, kills the query execution. This method can act as a gatekeeper for query execution, since it only executes the query after the provided promise has been resolved.

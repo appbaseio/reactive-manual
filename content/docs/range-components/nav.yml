@@ -174,6 +174,35 @@
           title: Examples
           href: /range-components/dynamicrangeslider.html#examples
           forceInternal: true
+    - id: rangeinput
+      title: RangeInput
+      href: /range-components/rangeinput.html
+      forceInternal: true
+      subitems:
+        - id: usage
+          title: Usage
+          href: /range-components/rangeinput.html#usage
+          forceInternal: true
+        - id: props
+          title: Props
+          href: /range-components/rangeinput.html#props
+          forceInternal: true
+        - id: demo
+          title: Demo
+          href: /range-components/rangeinput.html#demo
+          forceInternal: true
+        - id: styles
+          title: Styles
+          href: /range-components/rangeinput.html#styles
+          forceInternal: true
+        - id: extending
+          title: Extending
+          href: /range-components/rangeinput.html#extending
+          forceInternal: true
+        - id: examples
+          title: Examples
+          href: /range-components/rangeinput.html#examples
+          forceInternal: true
     - id: numberbox
       title: NumberBox
       href: /range-components/numberbox.html
