@@ -4,8 +4,8 @@ title: "TagCloud"
 layout: docs
 sectionid: docs
 permalink: base-components/tagcloud.html
-prev: base-components/ratingsfilter.html
-prevTitle: "RatingsFilter"
+prev: base-components/togglebutton.html
+prevTitle: "ToggleButton"
 next: base-components/datacontroller.html
 nextTitle: "DataController"
 redirect_from:

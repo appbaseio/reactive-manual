@@ -6,8 +6,8 @@ sectionid: docs
 permalink: range-components/daterange.html
 prev: range-components/datepicker.html
 prevTitle: "DatePicker"
-next: search-components/datasearch.html
-nextTitle: "Search Components: DataSearch"
+next: range-components/ratingsfilter.html
+nextTitle: "RatingsFilter"
 redirect_from:
     - 'basic-components/daterange.html'
     - 'range-components/daterange'

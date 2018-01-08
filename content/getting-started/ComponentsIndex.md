@@ -151,6 +151,14 @@ The following are all the possible UI components for a numeric datatype field in
 **[DatePicker](/range-components/datepicker.html)** and **[DateRange](/range-components/daterange.html)** components are useful for showing selectable date fields. They apply to Date datatype field, and internally apply a date range query on the database.
 </p>
 
+### RatingsFilter
+
+<p>
+<img src="https://imgur.com/BxizhXe.png" style="float:left">
+
+**[RatingsFilter](/range-components/ratingsfilter.html)** is useful for showing a UI selection choice based on ratings score. To be applied on a numeric datatype field.
+</p>
+
 ## 3. Search Components
 
 The following are UI components that represent searchbar UIs. The datatype for the `dataField` in these components should be a `Text` (or `String`) or `Keyword`, along with custom analyzer (like ngrams) based mappings defined in sub-fields.
@@ -231,14 +239,6 @@ Result components are used for displaying the results (aka hits).
 <img src="https://imgur.com/Ocb9Sir.png" style="float:left">
 
 **[ToggleButton](/base-components/togglebutton.html)** component applies on a String or Text datatype field where you want users to select a choice (or choices) amongst a small number of total choices.
-</p>
-
-### RatingsFilter
-
-<p>
-<img src="https://imgur.com/BxizhXe.png" style="float:left">
-
-**[RatingsFilter](/base-components/ratingsfilter.html)** is useful for showing a UI selection choice based on ratings score. To be applied on a numeric datatype field.
 </p>
 
 ### TagCloud

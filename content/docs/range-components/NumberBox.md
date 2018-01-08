@@ -16,7 +16,7 @@ redirect_from:
     - 'numberbox'
 ---
 
-![Image to be displayed](https://imgur.com/zKeNShC.png)
+![Image to be displayed](https://i.imgur.com/Cnx17Nj.png)
 
 `NumberBox` creates a box (or button) based numeric UI component. It is used for filtering results based on a numeric query.
 

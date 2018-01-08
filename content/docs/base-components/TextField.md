@@ -16,7 +16,7 @@ redirect_from:
     - 'textfield'
 ---
 
-![Image to be displayed](https://imgur.com/H6VOWBa.png)
+![Image to be displayed](https://i.imgur.com/rdankwu.png)
 
 `TextField` creates a simple text input field component that is optionally data connected. It can be further extended by specifying a user defined query on the input data.
 

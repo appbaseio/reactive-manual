@@ -58,35 +58,6 @@
           title: Examples
           href: /base-components/togglebutton.html#examples
           forceInternal: true
-    - id: ratingsfilter
-      title: RatingsFilter
-      href: /base-components/ratingsfilter.html
-      forceInternal: true
-      subitems:
-        - id: usage
-          title: Usage
-          href: /base-components/ratingsfilter.html#usage
-          forceInternal: true
-        - id: props
-          title: Props
-          href: /base-components/ratingsfilter.html#props
-          forceInternal: true
-        - id: demo
-          title: Demo
-          href: /base-components/ratingsfilter.html#demo
-          forceInternal: true
-        - id: styles
-          title: Styles
-          href: /base-components/ratingsfilter.html#styles
-          forceInternal: true
-        - id: extending
-          title: Extending
-          href: /base-components/ratingsfilter.html#extending
-          forceInternal: true
-        - id: examples
-          title: Examples
-          href: /base-components/ratingsfilter.html#examples
-          forceInternal: true
     - id: tagcloud
       title: TagCloud
       href: /base-components/tagcloud.html

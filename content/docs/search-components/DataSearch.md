@@ -4,8 +4,8 @@ title: "DataSearch"
 layout: docs
 sectionid: docs
 permalink: search-components/datasearch.html
-prev: range-components/daterange.html
-prevTitle: "Range Components: DateRange"
+prev: range-components/ratingsfilter.html
+prevTitle: "Range Components: RatingsFilter"
 next: search-components/categorysearch.html
 nextTitle: "CategorySearch"
 redirect_from:
