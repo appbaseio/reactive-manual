@@ -14,7 +14,7 @@ redirect_from:
     - 'multirange'
 ---
 
-![Image to be displayed](https://i.imgur.com/XqRjLSS.png)
+![Image to be displayed](https://i.imgur.com/Qq4sdKM.png)
 
 `MultiRange` creates a multiple checkbox based numeric range UI component.
 
@@ -94,9 +94,14 @@ Example uses:
 
 ## Styles
 
-All reactivebase components are `rbc` namespaced.
+`MultiRange` component supports `innerClass` prop with the following keys:    
 
-![Annotated image](https://i.imgur.com/m3uFfKj.png)
+- `title`
+- `list`
+- `checkbox`
+- `label`
+ 
+Read more about it [here](/theming/class.html).
 
 ## Extending
 
@@ -163,8 +168,4 @@ All reactivebase components are `rbc` namespaced.
 
 ## Examples
 
-1. [Range with all the default props](https://opensource.appbase.io/playground/?knob-title=MultiDropdownRange%3A%20Earthquake%20Magnitude&knob-URLParams%20%28not%20visible%20in%20storybook%29=false&knob-filterLabel=City%20filter&knob-defaultSelected%5B0%5D=London&knob-defaultSelected%5B1%5D=Melbourne&knob-selectAllLabel=All%20Cities&knob-showFilter=true&knob-sortBy=count&knob-size=100&knob-showCount=true&knob-placeholder=Search%20places&selectedKind=map%2FMultiRange&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-2. [Range with pre-selected items](https://opensource.appbase.io/playground/?knob-title=MultiDropdownRange%3A%20Earthquake%20Magnitude&knob-URLParams%20%28not%20visible%20in%20storybook%29=false&knob-filterLabel=City%20filter&knob-defaultSelected%5B0%5D=Major&knob-defaultSelected%5B1%5D=Moderate&knob-selectAllLabel=All%20Cities&knob-showFilter=true&knob-sortBy=count&knob-size=100&knob-showCount=true&knob-placeholder=Search%20places&selectedKind=map%2FMultiRange&selectedStory=With%20Default%20Selected&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-3. [Playground (with all knob actions)](https://opensource.appbase.io/playground/?knob-title=MultiRange%3A%20Filter&knob-URLParams%20%28not%20visible%20in%20storybook%29=false&knob-filterLabel=Earthquake%20range%20filter&knob-defaultSelected%5B0%5D=Major&knob-defaultSelected%5B1%5D=Moderate&knob-selectAllLabel=All%20Cities&knob-showFilter=true&knob-sortBy=count&knob-showCheckbox=true&knob-size=100&knob-showCount=true&knob-placeholder=Search%20places&selectedKind=map%2FMultiRange&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+<a href="https://opensource.appbase.io/playground/?selectedKind=Range%20components%2FMultiRange" target="_blank">MultiRange with default props</a>
