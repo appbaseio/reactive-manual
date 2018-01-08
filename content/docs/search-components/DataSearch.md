@@ -14,7 +14,7 @@ redirect_from:
     - 'datasearch'
 ---
 
-![Image to be displayed](https://i.imgur.com/dLeyahL.png)
+![Image to be displayed](https://i.imgur.com/rthmjVh.png)
 
 `DataSearch` creates a search box UI component that is connected to one or more database fields.
 
@@ -200,6 +200,4 @@ All reactivebase components are `rbc` namespaced.
 
 ## Examples
 
-1. [DataSearch with all the default props](../../playground/?selectedKind=map%2FDataSearch&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-2. [DataSearch with autoSuggest disabled](../../playground/?knob-autoSuggest=false&selectedKind=map%2FDataSearch&selectedStory=Without%20autoSuggest&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-3. [Playground (with all knob actions)](../../playground/?knob-autoSuggest=true&knob-title=DataSearch%3A%20Places&knob-placeholder=Search%20Places&knob-defaultSelected=&knob-weights%5B0%5D=1&knob-weights%5B1%5D=3&knob-fuzziness=1&selectedKind=map%2FDataSearch&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+<a href="https://opensource.appbase.io/playground/?selectedKind=Search%20components%2FDataSearch" target="_blank">DataSearch with default props</a>
