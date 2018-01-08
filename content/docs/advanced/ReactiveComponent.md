@@ -143,17 +143,30 @@ Now, the components which will have `myColorPicker` present in their `react` pro
 
 #### Child Component
 
-- **hits**
-- **aggregations**
-- **setQuery**
-- **selectedValue**
+- **hits** `Array`  
+    `hits` prop is an array of results from the Elasticsearch query of the component.
+- **aggregations** `Object`     
+    `aggregations` prop contains the results from `aggs` Elasticsearch query of the component.
+- **setQuery** `function`   
+    `setQuery` function sets the query of the component. It takes an object param of shape:
+```javascript
+    {
+        query: {}, // query of the component
+        value: ''  // value of the component
+    }
+```
+- **selectedValue** `any`   
+`selectedValue` contains the current value of the component (which can be set via `setQuery()` function). This is used for URLParams and SelectedFilters.
+
 
 #### ReactiveComponent
 
-- **defaultQuery**
-- **react**
-- // other props as well
-
+- **className** `String`  
+    CSS class to be injected on the component container.
+- **style** `Object`  
+    CSS styles to be applied to the **DataSearch** component.
+- **defaultQuery** `Function`  
+    **returns** the default query to be applied to the component, as defined in Elasticsearch Query DSL.
 - **react** `Object`
     `react` prop is available in components whose data view should reactively update when on or more dependent components change their states, e.g. [`ReactiveMap`](/map-components/reactivemap.html), [`ReactiveList`](/basic-components/reactivelist.html).
   - **key** `String`
