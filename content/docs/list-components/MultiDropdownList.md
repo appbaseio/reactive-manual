@@ -14,7 +14,7 @@ redirect_from:
     - "multidropdownlist"
 ---
 
-![Image to be displayed](https://i.imgur.com/ZZ0MG6N.png)
+![Image to be displayed](https://i.imgur.com/OUjsjxH.png)
 
 `MultiDropdownList` creates a  dropdown based multiple selection list UI component that is connected to a database field. It is used for filtering results based on the current selection from a list of items.
 
@@ -102,9 +102,14 @@ Example uses:
 
 ## Styles
 
-All reactivebase components are `rbc` namespaced.
+`MultiDropdownList` component supports `innerClass` prop with the following keys:    
 
-![Annotated image](https://i.imgur.com/TqKvRhF.png)
+- `title`
+- `select`
+- `list`
+- `icon`
+ 
+Read more about it [here](/theming/class.html).
 
 ## Extending
 
@@ -188,12 +193,4 @@ All reactivebase components are `rbc` namespaced.
 
 ## Examples
 
-1. [List with all the default props](https://opensource.appbase.io/playground/?selectedKind=map%2FMultiDropdownList&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-2. [List with a placeholder](https://opensource.appbase.io/playground/?knob-placeholder=Select%20Cities&selectedKind=map%2FMultiDropdownList&selectedStory=With%20Placeholder&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-3. [List with a 'Select All' option](https://opensource.appbase.io/playground/?knob-placeholder=Select%20Cities&knob-selectAllLabel=All%20Cities&selectedKind=map%2FMultiDropdownList&selectedStory=With%20Select%20All&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-4. [List with pre-selected options](https://opensource.appbase.io/playground/?knob-placeholder=Select%20Cities&knob-selectAllLabel=All%20Cities&knob-defaultSelected%5B0%5D=London&knob-defaultSelected%5B1%5D=Melbourne&selectedKind=map%2FMultiDropdownList&selectedStory=With%20Default%20Selected&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-5. [Playground (with all knob actions)](https://opensource.appbase.io/playground/?knob-title=MultiDropdownList&knob-URLParams%20%28not%20visible%20in%20storybook%29=false&knob-filterLabel=City%20filter&knob-defaultSelected%5B0%5D=London&knob-defaultSelected%5B1%5D=Melbourne&knob-selectAllLabel=All%20Cities&knob-showFilter=true&knob-sortBy=count&knob-size=100&knob-showCount=true&knob-placeholder=Select%20Cities&selectedKind=map%2FMultiDropdownList&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+<a href="https://opensource.appbase.io/playground/?selectedKind=List%20components%2FMultiDropdownList" target="_blank">MultiDropdownList with default props</a>
