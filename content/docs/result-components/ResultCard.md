@@ -128,7 +128,7 @@ Example uses:
         return {
           image: res.image,
           title: res.name,
-          desc: (
+          description: (
               <div>
                   <div className="price">${res.price}</div>
                   <p>{res.room_type} · {res.accommodates} guests</p>
@@ -139,7 +139,7 @@ Example uses:
       }
     }
     ```
-    The return format for the callback function is an object with `image`, `title`, `desc` and `url` fields.
+    The return format for the callback function is an object with `image`, `title`, `description` and `url` fields.
 
 ## Demo
 
