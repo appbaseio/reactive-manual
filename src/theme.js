@@ -379,6 +379,23 @@ const sharedStyles = {
     '& .gatsby-highlight + blockquote': {
       marginTop: 40,
     },
+
+    '& table': {
+      borderCollapse: 'collapse',
+    },
+
+    '& th': {
+      border: '1px solid #ddd',
+      borderBottomWidth: 2,
+      padding: 10,
+      textAlign: 'left',
+    },
+
+    '& td': {
+      border: '1px solid #ddd',
+      padding: 10,
+      textAlign: 'left',
+    },
   },
 };
 

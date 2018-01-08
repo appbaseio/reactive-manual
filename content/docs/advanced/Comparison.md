@@ -15,6 +15,8 @@ redirect_from:
 
 Here, we share how `ReactiveSearch` compares with other projects that have similar aims.
 
+<br />
+
 |  **#** | **ReactiveSearch** | **SearchKit** | **InstantSearch** |
 |  ------: | :------: | :------: | :------: |
 |  **Backend** | Any Elasticsearch index hosted on any Elasticsearch cluster. | Any Elasticsearch index hosted on any Elasticsearch cluster. | Custom-built for Algolia, a proprietary search engine. |

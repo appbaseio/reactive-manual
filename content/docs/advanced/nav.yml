@@ -72,3 +72,8 @@
       title: Comparison with Other projects
       href: /advanced/comparison.html
       forceInternal: true
+      subitems:
+        - id: comparison
+          title: Comparison
+          href: /advanced/comparison.html#comparison
+          forceInternal: true
