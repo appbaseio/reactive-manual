@@ -135,6 +135,14 @@ The following are all the possible UI components for a numeric datatype field in
 **[DynamicRangeSlider](/range-components/dynamicrangeslider.html)** is a more specific version of the [RangeSlider](/range-components/rangeslider.html) component where the available range is dynamically set based on the sub-set of data filtered by other components in the view.
 </p>
 
+### RangeInput
+
+<p>
+<img src="https://imgur.com/n4HJ8dD.png" style="float:left">
+
+**[RangeInput](/range-components/rangeinput.html)** component displays a [RangeSlider](/range-components/rangeslider.html) with input controls.
+</p>
+
 ### NumberBox
 
 <p>
