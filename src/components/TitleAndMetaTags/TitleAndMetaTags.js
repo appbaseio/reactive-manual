@@ -2,7 +2,7 @@ import Helmet from 'react-helmet';
 import React from 'react';
 
 const defaultDescription =
-  'Data-driven components for building Maps and Search UIs';
+  'UI components for Elasticsearch';
 
 type Props = {
   title: string,
