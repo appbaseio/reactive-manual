@@ -150,4 +150,4 @@ You can add the following class names to `TextField` component:
 
 ## Examples
 
-[Text field  with default props](https://opensource.appbase.io/playground/?selectedKind=Base%20components%2FTextField)
+<a href="https://opensource.appbase.io/playground/?selectedKind=Base%20components%2FTextField" target="_blank">Text field  with default props</a>
