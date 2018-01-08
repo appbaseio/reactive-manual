@@ -53,14 +53,14 @@
           forceInternal: true
     - id: writingdata
       title: Writing and Editing Data
-      href: /getting-started/writingdata.html
+      href: /advanced/writingdata.html
       forceInternal: true
       subitems:
         - id: appbase-js
           title: Appbase-js
-          href: /getting-started/writingdata.html#appbase-js
+          href: /advanced/writingdata.html#appbase-js
           forceInternal: true
         - id: rest-api
           title: REST API
-          href: /getting-started/writingdata.html#rest-api
+          href: /advanced/writingdata.html#rest-api
           forceInternal: true
