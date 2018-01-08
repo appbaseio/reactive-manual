@@ -14,7 +14,7 @@ redirect_from:
     - 'selectedfilters'
 ---
 
-![Image to be displayed](https://i.imgur.com/vt18TFE.png)
+![Image to be displayed](https://i.imgur.com/6GqSVW2.png)
 
 `SelectedFilters` creates a selectable filter UI view displaying the current selected values from other components. This component is useful for improving selection accessibility of other components.
 
