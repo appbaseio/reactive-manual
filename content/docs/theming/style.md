@@ -45,7 +45,7 @@ Alternatively, you can also add a `className` to any component which gets applie
         border: '1px dashed coral',
         backgroundColor: '#fefefe'
     }}
->
+/>
 ```
 
 ### Using the className prop
@@ -54,5 +54,5 @@ Alternatively, you can also add a `className` to any component which gets applie
 <DataSearch
     ...
     className="search-box"
->
+/>
 ```
