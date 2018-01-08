@@ -190,7 +190,7 @@ All reactivebase components are `rbc` namespaced.
 - **style** `Object`  
     CSS Styles to be applied to the **ResultCard** component.
 - **onData** `Function` [optional]  
-    a callback function where user can define how to render the view based on the data changes. In `ResultCard`'s case, the expected return format is an object with `image`, `title`, `url` and `desc` keys.
+    a callback function where user can define how to render the view based on the data changes. In `ResultCard`'s case, the expected return format is an object with `image`, `title`, `url` and `description` keys.
 - **react** `Object`  
     specify dependent components to reactively update **ResultCard's** data view.
     - **key** `String`  
@@ -202,8 +202,6 @@ All reactivebase components are `rbc` namespaced.
         - `String` is used for specifying a single component by its `componentId`.
         - `Array` is used for specifying multiple components by their `componentId`.
         - `Object` is used for nesting other key clauses.
-- **onAllData** `Function` [optional]  
-    an alternative callback function to `onData`, where user can define how to render the view based on all the data changes. It accepts two parameters, `items` and a **callback** function which should be called when the results reach the end (on scroll).
 
 ```js
 onAllData(items, loadMoreData) {
