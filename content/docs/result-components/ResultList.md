@@ -14,7 +14,7 @@ redirect_from:
     - 'resultlist'
 ---
 
-![Image to be displayed](https://i.imgur.com/X3WPi1k.png)
+![Image to be displayed](https://i.imgur.com/iY2csRm.png)
 
 `ResultList` creates a result list UI component to display results in a list layout, suited for data that needs a compact display.
 
@@ -151,9 +151,20 @@ Example uses:
 
 ## Styles
 
-All reactivebase components are `rbc` namespaced.
+`ResultList` component supports `innerClass` prop with the following keys:    
 
-![Annotated image](https://i.imgur.com/ngVXOoB.png)
+- `resultsInfo`
+- `sortOptions`
+- `resultStats`
+- `button`
+- `pagination`
+- `list`
+- `listItem`
+- `image`
+- `title`
+- `poweredBy`
+ 
+Read more about it [here](/theming/class.html).
 
 ## Extending
 
@@ -221,6 +232,4 @@ onAllData(items, loadMoreData) {
 
 See more stories for ResultList on playground.
 
-1. [ResultList with infinite scroll](https://opensource.appbase.io/playground/?knob-title=Cars%20result&knob-data=%5B%7B"start"%3A4%2C"end"%3A5%2C"label"%3A"4%20stars%20and%20up"%7D%2C%7B"start"%3A3%2C"end"%3A5%2C"label"%3A"3%20stars%20and%20up"%7D%2C%7B"start"%3A2%2C"end"%3A5%2C"label"%3A"2%20stars%20and%20up"%7D%2C%7B"start"%3A1%2C"end"%3A5%2C"label"%3A">%201%20stars"%7D%5D&knob-paginationAt=bottom&knob-filterLabel=Cities%20filter&knob-defaultSelected%5B0%5D=Auckland&knob-blacklist%5B0%5D=golf&knob-blacklist%5B1%5D=unknown&knob-maxCategories=10&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&knob-showFilter=true&knob-sortBy=count&knob-showResultStats=true&knob-stepValue=1&filterBy=ReactiveSearch&knob-showHistogram=true&knob-pagination=true&knob-maxItems=4&knob-size=5&knob-showCount=true&knob-placeholder=Search%20Cars&knob-showSearch=true&knob-multiSelect=true&selectedKind=search%2FResultList&selectedStory=With%20infinite%20loading&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-2. [ResultList with pagination](https://opensource.appbase.io/playground/?knob-title=Cars%20result&knob-data=%5B%7B"start"%3A4%2C"end"%3A5%2C"label"%3A"4%20stars%20and%20up"%7D%2C%7B"start"%3A3%2C"end"%3A5%2C"label"%3A"3%20stars%20and%20up"%7D%2C%7B"start"%3A2%2C"end"%3A5%2C"label"%3A"2%20stars%20and%20up"%7D%2C%7B"start"%3A1%2C"end"%3A5%2C"label"%3A">%201%20stars"%7D%5D&knob-paginationAt=bottom&knob-filterLabel=Cities%20filter&knob-defaultSelected%5B0%5D=Auckland&knob-blacklist%5B0%5D=golf&knob-blacklist%5B1%5D=unknown&knob-maxCategories=10&knob-URLParams%20%28not%20visible%20on%20storybook%29=false&knob-showFilter=true&knob-sortBy=count&knob-showResultStats=true&knob-stepValue=1&filterBy=ReactiveSearch&knob-showHistogram=true&knob-pagination=true&knob-maxItems=4&knob-size=5&knob-showCount=true&knob-placeholder=Search%20Cars&knob-showSearch=true&knob-multiSelect=true&selectedKind=search%2FResultList&selectedStory=With%20pagination&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs).
+<a href="https://opensource.appbase.io/playground/?selectedKind=Result%20components%2FResultList" target="_blank">ResultList with default props</a>
