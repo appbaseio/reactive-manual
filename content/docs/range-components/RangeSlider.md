@@ -14,7 +14,7 @@ redirect_from:
     - 'rangeslider'
 ---
 
-![Image to be displayed](https://i.imgur.com/OYUWZHL.png)
+![Image to be displayed](https://i.imgur.com/gK5zwRo.png)
 
 `RangeSlider` creates a numeric range slider UI component. It is used for granular filtering of numeric data.
 
@@ -104,9 +104,13 @@ While `RangeSlider` only requires the above props to be used, it comes with many
 
 ## Styles
 
-All reactivebase components are `rbc` namespaced.
+`RangeSlider` component supports `innerClass` prop with the following keys:    
 
-![Annotated image](https://i.imgur.com/jXeI9W1.png)
+- `title`
+- `slider`
+- `label`
+ 
+Read more about it [here](/theming/class.html).
 
 ## Extending
 
@@ -190,12 +194,4 @@ All reactivebase components are `rbc` namespaced.
 
 See more stories for RangeSlider on playground.
 
-1. [Range with all the default props](https://opensource.appbase.io/playground/?knob-defaultSelected%5B0%5D=Social&knob-defaultSelected%5B1%5D=Travel&knob-title=ToggleButton%3A%20Meetup%20Categories&knob-multiSelect=true&selectedKind=map%2FRangeSlider&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-2. [Range with a default selection](https://opensource.appbase.io/playground/?knob-defaultSelected=%7B"start"%3A0%2C"end"%3A2%7D&knob-title=ToggleButton%3A%20Meetup%20Categories&knob-multiSelect=true&selectedKind=map%2FRangeSlider&selectedStory=With%20Default%20Selected&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-3. [Range without histogram](https://opensource.appbase.io/playground/?knob-defaultSelected=%7B"start"%3A0%2C"end"%3A2%7D&knob-title=ToggleButton%3A%20Meetup%20Categories&knob-multiSelect=true&knob-showHistogram=false&selectedKind=map%2FRangeSlider&selectedStory=Without%20histogram&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-4. [With Range Labels](https://opensource.appbase.io/playground/?knob-defaultSelected=%7B"start"%3A0%2C"end"%3A2%7D&knob-title=ToggleButton%3A%20Meetup%20Categories&knob-multiSelect=true&knob-showHistogram=false&knob-rangeLabels=%7B"start"%3A"Start"%2C"end"%3A"End"%7D&selectedKind=map%2FRangeSlider&selectedStory=With%20Range%20Labels&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-5. [Playground (with all knob actions)](https://opensource.appbase.io/playground/?knob-defaultSelected=%7B"start"%3A0%2C"end"%3A2%7D&knob-title=RangeSlider%3A%20Guest%20RSVPs&knob-multiSelect=true&knob-showHistogram=true&knob-rangeLabels=%7B"start"%3A"Start"%2C"end"%3A"End"%7D&knob-range=%7B"start"%3A0%2C"end"%3A5%7D&knob-stepValue=1&knob-interval=20&selectedKind=map%2FRangeSlider&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+<a href="https://opensource.appbase.io/playground/?selectedKind=Range%20components%2FRangeSlider" target="_blank">RangeSlider with default props</a>
