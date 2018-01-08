@@ -36,7 +36,7 @@ Alternatively, you can also add a `className` to any component which gets applie
 
 ## Examples
 
-### Using the `style` prop
+### Using the style prop
 
 ```js{3-6}
 <DataSearch
@@ -48,7 +48,7 @@ Alternatively, you can also add a `className` to any component which gets applie
 >
 ```
 
-### Using the `className` prop
+### Using the className prop
 
 ```js{3}
 <DataSearch
