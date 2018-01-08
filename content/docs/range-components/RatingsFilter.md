@@ -3,13 +3,14 @@ id: ratingsfilter
 title: "RatingsFilter"
 layout: docs
 sectionid: docs
-permalink: base-components/ratingsfilter.html
-prev: base-components/numberbox.html
-prevTitle: "NumberBox"
-next: base-components/tagcloud.html
-nextTitle: "TagCloud"
+permalink: range-components/ratingsfilter.html
+prev: range-components/daterange.html
+prevTitle: "DateRange"
+next: search-components/datasearch.html
+nextTitle: "Search Components: DataSearch"
 redirect_from:
     - 'search-components/ratingsfilter.html'
+    - 'range-components/ratingsfilter'
     - 'base-components/ratingsfilter'
     - 'ratingsfilter'
 ---
