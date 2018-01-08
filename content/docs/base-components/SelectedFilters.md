@@ -14,7 +14,7 @@ redirect_from:
     - 'selectedfilters'
 ---
 
-![Image to be displayed](https://i.imgur.com/DyW5jJ2.png)
+![Image to be displayed](https://i.imgur.com/vt18TFE.png)
 
 `SelectedFilters` creates a selectable filter UI view displaying the current selected values from other components. This component is useful for improving selection accessibility of other components.
 
@@ -46,9 +46,11 @@ As an example, check [MultiList usage](/basic-components/multilist.html#usage) t
 
 ### Styles
 
-All reactivebase components are `rbc` namespaced.
+`SelectedFilters` component supports `innerClass` prop with the following keys:  
 
-![Annotated image](https://i.imgur.com/DzFn900.png)
+- `button`
+ 
+Read more about it [here](/theming/class.html).
 
 ## Extending
 
