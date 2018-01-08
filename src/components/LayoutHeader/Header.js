@@ -85,7 +85,9 @@ class Header extends Component {
                   flex: '0 0 auto',
                 },
               }}
-              href="https://opensource.appbase.io/reactivesearch">
+              href="https://opensource.appbase.io/reactivesearch"
+              target="_blank"
+              rel="noopener">
               <img
                 src={logoSvg}
                 alt="Logo"
