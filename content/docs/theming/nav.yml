@@ -5,10 +5,6 @@
       href: /theming/themes.html
       forceInternal: true
       subitems:
-        - id: introduction
-          title: Introduction
-          href: /theming/themes.html#introduction
-          forceInternal: true
         - id: usage
           title: Usage
           href: /theming/themes.html#usage
