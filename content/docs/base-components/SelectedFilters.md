@@ -34,7 +34,7 @@ Example uses:
 
 The `SelectedFilters` component itself doesn't have any props.
 
-Facet type components have a prop `showFilter` (defaults to `true`) which can be used to control whether the component's selected state appears in the SelectedFilters component. There is also a `filterLabel` prop which controls how that component is displayed.
+Most ReactiveSearch filter components have a prop `showFilter` (defaults to `true`) which can be used to control whether the component's selected state appears in the SelectedFilters component. There is also a `filterLabel` prop which controls how that component is displayed.
 
 As an example, check [MultiList usage](/basic-components/multilist.html#usage) to see how `showFilter` and `filterLabel` can be used.
 
@@ -70,10 +70,6 @@ Read more about it [here](/theming/class.html).
 
 ### Examples
 
-1. [Filters with all the default props](https://opensource.appbase.io/playground/?selectedKind=search%2FSelectedFilters&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+SelectedFilters work with most ReactiveSearch components. See more stories for SelectedFilters with a SingleList on playground.
 
-2. [List component with filters disabled](https://opensource.appbase.io/playground/?knob-showFilter=false&selectedKind=search%2FSelectedFilters&selectedStory=With%20no%20filter&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-3. [List component with custom filterLabel](https://opensource.appbase.io/playground/?knob-showFilter=false&knob-filterLabel=City%20filter&selectedKind=search%2FSelectedFilters&selectedStory=With%20filterLabel&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-4. [Playground (with all knob actions)](https://opensource.appbase.io/playground/?knob-showFilter=true&knob-filterLabel=City%20filter&selectedKind=search%2FSelectedFilters&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+<a href="https://opensource.appbase.io/playground/?selectedKind=List%20components%2FSingleList" target="_blank">SingleList with SelectedFilters</a>
