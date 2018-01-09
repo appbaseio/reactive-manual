@@ -14,7 +14,7 @@ redirect_from:
     - 'datacontroller'
 ---
 
-![Image to be displayed](https://i.imgur.com/Lj5O2qg.png)
+![Image to be displayed](https://imgur.com/l0bUQ8u.png)
 
 As the name suggests, a `DataContoller` component creates a UI optional component connected with a custom database query.
 
