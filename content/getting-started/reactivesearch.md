@@ -88,7 +88,7 @@ This is how the app should look after running the `yarn && yarn start` command.
 
 For this app, we will be using [CategorySearch](/search-components/categorysearch.html) and [SingleRange](/basic-components/singlerange.html) components for filtering the dataset. And [ResultCard](/search-components/resultcard.html) component for showing the search results.
 
-Lets add them within the ReactiveBase HOC. But before we do that, we will look at the important props for each.
+Lets add them within the ReactiveBase component. But before we do that, we will look at the important props for each.
 
 ```js
 <CategorySearch
