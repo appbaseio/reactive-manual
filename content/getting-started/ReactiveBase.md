@@ -29,7 +29,7 @@ This is the first component you will need to add when using `ReactiveSearch`.
 ### Props
 
 - **app** `String`  
-    app name as it appears on the dashboard.
+    app name as it appears on the dashboard. Refers to an index if you're using your own Elasticsearch cluster.
 - **credentials** `String` [optional]  
     app credentials as they appear on the dashboard. It should be a string of the format "username:password" and is used for authenticating the app. If you are not using an appbase.io app, credentials may not be necessary - although having an open-access Elasticsearch cluster is not recommended.
 - **url** `String` [optional]  
@@ -40,6 +40,10 @@ This is the first component you will need to add when using `ReactiveSearch`.
     allows over-writing of default styles by providing the respective key/values. You can read more about its usage [here](theming/themes.html)
 
 ### Connect to Elasticsearch
+
+> Note
+>
+> An **app** within ReactiveSearch's context refers to an **index** in Elasticsearch.
 
 ReactiveSearch works out of the box with an Elasticsearch index hosted anywhere. You can use the `url` prop of the **ReactiveBase** component to connect the child ReactiveSearch components to your own index. For example,
 

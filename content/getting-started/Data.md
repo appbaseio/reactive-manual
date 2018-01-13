@@ -14,7 +14,11 @@ The first step in getting started with building a custom project for **ReactiveS
 
 ### Creating an App
 
-ReactiveSearch uses Elasticsearch as its underlying database system. An app within ReactiveSearch's context refers to an index in Elasticsearch.
+ReactiveSearch uses Elasticsearch as its underlying database system.
+
+> Note
+>
+> An **app** within ReactiveSearch's context refers to an **index** in Elasticsearch.
 
 Here's a short gif walking through the app creation process in appbase.io, a hosted realtime Elasticsearch service.
 
