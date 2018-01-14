@@ -147,7 +147,7 @@ Finally, we need a component to show the matching results. [**ResultCard**](/sea
 />
 ```
 
-The `react` prop here specifies that it should construct a query based on the current selected values of searchbox and ratingsfilter components. Every time the user changes the input value, a new query is fired -- you don't need to write a manual query for any of the UI components here, although you can override it via `beforeQuery` prop.  
+The `react` prop here specifies that it should construct a query based on the current selected values of searchbox and ratingsfilter components. Every time the user changes the input value, a new query is fired -- you don't need to write a manual query for any of the UI components here, although you can override it via `customQuery` prop.  
 
 ![](https://i.imgur.com/J1MXsWK.png)
 
