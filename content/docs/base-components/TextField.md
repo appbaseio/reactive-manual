@@ -54,7 +54,7 @@ redirect_from:
     data field to be connected to the component's UI view.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
-- **defaultSelected** `Number` [optional]  
+- **defaultSelected** `String` [optional]  
     preset some value in the text field.
 - **placeholder** `String` [optional]  
     placeholder to be displayed in the text field when it has no value.
