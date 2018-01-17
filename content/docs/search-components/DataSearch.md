@@ -107,9 +107,13 @@ Example uses:
 
 ## Styles
 
-All reactivebase components are `rbc` namespaced.
+`DataSearch` component supports `innerClass` prop with the following keys:    
 
-![Annotated Image](https://i.imgur.com/ysbmr3Gg.png)
+- `title`
+- `input`
+- `list`
+ 
+Read more about it [here](/theming/class.html).
 
 ## Extending
 
