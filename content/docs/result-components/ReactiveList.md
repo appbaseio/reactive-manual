@@ -175,13 +175,22 @@ Read more about it [here](/theming/class.html).
 - **onData** `Function` [optional]  
     a callback function where user can define how to render the view based on the data changes.
 - **onAllData** `Function` [optional]  
-    an alternative callback function to `onData`, where user can define how to render the view based on all the data changes. It accepts three parameters, `results`, `streamResults` and a **callback** function which should be called when the results reach the end (on scroll).
+    an alternative callback function to `onData`, where user can define how to render the view based on all the data changes.  
+    <br/>
+    It accepts three parameters: `results`, `streamResults` and `loadMoreData`.
+    - **`results`**: An array of results obtained from the applied query.
+    - **`streamResults`**: An array of results streamed since the applied query, aka realtime data. Here, a meta property `_updated` or `_deleted` is also present within a result object to denote if an existing object has been updated or deleted.
+    - **`loadMoreData`**: A callback function to be called to load the next page of results into the view. The callback function is only applicable in the case of infinite loading view (i.e. `pagination` prop set to `false`).
 
 ```js
-onAllData(results, streamReasults, loadMoreData) {
+onAllData(results, streamResults, loadMoreData) {
 	// return the list to render
 }
 ```
+
+> Note
+>  
+> The `streamResults` parameter will be `[]` unless `stream` prop is set to `true`.
 
 ## Examples
 
