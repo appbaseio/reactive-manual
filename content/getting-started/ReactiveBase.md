@@ -37,7 +37,21 @@ This is the first component you will need to add when using `ReactiveSearch`.
 - **url** `String` [optional]  
     URL where Elasticsearch cluster is hosted, only needed if your app uses a non appbase.io URL.
 - **headers** `Object` [optional]  
-    set custom headers to be sent with each server request as key/value pairs.
+    set custom headers to be sent with each server request as key/value pairs. For example:
+
+```js{4-6}
+<ReactiveBase
+  app="appname"
+  credentials="abcdef123:abcdef12-ab12-ab12-ab12-abcdef123456"
+  headers={{
+      secret: 'reactivesearch-is-awesome'
+  }}
+>
+    <Component1 .. />
+    <Component2 .. />
+</ReactiveBase>
+```
+
 - **theme** `Object` [optional]  
     allows over-writing of default styles by providing the respective key/values. You can read more about its usage [here](theming/themes.html)
 
