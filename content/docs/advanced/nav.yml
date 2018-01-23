@@ -68,6 +68,15 @@
           title: REST API
           href: /advanced/writingdata.html#rest-api
           forceInternal: true
+    - id: guides
+      title: Guides
+      href: /advanced/guides.html
+      forceInternal: true
+      subitems:
+        - id: beforevaluechange
+          title: beforeValueChange
+          href: /advanced/guides.html#beforevaluechange
+          forceInternal: true
     - id: comparison
       title: Comparison with Other projects
       href: /advanced/comparison.html

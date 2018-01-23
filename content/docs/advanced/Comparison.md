@@ -4,8 +4,8 @@ title: "Comparison with Other Projects"
 layout: docs
 sectionid: docs
 permalink: advanced/comparison.html
-prev: advanced/writingdata.html
-prevTitle: "Writing and Editing Data"
+prev: advanced/guides.html
+prevTitle: "Advanced Guides"
 redirect_from:
     - "comparison"
     - "advanced/comparison"
