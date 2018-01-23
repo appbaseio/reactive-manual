@@ -40,16 +40,13 @@ Example uses:
   componentId="DateSensor"
   dataField="mtime"
   title="DatePicker"
-  defaultSelected={moment('2017-04-01')}
+  defaultSelected="2017-04-01"
   focused={true}
   numberOfMonths={1}
-  allowAllDates={true}
-  queryFormat="basic_date"
-  extra={{
-    "withFullScreenPortal": false,
-    "showClearDate": true
-  }}
+  queryFormat="date"
   placeholder="Pick date"
+  showClear={true}
+  clickUnselectsDay={true}
   showFilter={true}
   filterLabel="Date"
   URLParams={false}
@@ -64,38 +61,37 @@ Example uses:
     data field to be connected to the component's UI view.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
-- **defaultSelected** `Object of Moment` [optional]  
-    pre-select a default date based on a [moment](https://github.com/moment/moment/) object representing a date.
+- **defaultSelected** `string` [optional]  
+    pre-select a default date.
 - **focused** `Boolean` [optional]  
     whether to display the calendar view on initial load. Defaults to `true`.
 - **numberOfMonths** `Number` [optional]  
     number of months to be shown in the calendar view. Defaults to 1.
-- **allowAllDates** `Boolean` [optional]  
-    whether to allow selecting all dates or dates starting from today. Defaults to `true`, i.e. allowing all dates.
 - **queryFormat** `String` [optional]  
     sets the date format to be used in the query, can accept one of the following:
-    * `epoch_millis` (default) date is expressed as **milliseconds** since epoch.
-    * `epoch_seconds` date is expressed as **seconds** since epoch.
-    * `date` date expressed in `yyyy-MM-dd` format.
-    * `date_time` date expressed using a combination of date and time separated by **T**: `yyyy-MM-ddTHH:mm:ss.SSSZ`.
-    * `date_time_no_millis` date expressed using a combination of date and time without milliseconds separated by **T**: `yyyy-MM-ddTHH:mm:ssZ`.
-    * `basic_date` date expressed in `yyyyMMdd` format.
-    * `basic_date_time` date expressed in `yyyyMMddTHH:mm:ss.SSSZ` format.
-    * `basic_date_time_no_millis` date expressed in `yyyyMMddTHH:mm:ssZ` format.
-    * `basic_time` date expressed as just time in the `HHmmss.SSSZ` format.
-    * `basic_time_no_millis` date expressed as just time but without milliseconds in the `HHmmssZ` format.
-- **extra** `Object` [optional]  
-    supports the full gauntlet of props as defined in airbnb's [react-dates](https://github.com/airbnb/react-dates) component.
-    An example `extra` prop object would look like:
 
-    ```js
-    extra={{
-      "withFullScreenPortal": true,
-      "showClearDate": true
-    }}
-    ```
+<br />
+
+| **queryFormat** | **Representation as [elasticsearch date](https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-date-format.html#built-in-date-formats)** |
+|  ------: | :------: |
+| `epoch_millis` **(default)** | `epoch_millis` |
+| `epoch_second` | `epoch_second` |
+| `basic_time` | `HHmmss.SSSZ` |
+| `basic_time_no_millis` | `HHmmssZ` |
+| `date` | `yyyy-MM-dd` |
+| `basic_date` | `yyyyMMdd` |
+| `basic_date_time` | `yyyyMMdd'T'HHmmss.SSSZ` |
+| `basic_date_time_no_millis` | `yyyyMMdd'T'HHmmssZ` |
+| `date_time_no_millis` | `yyyy-MM-dd'T'HH:mm:ssZZ` |
+
 - **placeholder** `String` [optional]  
     placeholder to be shown in the field when no date is selected. Defaults to "Select Date".
+- **showClear** `Boolean` [optional]  
+    displays a cross icon to clear the input value. Defaults to `true`.
+- **clickUnselectsDay** `Boolean` [optional]  
+    clears the selected date if an active date is selected in the calendar view. Defaults to `true`.
+- **dayPickerInputProps** `object` [optional]  
+    accepts an object which is passed to the underlying [React Day Picker Input](http://react-day-picker.js.org/docs/input) component. Find the props [here](http://react-day-picker.js.org/api/DayPickerInput).
 - **showFilter** `Boolean` [optional]  
     show as filter when a value is selected in a global selected filters view. Defaults to `true`.
 - **filterLabel** `String` [optional]  
@@ -118,7 +114,7 @@ Example uses:
 - `daypicker-overlay-wrapper`
 - `daypicker-overlay`
  
-Read more about it [here](/theming/class.html).
+Read more about it [here](/theming/class.html). This component uses [React Day Picker Input](http://react-day-picker.js.org/docs/input) which you may refer to in order to customize the calendar fully.
 
 ## Extending
 
