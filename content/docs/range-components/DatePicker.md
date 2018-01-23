@@ -67,6 +67,8 @@ Example uses:
     whether to display the calendar view on initial load. Defaults to `true`.
 - **numberOfMonths** `Number` [optional]  
     number of months to be shown in the calendar view. Defaults to 1.
+- **initialMonth** `Date object` [optional] 
+    if provided sets the initial visible month when nothing is selected and the calendar is pulled up. For example, passing `new Date('2017-04-01')` will open the calendar on January 1st, 2017.
 - **queryFormat** `String` [optional]  
     sets the date format to be used in the query, can accept one of the following:
 

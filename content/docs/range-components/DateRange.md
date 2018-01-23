@@ -41,16 +41,18 @@ Example uses:
   dataField="mtime"
   title="DateRange"
   defaultSelected={{
-    start: moment('2017-04-01'),
-    end: moment('2017-04-07')
+    start: '2017-04-01',
+    end: '2017-04-07'
   }}
+  placeholder={{
+      start: 'Start Date',
+      end: 'End Date'
+  }}
+  focused={true}
   numberOfMonths={2}
-  allowAllDates={true}
-  queryFormat="basic_date"
-  extra={{
-    "withFullScreenPortal": false,
-    "showClearDate": true
-  }}
+  queryFormat="date"
+  autoFocusEnd={true}
+  showClear={true}
   showFilter={true}
   filterLabel="Date"
   URLParams={false}
@@ -68,33 +70,34 @@ Example uses:
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **defaultSelected** `Object` [optional]  
-    pre-select a default date range based on an object having a **start** and **end** [moment](https://github.com/moment/moment/) object representing a date range.
+    pre-select a default date range based on an object having a **start** and **end** `string` value.
+- **focused** `Boolean` [optional]  
+    whether to display the calendar view on initial load. Defaults to `true`.
+- **autoFocusEnd** `Boolean` [optional]  
+    focus the end date field after the starting date is selected. Defaults to `true`.
 - **numberOfMonths** `Number` [optional]  
     number of months to be shown in the calendar view. Defaults to 2.
-- **allowAllDates** `Boolean` [optional]  
-    whether to all all dates or dates starting from today. Defaults to `true`, i.e. allowing all dates.
 - **queryFormat** `String` [optional]  
     sets the date format to be used in the query, can accept one of the following:
-    * `epoch_millis` (default) date is expressed as **milliseconds** since epoch.
-    * `epoch_seconds` date is expressed as **seconds** since epoch.
-    * `date` date expressed in `yyyy-MM-dd` format.
-    * `date_time` date expressed using a combination of date and time separated by **T**: `yyyy-MM-ddTHH:mm:ss.SSSZ`.
-    * `date_time_no_millis` date expressed using a combination of date and time without milliseconds separated by **T**: `yyyy-MM-ddTHH:mm:ssZ`.
-    * `basic_date` date expressed in `yyyyMMdd` format.
-    * `basic_date_time` date expressed in `yyyyMMddTHH:mm:ss.SSSZ` format.
-    * `basic_date_time_no_millis` date expressed in `yyyyMMddTHH:mm:ssZ` format.
-    * `basic_time` date expressed as just time in the `HHmmss.SSSZ` format.
-    * `basic_time_no_millis` date expressed as just time but without milliseconds in the `HHmmssZ` format.
-- **extra** `Object` [optional]  
-    supports the full gauntlet of props as defined in airbnb's [react-dates](https://github.com/airbnb/react-dates) component.
-    An example `extra` prop object would look like:
 
-    ```js
-    extra={{
-      "withFullScreenPortal": true,
-      "showClearDate": true
-    }}
-    ```
+<br />
+
+| **queryFormat** | **Representation as [elasticsearch date](https://www.elastic.co/guide/en/elasticsearch/reference/current/mapping-date-format.html#built-in-date-formats)** |
+|  ------: | :------: |
+| `epoch_millis` **(default)** | `epoch_millis` |
+| `epoch_second` | `epoch_second` |
+| `basic_time` | `HHmmss.SSSZ` |
+| `basic_time_no_millis` | `HHmmssZ` |
+| `date` | `yyyy-MM-dd` |
+| `basic_date` | `yyyyMMdd` |
+| `basic_date_time` | `yyyyMMdd'T'HHmmss.SSSZ` |
+| `basic_date_time_no_millis` | `yyyyMMdd'T'HHmmssZ` |
+| `date_time_no_millis` | `yyyy-MM-dd'T'HH:mm:ssZZ` |
+
+- **initialMonth** `Date object` [optional] 
+    if provided sets the initial visible month when nothing is selected and the calendar is pulled up. For example, passing `new Date('2017-04-01')` will open the calendar on January 1st, 2017.
+- **dayPickerInputProps** `object` [optional]  
+    accepts an object which is passed to the underlying [React Day Picker Input](http://react-day-picker.js.org/docs/input) component. Find the props [here](http://react-day-picker.js.org/api/DayPickerInput).
 - **showFilter** `Boolean` [optional]  
     show as filter when a value is selected in a global selected filters view. Defaults to `true`.
 - **filterLabel** `String` [optional]  
