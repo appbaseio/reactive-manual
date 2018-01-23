@@ -47,11 +47,12 @@ Example uses:
   weights={[1, 3]}
   placeholder="Search for cities or venues"
   autoSuggest={true}
-  initialSuggestions={[{label: "Programming", value: "Programming"}]}
+  defaultSuggestions={[{label: "Programming", value: "Programming"}]}
   highlight={false}
-  highlightFields="group_city"
+  highlightField="group_city"
   queryFormat="or"
   fuzziness={0}
+  debounce={100}
   react={{
     and: ["CategoryFilter", "SearchFilter"]
   }}
@@ -83,13 +84,15 @@ Example uses:
     sets the position of the search icon. Can be `left` or `right`. Defaults to `right`.
 - **icon** `HTML` [optional]
     displays a custom search icon instead of the default 🔍
-- **autoSuggest** `Boolean` [optional]  
+- **autosuggest** `Boolean` [optional]  
     set whether the autosuggest functionality should be enabled or disabled. Defaults to `true`.
-- **initialSuggestions** `Array` [optional]
+- **defaultSuggestions** `Array` [optional]
     preset search suggestions to be shown on focus when the search box does not have any search query text set. Accepts an array of objects each having a **label** and **value** property. The label can contain either String or an HTML element.
+- **debounce** `Number` [optional]  
+    sets the milliseconds to wait before executing the query. Defaults to `0`, i.e. no debounce.
 - **highlight** `Boolean` [optional]  
     Whether highlighting should be enabled in the returned results. Defaults to `false`.
-- **highlightFields** `Array` [optional]  
+- **highlightField** `String` or `Array` [optional]  
     When highlighting is enabled, this prop allows specifying the fields which should be returned with the matching highlights. When not specified, it defaults to applying highlights on the field(s) specified in the **dataField** prop.
 - **queryFormat** `String` [optional]
     Sets the query format, can be **or** or **and**. Defaults to **or**.
@@ -127,7 +130,8 @@ Read more about it [here](/theming/class.html).
 2. update the underlying DB query with `customQuery`,
 3. connect with external interfaces using `beforeValueChange`, `onValueChange` and `onQueryChange`,
 4. specify how search suggestions should be filtered using `react` prop,
-5. add the following [synthetic events](https://reactjs.org/events.html) to the underlying `input` element:
+5. use your own function to render suggestions using `onSuggestion` prop,
+6. add the following [synthetic events](https://reactjs.org/events.html) to the underlying `input` element:
     - onBlur
     - onFocus
     - onKeyPress
