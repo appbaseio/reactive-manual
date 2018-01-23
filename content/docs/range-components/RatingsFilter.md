@@ -55,8 +55,6 @@ Example uses:
   defaultSelected={{
     "start": 4, "end": 5
   }}
-  showFilter={true}
-  filterLabel="Rating"
   URLParams={false}
 />
 ```
@@ -73,10 +71,6 @@ Example uses:
     title of the component to be shown in the UI.
 - **defaultSelected** `Object` [optional]  
     pre-select a ratings value using `start` and `end` key values from one of the data elements.
-- **showFilter** `Boolean` [optional]  
-    show as filter when a value is selected in a global selected filters view. Defaults to `true`.
-- **filterLabel** `String` [optional]  
-    An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected rating. This is useful for sharing URLs with the component state. Defaults to `false`.
 
