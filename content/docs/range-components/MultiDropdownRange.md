@@ -78,7 +78,7 @@ Example uses:
 - **defaultSelected** `Array` [optional]  
     pre-select one or more labels from the `data` array.
 - **placeholder** `String` [optional]  
-    set the placeholder to show for the dropdown UI, useful when no option is `defaultSelected`. The default placeholder value is set to "Select...".
+    set the placeholder to show for the dropdown UI, useful when no option is `defaultSelected`. The default placeholder value is set to "Select a value".
 - **showFilter** `Boolean` [optional]  
     show as filter when a value is selected in a global selected filters view. Defaults to `true`.
 - **filterLabel** `String` [optional]  
