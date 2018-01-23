@@ -56,7 +56,7 @@ Example uses:
     unique id of the sensor, can be referenced in another component's **react** prop.
 - **title** `String or HTML` [optional]  
     Sets the title of the component to be shown in the UI, applicable when **visible** is set to `true`.
-- **defaultSelected** `string` [optional]  
+- **defaultSelected** `any` [optional]  
     pre-select a value in the data controller.
 - **showFilter** `Boolean` [optional]  
     show as filter when a value is selected in a global selected filters view. Defaults to `true`.
