@@ -80,7 +80,7 @@ Example uses:
 - **showRadio** `Boolean` [optional]  
     show radio button icon for each range item. Defaults to `true`.
 - **showFilter** `Boolean` [optional]  
-    show the selected item as a filter in the [selected filters view](/basic-components/multilist.html). Defaults to `true`.
+    show the selected item as a filter in the selected filters view. Defaults to `true`.
 - **filterLabel** `String` [optional]  
     An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
 - **URLParams** `Boolean` [optional]  
