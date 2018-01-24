@@ -63,7 +63,7 @@ Example uses:
 - **componentId** `String`  
     unique identifier of the component, can be referenced in other components' `react` prop.
 - **dataField** `String`  
-    data field to be connected to the component's UI view. The list items are filtered by a database query on this field.
+    data field to be connected to the component's UI view. The list items are filtered by a database query on this field. This field is used for doing an aggregation and returns the result. We're using a `.raw` multifield here. You can use a field of type `keyword` or `not_analyzed` depending on your Elasticsearch cluster.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **size** `Number` [optional]  
