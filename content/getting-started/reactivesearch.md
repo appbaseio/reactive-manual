@@ -15,16 +15,16 @@ redirect_from:
 
 ### Step 0: Install ReactiveSearch
 
-We will fetch and install [`reactivesearch`](https://www.npmjs.com/package/@appbaseio/reactivesearch) module using npm.
+We will fetch and install [`reactivesearch`](https://www.npmjs.com/package/@appbaseio/reactivesearch) module using yarn or npm.
 
 ```bash
-npm install @appbaseio/reactivesearch
+yarn add @appbaseio/reactivesearch
 ```
 
 or
 
 ```bash
-yarn add @appbaseio/reactivesearch
+npm install @appbaseio/reactivesearch
 ```
 
 ### Step 1: Create Boilerplate with CRA
@@ -45,7 +45,7 @@ create-react-app my-awesome-search && cd my-awesome-search
 Install the `@appbaseio/reactivesearch` repo if you already haven't.
 
 ```bash
-npm install @appbaseio/reactivesearch
+yarn add @appbaseio/reactivesearch
 ```
 
 ### Step 2: Adding the first component
@@ -80,7 +80,7 @@ class App extends Component {
 }
 ```
 
-This is how the app should look after running the `yarn && yarn start` command.
+This is how the app should look after running the `yarn start` command.
 
 ![](https://i.imgur.com/M7AAhTh.png)
 
