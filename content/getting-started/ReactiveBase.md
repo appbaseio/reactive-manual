@@ -65,8 +65,8 @@ ReactiveSearch works out of the box with an Elasticsearch index hosted anywhere.
 
 ```js
 <ReactiveBase
-  app="appname"
-  url="http://your-elasticsearch-index"
+  app="your-elasticsearch-index"
+  url="http://your-elasticsearch-cluster"
 >
     <Component1 .. />
     <Component2 .. />
