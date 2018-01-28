@@ -105,7 +105,7 @@ We recommend adding the following custom analyzers to your Elasticsearch index. 
 
 The `autosuggest_analyzer` indexes the field by breaking each word into tokens of length [1, 20] always beginning with the first character of the word. This allows for fast suggestions retrieval in a [`DataSearch`](/search-components/datasearch.html) or [`CategorySearch`](/search-components/categorysearch.html) UI. It is ideally suited for creating autocompletion based searches.
 
-The `ngram_analyzer` indexes the field by breaking each work into tokens of length [2, 9] but beginning with any character of the word. This allows for fast suggestions retrieval in a [`DataSearch`](/search-components/datasearch.html) or [`CategorySearch`](/search-components/categorysearch.html) UI. It is ideally suited for finding partial (but non-fuzzy) matches.
+The `ngram_analyzer` indexes the field by breaking each word into tokens of length [2, 9] but beginning with any character of the word. This allows for fast suggestions retrieval in a [`DataSearch`](/search-components/datasearch.html) or [`CategorySearch`](/search-components/categorysearch.html) UI. It is ideally suited for finding partial (but non-fuzzy) matches.
 
 > **Note**
 >
