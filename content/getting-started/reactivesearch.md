@@ -193,7 +193,7 @@ class App extends Component {
 						react={{
 							and: ["searchbox", "ratingsfilter"]
 						}}
-						onData={({_source: res}) => {
+						onData={(res) => {
 							return {
 								image: "https://bit.do/demoimg",
 								title: res.name,
@@ -274,7 +274,7 @@ class App extends Component {
 							react={{
 								and: ["searchbox", "ratingsfilter"]
 							}}
-							onData={({_source: res}) => {
+							onData={(res) => {
 								return {
 									image: "https://www.enterprise.com/content/dam/global-vehicle-images/cars/FORD_FOCU_2012-1.png",
 									title: res.name,
