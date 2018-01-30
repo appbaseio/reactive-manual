@@ -1,0 +1,6 @@
+{
+  "main.css": "styles.css",
+  "main.js": "render-page.js",
+  "main.js.map": "render-page.js.map",
+  "static/logo.svg": "static/logo.dd400ff4.svg"
+}
