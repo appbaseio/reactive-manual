@@ -160,13 +160,17 @@ Now, the components which will have `myColorPicker` present in their `react` pro
 
 
 #### ReactiveComponent
-
+ 
 - **className** `String`  
     CSS class to be injected on the component container.
 - **style** `Object`  
     CSS styles to be applied to the **DataSearch** component.
 - **defaultQuery** `Function`  
     **returns** the default query to be applied to the component, as defined in Elasticsearch Query DSL.
+- **showFilter** `Boolean` [optional]  
+    show as filter when a value is selected in a global selected filters view. Defaults to `true`.
+- **filterLabel** `String` [optional]  
+    An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
 - **react** `Object`
     `react` prop is available in components whose data view should reactively update when on or more dependent components change their states, e.g. [`ReactiveMap`](/map-components/reactivemap.html), [`ReactiveList`](/basic-components/reactivelist.html).
   - **key** `String`
@@ -178,6 +182,9 @@ Now, the components which will have `myColorPicker` present in their `react` pro
       - `String` is used for specifying a single component by its `componentId`.
       - `Array` is used for specifying multiple components by their `componentId`.
       - `Object` is used for nesting other key clauses.
+
+- **URLParams** `Boolean` [optional]  
+    enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
 
 ### Examples
 
