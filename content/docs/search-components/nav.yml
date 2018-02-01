@@ -1,0 +1,60 @@
+- title: Search Components
+  items:
+    - id: datasearch
+      title: DataSearch
+      href: /search-components/datasearch.html
+      forceInternal: true
+      subitems:
+        - id: usage
+          title: Usage
+          href: /search-components/datasearch.html#usage
+          forceInternal: true
+        - id: props
+          title: Props
+          href: /search-components/datasearch.html#props
+          forceInternal: true
+        - id: demo
+          title: Demo
+          href: /search-components/datasearch.html#demo
+          forceInternal: true
+        - id: styles
+          title: Styles
+          href: /search-components/datasearch.html#styles
+          forceInternal: true
+        - id: extending
+          title: Extending
+          href: /search-components/datasearch.html#extending
+          forceInternal: true
+        - id: examples
+          title: Examples
+          href: /search-components/datasearch.html#examples
+          forceInternal: true
+    - id: categorysearch
+      title: CategorySearch
+      href: /search-components/categorysearch.html
+      forceInternal: true
+      subitems:
+        - id: usage
+          title: Usage
+          href: /search-components/categorysearch.html#usage
+          forceInternal: true
+        - id: props
+          title: Props
+          href: /search-components/categorysearch.html#props
+          forceInternal: true
+        - id: demo
+          title: Demo
+          href: /search-components/categorysearch.html#demo
+          forceInternal: true
+        - id: styles
+          title: Styles
+          href: /search-components/categorysearch.html#styles
+          forceInternal: true
+        - id: extending
+          title: Extending
+          href: /search-components/categorysearch.html#extending
+          forceInternal: true
+        - id: examples
+          title: Examples
+          href: /search-components/categorysearch.html#examples
+          forceInternal: true
