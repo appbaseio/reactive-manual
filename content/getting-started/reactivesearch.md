@@ -15,16 +15,16 @@ redirect_from:
 
 ### Step 0: Install ReactiveSearch
 
-We will fetch and install [`reactivesearch`](https://www.npmjs.com/package/@appbaseio/reactivesearch) module using npm.
+We will fetch and install [`reactivesearch`](https://www.npmjs.com/package/@appbaseio/reactivesearch) module using yarn or npm.
 
 ```bash
-npm install @appbaseio/reactivesearch
+yarn add @appbaseio/reactivesearch
 ```
 
 or
 
 ```bash
-yarn add @appbaseio/reactivesearch
+npm install @appbaseio/reactivesearch
 ```
 
 ### Step 1: Create Boilerplate with CRA
@@ -45,7 +45,7 @@ create-react-app my-awesome-search && cd my-awesome-search
 Install the `@appbaseio/reactivesearch` repo if you already haven't.
 
 ```bash
-npm install @appbaseio/reactivesearch
+yarn add @appbaseio/reactivesearch
 ```
 
 ### Step 2: Adding the first component
@@ -80,7 +80,7 @@ class App extends Component {
 }
 ```
 
-This is how the app should look after running the `yarn && yarn start` command.
+This is how the app should look after running the `yarn start` command.
 
 ![](https://i.imgur.com/M7AAhTh.png)
 
@@ -147,7 +147,7 @@ Finally, we need a component to show the matching results. [**ResultCard**](/sea
 />
 ```
 
-The `react` prop here specifies that it should construct a query based on the current selected values of searchbox and ratingsfilter components. Every time the user changes the input value, a new query is fired -- you don't need to write a manual query for any of the UI components here, although you can override it via `beforeQuery` prop.  
+The `react` prop here specifies that it should construct a query based on the current selected values of searchbox and ratingsfilter components. Every time the user changes the input value, a new query is fired -- you don't need to write a manual query for any of the UI components here, although you can override it via `customQuery` prop.  
 
 ![](https://i.imgur.com/J1MXsWK.png)
 
@@ -193,7 +193,7 @@ class App extends Component {
 						react={{
 							and: ["searchbox", "ratingsfilter"]
 						}}
-						onData={({_source: res}) => {
+						onData={(res) => {
 							return {
 								image: "https://bit.do/demoimg",
 								title: res.name,
@@ -274,7 +274,7 @@ class App extends Component {
 							react={{
 								and: ["searchbox", "ratingsfilter"]
 							}}
-							onData={({_source: res}) => {
+							onData={(res) => {
 								return {
 									image: "https://www.enterprise.com/content/dam/global-vehicle-images/cars/FORD_FOCU_2012-1.png",
 									title: res.name,

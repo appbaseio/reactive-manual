@@ -6,8 +6,8 @@ sectionid: writingdata
 permalink: advanced/writingdata.html
 prev: advanced/reactivecomponent.html
 prevTitle: "Reactive Component"
-next: advanced/comparison.html
-nextTitle: "Comparison"
+next: advanced/guides.html
+nextTitle: "Advanced Guides"
 ---
 
 Writing and updating data is a common operation that is triggered from app UIs.

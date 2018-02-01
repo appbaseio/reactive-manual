@@ -30,13 +30,29 @@ This is the first component you will need to add when using `ReactiveSearch`.
 
 - **app** `String`  
     app name as it appears on the dashboard. Refers to an index if you're using your own Elasticsearch cluster.
+- **type** `String` [optional]  
+    types on which the queries should run on. Multiple types can be passed as comma separated values. The default behavior here is to search on all the app types.
 - **credentials** `String` [optional]  
     app credentials as they appear on the dashboard. It should be a string of the format "username:password" and is used for authenticating the app. If you are not using an appbase.io app, credentials may not be necessary - although having an open-access Elasticsearch cluster is not recommended.
 - **url** `String` [optional]  
     URL where Elasticsearch cluster is hosted, only needed if your app uses a non appbase.io URL.
-- **type** `String` [optional]  
-    types on which the queries should run on. Multiple types can be passed as comma separated values. The default behavior here is to search on all the app types.
-- **theme** `Object` [optional]  
+- **headers** `Object` [optional]  
+    set custom headers to be sent with each server request as key/value pairs. For example:
+
+```js{4-6}
+<ReactiveBase
+  app="appname"
+  credentials="abcdef123:abcdef12-ab12-ab12-ab12-abcdef123456"
+  headers={{
+      secret: 'reactivesearch-is-awesome'
+  }}
+>
+    <Component1 .. />
+    <Component2 .. />
+</ReactiveBase>
+```
+
+- **theme** `Object` [optional]  
     allows over-writing of default styles by providing the respective key/values. You can read more about its usage [here](theming/themes.html)
 
 ### Connect to Elasticsearch
@@ -49,8 +65,8 @@ ReactiveSearch works out of the box with an Elasticsearch index hosted anywhere.
 
 ```js
 <ReactiveBase
-  app="appname"
-  url="http://your-elasticsearch-index"
+  app="your-elasticsearch-index"
+  url="http://your-elasticsearch-cluster"
 >
     <Component1 .. />
     <Component2 .. />

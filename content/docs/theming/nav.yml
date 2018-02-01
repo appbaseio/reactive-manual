@@ -13,6 +13,10 @@
           title: Examples
           href: /theming/themes.html#examples
           forceInternal: true
+        - id: extending-theming
+          title: Extending theming
+          href: /theming/themes.html#extending-theming
+          forceInternal: true
     - id: style
       title: Style
       href: /theming/style.html

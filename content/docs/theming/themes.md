@@ -57,3 +57,34 @@ You can overwrite the aforementioned default styles by providing the respective 
     <Component2 .. />
 </ReactiveBase>
 ```
+
+## Extending theming
+
+It's possible to use the same theming object used by the ReactiveSearch components in your own React components which are not connected with ReactiveSearch. All the child components of `ReactiveBase` receive the theming context which can be used as explained by the following example:
+
+```js
+// your component should be a child of ReactiveBase
+<ReactiveBase
+  ...
+>
+  <CustomComponent />
+</ReactiveBase>
+```
+
+Using the `withTheme` higher order component from `emotion-theming` in our component:
+
+```js
+import { withTheme } from 'emotion-theming'
+
+class CustomComponent extends React.Component {
+  ...
+  render() {
+    const { theme } = this.props; // the theme object is received in the props
+    return (
+      ...
+    );
+  }
+}
+
+export default withTheme(CustomComponent);  // using the HOC from emotion-theming
+```

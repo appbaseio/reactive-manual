@@ -48,14 +48,12 @@ Example uses:
   dataField="ratings"
   stream={true}  
   sortBy="desc"
-  from={0}
   size={8}
   pagination={true}
   paginationAt="bottom"
   pages={5}
   showResultStats={true}
   loader="Loading Results.."
-  noResults="No Matching Results Found!"
   react={{
     and: ["PriceFilter", "SearchFilter"]
   }}
@@ -71,13 +69,10 @@ Example uses:
   dataField="ratings"
   stream={true}  
   sortBy="desc"
-  from={0}
   size={8}
   pagination={false}
-  scrollOnTarget={window}
   showResultStats={true}
   loader="Loading Results.."
-  noResults="No Matching Results Found!"
   react={{
     and: ["PriceFilter", "SearchFilter"]
   }}
@@ -95,8 +90,6 @@ Example uses:
     whether to stream new result updates in the UI. Defaults to `false`.
 - **pagination** `Boolean` [optional]  
     pagination <> infinite scroll switcher. Defaults to `false`, i.e. an infinite scroll based view. When set to `true`, a pagination based list view with page numbers will appear.
-- **scrollOnTarget** `Object` [optional]  
-    accepts an object to set the infinite loading reference to the passed object, for example setting it to `window` will load new results when the `window` is scrolled.
 - **paginationAt** `String` [optional]  
     Determines the position where to show the pagination, only applicable when **pagination** prop is set to `true`. Accepts one of `top`, `bottom` or `both` as valid values. Defaults to `bottom`.
 - **pages** `Number` [optional]  
@@ -108,14 +101,10 @@ Example uses:
     - `label` - label to be displayed in the UI.
     - `dataField` - data field to use for applying the sorting criteria on.
     - `sortBy` - specified as either `asc` or `desc`.
-- **from** `Number` [optional]  
-    starting point from where to fetch the results. Useful in a pagination context. Defaults to 0.
 - **size** `Number` [optional]  
     number of results to show per view. Defaults to 20.
 - **loader** `String or HTML` [optional]  
     display to show the user while the data is loading, accepts `String` or `HTML` markup.
-- **noResults** `String or HTML` [optional]  
-    display to show the user when no results are found, accepts `String` or `HTML` markup.
 - **showResultStats** `Boolean` [optional]  
     whether to show result stats in the form of results found and time taken. Defaults to `true`.
 - **onResultStats** `Function` [optional]  

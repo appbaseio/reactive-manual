@@ -50,7 +50,7 @@ Example uses:
   defaultSelected="London"
   showCount={true}
   placeholder="Search City"
-  loader="Loading cities list.."
+  selectAllLabel="All Cities"
   react={{
     and: ["CategoryFilter", "SearchFilter"]
   }}
@@ -65,7 +65,7 @@ Example uses:
 - **componentId** `String`  
     unique identifier of the component, can be referenced in other components' `react` prop.
 - **dataField** `String`  
-    data field to be connected to the component's UI view.
+    data field to be connected to the component's UI view. This field is used for doing an aggregation and returns the result. We're using a `.raw` multifield here. You can use a field of type `keyword` or `not_analyzed` depending on your Elasticsearch cluster.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **size** `Number` [optional]  
@@ -78,8 +78,8 @@ Example uses:
     show count of number of occurences besides an item. Defaults to `true`.
 - **placeholder** `String` [optional]  
     placeholder to be displayed in the dropdown searchbox.
-- **loader** `String or HTML` [optional]  
-    display text while the data is being fetched, accepts `String` or `HTML` markup.
+- **selectAllLabel** `String` [optional]  
+    if provided, shows an extra option to select all the options in the list with the provided string value.
 - **showFilter** `Boolean` [optional]  
     show as filter when a value is selected in a global selected filters view. Defaults to `true`.
 - **filterLabel** `String` [optional]  

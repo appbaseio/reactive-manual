@@ -30,11 +30,27 @@ Example uses:
 <SelectedFilters />
 ```
 
+### Usage with All Props
+
+```js
+<SelectedFilters
+    showClearAll={true}
+    clearAllLabel="Clear filters"
+/>
+```
+
 ### Props
 
-The `SelectedFilters` component itself doesn't have any props.
+- **showClearAll** `boolean` [optional] (defaults to `true`)    
+    When set to `true`, displays an additional button to clear all the filters
+- **clearAllLabel** `string` [optional] (defaults to `'Clear All'`)     
+    Sets the label for the clear all button. 
 
 Most ReactiveSearch filter components have a prop `showFilter` (defaults to `true`) which can be used to control whether the component's selected state appears in the SelectedFilters component. There is also a `filterLabel` prop which controls how that component is displayed.
+
+> Note
+>
+> The `showFilter` and `filterLabel` prop updates are only reflected if the underlying query of the associated component has changed.
 
 As an example, check [MultiList usage](/basic-components/multilist.html#usage) to see how `showFilter` and `filterLabel` can be used.
 
@@ -65,7 +81,7 @@ Read more about it [here](/theming/class.html).
 
 - **className** `String`  
     CSS class to be injected on the component container.
-- **style** `Object`
+- **style** `Object`    
     CSS styles to be applied to the **SelectedFilters** component.
 
 ### Examples

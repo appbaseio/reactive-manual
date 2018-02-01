@@ -104,10 +104,6 @@
           title: Demo
           href: /base-components/datacontroller.html#demo
           forceInternal: true
-        - id: styles
-          title: Styles
-          href: /base-components/datacontroller.html#styles
-          forceInternal: true
         - id: extending
           title: Extending
           href: /base-components/datacontroller.html#extending

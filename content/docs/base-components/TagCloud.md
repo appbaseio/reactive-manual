@@ -44,7 +44,7 @@ Example uses:
   showCount={true}
   multiSelect={true}
   defaultSelected={["Auckland", "Atlanta"]}
-  loader="Fetching cities.."
+  queryFormat="or"
   react={{
     and: ["CategoryFilter", "SearchFilter"]
   }}
@@ -70,8 +70,8 @@ Example uses:
     whether to support multiple tag selections. Defaults to `false`.
 - **defaultSelected** `String or Array` [optional]  
     pre-select tag(s) from the tag cloud. An Array is accepted when *multiSelect* mode is enabled.
-- **loader** `String or HTML` [optional]  
-    text or layout to be displayed while the data is being fetched, accepts `String` or `HTML` markup.
+- **queryFormat** `String` [optional]   
+    sets whether to show results as a union with `"or"` (default) or an intersection with `"and"`. For example, if two tags are selected, say "Guitars" and "Electric Guitars" then with a `queryFormat` of "or" you would get results for both the tags. With a `queryFormat` of "and" you would get more specific results for guitars which satisfy both the tags.
 - **showFilter** `Boolean` [optional]  
     show as filter when a value is selected in a global selected filters view. Defaults to `true`.
 - **filterLabel** `String` [optional]  
