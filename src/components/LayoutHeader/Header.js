@@ -46,7 +46,7 @@ class Header extends Component {
           backgroundColor: colors.blueDark,
           color: colors.white,
           position: 'fixed',
-          zIndex: (location.pathname !== '/' && location.pathname !== '/native-reactive-manual/') ? 1 : 3,
+          zIndex: (location.pathname !== '/' && location.pathname !== '/reactive-manual/') ? 1 : 3,
           width: '100%',
           top: 0,
           left: 0,
@@ -148,7 +148,7 @@ class Header extends Component {
                 },
               }}>
               <HeaderLink
-                isActive={location.pathname === '/' || location.pathname === '/native-reactive-manual/' || location.pathname === '/reactive-manual'}
+                isActive={location.pathname === '/' || location.pathname === '/reactive-manual/native' || location.pathname === '/reactive-manual/native/'}
                 title="Home"
                 to="/"
               />
@@ -168,7 +168,7 @@ class Header extends Component {
                 to="/advanced/reactivecomponent.html"
               />
             </nav>
-            {location.pathname !== '/' && location.pathname !== '/native-reactive-manual/' && !this.state.showSearch && (
+            {location.pathname !== '/' && location.pathname !== '/reactive-manual/native' && location.pathname !== '/reactive-manual/native/' && !this.state.showSearch && (
               <div onClick={this.toggleSearch} role="button" tabIndex="0" css={{ cursor: 'pointer', paddingLeft: 10 }}>
                 <SearchSvg />
               </div>
@@ -184,7 +184,7 @@ class Header extends Component {
                   },
                 }}
               >
-                <SearchBox handleBlur={this.toggleSearch} prefixSlash={location.pathname.includes('/native-reactive-manual/')} />
+                <SearchBox handleBlur={this.toggleSearch} prefixSlash={location.pathname.includes('/reactive-manual/')} />
               </div>
             }
           </div>
