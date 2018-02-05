@@ -7,12 +7,5 @@ branches:
   - v2
 script:
   - yarn run build
+  - gh-pages -d public -a -r https://github.com/appbaseio/reactive-manual -b gh-pages
 sudo: false
-deploy:
-  provider: pages
-  local_dir: public
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
-  keep-history: true
-  on:
-    all_branches: true
