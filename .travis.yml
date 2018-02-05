@@ -1,0 +1,11 @@
+language: node_js
+node_js:
+- '8.9.1'
+branches:
+  only:
+  - v1-native
+  - v2
+script:
+  - yarn run build
+  - gh-pages -d public -a -e native -r https://${GITHUB_TOKEN}@github.com/appbaseio/reactive-manual -b gh-pages
+sudo: false
