@@ -5,7 +5,7 @@ import {colors, media} from 'theme';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 
-import logoSvg from 'icons/logo.svg';
+import logoPng from 'icons/logo.png';
 import SearchBox from 'components/SearchBox';
 import SearchSvg from './SearchSvg';
 
@@ -39,7 +39,7 @@ class Header extends Component {
   }
 
   switchDocs = (value) => {
-    if (location.pathname.includes('/reactive-manual/') && value.value === 'Native') {
+    if (location.pathname.includes('/reactive-manual/') && value.value === 'v0.4 - Native') {
       window.location.href = window.location.origin + '/reactive-manual/native';
     }
   }
@@ -96,7 +96,7 @@ class Header extends Component {
               target="_blank"
               rel="noopener">
               <img
-                src={logoSvg}
+                src={logoPng}
                 alt="Logo"
                 css={{
                   marginBottom: 10,
@@ -184,6 +184,7 @@ class Header extends Component {
               css={{
                 display: 'flex',
                 justifyContent: 'space-between',
+                paddingLeft: 10,
               }}
             >
               {
@@ -191,17 +192,22 @@ class Header extends Component {
                 <div
                   css={{
                     zIndex: 4,
-                    width: 100,
+                    width: 120,
                     display: 'flex',
                     alignItems: 'center',
+                    fontSize: '0.8em',
                     '& .Dropdown-root': {
                       position: 'absolute',
+                    },
+
+                    [media.lessThan('versionSwitcher')]: {
+                      display: 'none',
                     },
                   }}
                 >
                   <Dropdown
-                    options={['Web', 'Native']}
-                    value="Web"
+                    options={['v2 - Web', 'v0.4 - Native']}
+                    value="v2 - Web"
                     onChange={this.switchDocs}
                   />
                 </div>
