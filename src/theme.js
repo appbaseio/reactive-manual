@@ -31,6 +31,7 @@ const SIZES = {
   xxlarge: {min: 1340, max: Infinity},
 
   // Sidebar/nav related tweakpoints
+  versionSwitcher: {min: 370, max: Infinity},
   largerSidebar: {min: 1100, max: 1339},
   sidebarFixed: {min: 2000, max: Infinity},
 };

@@ -39,7 +39,7 @@ class Header extends Component {
   }
 
   switchDocs = (value) => {
-    if (location.pathname.includes('/reactive-manual/native') && value.value === 'Web') {
+    if (location.pathname.includes('/reactive-manual/native') && value.value === 'v2 Web') {
       window.location.href = window.location.origin + '/reactive-manual';
     }
   }
@@ -179,6 +179,7 @@ class Header extends Component {
               css={{
                 display: 'flex',
                 justifyContent: 'space-between',
+                paddingLeft: 10,
               }}
             >
               {
@@ -186,17 +187,25 @@ class Header extends Component {
                 <div
                   css={{
                     zIndex: 4,
-                    width: 110,
+                    width: 130,
                     display: 'flex',
                     alignItems: 'center',
+                    fontSize: '0.8em',
                     '& .Dropdown-root': {
                       position: 'absolute',
+                    },
+
+                    [media.lessThan('versionSwitcher')]: {
+                      display: 'none',
                     },
                   }}
                 >
                   <Dropdown
-                    options={['Web', 'Native']}
-                    value="Native"
+                    options={[
+                      'v2 Web',
+                      'v0.4 Native',
+                    ]}
+                    value="v0.4 Native"
                     onChange={this.switchDocs}
                   />
                 </div>
