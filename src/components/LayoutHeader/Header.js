@@ -39,7 +39,7 @@ class Header extends Component {
   }
 
   switchDocs = (value) => {
-    if (location.pathname === '/reactive-manual/' && value.value === 'Native') {
+    if (location.pathname.includes('/reactive-manual/') && value.value === 'Native') {
       window.location.href = window.location.origin + '/reactive-manual/native';
     }
   }
