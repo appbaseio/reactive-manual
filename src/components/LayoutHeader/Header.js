@@ -5,7 +5,7 @@ import {colors, media} from 'theme';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 
-import logoSvg from './icons/logo.svg';
+import logoPng from './icons/logo.png';
 import SearchBox from 'components/SearchBox';
 import SearchSvg from './SearchSvg';
 
@@ -96,7 +96,7 @@ class Header extends Component {
               target="_blank"
               rel="noopener">
               <img
-                src={logoSvg}
+                src={logoPng}
                 alt="Logo"
                 css={{
                   marginBottom: 10,
