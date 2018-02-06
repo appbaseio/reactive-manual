@@ -5,7 +5,7 @@ import {colors, media} from 'theme';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 
-import logoSvg from 'icons/logo.svg';
+import logoSvg from './icons/logo.svg';
 import SearchBox from 'components/SearchBox';
 import SearchSvg from './SearchSvg';
 
