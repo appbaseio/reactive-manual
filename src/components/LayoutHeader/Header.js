@@ -1,8 +1,9 @@
 import Container from 'components/Container';
 import HeaderLink from './HeaderLink';
-import Link from 'gatsby-link';
 import React, {Component} from 'react';
 import {colors, media} from 'theme';
+import Dropdown from 'react-dropdown';
+import 'react-dropdown/style.css';
 
 import logoSvg from 'icons/logo.svg';
 import SearchBox from 'components/SearchBox';
@@ -34,6 +35,12 @@ class Header extends Component {
   handleKeyDown = (e) => {
     if (e.keyCode === 27) {
       this.toggleSearch();
+    }
+  }
+
+  switchDocs = (value) => {
+    if (location.pathname === '/reactive-manual/' && value.value === 'Native') {
+      window.location.href = window.location.origin + '/reactive-manual/native';
     }
   }
 
@@ -173,11 +180,38 @@ class Header extends Component {
                 to="/advanced/customquery.html"
               />
             </nav>
-            {location.pathname !== '/' && location.pathname !== '/reactive-manual/' && !this.state.showSearch && (
-              <div onClick={this.toggleSearch} role="button" tabIndex="0" css={{ cursor: 'pointer', paddingLeft: 10 }}>
-                <SearchSvg />
-              </div>
-            )}
+            <div
+              css={{
+                display: 'flex',
+                justifyContent: 'space-between',
+              }}
+            >
+              {
+                !this.state.showSearch &&
+                <div
+                  css={{
+                    zIndex: 4,
+                    width: 100,
+                    display: 'flex',
+                    alignItems: 'center',
+                    '& .Dropdown-root': {
+                      position: 'absolute',
+                    },
+                  }}
+                >
+                  <Dropdown
+                    options={['Web', 'Native']}
+                    value="Web"
+                    onChange={this.switchDocs}
+                  />
+                </div>
+              }
+              {location.pathname !== '/' && location.pathname !== '/reactive-manual/' && !this.state.showSearch && (
+                <div onClick={this.toggleSearch} role="button" tabIndex="0" css={{ cursor: 'pointer', paddingLeft: 10 }}>
+                  <SearchSvg />
+                </div>
+              )}
+            </div>
             {
               this.state.showSearch &&
               <div
