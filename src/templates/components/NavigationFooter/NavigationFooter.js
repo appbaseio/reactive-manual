@@ -85,7 +85,7 @@ export default NavigationFooter;
 const PrimaryLink = ({children, to, location}) => {
   let url = to;
   if (location.pathname.match(
-    /^\/native-reactive-manual/,
+    /^\/reactive-manual\/native/,
   )) {
     url = `/${to}`;
   }
