@@ -187,7 +187,7 @@ class Header extends Component {
                 <div
                   css={{
                     zIndex: 4,
-                    width: 130,
+                    width: 138,
                     display: 'flex',
                     alignItems: 'center',
                     fontSize: '0.8em',
