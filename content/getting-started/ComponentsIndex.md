@@ -39,6 +39,13 @@ The components can also be used with `Numeric` datatype fields.
 </p>
 <br>
 
+<p>
+<img src="https://imgur.com/UVymwfo.png" style="float:left">
+
+**[MultiDropdownList](/components/multidropdownlist.html)** displays a dropdown list UI where multiple items can be selected at a time. It is similar to MultiList.
+</p>
+<br>
+
 > When to use dropdown lists
 >
 > Dropdown lists take up less space. If you have many filters to display or a smaller display area (like on phones), it is better to use dropdown lists.
@@ -52,6 +59,21 @@ The following are all the possible UI components for a numeric datatype field in
 
 **[SingleDropdownRange](/components/singledropdownrange.html)** displays a dropdown list UI where only one item can be selected at a time. Each item in this dropdown list represents a range, specified in the **data** prop of the component.
 </p>
+
+<p>
+<img src="https://imgur.com/MrTth88.png" style="float:left">
+
+**[MultiDropdownRange](/components/multidropdownrange.html)** displays a dropdown list UI where only multiple items can be selected at a time. Each item in this dropdown list represents a range, specified in the **data** prop of the component.
+</p>
+
+### DatePicker and DateRange
+
+<p>
+<img src="https://imgur.com/rJsL0mK.png" style="float:left"><img src="https://imgur.com/7dKLsNO.png" style="float:left">
+
+**[DatePicker](/components/datepicker.html)** and **[DateRange](/components/daterange.html)** components are useful for showing selectable date fields. They apply to Date datatype field, and internally apply a date range query on the database.
+</p>
+
 
 ## 3. Search Components
 
