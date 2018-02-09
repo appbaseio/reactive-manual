@@ -21,6 +21,19 @@
       title: Performance
       href: /advanced/performance.html
       forceInternal: true
+    - id: innerprops
+      title: innerProps
+      href: /advanced/innerprops.html
+      forceInternal: true
+      subitems:
+        - id: usage
+          title: Usage
+          href: /advanced/innerprops.html#usage
+          forceInternal: true
+        - id: examples
+          title: Examples
+          href: /advanced/innerprops.html#examples
+          forceInternal: true
     - id: theming
       title: Theming
       href: /advanced/theming.html

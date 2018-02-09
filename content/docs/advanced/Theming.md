@@ -4,8 +4,8 @@ title: "Theming"
 layout: docs
 sectionid: theming
 permalink: advanced/theming.html
-prev: advanced/performance.html
-prevTitle: "Performance"
+prev: advanced/innerprops.html
+prevTitle: "innerProps"
 next: advanced/style.html
 nextTitle: "Style"
 redirect_from:

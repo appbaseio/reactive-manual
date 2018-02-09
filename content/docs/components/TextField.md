@@ -52,8 +52,20 @@ redirect_from:
     preset some value in the text field.
 - **placeholder** `String` [optional]  
     placeholder to be displayed in the text field when it has no value.
-- **debounce** `Number` [optional]
+- **debounce** `Number` [optional]  
     delays executing the query by the specified time in **ms** while the user is typing. Defaults to `0`, i.e. no debounce. Useful if you want to save on the number of requests sent.
+- **innerProps** `Object` [optional]  
+    specifies additional props for the internal components. Accepts an object with the specified keys. Read more about the usage [here](/advanced/innerprops.html)
+
+<br />
+
+| **Key** | **Explaination** |
+|  ------: | :------: |
+| `item` | The wrapping [Item](http://docs.nativebase.io/Components.html#Form) component from **native-base** |
+| `icon` | [Icon](http://docs.nativebase.io/Components.html#icon-def-headref) component from **native-base** |
+| `input` | [Input](http://docs.nativebase.io/Components.html#Form) component from **native-base** |
+| `button` | [Button](http://docs.nativebase.io/Components.html#button-def-headref) component from **native-base** |
+
 
 ## Demo
 
