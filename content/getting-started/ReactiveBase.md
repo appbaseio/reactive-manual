@@ -36,8 +36,14 @@ This is the first component you will need to add when using `ReactiveSearch`.
     URL where Elasticsearch cluster is hosted, only needed if your app uses a non appbase.io URL.
 - **type** `String` [optional]  
     types on which the queries should run on. Multiple types can be passed as comma separated values. The default behavior here is to search on all the app types.
+- **theming** `Object` [optional]  
+    allows over-writing of default styles by providing the respective key/values. You can read more about its usage [here](advanced/theming.html).
 
 ### Connect to Elasticsearch
+
+> Note
+>
+> An app within ReactiveSearch’s context refers to an index in Elasticsearch.
 
 ReactiveSearch works out of the box with an Elasticsearch index hosted anywhere. You can use the `url` prop of the **ReactiveBase** component to connect the child ReactiveSearch components to your own index. For example,
 
