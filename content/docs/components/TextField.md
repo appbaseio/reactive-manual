@@ -75,6 +75,13 @@ redirect_from:
 
 `TextField` component supports `style` prop. Read more about it [here](/advanced/style.html).
 
+It also supports an `innerStyle` prop with the following keys
+- `button`
+- `icon`
+- `input`
+
+Read more about it [here](/advanced/style.html#innerstyle)
+
 ## Extending
 
 `TextField` component can be extended to

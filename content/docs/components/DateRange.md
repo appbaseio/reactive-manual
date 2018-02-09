@@ -101,6 +101,18 @@ Example uses:
 
 `DateRange` component supports `style` prop. Read more about it [here](/advanced/style.html).
 
+It also supports an `innerStyle` prop with the following keys:
+- `label`
+- `left`
+- `button`
+- `icon`
+- `right`
+- `body`
+- `title`
+- `calendar`
+
+Read more about it [here](/advanced/style.html#innerstyle)
+
 ## Extending
 
 `DateRange` component can be extended to

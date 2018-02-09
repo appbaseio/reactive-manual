@@ -88,6 +88,12 @@ Example uses:
 
 `SingleDropdownList` component supports `style` prop. Read more about it [here](/advanced/style.html).
 
+It also supports an `innerStyle` prop with the following keys:
+- `label`
+- `title`
+
+Read more about it [here](/advanced/style.html#innerstyle)
+
 ## Extending
 
 `SingleDropdownList` component can be extended to
