@@ -100,6 +100,17 @@ Example uses:
     ```
 - **onAllData** `Function` [optional]  
     works like **onData** prop but all the data objects are passed to the callback function.
+- **innerProps** `Object` [optional]  
+    specifies additional props for the internal components. Accepts an object with the specified keys. Read more about the usage [here](/advanced/innerprops.html)
+
+<br />
+
+| **Key** | **Explaination** |
+|  ------: | :------: |
+| `icon` | [Icon](http://docs.nativebase.io/Components.html#icon-def-headref) component from **native-base** |
+| `button` | [Button](http://docs.nativebase.io/Components.html#button-def-headref) component from **native-base** |
+| `spinner` | [Spinner](http://docs.nativebase.io/Components.html#Spinner) component from **native-base** |
+| `text` | [Text](http://facebook.github.io/react-native/docs/text.html) component from **react-native** |
 
 ## Demo
 

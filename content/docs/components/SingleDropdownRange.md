@@ -69,6 +69,15 @@ Example uses:
     pre-select a label from the `data` array.
 - **placeholder** `String` [optional]  
     placeholder to be displayed in the dropdown searchbox. Defaults to "Select a value".
+- **innerProps** `Object` [optional]  
+    specifies additional props for the internal components. Accepts an object with the specified keys. Read more about the usage [here](/advanced/innerprops.html)
+
+<br />
+
+| **Key** | **Explaination** |
+|  ------: | :------: |
+| `picker` | [Picker](http://docs.nativebase.io/Components.html#picker-def-headref) component from **native-base** |
+| `pickerItem` | [Picker.Item](http://docs.nativebase.io/Components.html#picker-def-headref) component from **native-base** |
 
 ## Demo
 

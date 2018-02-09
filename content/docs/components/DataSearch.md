@@ -85,6 +85,24 @@ Example uses:
 - **debounce** `Number` [optional]
     delays executing the query by the specified time in **ms** while the user is typing. Defaults to `0`, i.e. no debounce. Useful if you want to save on the number of requests sent.
 
+- **innerProps** `Object` [optional]  
+    specifies additional props for the internal components. Accepts an object with the specified keys. Read more about the usage [here](/advanced/innerprops.html)
+
+<br />
+
+| **Key** | **Explaination** |
+|  ------: | :------: |
+| `item` | The wrapping [Item](http://docs.nativebase.io/Components.html#Form) component from **native-base** |
+| `listItem` | [ListItem](http://docs.nativebase.io/Components.html#list-def-headref) component from **native-base** |
+| `list` | [List](http://docs.nativebase.io/Components.html#list-def-headref) component from **native-base** |
+| `icon` | [Icon](http://docs.nativebase.io/Components.html#icon-def-headref) component from **native-base** |
+| `input` | [Input](http://docs.nativebase.io/Components.html#Form) component from **native-base** |
+| `button` | [Button](http://docs.nativebase.io/Components.html#button-def-headref) component from **native-base** |
+| `header` | [Header](http://docs.nativebase.io/Components.html#header-def-headref) component from **native-base** |
+| `title` | [Title](http://docs.nativebase.io/Components.html) component from **native-base** |
+| `text` | [Text](http://facebook.github.io/react-native/docs/text.html) component from **react-native** |
+| `modal` | [Modal](https://facebook.github.io/react-native/docs/modal.html#docsNav) component from **react-native** |
+
 ## Demo
 
 [Try the demo](https://expo.io/@dhruvdutt/datasearch-demo) instantly on expo or check it out on appetize below:

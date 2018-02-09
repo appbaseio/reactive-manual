@@ -70,6 +70,15 @@ Example uses:
     show count of number of occurences besides an item. Defaults to `true`.
 - **selectAllLabel** `String` [optional]  
     if provided, shows an extra option to select all the options in the list with the provided string value.
+- **innerProps** `Object` [optional]  
+    specifies additional props for the internal components. Accepts an object with the specified keys. Read more about the usage [here](/advanced/innerprops.html)
+
+<br />
+
+| **Key** | **Explaination** |
+|  ------: | :------: |
+| `picker` | [Picker](http://docs.nativebase.io/Components.html#picker-def-headref) component from **native-base** |
+| `pickerItem` | [Picker.Item](http://docs.nativebase.io/Components.html#picker-def-headref) component from **native-base** |
 
 ## Demo
 

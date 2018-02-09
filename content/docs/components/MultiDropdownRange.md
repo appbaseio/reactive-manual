@@ -69,6 +69,21 @@ Example uses:
     pre-select a label from the `data` array.
 - **placeholder** `String` [optional]  
     placeholder to be displayed in the dropdown searchbox. Defaults to "Select a value".
+- **innerProps** `Object` [optional]  
+    specifies additional props for the internal components. Accepts an object with the specified keys. Read more about the usage [here](/advanced/innerprops.html)
+
+<br />
+
+| **Key** | **Explaination** |
+|  ------: | :------: |
+| `icon` | [Icon](http://docs.nativebase.io/Components.html#icon-def-headref) component from **native-base** |
+| `checkbox` | [CheckBox](http://docs.nativebase.io/Components.html#checkbox-headref) component from **native-base** |
+| `button` | [Button](http://docs.nativebase.io/Components.html#button-def-headref) component from **native-base** |
+| `header` | [Header](http://docs.nativebase.io/Components.html#header-def-headref) component from **native-base** |
+| `title` | [Title](http://docs.nativebase.io/Components.html) component from **native-base** |
+| `text` | [Text](http://facebook.github.io/react-native/docs/text.html) component from **react-native** |
+| `modal` | [Modal](https://facebook.github.io/react-native/docs/modal.html#docsNav) component from **react-native** |
+| `listView` | [ListView](https://facebook.github.io/react-native/docs/listview.html) component from **react-native** |
 
 ## Demo
 

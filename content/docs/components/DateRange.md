@@ -79,6 +79,22 @@ Example uses:
 | `basic_date_time_no_millis` | `yyyyMMdd'T'HHmmssZ` |
 | `date_time_no_millis` | `yyyy-MM-dd'T'HH:mm:ssZZ` |
 
+- **innerProps** `Object` [optional]  
+    specifies additional props for the internal components. Accepts an object with the specified keys. Read more about the usage [here](/advanced/innerprops.html)
+
+<br />
+
+| **Key** | **Explaination** |
+|  ------: | :------: |
+| `item` | The wrapping [Item](http://docs.nativebase.io/Components.html#Form) component from **native-base** |
+| `icon` | [Icon](http://docs.nativebase.io/Components.html#icon-def-headref) component from **native-base** |
+| `button` | [Button](http://docs.nativebase.io/Components.html#button-def-headref) component from **native-base** |
+| `header` | [Header](http://docs.nativebase.io/Components.html#header-def-headref) component from **native-base** |
+| `title` | [Title](http://docs.nativebase.io/Components.html) component from **native-base** |
+| `calendar` | [Calendar](https://github.com/wix/react-native-calendars) component from **react-native-calendars** |
+| `text` | [Text](http://facebook.github.io/react-native/docs/text.html) component from **react-native** |
+| `modal` | [Modal](https://facebook.github.io/react-native/docs/modal.html#docsNav) component from **react-native** |
+
 ## Demo
 
 ## Styles

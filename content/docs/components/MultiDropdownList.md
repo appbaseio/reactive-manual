@@ -75,6 +75,21 @@ Example uses:
     * In `and` mode, the applied query filters results where all of the selected items are present.
 - **selectAllLabel** `String` [optional]  
     if provided, shows an extra option to select all the options in the list with the provided string value.
+- **innerProps** `Object` [optional]  
+    specifies additional props for the internal components. Accepts an object with the specified keys. Read more about the usage [here](/advanced/innerprops.html)
+
+<br />
+
+| **Key** | **Explaination** |
+|  ------: | :------: |
+| `item` | The wrapping [Item](http://docs.nativebase.io/Components.html#Form) component from **native-base** |
+| `icon` | [Icon](http://docs.nativebase.io/Components.html#icon-def-headref) component from **native-base** |
+| `flatList` | [FlatList](https://facebook.github.io/react-native/docs/flatlist.html) component from **react-native** |
+| `button` | [Button](http://docs.nativebase.io/Components.html#button-def-headref) component from **native-base** |
+| `header` | [Header](http://docs.nativebase.io/Components.html#header-def-headref) component from **native-base** |
+| `title` | [Title](http://docs.nativebase.io/Components.html) component from **native-base** |
+| `text` | [Text](http://facebook.github.io/react-native/docs/text.html) component from **react-native** |
+| `modal` | [Modal](https://facebook.github.io/react-native/docs/modal.html#docsNav) component from **react-native** |
 
 ## Demo
 
