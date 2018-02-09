@@ -60,6 +60,10 @@
           title: Examples
           href: /advanced/style.html#examples
           forceInternal: true
+        - id: innerstyle
+          title: innerStyle
+          href: /advanced/style.html#innerstyle
+          forceInternal: true
     - id: build
       title: Building with Native Code
       href: /advanced/build.html
