@@ -4,8 +4,8 @@ title: "Customizing styles"
 layout: docs
 sectionid: style
 permalink: advanced/style.html
-prev: advanced/performance.html
-prevTitle: "Performance"
+prev: advanced/theming.html
+prevTitle: "Theming"
 next: advanced/build.html
 nextTitle: "Building with Native Code"
 redirect_from:

@@ -6,8 +6,8 @@ sectionid: performance
 permalink: advanced/performance.html
 prev: advanced/reactivecomponent.html
 prevTitle: "ReactiveComponent"
-next: advanced/style.html
-nextTitle: "Customizing styles"
+next: advanced/theming.html
+nextTitle: "Theming"
 redirect_from:
     - "advanced/performance"
     - "performance"

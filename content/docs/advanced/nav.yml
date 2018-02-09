@@ -21,14 +21,18 @@
       title: Performance
       href: /advanced/performance.html
       forceInternal: true
+    - id: theming
+      title: Theming
+      href: /advanced/theming.html
+      forceInternal: true
       subitems:
         - id: concepts
           title: Concepts
-          href: /advanced/performance.html#concepts
+          href: /advanced/theming.html#concepts
           forceInternal: true
         - id: examples
           title: Examples
-          href: /advanced/performance.html#examples
+          href: /advanced/theming.html#examples
           forceInternal: true
     - id: style
       title: Style
