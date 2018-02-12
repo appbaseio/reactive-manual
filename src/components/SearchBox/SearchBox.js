@@ -151,7 +151,7 @@ class SearchBox extends Component {
   };
 
   onSuggestionSelected = (e, {suggestion}) => {
-    const prefix = this.props.prefixSlash ? '/' : '';
+    const prefix = this.props.prefixSlash ? '/reactive-manual/native' : '';
     navigateTo(prefix + suggestion.url);
   };
 
