@@ -3,12 +3,12 @@
 ## Created with gatsby-plugin-netlify
 
 /reactive-manual/native/componentsindex  /reactive-manual/native/getting-started/componentsindex.html  302
-/reactive-manual/native/advanced/build  /reactive-manual/native/advanced/build.html  302
-/reactive-manual/native/build  /reactive-manual/native/advanced/build.html  302
 /reactive-manual/native/getting-started/  /reactive-manual/native/getting-started/reactivesearch.html  302
 /reactive-manual/native/getting-started/reactivesearch  /reactive-manual/native/getting-started/reactivesearch.html  302
 /reactive-manual/native/install  /reactive-manual/native/getting-started/reactivesearch.html  302
 /reactive-manual/native/quickstart  /reactive-manual/native/getting-started/reactivesearch.html  302
+/reactive-manual/native/advanced/build  /reactive-manual/native/advanced/build.html  302
+/reactive-manual/native/build  /reactive-manual/native/advanced/build.html  302
 /reactive-manual/native/advanced/guides  /reactive-manual/native/advanced/guides.html  302
 /reactive-manual/native/guides  /reactive-manual/native/advanced/guides.html  302
 /reactive-manual/native/advanced/innerprops  /reactive-manual/native/advanced/innerprops.html  302
@@ -20,12 +20,12 @@
 /reactive-manual/native/reactivecomponent  /reactive-manual/native/advanced/reactivecomponent.html  302
 /reactive-manual/native/advanced/style  /reactive-manual/native/advanced/style.html  302
 /reactive-manual/native/style  /reactive-manual/native/advanced/style.html  302
-/reactive-manual/native/advanced/theming  /reactive-manual/native/advanced/theming.html  302
-/reactive-manual/native/theming  /reactive-manual/native/advanced/theming.html  302
 /reactive-manual/native/components/datasearch  /reactive-manual/native/components/datasearch.html  302
 /reactive-manual/native/base-components/datasearch  /reactive-manual/native/components/datasearch.html  302
 /reactive-manual/native/search-components/datasearch  /reactive-manual/native/components/datasearch.html  302
 /reactive-manual/native/datasearch  /reactive-manual/native/components/datasearch.html  302
+/reactive-manual/native/advanced/theming  /reactive-manual/native/advanced/theming.html  302
+/reactive-manual/native/theming  /reactive-manual/native/advanced/theming.html  302
 /reactive-manual/native/components/datepicker  /reactive-manual/native/components/datepicker.html  302
 /reactive-manual/native/base-components/datepicker  /reactive-manual/native/components/datepicker.html  302
 /reactive-manual/native/range-components/datepicker  /reactive-manual/native/components/datepicker.html  302
