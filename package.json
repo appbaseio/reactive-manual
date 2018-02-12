@@ -43,7 +43,7 @@
     "eslint-plugin-react": "^7.4.0",
     "eslint-plugin-relay": "^0.0.19",
     "flow-bin": "^0.56.0",
-    "gatsby": "^1.9.149",
+    "gatsby": "^1.9.192",
     "gatsby-link": "^1.6.9",
     "gatsby-plugin-catch-links": "^1.0.9",
     "gatsby-plugin-feed": "^1.3.9",

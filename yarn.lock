@@ -65,7 +65,7 @@
     prop-types "^15.5.8"
     unescape "^0.2.0"
 
-"@types/history@*":
+"@types/history@*", "@types/history@^4.6.2":
   version "4.6.2"
   resolved "https://registry.yarnpkg.com/@types/history/-/history-4.6.2.tgz#12cfaba693ba20f114ed5765467ff25fdf67ddb0"
 
@@ -3195,8 +3195,8 @@ eslint-plugin-babel@^4.1.2:
   resolved "https://registry.yarnpkg.com/eslint-plugin-babel/-/eslint-plugin-babel-4.1.2.tgz#79202a0e35757dd92780919b2336f1fa2fe53c1e"
 
 eslint-plugin-flowtype@^2.39.1:
-  version "2.42.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-flowtype/-/eslint-plugin-flowtype-2.42.0.tgz#7fcc98df4ed9482a22ac10ba4ca48d649c4c733a"
+  version "2.43.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-flowtype/-/eslint-plugin-flowtype-2.43.0.tgz#47cdac5f01cda53f1c3e8477f0c83fee66a1606e"
   dependencies:
     lodash "^4.15.0"
 
@@ -3213,8 +3213,8 @@ eslint-plugin-jsx-a11y@^6.0.2:
     jsx-ast-utils "^2.0.0"
 
 eslint-plugin-prettier@^2.3.1:
-  version "2.5.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-2.5.0.tgz#39a91dd7528eaf19cd42c0ee3f2c1f684606a05f"
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-prettier/-/eslint-plugin-prettier-2.6.0.tgz#33e4e228bdb06142d03c560ce04ec23f6c767dd7"
   dependencies:
     fast-diff "^1.1.1"
     jest-docblock "^21.0.0"
@@ -3246,8 +3246,8 @@ eslint-visitor-keys@^1.0.0:
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.0.0.tgz#3f3180fb2e291017716acb4c9d6d5b5c34a6a81d"
 
 eslint@^4.8.0:
-  version "4.16.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-4.16.0.tgz#934ada9e98715e1d7bbfd6f6f0519ed2fab35cc1"
+  version "4.17.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-4.17.0.tgz#dc24bb51ede48df629be7031c71d9dc0ee4f3ddf"
   dependencies:
     ajv "^5.3.0"
     babel-code-frame "^6.22.0"
@@ -3962,9 +3962,9 @@ gatsby-1-config-css-modules@^1.0.8:
   dependencies:
     babel-runtime "^6.26.0"
 
-gatsby-cli@^1.1.33:
-  version "1.1.33"
-  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-1.1.33.tgz#a79337d73f88ef1157aceefd245242ec0d463680"
+gatsby-cli@^1.1.39:
+  version "1.1.39"
+  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-1.1.39.tgz#f2f4bf67d081de88c0a9a3728d9fcf0e215e182d"
   dependencies:
     babel-code-frame "^6.26.0"
     babel-runtime "^6.26.0"
@@ -3984,10 +3984,11 @@ gatsby-cli@^1.1.33:
     yargs "^8.0.2"
     yurnalist "^0.2.1"
 
-gatsby-link@^1.6.35, gatsby-link@^1.6.9:
-  version "1.6.35"
-  resolved "https://registry.yarnpkg.com/gatsby-link/-/gatsby-link-1.6.35.tgz#28ade7aa44460d0a3102d45e4f7413ff7a633e47"
+gatsby-link@^1.6.36, gatsby-link@^1.6.9:
+  version "1.6.36"
+  resolved "https://registry.yarnpkg.com/gatsby-link/-/gatsby-link-1.6.36.tgz#3f969d38e9396e2650d3804543c76881eab98feb"
   dependencies:
+    "@types/history" "^4.6.2"
     "@types/react-router-dom" "^4.2.2"
     babel-runtime "^6.26.0"
     prop-types "^15.5.8"
@@ -4007,8 +4008,8 @@ gatsby-plugin-catch-links@^1.0.9:
     babel-runtime "^6.26.0"
 
 gatsby-plugin-feed@^1.3.9:
-  version "1.3.16"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-feed/-/gatsby-plugin-feed-1.3.16.tgz#b0dc937bc9c19201336861854febf281f565ede0"
+  version "1.3.17"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-feed/-/gatsby-plugin-feed-1.3.17.tgz#271cab6d87b321def8e68b93d07ff00aa4d19163"
   dependencies:
     babel-runtime "^6.26.0"
     lodash.merge "^4.6.0"
@@ -4090,12 +4091,12 @@ gatsby-plugin-twitter@^1.0.10:
   dependencies:
     babel-runtime "^6.26.0"
 
-gatsby-react-router-scroll@^1.0.9:
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/gatsby-react-router-scroll/-/gatsby-react-router-scroll-1.0.9.tgz#0a321e7ae8c69ac6ba9528abf5b7be4e549a943f"
+gatsby-react-router-scroll@^1.0.10:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/gatsby-react-router-scroll/-/gatsby-react-router-scroll-1.0.10.tgz#a520ea98fd25d5c307790974b13955cb128e01df"
   dependencies:
     babel-runtime "^6.26.0"
-    scroll-behavior "^0.9.1"
+    scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
 gatsby-remark-autolink-headers@^1.4.4:
@@ -4108,8 +4109,8 @@ gatsby-remark-autolink-headers@^1.4.4:
     unist-util-visit "^1.1.1"
 
 gatsby-remark-copy-linked-files@^1.5.2:
-  version "1.5.25"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-1.5.25.tgz#ca2098551de4df929f03b8ab0d3bfa54b9f68deb"
+  version "1.5.26"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-copy-linked-files/-/gatsby-remark-copy-linked-files-1.5.26.tgz#d223fc9d7dba45b48b90a29d5e40af4c59807baa"
   dependencies:
     babel-runtime "^6.26.0"
     cheerio "^1.0.0-rc.2"
@@ -4121,8 +4122,8 @@ gatsby-remark-copy-linked-files@^1.5.2:
     unist-util-visit "^1.1.1"
 
 gatsby-remark-images@^1.5.11:
-  version "1.5.41"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-1.5.41.tgz#8692c6609a64ecd80a0137acc9a9878dc02ebc47"
+  version "1.5.43"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-images/-/gatsby-remark-images-1.5.43.tgz#155137f259391342c5d2832d085d63319412180a"
   dependencies:
     babel-runtime "^6.26.0"
     cheerio "^1.0.0-rc.2"
@@ -4133,13 +4134,13 @@ gatsby-remark-images@^1.5.11:
     unist-util-select "^1.5.0"
 
 gatsby-remark-prismjs@^1.2.1:
-  version "1.2.12"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-prismjs/-/gatsby-remark-prismjs-1.2.12.tgz#3ca1067daaa0bd738dce6d1005310cb85f7ee04e"
+  version "1.2.14"
+  resolved "https://registry.yarnpkg.com/gatsby-remark-prismjs/-/gatsby-remark-prismjs-1.2.14.tgz#3f5fd2ac1d5a174673a6b6fa63b4e4fa526d36c0"
   dependencies:
     babel-runtime "^6.26.0"
-    parse-numeric-range "^0.0.2"
-    prismjs "^1.7.0"
-    unist-util-visit "^1.1.1"
+    parse-numeric-range "0.0.2"
+    prismjs "^1.11.0"
+    unist-util-visit "^1.3.0"
 
 gatsby-remark-responsive-iframe@^1.4.3:
   version "1.4.16"
@@ -4161,8 +4162,8 @@ gatsby-remark-smartypants@^1.4.3:
     unist-util-visit "^1.1.1"
 
 gatsby-source-filesystem@^1.4.4:
-  version "1.5.16"
-  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-1.5.16.tgz#1439093b6ad53322667870ca4ed636ad0e2121b0"
+  version "1.5.18"
+  resolved "https://registry.yarnpkg.com/gatsby-source-filesystem/-/gatsby-source-filesystem-1.5.18.tgz#e2cb96a2c248c304e58ba3d0142316a695d3ef35"
   dependencies:
     babel-cli "^6.26.0"
     babel-runtime "^6.26.0"
@@ -4177,8 +4178,8 @@ gatsby-source-filesystem@^1.4.4:
     valid-url "^1.0.9"
 
 gatsby-transformer-remark@^1.7.2:
-  version "1.7.30"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-1.7.30.tgz#8785bc1f6b7df312bcf93ac02b6523723218f1e7"
+  version "1.7.31"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-remark/-/gatsby-transformer-remark-1.7.31.tgz#b429e14e60c8cf8809def0c6c914627ef7ff3a1c"
   dependencies:
     babel-runtime "^6.26.0"
     bluebird "^3.5.0"
@@ -4202,17 +4203,17 @@ gatsby-transformer-remark@^1.7.2:
     unist-util-visit "^1.1.1"
 
 gatsby-transformer-sharp@^1.6.1:
-  version "1.6.17"
-  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-1.6.17.tgz#a0c36d02ac1ef056cccd01e27209795b2367d2b1"
+  version "1.6.18"
+  resolved "https://registry.yarnpkg.com/gatsby-transformer-sharp/-/gatsby-transformer-sharp-1.6.18.tgz#55dd46596bec75cd92bf3b76f2db1e04502a99da"
   dependencies:
     babel-runtime "^6.26.0"
     bluebird "^3.5.0"
     fs-extra "^4.0.2"
     image-size "^0.6.0"
 
-gatsby@^1.9.149:
-  version "1.9.175"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-1.9.175.tgz#a0e1f9a66202f5821abfc1fdbcf3673c3dfa5b4c"
+gatsby@^1.9.192:
+  version "1.9.192"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-1.9.192.tgz#1a7fe60735b618681c616fc375f5e019a1e98c31"
   dependencies:
     async "^2.1.2"
     babel-code-frame "^6.22.0"
@@ -4252,10 +4253,10 @@ gatsby@^1.9.149:
     front-matter "^2.1.0"
     fs-extra "^4.0.1"
     gatsby-1-config-css-modules "^1.0.8"
-    gatsby-cli "^1.1.33"
-    gatsby-link "^1.6.35"
+    gatsby-cli "^1.1.39"
+    gatsby-link "^1.6.36"
     gatsby-module-loader "^1.0.9"
-    gatsby-react-router-scroll "^1.0.9"
+    gatsby-react-router-scroll "^1.0.10"
     glob "^7.1.1"
     graphql "^0.11.7"
     graphql-relay "^0.5.1"
@@ -7322,7 +7323,7 @@ parse-latin@^4.0.0:
     unist-util-modify-children "^1.0.0"
     unist-util-visit-children "^1.0.0"
 
-parse-numeric-range@^0.0.2:
+parse-numeric-range@0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/parse-numeric-range/-/parse-numeric-range-0.0.2.tgz#b4f09d413c7adbcd987f6e9233c7b4b210c938e4"
 
@@ -8076,7 +8077,13 @@ pretty-error@^2.1.1:
     renderkid "^2.0.1"
     utila "~0.4"
 
-prismjs@^1.6.0, prismjs@^1.7.0:
+prismjs@^1.11.0:
+  version "1.11.0"
+  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.11.0.tgz#297aef33eb79421bfdb19273a5092ca515970d29"
+  optionalDependencies:
+    clipboard "^1.7.1"
+
+prismjs@^1.6.0:
   version "1.10.0"
   resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.10.0.tgz#77e5187c2ae6b3253fcc313029cf25fe53778721"
   optionalDependencies:
@@ -8265,8 +8272,8 @@ rc@^1.0.1, rc@^1.1.2, rc@^1.1.6, rc@^1.1.7:
     strip-json-comments "~2.0.1"
 
 react-autosuggest@^9.3.2:
-  version "9.3.2"
-  resolved "https://registry.yarnpkg.com/react-autosuggest/-/react-autosuggest-9.3.2.tgz#dd8c0fbe9c25aa94afe296180353647f6ecc10a7"
+  version "9.3.3"
+  resolved "https://registry.yarnpkg.com/react-autosuggest/-/react-autosuggest-9.3.3.tgz#400a9173d291380daa625a599dcbf5cf1c908d01"
   dependencies:
     prop-types "^15.5.10"
     react-autowhatever "^10.1.0"
@@ -9148,9 +9155,9 @@ sc-formatter@~3.0.0:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/sc-formatter/-/sc-formatter-3.0.2.tgz#9abdb14e71873ce7157714d3002477bbdb33c4e6"
 
-scroll-behavior@^0.9.1:
-  version "0.9.5"
-  resolved "https://registry.yarnpkg.com/scroll-behavior/-/scroll-behavior-0.9.5.tgz#41da30b559da004eb48450f6cff6068c7696ff23"
+scroll-behavior@^0.9.9:
+  version "0.9.9"
+  resolved "https://registry.yarnpkg.com/scroll-behavior/-/scroll-behavior-0.9.9.tgz#ebfe0658455b82ad885b66195215416674dacce2"
   dependencies:
     dom-helpers "^3.2.1"
     invariant "^2.2.2"
@@ -10444,7 +10451,7 @@ unist-util-visit-children@^1.0.0:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/unist-util-visit-children/-/unist-util-visit-children-1.1.1.tgz#eba63b371116231181068837118b6e6e10ec8844"
 
-unist-util-visit@^1.0.0, unist-util-visit@^1.1.0, unist-util-visit@^1.1.1, unist-util-visit@^1.1.3:
+unist-util-visit@^1.0.0, unist-util-visit@^1.1.0, unist-util-visit@^1.1.1, unist-util-visit@^1.1.3, unist-util-visit@^1.3.0:
   version "1.3.0"
   resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-1.3.0.tgz#41ca7c82981fd1ce6c762aac397fc24e35711444"
   dependencies:
