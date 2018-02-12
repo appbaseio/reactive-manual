@@ -36,25 +36,25 @@ The components can also be used with `Numeric` datatype fields.
 <p>
 <img src="https://imgur.com/p2PBKh6.png" style="float:left">
 
-**[SingleList](/list-components/singlelist.html)** is useful for displaying a list of values where only one item can be selected at a time, and the values are retrieved by a database query on the field specified in the **dataField** prop.
+**[SingleList](list-components/singlelist.html)** is useful for displaying a list of values where only one item can be selected at a time, and the values are retrieved by a database query on the field specified in the **dataField** prop.
 </p>
 
 <p>
 <img src="https://imgur.com/waVNdgr.png" style="float:left">
 
-**[MultiList](/list-components/multilist.html)** is useful for displaying a list of values where multiple values can be selected at a time. Similar to SingleList, these values are retrieved by a database query on the field specified in the **dataField** prop.
+**[MultiList](list-components/multilist.html)** is useful for displaying a list of values where multiple values can be selected at a time. Similar to SingleList, these values are retrieved by a database query on the field specified in the **dataField** prop.
 </p>
 
 <p>
 <img src="https://imgur.com/b9l8Mhd.png" style="float:left">
 
-**[SingleDataList](/list-components/singledatalist.html)** is useful for displaying a list of user defined values where only one value item can be selected at a time. Unlike SingleList and MultiList where the values are auto-fetched, here the **data** prop allows curation of which values to display.
+**[SingleDataList](list-components/singledatalist.html)** is useful for displaying a list of user defined values where only one value item can be selected at a time. Unlike SingleList and MultiList where the values are auto-fetched, here the **data** prop allows curation of which values to display.
 </p>
 
 <p>
 <img src="https://imgur.com/2b1iVDZ.png" style="float:left">
 
-**[MultiDataList](/list-components/multidatalist.html)** is useful for displaying a list of user defined values where multiple value items can be selected at a time. Similar to the SingleDataList component, the **data** prop allows curation of which values to display.
+**[MultiDataList](list-components/multidatalist.html)** is useful for displaying a list of user defined values where multiple value items can be selected at a time. Similar to the SingleDataList component, the **data** prop allows curation of which values to display.
 </p>
 
 > List vs DataList
@@ -64,13 +64,13 @@ The components can also be used with `Numeric` datatype fields.
 <p>
 <img src="https://imgur.com/a1be47e.png" style="float:left">
 
-**[SingleDropdownList](/list-components/singledropdownlist.html)** displays a dropdown list UI where only one item can be selected at a time. It is similar to SingleList but is presented in a dropdown format to save space.
+**[SingleDropdownList](list-components/singledropdownlist.html)** displays a dropdown list UI where only one item can be selected at a time. It is similar to SingleList but is presented in a dropdown format to save space.
 </p>
 
 <p>
 <img src="https://imgur.com/UVymwfo.png" style="float:left">
 
-**[MultiDropdownList](/list-components/multidropdownlist.html)** displays a dropdown list UI where multiple items can be selected at a time. It is similar to MultiList.
+**[MultiDropdownList](list-components/multidropdownlist.html)** displays a dropdown list UI where multiple items can be selected at a time. It is similar to MultiList.
 </p>
 <br>
 
@@ -85,7 +85,7 @@ The following are all the possible UI components for a numeric datatype field in
 <p>
 <img src="https://imgur.com/tPi76EU.png" style="float:left">
 
-**[SingleRange](/range-components/singlerange.html)** displays a curated list of items where only one item can be selected at a time. Each item represents a range of values, specified in the **data** prop of the component.
+**[SingleRange](range-components/singlerange.html)** displays a curated list of items where only one item can be selected at a time. Each item represents a range of values, specified in the **data** prop of the component.
 </p>
 
 > <i class="fa fa-info-circle"></i> Note
@@ -95,7 +95,7 @@ The following are all the possible UI components for a numeric datatype field in
 <p>
 <img src="https://imgur.com/ulEoXvy.png" style="float:left">
 
-**[MultiRange](/range-components/multirange.html)** displays a curated list of items where multiple items can be selected at a time. Each item represents a range of values, specified in the **data** prop of the component.
+**[MultiRange](range-components/multirange.html)** displays a curated list of items where multiple items can be selected at a time. Each item represents a range of values, specified in the **data** prop of the component.
 </p>
 
 > <i class="fa fa-info-circle"></i> Note
@@ -105,13 +105,13 @@ The following are all the possible UI components for a numeric datatype field in
 <p>
 <img src="https://imgur.com/2xxBIUg.png" style="float:left">
 
-**[SingleDropdownRange](/range-components/singledropdownrange.html)** displays a dropdown list UI where only one item can be selected at a time. Each item in this dropdown list represents a range, specified in the **data** prop of the component.
+**[SingleDropdownRange](range-components/singledropdownrange.html)** displays a dropdown list UI where only one item can be selected at a time. Each item in this dropdown list represents a range, specified in the **data** prop of the component.
 </p>
 
 <p>
 <img src="https://imgur.com/MrTth88.png" style="float:left">
 
-**[MultiDropdownRange](/range-components/multidropdownrange.html)** displays a dropdown list UI where only multiple items can be selected at a time. Each item in this dropdown list represents a range, specified in the **data** prop of the component.
+**[MultiDropdownRange](range-components/multidropdownrange.html)** displays a dropdown list UI where only multiple items can be selected at a time. Each item in this dropdown list represents a range, specified in the **data** prop of the component.
 </p>
 
 ### RangeSlider
@@ -119,7 +119,7 @@ The following are all the possible UI components for a numeric datatype field in
 <p>
 <img src="https://imgur.com/n4HJ8dD.png" style="float:left">
 
-**[RangeSlider](/range-components/rangeslider.html)** component applies on a numeric datatype (ideally an integer) field and displays a slider UI.
+**[RangeSlider](range-components/rangeslider.html)** component applies on a numeric datatype (ideally an integer) field and displays a slider UI.
 </p>
 
 > RangeSlider vs Range lists
@@ -132,7 +132,7 @@ The following are all the possible UI components for a numeric datatype field in
 <p>
 <img src="https://imgur.com/n4HJ8dD.png" style="float:left">
 
-**[DynamicRangeSlider](/range-components/dynamicrangeslider.html)** is a more specific version of the [RangeSlider](/range-components/rangeslider.html) component where the available range is dynamically set based on the sub-set of data filtered by other components in the view.
+**[DynamicRangeSlider](range-components/dynamicrangeslider.html)** is a more specific version of the [RangeSlider](/range-components/rangeslider.html) component where the available range is dynamically set based on the sub-set of data filtered by other components in the view.
 </p>
 
 ### RangeInput
@@ -140,7 +140,7 @@ The following are all the possible UI components for a numeric datatype field in
 <p>
 <img src="https://imgur.com/n4HJ8dD.png" style="float:left">
 
-**[RangeInput](/range-components/rangeinput.html)** component displays a [RangeSlider](/range-components/rangeslider.html) with input controls.
+**[RangeInput](range-components/rangeinput.html)** component displays a [RangeSlider](/range-components/rangeslider.html) with input controls.
 </p>
 
 ### NumberBox
@@ -148,7 +148,7 @@ The following are all the possible UI components for a numeric datatype field in
 <p>
 <img src="https://imgur.com/svE3sly.png" style="float:left">
 
-**[NumberBox](/range-components/numberbox.html)** component applies on a numeric datatype field where you want to display a selectable field value that can be incrementally increased or decreased, e.g. no of guests field in a hotel booking app.
+**[NumberBox](range-components/numberbox.html)** component applies on a numeric datatype field where you want to display a selectable field value that can be incrementally increased or decreased, e.g. no of guests field in a hotel booking app.
 </p>
 
 ### DatePicker and DateRange
@@ -156,7 +156,7 @@ The following are all the possible UI components for a numeric datatype field in
 <p>
 <img src="https://imgur.com/rJsL0mK.png" style="float:left"><img src="https://imgur.com/7dKLsNO.png" style="float:left">
 
-**[DatePicker](/range-components/datepicker.html)** and **[DateRange](/range-components/daterange.html)** components are useful for showing selectable date fields. They apply to Date datatype field, and internally apply a date range query on the database.
+**[DatePicker](range-components/datepicker.html)** and **[DateRange](/range-components/daterange.html)** components are useful for showing selectable date fields. They apply to Date datatype field, and internally apply a date range query on the database.
 </p>
 
 ### RatingsFilter
@@ -164,7 +164,7 @@ The following are all the possible UI components for a numeric datatype field in
 <p>
 <img src="https://imgur.com/BxizhXe.png" style="float:left">
 
-**[RatingsFilter](/range-components/ratingsfilter.html)** is useful for showing a UI selection choice based on ratings score. To be applied on a numeric datatype field.
+**[RatingsFilter](range-components/ratingsfilter.html)** is useful for showing a UI selection choice based on ratings score. To be applied on a numeric datatype field.
 </p>
 
 ## 3. Search Components
@@ -176,7 +176,7 @@ The following are UI components that represent searchbar UIs. The datatype for t
 <p>
 <img src="https://imgur.com/kbnVVkZ.png" style="float:left">
 
-**[DataSearch](/search-components/datasearch.html)** displays a search input box. It supports autosuggestions, highlighting of results and querying against more than one fields via props.
+**[DataSearch](search-components/datasearch.html)** displays a search input box. It supports autosuggestions, highlighting of results and querying against more than one fields via props.
 </p>
 
 > <i class="fa fa-info-circle"></i> Note
@@ -188,7 +188,7 @@ The following are UI components that represent searchbar UIs. The datatype for t
 <p>
 <img src="https://imgur.com/kbnVVkZ.png" style="float:left">
 
-**[CategorySearch](/search-components/categorysearch.html)** is a more specific version of the  [DataSearch](/basic-components/datasearch.html) component. The main difference is that it can show suggestions within specific categories besides the general auto-suggestions that appear in the search dropdown.
+**[CategorySearch](search-components/categorysearch.html)** is a more specific version of the  [DataSearch](/basic-components/datasearch.html) component. The main difference is that it can show suggestions within specific categories besides the general auto-suggestions that appear in the search dropdown.
 </p>
 
 ## 4. Result Components
@@ -197,14 +197,14 @@ Result components are used for displaying the results (aka hits).
 
 > How do result components fetch results by combining queries from multiple components?
 >
-> They do this via [**react**](/advanced/react.html) prop, which allows each component to specify their dependent components using a DSL that mirrors Elasticsearch's compound query DSL for bool clause.
+> They do this via [**react**](advanced/react.html) prop, which allows each component to specify their dependent components using a DSL that mirrors Elasticsearch's compound query DSL for bool clause.
 
 ### ResultList
 
 <p>
 <img src="https://imgur.com/L8xTmWd.png" style="float:left">
 
-**[ResultList](/result-components/resultlist.html)** displays the results in a list layout.
+**[ResultList](result-components/resultlist.html)** displays the results in a list layout.
 </p>
 
 ### ResultCard
@@ -212,7 +212,7 @@ Result components are used for displaying the results (aka hits).
 <p>
 <img src="https://imgur.com/VGra3hs.png" style="float:left">
 
-**[ResultCard](/result-components/resultcard.html)** displays the results in a card layout.
+**[ResultCard](result-components/resultcard.html)** displays the results in a card layout.
 </p>
 
 ### ReactiveList
@@ -220,7 +220,7 @@ Result components are used for displaying the results (aka hits).
 <p>
 <img src="https://imgur.com/PCBwK7t.png" style="float:left">
 
-**[ReactiveList](/result-components/reactivelist.html)** displays the results in a configurable list layout. This is a more flexible display component (used internally by both ResultList and ResultCard) that allows more customization than ResultList and ResultCard.
+**[ReactiveList](result-components/reactivelist.html)** displays the results in a configurable list layout. This is a more flexible display component (used internally by both ResultList and ResultCard) that allows more customization than ResultList and ResultCard.
 </p>
 
 ### ReactiveComponent
@@ -228,7 +228,7 @@ Result components are used for displaying the results (aka hits).
 <p>
 <img src="https://imgur.com/QgjzJv5.png" style="float:left">
 
-**[ReactiveComponent](/advanced/reactivecomponent.html)** is a wrapper component that allows you to connect custom component(s) (passed as children) with the Reactivesearch ecosystem, e.g. if we are building an e-commerce store where we have a react component called `ColorPicker` which renders the `colors` passed to it as tiles, allowing us to filter the products by their colors.
+**[ReactiveComponent](advanced/reactivecomponent.html)** is a wrapper component that allows you to connect custom component(s) (passed as children) with the Reactivesearch ecosystem, e.g. if we are building an e-commerce store where we have a react component called `ColorPicker` which renders the `colors` passed to it as tiles, allowing us to filter the products by their colors.
 </p>
 
 ## 5. Base Components
@@ -238,7 +238,7 @@ Result components are used for displaying the results (aka hits).
 <p>
 <img src="https://imgur.com/PgOi2QY.png" style="float:left">
 
-**[TextField](/base-components/textfield.html)** displays a text input field. It applies a **match** database query on the entered text.
+**[TextField](base-components/textfield.html)** displays a text input field. It applies a **match** database query on the entered text.
 </p>
 
 ### ToggleButton
@@ -246,7 +246,7 @@ Result components are used for displaying the results (aka hits).
 <p>
 <img src="https://imgur.com/Ocb9Sir.png" style="float:left">
 
-**[ToggleButton](/base-components/togglebutton.html)** component applies on a String or Text datatype field where you want users to select a choice (or choices) amongst a small number of total choices.
+**[ToggleButton](base-components/togglebutton.html)** component applies on a String or Text datatype field where you want users to select a choice (or choices) amongst a small number of total choices.
 </p>
 
 ### TagCloud
@@ -254,7 +254,7 @@ Result components are used for displaying the results (aka hits).
 <p>
 <img src="https://imgur.com/lC5KfOK.png" style="float:left">
 
-**[TagCloud](/base-components/tagcloud.html)** is useful for showing a weighted tag cloud of items based on the frequency of occurrences.
+**[TagCloud](base-components/tagcloud.html)** is useful for showing a weighted tag cloud of items based on the frequency of occurrences.
 </p>
 
 ### DataController
@@ -262,9 +262,9 @@ Result components are used for displaying the results (aka hits).
 <p>
 <img src="https://imgur.com/qdxEIAz.png" style="float:left">
 
-**[DataController](/base-components/datacontroller.html)** is a UI optional component for adding additional queries, e.g. a query based on current URL page path, a default query, a query based on user's global profile preferences. At the same time, it can also have a UI - this is a catchall component to display something that doesn't fit within other components.
+**[DataController](base-components/datacontroller.html)** is a UI optional component for adding additional queries, e.g. a query based on current URL page path, a default query, a query based on user's global profile preferences. At the same time, it can also have a UI - this is a catchall component to display something that doesn't fit within other components.
 </p>
 
 ### SelectedFilters
 
-**[SelectedFilters](/base-components/selectedfilters.html)** is a selection component to render the selected values from other components with a "Clear All" option.
+**[SelectedFilters](base-components/selectedfilters.html)** is a selection component to render the selected values from other components with a "Clear All" option.
