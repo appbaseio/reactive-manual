@@ -194,7 +194,7 @@ class Header extends Component {
                     '& .Dropdown-root': {
                       position: 'absolute',
                       '& .Dropdown-control': {
-                        paddingRight: 40,
+                        paddingRight: 28,
                       },
                     },
 
