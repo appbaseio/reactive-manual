@@ -105,13 +105,10 @@ Example uses:
 
 ## Demo
 
-[Try the demo](https://expo.io/@dhruvdutt/datasearch-demo) instantly on expo or check it out on appetize below:
-
 <br />
 
-<iframe frameborder="0" scrolling="no" src="https://appetize.io/embed/pe6y824c9n5a8kf9ecpe1phbtr?device=nexus5&scale=75&orientation=portrait&osVersion=7.1" height="600px"></iframe>
+<div data-snack-id="@dhruvdutt/datasearch-example" data-snack-platform="ios" data-snack-preview="true" data-snack-theme="light" style="overflow:hidden;background:#fafafa;border:1px solid rgba(0,0,0,.16);border-radius:4px;height:505px;width:100%"></div>
 
-<br />
 
 ## Styles
 
