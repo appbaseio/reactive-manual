@@ -9,7 +9,10 @@ if (process.env.NODE_ENV === `production`) {
   }
 }
 
-const JS_NPM_URLS = ['//use.fontawesome.com/655968a3e7.js'];
+const JS_NPM_URLS = [
+  '//use.fontawesome.com/655968a3e7.js',
+  '//snack.expo.io/embed.js',
+];
 
 export default class HTML extends Component {
   render() {

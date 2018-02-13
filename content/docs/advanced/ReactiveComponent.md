@@ -185,7 +185,6 @@ Now, the components which will have `myColorPicker` present in their `react` pro
 <br />
 
 <div data-snack-id="Sy0tN0K8f" data-snack-platform="ios" data-snack-preview="true" data-snack-theme="light" style="overflow:hidden;background:#fafafa;border:1px solid rgba(0,0,0,.16);border-radius:4px;height:505px;width:100%"></div>
-<script async src="https://snack.expo.io/embed.js"></script>
 
 See storybook for ReactiveComponent on playground.
 
