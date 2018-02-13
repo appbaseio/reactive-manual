@@ -193,6 +193,9 @@ class Header extends Component {
                     fontSize: '0.8em',
                     '& .Dropdown-root': {
                       position: 'absolute',
+                      '& .Dropdown-control': {
+                        paddingRight: 40,
+                      },
                     },
 
                     [media.lessThan('versionSwitcher')]: {
