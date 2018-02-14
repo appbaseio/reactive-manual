@@ -38,6 +38,12 @@ const MarkdownPage = ({
   const hasAuthors = authors.length > 0;
   const titlePrefix = markdownRemark.frontmatter.title || '';
 
+  // HACK: Dispatches an event for the snack embed
+  setTimeout(() => {
+    const e = new Event('readystatechange');
+    document.dispatchEvent(e);
+  }, 2000);
+
   return (
     <Flex
       direction="column"
