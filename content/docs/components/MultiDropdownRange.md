@@ -15,7 +15,9 @@ redirect_from:
     - 'multidropdownrange'
 ---
 
-![](https://i.imgur.com/hIQO7Lu.png)
+![](https://i.imgur.com/1iJbrts.png)
+![](https://i.imgur.com/CjPBMdQ.png)
+
 
 `MultiDropdownRange` creates a multiple selection dropdown based numeric range UI component.
 
