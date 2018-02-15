@@ -15,7 +15,8 @@ redirect_from:
     - 'datepicker'
 ---
 
-![Image to be displayed](https://imgur.com/JIJKwxS.png)
+![](https://i.imgur.com/RNXGKFc.png)
+![](https://i.imgur.com/Kuwiq3a.png)
 
 `DatePicker` creates a calender view based UI component that is connected to a database date field. It is used for filtering results by a date like property.
 
