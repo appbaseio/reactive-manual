@@ -15,7 +15,8 @@ redirect_from:
     - 'daterange'
 ---
 
-![Image to be displayed](https://imgur.com/6Dtb1Lc.png)
+![](https://i.imgur.com/f6ZHbss.png)
+![](https://i.imgur.com/R8WdGxD.png)
 
 `DateRange` creates a calendar view based UI component that is connected to date fields. It is used for filtering results by a date like property.
 
