@@ -15,7 +15,8 @@ redirect_from:
     - 'singledropdownrange'
 ---
 
-![Image to be displayed](https://imgur.com/I6QStiL.png)
+![](https://i.imgur.com/wRAfxTB.png)
+![](https://i.imgur.com/wRuR7yf.png)
 
 `SingleDropdownRange` creates a dropdown based numeric range UI component.
 
