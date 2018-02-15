@@ -109,6 +109,8 @@ Example uses:
 
 <div data-snack-id="@dhruvdutt/datasearch-example" data-snack-platform="ios" data-snack-preview="true" data-snack-theme="light" style="overflow:hidden;background:#fafafa;border:1px solid rgba(0,0,0,.16);border-radius:4px;height:505px;width:100%"></div>
 
+<a href="https://snack.expo.io/@dhruvdutt/datasearch-example" target="_blank">View the full code</a>
+
 
 ## Styles
 
