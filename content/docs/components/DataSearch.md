@@ -15,7 +15,8 @@ redirect_from:
     - 'datasearch'
 ---
 
-![Image to be displayed](https://i.imgur.com/BthhsaT.png)
+![](https://i.imgur.com/m3Ex4fG.png)
+![](https://i.imgur.com/zAwcZ25.png)
 
 `DataSearch` creates a search box UI component that is connected to one or more database fields.
 
