@@ -15,7 +15,8 @@ redirect_from:
     - 'singledropdownlist'
 ---
 
-![Image to be displayed](https://i.imgur.com/0MdxoY1.png)
+![](https://i.imgur.com/jIWB5wY.png)
+![](https://i.imgur.com/7Nn63DP.png)
 
 `SingleDropdownList` creates a dropdown list based single select UI component. It is used for filtering results based on the current selection from a list of items.
 
