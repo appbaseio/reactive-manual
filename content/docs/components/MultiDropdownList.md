@@ -16,6 +16,7 @@ redirect_from:
 ---
 
 
+![](https://i.imgur.com/QZ3ZBko.png)
 
 `MultiDropdownList` creates a dropdown list based multi select UI component. It is used for filtering results based on the current selection(s) from a list of items.
 
