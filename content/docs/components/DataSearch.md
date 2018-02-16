@@ -91,7 +91,7 @@ Example uses:
 
 <br />
 
-| **Key** | **Explaination** |
+| **Key** | **Explanation** |
 |  ------: | :------: |
 | `item` | The wrapping [Item](http://docs.nativebase.io/Components.html#Form) component from **native-base** |
 | `listItem` | [ListItem](http://docs.nativebase.io/Components.html#list-def-headref) component from **native-base** |

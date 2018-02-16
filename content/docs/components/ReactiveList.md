@@ -105,7 +105,7 @@ Example uses:
 
 <br />
 
-| **Key** | **Explaination** |
+| **Key** | **Explanation** |
 |  ------: | :------: |
 | `icon` | [Icon](http://docs.nativebase.io/Components.html#icon-def-headref) component from **native-base** |
 | `button` | [Button](http://docs.nativebase.io/Components.html#button-def-headref) component from **native-base** |

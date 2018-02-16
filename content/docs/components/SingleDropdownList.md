@@ -76,7 +76,7 @@ Example uses:
 
 <br />
 
-| **Key** | **Explaination** |
+| **Key** | **Explanation** |
 |  ------: | :------: |
 | `picker` | [Picker](http://docs.nativebase.io/Components.html#picker-def-headref) component from **native-base** |
 | `pickerItem` | [Picker.Item](http://docs.nativebase.io/Components.html#picker-def-headref) component from **native-base** |

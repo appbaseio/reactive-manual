@@ -76,7 +76,7 @@ Example uses:
 
 <br />
 
-| **Key** | **Explaination** |
+| **Key** | **Explanation** |
 |  ------: | :------: |
 | `icon` | [Icon](http://docs.nativebase.io/Components.html#icon-def-headref) component from **native-base** |
 | `checkbox` | [CheckBox](http://docs.nativebase.io/Components.html#checkbox-headref) component from **native-base** |

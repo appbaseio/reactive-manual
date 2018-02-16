@@ -59,7 +59,7 @@ redirect_from:
 
 <br />
 
-| **Key** | **Explaination** |
+| **Key** | **Explanation** |
 |  ------: | :------: |
 | `item` | The wrapping [Item](http://docs.nativebase.io/Components.html#Form) component from **native-base** |
 | `icon` | [Icon](http://docs.nativebase.io/Components.html#icon-def-headref) component from **native-base** |
