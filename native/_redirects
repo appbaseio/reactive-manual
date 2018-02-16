@@ -46,6 +46,9 @@
 /reactive-manual/native/base-components/reactivelist  /reactive-manual/native/components/reactivelist.html  302
 /reactive-manual/native/result-components/reactivelist  /reactive-manual/native/components/reactivelist.html  302
 /reactive-manual/native/reactivelist  /reactive-manual/native/components/reactivelist.html  302
+/reactive-manual/native/components/selectedfilters  /reactive-manual/native/components/selectedfilters.html  302
+/reactive-manual/native/base-components/selectedfilters  /reactive-manual/native/components/selectedfilters.html  302
+/reactive-manual/native/selectedfilters  /reactive-manual/native/components/selectedfilters.html  302
 /reactive-manual/native/components/singledropdownlist  /reactive-manual/native/components/singledropdownlist.html  302
 /reactive-manual/native/base-components/singledropdownlist  /reactive-manual/native/components/singledropdownlist.html  302
 /reactive-manual/native/list-components/singledropdownlist  /reactive-manual/native/components/singledropdownlist.html  302
