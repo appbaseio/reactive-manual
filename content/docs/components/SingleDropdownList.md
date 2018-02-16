@@ -47,6 +47,8 @@ Example uses:
   sortBy="count"
   showCount
   size={100}
+  showFilter={true}
+  filterLabel="Car"
   react={{
     and: ["CategoryFilter", "SearchFilter"]
   }}
@@ -71,6 +73,10 @@ Example uses:
     show count of number of occurences besides an item. Defaults to `true`.
 - **selectAllLabel** `String` [optional]  
     if provided, shows an extra option to select all the options in the list with the provided string value.
+- **showFilter** `Boolean` [optional]  
+    show as filter when a value is selected in a global selected filters view. Defaults to `true`.
+- **filterLabel** `String` [optional]  
+    An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
 - **innerProps** `Object` [optional]  
     specifies additional props for the internal components. Accepts an object with the specified keys. Read more about the usage [here](/advanced/innerprops.html)
 

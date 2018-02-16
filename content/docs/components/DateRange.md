@@ -48,6 +48,8 @@ Example uses:
   initialMonth="2017-01-01"
   queryFormat="date"
   placeholder="Pick date"
+  showFilter={true}
+  filterLabel="Date"
 />
 ```
 
@@ -63,6 +65,10 @@ Example uses:
     starts the calendar view from the specified month.
 - **placeholder** `String` [optional]  
     placeholder to be displayed in the dropdown searchbox. Defaults to "Select a date".
+- **showFilter** `Boolean` [optional]  
+    show as filter when a value is selected in a global selected filters view. Defaults to `true`.
+- **filterLabel** `String` [optional]  
+    An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
 - **queryFormat** `String` [optional]  
     sets the date format to be used in the query, can accept one of the following:
 

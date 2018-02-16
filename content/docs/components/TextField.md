@@ -40,6 +40,8 @@ redirect_from:
   defaultSelected="volvo"
   placeholder="Type a car name"
   debounce={300}
+  showFilter={true}
+  filterLabel="Car"
 />
 ```
 
@@ -55,6 +57,10 @@ redirect_from:
     placeholder to be displayed in the text field when it has no value.
 - **debounce** `Number` [optional]  
     delays executing the query by the specified time in **ms** while the user is typing. Defaults to `0`, i.e. no debounce. Useful if you want to save on the number of requests sent.
+- **showFilter** `Boolean` [optional]  
+    show as filter when a value is selected in a global selected filters view. Defaults to `true`.
+- **filterLabel** `String` [optional]  
+    An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
 - **innerProps** `Object` [optional]  
     specifies additional props for the internal components. Accepts an object with the specified keys. Read more about the usage [here](/advanced/innerprops.html)
 

@@ -56,6 +56,8 @@ Example uses:
   }
   defaultSelected={["Cheap"]}
   placeholder="Select price range"
+  showFilter={true}
+  filterLabel="Price"
 />
 ```
 
@@ -71,6 +73,10 @@ Example uses:
     pre-select a label from the `data` array.
 - **placeholder** `String` [optional]  
     placeholder to be displayed in the dropdown searchbox. Defaults to "Select a value".
+- **showFilter** `Boolean` [optional]  
+    show as filter when a value is selected in a global selected filters view. Defaults to `true`.
+- **filterLabel** `String` [optional]  
+    An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
 - **innerProps** `Object` [optional]  
     specifies additional props for the internal components. Accepts an object with the specified keys. Read more about the usage [here](/advanced/innerprops.html)
 
