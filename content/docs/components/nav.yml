@@ -225,3 +225,28 @@
           title: Extending
           href: /components/reactivelist.html#extending
           forceInternal: true
+    - id: selectedfilters
+      title: SelectedFilters
+      href: /components/selectedfilters.html
+      forceInternal: true
+      subitems:
+        - id: usage
+          title: Usage
+          href: /components/selectedfilters.html#usage
+          forceInternal: true
+        - id: props
+          title: Props
+          href: /components/selectedfilters.html#props
+          forceInternal: true
+        - id: demo
+          title: Demo
+          href: /components/selectedfilters.html#demo
+          forceInternal: true
+        - id: styles
+          title: Styles
+          href: /components/selectedfilters.html#styles
+          forceInternal: true
+        - id: extending
+          title: Extending
+          href: /components/selectedfilters.html#extending
+          forceInternal: true
