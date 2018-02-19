@@ -104,6 +104,8 @@ Example uses:
     show as filter when a value is selected in a global selected filters view. Defaults to `true`.
 - **filterLabel** `String` [optional]  
     An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
+- **innerRef** `Function` [optional]  
+    You can pass a callback using `innerRef` which gets passed to the inner input element as [`ref`](https://reactjs.org/docs/refs-and-the-dom.html).
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the current value of the search. This is useful for sharing URLs with the component state. Defaults to `false`.
 
