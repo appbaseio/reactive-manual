@@ -64,7 +64,7 @@ Lets update our `src/App.js` file to add ReactiveBase component.
 ```js
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { ReactiveBase } from '@appbaseio/reactivebase-native';
+import { ReactiveBase } from '@appbaseio/reactivesearch-native';
 
 export default class App extends React.Component {
   render() {
@@ -168,7 +168,7 @@ import {
   ReactiveBase,
   DataSearch,
   ReactiveList
-} from '@appbaseio/reactivebase-native';
+} from '@appbaseio/reactivesearch-native';
 
 export default class App extends React.Component {
   constructor() {
