@@ -9,6 +9,8 @@
 /reactive-manual/native/quickstart  /reactive-manual/native/getting-started/reactivesearch.html  302
 /reactive-manual/native/advanced/build  /reactive-manual/native/advanced/build.html  302
 /reactive-manual/native/build  /reactive-manual/native/advanced/build.html  302
+/reactive-manual/native/advanced/guides  /reactive-manual/native/advanced/guides.html  302
+/reactive-manual/native/guides  /reactive-manual/native/advanced/guides.html  302
 /reactive-manual/native/advanced/innerprops  /reactive-manual/native/advanced/innerprops.html  302
 /reactive-manual/native/innerprops  /reactive-manual/native/advanced/innerprops.html  302
 /reactive-manual/native/advanced/performance  /reactive-manual/native/advanced/performance.html  302
@@ -18,8 +20,6 @@
 /reactive-manual/native/reactivecomponent  /reactive-manual/native/advanced/reactivecomponent.html  302
 /reactive-manual/native/advanced/style  /reactive-manual/native/advanced/style.html  302
 /reactive-manual/native/style  /reactive-manual/native/advanced/style.html  302
-/reactive-manual/native/advanced/guides  /reactive-manual/native/advanced/guides.html  302
-/reactive-manual/native/guides  /reactive-manual/native/advanced/guides.html  302
 /reactive-manual/native/advanced/theming  /reactive-manual/native/advanced/theming.html  302
 /reactive-manual/native/theming  /reactive-manual/native/advanced/theming.html  302
 /reactive-manual/native/components/datasearch  /reactive-manual/native/components/datasearch.html  302
