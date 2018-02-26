@@ -56,7 +56,11 @@ As an example, check [SingleDropdownList usage](/components/singledropdownlist.h
 
 ### Demo
 
-Add snack demo
+<br />
+
+<div data-snack-id="@divyanshu013/selectedfilters-example" data-snack-platform="ios" data-snack-preview="true" data-snack-theme="dark" style="overflow:hidden;background:#212733;border:1px solid rgba(0,0,0,.16);border-radius:4px;height:505px;width:100%"></div>
+
+<a href="https://snack.expo.io/@divyanshu013/selectedfilters-example" target="_blank">View on Snack</a>
 
 ### Styles
 
