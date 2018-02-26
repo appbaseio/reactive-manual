@@ -104,6 +104,7 @@ Example uses:
 - `list`
 - `radio`
 - `label`
+- `count`
  
 Read more about it [here](/theming/class.html).
 

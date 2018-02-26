@@ -110,6 +110,7 @@ Example uses:
 - `list`
 - `checkbox`
 - `label`
+- `count`
  
 Read more about it [here](/theming/class.html).
 

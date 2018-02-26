@@ -101,6 +101,7 @@ Example uses:
 - `select`
 - `list`
 - `icon`
+- `count`
  
 Read more about it [here](/theming/class.html).
 
