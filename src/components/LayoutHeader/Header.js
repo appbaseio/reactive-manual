@@ -206,9 +206,9 @@ class Header extends Component {
                   <Dropdown
                     options={[
                       'v2 - Web',
-                      'v0.4 - Native',
+                      'v0.6 - Native',
                     ]}
-                    value="v0.4 - Native"
+                    value="v0.6 - Native"
                     onChange={this.switchDocs}
                   />
                 </div>
