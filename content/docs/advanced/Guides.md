@@ -4,8 +4,8 @@ title: "Advanced Guides"
 layout: docs
 sectionid: guides
 permalink: advanced/guides.html
-prev: advanced/build.html
-prevTitle: "Building with Native Code"
+prev: advanced/performance.html
+prevTitle: "Performance"
 redirect_from:
     - "advanced/guides"
     - "guides"

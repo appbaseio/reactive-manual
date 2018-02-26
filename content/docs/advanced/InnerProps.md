@@ -4,10 +4,10 @@ title: "innerProps"
 layout: docs
 sectionid: innerprops
 permalink: advanced/innerprops.html
-prev: advanced/performance.html
-prevTitle: "Performance"
-next: advanced/theming.html
-nextTitle: "Theming"
+prev: advanced/style.html
+prevTitle: "Style"
+next: advanced/performance.html
+nextTitle: "Performance"
 redirect_from:
     - "advanced/innerprops"
     - "innerprops"

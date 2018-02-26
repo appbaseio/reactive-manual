@@ -6,8 +6,8 @@ sectionid: style
 permalink: advanced/style.html
 prev: advanced/theming.html
 prevTitle: "Theming"
-next: advanced/build.html
-nextTitle: "Building with Native Code"
+next: advanced/innerprops.html
+nextTitle: "innerProps"
 redirect_from:
     - "advanced/style"
     - "style"

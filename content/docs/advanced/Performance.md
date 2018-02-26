@@ -4,10 +4,10 @@ title: "Performance Tips"
 layout: docs
 sectionid: performance
 permalink: advanced/performance.html
-prev: advanced/reactivecomponent.html
-prevTitle: "ReactiveComponent"
-next: advanced/innerprops.html
-nextTitle: "innerProps"
+prev: advanced/innerprops.html
+prevTitle: "innerProps"
+next: advanced/guides.html
+nextTitle: "Guides"
 redirect_from:
     - "advanced/performance"
     - "performance"

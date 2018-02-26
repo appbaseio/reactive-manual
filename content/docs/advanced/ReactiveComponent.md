@@ -6,8 +6,8 @@ sectionid: reactivecomponent
 permalink: advanced/reactivecomponent.html
 prev: components/reactivelist.html
 prevTitle: "ReactiveList"
-next: advanced/performance.html
-nextTitle: "Performance Tips"
+next: advanced/theming.html
+nextTitle: "Theming"
 redirect_from:
     - "advanced"
     - "advanced/reactivecomponent"
