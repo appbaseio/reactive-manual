@@ -76,6 +76,8 @@ Example uses:
     Determines the position where to show the pagination, only applicable when **pagination** prop is set to `true`. Accepts one of `top`, `bottom` or `both` as valid values. Defaults to `bottom`.
 - **pages** `Number` [optional]  
     number of user selectable pages to be displayed when pagination is enabled. Defaults to 5.
+- **onPageChange** `Function` [optional]  
+    executes when the current page is changed. If not defined, `window` will be scrolled to the top of the page.
 - **sortBy** `String` [optional]  
     sort the results by either `asc` or `desc` order. It is an alternative to `sortOptions`, both can't be used together.
 - **sortOptions** `Object Array` [optional]  
