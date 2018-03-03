@@ -29,9 +29,9 @@ Example uses:
   dataField="location"
   data={
     [
-      { "start": 0, "end": 20, "label": "< 20 miles" },
-      { "start": 0, "end": 50, "label": "< 50 miles" },
-      { "start": 0, "end": 100, "label": "< 100 miles" },
+      { "distance": 20, "label": "< 20 miles" },
+      { "distance": 50, "label": "< 50 miles" },
+      { "distance": 100, "label": "< 100 miles" },
     ]
   }
 />
@@ -46,9 +46,9 @@ Example uses:
   title="Location Dropdown Selector"
   data={
     [
-      { "start": 0, "end": 20, "label": "< 20 miles" },
-      { "start": 0, "end": 50, "label": "< 50 miles" },
-      { "start": 0, "end": 100, "label": "< 100 miles" },
+      { "distance": 20, "label": "< 20 miles" },
+      { "distance": 50, "label": "< 50 miles" },
+      { "distance": 100, "label": "< 100 miles" },
     ]
   }
   defaultSelected={{
@@ -71,7 +71,7 @@ Example uses:
 - **dataField** `String`  
     data field to be connected to the component's UI view.
 - **data** `Object Array`  
-    collection of UI `labels` with associated `start` and `end` range values.
+    collection of UI `labels` with associated `distance` value.
 - **title** `String or HTML` [optional]  
     title of the component to be shown in the UI.
 - **defaultSelected** `Object` [optional]  
@@ -117,16 +117,12 @@ All reactivebase and reactivemaps components are `rbc` namespaced.
   className="custom-class"
   style={{"paddingBottom": "10px"}}
   customQuery={
-    function(value, props) {
+    function(location, distance, props) {
       return {
         // query in the format of Elasticsearch Query DSL
         geo_distance: {
-          distance: (value.end - value.start)
-                    + value.unit,
-          location_dataField: {
-            lat: value.location.split(",")[0]
-            lon: value.location.split(",")[1]
-          }
+          distance: distance,
+          location_dataField: location
         }
       }
     }
@@ -164,7 +160,7 @@ All reactivebase and reactivemaps components are `rbc` namespaced.
 - **style** `Object`  
     CSS styles to be applied to the **GeoDistanceDropdown** component.
 - **customQuery** `Function`  
-    takes **value** and **props** as parameters and **returns** the data query to be applied to the component, as defined in Elasticsearch Query DSL.
+    takes **location**, **distance** and **props** as parameters and **returns** the data query to be applied to the component, as defined in Elasticsearch Query DSL.
     `Note:` customQuery is called on value changes in the **GeoDistanceDropdown** component as long as the component is a part of `react` dependency of at least one other component.
 - **beforeValueChange** `Function`  
     is a callback function which accepts component's future **value** as a parameter and **returns** a promise. It is called every time before a component's value changes. The promise, if and when resolved, triggers the execution of the component's query and if rejected, kills the query execution. This method can act as a gatekeeper for query execution, since it only executes the query after the provided promise has been resolved.
