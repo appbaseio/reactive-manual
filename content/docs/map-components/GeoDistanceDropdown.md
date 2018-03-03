@@ -121,7 +121,7 @@ All reactivebase and reactivemaps components are `rbc` namespaced.
       return {
         // query in the format of Elasticsearch Query DSL
         geo_distance: {
-          distance: distance,
+          distance: distance + props.unit,
           location_dataField: location
         }
       }

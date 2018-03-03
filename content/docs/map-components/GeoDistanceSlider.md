@@ -57,7 +57,6 @@ Example uses:
       "end": "20 mi"
     }
   }
-  stepValue={1}
   defaultSelected={{
     "location": "SOMA, San Francisco, United States",
     "distance": 12
@@ -83,8 +82,6 @@ Example uses:
     an object with `start` and `end` keys and corresponding numeric values denoting the minimum and maximum possible slider values.
 - **rangeLabels** `Object` [optional]  
     an object with `start` and `end` keys and corresponding `String` labels to show labels near the ends of the `GeoDistanceSlider` component.
-- **stepValue** `Number` [optional]  
-    step value specifies the slider stepper. Value should be an integer between 1 and floor(#total-range/2). Defaults to 1.
 - **defaultSelected** `Object` [optional]  
     pre-select the search query with `location` option and distance with `distance` option.
 - **placeholder** `String` [optional]  
@@ -127,16 +124,12 @@ All reactivebase and reactivemaps components are `rbc` namespaced.
   className="custom-class"
   style={{"paddingBottom": "10px"}}
   customQuery={
-    function(value, props) {
+    function(location, distance, props) {
       return {
         // query in the format of Elasticsearch Query DSL
         geo_distance: {
-          distance: (value.end - value.start)
-                    + value.unit,
-          location_dataField: {
-            lat: value.location.split(",")[0]
-            lon: value.location.split(",")[1]
-          }
+          distance: distance + props.unit,
+          location_dataField: location
         }
       }
     }
@@ -174,7 +167,7 @@ All reactivebase and reactivemaps components are `rbc` namespaced.
 - **style** `Object`  
     CSS styles to be applied to the **GeoDistanceSlider** component.
 - **customQuery** `Function`  
-    takes **value** and **props** as parameters and **returns** the data query to be applied to the component, as defined in Elasticsearch Query DSL.
+    takes **location**, **distance** and **props** as parameters and **returns** the data query to be applied to the component, as defined in Elasticsearch Query DSL.
     `Note:` customQuery is called on value changes in the **GeoDistanceSlider** component as long as the component is a part of `react` dependency of at least one other component.
 - **beforeValueChange** `Function`  
     is a callback function which accepts component's future **value** as a parameter and **returns** a promise. It is called every time before a component's value changes. The promise, if and when resolved, triggers the execution of the component's query and if rejected, kills the query execution. This method can act as a gatekeeper for query execution, since it only executes the query after the provided promise has been resolved.
