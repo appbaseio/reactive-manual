@@ -16,7 +16,7 @@ redirect_from:
     - 'themes'
 ---
 
-Themes can be used to change the default styles for all the ReactiveSearch components. These include basic styles like fonts, colors or components' height.
+Themes can be used to change the default styles for all the ReactiveSearch components. These include basic styles like fonts, colors or component styles. The component styles are applied to all but the result components.
 
 ## Usage
 
@@ -24,34 +24,61 @@ Themes can be used to change the default styles for all the ReactiveSearch compo
 
 ```js
 {
-	// typography
-	fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Noto Sans", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif',
-	fontSize: '16px',
+	typography = {
+    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Noto Sans", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif',
+    fontSize: '16px',
+  },
 
-	// colors
-	textColor: '#424242',
-	primaryColor: '#0B6AFF',
-	primaryTextColor: '#fff',
-	titleColor: '#424242',
-	alertColor: '#d9534f',
+	colors: {
+		textColor: '#424242',
+		primaryColor: '#0B6AFF',
+		primaryTextColor: '#fff',
+		titleColor: '#424242',
+		alertColor: '#d9534f',
+	}
+};
+```
 
-	// settings
-	componentMaxHeight: '240px',
+[ReactiveBase](/getting-started/reactivebase.html) also supports a `themePreset` prop which defaults to `light` with the above defaults. You may pass a `themePreset` of `dark` which applies the following defaults instead:
+
+```js
+{
+	typography = {
+    fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Noto Sans", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif',
+    fontSize: '16px',
+  },
+
+	colors: {
+		textColor: '#fff',
+		primaryColor: '#0B6AFF',
+		primaryTextColor: '#fff',
+		titleColor: '#fff',
+		alertColor: '#d9534f',
+		backgroundColor: '#212121',
+		borderColor: '#666',
+	}
 };
 ```
 
 ## Examples
 
-You can overwrite the aforementioned default styles by providing the respective key/values as `theme` prop, for example:
+You can overwrite the aforementioned default styles by providing the respective key/values as `theme` prop. The supported keys are `typography`, `colors` and `component`. For example:
 
-```js{4-8}
+```js{4-15}
 <ReactiveBase
   app="appname"
   credentials="abcdef123:abcdef12-ab12-ab12-ab12-abcdef123456"
   theme={{
-    fontFamily: 'Raleway, Helvetica, sans-serif',
-    primaryColor: '#008000',
-    titleColor: 'white',
+    typography: {
+      fontFamily: 'Raleway, Helvetica, sans-serif',
+    },
+    colors: {
+      primaryColor: '#008000',
+      titleColor: 'white',
+    },
+    component: {
+      padding: 10
+    }
   }}>
     <Component1 .. />
     <Component2 .. />
