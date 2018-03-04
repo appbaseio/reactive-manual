@@ -52,8 +52,10 @@ This is the first component you will need to add when using `ReactiveSearch`.
 </ReactiveBase>
 ```
 
-- **theme** `Object` [optional]  
-    allows over-writing of default styles by providing the respective key/values. You can read more about its usage [here](theming/themes.html)
+- **theme** `Object` [optional]     
+    allows over-writing of default styles by providing the respective key/values. You can read more about its usage [here](/theming/themes.html)
+- **themePreset** `String` [optional]       
+    allows over-writing of default styles by providing a preset value. Supported values are `light` (default) and `dark`. You can read more about its usage [here](/theming/themes.html)
 
 ### Connect to Elasticsearch
 
