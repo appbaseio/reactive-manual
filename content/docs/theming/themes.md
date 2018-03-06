@@ -60,31 +60,6 @@ Themes can be used to change the default styles for all the ReactiveSearch compo
 };
 ```
 
-## Examples
-
-You can overwrite the aforementioned default styles by providing the respective key/values as `theme` prop. The supported keys are `typography`, `colors` and `component`. For example:
-
-```js{4-15}
-<ReactiveBase
-  app="appname"
-  credentials="abcdef123:abcdef12-ab12-ab12-ab12-abcdef123456"
-  theme={{
-    typography: {
-      fontFamily: 'Raleway, Helvetica, sans-serif',
-    },
-    colors: {
-      primaryColor: '#008000',
-      titleColor: 'white',
-    },
-    component: {
-      padding: 10
-    }
-  }}>
-    <Component1 .. />
-    <Component2 .. />
-</ReactiveBase>
-```
-
 ## Extending theming
 
 It's possible to use the same theming object used by the ReactiveSearch components in your own React components which are not connected with ReactiveSearch. All the child components of `ReactiveBase` receive the theming context which can be used as explained by the following example:
@@ -115,3 +90,31 @@ class CustomComponent extends React.Component {
 
 export default withTheme(CustomComponent);  // using the HOC from emotion-theming
 ```
+
+## Examples
+
+You can overwrite the aforementioned default styles by providing the respective key/values as `theme` prop. The supported keys are `typography`, `colors` and `component`. For example:
+
+```js{4-15}
+<ReactiveBase
+  app="appname"
+  credentials="abcdef123:abcdef12-ab12-ab12-ab12-abcdef123456"
+  theme={{
+    typography: {
+      fontFamily: 'Raleway, Helvetica, sans-serif',
+    },
+    colors: {
+      primaryColor: '#008000',
+      titleColor: 'white',
+    },
+    component: {
+      padding: 10
+    }
+  }}>
+    <Component1 .. />
+    <Component2 .. />
+</ReactiveBase>
+```
+
+Check out the stories for `themePreset` set to `dark` on [playground](https://opensource.appbase.io/playground/?knob-themePreset=dark&selectedKind=theme&selectedStory=Dark%20Preset%20with%20ResultList&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybooks%2Fstorybook-addon-knobs).
+

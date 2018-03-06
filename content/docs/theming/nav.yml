@@ -9,13 +9,13 @@
           title: Usage
           href: /theming/themes.html#usage
           forceInternal: true
-        - id: examples
-          title: Examples
-          href: /theming/themes.html#examples
-          forceInternal: true
         - id: extending-theming
           title: Extending theming
           href: /theming/themes.html#extending-theming
+          forceInternal: true
+        - id: examples
+          title: Examples
+          href: /theming/themes.html#examples
           forceInternal: true
     - id: style
       title: Style
