@@ -116,5 +116,5 @@ You can overwrite the aforementioned default styles by providing the respective 
 </ReactiveBase>
 ```
 
-Check out the stories for `themePreset` set to `dark` on [playground](https://opensource.appbase.io/playground/?knob-themePreset=dark&selectedKind=theme&selectedStory=Dark%20Preset%20with%20ResultList&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybooks%2Fstorybook-addon-knobs).
+Check out the stories for `themePreset` set to `dark` on <a href="https://opensource.appbase.io/playground/?knob-themePreset=dark&selectedKind=theme&selectedStory=Dark%20Preset%20with%20ResultList&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybooks%2Fstorybook-addon-knobs" target="_blank">playground</a>.
 
