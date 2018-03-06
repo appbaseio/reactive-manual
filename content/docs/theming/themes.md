@@ -31,8 +31,8 @@ Themes can be used to change the default styles for all the ReactiveSearch compo
 
 	colors: {
 		textColor: '#424242',
-		primaryColor: '#0B6AFF',
 		primaryTextColor: '#fff',
+		primaryColor: '#0B6AFF',
 		titleColor: '#424242',
 		alertColor: '#d9534f',
 	}
@@ -50,11 +50,11 @@ Themes can be used to change the default styles for all the ReactiveSearch compo
 
 	colors: {
 		textColor: '#fff',
-		primaryColor: '#0B6AFF',
+		backgroundColor: '#212121',
 		primaryTextColor: '#fff',
+		primaryColor: '#2196F3',
 		titleColor: '#fff',
 		alertColor: '#d9534f',
-		backgroundColor: '#212121',
 		borderColor: '#666',
 	}
 };
