@@ -4,12 +4,12 @@
 
 /reactive-manual/componentsindex  /reactive-manual/getting-started/componentsindex.html  302
 /reactive-manual/components  /reactive-manual/getting-started/componentsindex.html  302
-/reactive-manual/comparison  /reactive-manual/advanced/comparison.html  302
-/reactive-manual/advanced/comparison  /reactive-manual/advanced/comparison.html  302
 /reactive-manual/getting-started/  /reactive-manual/getting-started/reactivesearch.html  302
 /reactive-manual/getting-started/reactivesearch  /reactive-manual/getting-started/reactivesearch.html  302
 /reactive-manual/install  /reactive-manual/getting-started/reactivesearch.html  302
 /reactive-manual/quickstart  /reactive-manual/getting-started/reactivesearch.html  302
+/reactive-manual/comparison  /reactive-manual/advanced/comparison.html  302
+/reactive-manual/advanced/comparison  /reactive-manual/advanced/comparison.html  302
 /reactive-manual/advanced  /reactive-manual/advanced/customquery.html  302
 /reactive-manual/reactive-manual/advanced  /reactive-manual/advanced/customquery.html  302
 /reactive-manual/guides  /reactive-manual/advanced/guides.html  302
@@ -83,13 +83,13 @@
 /reactive-manual/basic-components/rangeslider.html  /reactive-manual/range-components/rangeslider.html  302
 /reactive-manual/range-components/rangeslider  /reactive-manual/range-components/rangeslider.html  302
 /reactive-manual/rangeslider  /reactive-manual/range-components/rangeslider.html  302
-/reactive-manual/basic-components/singledropdownrange.html  /reactive-manual/range-components/singledropdownrange.html  302
-/reactive-manual/range-components/singledropdownrange  /reactive-manual/range-components/singledropdownrange.html  302
-/reactive-manual/singledropdownrange  /reactive-manual/range-components/singledropdownrange.html  302
 /reactive-manual/search-components/ratingsfilter.html  /reactive-manual/range-components/ratingsfilter.html  302
 /reactive-manual/range-components/ratingsfilter  /reactive-manual/range-components/ratingsfilter.html  302
 /reactive-manual/base-components/ratingsfilter  /reactive-manual/range-components/ratingsfilter.html  302
 /reactive-manual/ratingsfilter  /reactive-manual/range-components/ratingsfilter.html  302
+/reactive-manual/basic-components/singledropdownrange.html  /reactive-manual/range-components/singledropdownrange.html  302
+/reactive-manual/range-components/singledropdownrange  /reactive-manual/range-components/singledropdownrange.html  302
+/reactive-manual/singledropdownrange  /reactive-manual/range-components/singledropdownrange.html  302
 /reactive-manual/basic-components/singlerange.html  /reactive-manual/range-components/singlerange.html  302
 /reactive-manual/range-components/singlerange  /reactive-manual/range-components/singlerange.html  302
 /reactive-manual/singlerange  /reactive-manual/range-components/singlerange.html  302
