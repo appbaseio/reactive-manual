@@ -16,7 +16,7 @@ redirect_from:
     - 'themes'
 ---
 
-Themes can be used to change the default styles for all the ReactiveSearch components. These include basic styles like fonts, colors or component styles. The component styles are applied to all but the result components.
+Themes can be used to change the default styles for all the ReactiveSearch components. These include basic styles like fonts, colors or component styles. The component styles are applied to most of the components.
 
 ## Usage
 
@@ -24,7 +24,7 @@ Themes can be used to change the default styles for all the ReactiveSearch compo
 
 ```js
 {
-	typography = {
+	typography: {
     fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Noto Sans", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif',
     fontSize: '16px',
   },
@@ -43,7 +43,7 @@ Themes can be used to change the default styles for all the ReactiveSearch compo
 
 ```js
 {
-	typography = {
+	typography: {
     fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Noto Sans", "Ubuntu", "Droid Sans", "Helvetica Neue", sans-serif',
     fontSize: '16px',
   },
