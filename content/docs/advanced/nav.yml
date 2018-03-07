@@ -77,6 +77,10 @@
           title: beforeValueChange
           href: /advanced/guides.html#beforevaluechange
           forceInternal: true
+        - id: minimizing-bundle-size
+          title: Minimizing bundle size
+          href: /advanced/guides.html#minimizing-bundle-size
+          forceInternal: true
     - id: comparison
       title: Comparison with Other projects
       href: /advanced/comparison.html

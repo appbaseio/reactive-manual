@@ -20,3 +20,51 @@ Most filter components in ReactiveSearch provides a `beforeValueChange` prop. It
 > Note
 >
 > Most of the time your needs can be solved using `onValueChange`. If you absolutely need `beforeValueChange` you should ensure that you don't pass a function which takes a very long time to resolve the promise. The component goes in a **locked** state when using `beforeValueChange` and before the promise is resolved. This means all the state updates are suspended for the component.
+
+## Minimizing bundle size
+
+ReactiveSearch from v2.3.1 also provides ES modules which can help you in reducing your app's final bundle size. You can achieve this with **tree shaking**. If you're unable to setup tree shaking in your project we recommend trying out the <a href="https://github.com/umidbekkarimov/babel-plugin-direct-import" target="_blank">babel-plugin-direct-import</a>.
+
+```bash
+yarn add -D babel-plugin-direct-import
+```
+
+After adding this you can update your `.babelrc` accordingly:
+
+```js
+{
+    "presets": [
+        "react"
+    ],
+    "plugins": [
+        [
+          "direct-import",
+          [
+            "@appbaseio/reactivesearch",
+            {
+              "name": "@appbaseio/reactivesearch",
+              "indexFile": "@appbaseio/reactivesearch/lib/index.es.js"
+            }
+          ]
+        ]
+    ]
+}
+```
+
+Now your `import` statements will only include the necessary modules. So,
+
+```js
+import { ReactiveBase } from '@appbaseio/reactivesearch';
+```
+
+will include only the `ReactiveBase` module. Alternatively, you may avoid this step altogether and `import` using the full path, however the above method looks cleaner and you don't have to worry about the component's path in the library.
+
+Following also works with no extra setup, albeit a bit more explicit path:
+
+```js
+import { ReactiveBase } from '@appbaseio/reactivesearch/lib/components/basic/ReactiveBase';
+```
+
+> Note
+>
+> If you're using **create-react-app** you might need to update your configurations if tree shaking is not working out of the box. You may try <a href="https://github.com/timarney/react-app-rewired" target="_blank">react-app-rewired</a> instead of ejecting the app.
