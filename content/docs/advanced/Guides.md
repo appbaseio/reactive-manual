@@ -57,7 +57,7 @@ Now your `import` statements will only include the necessary modules. So,
 import { ReactiveBase } from '@appbaseio/reactivesearch';
 ```
 
-will include only the `ReactiveBase` module. Alternatively, you may avoid this step altogether and `import` using the full path, however the above method looks cleaner and you don't have to worry about the component's path in the library.
+will include only the `ReactiveBase` module. Alternatively, you may avoid this step altogether and `import` using the full path, however the above method looks cleaner and you don't have to worry about the component's path in the library. Check out the [example repo](https://github.com/appbaseio-apps/webpack-tree-shaking) for the above setup.
 
 Following also works with no extra setup, albeit a bit more explicit path:
 
