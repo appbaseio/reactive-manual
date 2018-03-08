@@ -94,6 +94,28 @@ Example uses:
     Whether highlighting should be enabled in the returned results. Defaults to `false`.
 - **highlightField** `String` or `Array` [optional]  
     When highlighting is enabled, this prop allows specifying the fields which should be returned with the matching highlights. When not specified, it defaults to applying highlights on the field(s) specified in the **dataField** prop.
+- **customHighlight** `Function` [optional]  
+    a function which returns the custom [highlight settings](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-highlighting.html). It receives the `props` and expects you to return an object with the `highlight` key. Check out the [technews demo](https://opensource.appbase.io/reactivesearch/demos/technews/) where the `DataSearch` component uses a `customHighlight` as given below,
+
+```js
+<DataSearch
+    componentId="title"
+    dataField={['title', 'text']}
+    highlight
+    customHighlight={(props) => ({
+        highlight: {
+            pre_tags: ['<mark>'],
+            post_tags: ['</mark>'],
+            fields: {
+                text: {},
+                title: {},
+            },
+            number_of_fragments: 0,
+        },
+    })}
+/>
+```
+
 - **queryFormat** `String` [optional]
     Sets the query format, can be **or** or **and**. Defaults to **or**.
     * **or** returns all the results matching **any** of the search query text's parameters. For example, searching for "bat man" with **or** will return all the results matching either "bat" or "man".
