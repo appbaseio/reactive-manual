@@ -78,6 +78,19 @@ Example uses:
     show radio button icon for each list item. Defaults to `true`.
 - **showCount** `Boolean` [optional]  
     show count value of the number of occurences besides a list item. Defaults to `true`.
+- **renderListItem** `Function` [optional]  
+    customize the rendered list via a function which receives the item label and count and expects a JSX or String back. For example:
+```js
+renderListItem={(label, count) => (
+    <div>
+        {label}
+        <span style={{ marginLeft: 5, color: 'dodgerblue' }}>
+            {count}
+        </span>
+    </div>
+)}
+```
+
 - **showSearch** `Boolean` [optional]  
     whether to show a searchbox to filter the list items locally. Defaults to true.
 - **placeholder** `String` [optional]  

@@ -82,6 +82,19 @@ Example uses:
     * In `and` mode, the applied query filters results where all of the selected items are present.
 - **showCount** `Boolean` [optional]  
     show count of number of occurences besides an item. Defaults to `true`.
+- **renderListItem** `Function` [optional]  
+    customize the rendered list via a function which receives the item label and count and expects a JSX or String back. For example:
+```js
+renderListItem={(label, count) => (
+    <div>
+        {label}
+        <span style={{ marginLeft: 5, color: 'dodgerblue' }}>
+            {count}
+        </span>
+    </div>
+)}
+```
+
 - **placeholder** `String` [optional]  
     placeholder to be displayed in the dropdown searchbox.
 - **showFilter** `Boolean` [optional]  
