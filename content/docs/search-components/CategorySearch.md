@@ -95,7 +95,7 @@ Example uses:
 - **highlightField** `String` or `Array` [optional]  
     When highlighting is enabled, this prop allows specifying the fields which should be returned with the matching highlights. When not specified, it defaults to applying highlights on the field(s) specified in the **dataField** prop.
 - **customHighlight** `Function` [optional]  
-    a function which returns the custom [highlight settings](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-highlighting.html). It receives the `props` and expects you to return an object with the `highlight` key. Check out the [technews demo](https://opensource.appbase.io/reactivesearch/demos/technews/) where the `DataSearch` component uses a `customHighlight` as given below,
+    a function which returns the custom [highlight settings](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-highlighting.html). It receives the `props` and expects you to return an object with the `highlight` key. Check out the <a href="https://opensource.appbase.io/reactivesearch/demos/technews/" target="_blank">technews demo</a> where the `DataSearch` component uses a `customHighlight` as given below,
 
 ```js
 <DataSearch
