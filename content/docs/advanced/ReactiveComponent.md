@@ -167,6 +167,8 @@ Now, the components which will have `myColorPicker` present in their `react` pro
     CSS styles to be applied to the **DataSearch** component.
 - **defaultQuery** `Function`  
     **returns** the default query to be applied to the component, as defined in Elasticsearch Query DSL.
+- **onAllData** `Function`  
+    callback function which provides `hits` and `aggregations` as function params.
 - **showFilter** `Boolean` [optional]  
     show as filter when a value is selected in a global selected filters view. Defaults to `true`.
 - **filterLabel** `String` [optional]  
