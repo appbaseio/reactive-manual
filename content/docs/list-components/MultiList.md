@@ -97,6 +97,10 @@ renderListItem={(label, count) => (
 )}
 ```
 
+- **showMissing** `Boolean` [optional]  
+    defaults to `false`. When set to `true` it also retrives the aggregations for missing fields under the label specified by `missingLabel`.
+- **missingLabel** `String` [optional]  
+    defaults to `N/A`. Specify a custom label to show when `showMissing` is set to `true`.
 - **showSearch** `Boolean` [optional]  
     whether to show a searchbox to filter the list items locally. Defaults to true.
 - **placeholder** `String` [optional]  
