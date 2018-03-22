@@ -10,6 +10,8 @@ next: map-components/reactivemap.html
 nextTitle: "ReactiveMap"
 ---
 
+> This component is not supported starting v2.0.0 of reactivemaps
+
 ![Image to be displayed](https://i.imgur.com/XnuaS4T.png)
 
 `PlacesSearch` creates a location search UI component that is connected to a geopoint type field. It queries for places within proximity of the user selected location landmark in the UI.
