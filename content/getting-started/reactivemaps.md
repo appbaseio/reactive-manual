@@ -10,105 +10,202 @@ prev: getting-started/reactivesearch.html
 prevTitle: "ReactiveSearch Quickstart"
 ---
 
-> Note:
->
-> Currently in `v2`, ReactiveMaps components are not available under ReactiveSearch.
+ReactiveMaps is a complimentary library to ReactiveSearch. Map components require ReactiveSearch architecture and its root component to begin with. If you wish to build anything on reactivemaps, you'll need to install reactivesearch along with it.
 
-### Step 1: Install ReactiveMaps
+### Step 1: Create Boilerplate with CRA
 
-We will fetch the [`reactivemaps`](https://www.npmjs.com/package/@appbaseio/reactivemaps) module first from npm.
+In this section, we will create a search UI based on a *earthquake dataset* with ReactiveSearch components.
+
+![Image](https://i.imgur.com/LR4qyZU.png)
+
+**Caption:** Final image of how the app will look.
+
+We can either add ReactiveSearch to an existing app or create a boilerplate app with [Create React App (CRA)](https://github.com/facebookincubator/create-react-app). For this quickstart guide, we will use the CRA.
 
 ```bash
-npm install --save @appbaseio/reactivemaps
+create-react-app my-awesome-search && cd my-awesome-search
 ```
 
-### Step 2: Add Google Maps JS lib
+### Step 2: Install ReactiveMaps and Reactivesearch
 
-ReactiveMaps uses Google Maps to render the maps. For including Google Maps, add the following  `<script>` tag in the `<head>` element.
+We will fetch the [`reactivemaps`](https://www.npmjs.com/package/@appbaseio/reactivemaps) and [`reactivesearch`](https://www.npmjs.com/package/@appbaseio/reactivesearch) modules using yarn or npm.
+
+```bash
+yarn add @appbaseio/reactivemaps @appbaseio/reactivesearch
+```
+
+or
+
+```bash
+npm install --save @appbaseio/reactivemaps @appbaseio/reactivesearch
+```
+
+### Step 3: Add Google Maps JS lib
+
+ReactiveMaps uses Google Maps JS library to render the maps and access the necessary geo-location services. For including Google Maps, add the following  `<script>` tag in the `<head>` element of `public/index.html`.
 
 ```html
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=Your_key_here"></script>
 ```
 
-### Step 3: Add ReactiveMap's style file
 
+### Step 4: Adding the first component
 
-If you haven't included any style framework, we recommend adding **materialize**.
+Lets add our first ReactiveSearch component: [ReactiveBase](/getting-started/reactivebase.html), it is a backend connector where we can configure the Elasticsearch index / authorization setup.
 
-```html
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
-```
-
-All ReactiveMap styles are present in a single file. We will import it in the `<head>` element as well.
-
-```html
-<link rel="stylesheet" href="https://cdn.rawgit.com/appbaseio/reactivemaps/master/dist/css/style.min.css">
-```
-
-Make sure to import the stylesheets in the above order.
-
----
-
-### Step 4: Creating an App
-
-Now that we have gotten the installation part out of the way, let's create an app with reactivemaps.
-
-If you already have a React boilerplate setup, then let's go ahead and import the components.
-
-```javascript
-import {
-  ReactiveMap,
-  SingleList,
-  ReactiveBase
-} from '@appbaseio/reactivemaps';
-```
-
-Next, we will create a [`ReactiveBase`](/getting-started/ReactiveBase.html) component for connecting our UI view with data, where the data source is an [appbase.io](https://appbase.io) app. This quick GIF will help with creating an app and getting its credentials.
+We will demonstrate creating an index using [appbase.io](https://appbase.io) service, although you can use any Elasticsearch backend within ReactiveBase.
 
 ![create an appbase.io app](https://i.imgur.com/r6hWKAG.gif)
 
+**Caption:** For the example that we will build, the app is called **earthquake** and the associated read-only credentials are **OrXIHcgHn:d539c6e7-ed14-4407-8214-c227b0600d8e**. You can browse and clone the dataset into your own app from [here](https://opensource.appbase.io/dejavu/live/#?input_state=XQAAAALbAAAAAAAAAAA9iIqnY-B2BnTZGEQz6wkFsksm3uHy0SJtl-GeS5hzLniAOGDpQVx6D3EoHDw86D_nWcj3PFS3n-DeQd1AOGTWMc5BFSwDVWM1rIpc6OlpeC62Gy4w2bVXsGB02GpXZQAh7epRyt_JV9IiqJyJgzW4vnZefow_cv_nao-NILgskqGbL7TKfAlU6TNHrnj6tr0m0GfAmwInsE1EsphIl_PBW7bxGvDzAfZF13Ec1QA8dB_-a82A&editable=false)
+
+![Dataset](https://i.imgur.com/vKmqxdP.png)
+
+We will update our `src/App.js` file to add ReactiveBase component.
+
 ```js
-class HelloWorld extends Component {
-  render() {
-	return(
-		<ReactiveBase
-			app="reactivemap-demo-app"
-			credentials="2ZvCaw7CR:6664ec32-4e21-434d-836c-33af67b88c60">
-			<div class="row">
-				<div class="col-xs-6">
-					<SingleList
-						title="SingleList Sensor"
-						componentId="SingleListSensor"
-						dataField="group.group_city"
-						size={50}
-						showSearch={true}
-					/>
+import React, { Component } from 'react';
+import { ReactiveBase } from '@appbaseio/reactivesearch';
+
+class App extends Component {
+
+	render() {
+		return (
+			<ReactiveBase
+				app="earthquake"
+				credentials="OrXIHcgHn:d539c6e7-ed14-4407-8214-c227b0600d8e"
+				type="places"
+				mapKey="<ADD YOUR GOOGLE MAPS KEY HERE>"
+			>
+				// other components will go here.
+				<div>
+					Hello ReactiveSearch!
 				</div>
-				<div class="col-xs-6">
-					<ReactiveMap
-						title="ReactiveMap Actuator"
-						componentId="ReactiveMapActuator"
-						dataField="venue"
-						react={{
-							"and": "SingleListSensor"
-						}}
-					/>
-				</div>
-			</div>
-		</ReactiveBase>
-	)
-  }
+			</ReactiveBase>
+		);
+	}
 }
 ```
 
-Next, we have created a `SingleList` component with New York city selected by default and have added a `ReactiveMap` component which updates reactively every time the SingleList component's selected value changes.
+This is how the app should look after running the `yarn start` command.
 
-If you have followed along, you should see something like this:
+![](https://i.imgur.com/M7AAhTh.png)
 
-![Image](https://i.imgur.com/Xj9GIgs.png)
+### Step 3: Adding Filter and Map Components
 
-You can also checkout a working demo of the above app directly at https://github.com/appbaseio-apps/reactivemaps-starter-app. The repo demonstrates the same example app in different ways:
-1. [`master`](https://github.com/appbaseio-apps/reactivemaps-starter-app/tree/master) - The app as shown in the steps above.
-1. [`browserify`](https://github.com/appbaseio-apps/reactivemaps-starter-app/tree/browserify) - A browserify based build (instead of webpack).
-1. [`withbootstrap`](https://github.com/appbaseio-apps/reactivemaps-starter-app/tree/withbootstrap) - A bootstrap based theming (instead of Materialize).
-1. [`umd`](https://github.com/appbaseio-apps/reactivemaps-starter-app/tree/umd) - A completely browser based app with no npm dependencies and webpack / browserify modules.
+For this app, we will be using [SingleList](/list-components/singlelist.html) component for filtering the dataset. And [ReactiveMap](/map-components/reactivemap.html) component for showing the search results.
+
+Lets add them within the ReactiveBase component. But before we do that, we will look at the important props for each.
+
+```js
+<SingleList
+	title="Places"
+	componentId="places"
+	dataField="place.raw"
+	size={50}
+	showSearch={true}
+	style={{
+		width: '25%',
+		padding: 20,
+	}}
+/>
+```
+
+**SingleList** creates a radio-buttons list UI component that is connected to the database field passed as `dataField` prop to the SingleList component.
+
+Next, we will look at the [**ReactiveMap**](/map-components/reactivemap.html) component for creating a map component.
+
+```js
+<ReactiveMap
+	componentId="map"
+	dataField="location"
+	react={{
+		"and": "places"
+	}}
+	onData={(result) => ({
+		label: result.mag
+	})}
+	style={{
+		width: '70%',
+	}}
+/>
+```
+
+The `react` prop here specifies that it should construct a query based on the current selected value of the singlelist(places) component. Every time the user changes the selected value, a new query is fired -- you don't need to write a manual query for any of the UI components here, although you can override it via `customQuery` prop.  
+
+![](https://i.imgur.com/QwFq2CP.png)
+
+This is how the map component's UI would look like. Notice how it is rendering the magnitude values of the earthquake in place of the marker pins. We achieved this via `onData` prop in the ReactiveMap component:
+
+```js
+onData={(result) => ({
+	label: result.mag
+})}
+```
+
+You can also customise it to render any kind of marker pins. Refer [ReactiveMap's documentation](/map-components/reactivemap.html) for the same.
+
+Now, we will put all three components together to create the UI view.
+
+```js
+import React, { Component } from 'react';
+import { ReactiveBase, SingleList } from '@appbaseio/reactivesearch';
+import { ReactiveMap } from '@appbaseio/reactivemaps';
+
+import logo from './logo.svg';
+import './App.css';
+
+class App extends Component {
+	render() {
+		return (
+			<ReactiveBase
+				app="earthquake"
+				credentials="OrXIHcgHn:d539c6e7-ed14-4407-8214-c227b0600d8e"
+				type="places"
+				mapKey="<ADD YOUR GOOGLE MAPS KEY HERE>"
+			>
+				<div
+					style={{
+						width: '100%',
+						display: 'flex',
+						flexDirection: 'row',
+						justifyContent: 'space-between'
+					}}
+				>
+					<SingleList
+						title="Places"
+						componentId="places"
+						dataField="place.raw"
+						size={50}
+						showSearch={true}
+						style={{
+							width: '25%',
+							padding: 20
+						}}
+					/>
+
+					<ReactiveMap
+						componentId="map"
+						dataField="location"
+						react={{
+							and: "places"
+						}}
+						onData={result => ({
+							label: result.mag
+						})}
+						style={{
+							width: '70%'
+						}}
+					/>
+				</div>
+			</ReactiveBase>
+		);
+	}
+}
+
+export default App;
+```
+
+If you have followed along, this is how our app should look now.
+
+![Image](https://i.imgur.com/LR4qyZU.png)
