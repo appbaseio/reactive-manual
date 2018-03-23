@@ -125,6 +125,8 @@ Example uses:
     ```
 - **onAllData** `Function` [optional]  
     works like **onData** prop but all the data objects are passed to the callback function.
+- **defaultQuery** `Function` [optional]  
+    runs a default query for the result component. Useful if you wish to fetch some results even if no filter is selected. The function should return a query.
 
 ## Demo
 

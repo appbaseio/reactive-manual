@@ -131,6 +131,8 @@ Example uses:
     }
     ```
     The return format for the callback function is an object with `image`, `title`, `description` and `url` fields.
+- **defaultQuery** `Function` [optional]  
+    runs a default query for the result component. Useful if you wish to fetch some results even if no filter is selected. The function should return a query.
 
 ## Demo
 
