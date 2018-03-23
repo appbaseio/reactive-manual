@@ -194,7 +194,7 @@ onAllData(results, streamResults, loadMoreData) {
 
 > Note
 >  
-> The `streamResults` parameter will be `[]` unless `stream` prop is set to `true`.
+> The `streamResults` parameter will be `[]` unless `stream` prop is set to `true`. Check the [handling streaming](/advanced/guides.html#handling-stream-updates) guide for more info.
 
 ## Examples
 
