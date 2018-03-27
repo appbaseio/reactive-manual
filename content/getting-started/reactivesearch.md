@@ -139,9 +139,9 @@ Finally, we need a component to show the matching results. [**ResultCard**](/sea
 	}}
 	onData={(res) => {
 		return {
-			image: res._source.image,
-			title: res._source.name,
-			description: res._source.brand + " " + "*".repeat(res.rating)
+			image: 'http://www.asfera.info/files/images/1_aprela/4/deloreyn.jpg',
+			title: res.name,
+			description: res.brand + " " + "*".repeat(res.rating)
 		}
 	}}
 />
