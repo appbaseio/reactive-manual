@@ -58,6 +58,10 @@ redirect_from:
     preset some value in the text field.
 - **placeholder** `String` [optional]  
     placeholder to be displayed in the text field when it has no value.
+- **showClear** `Boolean` [optional]  
+    show a clear text icon. Defaults to `false`.
+- **clearIcon** `JSX` [optional]  
+    allows setting a custom icon for clearing text instead of the default cross.
 - **showFilter** `Boolean` [optional]  
     show as filter when a value is selected in a global selected filters view. Defaults to `true`.
 - **filterLabel** `String` [optional]  

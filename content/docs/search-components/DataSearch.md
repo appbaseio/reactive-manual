@@ -79,6 +79,10 @@ Example uses:
     sets the position of the search icon. Can be `left` or `right`. Defaults to `right`.
 - **icon** `HTML` [optional]
     displays a custom search icon instead of the default 🔍
+- **showClear** `Boolean` [optional]  
+    show a clear text icon. Defaults to `false`.
+- **clearIcon** `JSX` [optional]  
+    allows setting a custom icon for clearing text instead of the default cross.
 - **autosuggest** `Boolean` [optional]  
     set whether the autosuggest functionality should be enabled or disabled. Defaults to `true`.
 - **defaultSuggestions** `Array` [optional]
