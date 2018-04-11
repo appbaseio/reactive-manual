@@ -65,7 +65,7 @@ Example uses:
     unique identifier of the component, can be referenced in other components' `react` prop.
 - **dataField** `String or Array`  
     database field(s) to be connected to the component's UI view. DataSearch accepts an Array in addition to String, useful for applying search across multiple fields.
-- **title** `String or HTML` [optional]  
+- **title** `String or JSX` [optional]  
     set the title of the component to be shown in the UI.
 - **defaultSelected** `string` [optional]  
     preset the search query text in the search box.
@@ -77,7 +77,7 @@ Example uses:
     whether to display a search or custom icon in the input box. Defaults to `true`.
 - **iconPosition** `String` [optional]
     sets the position of the search icon. Can be `left` or `right`. Defaults to `right`.
-- **icon** `HTML` [optional]
+- **icon** `JSX` [optional]
     displays a custom search icon instead of the default 🔍
 - **showClear** `Boolean` [optional]  
     show a clear text icon. Defaults to `false`.

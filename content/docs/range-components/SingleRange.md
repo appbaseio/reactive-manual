@@ -73,7 +73,7 @@ Example uses:
     data field to be connected to the component's UI view. The range items are filtered by a database query on this field.
 - **data** `Object Array`  
     collection of UI `labels` with associated `start` and `end` range values.
-- **title** `String or HTML` [optional]  
+- **title** `String or JSX` [optional]  
     title of the component to be shown in the UI.
 - **defaultSelected** `String` [optional]  
     pre-select a label from the `data` array.

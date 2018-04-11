@@ -67,7 +67,7 @@ Example uses:
     data field to be mapped with the component's UI view.
 - **data** `Object Array`  
     collection of UI `label` with associated with `start` and `end` ratings values.
-- **title** `String or HTML` [optional]  
+- **title** `String or JSX` [optional]  
     title of the component to be shown in the UI.
 - **defaultSelected** `Object` [optional]  
     pre-select a ratings value using `start` and `end` key values from one of the data elements.

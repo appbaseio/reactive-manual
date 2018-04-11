@@ -76,7 +76,7 @@ While `RangeSlider` only requires the above props to be used, it comes with many
     DB data field to be mapped with the component's UI view. The selected range creates a database query on this field.
 - **range** `Object`
     an object with `start` and `end` keys and corresponding numeric values denoting the minimum and maximum possible slider values.
-- **title** `String or HTML` [optional]  
+- **title** `String or JSX` [optional]  
     title of the component to be shown in the UI.
 - **defaultSelected** `Object` [optional]  
     an object with `start` and `end` keys and corresponding numeric values denoting the pre-selected range values.

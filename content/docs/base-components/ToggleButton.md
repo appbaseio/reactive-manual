@@ -67,7 +67,7 @@ Example uses:
     data field to be connected to the component's UI view.
 - **data** `Object Array`  
     collection of UI `labels` with associated `value` to be matched against the database field.
-- **title** `String` or `HTML` [optional]  
+- **title** `String` or `JSX` [optional]  
     title of the component to be shown in the UI.
 - **defaultSelected** `String` or `Array` [optional]  
     an array of default selected label(s) to pre-select one or more buttons.
