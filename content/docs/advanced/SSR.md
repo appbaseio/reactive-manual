@@ -55,7 +55,7 @@ We will build a simple booksearch app with `next.js` as an example to get starte
 
 Set up `next.js` - [Refer docs here](https://github.com/zeit/next.js)
 
-### Install Reactivesearch
+### Installation
 
 Use the package manager of your choice to install `reactivesearch`:
 
@@ -63,7 +63,44 @@ Use the package manager of your choice to install `reactivesearch`:
 yarn add @appbaseio/reactivesearch
 ```
 
+Since reactivesearch internally uses `emotion-js` for styling, we will also need to install `emotion-server`:
+
+```
+yarn add emotion-server
+```
+
+We will also utilise: `babel-plugin-direct-import` and `babel-plugin-emotion` primarily to generate an optimised build for our app. So make sure that you install:
+
+```
+yarn add -D babel-cli babel-core babel-loader babel-plugin-direct-import babel-plugin-emotion babel-plugin-transform-class-properties babel-plugin-transform-decorators-legacy babel-plugin-transform-object-rest-spread babel-preset-env babel-preset-next babel-preset-react
+```
+
+
 ### Setup
+
+Create `.babelrc` with the following configuration to generate an optimised build for your react app:
+
+```js
+{
+	"presets": ["next/babel"],
+	"plugins": [
+		"emotion",
+		"transform-class-properties",
+		"transform-object-rest-spread",
+		"transform-decorators-legacy",
+		[
+			"direct-import",
+			[
+			  "@appbaseio/reactivesearch",
+			  {
+				"name": "@appbaseio/reactivesearch",
+				"indexFile": "@appbaseio/reactivesearch/lib/index.es.js"
+			  }
+			]
+		]
+	]
+}
+```
 
 Create an `index.js` file in the `pages` directory:
 
