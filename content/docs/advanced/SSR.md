@@ -72,9 +72,8 @@ yarn add emotion-server
 We will also utilise: `babel-plugin-direct-import` and `babel-plugin-emotion` primarily to generate an optimised build for our app. So make sure that you install:
 
 ```
-yarn add -D babel-cli babel-core babel-loader babel-plugin-direct-import babel-plugin-emotion babel-plugin-transform-class-properties babel-plugin-transform-decorators-legacy babel-plugin-transform-object-rest-spread babel-preset-env babel-preset-next babel-preset-react
+yarn add -D babel-cli babel-core babel-loader babel-plugin-direct-import babel-plugin-emotion babel-plugin-transform-class-properties babel-plugin-transform-object-rest-spread babel-preset-env babel-preset-next babel-preset-react
 ```
-
 
 ### Setup
 
@@ -87,7 +86,6 @@ Create `.babelrc` with the following configuration to generate an optimised buil
 		"emotion",
 		"transform-class-properties",
 		"transform-object-rest-spread",
-		"transform-decorators-legacy",
 		[
 			"direct-import",
 			[
