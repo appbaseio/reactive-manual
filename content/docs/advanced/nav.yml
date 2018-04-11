@@ -94,3 +94,12 @@
           title: Comparison
           href: /advanced/comparison.html#comparison
           forceInternal: true
+    - id: ssr
+      title: Server Side Rendering
+      href: /advanced/ssr.html
+      forceInternal: true
+      subitems:
+        - id: ssr
+          title: Server Side Rendering
+          href: /advanced/ssr.html
+          forceInternal: true

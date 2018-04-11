@@ -1,0 +1,212 @@
+---
+id: ssr
+title: "Server Side Rendering"
+layout: docs
+sectionid: docs
+permalink: advanced/ssr.html
+prev: advanced/guides.html
+prevTitle: "Advanced Guides"
+redirect_from:
+    - "ssr"
+    - "advanced/ssr"
+---
+
+Server Side Rendering enables us to pre-render the results on the server enabling better SEO of the app, and faster delivery of the relevant results on an initial render to the users.
+
+Reactivesearch internally runs on a redux store. With Server Side Rendering, you can handle the intial render when a user (or search engine crawler) first requests your app. To achieve the relevant results on an initial render, we need to pre-populate the redux store of reactivesearch. 
+
+Reactivesearch offers SSR via `initReactivesearch()` method which takes three params:
+
+- an array of all components (with their set of props) we wish to render at the server side
+- url params
+- base component (reactivebase) props
+
+## Usage
+
+This is a three-steps process:
+
+First, import `initReactivesearch`:
+
+```js
+import initReactivesearch from '@appbaseio/reactivesearch/lib/server';
+```
+
+Then, evaluate the initial state:
+
+```js
+const initialState = await initReactivesearch(...);
+```
+
+and finally, pass the computed initial state to `ReactiveBase` component.
+
+```js
+<ReactiveBase {...props} initialState={initialState}>
+    ...
+</ReactiveBase>
+```
+
+## Example
+
+We will build a simple booksearch app with `next.js` as an example to get started with:
+
+> Note that you can also use `react-dom/server` to implement SSR. We are using `next.js` here for simplicity.
+
+### Pre-requisites
+
+Set up `next.js` - [Refer docs here](https://github.com/zeit/next.js)
+
+### Install Reactivesearch
+
+Use the package manager of your choice to install `reactivesearch`:
+
+```
+yarn add @appbaseio/reactivesearch
+```
+
+### Setup
+
+Create an `index.js` file in the `pages` directory:
+
+```js
+import initReactivesearch from '@appbaseio/reactivesearch/lib/server';
+```
+
+and we will also import the other relevant component from the reactivesearch library:
+
+```js
+import {
+	ReactiveBase,
+	DataSearch,
+	SelectedFilters,
+	ReactiveList,
+} from '@appbaseio/reactivesearch';
+```
+
+Set the props for all the components we are going to use:
+
+```js
+const settings = {
+	app: 'good-books-ds',
+	credentials: 'nY6NNTZZ6:27b76b9f-18ea-456c-bc5e-3a5263ebc63d',
+};
+
+const dataSearchProps = {
+	dataField: ['original_title', 'original_title.search'],
+	categoryField: 'authors.raw',
+	componentId: 'BookSensor',
+	defaultSelected: 'Harry',
+};
+
+const reactiveListProps = {
+	componentId: 'SearchResult',
+	dataField: 'original_title.raw',
+	className: 'result-list-container',
+	from: 0,
+	size: 5,
+	onData: data => (<BookCard key={data._id} data={data} />),
+	react: {
+		and: ['BookSensor'],
+	},
+};
+```
+
+Next step is to evaluate the initial state in the `getInitialProps` lifecycle method:
+
+```js
+export default class Main extends Component {
+	static async getInitialProps() {
+		return {
+			store: await initReactivesearch(
+				[
+					{
+						...dataSearchProps,
+						type: 'DataSearch',
+						source: DataSearch,
+					},
+					{
+						...reactiveListProps,
+						type: 'ReactiveList',
+						source: ReactiveList,
+					},
+				],
+				null,
+				settings,
+			),
+		};
+	}
+
+    render() {
+        return (
+            <ReactiveBase {...settings} initialState={this.props.store}>
+                <div className="row">
+                    <div className="col">
+                        <DataSearch
+                            {...dataSearchProps}
+                        />
+                    </div>
+
+                    <div className="col">
+                        <SelectedFilters />
+                        <ReactiveList
+                            {...reactiveListProps}
+                        />
+                    </div>
+                </div>
+            </ReactiveBase>
+        );
+    }
+}
+```
+
+Now, since reactivesearch runs on emotion-js internally, we need to extract and inject styles properly by creating a `_document.js`:
+
+```js
+import React from 'react';
+import Document, { Head, Main, NextScript } from 'next/document';
+import { extractCritical } from 'emotion-server';
+
+export default class MyDocument extends Document {
+	static getInitialProps({ renderPage }) {
+		// for emotion-js
+		const page = renderPage();
+		const styles = extractCritical(page.html);
+		return { ...page, ...styles };
+	}
+
+	constructor(props) {
+		// for emotion-js
+		super(props);
+		const { __NEXT_DATA__, ids } = props;
+		if (ids) {
+			__NEXT_DATA__.ids = ids;
+		}
+	}
+
+	render() {
+		return (
+			<html lang="en">
+				<Head>
+					<link rel="stylesheet" href="/_next/static/style.css" />
+					<meta charSet="utf-8" />
+					<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+					{/* for emotion-js */}
+					<style dangerouslySetInnerHTML={{ __html: this.props.css }} />
+				</Head>
+				<body>
+					<Main />
+					<NextScript />
+				</body>
+			</html>
+		);
+	}
+}
+```
+
+Finally, you can now run the dev server and catch the SSR in action.
+
+## Example apps
+
+We've covered all the existing components as an example app here:
+
+- [Components SSR demo with Next.js](https://github.com/appbaseio/reactivesearch/tree/dev/packages/web/examples/ssr)
+- [SSR demo with react-dom](https://github.com/appbaseio/reactivesearch/tree/dev/packages/web/examples/ssr-with-react-dom)
