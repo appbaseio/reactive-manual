@@ -4,3 +4,5 @@
 node_modules
 public
 src/data/search.index.json
+yarn-error.log
+npm-debug.log*
