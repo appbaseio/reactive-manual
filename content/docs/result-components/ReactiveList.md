@@ -87,8 +87,8 @@ Example uses:
     - `sortBy` - specified as either `asc` or `desc`.
 - **size** `Number` [optional]  
     number of results to show per view. Defaults to 10.
-- **loader** `String or HTML` [optional]  
-    display to show the user while the data is loading, accepts `String` or `HTML` markup.
+- **loader** `String or JSX` [optional]  
+    display to show the user while the data is loading, accepts `String` or `JSX` markup.
 - **showResultStats** `Boolean` [optional]  
     whether to show result stats in the form of results found and time taken. Defaults to `true`.
 - **onResultStats** `Function` [optional]  
@@ -127,6 +127,8 @@ Example uses:
     works like **onData** prop but all the data objects are passed to the callback function.
 - **defaultQuery** `Function` [optional]  
     runs a default query for the result component. Useful if you wish to fetch some results even if no filter is selected. The function should return a query.
+- **onNoResults** `String or JSX` [optional]  
+    show custom message or component when no results founds.
 
 ## Demo
 

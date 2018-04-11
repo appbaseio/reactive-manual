@@ -54,7 +54,7 @@ Example uses:
 
 - **componentId** `String`  
     unique id of the sensor, can be referenced in another component's **react** prop.
-- **title** `String or HTML` [optional]  
+- **title** `String or JSX` [optional]  
     Sets the title of the component to be shown in the UI, applicable when **visible** is set to `true`.
 - **defaultSelected** `any` [optional]  
     pre-select a value in the data controller.

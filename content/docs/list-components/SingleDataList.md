@@ -88,7 +88,7 @@ Example uses:
     data field to be connected to the component's UI view.
 - **data** `Object Array`  
     collection of UI `labels` with associated `value` to be matched against the database field.
-- **title** `String or HTML` [optional]  
+- **title** `String or JSX` [optional]  
     title of the component to be shown in the UI.
 - **showSearch** `Boolean` [optional]  
     whether to display a searchbox to filter the data list. Defaults to `false`.

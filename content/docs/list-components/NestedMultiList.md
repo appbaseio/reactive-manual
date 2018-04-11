@@ -58,7 +58,7 @@ Example uses:
     unique identifier of the component, can be referenced in other components' `react` prop.
 - **dataField** `Array`  
     data field(s) to be mapped with the component's UI view. A nested list component supports multiple fields passed as an Array denoting the order of nesting.
-- **title** `String or HTML` [optional]  
+- **title** `String or JSX` [optional]  
     title of the component to be shown in the UI.
 - **size** `Number` [optional]  
     control how many items to display in the List. Defaults to 100.
@@ -72,8 +72,8 @@ Example uses:
     whether to show a searchbox to filter the list items locally. Defaults to true.
 - **placeholder** `String` [optional]  
     placeholder to be displayed in the searchbox, only applicable when the `showSearch` prop is set to `true`. When applicable, the default placeholder value is set to "Search".
-- **loader** `String or HTML` [optional]  
-    display text while the data is being fetched, accepts `String` or `HTML` markup.
+- **loader** `String or JSX` [optional]  
+    display text while the data is being fetched, accepts `String` or `JSX` markup.
 - **showFilter** `Boolean` [optional]  
     show as filter when a value is selected in a global selected filters view. Defaults to `true`.
 - **filterLabel** `String` [optional]  

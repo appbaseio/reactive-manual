@@ -59,7 +59,7 @@ Example uses:
     unique identifier of the component, can be referenced in other components' `react` prop.
 - **dataField** `String`  
     data field to be connected to the component's UI view.
-- **title** `String or HTML` [optional]  
+- **title** `String or JSX` [optional]  
     title of the component to be shown in the UI.
 - **defaultSelected** `string` [optional]  
     pre-select a default date.

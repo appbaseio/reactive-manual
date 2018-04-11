@@ -54,7 +54,7 @@ Example uses:
     unique identifier of the component, can be referenced in other components' `react` prop.
 - **dataField** `String`  
     DB data field to be mapped with the component's UI view, used when a database query is made on this field.
-- **title** `String or HTML` [optional]  
+- **title** `String or JSX` [optional]  
     title of the component to be shown in the UI.
 - **placeholder** `String` [optional]  
     set the placeholder text to be shown in the searchbox field. Defaults to "Search..".

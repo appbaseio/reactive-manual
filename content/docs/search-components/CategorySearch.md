@@ -70,7 +70,7 @@ Example uses:
     data field(s) on which the search query will be applied to. If you want to search across multiple fields, pass them as an `Array`.
 - **categoryField** `String` [optional]  
     data field which has the category values mapped.
-- **title** `String or HTML` [optional]  
+- **title** `String or JSX` [optional]  
     Sets the title of the component to be shown in the UI.
 - **defaultSelected** `string` [optional]  
     preset the search query text in the search box.
@@ -82,7 +82,7 @@ Example uses:
     whether to display a search or custom icon in the input box. Defaults to `true`.
 - **iconPosition** `String` [optional]
     sets the position of the search icon. Can be `left` or `right`. Defaults to `right`.
-- **icon** `HTML` [optional]
+- **icon** `JSX` [optional]
     displays a custom search icon instead of the default 🔍
 - **showClear** `Boolean` [optional]  
     show a clear text icon. Defaults to `false`.
