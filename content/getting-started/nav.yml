@@ -21,6 +21,27 @@
           title: Adding Filter and Result Components
           href: /getting-started/reactivesearch.html#step-3-adding-filter-and-result-components
           forceInternal: true
+    - id: reactivesearch-rn
+      title: "Using with React Native CLI"
+      href: /getting-started/reactivesearch-rn.html
+      forceInternal: true
+      subitems:
+        - id: step-0-install-reactivesearch-native
+          title: Install ReactiveSearch Native
+          href: /getting-started/reactivesearch-rn.html#step-0-install-reactivesearch-native
+          forceInternal: true
+        - id: step-1-create-boilerplate-with-rncli
+          title: Create Boilerplate with RNCLI
+          href: /getting-started/reactivesearch-rn.html#step-1-create-boilerplate-with-rncli
+          forceInternal: true
+        - id: step-2-adding-the-first-component
+          title: Adding the First Component
+          href: /getting-started/reactivesearch-rn.html#step-2-adding-the-first-component
+          forceInternal: true
+        - id: step-3-adding-filter-and-result-components
+          title: Adding Filter and Result Components
+          href: /getting-started/reactivesearch-rn.html#step-3-adding-filter-and-result-components
+          forceInternal: true
     - id: data
       title: Importing Data
       href: /getting-started/data.html

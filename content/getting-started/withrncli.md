@@ -1,17 +1,18 @@
 ---
-id: reactivesearch
-title: "ReactiveSearch Quickstart"
+id: reactivesearch-rn
+title: "ReactiveSearch with React Native CLI"
 layout: tutorial
 sectionid: getting-started
-permalink: getting-started/reactivesearch.html
-next: getting-started/reactivesearch-rn.html
-nextTitle: "Using outside expo"
+permalink: getting-started/reactivesearch-rn.html
+prev: getting-started/reactivesearch.html
+prevTitle: "ReactiveSearch Quickstart"
+next: getting-started/data.html
+nextTitle: "Importing Data"
 redirect_from:
-    - "getting-started/"
-    - "getting-started/reactivesearch"
-    - "install"
-    - "quickstart"
+    - "getting-started/reactivesearch-rn"
 ---
+
+In this section I'll use the `react-native-cli` instead of expo to setup the dev environment. You can follow a similar approach if you wish to use ReactiveSearch outside expo environment. First lets get started by installing `react-native-cli` by following the instructions from the [react-native docs](https://facebook.github.io/react-native/docs/getting-started.html) for your OS. Now we can follow the same steps as we did for expo setup.
 
 ### Step 0: Install ReactiveSearch Native
 
@@ -29,7 +30,7 @@ npm install @appbaseio/reactivesearch-native
 
 If you are starting from scratch, follow the next steps on getting started with reactivesearch-native.
 
-### Step 1: Create Boilerplate with CRNA
+### Step 1: Create Boilerplate with RNCLI
 
 We will create a search UI based on a *books dataset* with ReactiveSearch components.
 
@@ -37,10 +38,8 @@ We will create a search UI based on a *books dataset* with ReactiveSearch compon
 
 **Caption:** Final image of how the app will look.
 
-For this quickstart guide, we will use [Create React Native App (CRNA)](https://github.com/react-community/create-react-native-app) with [Expo client](https://expo.io/tools#client).
-
 ```bash
-create-react-native-app my-awesome-mobile-search && cd my-awesome-mobile-search
+react-native init myproject && cd myproject
 ```
 
 Install the `@appbaseio/reactivesearch-native` repo.
@@ -59,7 +58,7 @@ We will demonstrate creating an index using [appbase.io](https://appbase.io) ser
 
 **Caption:** For the example that we will build, the app is called **good-books-ds** and the associated read-only credentials are **nY6NNTZZ6:27b76b9f-18ea-456c-bc5e-3a5263ebc63d**. You can browse and clone the dataset into your own app from  [here](https://opensource.appbase.io/dejavu/live/#?input_state=XQAAAAKJAQAAAAAAAAA9iIqnY-B2BnTZGEQz6wkFsyzhBoa6J5YHVVPvvStg3duFL_9lBQxNAUEiS2LxrmQIi48IYsLycilGizdEqIf-Z3FUOIdIqHULMVrBqKtL5qUJx1gsOpt0WbuAhQS8qMoK8IdlqoG0tr-8UHi3sau8zMqY64fzpXCehrrPI4SNk8VTbiMsIZhduWAX4hCATwCBWfvrJqfAoiqKGt9zyTfsxLU7CbxGxE6__je7GeiC7UaPdD8YDeYC7eRxv-8JF1j3ysqY_Lkqc6hZAtUm9dN1Mg7O2uJ1MJxZyZWCmnz3ovLxz81T3C6KJZXI0OFjB5ll22UJm0iEaxN9NgY8yT9XOuK1k_90Fp4A).
 
-Lets update our `src/App.js` file to add ReactiveBase component.
+Lets update our `App.js` file to add ReactiveBase component.
 
 ```js
 import React from 'react';
@@ -90,7 +89,7 @@ const styles = StyleSheet.create({
 });
 ```
 
-This is how the app should look after running the `yarn start` command.
+Now start the packager by running the `yarn start` command. In a different terminal start your emulator/device by running either `react-native run-ios` or `react-native run-android`. While you wait for the packager to finish, get some coffee :)
 
 ![Screenshot](https://imgur.com/yEVncXC.png)
 
@@ -141,19 +140,19 @@ Next, we need a component to show the matching results. [**ReactiveList**](/comp
 
 The `react` prop here specifies that it should construct a query based on the current selected values of searchbox and ratingsfilter components. Every time the user changes the input value, a new query is fired -- you don't need to write a manual query for any of the UI components here, although you can override it via `customQuery` prop.
 
-ReactiveSearch uses [native-base](https://docs.nativebase.io/docs/GetStarted.html) which uses some fonts which can be included by adding:
+ReactiveSearch uses [native-base](https://docs.nativebase.io/docs/GetStarted.html) which uses some fonts which can be included by running (check [this](https://github.com/GeekyAnts/NativeBase/issues/72) issue if you are running into problems related to fonts):
 
-```js
-async componentWillMount() {
-	await Expo.Font.loadAsync({
-		Roboto: require('native-base/Fonts/Roboto.ttf'),
-		Roboto_medium: require('native-base/Fonts/Roboto_medium.ttf'),
-		Ionicons: require('native-base/Fonts/Ionicons.ttf'),
-	});
-}
+```bash
+react-native link react-native-vector-icons
 ```
 
-Now, we will put all the things together to create the final view.
+Now, we will put all the things together to create the final view. If you're running into issues try restarting the packager with `--reset-cache` flag:
+
+```bash
+yarn start --reset-cache
+```
+
+The final app will look like:
 
 ```js
 import React from 'react';
@@ -171,32 +170,7 @@ import {
 } from '@appbaseio/reactivesearch-native';
 
 export default class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      isReady: false
-    }
-  }
-
-  async componentWillMount() {
-		await Expo.Font.loadAsync({
-			Roboto: require('native-base/Fonts/Roboto.ttf'),
-			Roboto_medium: require('native-base/Fonts/Roboto_medium.ttf'),
-			Ionicons: require('native-base/Fonts/Ionicons.ttf'),
-		});
-
-		this.setState({ isReady: true });
-  }
-
   render() {
-    if (!this.state.isReady) {
-      return (
-        <View style={styles.container}>
-          <Text>Loading...</Text>
-        </View>
-      )
-    }
-
     return (
       <ReactiveBase
         app="good-books-ds"
@@ -269,4 +243,6 @@ If you have followed along so far, you should be able to see the final app:
 
 ![Image](https://imgur.com/zAXd5uQ.png)
 
-In the next section we explain about creating the same app outside expo environment.
+The above code is available in [this](https://github.com/appbaseio-apps/reactivesearch-native-starter-rncli) github repo.
+
+In the next section we explain about **importing data**.
