@@ -26,7 +26,7 @@ We can either add ReactiveSearch to an existing app or create a boilerplate app 
 create-react-app my-awesome-search && cd my-awesome-search
 ```
 
-### Step 2: Install ReactiveMaps and Reactivesearch
+### Step 2: Install ReactiveMaps and ReactiveSearch
 
 We will fetch the [`reactivemaps`](https://www.npmjs.com/package/@appbaseio/reactivemaps) and [`reactivesearch`](https://www.npmjs.com/package/@appbaseio/reactivesearch) modules using yarn or npm.
 
@@ -57,7 +57,7 @@ We will demonstrate creating an index using [appbase.io](https://appbase.io) ser
 
 ![create an appbase.io app](https://i.imgur.com/r6hWKAG.gif)
 
-**Caption:** For the example that we will build, the app is called **earthquake** and the associated read-only credentials are **OrXIHcgHn:d539c6e7-ed14-4407-8214-c227b0600d8e**. You can browse and clone the dataset into your own app from [here](https://opensource.appbase.io/dejavu/live/#?input_state=XQAAAALbAAAAAAAAAAA9iIqnY-B2BnTZGEQz6wkFsksm3uHy0SJtl-GeS5hzLniAOGDpQVx6D3EoHDw86D_nWcj3PFS3n-DeQd1AOGTWMc5BFSwDVWM1rIpc6OlpeC62Gy4w2bVXsGB02GpXZQAh7epRyt_JV9IiqJyJgzW4vnZefow_cv_nao-NILgskqGbL7TKfAlU6TNHrnj6tr0m0GfAmwInsE1EsphIl_PBW7bxGvDzAfZF13Ec1QA8dB_-a82A&editable=false)
+**Caption:** For the example that we will build, the app is called **earthquake** and the associated read-only credentials are **OrXIHcgHn:d539c6e7-ed14-4407-8214-c227b0600d8e**. You can browse and clone the dataset into your own app from [here](https://opensource.appbase.io/dejavu/live/#?input_state=XQAAAALbAAAAAAAAAAA9iIqnY-B2BnTZGEQz6wkFsksm3uHy0SJtl-GeS5hzLniAOGDpQVx6D3EoHDw86D_nWcj3PFS3n-DeQd1AOGTWMc5BFSwDVWM1rIpc6OlpeC62Gy4w2bVXsGB02GpXZQAh7epRyt_JV9IiqJyJgzW4vnZefow_cv_nao-NILgskqGbL7TKfAlU6TNHrnj6tr0m0GfAmwInsE1EsphIl_PBW7bxGvDzAfZF13Ec1QA8dB_-a82A&editable=false).
 
 ![Dataset](https://i.imgur.com/vKmqxdP.png)
 
