@@ -239,6 +239,31 @@ export default class MyDocument extends Document {
 
 Finally, you can now run the dev server and catch the SSR in action.
 
+## Using with react-dom
+
+You can also use ReactiveSearch with [react-dom/server](https://reactjs.org/docs/react-dom-server.html). Check out the [example app](https://github.com/appbaseio/reactivesearch/tree/dev/packages/web/examples/ssr-with-react-dom) for a detailed setup.
+
+The concept remains the same, after gettting a request, we'll use `initReactiveSearch` to compute the results and populate ReactiveSearch's redux store. We'll use [renderToString](https://reactjs.org/docs/react-dom-server.html#rendertostring) from `react-dom/server` and [renderStylesToString](https://emotion.sh/docs/ssr#renderstylestostring) from `emotion-server` to generate an html for our app. For example:
+
+```js
+const html = renderStylesToString(renderToString(<App
+	store={
+		store
+	}
+	settings={
+		settings
+	}
+	singleRangeProps={
+		singleRangeProps
+	}
+	reactiveListProps={
+		reactiveListProps
+	}
+/>));
+```
+
+We'll send this markup along with the computed `store` object so it can be preloaded in client side while hydrating the app.
+
 ## Example apps
 
 We've covered all the existing components as an example app here:
