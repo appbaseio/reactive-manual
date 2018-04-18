@@ -4,15 +4,14 @@ title: "GeoDistanceSlider"
 layout: docs
 sectionid: docs
 permalink: map-components/geodistanceslider.html
-next: map-components/geodistancedropdown.html
-nextTitle: "GeoDistanceDropdown"
+next: map-components/geodistanceSlider.html
+nextTitle: "GeoDistanceSlider"
 redirect_from:
     - "map-components"
     - "reactive-manual/map-components"
 ---
 
-![Image to be displayed](
-https://i.imgur.com/FU4s0PQ.png)
+![Image to be displayed](https://i.imgur.com/VVWxKNE.png)
 
 `GeoDistanceSlider` creates a location search based range slider UI component that is connected to a database field. It is used for distance based filtering.
 
@@ -58,7 +57,7 @@ Example uses:
     }
   }
   defaultSelected={{
-    "location": "SOMA, San Francisco, United States",
+    "location": "London, UK",
     "distance": 12
   }}
   placeholder="Select a distance range.."
@@ -86,6 +85,12 @@ Example uses:
     pre-select the search query with `location` option and distance with `distance` option.
 - **placeholder** `String` [optional]  
     set the placeholder to show in the location search box, useful when no option is `defaultSelected`.
+- **showIcon** `Boolean` [optional]
+    whether to display a search or custom icon in the input box. Defaults to `true`.
+- **iconPosition** `String` [optional]
+    sets the position of the search icon. Can be `left` or `right`. Defaults to `right`.
+- **icon** `JSX` [optional]
+    displays a custom search icon instead of the default 🔍
 - **unit** `String` [optional]  
     unit for distance measurement, uses `mi` (for miles) by default. Distance units can be specified from the following:  
     ![screenshot](https://i.imgur.com/STbeagk.png)
@@ -98,18 +103,26 @@ Example uses:
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected location from the slider. This is useful for sharing URLs with the component state. Defaults to `false`.
 
-## Syntax
+## Demo
 
-<br>
+<br />
 
-<iframe height='500' scrolling='no' title='GeoDistanceSlider docs example' src='//codepen.io/sids-aquarius/embed/ZJPzaB/?height=500&theme-id=light&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/ZJPzaB/'>GeoDistanceSlider docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/dev/packages/maps/examples/GeoDistanceSlider" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+
 
 ## Styles
 
-All reactivebase and reactivemaps components are `rbc` namespaced.
+`GeoDistanceSlider` component supports `innerClass` prop with the following keys:    
 
-![Annotated image](https://i.imgur.com/0si7fn1.png)
+- `title`
+- `input`
+- `list`
+- `slider`
+- `select`
+- `count`
+ 
+Read more about it [here](/theming/class.html).
+
 
 ## Extending
 
@@ -117,6 +130,14 @@ All reactivebase and reactivemaps components are `rbc` namespaced.
 1. customize the look and feel with `className`, `style`,
 2. update the underlying DB query with `customQuery`,
 3. connect with external interfaces using `beforeValueChange`, `onValueChange` and `onQueryChange`.
+4. specify how options should be filtered or updated using `react` prop.
+5. add the following [synthetic events](https://reactjs.org/events.html) to the underlying `input` element:
+    - onBlur
+    - onFocus
+    - onKeyPress
+    - onKeyDown
+    - onKeyUp
+    - autoFocus
 
 ```js
 <GeoDistanceSlider
@@ -175,18 +196,19 @@ All reactivebase and reactivemaps components are `rbc` namespaced.
     is a callback function which accepts component's current **value** as a parameter. It is called every time the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example:  You want to show a pop-up modal with the valid discount coupon code when a user searches within a specific location area.
 - **onQueryChange** `Function`  
     is a callback function which accepts component's **prevQuery** and **nextQuery** as parameters. It is called everytime the component's query changes. This prop is handy in cases where you want to generate a side-effect whenever the component's query would change.
+- **react** `Object`  
+    specify dependent components to reactively update **GeoDistanceSlider's** options. Read more about it [here](/advanced/react.html).
+    - **key** `String`  
+        one of `and`, `or`, `not` defines the combining clause.
+        - **and** clause implies that the results will be filtered by matches from **all** of the associated component states.
+        - **or** clause implies that the results will be filtered by matches from **at least one** of the associated component states.
+        - **not** clause implies that the results will be filtered by an **inverse** match of the associated component states.
+    - **value** `String or Array or Object`  
+        - `String` is used for specifying a single component by its `componentId`.
+        - `Array` is used for specifying multiple components by their `componentId`.
+        - `Object` is used for nesting other key clauses.
+
 
 ## Examples
 
-<br>
-
-<iframe height='500' scrolling='no' title='GeoDistanceSlider docs example' src='//codepen.io/sids-aquarius/embed/ZJPzaB/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/ZJPzaB/'>GeoDistanceSlider docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
-
-1. [GeoDistance slider with all the default props](https://opensource.appbase.io/playground/?selectedKind=map%2FGeoDistanceSlider&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-2. [GeoDistance slider with a title](https://opensource.appbase.io/playground/?knob-title=Geo%20Distance%20Slider&selectedKind=map%2FGeoDistanceSlider&selectedStory=With%20Title&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-3. [GeoDistance slider with range labels](https://opensource.appbase.io/playground/?knob-title=Geo%20Distance%20Slider&selectedKind=map%2FGeoDistanceSlider&selectedStory=With%20Range%20Labels&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-4. [Playground (with all knob actions)](https://opensource.appbase.io/playground/?knob-title=Geo%20Distance%20Slider&knob-filterLabel=GeoDistance%20filter&knob-defaultSelected=%7B"location"%3A"London"%2C"distance"%3A5%7D&knob-rangeLabels=%7B"start"%3A"Start"%2C"end"%3A"End"%7D&knob-range=%7B"start"%3A0%2C"end"%3A50%7D&knob-URLParams%20%28not%20visible%20on%20storybook%29=true&knob-showFilter=true&knob-stepValue=1&knob-autoLocation=true&knob-unit=mi&knob-placeholder=Search%20Location&selectedKind=map%2FGeoDistanceSlider&selectedStory=Playground&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
+<a href="https://opensource.appbase.io/playground/?selectedKind=Map%20Components%2FGeoDistanceSlider&selectedStory=Basic&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybooks%2Fstorybook-addon-knobs" target="_blank">GeoDistance Slider with all the default props</a>
