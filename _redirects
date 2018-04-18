@@ -65,6 +65,9 @@
 /reactive-manual/basic-components/daterange.html  /reactive-manual/range-components/daterange.html  302
 /reactive-manual/range-components/daterange  /reactive-manual/range-components/daterange.html  302
 /reactive-manual/daterange  /reactive-manual/range-components/daterange.html  302
+/reactive-manual/search-components/dynamicrangeslider.html  /reactive-manual/range-components/dynamicrangeslider.html  302
+/reactive-manual/range-components/dynamicrangeslider  /reactive-manual/range-components/dynamicrangeslider.html  302
+/reactive-manual/dynamicrangeslider  /reactive-manual/range-components/dynamicrangeslider.html  302
 /reactive-manual/basic-components/multidropdownrange.html  /reactive-manual/range-components/multidropdownrange.html  302
 /reactive-manual/range-components/multidropdownrange  /reactive-manual/range-components/multidropdownrange.html  302
 /reactive-manual/multidropdownrange  /reactive-manual/range-components/multidropdownrange.html  302
@@ -98,9 +101,6 @@
 /reactive-manual/search-components/resultcard.html  /reactive-manual/result-components/resultcard.html  302
 /reactive-manual/result-components/resultcard  /reactive-manual/result-components/resultcard.html  302
 /reactive-manual/resultcard  /reactive-manual/result-components/resultcard.html  302
-/reactive-manual/search-components/dynamicrangeslider.html  /reactive-manual/range-components/dynamicrangeslider.html  302
-/reactive-manual/range-components/dynamicrangeslider  /reactive-manual/range-components/dynamicrangeslider.html  302
-/reactive-manual/dynamicrangeslider  /reactive-manual/range-components/dynamicrangeslider.html  302
 /reactive-manual/search-components/resultlist.html  /reactive-manual/result-components/resultlist.html  302
 /reactive-manual/result-components/resultlist  /reactive-manual/result-components/resultlist.html  302
 /reactive-manual/resultlist  /reactive-manual/result-components/resultlist.html  302
@@ -115,11 +115,11 @@
 /reactive-manual/theming/  /reactive-manual/theming/themes.html  302
 /reactive-manual/theming  /reactive-manual/theming/themes.html  302
 /reactive-manual/themes  /reactive-manual/theming/themes.html  302
-/reactive-manual/basic-components/datasearch.html  /reactive-manual/search-components/datasearch.html  302
-/reactive-manual/search-components/datasearch  /reactive-manual/search-components/datasearch.html  302
-/reactive-manual/datasearch  /reactive-manual/search-components/datasearch.html  302
 /reactive-manual/search-components  /reactive-manual/search-components/categorysearch.html  302
 /reactive-manual/reactive-manual/search-components  /reactive-manual/search-components/categorysearch.html  302
 /reactive-manual/search-components/categorysearch  /reactive-manual/search-components/categorysearch.html  302
 /reactive-manual/categorysearch  /reactive-manual/search-components/categorysearch.html  302
+/reactive-manual/basic-components/datasearch.html  /reactive-manual/search-components/datasearch.html  302
+/reactive-manual/search-components/datasearch  /reactive-manual/search-components/datasearch.html  302
+/reactive-manual/datasearch  /reactive-manual/search-components/datasearch.html  302
 /reactive-manual/index.html  /reactive-manual/  302
