@@ -145,6 +145,7 @@ Example uses:
 - `resultStats`
 - `button`
 - `pagination`
+- `active`
 - `list`
 - `poweredBy`
 
