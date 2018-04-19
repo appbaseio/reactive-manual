@@ -153,7 +153,17 @@ Read more about it [here](/theming/class.html).
 2. update the underlying DB query with `customQuery`,
 3. connect with external interfaces using `beforeValueChange`, `onValueChange` and `onQueryChange`,
 4. specify how search suggestions should be filtered using `react` prop,
-5. use your own function to render suggestions using `onSuggestion` prop,
+5. use your own function to render suggestions using `onSuggestion` prop. It expects an object back for each `suggestion` having keys `label` and `value`. The query is run agains the `value` key and `label` is used for rendering the suggestions. `label` can be either `String` or JSX. For example,
+
+```js
+<DataSearch
+  ...
+  onSuggestion={(suggestion) => ({
+    label: (<div>{suggestion._source.original_title} by<span style={{ color: 'dodgerblue', marginLeft: 5 }}>{suggestion._source.authors}</span></div>),
+    value: suggestion._source.original_title
+  })}
+/>
+```
 6. add the following [synthetic events](https://reactjs.org/events.html) to the underlying `input` element:
     - onBlur
     - onFocus
