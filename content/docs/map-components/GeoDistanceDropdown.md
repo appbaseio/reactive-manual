@@ -10,7 +10,7 @@ next: map-components/reactivemap.html
 nextTitle: "ReactiveMap"
 ---
 
-![Image to be displayed](https://i.imgur.com/pSwEijZ.png)
+![Image to be displayed](https://i.imgur.com/zRnIUWY.png)
 
 `GeoDistanceDropdown` creates a location search based dropdown UI component that is connected to a database field. It is used for distance based filtering.
 
