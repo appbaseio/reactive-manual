@@ -4,11 +4,11 @@ title: "ReactiveMap"
 layout: docs
 sectionid: docs
 permalink: map-components/reactivemap.html
-prev: map-components/placessearch.html
-prevTitle: "PlacesSearch"
+prev: map-components/geodistancedropdown.html
+prevTitle: "GeoDistanceDropdown"
 ---
 
-![ReactiveMap Image](https://i.imgur.com/faAZ5v8.png)
+![ReactiveMap Image](https://i.imgur.com/Q87ks8I.png)
 
 A `ReactiveMap` creates a data-driven map UI component. It is the key component for build map based experiences.
 
@@ -94,8 +94,17 @@ Example uses:
     a function that takes one argument for getting a marker's data and returns an HTML markup to be displayed in the popover box.
 - **stream** `Boolean` [optional]  
     whether to stream new result (aka realtime view) updates in the UI. Defaults to `false`.
-- **react** `Object`
-     a dependency object defining how this component should react based on the state changes in the dependent sensor components. You can read more about it [here](/advanced/react.html).
+- **react** `Object`  
+    specify dependent components to reactively update **GeoDistanceDropdown's** options. Read more about it [here](/advanced/react.html).
+    - **key** `String`  
+        one of `and`, `or`, `not` defines the combining clause.
+        - **and** clause implies that the results will be filtered by matches from **all** of the associated component states.
+        - **or** clause implies that the results will be filtered by matches from **at least one** of the associated component states.
+        - **not** clause implies that the results will be filtered by an **inverse** match of the associated component states.
+    - **value** `String or Array or Object`  
+        - `String` is used for specifying a single component by its `componentId`.
+        - `Array` is used for specifying multiple components by their `componentId`.
+        - `Object` is used for nesting other key clauses.
 - **autoCenter** `Boolean` [optional]  
     whether to auto center the map based on the geometric center of all the location markers. Defaults to `false`.
 - **streamAutoCenter** `Boolean` [optional]  
@@ -127,30 +136,30 @@ onData={result => ({
 ```
 
 
-### Syntax
+## Demo
 
-<br>
+<br />
 
-<iframe height='500' scrolling='no' title='ReactiveMap docs example' src='//codepen.io/sids-aquarius/embed/qXvWpo/?height=500&theme-id=light&default-tab=js&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/qXvWpo/'>ReactiveMap docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/dev/packages/maps/examples/GeoDistanceDropdown" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
-### Styles
 
-![Annotated Image](https://i.imgur.com/YPRoLch.png)
+## Styles
 
-### Examples
+`ReactiveMap` component supports `innerClass` prop with the following keys:    
 
-<br>
+- `title`
+- `input`
+- `list`
+- `checkboxContainer`
+- `checkbox`
+- `label`
+- `select`
+- `icon`
+- `count`
+- `button`
+- `pagination`
+- `active`
 
-<iframe height='500' scrolling='no' title='ReactiveMap docs example' src='//codepen.io/sids-aquarius/embed/qXvWpo/?height=500&theme-id=light&default-tab=result&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/sids-aquarius/pen/qXvWpo/'>ReactiveMap docs example</a> by Siddharth Kothari (<a href='https://codepen.io/sids-aquarius'>@sids-aquarius</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+## Examples
 
-1. [ReactiveMap with all the default props](https://opensource.appbase.io/playground/?knob-title=Reactive%20maps&knob-URLParams%20%28not%20visible%20in%20storybook%29=true&knob-showMarkers=true&knob-filterLabel=GeoDistance%20filter&knob-defaultSelected=%7B"label"%3A"Less%20than%20100%20miles"%2C"location"%3A"London"%7D&knob-rangeLabels=%7B"start"%3A"Start"%2C"end"%3A"End"%7D&knob-range=%7B"start"%3A0%2C"end"%3A50%7D&knob-autoMarkerPosition=true&knob-streamMarkerImage=https%3A%2F%2Fcdn.rawgit.com%2Fappbaseio%2Freactivemaps%2F6500c73a%2Fdist%2Fimages%2Fstream-pin.png&knob-showMapStyles=false&knob-URLParams%20%28not%20visible%20on%20storybook%29=true&knob-showFilter=true&knob-autoMapRender=false&knob-placeholderDropdown=Select%20radius&knob-stepValue=1&knob-showPopoverOn=mouseover&knob-showMarkerClusters=true&knob-streamTTL=5&knob-setSearchAsMove=false&knob-defaultPin=https%3A%2F%2Fcdn.rawgit.com%2Fappbaseio%2Freactivemaps%2F6500c73a%2Fdist%2Fimages%2Fhistoric-pin.png&knob-size=100&knob-autoLocation=true&knob-streamAutoCenter=true&knob-unit=mi&knob-autoCenter=true&knob-placeholder=Search%20Location&knob-defaultZoom=5&knob-showSearchAsMove=true&knob-defaultMapStyle=Standard&knob-defaultCenter=%7B"lat"%3A37.74%2C"lng"%3A-122.45%2C"lng"%3A-122.45%7D&selectedKind=map%2FReactiveMap&selectedStory=Basic&full=0&down=1&left=1&panelRight=0&downPanel=storybooks%2Fstorybook-addon-knobs)
-
-2. [ReactiveMap with a search sensor on the map](https://opensource.appbase.io/reactivemaps/examples/meetupblast/)
-
-3. [ReactiveMap with historical and realtime data](https://opensource.appbase.io/reactivemaps/examples/transport/)
-
-4. [ReactiveMap with events example](https://opensource.appbase.io/reactivemaps/examples/events/)
-
-5. [ReactiveMap with weather data](https://opensource.appbase.io/reactivemaps/examples/weather/)
+<a href="https://opensource.appbase.io/playground/?selectedKind=Map%20Components%2FReactiveMap&selectedStory=Basic&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybooks%2Fstorybook-addon-knobs" target="_blank">ReactiveMap with all the default props</a>

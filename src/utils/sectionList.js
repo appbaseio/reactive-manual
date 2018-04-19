@@ -8,7 +8,7 @@ import navAdvanced from '../../content/docs/advanced/nav.yml';
 import navMap from '../../content/docs/map-components/nav.yml';
 import navTutorial from '../../content/getting-started/nav.yml';
 
-const nav = [...navTutorial, ...navBasic, ...navList, ...navRange, ...navSearch, ...navResult, ...navTheming, ...navAdvanced, ...navMap];
+const nav = [...navTutorial, ...navBasic, ...navList, ...navRange, ...navSearch, ...navResult, ...navMap, ...navTheming, ...navAdvanced];
 
 const sectionListDocs = nav.map(item => ({
   ...item,

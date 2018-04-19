@@ -13,9 +13,9 @@
           title: Props
           href: /map-components/geodistanceslider.html#props
           forceInternal: true
-        - id: syntax
-          title: Syntax
-          href: /map-components/geodistanceslider.html#syntax
+        - id: demo
+          title: Demo
+          href: /map-components/geodistanceslider.html#demo
           forceInternal: true
         - id: styles
           title: Styles
@@ -42,9 +42,9 @@
           title: Props
           href: /map-components/geodistancedropdown.html#props
           forceInternal: true
-        - id: syntax
-          title: Syntax
-          href: /map-components/geodistancedropdown.html#syntax
+        - id: demo
+          title: Demo
+          href: /map-components/geodistancedropdown.html#demo
           forceInternal: true
         - id: styles
           title: Styles
@@ -58,35 +58,35 @@
           title: Examples
           href: /map-components/geodistancedropdown.html#examples
           forceInternal: true
-    - id: placessearch
-      title: PlacesSearch
-      href: /map-components/placessearch.html
-      forceInternal: true
-      subitems:
-        - id: usage
-          title: Usage
-          href: /map-components/placessearch.html#usage
-          forceInternal: true
-        - id: props
-          title: Props
-          href: /map-components/placessearch.html#props
-          forceInternal: true
-        - id: syntax
-          title: Syntax
-          href: /map-components/placessearch.html#syntax
-          forceInternal: true
-        - id: styles
-          title: Styles
-          href: /map-components/placessearch.html#styles
-          forceInternal: true
-        - id: extending
-          title: Extending
-          href: /map-components/placessearch.html#extending
-          forceInternal: true
-        - id: examples
-          title: Examples
-          href: /map-components/placessearch.html#examples
-          forceInternal: true
+    # - id: placessearch
+    #   title: PlacesSearch
+    #   href: /map-components/placessearch.html
+    #   forceInternal: true
+    #   subitems:
+    #     - id: usage
+    #       title: Usage
+    #       href: /map-components/placessearch.html#usage
+    #       forceInternal: true
+    #     - id: props
+    #       title: Props
+    #       href: /map-components/placessearch.html#props
+    #       forceInternal: true
+    #     - id: syntax
+    #       title: Syntax
+    #       href: /map-components/placessearch.html#syntax
+    #       forceInternal: true
+    #     - id: styles
+    #       title: Styles
+    #       href: /map-components/placessearch.html#styles
+    #       forceInternal: true
+    #     - id: extending
+    #       title: Extending
+    #       href: /map-components/placessearch.html#extending
+    #       forceInternal: true
+    #     - id: examples
+    #       title: Examples
+    #       href: /map-components/placessearch.html#examples
+    #       forceInternal: true
     - id: reactivemap
       title: ReactiveMap
       href: /map-components/reactivemap.html
@@ -100,9 +100,9 @@
           title: Props
           href: /map-components/reactivemap.html#props
           forceInternal: true
-        - id: syntax
-          title: Syntax
-          href: /map-components/reactivemap.html#syntax
+        - id: demo
+          title: Demo
+          href: /map-components/reactivemap.html#demo
           forceInternal: true
         - id: styles
           title: Styles
