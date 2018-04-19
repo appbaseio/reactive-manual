@@ -45,7 +45,7 @@ npm install --save @appbaseio/reactivemaps @appbaseio/reactivesearch
 ReactiveMaps uses Google Maps JS library to render the maps and access the necessary geo-location services. For including Google Maps, add the following  `<script>` tag in the `<head>` element of `public/index.html`.
 
 ```html
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?key=Your_key_here"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.31&key=YOUR_MAPS_KEY_HERE"></script>
 ```
 
 
@@ -104,10 +104,6 @@ Lets add them within the ReactiveBase component. But before we do that, we will 
 	dataField="place.raw"
 	size={50}
 	showSearch={true}
-	style={{
-		width: '25%',
-		padding: 20,
-	}}
 />
 ```
 
@@ -125,9 +121,6 @@ Next, we will look at the [**ReactiveMap**](/map-components/reactivemap.html) co
 	onData={(result) => ({
 		label: result.mag
 	})}
-	style={{
-		width: '70%',
-	}}
 />
 ```
 
@@ -178,10 +171,6 @@ class App extends Component {
 						dataField="place.raw"
 						size={50}
 						showSearch={true}
-						style={{
-							width: '25%',
-							padding: 20
-						}}
 					/>
 
 					<ReactiveMap
@@ -193,9 +182,6 @@ class App extends Component {
 						onData={result => ({
 							label: result.mag
 						})}
-						style={{
-							width: '70%'
-						}}
 					/>
 				</div>
 			</ReactiveBase>
@@ -209,3 +195,5 @@ export default App;
 If you have followed along, this is how our app should look now.
 
 ![Image](https://i.imgur.com/LR4qyZU.png)
+
+Here are the links to the [final code](https://github.com/appbaseio-apps/reactivemaps-starter) and [live codepen](https://codepen.io/dhruvdutt/pen/KRwmvz) demo.
