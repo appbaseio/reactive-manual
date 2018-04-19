@@ -100,8 +100,8 @@ Example uses:
 
 <br />
 
-<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/dev/packages/maps/examples/GeoDistanceDropdown" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
-
+<iframe height='500' scrolling='no' title='GeoDistanceDropdown Example' src='//codepen.io/dhruvdutt/embed/qYEmqp/?height=500&theme-id=light&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/dhruvdutt/pen/qYEmqp/'>GeoDistanceDropdown Example</a> by Dhruvdutt Jadhav (<a href='https://codepen.io/dhruvdutt'>@dhruvdutt</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ## Styles
 
