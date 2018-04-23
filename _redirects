@@ -4,6 +4,10 @@
 
 /reactive-manual/componentsindex  /reactive-manual/getting-started/componentsindex.html  302
 /reactive-manual/components  /reactive-manual/getting-started/componentsindex.html  302
+/reactive-manual/getting-started/maps  /reactive-manual/getting-started/reactivemaps.html  302
+/reactive-manual/getting-started/reactivemaps  /reactive-manual/getting-started/reactivemaps.html  302
+/reactive-manual/quickstart/maps  /reactive-manual/getting-started/reactivemaps.html  302
+/reactive-manual/quickstart/reactivemaps  /reactive-manual/getting-started/reactivemaps.html  302
 /reactive-manual/getting-started/  /reactive-manual/getting-started/reactivesearch.html  302
 /reactive-manual/getting-started/reactivesearch  /reactive-manual/getting-started/reactivesearch.html  302
 /reactive-manual/install  /reactive-manual/getting-started/reactivesearch.html  302
@@ -104,6 +108,9 @@
 /reactive-manual/search-components/resultlist.html  /reactive-manual/result-components/resultlist.html  302
 /reactive-manual/result-components/resultlist  /reactive-manual/result-components/resultlist.html  302
 /reactive-manual/resultlist  /reactive-manual/result-components/resultlist.html  302
+/reactive-manual/basic-components/datasearch.html  /reactive-manual/search-components/datasearch.html  302
+/reactive-manual/search-components/datasearch  /reactive-manual/search-components/datasearch.html  302
+/reactive-manual/datasearch  /reactive-manual/search-components/datasearch.html  302
 /reactive-manual/theming/class  /reactive-manual/theming/class.html  302
 /reactive-manual/class  /reactive-manual/theming/class.html  302
 /reactive-manual/advanced/styleguide.html  /reactive-manual/theming/style.html  302
@@ -115,9 +122,6 @@
 /reactive-manual/theming/  /reactive-manual/theming/themes.html  302
 /reactive-manual/theming  /reactive-manual/theming/themes.html  302
 /reactive-manual/themes  /reactive-manual/theming/themes.html  302
-/reactive-manual/basic-components/datasearch.html  /reactive-manual/search-components/datasearch.html  302
-/reactive-manual/search-components/datasearch  /reactive-manual/search-components/datasearch.html  302
-/reactive-manual/datasearch  /reactive-manual/search-components/datasearch.html  302
 /reactive-manual/search-components  /reactive-manual/search-components/categorysearch.html  302
 /reactive-manual/reactive-manual/search-components  /reactive-manual/search-components/categorysearch.html  302
 /reactive-manual/search-components/categorysearch  /reactive-manual/search-components/categorysearch.html  302
