@@ -11,11 +11,11 @@ redirect_from:
     - "advanced/ssr"
 ---
 
-Server Side Rendering enables us to pre-render the results on the server enabling better SEO of the app, and faster delivery of the relevant results on an initial render to the users.
+Server Side Rendering enables us to pre-render the results on the server enabling better SEO for the app, and faster delivery of relevant results on an initial render to the users.
 
-Reactivesearch internally runs on a redux store. With Server Side Rendering, you can handle the intial render when a user (or search engine crawler) first requests your app. To achieve the relevant results on an initial render, we need to pre-populate the redux store of reactivesearch. 
+Reactivesearch internally runs on a redux store. With Server Side Rendering, you can handle the intial render when a user (or search engine crawler) first requests your app. To achieve the relevant results on an initial render, we need to pre-populate the redux store of ReactiveSearch. 
 
-Reactivesearch offers SSR via `initReactivesearch()` method which takes three params:
+ReactiveSearch offers SSR via `initReactivesearch()` method which takes three params:
 
 - an array of all components (with their set of props) we wish to render at the server side
 - url params
@@ -69,7 +69,7 @@ Since reactivesearch internally uses `emotion-js` for styling, we will also need
 yarn add emotion-server
 ```
 
-We will also utilise: `babel-plugin-direct-import` and `babel-plugin-emotion` primarily to generate an optimised build for our app. So make sure that you install:
+We will also utilise `babel-plugin-direct-import` and `babel-plugin-emotion` primarily to generate an optimised build for our app. So make sure that you install:
 
 ```
 yarn add -D babel-cli babel-core babel-loader babel-plugin-direct-import babel-plugin-emotion babel-plugin-transform-class-properties babel-plugin-transform-object-rest-spread babel-preset-env babel-preset-next babel-preset-react
@@ -170,30 +170,30 @@ export default class Main extends Component {
 		};
 	}
 
-    render() {
-        return (
-            <ReactiveBase {...settings} initialState={this.props.store}>
-                <div className="row">
-                    <div className="col">
-                        <DataSearch
-                            {...dataSearchProps}
-                        />
-                    </div>
+	render() {
+		return (
+			<ReactiveBase {...settings} initialState={this.props.store}>
+				<div className="row">
+					<div className="col">
+						<DataSearch
+							{...dataSearchProps}
+						/>
+					</div>
 
-                    <div className="col">
-                        <SelectedFilters />
-                        <ReactiveList
-                            {...reactiveListProps}
-                        />
-                    </div>
-                </div>
-            </ReactiveBase>
-        );
-    }
+					<div className="col">
+						<SelectedFilters />
+						<ReactiveList
+							{...reactiveListProps}
+						/>
+					</div>
+				</div>
+			</ReactiveBase>
+		);
+	}
 }
 ```
 
-Now, since reactivesearch runs on emotion-js internally, we need to extract and inject styles properly by creating a `_document.js`:
+Since ReactiveSearch runs on emotion-js internally, we will need to extract and inject styles properly by creating a `_document.js`:
 
 ```js
 import React from 'react';
@@ -243,7 +243,7 @@ Finally, you can now run the dev server and catch the SSR in action.
 
 You can also use ReactiveSearch with [react-dom/server](https://reactjs.org/docs/react-dom-server.html). Check out the [example app](https://github.com/appbaseio/reactivesearch/tree/dev/packages/web/examples/ssr-with-react-dom) for a detailed setup.
 
-The concept remains the same, after gettting a request, we'll use `initReactiveSearch` to compute the results and populate ReactiveSearch's redux store. We'll use [renderToString](https://reactjs.org/docs/react-dom-server.html#rendertostring) from `react-dom/server` and [renderStylesToString](https://emotion.sh/docs/ssr#renderstylestostring) from `emotion-server` to generate an html for our app. For example:
+The concept remains the same, after gettting a request, we'll use `initReactiveSearch` to compute the results and populate ReactiveSearch's redux store. We'll use [renderToString](https://reactjs.org/docs/react-dom-server.html#rendertostring) from `react-dom/server` and [renderStylesToString](https://emotion.sh/docs/ssr#renderstylestostring) from `emotion-server` to generate a html paint for our app. For example:
 
 ```js
 const html = renderStylesToString(renderToString(<App
@@ -262,7 +262,7 @@ const html = renderStylesToString(renderToString(<App
 />));
 ```
 
-We'll send this markup along with the computed `store` object so it can be preloaded in client side while hydrating the app.
+We'll send this markup along with the computed `store` object so that it can be pre-loaded in client side while hydrating the app.
 
 ## Example apps
 
