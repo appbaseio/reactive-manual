@@ -5,13 +5,13 @@
       href: /getting-started/reactivesearch.html
       forceInternal: true
       subitems:
-        - id: step-0-install-reactivesearch
-          title: Install ReactiveSearch
-          href: /getting-started/reactivesearch.html#step-0-install-reactivesearch
-          forceInternal: true
-        - id: step-1-create-boilerplate-with-cra
+        - id: step-0-create-boilerplate-with-cra
           title: Create Boilerplate with CRA
-          href: /getting-started/reactivesearch.html#step-1-create-boilerplate-with-cra
+          href: /getting-started/reactivesearch.html#step-0-create-boilerplate-with-cra
+          forceInternal: true
+        - id: step-1-install-reactivesearch
+          title: Install ReactiveSearch
+          href: /getting-started/reactivesearch.html#step-1-install-reactivesearch
           forceInternal: true
         - id: step-2-adding-the-first-component
           title: Adding the First Component
@@ -28,6 +28,31 @@
         - id: reactivesearch-as-umd
           title: "ReactiveSearch as UMD"
           href: /getting-started/reactivesearch.html#reactivesearch-as-umd
+          forceInternal: true
+    - id: reactivemaps
+      title: "ReactiveMaps Quickstart"
+      href: /getting-started/reactivemaps.html
+      forceInternal: true
+      subitems:
+        - id: step-0-create-boilerplate-with-cra
+          title: Create Boilerplate with CRA
+          href: /getting-started/reactivemaps.html#step-0-create-boilerplate-with-cra
+          forceInternal: true
+        - id: step-1-install-reactivemaps-and-reactivesearch
+          title: Install ReactiveMaps and ReactiveSearch
+          href: /getting-started/reactivemaps.html#step-1-install-reactivemaps-and-reactivesearch
+          forceInternal: true
+        - id: step-2-adding-the-first-component
+          title: Adding the First Component
+          href: /getting-started/reactivemaps.html#step-2-adding-the-first-component
+          forceInternal: true
+        - id: step-3-adding-filters-and-map-components
+          title: Adding Filters and Map Components
+          href: /getting-started/reactivemaps.html#step-3-adding-filters-and-map-components
+          forceInternal: true
+        - id: reactivemaps-as-umd
+          title: "ReactiveMaps as UMD"
+          href: /getting-started/reactivemaps.html#reactivemaps-as-umd
           forceInternal: true
     - id: data
       title: Importing Data

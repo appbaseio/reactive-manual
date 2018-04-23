@@ -6,13 +6,16 @@ sectionid: getting-started
 permalink: getting-started/reactivemaps.html
 next: getting-started/data.html
 nextTitle: "Importing Data"
-prev: getting-started/reactivesearch.html
-prevTitle: "ReactiveSearch Quickstart"
+redirect_from:
+    - "getting-started/maps"
+    - "getting-started/reactivemaps"
+    - "quickstart/maps"
+    - "quickstart/reactivemaps"
 ---
 
 ReactiveMaps is a complimentary library to ReactiveSearch. Map components require ReactiveSearch architecture and its root component to begin with. If you wish to build anything on reactivemaps, you'll need to install reactivesearch along with it.
 
-### Step 1: Create Boilerplate with CRA
+### Step 0: Create Boilerplate with CRA
 
 In this section, we will create a search UI based on a *earthquake dataset* with ReactiveSearch components.
 
@@ -26,7 +29,7 @@ We can either add ReactiveSearch to an existing app or create a boilerplate app 
 create-react-app my-awesome-search && cd my-awesome-search
 ```
 
-### Step 2: Install ReactiveMaps and ReactiveSearch
+### Step 1: Install ReactiveMaps and ReactiveSearch
 
 We will fetch the [`reactivemaps`](https://www.npmjs.com/package/@appbaseio/reactivemaps) and [`reactivesearch`](https://www.npmjs.com/package/@appbaseio/reactivesearch) modules using yarn or npm.
 
@@ -40,7 +43,7 @@ or
 npm install --save @appbaseio/reactivemaps @appbaseio/reactivesearch
 ```
 
-### Step 3: Add Google Maps JS lib
+#### Add Google Maps JS lib
 
 ReactiveMaps uses Google Maps JS library to render the maps and access the necessary geo-location services. For including Google Maps, add the following  `<script>` tag in the `<head>` element of `public/index.html`.
 
@@ -49,7 +52,7 @@ ReactiveMaps uses Google Maps JS library to render the maps and access the neces
 ```
 
 
-### Step 4: Adding the first component
+### Step 2: Adding the first component
 
 Lets add our first ReactiveSearch component: [ReactiveBase](/getting-started/reactivebase.html), it is a backend connector where we can configure the Elasticsearch index / authorization setup.
 
@@ -91,7 +94,7 @@ This is how the app should look after running the `yarn start` command.
 
 ![](https://i.imgur.com/M7AAhTh.png)
 
-### Step 3: Adding Filter and Map Components
+### Step 3: Adding Filters and Map Components
 
 For this app, we will be using [SingleList](/list-components/singlelist.html) component for filtering the dataset. And [ReactiveMap](/map-components/reactivemap.html) component for showing the search results.
 
@@ -196,4 +199,29 @@ If you have followed along, this is how our app should look now.
 
 ![Image](https://i.imgur.com/LR4qyZU.png)
 
-Here are the links to the [final code](https://github.com/appbaseio-apps/reactivemaps-starter) and [live codepen](https://codepen.io/dhruvdutt/pen/KRwmvz) demo.
+
+For convenience, you can checkout the final code from the ReactiveMap starter [github repo](https://github.com/appbaseio-apps/reactivemaps-starter) and [live codepen](https://codepen.io/dhruvdutt/pen/KRwmvz) demo.
+
+You can run it with the following commands:
+
+```bash
+git clone https://github.com/appbaseio-apps/reactivemaps-starter
+cd reactivemaps-starter
+yarn && yarn start
+# open http://localhost:3000 and you should see the app.
+# The magic sauce is inside **src/App.js** file.
+```
+
+---
+
+### ReactiveMaps as UMD
+
+It is also possible to run ReactiveMaps without relying on a Node.JS environment tooling for the build setup.
+
+```html
+<script src="https://cdn.rawgit.com/appbaseio/reactivesearch/dev/packages/maps/umd/reactivemaps.js"></script>
+```
+
+A GZip version is also available at https://cdn.rawgit.com/appbaseio/reactivesearch/dev/packages/maps/umd/reactivemaps.js.gzip.
+
+---

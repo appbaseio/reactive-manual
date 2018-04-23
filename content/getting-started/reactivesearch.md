@@ -13,22 +13,8 @@ redirect_from:
     - "quickstart"
 ---
 
-### Step 0: Install ReactiveSearch
 
-We will fetch and install [`reactivesearch`](https://www.npmjs.com/package/@appbaseio/reactivesearch) module using yarn or npm.
-
-```bash
-yarn add @appbaseio/reactivesearch
-```
-
-or
-
-```bash
-npm install @appbaseio/reactivesearch
-```
-
-### Step 1: Create Boilerplate with CRA
-
+### Step 0: Create Boilerplate with CRA
 
 In this section, we will create a search UI based on a *cars dataset* with ReactiveSearch components.
 
@@ -42,10 +28,18 @@ We can either add ReactiveSearch to an existing app or create a boilerplate app 
 create-react-app my-awesome-search && cd my-awesome-search
 ```
 
-Install the `@appbaseio/reactivesearch` repo if you already haven't.
+### Step 1: Install ReactiveSearch
+
+We will fetch and install [`reactivesearch`](https://www.npmjs.com/package/@appbaseio/reactivesearch) module using yarn or npm.
 
 ```bash
 yarn add @appbaseio/reactivesearch
+```
+
+or
+
+```bash
+npm install @appbaseio/reactivesearch
 ```
 
 ### Step 2: Adding the first component
