@@ -103,3 +103,12 @@
           title: Server Side Rendering
           href: /advanced/ssr.html
           forceInternal: true
+    - id: typescript
+      title: TypeScript Support
+      href: /advanced/typescript.html
+      forceInternal: true
+      subitems:
+        - id: typescript
+          title: Usage
+          href: /advanced/typescript.html
+          forceInternal: true

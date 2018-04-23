@@ -6,6 +6,8 @@ sectionid: docs
 permalink: advanced/ssr.html
 prev: advanced/guides.html
 prevTitle: "Advanced Guides"
+next: advanced/typescript.html
+nextTitle: "TypeScript Support"
 redirect_from:
     - "ssr"
     - "advanced/ssr"
