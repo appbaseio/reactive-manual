@@ -15,9 +15,9 @@ redirect_from:
 
 ReactiveMaps is a complimentary library to ReactiveSearch. Map components require ReactiveSearch architecture and its root component to begin with. If you wish to build anything on reactivemaps, you'll need to install reactivesearch along with it.
 
-### Step 0: Create Boilerplate with CRA
+### Step 0: Create Boilerplate
 
-In this section, we will create a search UI based on a *earthquake dataset* with ReactiveSearch components.
+In this section, we will create a search UI based on an *earthquake dataset* with ReactiveSearch components.
 
 ![Image](https://i.imgur.com/LR4qyZU.png)
 
@@ -55,7 +55,7 @@ ReactiveMaps uses Google Maps JS library to render the maps and access the neces
 
 ---
 
-### Step 2: Adding the first component
+### Step 2: Adding first component
 
 Lets add our first ReactiveSearch component: [ReactiveBase](/getting-started/reactivebase.html), it is a backend connector where we can configure the Elasticsearch index / authorization setup.
 
