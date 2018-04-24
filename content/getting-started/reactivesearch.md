@@ -309,7 +309,7 @@ yarn && yarn start
 
 ---
 
-### ReactiveSearch as UMD
+### Step 5: ReactiveSearch as UMD
 
 It is also possible to run ReactiveSearch without relying on a Node.JS environment tooling for the build setup. Here, I am using `v2.0.0`, this can be replaced with the version you are using.
 

@@ -25,9 +25,9 @@
           title: "Adding a Layout Grid with Flex"
           href: /getting-started/reactivesearch.html#step-4-adding-a-layout-grid-with-flex
           forceInternal: true
-        - id: reactivesearch-as-umd
+        - id: step-5-reactivesearch-as-umd
           title: "ReactiveSearch as UMD"
-          href: /getting-started/reactivesearch.html#reactivesearch-as-umd
+          href: /getting-started/reactivesearch.html#step-5-reactivesearch-as-umd
           forceInternal: true
     - id: reactivemaps
       title: "ReactiveMaps Quickstart"
@@ -50,9 +50,9 @@
           title: Adding Filters and Map Components
           href: /getting-started/reactivemaps.html#step-3-adding-filters-and-map-components
           forceInternal: true
-        - id: reactivemaps-as-umd
+        - id: step-4-reactivemaps-as-umd
           title: "ReactiveMaps as UMD"
-          href: /getting-started/reactivemaps.html#reactivemaps-as-umd
+          href: /getting-started/reactivemaps.html#step-4-reactivemaps-as-umd
           forceInternal: true
     - id: data
       title: Importing Data

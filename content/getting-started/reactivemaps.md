@@ -200,7 +200,7 @@ If you have followed along, this is how our app should look now.
 ![Image](https://i.imgur.com/LR4qyZU.png)
 
 
-For convenience, you can checkout the final code from the ReactiveMap starter [github repo](https://github.com/appbaseio-apps/reactivemaps-starter) and [live codepen](https://codepen.io/dhruvdutt/pen/KRwmvz) demo.
+For convenience, you can checkout the final code from the ReactiveMap starter [GitHub repo](https://github.com/appbaseio-apps/reactivemaps-starter) and [live codepen](https://codepen.io/dhruvdutt/pen/KRwmvz) demo.
 
 You can run it with the following commands:
 
@@ -214,7 +214,7 @@ yarn && yarn start
 
 ---
 
-### ReactiveMaps as UMD
+### Step 4: ReactiveMaps as UMD
 
 It is also possible to run ReactiveMaps without relying on a Node.JS environment tooling for the build setup.
 
