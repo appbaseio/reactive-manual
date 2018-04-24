@@ -8,10 +8,6 @@
 /reactive-manual/getting-started/reactivemaps  /reactive-manual/getting-started/reactivemaps.html  302
 /reactive-manual/quickstart/maps  /reactive-manual/getting-started/reactivemaps.html  302
 /reactive-manual/quickstart/reactivemaps  /reactive-manual/getting-started/reactivemaps.html  302
-/reactive-manual/getting-started/  /reactive-manual/getting-started/reactivesearch.html  302
-/reactive-manual/getting-started/reactivesearch  /reactive-manual/getting-started/reactivesearch.html  302
-/reactive-manual/install  /reactive-manual/getting-started/reactivesearch.html  302
-/reactive-manual/quickstart  /reactive-manual/getting-started/reactivesearch.html  302
 /reactive-manual/comparison  /reactive-manual/advanced/comparison.html  302
 /reactive-manual/advanced/comparison  /reactive-manual/advanced/comparison.html  302
 /reactive-manual/advanced  /reactive-manual/advanced/customquery.html  302
@@ -26,6 +22,10 @@
 /reactive-manual/advanced/ssr  /reactive-manual/advanced/ssr.html  302
 /reactive-manual/typescript  /reactive-manual/advanced/typescript.html  302
 /reactive-manual/advanced/typescript  /reactive-manual/advanced/typescript.html  302
+/reactive-manual/getting-started/  /reactive-manual/getting-started/reactivesearch.html  302
+/reactive-manual/getting-started/reactivesearch  /reactive-manual/getting-started/reactivesearch.html  302
+/reactive-manual/install  /reactive-manual/getting-started/reactivesearch.html  302
+/reactive-manual/quickstart  /reactive-manual/getting-started/reactivesearch.html  302
 /reactive-manual/basic-components/datacontroller.html  /reactive-manual/base-components/datacontroller.html  302
 /reactive-manual/base-components/datacontroller  /reactive-manual/base-components/datacontroller.html  302
 /reactive-manual/datacontroller  /reactive-manual/base-components/datacontroller.html  302
@@ -121,11 +121,11 @@
 /reactive-manual/theming/  /reactive-manual/theming/themes.html  302
 /reactive-manual/theming  /reactive-manual/theming/themes.html  302
 /reactive-manual/themes  /reactive-manual/theming/themes.html  302
+/reactive-manual/search-components/resultlist.html  /reactive-manual/result-components/resultlist.html  302
+/reactive-manual/result-components/resultlist  /reactive-manual/result-components/resultlist.html  302
+/reactive-manual/resultlist  /reactive-manual/result-components/resultlist.html  302
 /reactive-manual/search-components  /reactive-manual/search-components/categorysearch.html  302
 /reactive-manual/reactive-manual/search-components  /reactive-manual/search-components/categorysearch.html  302
 /reactive-manual/search-components/categorysearch  /reactive-manual/search-components/categorysearch.html  302
 /reactive-manual/categorysearch  /reactive-manual/search-components/categorysearch.html  302
-/reactive-manual/search-components/resultlist.html  /reactive-manual/result-components/resultlist.html  302
-/reactive-manual/result-components/resultlist  /reactive-manual/result-components/resultlist.html  302
-/reactive-manual/resultlist  /reactive-manual/result-components/resultlist.html  302
 /reactive-manual/index.html  /reactive-manual/  302
