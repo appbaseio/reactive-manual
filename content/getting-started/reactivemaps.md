@@ -29,6 +29,8 @@ We can either add ReactiveSearch to an existing app or create a boilerplate app 
 create-react-app my-awesome-search && cd my-awesome-search
 ```
 
+---
+
 ### Step 1: Install ReactiveMaps and ReactiveSearch
 
 We will fetch the [`reactivemaps`](https://www.npmjs.com/package/@appbaseio/reactivemaps) and [`reactivesearch`](https://www.npmjs.com/package/@appbaseio/reactivesearch) modules using yarn or npm.
@@ -51,6 +53,7 @@ ReactiveMaps uses Google Maps JS library to render the maps and access the neces
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.31&key=YOUR_MAPS_KEY_HERE"></script>
 ```
 
+---
 
 ### Step 2: Adding the first component
 
@@ -93,6 +96,8 @@ class App extends Component {
 This is how the app should look after running the `yarn start` command.
 
 ![](https://i.imgur.com/M7AAhTh.png)
+
+---
 
 ### Step 3: Adding Filters and Map Components
 
@@ -200,7 +205,7 @@ If you have followed along, this is how our app should look now.
 ![Image](https://i.imgur.com/LR4qyZU.png)
 
 
-For convenience, you can checkout the final code from the ReactiveMap starter [github repo](https://github.com/appbaseio-apps/reactivemaps-starter) and [live codepen](https://codepen.io/dhruvdutt/pen/KRwmvz) demo.
+For convenience, you can checkout the final code from the ReactiveMap starter [GitHub repo](https://github.com/appbaseio-apps/reactivemaps-starter) and [live codepen](https://codepen.io/dhruvdutt/pen/KRwmvz) demo.
 
 You can run it with the following commands:
 
@@ -214,7 +219,7 @@ yarn && yarn start
 
 ---
 
-### ReactiveMaps as UMD
+### Step 4: ReactiveMaps as UMD
 
 It is also possible to run ReactiveMaps without relying on a Node.JS environment tooling for the build setup.
 
