@@ -42,6 +42,8 @@ or
 npm install @appbaseio/reactivesearch
 ```
 
+---
+
 ### Step 2: Adding the first component
 
 Lets add our first ReactiveSearch component: [ReactiveBase](/getting-started/reactivebase.html), it is a backend connector where we can configure the Elasticsearch index / authorization setup.
@@ -78,6 +80,8 @@ This is how the app should look after running the `yarn start` command.
 
 ![](https://i.imgur.com/M7AAhTh.png)
 
+---
+
 ### Step 3: Adding Filters and Result Components
 
 For this app, we will be using [CategorySearch](/search-components/categorysearch.html) and [SingleRange](/basic-components/singlerange.html) components for filtering the dataset. And [ResultCard](/search-components/resultcard.html) component for showing the search results.
@@ -97,8 +101,6 @@ The [**CategorySearch**](/search-components/categorysearch.html) component we de
 
 ![](https://i.imgur.com/lPLu1qj.png)
 
-<br/>
-
 Next, we will look at the [**SingleRange**](/basic-components/singlerange.html) component for creating a ratings based filter.
 
 ```js
@@ -117,8 +119,6 @@ Next, we will look at the [**SingleRange**](/basic-components/singlerange.html) 
 ![](https://i.imgur.com/vkqAHac.png)
 
 **SingleRange** filters the DB by `rating` field based on the UI choice the user makes. We also set the *4 stars and up* option to be default selected when the UI loads up first.
-
-<br/>
 
 Finally, we need a component to show the matching results. [**ResultCard**](/search-components/resultcard.html) does exactly this.
 
@@ -211,7 +211,7 @@ We have built our entire search UI in just 50 lines!
 
 The only thing missing at this point is the layout, ReactiveSearch doesn't use a layout system internally. For example, if you are using a grid from Bootstrap or Materialize, you can use that to style the layout. Or if you prefer to use Flex, you can use that.
 
-<br/>
+---
 
 ### Step 4: Adding a Layout Grid with Flex
 

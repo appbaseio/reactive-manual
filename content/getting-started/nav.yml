@@ -34,17 +34,17 @@
       href: /getting-started/reactivemaps.html
       forceInternal: true
       subitems:
-        - id: step-0-create-boilerplate-with-cra
-          title: Create Boilerplate with CRA
-          href: /getting-started/reactivemaps.html#step-0-create-boilerplate-with-cra
+        - id: step-0-create-boilerplate
+          title: Create Boilerplate
+          href: /getting-started/reactivemaps.html#step-0-create-boilerplate
           forceInternal: true
         - id: step-1-install-reactivemaps-and-reactivesearch
           title: Install ReactiveMaps and ReactiveSearch
           href: /getting-started/reactivemaps.html#step-1-install-reactivemaps-and-reactivesearch
           forceInternal: true
-        - id: step-2-adding-the-first-component
-          title: Adding the First Component
-          href: /getting-started/reactivemaps.html#step-2-adding-the-first-component
+        - id: step-2-adding-first-component
+          title: Adding first component
+          href: /getting-started/reactivemaps.html#step-2-adding-first-component
           forceInternal: true
         - id: step-3-adding-filters-and-map-components
           title: Adding Filters and Map Components
