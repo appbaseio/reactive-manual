@@ -167,6 +167,8 @@ Now, the components which will have `myColorPicker` present in their `react` pro
     CSS styles to be applied to the **DataSearch** component.
 - **defaultQuery** `Function`  
     **returns** the default query to be applied to the component, as defined in Elasticsearch Query DSL.
+- **onQueryChange** `Function`  
+    is a callback function which accepts component's **prevQuery** and **nextQuery** as parameters. It is called everytime the component's query changes. This prop is handy in cases where you want to generate a side-effect whenever the component's query would change.
 - **onAllData** `Function`  
     callback function which provides `hits` and `aggregations` as function params.
 - **showFilter** `Boolean` [optional]  

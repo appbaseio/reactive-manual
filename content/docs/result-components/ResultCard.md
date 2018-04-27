@@ -166,6 +166,7 @@ Read more about it [here](/theming/class.html).
 2. render individual result data items using `onData`,
 3. specify how results should be filtered using `react`.
 4. render the entire result data using  `onAllData`.
+5. connect with external interfaces using `onQueryChange`.
 
 ```js
 <ResultCard
@@ -181,6 +182,13 @@ Read more about it [here](/theming/class.html).
         title: res.name,
         url: res.listing_url
       }
+    }
+  }
+  onQueryChange={
+    function(prevQuery, nextQuery) {
+      // use the query with other js code
+      console.log('prevQuery', prevQuery);
+      console.log('nextQuery', nextQuery);
     }
   }
   // specify how and which results are filtered using `react` prop.
@@ -220,6 +228,9 @@ onAllData(items, loadMoreData) {
 > Note
 >
 > The **callback** function (`loadMoreData` here) will only be executed in case of infinite loading.
+
+- **onQueryChange** `Function`  
+    is a callback function which accepts component's **prevQuery** and **nextQuery** as parameters. It is called everytime the component's query changes. This prop is handy in cases where you want to generate a side-effect whenever the component's query would change.
 
 ## Examples
 

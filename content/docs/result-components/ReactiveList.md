@@ -157,6 +157,7 @@ Read more about it [here](/theming/class.html).
 1. customize the look and feel with `className`, `style`,
 2. render individual result data items using `onData`,
 3. render the entire result data using `onAllData`.
+4. connect with external interfaces using `onQueryChange`.
 
 ```js
 <ReactiveList
@@ -170,6 +171,13 @@ Read more about it [here](/theming/class.html).
           { res.data }
         </div>
       )
+    }
+  }
+  onQueryChange={
+    function(prevQuery, nextQuery) {
+      // use the query with other js code
+      console.log('prevQuery', prevQuery);
+      console.log('nextQuery', nextQuery);
     }
   }
 />
@@ -198,6 +206,9 @@ onAllData(results, streamResults, loadMoreData) {
 > Note
 >  
 > The `streamResults` parameter will be `[]` unless `stream` prop is set to `true`. Check the [handling streaming](/advanced/guides.html#handling-stream-updates) guide for more info.
+
+- **onQueryChange** `Function`  
+    is a callback function which accepts component's **prevQuery** and **nextQuery** as parameters. It is called everytime the component's query changes. This prop is handy in cases where you want to generate a side-effect whenever the component's query would change.
 
 ## Examples
 
