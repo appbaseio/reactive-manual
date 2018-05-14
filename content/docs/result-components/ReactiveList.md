@@ -95,6 +95,8 @@ Example uses:
     show custom result stats using a function that takes two parameters for `time_taken` and `total_results` and returns a string.
 - **react** `Object` [optional]  
     a dependency object defining how this component should react based on the state changes in the sensor components.
+- **URLParams** `Boolean` [optional]  
+    when set adds the current page number to the url. Only works when `pagination` is enabled.
 - **onData** `Function` [optional]  
     returns a list element object to be rendered based on the `res` data object. This callback function prop is called for each data item rendered in the **ReactiveList** component's view. For example,
     ```js

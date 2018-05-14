@@ -111,6 +111,8 @@ Example uses:
     whether to show result stats in the form of results found and time taken. Defaults to `true`.
 - **onResultStats** `Function` [optional]  
     show custom result stats using a function that takes two parameters for `time_taken` and `total_results` and returns a string.
+- **URLParams** `Boolean` [optional]  
+    when set adds the current page number to the url. Only works when `pagination` is enabled.
 - **onData** `Function` [optional]  
     returns a card element object to be rendered based on the `res` data object. This callback function prop is called for each data item rendered in the **ResultCard** component's view.
     ```js
