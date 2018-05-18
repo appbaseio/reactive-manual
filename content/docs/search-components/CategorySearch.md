@@ -156,7 +156,7 @@ Read more about it [here](/theming/class.html).
 `CategorySearch` component can be extended to
 1. customize the look and feel with `className`, `style`,
 2. update the underlying DB query with `customQuery`,
-3. connect with external interfaces using `beforeValueChange`, `onValueChange` and `onQueryChange`,
+3. connect with external interfaces using `beforeValueChange`, `onValueChange`, `onValueSelected` and `onQueryChange`,
 4. specify how search suggestions should be filtered using `react` prop,
 5. use your own function to render suggestions using `onSuggestion` prop. It expects an object back for each `suggestion` having keys `label` and `value`. The query is run agains the `value` key and `label` is used for rendering the suggestions. `label` can be either `String` or JSX. For example,
 
@@ -209,6 +209,11 @@ Read more about it [here](/theming/class.html).
       // use the value with other js code
     }
   }
+  onValueSelected={
+    function(value, category) {
+      console.log("current value and category: ", value, category)
+    }
+  }
   onQueryChange={
     function(prevQuery, nextQuery) {
       // use the query with other js code
@@ -235,6 +240,8 @@ Read more about it [here](/theming/class.html).
     is a callback function which accepts component's future **value** as a parameter and **returns** a promise. It is called everytime before a component's value changes. The promise, if and when resolved, triggers the execution of the component's query and if rejected, kills the query execution. This method can act as a gatekeeper for query execution, since it only executes the query after the provided promise has been resolved.
 - **onValueChange** `Function`  
     is a callback function which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when a user searches for a product in a CategorySearch.
+- **onValueSelected** `Function`  
+    is called with the value and the category selected via user interaction. If the search was performed by selecting the 'in all categories' suggestion, category is received as `*`. If it was performed for one of the categorized suggestion, the `category` is received. In other cases (either searching without selecting a suggestion or picking an uncategorized suggestion), `category` is received as `null`. It works only with `autosuggest` and is called whenever a suggestion is selected or a search is performed either by pressing **enter** key or the input is blurred.
 - **onQueryChange** `Function`  
     is a callback function which accepts component's **prevQuery** and **nextQuery** as parameters. It is called everytime the component's query changes. This prop is handy in cases where you want to generate a side-effect whenever the component's query would change.
 - **react** `Object`  
