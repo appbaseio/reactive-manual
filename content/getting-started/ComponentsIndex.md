@@ -15,13 +15,14 @@ redirect_from:
 
 **ReactiveSearch** provides React UI components for Elasticsearch. This document explains the different kinds of components offered by the library and walks throughs scenarios of when to use which component.
 
-Components are divided into four broad categories:  
+Components are divided into five broad categories:  
 1. `List components` represent all kinds of list related UI components which typically create a term query.
 2. `Range components` represent all kinds of numbers and dates related UI components which typically create a range based query.
 3. `Search components` represent searchbar UIs, which typically apply search on full-text data.
 4. `Result components` are components for displaying results (aka hits) from queries created by other components.
+5. `Map components` are components for displaying geospatial data.
 
-Besides these four specific categories, we also have `Base components` that are useful primitives and components that don't belong to any of the above categories.
+Besides these five specific categories, we also have `Base components` that are useful primitives and components that don't belong to any of the above categories.
 
 ## 1. List Components
 
@@ -231,7 +232,41 @@ Result components are used for displaying the results (aka hits).
 **[ReactiveComponent](/advanced/reactivecomponent.html)** is a wrapper component that allows you to connect custom component(s) (passed as children) with the Reactivesearch ecosystem, e.g. if we are building an e-commerce store where we have a react component called `ColorPicker` which renders the `colors` passed to it as tiles, allowing us to filter the products by their colors.
 </p>
 
-## 5. Base Components
+## 5. Map Components
+
+Map components are useful for displaying geospatial data.
+
+### GeoDistanceSlider
+
+<p>
+<img src="https://imgur.com/PCBwK7t.png" style="float:left">
+
+**[GeoDistanceSlider](/map-components/geodistanceslider.html)** displays a places search UI component to then filter by a distance range slider based on the selected location.
+</p>
+
+### GeoDistanceDropdown
+
+<p>
+<img src="https://imgur.com/PCBwK7t.png" style="float:left">
+
+**[GeoDistanceSlider](/map-components/geodistancedropdown.html)** displays a places search UI component to then filter by a distance range dropdown based on the selected location.
+</p>
+
+> <i class="fa fa-info-circle"></i> Note
+>
+> Both **GeoDistance** components location search UI is flexible: It uses Google Places search to filter location by default, but if a **dataField** prop is present - it searches on the data present in the field.
+
+### ReactiveMap
+
+<p>
+<img src="https://imgur.com/PCBwK7t.png" style="float:left">
+
+**[ReactiveMap](/map-components/reactivemap.html)** displays results on a map UI component. It can also be classified as a result component.
+</p>
+
+## 6. Base Components
+
+`Base components` are useful primitive components that don’t belong to any of the above categories.
 
 ### TextField
 

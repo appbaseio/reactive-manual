@@ -117,7 +117,11 @@
           title: Result Components
           href: /getting-started/componentsindex.html#4-result-components
           forceInternal: true
-        - id: 5-base-components
+        - id: 5-map-components
+          title: Map Components
+          href: /getting-started/componentsindex.html#5-map-components
+          forceInternal: true
+        - id: 6-base-components
           title: Base Components
-          href: /getting-started/componentsindex.html#5-base-components
+          href: /getting-started/componentsindex.html#6-base-components
           forceInternal: true
