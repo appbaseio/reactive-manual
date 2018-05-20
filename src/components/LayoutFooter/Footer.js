@@ -67,13 +67,19 @@ const Footer = ({layoutHasSidebar = false}) => (
               Github
             </ExternalFooterLink>
             <ExternalFooterLink
-              href="https://slack.appbase.io/"
+              href="https://gitter.im/appbaseio/reactivesearch"
               target="_blank"
               rel="noopener">
-              Slack
+              Gitter
             </ExternalFooterLink>
             <ExternalFooterLink
-              href="https://twitter.com/appbaseio"
+              href = "https://stackoverflow.com/questions/tagged/reactivesearch"
+              target="_blank"
+              rel="noopener">
+              Stackoverflow
+            </ExternalFooterLink>
+            <ExternalFooterLink
+              href = "https://twitter.com/appbaseio"
               target="_blank"
               rel="noopener">
               Twitter
@@ -85,7 +91,7 @@ const Footer = ({layoutHasSidebar = false}) => (
               href="https://opensource.appbase.io/dejavu/"
               target="_blank"
               rel="noopener">
-              Data browser
+              Data Browser
             </ExternalFooterLink>
             <ExternalFooterLink
               href="https://opensource.appbase.io/mirage/"
@@ -107,12 +113,6 @@ const Footer = ({layoutHasSidebar = false}) => (
               target="_blank"
               rel="noopener">
               Appbaseio Docs
-            </ExternalFooterLink>
-            <ExternalFooterLink
-              href="https://gitter.im/appbaseio/reactivesearch"
-              target="_blank"
-              rel="noopener">
-              Gitter
             </ExternalFooterLink>
             <ExternalFooterLink
               href="mailto:support@appbase.io"
