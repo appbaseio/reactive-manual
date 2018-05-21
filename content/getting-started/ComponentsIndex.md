@@ -239,7 +239,7 @@ Map components are useful for displaying geospatial data.
 ### GeoDistanceSlider
 
 <p>
-<img src="https://imgur.com/PCBwK7t.png" style="float:left">
+<img src="https://i.imgur.com/J80Amc5.png" style="float:left">
 
 **[GeoDistanceSlider](/map-components/geodistanceslider.html)** displays a places search UI component to then filter by a distance range slider based on the selected location.
 </p>
@@ -247,9 +247,9 @@ Map components are useful for displaying geospatial data.
 ### GeoDistanceDropdown
 
 <p>
-<img src="https://imgur.com/PCBwK7t.png" style="float:left">
+<img src="https://i.imgur.com/qlnZpUo.png" style="float:left">
 
-**[GeoDistanceSlider](/map-components/geodistancedropdown.html)** displays a places search UI component to then filter by a distance range dropdown based on the selected location.
+**[GeoDistanceDropdown](/map-components/geodistancedropdown.html)** displays a places search UI component to then filter by a distance range dropdown based on the selected location.
 </p>
 
 > <i class="fa fa-info-circle"></i> Note
@@ -259,7 +259,7 @@ Map components are useful for displaying geospatial data.
 ### ReactiveMap
 
 <p>
-<img src="https://imgur.com/PCBwK7t.png" style="float:left">
+<img src="https://i.imgur.com/ykjArle.png" style="float:left">
 
 **[ReactiveMap](/map-components/reactivemap.html)** displays results on a map UI component. It can also be classified as a result component.
 </p>
