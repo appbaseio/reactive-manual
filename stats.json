@@ -101,8 +101,8 @@
       "path---range-components-daterange-html-785b9fd74df16032f310.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-bdec0c4c562411680148.js",
-      "component---src-layouts-index-js-bdec0c4c562411680148.js.map"
+      "component---src-layouts-index-js-d250a701336db7ef2894.js",
+      "component---src-layouts-index-js-d250a701336db7ef2894.js.map"
     ],
     "path---jsx-compiler-html": [
       "path---jsx-compiler-html-a0e39f21c11f6a62c5ab.js",
@@ -215,13 +215,13 @@
       "path---advanced-writingdata-html-afd478e6c5bab5edde85.js.map"
     ],
     "path---getting-started-componentsindex-html": [
-      "path---getting-started-componentsindex-html-6391299c3da44e523c91.js",
-      "path---getting-started-componentsindex-html-6391299c3da44e523c91.js.map"
+      "path---getting-started-componentsindex-html-ad70afef65dc4c46a5d7.js",
+      "path---getting-started-componentsindex-html-ad70afef65dc4c46a5d7.js.map"
     ],
     "app": [
-      "app-f625f2e3fb62d3c01f16.js",
+      "app-b29564969f47dff3a8a5.js",
       "build-js-styles.css",
-      "app-f625f2e3fb62d3c01f16.js.map",
+      "app-b29564969f47dff3a8a5.js.map",
       "build-js-styles.css.map"
     ],
     "path---theming-class-html": [
@@ -265,8 +265,8 @@
       "component---src-pages-blog-all-html-js-4e8968908d11397a30ea.js.map"
     ],
     "component---src-templates-home-js": [
-      "component---src-templates-home-js-b07be0bb4d8674a26a65.js",
-      "component---src-templates-home-js-b07be0bb4d8674a26a65.js.map"
+      "component---src-templates-home-js-8a96b743cfebe13b622d.js",
+      "component---src-templates-home-js-8a96b743cfebe13b622d.js.map"
     ]
   }
 }
