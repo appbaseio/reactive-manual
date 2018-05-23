@@ -151,6 +151,7 @@ Example uses:
 - `resultsInfo`
 - `sortOptions`
 - `resultStats`
+- `noResults`
 - `button`
 - `pagination`
 - `list`
