@@ -4,8 +4,8 @@ title: "ReactiveSearch Quickstart"
 layout: tutorial
 sectionid: getting-started
 permalink: getting-started/reactivesearch.html
-next: getting-started/reactivesearch-rn.html
-nextTitle: "Using outside expo"
+next: getting-started/reactivesearch-native-maps.html
+nextTitle: "Reactivesearch Native Maps"
 redirect_from:
     - "getting-started/"
     - "getting-started/reactivesearch"
