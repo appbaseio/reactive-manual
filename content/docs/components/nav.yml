@@ -225,6 +225,23 @@
           title: Extending
           href: /components/reactivelist.html#extending
           forceInternal: true
+    - id: reactivemap
+      title: ReactiveMap
+      href: /components/reactivemap.html
+      forceInternal: true
+      subitems:
+        - id: usage
+          title: Usage
+          href: /components/reactivemap.html#usage
+          forceInternal: true
+        - id: props
+          title: Props
+          href: /components/reactivemap.html#props
+          forceInternal: true
+        - id: demo
+          title: Demo
+          href: /components/reactivemap.html#demo
+          forceInternal: true
     - id: selectedfilters
       title: SelectedFilters
       href: /components/selectedfilters.html

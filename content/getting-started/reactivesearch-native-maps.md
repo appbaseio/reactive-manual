@@ -110,7 +110,7 @@ Next we will look at Reactivemap component:
 />
 ```
 
-For its prop usage, check out Reactivemaps docs.
+For its prop usage, check out Reactivemaps [docs](/components/reactivemap.html).
 
 
 Finally, your app should look like this:

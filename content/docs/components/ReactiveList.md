@@ -6,8 +6,8 @@ sectionid: docs
 permalink: components/reactivelist.html
 prev: components/daterange.html
 prevTitle: "DateRange"
-next: components/selectedfilters.html
-nextTitle: "SelectedFilters"
+next: components/reactivemap.html
+nextTitle: "ReactiveMap"
 redirect_from:
     - 'components/reactivelist'
     - 'base-components/reactivelist'
