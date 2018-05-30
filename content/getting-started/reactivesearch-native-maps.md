@@ -146,3 +146,5 @@ export default class App extends React.Component {
 }
 
 ```
+
+You can [try the demo here](https://snack.expo.io/@metagrover/reactivemap-with-reactivesearch-native) instantly, and check out [Reactivemaps documentation](/components/reactivemap.html) for further customisations.
