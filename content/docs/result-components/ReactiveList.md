@@ -92,7 +92,7 @@ Example uses:
 - **showResultStats** `Boolean` [optional]  
     whether to show result stats in the form of results found and time taken. Defaults to `true`.
 - **onResultStats** `Function` [optional]  
-    show custom result stats using a function that takes two parameters for `time_taken` and `total_results` and returns a string.
+    renders custom result stats using a function that takes two parameters for `total_results` and `time_taken` and expects it to return a string or JSX.
 - **react** `Object` [optional]  
     a dependency object defining how this component should react based on the state changes in the sensor components.
 - **URLParams** `Boolean` [optional]  
