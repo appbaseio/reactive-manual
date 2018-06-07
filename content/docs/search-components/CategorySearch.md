@@ -44,7 +44,7 @@ Example uses:
   categoryField="group_topics"
   title="Search"
   defaultSelected="Music"
-  weights={[1, 3]}
+  fieldWeights={[1, 3]}
   placeholder="Search for cities or venues"
   autoSuggest={true}
   defaultSuggestions={[{label: "Programming", value: "Programming"}]}
@@ -74,7 +74,7 @@ Example uses:
     Sets the title of the component to be shown in the UI.
 - **defaultSelected** `string` [optional]  
     preset the search query text in the search box.
-- **weights** `Array` [optional]  
+- **fieldWeights** `Array` [optional]  
     set the search weight for the database fields, useful when dataField is an Array of more than one field. This prop accepts an array of numbers. A higher number implies a higher relevance weight for the corresponding field in the search results.
 - **placeholder** `String` [optional]  
     Sets the placeholder text to be shown in the searhbox input field. Defaults to "Search".
