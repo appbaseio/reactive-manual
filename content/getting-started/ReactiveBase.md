@@ -29,7 +29,7 @@ This is the first component you will need to add when using `ReactiveSearch`.
 ### Props
 
 - **app** `String`  
-    app name as it appears on the dashboard. Refers to an index if you're using your own Elasticsearch cluster.
+    app name as it appears on the dashboard. Refers to an index if you're using your own Elasticsearch cluster. (Multiple indexes can be connected to by specifiying comma separated index names)
 - **type** `String` [optional]  
     types on which the queries should run on. Multiple types can be passed as comma separated values. The default behavior here is to search on all the app types.
 - **credentials** `String` [optional]  
