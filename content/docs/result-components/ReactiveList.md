@@ -78,6 +78,13 @@ Example uses:
     number of user selectable pages to be displayed when pagination is enabled. Defaults to 5.
 - **onPageChange** `Function` [optional]  
     executes when the current page is changed. If not defined, `window` will be scrolled to the top of the page.
+- **onPageClick** `Function` [optional]  
+    accepts a function which is invoked with the updated page value when a pagination button is clicked. For example if 'Next' is clicked with the current page number as '1', you would receive the value '2' as the function parameter.
+
+> Note:
+>
+> The fundamental difference between `onPageChange` and `onPageClick` is that `onPageClick` is only called on a manual interaction with the pagination buttons, whereas, `onPageChange` would also be invoked if some other side effects caused the results to update which includes updating filters, queries or changing pages. The behaviour of these two may change in the future versions as we come up with a better API.
+
 - **sortBy** `String` [optional]  
     sort the results by either `asc` or `desc` order. It is an alternative to `sortOptions`, both can't be used together.
 - **sortOptions** `Object Array` [optional]  
