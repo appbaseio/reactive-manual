@@ -134,7 +134,11 @@ Example uses:
                   <p>{res.room_type} · {res.accommodates} guests</p>
               </div>
           ),
-          url: res.listing_url
+          url: res.listing_url,
+          containerProps: {
+            onMouseEnter: () => console.log('😁'),
+            onMouseLeave: () => console.log('🙀')
+          }
         }
       }
     }
