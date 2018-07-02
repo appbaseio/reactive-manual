@@ -53,6 +53,8 @@ ReactiveMaps uses Google Maps JS library to render the maps and access the neces
 <script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.31&key=YOUR_MAPS_KEY_HERE"></script>
 ```
 
+> Note that you will need places library from google maps if you are using GeoDistance components. You can add it by appending `&libraries=places` in the above URL
+
 ---
 
 ### Step 2: Adding first component
