@@ -93,6 +93,6 @@ For example, let's say you want to apply a query filter to represent an end-user
 
 ### Not familiar to Elasticsearch?
 
-You need to write a custom query but haven't worked with Elasticsearch. Okay, as a super quick primer, Elasticsearch is a data store cum search engine with a NoSQL JSON data model.
+You need to write a custom query but haven't worked with Elasticsearch. Okay, as a super quick primer, Elasticsearch is a data store search engine with a NoSQL JSON data model.
 
 The docs link above is a good way to explore ElasticSearch in depth. Another alternative to get started with the query syntax is [Mirage](https://opensource.appbase.io/mirage), a GUI for composing Elasticsearch queries.
