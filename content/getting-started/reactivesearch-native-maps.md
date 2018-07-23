@@ -1,18 +1,18 @@
 ---
-id: reactivesearch-native-maps
-title: "ReactiveSearch Native Maps"
+id: reactivemaps-native
+title: "ReactiveMaps Native"
 layout: tutorial
 sectionid: getting-started
-permalink: getting-started/reactivesearch-native-maps.html
+permalink: getting-started/reactivemaps-native.html
 prev: getting-started/reactivesearch.html
 prevTitle: "ReactiveSearch Quickstart"
 next: getting-started/reactivesearch-rn.html
 nextTitle: "Setup with React Native CLI"
 redirect_from:
-    - "getting-started/reactivesearch-native-maps"
+    - "getting-started/reactivemaps-native"
 ---
 
-With `v0.8.0` and above, we have added support for maps with Reactivesearch Native as ReactiveMap component.
+ReactiveMaps is a complimentary library to ReactiveSearch. Map component requires ReactiveSearch architecture and its root component to begin with. If you wish to build anything with reactivemaps-native, you’ll need to install reactivesearch-native along with it.
 
 ## Get started with ReactiveMap with react-native:
 
@@ -26,10 +26,10 @@ For this quickstart guide, we will use [Create React Native App (CRNA)](https://
 create-react-native-app my-awesome-map-search && cd my-awesome-map-search
 ```
 
-Install the `@appbaseio/reactivesearch-native` package:
+Install the search and maps package:
 
 ```bash
-yarn add @appbaseio/reactivesearch-native
+yarn add @appbaseio/reactivesearch-native @appbaseio/reactivemaps-native
 ```
 
 Now before we go ahead and add our first component, we need to add the map keys to our setup. Using react-native-maps with Expo makes the setup and installation trivial, we simply need to specify the google-maps key in the expo configuration:
@@ -119,7 +119,8 @@ Finally, your app should look like this:
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
-import { ReactiveBase, ReactiveMap } from '@appbaseio/reactivesearch-native';
+import { ReactiveBase } from '@appbaseio/reactivesearch-native';
+import ReactiveMap from '@appbaseio/reactivemaps-native';
 
 export default class App extends React.Component {
   render() {

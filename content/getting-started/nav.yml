@@ -21,9 +21,9 @@
           title: Adding Filter and Result Components
           href: /getting-started/reactivesearch.html#step-3-adding-filter-and-result-components
           forceInternal: true
-    - id: reactivesearch-native-maps
-      title: "ReactiveSearch Native Maps Quickstart"
-      href: /getting-started/reactivesearch-native-maps.html
+    - id: reactivemaps-native
+      title: "ReactiveMaps Native Quickstart"
+      href: /getting-started/reactivemaps-native.html
       forceInternal: true
     - id: reactivesearch-rn
       title: "Using with React Native CLI"

@@ -12,6 +12,10 @@ nextTitle: "SelectedFilters"
 
 A `ReactiveMap` creates a data-driven map UI component. It is the key component for build map based experiences.
 
+> ReactiveMaps is a complimentary library to ReactiveSearch. Map component requires ReactiveSearch architecture and its root component to begin with. If you wish to build anything with reactivemaps-native, you’ll need to install reactivesearch-native along with it.
+
+Reactivemap can be added by installing `@appbaseio/reactivemaps-native`. For more details about the setup and installation, [checkout the reactivemaps-native quickstart guide](https://opensource.appbase.io/reactive-manual/native/getting-started/reactivemaps-native.html)
+
 Example uses:
 * showing a map of user checkins by city and topics for powering discovery based experiences.
 * displaying restaurants filtered by a nearby distance query on a map.
@@ -21,6 +25,8 @@ Example uses:
 #### Basic Usage
 
 ```js
+import ReactiveMap from '@appbaseio/reactivemaps-native';
+
 <ReactiveMap
     componentId="MapUI"
     dataField="location"
