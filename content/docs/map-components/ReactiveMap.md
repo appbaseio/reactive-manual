@@ -40,7 +40,7 @@ Example uses:
     defaultCenter={{ lat: 37.74, lng: -122.45 }}
     showMapStyles={true}
     defaultMapStyle="Standard"
-    showMarkerClusters{true}
+    showMarkerClusters={true}
     showSearchAsMove={true}
     searchAsMove={true}
     onPopoverClick={this.onPopoverClick}
@@ -73,9 +73,14 @@ Example uses:
 - **defaultZoom** `Number` [optional]  
     preset map's zoom level, accepts integer values between [0, 20]. 0 is the minimum zoom level, where you can see the entire globe. 20 is the maximum zoom level. Defaults to 13.
 - **defaultCenter** `Object` [optional]  
-    preset map's center position by specifying an object with valid `lat` and `lng` values.
+    preset map's center position by specifying an object with valid `lat` and `lng` values. This prop, when set, will cause the component to run a geo-distance query with a distance of 10mi (Refer: `defaultRadius` and `unit` prop to configure the distance).
 - **center** `Object` [optional]  
-    set map's center position by specifying an object with valid `lat` and `lng` values.
+    set map's center position by specifying an object with valid `lat` and `lng` values. This prop, when set, will cause the component to run a geo-distance query with a distance of 10mi (Refer: `defaultRadius` and `unit` prop to configure the distance).
+- **defaultRadius** `Object` [optional]  
+    used as distance value for the geo-distance query when `defaultCenter` or `center` is set. It accepts all positive integers.
+- **unit** `Object` [optional]  
+    unit for distance measurement, uses `mi` (for miles) by default. Distance units can be specified from the following:  
+    ![screenshot](https://i.imgur.com/STbeagk.png)
 - **showMapStyles** `Boolean` [optional]  
     whether to show map styles dropdown picker in the map UI. Defaults to `true`.
 - **defaultMapStyle** `String` [optional]  
