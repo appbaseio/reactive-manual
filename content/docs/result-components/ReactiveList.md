@@ -68,6 +68,10 @@ Example uses:
     unique identifier of the component, can be referenced in other components' `react` prop.
 - **dataField** `String`  
     data field to be connected to the component's UI view. It is useful for providing a sorting context.
+- **excludeFields** `String Array` [optional]  
+    fields to be excluded in search results.
+- **includeFields** `String Array` [optional]  
+    fields to be included in search results.
 - **stream** `Boolean` [optional]  
     whether to stream new result updates in the UI. Defaults to `false`. `stream: true` is appended to the streaming hit objects, which can be used to selectively react to streaming changes (eg. showing fade in animation on new streaming hits, Twitter/Facebook like streams, showing the count of new feed items available like *2 New Tweets*)
 - **pagination** `Boolean` [optional]  
