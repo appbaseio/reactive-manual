@@ -99,6 +99,8 @@ Lets add them within the ReactiveBase component. But before we do that, we will 
 
 The [**CategorySearch**](/search-components/categorysearch.html) component we describe above creates a searchbox UI component that queries on the `name` field in the dataset and shows categorizations using the `brand.raw` field in the dataset. Here is how it will look visually.
 
+`Note:` If you cloned your own dataset, the field will be called `brand.keyword` instead of `brand.raw`.
+
 ![](https://i.imgur.com/lPLu1qj.png)
 
 Next, we will look at the [**SingleRange**](/basic-components/singlerange.html) component for creating a ratings based filter.
@@ -162,7 +164,7 @@ class App extends Component {
 					<CategorySearch
 						componentId="searchbox"
 						dataField="name"
-						categoryField="brand.raw"
+						categoryField="brand.raw" // use "brand.keyword" for newly cloned datasets
 						placeholder="Search for cars"
 					/>
 					<SingleRange
@@ -234,7 +236,7 @@ class App extends Component {
 							<CategorySearch
 								componentId="searchbox"
 								dataField="name"
-								categoryField="brand.raw"
+								categoryField="brand.raw" // use "brand.keyword" for new datasets
 								placeholder="Search for cars"
 								style={{
 									padding: "5px",
