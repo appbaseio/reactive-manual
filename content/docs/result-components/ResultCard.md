@@ -86,6 +86,10 @@ Example uses:
     unique identifier of the component, can be referenced in other components' `react` prop.
 - **dataField** `String`  
     data field to be mapped with `ResultCard`'s UI view, used for providing a sorting context.
+- **excludeFields** `String Array` [optional]  
+    fields to be excluded in search results.
+- **includeFields** `String Array` [optional]  
+    fields to be included in search results.
 - **stream** `Boolean` [optional]  
     whether to stream new result updates in the UI. Defaults to `false`.
 - **pagination** `Boolean` [optional]  
