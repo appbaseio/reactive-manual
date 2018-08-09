@@ -59,6 +59,7 @@ While `DynamicRangeSlider` only requires the above props to be used, it comes wi
   )}
   stepValue={1}
   showHistogram={true}
+  showFilter={true}
   interval={2}
   react={{
     and: ["CategoryFilter", "SearchFilter"]
@@ -79,6 +80,8 @@ While `DynamicRangeSlider` only requires the above props to be used, it comes wi
     a function that accepts `min` and `max` range values as parameters and returns an object representing current selection from the range with `start` and `end` keys.
 - **rangeLabels** `Function` [optional]  
     a function that accepts `min` and `max` range values as parameters and returns an object representing labels with `start` and `end` keys.
+- **showFilter** `Boolean` [optional]  
+    show the selected item as a filter in the selected filters view. Defaults to `true`.
 - **snap** `Boolean` [optional]
     makes the slider snap on to points depending on the `stepValue` when the slider is released. Defaults to `true`. When set to `false`, `stepValue` is ignored.
 - **stepValue** `Number` [optional]  
