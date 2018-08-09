@@ -125,13 +125,13 @@ Example uses:
     * **or** returns all the results matching **any** of the search query text's parameters. For example, searching for "bat man" with **or** will return all the results matching either "bat" or "man".
     * On the other hand with **and**, only results matching both "bat" and "man" will be returned. It returns the results matching **all** of the search query text's parameters.
 - **defaultQuery** `Function` [optional]    
-    Lets you append your own query along with the existing query for search. This works only if you're not using `customQuery` since the query is applied to the existing one. The function receives `value` and the current `props` and expects you to return a query to append. For example, you may use this to limit your searches to harry potter books by something like:
+    Lets you append your own query along with the existing query for search. This also works with `customQuery` and the query gets appended to the final query formed. The function receives `value` the current `props` and the `category` and expects you to return a query to append. For example, you may use this to limit your searches to harry potter books by something like:
 
 ```js
 <CategorySearch
     dataField="original_title"
     ...
-    defaultQuery={(value, props) => ({
+    defaultQuery={(value, props, category) => ({
         match: {
             original_title: 'Potter'
         }
