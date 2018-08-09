@@ -80,11 +80,6 @@
 /reactive-manual/basic-components/multirange.html  /reactive-manual/range-components/multirange.html  302
 /reactive-manual/range-components/multirange  /reactive-manual/range-components/multirange.html  302
 /reactive-manual/multirange  /reactive-manual/range-components/multirange.html  302
-/reactive-manual/basic-components/numberbox.html  /reactive-manual/range-components/numberbox.html  302
-/reactive-manual/base-components/numberbox.html  /reactive-manual/range-components/numberbox.html  302
-/reactive-manual/base-components/numberbox  /reactive-manual/range-components/numberbox.html  302
-/reactive-manual/range-components/numberbox  /reactive-manual/range-components/numberbox.html  302
-/reactive-manual/numberbox  /reactive-manual/range-components/numberbox.html  302
 /reactive-manual/basic-components/rangeinput.html  /reactive-manual/range-components/rangeinput.html  302
 /reactive-manual/range-components/rangeinput  /reactive-manual/range-components/rangeinput.html  302
 /reactive-manual/rangeinput  /reactive-manual/range-components/rangeinput.html  302
@@ -121,6 +116,11 @@
 /reactive-manual/theming/  /reactive-manual/theming/themes.html  302
 /reactive-manual/theming  /reactive-manual/theming/themes.html  302
 /reactive-manual/themes  /reactive-manual/theming/themes.html  302
+/reactive-manual/basic-components/numberbox.html  /reactive-manual/range-components/numberbox.html  302
+/reactive-manual/base-components/numberbox.html  /reactive-manual/range-components/numberbox.html  302
+/reactive-manual/base-components/numberbox  /reactive-manual/range-components/numberbox.html  302
+/reactive-manual/range-components/numberbox  /reactive-manual/range-components/numberbox.html  302
+/reactive-manual/numberbox  /reactive-manual/range-components/numberbox.html  302
 /reactive-manual/search-components  /reactive-manual/search-components/categorysearch.html  302
 /reactive-manual/reactive-manual/search-components  /reactive-manual/search-components/categorysearch.html  302
 /reactive-manual/search-components/categorysearch  /reactive-manual/search-components/categorysearch.html  302
