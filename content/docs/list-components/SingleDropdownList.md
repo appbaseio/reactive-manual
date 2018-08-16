@@ -76,6 +76,8 @@ Example uses:
     default selected value pre-selects an option from the list.
 - **showCount** `Boolean` [optional]  
     show count of number of occurences besides an item. Defaults to `true`.
+- **showSearch** `Boolean` [optional]  
+    whether to show a searchbox to filter the list items locally. Defaults to false.
 - **renderListItem** `Function` [optional]  
     customize the rendered list via a function which receives the item label and count and expects a JSX or String back. For example:
 ```js
