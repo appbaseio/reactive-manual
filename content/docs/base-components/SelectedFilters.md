@@ -84,7 +84,7 @@ Read more about it [here](/theming/class.html).
 - **style** `Object`    
     CSS styles to be applied to the **SelectedFilters** component.
 - **render** `Function`    
-    Enables custom rendering for **SelectedFilters** component. It provides an object as a param which contains all the props needed to render the custom selected-filters, including the functions to clear and update the component values. [Check the usage here](https://github.com/appbaseio/reactivesearch/blob/dev/packages/web/examples/CustomSelectedFilters/src/index.js)
+    Enables custom rendering for **SelectedFilters** component. It provides an object as a param which contains all the props needed to render the custom selected-filters, including the functions to clear and update the component values. [Check the usage here](https://github.com/appbaseio/reactivesearch/blob/dev/packages/web/examples/CustomSelectedFilters/src/index.js).
 
 ### Examples
 
