@@ -56,6 +56,8 @@ This is the first component you will need to add when using `ReactiveSearch`.
     allows over-writing of default styles by providing the respective key/values. You can read more about its usage [here](/theming/themes.html)
 - **themePreset** `String` [optional]       
     allows over-writing of default styles by providing a preset value. Supported values are `light` (default) and `dark`. You can read more about its usage [here](/theming/themes.html)
+- **beforeSend** `Function` [optional]  
+    Enables transformation of network request before execution. This function will give you the the request object as the param and expect an updated request in return, for execution. Note that this is an experimental API and will likely change in the future.
 
 ### Connect to Elasticsearch
 
