@@ -14,8 +14,8 @@
 /reactive-manual/quickstart  /reactive-manual/getting-started/reactivesearch.html  302
 /reactive-manual/comparison  /reactive-manual/advanced/comparison.html  302
 /reactive-manual/advanced/comparison  /reactive-manual/advanced/comparison.html  302
-/reactive-manual/advanced  /reactive-manual/advanced/customquery.html  302
-/reactive-manual/reactive-manual/advanced  /reactive-manual/advanced/customquery.html  302
+/reactive-manual/advanced  /reactive-manual/advanced/customsuggestions.html  302
+/reactive-manual/reactive-manual/advanced  /reactive-manual/advanced/customsuggestions.html  302
 /reactive-manual/guides  /reactive-manual/advanced/guides.html  302
 /reactive-manual/advanced/guides  /reactive-manual/advanced/guides.html  302
 /reactive-manual/advanced/react  /reactive-manual/advanced/react.html  302
@@ -104,9 +104,10 @@
 /reactive-manual/basic-components/reactivelist.html  /reactive-manual/result-components/reactivelist.html  302
 /reactive-manual/result-components/reactivelist  /reactive-manual/result-components/reactivelist.html  302
 /reactive-manual/reactivelist  /reactive-manual/result-components/reactivelist.html  302
-/reactive-manual/search-components/resultcard.html  /reactive-manual/result-components/resultcard.html  302
-/reactive-manual/result-components/resultcard  /reactive-manual/result-components/resultcard.html  302
-/reactive-manual/resultcard  /reactive-manual/result-components/resultcard.html  302
+/reactive-manual/search-components  /reactive-manual/search-components/categorysearch.html  302
+/reactive-manual/reactive-manual/search-components  /reactive-manual/search-components/categorysearch.html  302
+/reactive-manual/search-components/categorysearch  /reactive-manual/search-components/categorysearch.html  302
+/reactive-manual/categorysearch  /reactive-manual/search-components/categorysearch.html  302
 /reactive-manual/basic-components/datasearch.html  /reactive-manual/search-components/datasearch.html  302
 /reactive-manual/search-components/datasearch  /reactive-manual/search-components/datasearch.html  302
 /reactive-manual/datasearch  /reactive-manual/search-components/datasearch.html  302
@@ -124,8 +125,7 @@
 /reactive-manual/search-components/resultlist.html  /reactive-manual/result-components/resultlist.html  302
 /reactive-manual/result-components/resultlist  /reactive-manual/result-components/resultlist.html  302
 /reactive-manual/resultlist  /reactive-manual/result-components/resultlist.html  302
-/reactive-manual/search-components  /reactive-manual/search-components/categorysearch.html  302
-/reactive-manual/reactive-manual/search-components  /reactive-manual/search-components/categorysearch.html  302
-/reactive-manual/search-components/categorysearch  /reactive-manual/search-components/categorysearch.html  302
-/reactive-manual/categorysearch  /reactive-manual/search-components/categorysearch.html  302
+/reactive-manual/search-components/resultcard.html  /reactive-manual/result-components/resultcard.html  302
+/reactive-manual/result-components/resultcard  /reactive-manual/result-components/resultcard.html  302
+/reactive-manual/resultcard  /reactive-manual/result-components/resultcard.html  302
 /reactive-manual/index.html  /reactive-manual/  302

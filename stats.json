@@ -65,8 +65,12 @@
       "path---list-components-singlelist-html-b8b741350c859c14cd5c.js.map"
     ],
     "component---src-templates-tutorial-js": [
-      "component---src-templates-tutorial-js-b8a5aaa0c5f883195de6.js",
-      "component---src-templates-tutorial-js-b8a5aaa0c5f883195de6.js.map"
+      "component---src-templates-tutorial-js-10fe2a59124d71103bad.js",
+      "component---src-templates-tutorial-js-10fe2a59124d71103bad.js.map"
+    ],
+    "path---advanced-customsuggestions-html": [
+      "path---advanced-customsuggestions-html-89deca219e72d9e17c89.js",
+      "path---advanced-customsuggestions-html-89deca219e72d9e17c89.js.map"
     ],
     "path---search-components-categorysearch-html": [
       "path---search-components-categorysearch-html-62bcde9475e8497b8cf2.js",
@@ -101,8 +105,8 @@
       "path---range-components-daterange-html-785b9fd74df16032f310.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-6685516a89a7227207c5.js",
-      "component---src-layouts-index-js-6685516a89a7227207c5.js.map"
+      "component---src-layouts-index-js-86dc3d8f73b06f79e7df.js",
+      "component---src-layouts-index-js-86dc3d8f73b06f79e7df.js.map"
     ],
     "path---jsx-compiler-html": [
       "path---jsx-compiler-html-a0e39f21c11f6a62c5ab.js",
@@ -191,8 +195,8 @@
       "path---advanced-reactivecomponent-html-7109ff9b086c851e6ed2.js.map"
     ],
     "path---advanced-customquery-html": [
-      "path---advanced-customquery-html-0d04b26419f782e82804.js",
-      "path---advanced-customquery-html-0d04b26419f782e82804.js.map"
+      "path---advanced-customquery-html-e6bfae17cbf7c278c0e0.js",
+      "path---advanced-customquery-html-e6bfae17cbf7c278c0e0.js.map"
     ],
     "path---range-components-multirange-html": [
       "path---range-components-multirange-html-003e8ec295042069646a.js",
@@ -219,9 +223,9 @@
       "path---getting-started-componentsindex-html-ad70afef65dc4c46a5d7.js.map"
     ],
     "app": [
-      "app-472bc691d8ce218e5307.js",
+      "app-c494890610322ae79a41.js",
       "build-js-styles.css",
-      "app-472bc691d8ce218e5307.js.map",
+      "app-c494890610322ae79a41.js.map",
       "build-js-styles.css.map"
     ],
     "path---theming-class-html": [
@@ -229,8 +233,8 @@
       "path---theming-class-html-4c007ff68bdfdc86fde7.js.map"
     ],
     "component---src-templates-docs-js": [
-      "component---src-templates-docs-js-e1eba04ea36f714b91d0.js",
-      "component---src-templates-docs-js-e1eba04ea36f714b91d0.js.map"
+      "component---src-templates-docs-js-97ad96b4ba627fd5b22b.js",
+      "component---src-templates-docs-js-97ad96b4ba627fd5b22b.js.map"
     ],
     "path---range-components-dynamicrangeslider-html": [
       "path---range-components-dynamicrangeslider-html-3551fafede8883a58065.js",
@@ -265,8 +269,8 @@
       "component---src-pages-blog-all-html-js-4e8968908d11397a30ea.js.map"
     ],
     "component---src-templates-home-js": [
-      "component---src-templates-home-js-b0dd6bdc8c06a0309245.js",
-      "component---src-templates-home-js-b0dd6bdc8c06a0309245.js.map"
+      "component---src-templates-home-js-0d985109880482e06825.js",
+      "component---src-templates-home-js-0d985109880482e06825.js.map"
     ]
   }
 }
