@@ -177,10 +177,14 @@ Read more about it [here](/theming/class.html).
   ...
   onSuggestion={(suggestion) => ({
     label: (<div>{suggestion._source.original_title} by<span style={{ color: 'dodgerblue', marginLeft: 5 }}>{suggestion._source.authors}</span></div>),
-    value: suggestion._source.original_title
+    value: suggestion._source.original_title,
+    source: suggestion._source  // for onValueSelected to work with onSuggestion
   })}
 />
 ```
+
+- it's also possible to take control of the entire suggestions rendering using the `renderSuggestions` prop. Check the [custom suggestions](/advanced/customsuggestions.html) recipe for more info.
+
 6. add the following [synthetic events](https://reactjs.org/events.html) to the underlying `input` element:
     - onBlur
     - onFocus
