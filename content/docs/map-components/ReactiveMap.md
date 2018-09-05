@@ -97,6 +97,8 @@ Example uses:
     whether to set the *Search As I Move* checkbox. Defaults to `false`.
 - **onPopoverClick** `function` [optional]  
     a function that takes one argument for getting a marker's data and returns an HTML markup to be displayed in the popover box.
+- **autoClosePopover** `Boolean` [optional]  
+    automatically closes the exisiting open popovers when `onPopoverClick` gets fired. Defaults to `false`.
 - **stream** `Boolean` [optional]  
     whether to stream new result (aka realtime view) updates in the UI. Defaults to `false`.
 - **react** `Object`  
