@@ -96,7 +96,8 @@ renderListItem={(label, count) => (
     </div>
 )}
 ```
-
+- **transformData** `Function` [optional]  
+    allows transforming the data to render inside the list. You can change the order, remove, or add items, tranform their values with this method. It provides the data as param which is an array of objects of shape `{ key: <string>, doc_count: <number> }` and expects you to return the array of objects of same shape.
 - **showMissing** `Boolean` [optional]  
     defaults to `false`. When set to `true` it also retrives the aggregations for missing fields under the label specified by `missingLabel`.
 - **missingLabel** `String` [optional]  
