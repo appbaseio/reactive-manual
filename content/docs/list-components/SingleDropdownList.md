@@ -192,6 +192,8 @@ Read more about it [here](/theming/class.html).
     is a callback function which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when a list item is selected in a "Discounted Price" SingleDropdownList.
 - **onQueryChange** `Function`  
     is a callback function which accepts component's **prevQuery** and **nextQuery** as parameters. It is called everytime the component's query changes. This prop is handy in cases where you want to generate a side-effect whenever the component's query would change.
+- **transformData** `Function` [optional]  
+    allows transforming the data to render inside the list. You can change the order, remove, or add items, tranform their values with this method. It provides the data as param which is an array of objects of shape `{ key: <string>, doc_count: <number> }` and expects you to return the array of objects of same shape.
 - **react** `Object`  
     specify dependent components to reactively update **SingleDropdownList's** options.
     - **key** `String`  
