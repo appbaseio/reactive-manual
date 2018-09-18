@@ -6,6 +6,8 @@ sectionid: docs
 permalink: advanced/typescript.html
 prev: advanced/ssr.html
 prevTitle: "Server Side Rendering"
+next: advanced/analytics.html
+nextTitle: "Analytics"
 redirect_from:
     - "typescript"
     - "advanced/typescript"

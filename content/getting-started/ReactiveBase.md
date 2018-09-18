@@ -53,7 +53,7 @@ This is the first component you will need to add when using `ReactiveSearch`.
 ```
 
 - **analytics** `Boolean` [optional]     
-    allows recording search analytics (and click analytics) when set to `true` and appbase.io is used as a backend. Defaults to `false`.
+    allows recording search analytics (and click analytics) when set to `true` and appbase.io is used as a backend. Defaults to `false`. Check the [analytics recipe](/advanced/analytics.html) for click analytics implementation.
 - **theme** `Object` [optional]     
     allows over-writing of default styles by providing the respective key/values. You can read more about its usage [here](/theming/themes.html)
 - **themePreset** `String` [optional]       

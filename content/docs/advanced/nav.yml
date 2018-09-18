@@ -125,3 +125,12 @@
           title: Usage
           href: /advanced/typescript.html
           forceInternal: true
+    - id: analytics
+      title: Analytics
+      href: /advanced/analytics.html
+      forceInternal: true
+      subitems:
+        - id: click-analytics
+          title: Usage
+          href: /advanced/typescript.html#click-analytics
+          forceInternal: true
