@@ -92,6 +92,8 @@ Example uses:
     fields to be included in search results.
 - **stream** `Boolean` [optional]  
     whether to stream new result updates in the UI. Defaults to `false`.
+- **scrollTarget** `String` [optional]  
+    accepts `id` of the container you wish to apply infinite loading on. **Note:** The container should be scrollable.
 - **pagination** `Boolean` [optional]  
     pagination <> infinite scroll switcher. Defaults to `false`, i.e. an infinite scroll based view. When set to `true`, a pagination based list view with page numbers will appear.
 - **paginationAt** `String` [optional]  
