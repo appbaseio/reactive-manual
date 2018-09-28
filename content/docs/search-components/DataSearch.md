@@ -170,7 +170,7 @@ Read more about it [here](/theming/class.html).
 2. update the underlying DB query with `customQuery`,
 3. connect with external interfaces using `beforeValueChange`, `onValueChange`, `onValueSelected` and `onQueryChange`,
 4. specify how search suggestions should be filtered using `react` prop,
-5. use your own function to render suggestions using `onSuggestion` prop. It expects an object back for each `suggestion` having keys `label` and `value`. The query is run against the `value` key and `label` is used for rendering the suggestions. `label` can be either `String` or JSX. For example,
+5. use your own function to render suggestions using `onSuggestion` (deprecated use `renderSuggestion` for better control) prop. It expects an object back for each `suggestion` having keys `label` and `value`. The query is run against the `value` key and `label` is used for rendering the suggestions. `label` can be either `String` or JSX. For example,
 
 ```js
 <DataSearch
@@ -183,7 +183,7 @@ Read more about it [here](/theming/class.html).
 />
 ```
 
-- it's also possible to take control of the entire suggestions rendering using the `renderSuggestions` prop. Check the [custom suggestions](/advanced/customsuggestions.html) recipe for more info.
+- it's also possible to take control of rendering individual suggestions with `renderSuggestion` prop or the entire suggestions rendering using the `renderSuggestions` prop. Check the [custom suggestions](/advanced/customsuggestions.html) recipe for more info.
 
 6. add the following [synthetic events](https://reactjs.org/events.html) to the underlying `input` element:
     - onBlur
