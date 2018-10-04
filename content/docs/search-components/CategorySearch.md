@@ -74,6 +74,8 @@ Example uses:
     Sets the title of the component to be shown in the UI.
 - **defaultSelected** `string` [optional]  
     preset the search query text in the search box.
+- **downShiftProps** `Object` [optional]  
+    allow passing props directly to `Downshift` component. You can read more about Downshift props [here](https://github.com/paypal/downshift#--downshift-------).
 - **fieldWeights** `Array` [optional]  
     set the search weight for the database fields, useful when dataField is an Array of more than one field. This prop accepts an array of numbers. A higher number implies a higher relevance weight for the corresponding field in the search results.
 - **placeholder** `String` [optional]  
