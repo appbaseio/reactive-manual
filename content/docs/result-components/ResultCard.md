@@ -94,6 +94,8 @@ Example uses:
     whether to stream new result updates in the UI. Defaults to `false`.
 - **scrollTarget** `String` [optional]  
     accepts `id` of the container you wish to apply infinite loading on. **Note:** The container should be scrollable.
+- **scrollOnChange** `Boolean` [optional]  
+    prevents scrolling to top whenever the query changes. Defaults to `true`, i.e. scrolls to top of the window or container when the query changes.
 - **pagination** `Boolean` [optional]  
     pagination <> infinite scroll switcher. Defaults to `false`, i.e. an infinite scroll based view. When set to `true`, a pagination based list view with page numbers will appear.
 - **paginationAt** `String` [optional]  
@@ -176,7 +178,7 @@ Example uses:
 - `image`
 - `title`
 - `poweredBy`
- 
+
 Read more about it [here](/theming/class.html).
 
 ## Extending

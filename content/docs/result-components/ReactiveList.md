@@ -76,6 +76,8 @@ Example uses:
     whether to stream new result updates in the UI. Defaults to `false`. `stream: true` is appended to the streaming hit objects, which can be used to selectively react to streaming changes (eg. showing fade in animation on new streaming hits, Twitter/Facebook like streams, showing the count of new feed items available like *2 New Tweets*)
 - **scrollTarget** `String` [optional]  
     accepts `id` of the container you wish to apply infinite loading on. **Note:** The container should be scrollable.
+- **scrollOnChange** `Boolean` [optional]  
+    prevents scrolling to top whenever the query changes. Defaults to `true`, i.e. scrolls to top of the window or container when the query changes.
 - **pagination** `Boolean` [optional]  
     pagination <> infinite scroll switcher. Defaults to `false`, i.e. an infinite scroll based view. When set to `true`, a pagination based list view with page numbers will appear.
 - **paginationAt** `String` [optional]  
