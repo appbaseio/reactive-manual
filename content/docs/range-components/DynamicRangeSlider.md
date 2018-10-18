@@ -87,7 +87,7 @@ While `DynamicRangeSlider` only requires the above props to be used, it comes wi
 - **stepValue** `Number` [optional]  
     step value specifies the slider stepper. Value should be an integer greater than or equal to `1` and less than `Math.floor((range.end - range.start) / 2)`. Defaults to 1.
 - **tooltipTrigger** `String` [optional]  
-    trigger the tooltip according to the value specified. Can be `hover`, `focus`, `always` and `none`.
+    trigger the tooltip according to the value specified. Can be `hover`, `focus`, `always` and `none`. Defaults to `none`.
 - **showHistogram** `Boolean` [optional]  
     whether to display the range histogram or not. Defaults to `true`.
 - **interval** `Number` [optional]  

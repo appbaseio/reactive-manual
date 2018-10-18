@@ -106,7 +106,7 @@ Example uses:
 - **countries** `String Array` [optional]
     restricts predictions to specified country (ISO 3166-1 Alpha-2 country code, case insensitive). For example, 'us', 'in', or 'au'. You can provide an array of up to five country code strings.
 - **tooltipTrigger** `String` [optional]  
-    trigger the tooltip according to the value specified. Can be `hover`, `focus`, `always` and `none`.
+    trigger the tooltip according to the value specified. Can be `hover`, `focus`, `always` and `none`. Defaults to `none`.
 
 ## Demo
 
