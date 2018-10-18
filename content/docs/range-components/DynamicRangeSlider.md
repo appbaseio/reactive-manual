@@ -82,10 +82,12 @@ While `DynamicRangeSlider` only requires the above props to be used, it comes wi
     a function that accepts `min` and `max` range values as parameters and returns an object representing labels with `start` and `end` keys.
 - **showFilter** `Boolean` [optional]  
     show the selected item as a filter in the selected filters view. Defaults to `true`.
-- **snap** `Boolean` [optional]
+- **snap** `Boolean` [optional]  
     makes the slider snap on to points depending on the `stepValue` when the slider is released. Defaults to `true`. When set to `false`, `stepValue` is ignored.
 - **stepValue** `Number` [optional]  
     step value specifies the slider stepper. Value should be an integer greater than or equal to `1` and less than `Math.floor((range.end - range.start) / 2)`. Defaults to 1.
+- **tooltipTrigger** `String` [optional]  
+    trigger the tooltip according to the value specified. Can be `hover`, `focus`, `always` and `none`.
 - **showHistogram** `Boolean` [optional]  
     whether to display the range histogram or not. Defaults to `true`.
 - **interval** `Number` [optional]  
