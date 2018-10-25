@@ -104,7 +104,7 @@
   },
   "scripts": {
     "build": "gatsby build --prefix-paths",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public -e vue-web -a -r https://github.com/appbaseio/reactive-manual -b gh-pages",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public -e vue -a -r https://github.com/appbaseio/reactive-manual -b gh-pages",
     "check-all": "yarn prettier && yarn lint && yarn flow",
     "ci-check": "yarn prettier:diff && yarn lint && yarn flow",
     "start": "gatsby develop",

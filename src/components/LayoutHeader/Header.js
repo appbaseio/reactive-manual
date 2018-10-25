@@ -40,7 +40,7 @@ class Header extends Component {
 
   switchDocs = (value) => {
     if (location.pathname.includes('/reactive-manual/')) {
-      if(value.value === 'v0.6 - Native') {
+      if(value.value === 'v0.10 - Native') {
         window.location.href = window.location.origin + '/reactive-manual/native';
       } else if(value.value === 'v1 - Vue') {
         window.location.href = window.location.origin + '/reactive-manual/vue';
