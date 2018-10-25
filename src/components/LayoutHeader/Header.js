@@ -37,10 +37,13 @@ class Header extends Component {
       this.toggleSearch();
     }
   }
-
   switchDocs = (value) => {
-    if (location.pathname.includes('/reactive-manual/') && value.value === 'v0.6 - Native') {
-      window.location.href = window.location.origin + '/reactive-manual/native';
+    if (location.pathname.includes('/reactive-manual/')) {
+      if(value.value === 'v0.10 - Native') {
+        window.location.href = window.location.origin + '/reactive-manual/native';
+      } else if(value.value === 'v1 - Vue') {
+        window.location.href = window.location.origin + '/reactive-manual/vue';
+      }
     }
   }
 
@@ -209,7 +212,7 @@ class Header extends Component {
                   }}
                 >
                   <Dropdown
-                    options={['v2 - Web', 'v0.6 - Native']}
+                    options={['v2 - Web', 'v0.10 - Native', 'v1 - Vue']}
                     value="v2 - Web"
                     onChange={this.switchDocs}
                   />
