@@ -18,12 +18,12 @@ One of the key ideas behind Reactive Search and Reactive Maps is the reactive de
 ### Usage
 
 ```javascript
-<ReactiveMap
+<data-search
     ...
-    react={{
+    :react=`{
       "and": "citySensor",
       "or": "searchSensor"
-    }}
+    }`
 >
 ```
 
@@ -44,15 +44,15 @@ One of the key ideas behind Reactive Search and Reactive Maps is the reactive de
 An example of a `react` clause where all three clauses are used and values are `Object`, `Array` and `String`.
 
 ```js
-<ReactiveMap
+<data-search
   ...
-  react={{
+  :react=`{
     "and": {
         "or": ["CityComp", "TopicComp"],
         "not": "BlacklistComp"
     }
-  }}
+  }`
 />
 ```
 
-Here, we are specifying that the map's UI should update whenever one of the blacklist items is not present and simultaneously any one of city or topics matches.
+Here, we are specifying that the UI should update whenever one of the blacklist items is not present and simultaneously any one of city or topics matches.

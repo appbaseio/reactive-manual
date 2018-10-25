@@ -1,6 +1,6 @@
 ---
 id: class
-title: "ClassName Injection"
+title: "Class Injection"
 layout: docs
 sectionid: class
 permalink: theming/class.html
@@ -13,25 +13,25 @@ redirect_from:
     - 'class'
 ---
 
-ReactiveSearch components also allow `className` injections to overwrite the default styles for any component at a more granular level. This can be achieved with the `innerClass` prop.
+ReactiveSearch components also allow `class` injections to overwrite the default styles for any component at a more granular level. This can be achieved with the `innerClass` prop.
 
 ## Usage
 
-The `innerClass` prop accepts an object with keys as defined in the **Styles** section of each component. You can add the desired `className` value for each key and refer to them in your CSS.
+The `innerClass` prop accepts an object with keys as defined in the **Styles** section of each component. You can add the desired `class` value for each key and refer to them in your CSS.
 
 ## Examples
 
-Here's an example of how to use `innerClass` with a [TextField](base-components/textfield.html) component:
+Here's an example of how to use `innerClass` with a [DataSearch](search-components/datasearch.html) component:
 
-![TextField annotated image](https://imgur.com/f20AvrZ.png)
+![DataSearch annotated image](https://imgur.com/f20AvrZ.png)
 
 ```js
-<TextField
+<data-search
     ...
-    innerClass={{
+    :innerClass=`{
         title: 'text-title',
         input: 'text-input'
-    }}
+    }`
 />
 ```
 
@@ -54,13 +54,13 @@ While writing styles using `innerClass`, it's important to keep [CSS specificity
 In order for your classes to overwrite the default classes of ReactiveSearch components we recommend combining the `innerClass` classes with a container class. This will also give the correct results without depending on the order of loading of the stylesheets in production. For example:
 
 ```js
-<TextField
+<data-search
     ...
-    innerClass={{
+    :innerClass=`{
         title: 'text-title',
         input: 'text-input'
-    }}
-    className="text-field"
+    }`
+    class="text-field"
 />
 ```
 
@@ -78,4 +78,4 @@ Then refer to them in your stylesheet with the container class as:
 
 > Note
 >
-> Here we're using the `className` prop in the component to act as the container class, however, depending on your needs, this can also be acheived by surrounding the ReactiveSearch component in a container `<div className="container-class">...</div>`
+> Here we're using the `className` prop in the component to act as the container class, however, depending on your needs, this can also be acheived by surrounding the ReactiveSearch component in a container `<div class="container-class">...</div>`

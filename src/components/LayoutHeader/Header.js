@@ -39,8 +39,12 @@ class Header extends Component {
   }
 
   switchDocs = (value) => {
-    if (location.pathname.includes('/reactive-manual/') && value.value === 'v0.6 - Native') {
-      window.location.href = window.location.origin + '/reactive-manual/native';
+    if (location.pathname.includes('/reactive-manual/')) {
+      if(value.value === 'v0.6 - Native') {
+        window.location.href = window.location.origin + '/reactive-manual/native';
+      } else if(value.value === 'v1 - Vue') {
+        window.location.href = window.location.origin + '/reactive-manual/vue';
+      }
     }
   }
 
@@ -167,12 +171,12 @@ class Header extends Component {
               <HeaderLink
                 isActive={location.pathname.includes('/base-components/')}
                 title="Components"
-                to="/base-components/textfield.html"
+                to="/list-components/singlelist.html"
               />
               <HeaderLink
                 isActive={location.pathname.includes('/theming/')}
                 title="Theming"
-                to="/theming/themes.html"
+                to="/theming/style.html"
               />
               <HeaderLink
                 isActive={location.pathname.includes('/advanced/')}
@@ -209,8 +213,8 @@ class Header extends Component {
                   }}
                 >
                   <Dropdown
-                    options={['v2 - Web', 'v0.6 - Native']}
-                    value="v2 - Web"
+                    options={['v2 - Web', 'v0.6 - Native', 'v1 - Vue']}
+                    value="v1 - Vue"
                     onChange={this.switchDocs}
                   />
                 </div>

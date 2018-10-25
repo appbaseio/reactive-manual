@@ -4,17 +4,13 @@ title: "DataSearch"
 layout: docs
 sectionid: docs
 permalink: search-components/datasearch.html
-prev: range-components/ratingsfilter.html
-prevTitle: "Range Components: RatingsFilter"
-next: search-components/categorysearch.html
-nextTitle: "CategorySearch"
 redirect_from:
     - 'basic-components/datasearch.html'
     - 'search-components/datasearch'
     - 'datasearch'
 ---
 
-![Image to be displayed](https://i.imgur.com/rthmjVh.png)
+![Image to be displayed](https://i.imgur.com/QAYt2AN.png)
 
 `DataSearch` creates a search box UI component that is connected to one or more database fields.
 
@@ -26,36 +22,36 @@ Example uses:
 
 ### Basic Usage
 
-```js
-<DataSearch
-  componentId="SearchSensor"
-  dataField={["group_venue", "group_city"]}
-/>
+```html
+<template>
+    <data-search
+        componentId="SearchSensor"
+        :dataField="['group_venue', 'group_city']"
+    />
+</template>
 ```
 
 ### Usage With All Props
 
 ```js
-<DataSearch
+<data-search
   componentId="SearchSensor"
-  dataField={["group_venue", "group_city"]}
   title="Search"
+  filterLabel="Venue filter"
   defaultSelected="Songwriting"
-  fieldWeights={[1, 3]}
   placeholder="Search for cities or venues"
-  autosuggest={true}
-  defaultSuggestions={[{label: "Songwriting", value: "Songwriting"}, {label: "Musicians", value: "Musicians"}]}
-  highlight={true}
   highlightField="group_city"
   queryFormat="or"
-  fuzziness={0}
-  debounce={100}
-  react={{
-    and: ["CategoryFilter", "SearchFilter"]
-  }}
-  showFilter={true}
-  filterLabel="Venue filter"
-  URLParams={false}
+  :highlight="true"
+  :fieldWeights="[1, 3]"
+  :fuzziness="0"
+  :debounce="100"
+  :react=`{
+    and: ['CategoryFilter', 'SearchFilter']
+  }`
+  :dataField="['group_venue', 'group_city']"
+  :showFilter="true"
+  :URLParams="false"
 />
 ```
 
@@ -83,10 +79,6 @@ Example uses:
     show a clear text icon. Defaults to `false`.
 - **clearIcon** `JSX` [optional]  
     allows setting a custom icon for clearing text instead of the default cross.
-- **autosuggest** `Boolean` [optional]  
-    set whether the autosuggest functionality should be enabled or disabled. Defaults to `true`.
-- **defaultSuggestions** `Array` [optional]
-    preset search suggestions to be shown on focus when the search box does not have any search query text set. Accepts an array of objects each having a **label** and **value** property. The label can contain either String or an HTML element.
 - **debounce** `Number` [optional]  
     sets the milliseconds to wait before executing the query. Defaults to `0`, i.e. no debounce.
 - **highlight** `Boolean` [optional]  
@@ -97,11 +89,11 @@ Example uses:
     a function which returns the custom [highlight settings](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-highlighting.html). It receives the `props` and expects you to return an object with the `highlight` key. Check out the <a href="https://opensource.appbase.io/reactivesearch/demos/technews/" target="_blank">technews demo</a> where the `DataSearch` component uses a `customHighlight` as given below,
 
 ```js
-<DataSearch
+<data-search
     componentId="title"
-    dataField={['title', 'text']}
-    highlight
-    customHighlight={(props) => ({
+    highlight="true"
+    :dataField="['title', 'text']"
+    :customHighlight=`(props) => ({
         highlight: {
             pre_tags: ['<mark>'],
             post_tags: ['</mark>'],
@@ -111,7 +103,7 @@ Example uses:
             },
             number_of_fragments: 0,
         },
-    })}
+    })`
 />
 ```
 
@@ -123,14 +115,14 @@ Example uses:
     Lets you append your own query along with the existing query for search. This works only if you're not using `customQuery` since the query is applied to the existing one. The function receives `value` and the current `props` and expects you to return a query to append. For example, you may use this to limit your searches to harry potter books by something like:
 
 ```js
-<DataSearch
+<data-search
     dataField="original_title"
     ...
-    defaultQuery={(value, props) => ({
+    :defaultQuery=`(value, props) => ({
         match: {
             original_title: 'Potter'
         }
-    })}
+    })`
 />
 ```
 
@@ -145,54 +137,28 @@ Example uses:
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
 
-## Demo
-
-<br />
-
-<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/dev/packages/web/examples/DataSearch" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
-
 ## Styles
 
 `DataSearch` component supports `innerClass` prop with the following keys:    
 
 - `title`
 - `input`
-- `list`
  
 Read more about it [here](/theming/class.html).
 
 ## Extending
 
 `DataSearch` component can be extended to
-1. customize the look and feel with `className`, `style`,
+1. customize the look and feel with `className`,
 2. update the underlying DB query with `customQuery`,
-3. connect with external interfaces using `beforeValueChange`, `onValueChange`, `onValueSelected` and `onQueryChange`,
-4. specify how search suggestions should be filtered using `react` prop,
-5. use your own function to render suggestions using `onSuggestion` prop. It expects an object back for each `suggestion` having keys `label` and `value`. The query is run against the `value` key and `label` is used for rendering the suggestions. `label` can be either `String` or JSX. For example,
+3. connect with external interfaces using `beforeValueChange`, `valueChange` and `queryChange`,
+4. specify how search suggestions should be filtered using `react` prop.
 
 ```js
-<DataSearch
-  ...
-  onSuggestion={(suggestion) => ({
-    label: (<div>{suggestion._source.original_title} by<span style={{ color: 'dodgerblue', marginLeft: 5 }}>{suggestion._source.authors}</span></div>),
-    value: suggestion._source.original_title
-  })}
-/>
-```
-6. add the following [synthetic events](https://reactjs.org/events.html) to the underlying `input` element:
-    - onBlur
-    - onFocus
-    - onKeyPress
-    - onKeyDown
-    - onKeyUp
-    - autoFocus
-
-```js
-<DataSearch
+<data-search
   ...
   className="custom-class"
-  style={{"paddingBottom": "10px"}}
-  customQuery={
+  :customQuery=`
     function(value, props) {
       return {
         match: {
@@ -200,8 +166,8 @@ Read more about it [here](/theming/class.html).
         }
       }
     }
-  }
-  beforeValueChange={
+  `
+  :beforeValueChange=`
     function(value) {
       // called before the value is set
       // returns a promise
@@ -211,49 +177,34 @@ Read more about it [here](/theming/class.html).
         // or reject()
       })
     }
-  }
-  onValueChange={
+  `
+  @valueChange=`
     function(value) {
       console.log("current value: ", value)
       // set the state
       // use the value with other js code
-    }
-  }
-  onValueSelected={
-    function(value) {
-      console.log("current value: ", value)
-    }
-  }
-  onQueryChange={
+    }`
+  @queryChange=`
     function(prevQuery, nextQuery) {
       // use the query with other js code
       console.log('prevQuery', prevQuery);
       console.log('nextQuery', nextQuery);
-    }
-  }
+    }`
   // specify how and which suggestions are filtered using `react` prop.
-  react={
+  :react=`{
     "and": ["pricingFilter", "dateFilter"],
     "or": ["searchFilter"]
-  }
+  }`
 />
 ```
 
 - **className** `String`  
     CSS class to be injected on the component container.
-- **style** `Object`  
-    CSS styles to be applied to the **DataSearch** component.
 - **customQuery** `Function`  
     takes **value** and **props** as parameters and **returns** the data query to be applied to the component, as defined in Elasticsearch Query DSL.
     `Note:` customQuery is called on value changes in the **DataSearch** component as long as the component is a part of `react` dependency of at least one other component.
 - **beforeValueChange** `Function`  
     is a callback function which accepts component's future **value** as a parameter and **returns** a promise. It is called everytime before a component's value changes. The promise, if and when resolved, triggers the execution of the component's query and if rejected, kills the query execution. This method can act as a gatekeeper for query execution, since it only executes the query after the provided promise has been resolved.
-- **onValueChange** `Function`  
-    is a callback function which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when a user searches for a product in a DataSearch.
-- **onValueSelected** `Function`  
-    is called with the value selected via user interaction. It works only with `autosuggest` and is called whenever a suggestion is selected or a search is performed either by pressing **enter** key or the input is blurred.
-- **onQueryChange** `Function`  
-    is a callback function which accepts component's **prevQuery** and **nextQuery** as parameters. It is called everytime the component's query changes. This prop is handy in cases where you want to generate a side-effect whenever the component's query would change.
 - **react** `Object`  
     specify dependent components to reactively update **DataSearch's** suggestions.
     - **key** `String`  
@@ -266,6 +217,18 @@ Read more about it [here](/theming/class.html).
         - `Array` is used for specifying multiple components by their `componentId`.
         - `Object` is used for nesting other key clauses.
 
-## Examples
-
-<a href="https://opensource.appbase.io/playground/?selectedKind=Search%20components%2FDataSearch" target="_blank">DataSearch with default props</a>
+## Events
+- **queryChange**  
+     is an event which accepts component's **prevQuery** and **nextQuery** as parameters. It is called everytime the component's query changes. This event is handy in cases where you want to generate a side-effect whenever the component's query would change.
+    
+- **valueChange**  
+    is an event which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This event is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when a list item is selected in a "Discounted Price" SingleList.
+- **valueSelected**
+    is called when a search is performed either by pressing **enter** key or the input is blurred.
+ 
+ The following events to the underlying `input` element:
+- **blur**
+- **focus**
+- **keyPress**
+- **keyDown**
+- **keyUp**

@@ -6,8 +6,6 @@ sectionid: docs
 permalink: list-components/multilist.html
 prev: list-components/singlelist.html
 prevTitle: "SingleList"
-next: list-components/singledropdownlist.html
-nextTitle: "SingleDropdownList"
 redirect_from:
     - "basic-components/multilist.html"
     - "list-components/multilist"
@@ -25,39 +23,42 @@ Example uses:
 
 ## Usage
 
+
 ### Basic Usage
 
-```js
-<MultiList
-  componentId="CitySensor"
-  dataField="group_city.raw"
-  title="Cities"
-/>
+```html
+<template>
+    <multi-list
+        componentId="CitySensor"
+        dataField="group.group_city.raw"
+        title="Cities"
+    />
+</template>
 ```
 
 ### Usage With All Props
 
 ```js
-<MultiList
-  componentId="CitySensor"
-  dataField="group_city.raw"
-  title="Cities"
-  size={100}
-  sortBy="asc"
-  defaultSelected={["San Francisco"]}
-  queryFormat="or"
-  selectAllLabel="All Cities"
-  showCheckbox={true}
-  showCount={true}
-  showSearch={true}
-  placeholder="Search City"
-  react={{
-    and: ["CategoryFilter", "SearchFilter"]
-  }}
-  showFilter={true}
-  filterLabel="City"
-  URLParams={false}
-/>
+<template>
+    <multi-list
+        componentId="CitySensor"
+        dataField="group_city.raw"
+        title="Cities"
+        sortBy="asc"
+        filterLabel="City"
+        queryFormat="or"
+        selectAllLabel="All Cities"
+        placeholder="Search City"
+        :showCheckbox="true"
+        :showCount="true"
+        :showSearch="true"
+        :defaultSelected="['San Francisco']"
+        :react="{ and: ['CategoryFilter', 'SearchFilter'] }"
+        :size="100"
+        :showFilter="true"
+        :URLParams="false"
+    />
+</template>
 ```
 
 ## Props
@@ -84,8 +85,8 @@ Example uses:
     show checkbox icon for each list item. Defaults to `true`.
 - **showCount** `Boolean` [optional]  
     show a count of the number of occurences besides each list item. Defaults to `true`.
-- **renderListItem** `Function` [optional]  
-    customize the rendered list via a function which receives the item label and count and expects a JSX or String back. For example:
+- **renderListItem** `Function|scoped-slot` [optional]  
+    customize the rendered list via a function or scoped-slot which receives the item label and count and expects a JSX or String back. For example:
 ```js
 renderListItem={(label, count) => (
     <div>
@@ -95,6 +96,17 @@ renderListItem={(label, count) => (
         </span>
     </div>
 )}
+```
+or
+```html
+<template slot="renderListItem" scoped-slot="{ label, count }">
+    <div>
+        {{label}}
+        <span :style="{ marginLeft: 5, color: 'dodgerblue' }">
+            {{count}}
+        </span>
+    </div>
+</template>
 ```
 
 - **showMissing** `Boolean` [optional]  
@@ -111,12 +123,6 @@ renderListItem={(label, count) => (
     An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
-
-## Demo
-
-<br />
-
-<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/dev/packages/web/examples/MultiList" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 ## Styles
 
@@ -135,17 +141,16 @@ Read more about it [here](/theming/class.html).
 
 `MultiList` component can be extended to
 
-1. customize the look and feel with `className`, `style`,
+1. customize the look and feel with `className`,
 2. update the underlying DB query with `customQuery`,
-3. connect with external interfaces using `beforeValueChange`, `onValueChange` and `onQueryChange`,
+3. connect with external interfaces using `beforeValueChange`, `valueChange` and `queryChange`,
 4. specify how options should be filtered or updated using `react` prop.
 
 ```js
-<MultiList
+<multi-list
   ...
   className="custom-class"
-  style={{"paddingBottom": "10px"}}
-  customQuery={
+  :customQuery=`
     function(value, props) {
       return {
         match: {
@@ -153,8 +158,8 @@ Read more about it [here](/theming/class.html).
         }
       }
     }
-  }
-  beforeValueChange={
+  `
+  :beforeValueChange=`
     function(value) {
       // called before the value is set
       // returns a promise
@@ -164,43 +169,35 @@ Read more about it [here](/theming/class.html).
         // or reject()
       })
     }
-  }
-  onValueChange={
+  `
+  @valueChange=`
     function(value) {
       console.log("current value: ", value)
       // set the state
       // use the value with other js code
-    }
-  }
-  onQueryChange={
+    }`
+  @queryChange=`
     function(prevQuery, nextQuery) {
       // use the query with other js code
       console.log('prevQuery', prevQuery);
       console.log('nextQuery', nextQuery);
-    }
-  }
+    }`
   // specify how and which options are filtered using `react` prop.
-  react={
+  :react=`{
     "and": ["pricingFilter", "dateFilter"],
     "or": ["searchFilter"]
-  }
+  }`
 />
 ```
 
 - **className** `String`  
     CSS class to be injected on the component container.
-- **style** `Object`  
-    CSS styles to be applied to the **MultiList** component.
 - **customQuery** `Function`  
     takes **value** and **props** as parameters and **returns** the data query to be applied to the component, as defined in Elasticsearch Query DSL.
     `Note:` customQuery is called on value changes in the **MultiList** component as long as the component is a part of `react` dependency of at least one other component.
     `Note:` When extending with customQuery, the `queryFormat` prop has no affect.
 - **beforeValueChange** `Function`  
     is a callback function which accepts component's future **value** as a parameter and **returns** a promise. It is called every time before a component's value changes. The promise, if and when resolved, triggers the execution of the component's query and if rejected, kills the query execution. This method can act as a gatekeeper for query execution, since it only executes the query after the provided promise has been resolved.
-- **onValueChange** `Function`  
-    is a callback function which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when list item(s) is/are selected in a "Discounted Price" MultiList.
-- **onQueryChange** `Function`  
-    is a callback function which accepts component's **prevQuery** and **nextQuery** as parameters. It is called everytime the component's query changes. This prop is handy in cases where you want to generate a side-effect whenever the component's query would change.
 - **react** `Object`  
     specify dependent components to reactively update **MultiList's** options.
     - **key** `String`  
@@ -213,6 +210,9 @@ Read more about it [here](/theming/class.html).
         - `Array` is used for specifying multiple components by their `componentId`.
         - `Object` is used for nesting other key clauses.
 
-## Examples
-
-<a href="https://opensource.appbase.io/playground/?selectedKind=List%20components%2FMultiList" target="_blank">MultiList with default props</a>
+## Events
+- **queryChange**  
+     is an event which accepts component's **prevQuery** and **nextQuery** as parameters. It is called everytime the component's query changes. This event is handy in cases where you want to generate a side-effect whenever the component's query would change.
+    
+- **valueChange**  
+    is an event which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This event is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when a list item is selected in a "Discounted Price" SingleList.

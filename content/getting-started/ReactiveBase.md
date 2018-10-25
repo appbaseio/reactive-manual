@@ -16,14 +16,16 @@ This is the first component you will need to add when using `ReactiveSearch`.
 
 ### Usage
 
-```js
-<ReactiveBase
+```html
+<template>
+<reactive-base
   app="appname"
   credentials="abcdef123:abcdef12-ab12-ab12-ab12-abcdef123456"
 >
-    <Component1 .. />
-    <Component2 .. />
-</ReactiveBase>
+    <component1 .. />
+    <component2 .. />
+</reactive-base>
+</template>
 ```
 
 ### Props
@@ -39,23 +41,18 @@ This is the first component you will need to add when using `ReactiveSearch`.
 - **headers** `Object` [optional]  
     set custom headers to be sent with each server request as key/value pairs. For example:
 
-```js{4-6}
-<ReactiveBase
+```html{4-6}
+<template>
+<reactive-base
   app="appname"
   credentials="abcdef123:abcdef12-ab12-ab12-ab12-abcdef123456"
-  headers={{
-      secret: 'reactivesearch-is-awesome'
-  }}
+  :headers="{ secret: 'reactivesearch-is-awesome' }"
 >
-    <Component1 .. />
-    <Component2 .. />
-</ReactiveBase>
+    <component1 .. />
+    <component2 .. />
+</reactive-base>
+</template>
 ```
-
-- **theme** `Object` [optional]     
-    allows over-writing of default styles by providing the respective key/values. You can read more about its usage [here](/theming/themes.html)
-- **themePreset** `String` [optional]       
-    allows over-writing of default styles by providing a preset value. Supported values are `light` (default) and `dark`. You can read more about its usage [here](/theming/themes.html)
 
 ### Connect to Elasticsearch
 
@@ -65,14 +62,16 @@ This is the first component you will need to add when using `ReactiveSearch`.
 
 ReactiveSearch works out of the box with an Elasticsearch index hosted anywhere. You can use the `url` prop of the **ReactiveBase** component to connect the child ReactiveSearch components to your own index. For example,
 
-```js
-<ReactiveBase
-  app="your-elasticsearch-index"
+```html
+<template>
+<reactive-base
+  app="appname"
   url="http://your-elasticsearch-cluster"
 >
-    <Component1 .. />
-    <Component2 .. />
-</ReactiveBase>
+    <component1 .. />
+    <component2 .. />
+</reactive-base>
+</template>
 ```
 
 It's also possible to secure your Elasticsearch cluster's access with a middleware proxy server that is connected to ReactiveSearch. This allows you to set up custom authorization rules, prevent misuse, only pass back non-sensitive data, etc. Here's an example app where we show this using a Node.JS / Express middleware:

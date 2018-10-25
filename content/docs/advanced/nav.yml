@@ -17,10 +17,6 @@
           title: Extending a Custom Query
           href: /advanced/customquery.html#extending-a-custom-query
           forceInternal: true
-        - id: data-controller-component
-          title: Data Controller Component
-          href: /advanced/customquery.html#data-controller-component
-          forceInternal: true
         - id: not-familiar-to-elasticsearch
           title: Not familiar to ElasticSearch?
           href: /advanced/customquery.html#not-familiar-to-elasticsearch
@@ -81,34 +77,12 @@
           title: Handling stream updates
           href: /advanced/guides.html#handling-stream-updates
           forceInternal: true
-        - id: minimizing-bundle-size
-          title: Minimizing bundle size
-          href: /advanced/guides.html#minimizing-bundle-size
-          forceInternal: true
-    - id: comparison
-      title: Comparison with Other projects
-      href: /advanced/comparison.html
+    - id: analytics
+      title: Analytics
+      href: /advanced/analytics.html
       forceInternal: true
       subitems:
-        - id: comparison
-          title: Comparison
-          href: /advanced/comparison.html#comparison
-          forceInternal: true
-    - id: ssr
-      title: Server Side Rendering
-      href: /advanced/ssr.html
-      forceInternal: true
-      subitems:
-        - id: ssr
-          title: Server Side Rendering
-          href: /advanced/ssr.html
-          forceInternal: true
-    - id: typescript
-      title: TypeScript Support
-      href: /advanced/typescript.html
-      forceInternal: true
-      subitems:
-        - id: typescript
+        - id: click-analytics
           title: Usage
-          href: /advanced/typescript.html
+          href: /advanced/typescript.html#click-analytics
           forceInternal: true

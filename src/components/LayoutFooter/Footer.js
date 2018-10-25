@@ -45,13 +45,10 @@ const Footer = ({layoutHasSidebar = false}) => (
           <FooterNav layoutHasSidebar={layoutHasSidebar}>
             <MetaTitle onDark={true}>Docs</MetaTitle>
             <FooterLink to="/getting-started/">Quick Start</FooterLink>
-            <FooterLink to="/base-components/textfield.html">
+            <FooterLink to="/list-components/singlelist.html">
               Basic Components
             </FooterLink>
-            <FooterLink to="/map-components/geodistanceslider.html">
-              Map Components
-            </FooterLink>
-            <FooterLink to="/search-components/categorysearch.html">
+            <FooterLink to="/search-components/datasearch.html">
               Search Components
             </FooterLink>
             <FooterLink to="/advanced/customquery.html">

@@ -1,22 +1,5 @@
 - title: Theming
   items:
-    - id: themes
-      title: Themes
-      href: /theming/themes.html
-      forceInternal: true
-      subitems:
-        - id: usage
-          title: Usage
-          href: /theming/themes.html#usage
-          forceInternal: true
-        - id: extending-theming
-          title: Extending theming
-          href: /theming/themes.html#extending-theming
-          forceInternal: true
-        - id: examples
-          title: Examples
-          href: /theming/themes.html#examples
-          forceInternal: true
     - id: style
       title: Style
       href: /theming/style.html
@@ -31,7 +14,7 @@
           href: /theming/style.html#examples
           forceInternal: true
     - id: class
-      title: ClassName Injection
+      title: Class Injection
       href: /theming/class.html
       forceInternal: true
       subitems:

@@ -15,11 +15,11 @@ redirect_from:
 
 We have built this library keeping you, the developer, in mind. If you're here, it is obvious that you want to create a custom component that is reactive in nature. Perhaps, you already have a component in your design kit and want it to work seamlessly with Reactivesearch.
 
-With `ReactiveComponent`, you can convert any React Component into a Reactivesearch component i.e. your react component will be able to talk to other Reactivesearch components and connect with your elasticsearch cluster seamlessly.
+With `ReactiveComponent`, you can convert any Vue Component into a Reactivesearch component i.e. your vue component will be able to talk to other Reactivesearch components and connect with your elasticsearch cluster seamlessly.
 
 > How does this work?
 >
-> `ReactiveComponent` is a wrapper component that allows you to connect custom component(s) (passed as children) with the Reactivesearch ecosystem.
+> `ReactiveComponent` is a wrapper component that allows you to connect custom component(s) (passed as children) with the Vue ecosystem.
 
 ### Usage
 
@@ -28,18 +28,18 @@ For example, let's suppose that we are building an e-commerce store where we hav
 ![ColorPicker](https://i.imgur.com/wuKhCTT.png)
 
 ```javascript{2}
-<ColorPicker
-    colors={['#000', '#666', '#fff']}
-    onChange={this.handleColorChange}
+<color-picker
+    :colors="['#000', '#666', '#fff']"
+    @change="handleColorChange"
 >
 ```
 
 Now, let's assume that we have all these hex-codes stored as `keywords` in an Elasticsearch index. To display each unique color tile, we can run a `terms` aggregations query. The `defaultQuery` prop of ReactiveComponent allows us to do this and pass the results to a child component.
 
 ```javascript
-<ReactiveComponent
+<reactive-component
     componentId="myColorPicker"   // a unique id we will refer to later
-    defaultQuery={() => ({
+    :defaultQuery=`() => ({
         aggs: {
             color: {
                 terms: {
@@ -47,40 +47,49 @@ Now, let's assume that we have all these hex-codes stored as `keywords` in an El
                 }
             }
         }
-    })}
+    })`
 >
-    <ColorPickerWrapper />
-</ReactiveComponent>
+    <div slot-scope="{ aggregations, hits, setQuery }">
+	    <color-picker-wrapper :aggregations="aggregations" :hits="hits" :setQuery="setQuery"/>
+	</div>
+</reactive-component>
 ```
 
 The above snippet runs the `defaultQuery` passed to the ReactiveComponent when the component gets mounted and consequently pass the query results to the `ColorPickerWraper` component (i.e. child component of ReactiveComponent) as the following two props: `hits` and `aggregations`.
 
 ```javascript
-class ColorPickerWrapper extends React.Component {
-
-    render() {
-        let colors = [];
-
-        if (
-            // checking for when component gets the aggregation results
-            this.props.aggregations
-            && this.props.aggregations.colors
-            && this.props.aggregations.colors.buckets.length
-        ) {
-            colors = this.props.aggregations.map(color => color.key);
-        }
-
-        return (
-            <ColorPicker
-                colors={colors}
-                onChange={() => {
-                    // handles color change
-                    // we will define this in the next step
-                }}
-            />
-        )
-    }
+<template>
+    <div v-if="colors">
+        <color-picker
+            colors="colors"
+            @change=`() => {
+                // handles color change
+                // we will define this in the next step
+            }`
+        />
+    </div>
+</template>
+<script>
+export default {
+    props: {
+        aggregations: Object,
+    },
+    computed: {
+        colors: () => {
+            let colors = [];
+            if (
+                // checking for when component gets the aggregation results
+                this.$props.aggregations
+                && this.$props.aggregations.colors
+                && this.$props.aggregations.colors.buckets.length
+            ) {
+                colors = this.$props.aggregations.map(color => color.key);
+            }
+            return colors;
+        },
+    },
 }
+</script>
 ```
 
 Up until this point, we have figured out how to display the colored tiles by running an Elasticsearch query and passing the results to our `ColorPickerWrapper` component.
@@ -100,48 +109,58 @@ where,
 - **value** - can be an array, string or number (This will be shown in selected filters and URLParams if active. In our case, this is the hex-code of the selected color tile)
 
 
-In our current example, we would simply have to call `this.props.setQuery()` with the updated query and value of the component:
+In our current example, we would simply have to call `this.$props.setQuery()` with the updated query and value of the component:
 
-```javascript{17-28}
-class ColorPickerWrapper extends React.Component {
-    render() {
-        let colors = [];
+```javascript
+<template>
+    <div v-if="colors">
+        <color-picker
+            colors="colors"
+            @change="onChange"
+        />
+    </div>
+</template>
+<script>
+export default {
+    props: {
+        aggregations: Object,
+        setQuery: Function,
+    },
+    methods: {
+        onChange(newColor) {   // handles color change
+            const query = {
+                query: {
+                    term: { color: newColor }
+                }
+            };
 
-        if (
-            // checking for when component gets the aggregation results
-            this.props.aggregations
-            && this.props.aggregations.colors
-            && this.props.aggregations.colors.buckets.length
-        ) {
-            colors = this.props.aggregations.map(color => color.key);
+            this.$props.setQuery({
+                query,
+                value: newColor
+            })
         }
-
-        return (
-            <ColorPicker
-                colors={colors}
-                onChange={(newColor) => {     // handles color change
-                    const query = {
-                        query: {
-                            term: { color: newColor }
-                        }
-                    };
-
-                    this.props.setQuery({
-                        query,
-                        value: newColor
-                    })
-                }}
-            />
-        )
-    }
+    },
+    computed: {
+        colors: () => {
+            let colors = [];
+            if (
+                // checking for when component gets the aggregation results
+                this.$props.aggregations
+                && this.$props.aggregations.colors
+                && this.$props.aggregations.colors.buckets.length
+            ) {
+                colors = this.$props.aggregations.map(color => color.key);
+            }
+            return colors;
+        },
+    },
 }
+</script>
 ```
-
-Now, the components which will have `myColorPicker` present in their `react` prop can react to the changes in the ColorPicker component based on the query passed to the setQuery method. You can check a [similar example implementation here](https://github.com/appbaseio/reactivesearch/blob/dev/packages/web/examples/ReactiveComponent/src/index.js).
 
 ### Props
 
-#### Child Component
+#### Scope Data Object
 
 - **hits** `Array`  
     `hits` prop is an array of results from the Elasticsearch query of the component.
@@ -163,14 +182,8 @@ Now, the components which will have `myColorPicker` present in their `react` pro
  
 - **className** `String`  
     CSS class to be injected on the component container.
-- **style** `Object`  
-    CSS styles to be applied to the **DataSearch** component.
 - **defaultQuery** `Function`  
     **returns** the default query to be applied to the component, as defined in Elasticsearch Query DSL.
-- **onQueryChange** `Function`  
-    is a callback function which accepts component's **prevQuery** and **nextQuery** as parameters. It is called everytime the component's query changes. This prop is handy in cases where you want to generate a side-effect whenever the component's query would change.
-- **onAllData** `Function`  
-    callback function which provides `hits` and `aggregations` as function params.
 - **showFilter** `Boolean` [optional]  
     show as filter when a value is selected in a global selected filters view. Defaults to `true`.
 - **filterLabel** `String` [optional]  
@@ -190,12 +203,8 @@ Now, the components which will have `myColorPicker` present in their `react` pro
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
 
-### Examples
-
-<br />
-
-<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/dev/packages/web/examples/ReactiveComponent" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
-
-See storybook for ReactiveComponent on playground.
-
-<a href="https://opensource.appbase.io/playground/?selectedKind=Base%20components%2FReactiveComponent&selectedStory=A%20custom%20component" target="_blank">A custom component using ReactiveComponent</a>
+## Events
+- **queryChange** 
+    is a event which accepts component's **prevQuery** and **nextQuery** as parameters. It is called everytime the component's query changes. This prop is handy in cases where you want to generate a side-effect whenever the component's query would change.
+- **allData**  
+    event which provides `hits` and `aggregations` as an object properties.
