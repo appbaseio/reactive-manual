@@ -212,7 +212,8 @@ class Header extends Component {
                   }}
                 >
                   <Dropdown
-                    options={['v2 - Web', 'v0.10 - Native', 'v1 - Vue']}
+                   // options={['v2 - Web', 'v0.10 - Native', 'v1 - Vue']}
+                    options={['v2 - Web', 'v0.10 - Native']}
                     value="v2 - Web"
                     onChange={this.switchDocs}
                   />
