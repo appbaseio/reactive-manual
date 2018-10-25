@@ -97,18 +97,20 @@ exports.createPages = async ({ graphql }) => {
       let prevEndsAt = 0; // keep track of last matched heading
       headings.forEach(({ value }, index) => {
         const hashObject = getHashId(value, tableOfContents, prevEndsAt);
-        const { hashId, endsAt } = hashObject;
-        if (hashId) {
-          const hashPos = html.indexOf(hashId, prevHashIndex);
-          searchData.push({
-            title,
-            heading: prevHashId === '' ? '' : headings[index - 1].value,
-            tokens: getTokens(html.substring(prevHashIndex, hashPos)),
-            url: slug + prevHashId,
-          });
-          prevHashIndex = hashPos;
-          prevHashId = hashId;
-          prevEndsAt = endsAt;
+        if(hashObject) {
+          const { hashId, endsAt } = hashObject;
+          if (hashId) {
+            const hashPos = html.indexOf(hashId, prevHashIndex);
+            searchData.push({
+              title,
+              heading: prevHashId === '' ? '' : headings[index - 1].value,
+              tokens: getTokens(html.substring(prevHashIndex, hashPos)),
+              url: slug + prevHashId,
+            });
+            prevHashIndex = hashPos;
+            prevHashId = hashId;
+            prevEndsAt = endsAt;
+          }
         }
       });
       // push for the last heading
