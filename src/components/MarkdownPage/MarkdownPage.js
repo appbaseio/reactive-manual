@@ -90,7 +90,7 @@ const MarkdownPage = ({
                   <div css={{marginTop: 80}}>
                     <a
                       css={sharedStyles.articleLayout.editLink}
-                      href={`https://github.com/appbaseio/reactive-manual/tree/v2/content/${markdownRemark
+                      href={`https://github.com/appbaseio/reactive-manual/tree/v1-vue/content/${markdownRemark
                         .fields.path}`}>
                       Edit this page
                     </a>

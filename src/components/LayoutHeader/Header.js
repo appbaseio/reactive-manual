@@ -159,7 +159,7 @@ class Header extends Component {
                 },
               }}>
               <HeaderLink
-                isActive={location.pathname === '/' || location.pathname === '/reactive-manual/' || location.pathname === '/reactive-manual'}
+                isActive={location.pathname === '/' || location.pathname === '/reactive-manual/vue' || location.pathname === '/reactive-manual/vue/'}
                 title="Home"
                 to="/"
               />
@@ -219,7 +219,7 @@ class Header extends Component {
                   />
                 </div>
               }
-              {location.pathname !== '/' && location.pathname !== '/reactive-manual/' && !this.state.showSearch && (
+              {location.pathname !== '/' && location.pathname !== '/reactive-manual/vue' && location.pathname !== '/reactive-manual/vue/'  && !this.state.showSearch && (
                 <div onClick={this.toggleSearch} role="button" tabIndex="0" css={{ cursor: 'pointer', paddingLeft: 10 }}>
                   <SearchSvg />
                 </div>
