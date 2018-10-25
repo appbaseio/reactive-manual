@@ -166,22 +166,22 @@ class Header extends Component {
               <HeaderLink
                 isActive={location.pathname.includes('/getting-started/')}
                 title="Getting Started"
-                to="/getting-started/"
+                to="getting-started/"
               />
               <HeaderLink
                 isActive={location.pathname.includes('/base-components/')}
                 title="Components"
-                to="/list-components/singlelist.html"
+                to="list-components/singlelist.html"
               />
               <HeaderLink
                 isActive={location.pathname.includes('/theming/')}
                 title="Theming"
-                to="/theming/style.html"
+                to="theming/style.html"
               />
               <HeaderLink
                 isActive={location.pathname.includes('/advanced/')}
                 title="Advanced"
-                to="/advanced/customquery.html"
+                to="advanced/customquery.html"
               />
             </nav>
             <div
