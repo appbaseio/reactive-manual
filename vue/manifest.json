@@ -1,4 +1,5 @@
 {
   "main.css": "styles.css",
-  "main.js": "bundle-for-css.js"
+  "main.js": "render-page.js",
+  "main.js.map": "render-page.js.map"
 }
