@@ -76,9 +76,9 @@ Example uses:
     preset map's center position by specifying an object with valid `lat` and `lng` values. This prop, when set, will cause the component to run a geo-distance query with a distance of 10mi (Refer: `defaultRadius` and `unit` prop to configure the distance).
 - **center** `Object` [optional]  
     set map's center position by specifying an object with valid `lat` and `lng` values. This prop, when set, will cause the component to run a geo-distance query with a distance of 10mi (Refer: `defaultRadius` and `unit` prop to configure the distance).
-- **defaultRadius** `Object` [optional]  
+- **defaultRadius** `Number` [optional]  
     used as distance value for the geo-distance query when `defaultCenter` or `center` is set. It accepts all positive integers.
-- **unit** `Object` [optional]  
+- **unit** `String` [optional]  
     unit for distance measurement, uses `mi` (for miles) by default. Distance units can be specified from the following:  
     ![screenshot](https://i.imgur.com/STbeagk.png)
 - **showMapStyles** `Boolean` [optional]  
@@ -97,6 +97,8 @@ Example uses:
     whether to set the *Search As I Move* checkbox. Defaults to `false`.
 - **onPopoverClick** `function` [optional]  
     a function that takes one argument for getting a marker's data and returns an HTML markup to be displayed in the popover box.
+- **autoClosePopover** `Boolean` [optional]  
+    automatically closes the exisiting open popovers when `onPopoverClick` gets fired. Defaults to `false`.
 - **stream** `Boolean` [optional]  
     whether to stream new result (aka realtime view) updates in the UI. Defaults to `false`.
 - **react** `Object`  

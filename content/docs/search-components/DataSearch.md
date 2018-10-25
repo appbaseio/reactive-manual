@@ -69,6 +69,8 @@ Example uses:
     set the title of the component to be shown in the UI.
 - **defaultSelected** `string` [optional]  
     preset the search query text in the search box.
+- **downShiftProps** `Object` [optional]  
+    allow passing props directly to `Downshift` component. You can read more about Downshift props [here](https://github.com/paypal/downshift#--downshift-------).
 - **fieldWeights** `Array` [optional]  
     set the search weight for the database fields, useful when dataField is an Array of more than one field. This prop accepts an array of numbers. A higher number implies a higher relevance weight for the corresponding field in the search results.
 - **placeholder** `String` [optional]  
@@ -85,6 +87,8 @@ Example uses:
     allows setting a custom icon for clearing text instead of the default cross.
 - **autosuggest** `Boolean` [optional]  
     set whether the autosuggest functionality should be enabled or disabled. Defaults to `true`.
+- **strictSelection** `Boolean` [optional]  
+    defaults to `false`. When set to `true` the component will only set its value and fire the query if the value was selected from the suggestion. Otherwise the value will be cleared on selection. This is only relevant with `autosuggest`.
 - **defaultSuggestions** `Array` [optional]
     preset search suggestions to be shown on focus when the search box does not have any search query text set. Accepts an array of objects each having a **label** and **value** property. The label can contain either String or an HTML element.
 - **debounce** `Number` [optional]  
@@ -120,7 +124,7 @@ Example uses:
     * **or** returns all the results matching **any** of the search query text's parameters. For example, searching for "bat man" with **or** will return all the results matching either "bat" or "man".
     * On the other hand with **and**, only results matching both "bat" and "man" will be returned. It returns the results matching **all** of the search query text's parameters.
 - **defaultQuery** `Function` [optional]    
-    Lets you append your own query along with the existing query for search. This works only if you're not using `customQuery` since the query is applied to the existing one. The function receives `value` and the current `props` and expects you to return a query to append. For example, you may use this to limit your searches to harry potter books by something like:
+    Lets you append your own query along with the existing query for search. This also works with `customQuery` and the query gets appended to the final query. The function receives `value` and the current `props` and expects you to return a query to append. For example, you may use this to limit your searches to harry potter books by something like:
 
 ```js
 <DataSearch
@@ -175,10 +179,14 @@ Read more about it [here](/theming/class.html).
   ...
   onSuggestion={(suggestion) => ({
     label: (<div>{suggestion._source.original_title} by<span style={{ color: 'dodgerblue', marginLeft: 5 }}>{suggestion._source.authors}</span></div>),
-    value: suggestion._source.original_title
+    value: suggestion._source.original_title,
+    source: suggestion._source  // for onValueSelected to work with onSuggestion
   })}
 />
 ```
+
+- it's also possible to take control of the entire suggestions rendering using the `renderSuggestions` prop. Check the [custom suggestions](/advanced/customsuggestions.html) recipe for more info.
+
 6. add the following [synthetic events](https://reactjs.org/events.html) to the underlying `input` element:
     - onBlur
     - onFocus
@@ -220,7 +228,7 @@ Read more about it [here](/theming/class.html).
     }
   }
   onValueSelected={
-    function(value) {
+    function(value, cause, source) {
       console.log("current value: ", value)
     }
   }
@@ -251,7 +259,10 @@ Read more about it [here](/theming/class.html).
 - **onValueChange** `Function`  
     is a callback function which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when a user searches for a product in a DataSearch.
 - **onValueSelected** `Function`  
-    is called with the value selected via user interaction. It works only with `autosuggest` and is called whenever a suggestion is selected or a search is performed either by pressing **enter** key or the input is blurred.
+    is called with the value selected via user interaction. It works only with `autosuggest` and is called whenever a suggestion is selected or a search is performed by pressing **enter** key. It also passes the `cause` of action and the `source` object if the cause of action was `'SUGGESTION_SELECT'`. The possible causes are:
+    - `'SUGGESTION_SELECT'`
+    - `'ENTER_PRESS'`
+    - `'CLEAR_VALUE'
 - **onQueryChange** `Function`  
     is a callback function which accepts component's **prevQuery** and **nextQuery** as parameters. It is called everytime the component's query changes. This prop is handy in cases where you want to generate a side-effect whenever the component's query would change.
 - **react** `Object`  

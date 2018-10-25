@@ -52,10 +52,14 @@ This is the first component you will need to add when using `ReactiveSearch`.
 </ReactiveBase>
 ```
 
+- **analytics** `Boolean` [optional]     
+    allows recording search analytics (and click analytics) when set to `true` and appbase.io is used as a backend. Defaults to `false`. Check the [analytics recipe](/advanced/analytics.html) for click analytics implementation.
 - **theme** `Object` [optional]     
     allows over-writing of default styles by providing the respective key/values. You can read more about its usage [here](/theming/themes.html)
 - **themePreset** `String` [optional]       
     allows over-writing of default styles by providing a preset value. Supported values are `light` (default) and `dark`. You can read more about its usage [here](/theming/themes.html)
+- **transformRequest** `Function` [optional]  
+    Enables transformation of network request before execution. This function will give you the the request object as the param and expect an updated request in return, for execution. Note that this is an experimental API and will likely change in the future.
 
 ### Connect to Elasticsearch
 

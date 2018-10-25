@@ -1,5 +1,18 @@
 - title: Advanced
   items:
+    - id: customsuggestions
+      title: Custom Suggestions
+      href: /advanced/customsuggestions.html
+      forceInternal: true
+      subitems:
+        - id: custom-suggestions-for-datasearch
+          title: Custom Suggestions for DataSearch
+          href: /advanced/customsuggestions.html#custom-suggestions-for-datasearch
+          forceInternal: true
+        - id: custom-suggestions-for-categorysearch
+          title: Custom Suggestions for CategorySearch
+          href: /advanced/customsuggestions.html#custom-suggestions-for-categorysearch
+          forceInternal: true
     - id: customquery
       title: Custom Queries
       href: /advanced/customquery.html
@@ -111,4 +124,13 @@
         - id: typescript
           title: Usage
           href: /advanced/typescript.html
+          forceInternal: true
+    - id: analytics
+      title: Analytics
+      href: /advanced/analytics.html
+      forceInternal: true
+      subitems:
+        - id: click-analytics
+          title: Usage
+          href: /advanced/typescript.html#click-analytics
           forceInternal: true

@@ -4,13 +4,10 @@ title: "Custom Queries"
 layout: docs
 sectionid: docs
 permalink: advanced/customquery.html
-prev: theming/class.html
-prevTitle: "Theming: ClassName Injection"
+prev: theming/customsuggestions.html
+prevTitle: "Custom Suggestions"
 next: advanced/react.html
 nextTitle: "React Prop"
-redirect_from:
-    - "advanced"
-    - "reactive-manual/advanced"
 ---
 
 ### Data Aware UI components

@@ -58,6 +58,7 @@ Example uses:
     "start": "Start",
     "end": "End"
   }}
+  showFilter={true}
   stepValue={1}
   showHistogram={true}
   interval={2}
@@ -82,6 +83,8 @@ Example uses:
     an object with `start` and `end` keys and corresponding numeric values denoting the pre-selected range values.
 - **rangeLabels** `Object` [optional]  
     an object with `start` and `end` keys and corresponding `String` labels to show labels near the ends of the `RangeInput` component.
+- **showFilter** `Boolean` [optional]  
+    show the selected item as a filter in the selected filters view. Defaults to `true`.
 - **snap** `Boolean` [optional]
     makes the slider snap on to points depending on the `stepValue` when the slider is released. Defaults to `true`. When set to `false`, `stepValue` is ignored.
 - **stepValue** `Number` [optional]  

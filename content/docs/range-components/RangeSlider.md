@@ -60,6 +60,7 @@ While `RangeSlider` only requires the above props to be used, it comes with many
   }}
   stepValue={1}
   showHistogram={true}
+  showFilter={true}
   interval={2}
   react={{
     and: ["CategoryFilter", "SearchFilter"]
@@ -82,10 +83,14 @@ While `RangeSlider` only requires the above props to be used, it comes with many
     an object with `start` and `end` keys and corresponding numeric values denoting the pre-selected range values.
 - **rangeLabels** `Object` [optional]  
     an object with `start` and `end` keys and corresponding `String` labels to show labels near the ends of the `RangeSlider` component.
+- **showFilter** `Boolean` [optional]  
+    show the selected item as a filter in the selected filters view. Defaults to `true`.
 - **snap** `Boolean` [optional]
     makes the slider snap on to points depending on the `stepValue` when the slider is released. Defaults to `true`. When set to `false`, `stepValue` is ignored.
 - **stepValue** `Number` [optional]  
     step value specifies the slider stepper. Value should be an integer greater than or equal to `1` and less than `Math.floor((range.end - range.start) / 2)`. Defaults to 1.
+- **tooltipTrigger** `String` [optional]  
+    trigger the tooltip according to the value specified. Can be `hover`, `focus`, `always` and `none`. Defaults to `none`.
 - **showHistogram** `Boolean` [optional]  
     whether to display the range histogram or not. Defaults to `true`.
 - **interval** `Number` [optional]  

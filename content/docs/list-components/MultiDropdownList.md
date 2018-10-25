@@ -82,6 +82,8 @@ Example uses:
     * In `and` mode, the applied query filters results where all of the selected items are present.
 - **showCount** `Boolean` [optional]  
     show count of number of occurences besides an item. Defaults to `true`.
+- **showSearch** `Boolean` [optional]  
+    whether to show a searchbox to filter the list items locally. Defaults to false.
 - **renderListItem** `Function` [optional]  
     customize the rendered list via a function which receives the item label and count and expects a JSX or String back. For example:
 ```js
@@ -95,6 +97,8 @@ renderListItem={(label, count) => (
 )}
 ```
 
+- **transformData** `Function` [optional]  
+    allows transforming the data to render inside the list. You can change the order, remove, or add items, tranform their values with this method. It provides the data as param which is an array of objects of shape `{ key: <string>, doc_count: <number> }` and expects you to return the array of objects of same shape.
 - **showMissing** `Boolean` [optional]  
     defaults to `false`. When set to `true` it also retrives the aggregations for missing fields under the label specified by `missingLabel`.
 - **missingLabel** `String` [optional]  
@@ -107,6 +111,8 @@ renderListItem={(label, count) => (
     An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
+- **showLoadMore** `Boolean` [optional]  
+    defaults to `false` and works only with elasticsearch >= 6 since it uses [composite aggregations](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-composite-aggregation.html). This adds a "Load More" button to load the aggs on demand combined with the `size` prop. Composite aggregations are in beta and this is an experimental API which might change in a future release.
 
 ## Demo
 
