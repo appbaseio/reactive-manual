@@ -13,6 +13,10 @@
           title: Props
           href: /list-components/singlelist.html#props
           forceInternal: true
+        - id: demo
+          title: Demo
+          href: /list-components/singlelist.html#demo
+          forceInternal: true
         - id: styles
           title: Styles
           href: /list-components/singlelist.html#styles
@@ -24,6 +28,10 @@
         - id: events
           title: Events
           href: /list-components/singlelist.html#events
+          forceInternal: true
+        - id: examples
+          title: Examples
+          href: /list-components/singlelist.html#examples
           forceInternal: true
     - id: multilist
       title: MultiList
@@ -38,6 +46,10 @@
           title: Props
           href: /list-components/multilist.html#props
           forceInternal: true
+        - id: demo
+          title: Demo
+          href: /list-components/multilist.html#demo
+          forceInternal: true
         - id: styles
           title: Styles
           href: /list-components/multilist.html#styles
@@ -49,4 +61,8 @@
         - id: events
           title: Events
           href: /list-components/multilist.html#events
+          forceInternal: true
+        - id: examples
+          title: Examples
+          href: /list-components/multilist.html#examples
           forceInternal: true

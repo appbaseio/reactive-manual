@@ -124,6 +124,13 @@ or
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
 
+
+## Demo
+
+<br />
+
+<iframe src="https://codesandbox.io/embed/0olr1xy9m0" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+
 ## Styles
 
 `MultiList` component supports `innerClass` prop with the following keys:    
@@ -216,3 +223,7 @@ Read more about it [here](/theming/class.html).
     
 - **valueChange**  
     is an event which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This event is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when a list item is selected in a "Discounted Price" SingleList.
+
+## Examples
+
+<a href="https://reactivesearch-vue-playground.netlify.com/?selectedKind=List%20Components%2FMulitList&selectedStory=Basic&full=0&addons=1&stories=1&panelRight=0" target="_blank">MulitList with default props</a>

@@ -13,6 +13,10 @@
           title: Props
           href: /result-components/reactivelist.html#props
           forceInternal: true
+        - id: demo
+          title: Demo
+          href: /result-components/reactivelist.html#demo
+          forceInternal: true
         - id: styles
           title: Styles
           href: /result-components/reactivelist.html#styles
@@ -24,4 +28,8 @@
         - id: events
           title: Events
           href: /result-components/reactivelist.html#events
+          forceInternal: true
+        - id: examples
+          title: Examples
+          href: /result-components/reactivelist.html#examples
           forceInternal: true

@@ -29,3 +29,7 @@
           title: Events
           href: /search-components/datasearch.html#events
           forceInternal: true
+        - id: examples
+          title: Examples
+          href: /search-components/datasearch.html#examples
+          forceInternal: true

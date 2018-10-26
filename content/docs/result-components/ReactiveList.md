@@ -126,6 +126,12 @@ Example uses:
 - **onNoResults** `String` [optional]  
     show custom message or component when no results founds.
 
+## Demo
+
+<br />
+
+<iframe src="https://codesandbox.io/embed/mx111xx0x" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+
 ## Styles
 
 `ReactiveList` component supports `innerClass` prop with the following keys:    
@@ -207,4 +213,8 @@ Read more about it [here](/theming/class.html).
 
 - **error**
     invoked when query listener throws any error
+
+## Examples
+
+<a href="https://reactivesearch-vue-playground.netlify.com/?selectedKind=Result%20Components%2FReactive%20List&selectedStory=Basic&full=0&addons=1&stories=1&panelRight=0" target="_blank">ReactiveList with default props</a>
     

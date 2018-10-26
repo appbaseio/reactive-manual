@@ -137,6 +137,12 @@ Example uses:
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
 
+## Demo
+
+<br />
+
+<iframe src="https://codesandbox.io/embed/xpm7op166w" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+
 ## Styles
 
 `DataSearch` component supports `innerClass` prop with the following keys:    
@@ -232,3 +238,7 @@ Read more about it [here](/theming/class.html).
 - **keyPress**
 - **keyDown**
 - **keyUp**
+
+## Examples
+
+<a href="https://reactivesearch-vue-playground.netlify.com/?selectedKind=Search%20Components%2FDataSearch&selectedStory=Basic&full=0&addons=1&stories=1&panelRight=0" target="_blank">DataSearch with default props</a>

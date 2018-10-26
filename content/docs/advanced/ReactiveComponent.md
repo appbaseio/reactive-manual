@@ -203,8 +203,18 @@ export default {
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
 
+## Demo
+
+<br />
+
+<iframe src="https://codesandbox.io/embed/lr707846pl" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+
 ## Events
 - **queryChange** 
     is a event which accepts component's **prevQuery** and **nextQuery** as parameters. It is called everytime the component's query changes. This prop is handy in cases where you want to generate a side-effect whenever the component's query would change.
 - **allData**  
     event which provides `hits` and `aggregations` as an object properties.
+
+## Examples
+
+<a href="https://reactivesearch-vue-playground.netlify.com/?selectedKind=Base%20components%2FReactiveComponent&selectedStory=A%20custom%20component&full=0&addons=1&stories=1&panelRight=0" target="_blank">ReactiveComponent with default props</a>

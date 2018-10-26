@@ -13,6 +13,10 @@
           title: Props
           href: /range-components/singlerange.html#props
           forceInternal: true
+        - id: demo
+          title: Demo
+          href: /range-components/singlerange.html#demo
+          forceInternal: true
         - id: styles
           title: Styles
           href: /range-components/singlerange.html#styles
@@ -24,4 +28,8 @@
         - id: events
           title: Events
           href: /range-components/singlerange.html#events
+          forceInternal: true
+        - id: examples
+          title: Examples
+          href: /range-components/singlerange.html#examples
           forceInternal: true
