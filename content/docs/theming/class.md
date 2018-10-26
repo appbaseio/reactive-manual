@@ -6,9 +6,9 @@ sectionid: class
 permalink: theming/class.html
 prev: theming/style.html
 prevTitle: "Style"
-next: advanced/mapping.html
+next: advanced/customquery.html
 nextTitle: "Advanced: Custom Queries"
-redirect_from:
+redirect_from: 
     - 'theming/class'
     - 'class'
 ---

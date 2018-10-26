@@ -98,14 +98,14 @@ new Vue({
   el: '#app',
   components: { ReactiveBase },
   template: 
-	  `<ReactiveBase 
+	  `<reactive-base 
 			app="car-store" 
 			credentials="cf7QByt5e:d2d60548-82a9-43cc-8b40-93cbbe75c34c">
 			// other components will go here.
 			<div>
 				Hello ReactiveSearch!
 			</div>
-		</ReactiveBase>`
+		</reactive-base>`
 })
 ```
 
