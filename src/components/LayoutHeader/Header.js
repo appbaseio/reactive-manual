@@ -5,7 +5,7 @@ import {colors, media} from 'theme';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
 
-import logoPng from 'icons/logo.png';
+import logoPng from './icons/logo.png';
 import SearchBox from 'components/SearchBox';
 import SearchSvg from './SearchSvg';
 
@@ -37,13 +37,13 @@ class Header extends Component {
       this.toggleSearch();
     }
   }
-
+  
   switchDocs = (value) => {
-    if (location.pathname.includes('/reactive-manual/')) {
+    if (location.pathname.includes('/reactive-manual/vue')) {
       if(value.value === 'v0.10 - Native') {
         window.location.href = window.location.origin + '/reactive-manual/native';
-      } else if(value.value === 'v1 - Vue') {
-        window.location.href = window.location.origin + '/reactive-manual/vue';
+      } else if(value.value === 'v2 - Web') {
+        window.location.href = window.location.origin + '/reactive-manual';
       }
     }
   }
@@ -166,22 +166,22 @@ class Header extends Component {
               <HeaderLink
                 isActive={location.pathname.includes('/getting-started/')}
                 title="Getting Started"
-                to="getting-started/"
+                to="/getting-started/"
               />
               <HeaderLink
                 isActive={location.pathname.includes('/base-components/')}
                 title="Components"
-                to="list-components/singlelist.html"
+                to="/list-components/singlelist.html"
               />
-              <HeaderLink
-                isActive={location.pathname.includes('/theming/')}
-                title="Theming"
-                to="theming/style.html"
-              />
+               <HeaderLink
+                  isActive={location.pathname.includes('/theming/')}
+                  title="Theming"
+                  to="/theming/style.html"
+                />
               <HeaderLink
                 isActive={location.pathname.includes('/advanced/')}
                 title="Advanced"
-                to="advanced/customquery.html"
+                to="/advanced/reactivecomponent.html"
               />
             </nav>
             <div
@@ -213,13 +213,17 @@ class Header extends Component {
                   }}
                 >
                   <Dropdown
-                    options={['v2 - Web', 'v0.10 - Native', 'v1 - Vue']}
+                    options={[
+                      'v2 - Web',
+                      'v0.10 - Native',
+                      'v1 - Vue'
+                    ]}
                     value="v1 - Vue"
                     onChange={this.switchDocs}
                   />
                 </div>
               }
-              {location.pathname !== '/' && location.pathname !== '/reactive-manual/vue' && location.pathname !== '/reactive-manual/vue/'  && !this.state.showSearch && (
+               {location.pathname !== '/' && location.pathname !== '/reactive-manual/vue' && location.pathname !== '/reactive-manual/vue/' && !this.state.showSearch && (
                 <div onClick={this.toggleSearch} role="button" tabIndex="0" css={{ cursor: 'pointer', paddingLeft: 10 }}>
                   <SearchSvg />
                 </div>
