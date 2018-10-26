@@ -211,7 +211,7 @@ class Header extends Component {
                     options={[
                       'v2 - Web',
                       'v0.10 - Native',
-                      'v1 - vue'
+                      'v1 - Vue'
                     ]}
                     value="v0.10 - Native"
                     onChange={this.switchDocs}
