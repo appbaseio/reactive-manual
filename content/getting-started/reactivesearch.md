@@ -78,7 +78,7 @@ new Vue({
 
 Lets add our first ReactiveSearch component: [ReactiveBase](/getting-started/reactivebase.html), it is a backend connector where we can configure the Elasticsearch index / authorization setup.
 
-We will be using `PascalCase` here. You can read more about component naming [here](https://vuejs.org/v2/guide/components-registration.html#Name-Casing).
+We will be using `kebab-case` here. You can read more about component naming convention [here](https://vuejs.org/v2/guide/components-registration.html#Name-Casing).
 
 We will demonstrate creating an index using [appbase.io](https://appbase.io) service, although you can use any Elasticsearch backend within ReactiveBase.
 
@@ -90,12 +90,12 @@ We will update our `src/App.vue` file to add ReactiveBase component.
 ```js
 <template>
   <div id="app">
-    <ReactiveBase 
+    <reactive-base 
       app="good-books-ds" 
       credentials="nY6NNTZZ6:27b76b9f-18ea-456c-bc5e-3a5263ebc63d"
     >
       <h1>Hello from ReactiveBase 👋</h1>
-    </ReactiveBase>
+    </reactive-base>
   </div>
 </template>
 
@@ -119,18 +119,18 @@ We will update our `src/App.vue` file to add ReactiveBase component.
 
 This is how the app should look after running the `yarn run serve` command.
 
-![ReactiveBase](https://i.imgur.com/MkfedrW.png)
+![reactive-base](https://i.imgur.com/MkfedrW.png)
 
 ---
 
 ### Step 3: Adding Filters and Result Components
 
-For this app, we will be using [MultiList](/search-components/multilist.html) and [SingleRange](/basic-components/singlerange.html) components for filtering the dataset. And [ReactiveList](/search-components/reactivelist.html) component for showing the search results.
+For this app, we will be using [multi-list](/search-components/multilist.html) and [single-range](/basic-components/singlerange.html) components for filtering the dataset. And [reactive-list](/search-components/reactivelist.html) component for showing the search results.
 
 Lets add them within the ReactiveBase component. But before we do that, we will look at the important props for each.
 
 ```js
-<MultiList
+<multi-list
   componentId="Authors"
   dataField="authors.raw"
   class="filter"
@@ -139,14 +139,14 @@ Lets add them within the ReactiveBase component. But before we do that, we will 
 />
 ```
 
-The [**MultiList**](/search-components/multilist.html) creates a multiple selection based list UI component that is connected to a database field and shows items using the `author.raw` field in the dataset. Here is how it will look visually.
+The [**multi-list**](/search-components/multilist.html) creates a multiple selection based list UI component that is connected to a database field and shows items using the `author.raw` field in the dataset. Here is how it will look visually.
 
 ![](https://i.imgur.com/WOvQKGj.png)
 
-Next, we will look at the [**SingleRange**](/basic-components/singlerange.html) component for creating a ratings based filter.
+Next, we will look at the [**single-range**](/basic-components/singlerange.html) component for creating a ratings based filter.
 
 ```js
-<SingleRange
+<single-range
   componentId="Ratings"
   dataField="average_rating"
   :data="[
@@ -161,12 +161,12 @@ Next, we will look at the [**SingleRange**](/basic-components/singlerange.html) 
 
 ![](https://i.imgur.com/EVW0ran.png)
 
-**SingleRange** filters the DB by `rating` field based on the UI choice the user makes. We also set the *Rating > 4* option to be default selected when the UI loads up first.
+**single-range** filters the DB by `rating` field based on the UI choice the user makes. We also set the *Rating > 4* option to be default selected when the UI loads up first.
 
-Finally, we need a component to show the matching results. [**ReactiveList**](/search-components/reactivelist.html) does exactly this.
+Finally, we need a component to show the matching results. [**reactive-list**](/search-components/reactivelist.html) does exactly this.
 
 ```js
-<ReactiveList
+<reactive-list
   componentId="SearchResult"
   dataField="original_title.raw"
   className="result-list-container"
@@ -198,7 +198,7 @@ Finally, we need a component to show the matching results. [**ReactiveList**](/s
       </div>
     </div>
   </div>
-</ReactiveList>
+</reactive-list>
 ```
 
 The `:react` prop here specifies that it should construct a query based on the current selected values of searchbox and ratingsfilter components. Every time the user changes the input value, a new query is fired -- you don't need to write a manual query for any of the UI components here, although you can override it via `:customQuery` prop.  
@@ -212,16 +212,16 @@ Now, we will put all three components together to create the UI view.
 ```js
 <template>
   <div id="app">
-    <ReactiveBase app="good-books-yj" credentials="gBgUqs2tV:3456f3bf-ea9e-4ebc-9c93-08eb13e5c87c" >
+    <reactive-base app="good-books-yj" credentials="gBgUqs2tV:3456f3bf-ea9e-4ebc-9c93-08eb13e5c87c" >
       <div class="filters-container">
-        <MultiList
+        <multi-list
           componentId="Authors"
           dataField="authors.raw"
           class="filter"
           title="Select Authors"
           selectAllLabel="All Authors"
         />
-        <SingleRange
+        <single-range
           componentId="Ratings"
           dataField="average_rating"
           :data="[
@@ -233,7 +233,7 @@ Now, we will put all three components together to create the UI view.
           class="filter"
         />
       </div>
-      <ReactiveList
+      <reactive-list
         componentId="SearchResult"
         dataField="original_title.raw"
         className="result-list-container"
@@ -264,8 +264,8 @@ Now, we will put all three components together to create the UI view.
             </div>
           </div>
         </div>
-      </ReactiveList>
-    </ReactiveBase>
+      </reactive-list>
+    </reactive-base>
   </div>
 </template>
 
@@ -297,7 +297,7 @@ The only thing missing at this point is the styling, ReactiveSearch doesn't use 
 
 ### Step 4: Adding CSS 
 
-By importing `styles.css` file, here is our final app layout.
+By importing `styles.css` file, here is our final app layout and responsive methods to switch between container.
 
 ```js
 <script>
