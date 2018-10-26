@@ -17,8 +17,8 @@
       "path---result-components-reactivelist-html-19c769caa5e94912a1a3.js.map"
     ],
     "path---getting-started-reactivesearch-html": [
-      "path---getting-started-reactivesearch-html-98b5f23d24833c43f8a7.js",
-      "path---getting-started-reactivesearch-html-98b5f23d24833c43f8a7.js.map"
+      "path---getting-started-reactivesearch-html-39db780e996143f9548e.js",
+      "path---getting-started-reactivesearch-html-39db780e996143f9548e.js.map"
     ],
     "path---advanced-react-html": [
       "path---advanced-react-html-c458c414f03e8c755337.js",
@@ -53,8 +53,8 @@
       "path---search-components-datasearch-html-37c558c4b048d7c9ac03.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-b0ae2214d7a26a7004e8.js",
-      "component---src-layouts-index-js-b0ae2214d7a26a7004e8.js.map"
+      "component---src-layouts-index-js-84486073f52469fd39ff.js",
+      "component---src-layouts-index-js-84486073f52469fd39ff.js.map"
     ],
     "path---jsx-compiler-html": [
       "path---jsx-compiler-html-a0e39f21c11f6a62c5ab.js",
@@ -111,14 +111,14 @@
       "path---getting-started-componentsindex-html-7b102789c7b978be61c8.js.map"
     ],
     "app": [
-      "app-097c20a5407d5548f48a.js",
+      "app-6819c8a881a7b143caf0.js",
       "build-js-styles.css",
-      "app-097c20a5407d5548f48a.js.map",
+      "app-6819c8a881a7b143caf0.js.map",
       "build-js-styles.css.map"
     ],
     "path---theming-class-html": [
-      "path---theming-class-html-90846d20fdf59f7ecff4.js",
-      "path---theming-class-html-90846d20fdf59f7ecff4.js.map"
+      "path---theming-class-html-f1d699e89b7c09910bdf.js",
+      "path---theming-class-html-f1d699e89b7c09910bdf.js.map"
     ],
     "component---src-templates-docs-js": [
       "component---src-templates-docs-js-e840c7676d18ae892ed2.js",
@@ -137,8 +137,8 @@
       "component---src-pages-blog-all-html-js-4e8968908d11397a30ea.js.map"
     ],
     "component---src-templates-home-js": [
-      "component---src-templates-home-js-c3d3f05978133b1042f2.js",
-      "component---src-templates-home-js-c3d3f05978133b1042f2.js.map"
+      "component---src-templates-home-js-5e17de0c2f15df1e79f5.js",
+      "component---src-templates-home-js-5e17de0c2f15df1e79f5.js.map"
     ]
   }
 }
