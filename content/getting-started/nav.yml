@@ -17,6 +17,14 @@
           title: Adding the First Component
           href: /getting-started/reactivesearch.html#step-2-adding-the-first-component
           forceInternal: true
+        - id: step-3-adding-filters-and-result-components
+          title: Adding Filters and Result Components
+          href: /getting-started/reactivesearch.html#step-3-adding-filters-and-result-components
+          forceInternal: true
+        - id: step-4-adding-css
+          title: Adding CSS
+          href: /getting-started/reactivesearch.html#step-4-adding-css
+          forceInternal: true
     - id: data
       title: Importing Data
       href: /getting-started/data.html

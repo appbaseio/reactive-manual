@@ -295,7 +295,7 @@ The only thing missing at this point is the styling, ReactiveSearch doesn't use 
 
 ---
 
-### Step 4: Adding css 
+### Step 4: Adding CSS 
 
 By importing `styles.css` file, here is our final app layout.
 
