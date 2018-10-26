@@ -47,6 +47,14 @@
           title: Props
           href: /advanced/reactivecomponent.html#props
           forceInternal: true
+        - id: demo
+          title: Demo
+          href: /advanced/reactivecomponent.html#demo
+          forceInternal: true
+        - id: events
+          title: Events
+          href: /advanced/reactivecomponent.html#events
+          forceInternal: true
         - id: examples
           title: Examples
           href: /advanced/reactivecomponent.html#examples
