@@ -4,8 +4,7 @@ import React, {Component} from 'react';
 import {colors, media} from 'theme';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css';
-
-import logoPng from './icons/logo.png';
+import logoPng from 'icons/logo.png';
 import SearchBox from 'components/SearchBox';
 import SearchSvg from './SearchSvg';
 
