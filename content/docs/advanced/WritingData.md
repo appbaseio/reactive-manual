@@ -18,7 +18,7 @@ In this post, we will talk about a few ways to perform Create, Update and Delete
 
 ## appbase-js
 
-[`appbase-js`](https://github.com/appbaseio/appbase-js) is the javascript library from appbase.io that runs on Node.JS, UMD, React and React Native environments.
+[`appbase-js`](https://github.com/appbaseio/appbase-js) is the javascript library from appbase.io that runs on Node.JS, UMD, Vue, React and React Native environments.
 
 We recommend using appbase-js in a [Node.JS middleware](http://expressjs.com/en/guide/using-middleware.html) to perform the write operations.
 
