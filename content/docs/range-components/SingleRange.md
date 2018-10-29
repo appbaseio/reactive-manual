@@ -51,7 +51,6 @@ Example uses:
         dataField="price"
         title="Prices"
         defaultSelected="Cheap"
-        filterLabel="Price"
         :data=`
             [{"start": 0, "end": 10, "label": "Cheap"},
             {"start": 11, "end": 20, "label": "Moderate"},
@@ -59,7 +58,6 @@ Example uses:
             {"start": 51, "end": 1000, "label": "First Date"}]
         }`
         :showRadio="true"
-        :showFilter="true"
         :URLParams="false"
     >
 </template>
@@ -79,10 +77,6 @@ Example uses:
     pre-select a label from the `data` array.
 - **showRadio** `Boolean` [optional]  
     show radio button icon for each range item. Defaults to `true`.
-- **showFilter** `Boolean` [optional]  
-    show the selected item as a filter in the selected filters view. Defaults to `true`.
-- **filterLabel** `String` [optional]  
-    An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the range. This is useful for sharing URLs with the component state. Defaults to `false`.
 
