@@ -81,3 +81,11 @@ Result components are used for displaying the results (aka hits).
 
 **[ReactiveList](result-components/reactivelist.html)** displays the results in a configurable list layout. This is a more flexible display component (used internally by both ResultList and ResultCard) that allows more customization than ResultList and ResultCard.
 </p>
+
+## 5. Base Components
+
+`Base components` are useful primitive components that don’t belong to any of the above categories.
+
+### SelectedFilters
+
+**[SelectedFilters](/base-components/selectedfilters.html)** is a selection component to render the selected values from other components with a "Clear All" option.

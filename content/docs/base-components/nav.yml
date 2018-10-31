@@ -1,0 +1,23 @@
+- title: Base Components
+  items:
+    - id: selectedfilters
+      title: SelectedFilters
+      href: /base-components/selectedfilters.html
+      forceInternal: true
+      subitems:
+        - id: usage
+          title: Usage
+          href: /base-components/selectedfilters.html#usage
+          forceInternal: true
+        - id: props
+          title: Props
+          href: /base-components/selectedfilters.html#props
+          forceInternal: true
+        - id: styles
+          title: Styles
+          href: /base-components/selectedfilters.html#styles
+          forceInternal: true
+        - id: extending
+          title: Extending
+          href: /base-components/selectedfilters.html#extending
+          forceInternal: true

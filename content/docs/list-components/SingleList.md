@@ -46,10 +46,12 @@ Example uses:
         defaultSelected="London"
         selectAllLabel="All Cities"
         placeholder="Search City"
+        filterLabel="City"
         :size="100"
         :showRadio="true"
         :showCount="true"
         :showSearch="true"
+        :showFilter="true"
         :URLParams="false"
         :react="{ and: ['CategoryFilter', 'SearchFilter'] }"
     />
@@ -76,6 +78,10 @@ Example uses:
     show radio button icon for each list item. Defaults to `true`.
 - **showCount** `Boolean` [optional]  
     show count value of the number of occurences besides a list item. Defaults to `true`.
+- **showFilter** `Boolean` [optional]  
+    show as filter when a value is selected in a global selected filters view. Defaults to `true`.
+- **filterLabel** `String` [optional]  
+    An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
 - **showMissing** `Boolean` [optional]  
     defaults to `false`. When set to `true` it also retrives the aggregations for missing fields under the label specified by `missingLabel`.
 - **missingLabel** `String` [optional]  

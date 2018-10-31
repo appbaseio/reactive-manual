@@ -48,6 +48,8 @@ Example uses:
         queryFormat="or"
         selectAllLabel="All Cities"
         placeholder="Search City"
+        filterLabel="City"
+        :showFilter="true"
         :showCheckbox="true"
         :showCount="true"
         :showSearch="true"
@@ -83,6 +85,10 @@ Example uses:
     show checkbox icon for each list item. Defaults to `true`.
 - **showCount** `Boolean` [optional]  
     show a count of the number of occurences besides each list item. Defaults to `true`.
+- **showFilter** `Boolean` [optional]  
+    show as filter when a value is selected in a global selected filters view. Defaults to `true`.
+- **filterLabel** `String` [optional]  
+    An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
 - **renderListItem** `Function|scoped-slot` [optional]  
     customize the rendered list via a function or scoped-slot which receives the item label and count and expects a JSX or String back. For example:
 ```js

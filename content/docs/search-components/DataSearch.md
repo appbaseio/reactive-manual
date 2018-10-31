@@ -41,7 +41,9 @@ Example uses:
   placeholder="Search for cities or venues"
   highlightField="group_city"
   queryFormat="or"
+  filterLabel="City"
   :highlight="true"
+  :showFilter="true"
   :fieldWeights="[1, 3]"
   :fuzziness="0"
   :debounce="100"
@@ -75,6 +77,10 @@ Example uses:
     displays a custom search icon instead of the default 🔍
 - **showClear** `Boolean` [optional]  
     show a clear text icon. Defaults to `false`.
+- **showFilter** `Boolean` [optional]  
+    show as filter when a value is selected in a global selected filters view. Defaults to `true`.
+- **filterLabel** `String` [optional]  
+    An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
 - **clearIcon** `JSX` [optional]  
     allows setting a custom icon for clearing text instead of the default cross.
 - **debounce** `Number` [optional]  

@@ -88,3 +88,7 @@
           title: Result Components
           href: /getting-started/componentsindex.html#4-result-components
           forceInternal: true
+        - id: 5-base-components
+          title: Base Components
+          href: /getting-started/componentsindex.html#5-base-components
+          forceInternal: true
