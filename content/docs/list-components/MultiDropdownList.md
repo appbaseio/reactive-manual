@@ -85,7 +85,7 @@ Example uses:
 - **renderListItem** `Function|scoped-slot` [optional]  
     customize the rendered list via a function or scoped-slot which receives the item label and count and expects a JSX or String back. For example:
 ```js
-    renderListItem={(label, count) => (
+    renderListItem={({ label, count }) => (
         <div>
             {label}
             <span style={{ marginLeft: 5, color: 'dodgerblue' }}>
