@@ -21,6 +21,9 @@
 /reactive-manual/vue/basic-components/selectedfilters.html  /reactive-manual/vue/base-components/selectedfilters.html  302
 /reactive-manual/vue/base-components/selectedfilters  /reactive-manual/vue/base-components/selectedfilters.html  302
 /reactive-manual/vue/selectedfilters  /reactive-manual/vue/base-components/selectedfilters.html  302
+/reactive-manual/vue/basic-components/singlerange.html  /reactive-manual/vue/range-components/singlerange.html  302
+/reactive-manual/vue/range-components/singlerange  /reactive-manual/vue/range-components/singlerange.html  302
+/reactive-manual/vue/singlerange  /reactive-manual/vue/range-components/singlerange.html  302
 /reactive-manual/vue/basic-components/multidropdownlist.html  /reactive-manual/vue/list-components/multidropdownlist.html  302
 /reactive-manual/vue/list-components/multidropdownlist  /reactive-manual/vue/list-components/multidropdownlist.html  302
 /reactive-manual/vue/multidropdownlist  /reactive-manual/vue/list-components/multidropdownlist.html  302
@@ -33,9 +36,6 @@
 /reactive-manual/vue/basic-components/singlelist.html  /reactive-manual/vue/list-components/singlelist.html  302
 /reactive-manual/vue/list-components/singlelist  /reactive-manual/vue/list-components/singlelist.html  302
 /reactive-manual/vue/singlelist  /reactive-manual/vue/list-components/singlelist.html  302
-/reactive-manual/vue/basic-components/singlerange.html  /reactive-manual/vue/range-components/singlerange.html  302
-/reactive-manual/vue/range-components/singlerange  /reactive-manual/vue/range-components/singlerange.html  302
-/reactive-manual/vue/singlerange  /reactive-manual/vue/range-components/singlerange.html  302
 /reactive-manual/vue/basic-components/reactivelist.html  /reactive-manual/vue/result-components/reactivelist.html  302
 /reactive-manual/vue/result-components/reactivelist  /reactive-manual/vue/result-components/reactivelist.html  302
 /reactive-manual/vue/reactivelist  /reactive-manual/vue/result-components/reactivelist.html  302
