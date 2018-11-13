@@ -91,6 +91,19 @@ While `RangeSlider` only requires the above props to be used, it comes with many
     step value specifies the slider stepper. Value should be an integer greater than or equal to `1` and less than `Math.floor((range.end - range.start) / 2)`. Defaults to 1.
 - **tooltipTrigger** `String` [optional]  
     trigger the tooltip according to the value specified. Can be `hover`, `focus`, `always` and `none`. Defaults to `none`.
+- **renderTooltipData** `Function` [optional]  
+    customize the rendered tooltip content via a function which receives the tooltip content and expects a JSX or String back. For example:
+
+    ```js
+    renderTooltipData={data => (
+        <h5 style={{
+            color: 'red',
+            textDecoration: 'underline'
+        }}>
+            {data}
+        </h5>
+    )}
+    ```
 - **showHistogram** `Boolean` [optional]  
     whether to display the range histogram or not. Defaults to `true`.
 - **interval** `Number` [optional]  

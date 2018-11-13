@@ -107,6 +107,19 @@ Example uses:
     restricts predictions to specified country (ISO 3166-1 Alpha-2 country code, case insensitive). For example, 'us', 'in', or 'au'. You can provide an array of up to five country code strings.
 - **tooltipTrigger** `String` [optional]  
     trigger the tooltip according to the value specified. Can be `hover`, `focus`, `always` and `none`. Defaults to `none`.
+- **renderTooltipData** `Function` [optional]  
+    customize the rendered tooltip content via a function which receives the tooltip content and expects a JSX or String back. For example:
+
+    ```js
+    renderTooltipData={data => (
+        <h5 style={{
+            color: 'red',
+            textDecoration: 'underline'
+        }}>
+            {data}
+        </h5>
+    )}
+    ```
 
 ## Demo
 
