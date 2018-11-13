@@ -144,6 +144,8 @@ Example uses:
     applies a default query to the result component. This query will be run when no other components are being watched (via React prop), as well as in conjunction with the query generated from the React prop. The function should return a query.
 - **onNoResults** `String or JSX` [optional]  
     show custom message or component when no results founds.
+- **onError** `Function` [optional]  
+    gets triggered in case of an error and provides the `error` object, which can be used for debugging or giving feedback to the user if needed.
 
 ## Demo
 
