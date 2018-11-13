@@ -103,9 +103,9 @@
 /reactive-manual/basic-components/singlerange.html  /reactive-manual/range-components/singlerange.html  302
 /reactive-manual/range-components/singlerange  /reactive-manual/range-components/singlerange.html  302
 /reactive-manual/singlerange  /reactive-manual/range-components/singlerange.html  302
-/reactive-manual/search-components/resultcard.html  /reactive-manual/result-components/resultcard.html  302
-/reactive-manual/result-components/resultcard  /reactive-manual/result-components/resultcard.html  302
-/reactive-manual/resultcard  /reactive-manual/result-components/resultcard.html  302
+/reactive-manual/basic-components/reactivelist.html  /reactive-manual/result-components/reactivelist.html  302
+/reactive-manual/result-components/reactivelist  /reactive-manual/result-components/reactivelist.html  302
+/reactive-manual/reactivelist  /reactive-manual/result-components/reactivelist.html  302
 /reactive-manual/search-components  /reactive-manual/search-components/categorysearch.html  302
 /reactive-manual/reactive-manual/search-components  /reactive-manual/search-components/categorysearch.html  302
 /reactive-manual/search-components/categorysearch  /reactive-manual/search-components/categorysearch.html  302
@@ -124,9 +124,9 @@
 /reactive-manual/theming/  /reactive-manual/theming/themes.html  302
 /reactive-manual/theming  /reactive-manual/theming/themes.html  302
 /reactive-manual/themes  /reactive-manual/theming/themes.html  302
-/reactive-manual/basic-components/reactivelist.html  /reactive-manual/result-components/reactivelist.html  302
-/reactive-manual/result-components/reactivelist  /reactive-manual/result-components/reactivelist.html  302
-/reactive-manual/reactivelist  /reactive-manual/result-components/reactivelist.html  302
+/reactive-manual/search-components/resultcard.html  /reactive-manual/result-components/resultcard.html  302
+/reactive-manual/result-components/resultcard  /reactive-manual/result-components/resultcard.html  302
+/reactive-manual/resultcard  /reactive-manual/result-components/resultcard.html  302
 /reactive-manual/search-components/resultlist.html  /reactive-manual/result-components/resultlist.html  302
 /reactive-manual/result-components/resultlist  /reactive-manual/result-components/resultlist.html  302
 /reactive-manual/resultlist  /reactive-manual/result-components/resultlist.html  302
