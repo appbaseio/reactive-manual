@@ -41,8 +41,8 @@
       "path---list-components-singlelist-html-001186fceac8455d9d14.js.map"
     ],
     "component---src-templates-tutorial-js": [
-      "component---src-templates-tutorial-js-979831fbf8f21f688c6a.js",
-      "component---src-templates-tutorial-js-979831fbf8f21f688c6a.js.map"
+      "component---src-templates-tutorial-js-3cc02162740818cf75ba.js",
+      "component---src-templates-tutorial-js-3cc02162740818cf75ba.js.map"
     ],
     "path---list-components-multilist-html": [
       "path---list-components-multilist-html-4ad3388fa9dc77d902d7.js",
@@ -61,8 +61,8 @@
       "path---search-components-datasearch-html-1fa1397dbbc80093dbf8.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-205dc16f2dc999755863.js",
-      "component---src-layouts-index-js-205dc16f2dc999755863.js.map"
+      "component---src-layouts-index-js-5c653f555194b3facc6e.js",
+      "component---src-layouts-index-js-5c653f555194b3facc6e.js.map"
     ],
     "path---jsx-compiler-html": [
       "path---jsx-compiler-html-a0e39f21c11f6a62c5ab.js",
@@ -123,9 +123,9 @@
       "path---getting-started-componentsindex-html-4ba0ae40026bcfe26739.js.map"
     ],
     "app": [
-      "app-51df430315e19c9ebde9.js",
+      "app-1f491135c317a6e1ccb9.js",
       "build-js-styles.css",
-      "app-51df430315e19c9ebde9.js.map",
+      "app-1f491135c317a6e1ccb9.js.map",
       "build-js-styles.css.map"
     ],
     "path---theming-class-html": [
@@ -133,8 +133,8 @@
       "path---theming-class-html-f1d699e89b7c09910bdf.js.map"
     ],
     "component---src-templates-docs-js": [
-      "component---src-templates-docs-js-46bb02e3b66211bb96eb.js",
-      "component---src-templates-docs-js-46bb02e3b66211bb96eb.js.map"
+      "component---src-templates-docs-js-9c8440891fca97280d1e.js",
+      "component---src-templates-docs-js-9c8440891fca97280d1e.js.map"
     ],
     "path---blog-all-html": [
       "path---blog-all-html-2c7363e48ff0a64df829.js",
@@ -149,8 +149,8 @@
       "component---src-pages-blog-all-html-js-4e8968908d11397a30ea.js.map"
     ],
     "component---src-templates-home-js": [
-      "component---src-templates-home-js-dce84d2790f32b566fa2.js",
-      "component---src-templates-home-js-dce84d2790f32b566fa2.js.map"
+      "component---src-templates-home-js-7db439c51dedb62bde56.js",
+      "component---src-templates-home-js-7db439c51dedb62bde56.js.map"
     ]
   }
 }

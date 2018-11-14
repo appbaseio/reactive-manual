@@ -33,12 +33,12 @@
 /reactive-manual/vue/basic-components/singlelist.html  /reactive-manual/vue/list-components/singlelist.html  302
 /reactive-manual/vue/list-components/singlelist  /reactive-manual/vue/list-components/singlelist.html  302
 /reactive-manual/vue/singlelist  /reactive-manual/vue/list-components/singlelist.html  302
-/reactive-manual/vue/basic-components/singlerange.html  /reactive-manual/vue/range-components/singlerange.html  302
-/reactive-manual/vue/range-components/singlerange  /reactive-manual/vue/range-components/singlerange.html  302
-/reactive-manual/vue/singlerange  /reactive-manual/vue/range-components/singlerange.html  302
 /reactive-manual/vue/basic-components/reactivelist.html  /reactive-manual/vue/result-components/reactivelist.html  302
 /reactive-manual/vue/result-components/reactivelist  /reactive-manual/vue/result-components/reactivelist.html  302
 /reactive-manual/vue/reactivelist  /reactive-manual/vue/result-components/reactivelist.html  302
+/reactive-manual/vue/basic-components/singlerange.html  /reactive-manual/vue/range-components/singlerange.html  302
+/reactive-manual/vue/range-components/singlerange  /reactive-manual/vue/range-components/singlerange.html  302
+/reactive-manual/vue/singlerange  /reactive-manual/vue/range-components/singlerange.html  302
 /reactive-manual/vue/basic-components/datasearch.html  /reactive-manual/vue/search-components/datasearch.html  302
 /reactive-manual/vue/search-components/datasearch  /reactive-manual/vue/search-components/datasearch.html  302
 /reactive-manual/vue/datasearch  /reactive-manual/vue/search-components/datasearch.html  302
