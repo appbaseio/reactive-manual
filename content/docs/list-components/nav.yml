@@ -79,6 +79,10 @@
           title: Props
           href: /list-components/singledropdownlist.html#props
           forceInternal: true
+        - id: demo
+          title: Demo
+          href: /list-components/singledropdownlist.html#demo
+          forceInternal: true
         - id: styles
           title: Styles
           href: /list-components/singledropdownlist.html#styles
@@ -103,6 +107,10 @@
         - id: props
           title: Props
           href: /list-components/multidropdownlist.html#props
+          forceInternal: true
+        - id: demo
+          title: Demo
+          href: /list-components/multidropdownlist.html#demo
           forceInternal: true
         - id: styles
           title: Styles
