@@ -28,10 +28,10 @@ Here's an example of how to use `innerClass` with a [DataSearch](search-componen
 ```js
 <data-search
     ...
-    :innerClass=`{
+    :innerClass="{
         title: 'text-title',
         input: 'text-input'
-    }`
+    }"
 />
 ```
 
@@ -56,10 +56,10 @@ In order for your classes to overwrite the default classes of ReactiveSearch com
 ```js
 <data-search
     ...
-    :innerClass=`{
+    :innerClass="{
         title: 'text-title',
         input: 'text-input'
-    }`
+    }"
     class="text-field"
 />
 ```
