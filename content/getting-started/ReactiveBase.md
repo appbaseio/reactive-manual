@@ -76,8 +76,8 @@ ReactiveSearch works out of the box with an Elasticsearch index hosted anywhere.
 
 It's also possible to secure your Elasticsearch cluster's access with a middleware proxy server that is connected to ReactiveSearch. This allows you to set up custom authorization rules, prevent misuse, only pass back non-sensitive data, etc. Here's an example app where we show this using a Node.JS / Express middleware:
 
-- [Proxy Server](https://github.com/appbaseio-apps/reactivesearch-proxy-server)
-- [Proxy Client](https://github.com/appbaseio-apps/reactivesearch-proxy-client)
+- [Proxy Server](https://github.com/appbaseio-apps/reactivesearch-proxy-server/tree/vue)
+- [Proxy Client](https://github.com/appbaseio-apps/reactivesearch-proxy-client/tree/vue)
 
 > Note
 >
