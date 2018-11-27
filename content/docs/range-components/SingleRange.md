@@ -32,12 +32,12 @@ Example uses:
         title="Prices"
         componentId="PriceSensor"
         dataField="price"
-        :data=`
-            [{"start": 0, "end": 10, "label": "Cheap"},
-            {"start": 11, "end": 20, "label": "Moderate"},
-            {"start": 21, "end": 50, "label": "Pricey"},
-            {"start": 51, "end": 1000, "label": "First Date"}]
-        `
+        :data="
+            [{'start': 0, 'end': 10, 'label': 'Cheap'},
+            {'start': 11, 'end': 20, 'label': 'Moderate'},
+            {'start': 21, 'end': 50, 'label': 'Pricey'},
+            {'start': 51, 'end': 1000, 'label': 'First Date'}]
+        "
     >
 </template>
 ```
@@ -52,12 +52,12 @@ Example uses:
         title="Prices"
         defaultSelected="Cheap"
         filterLabel="Price"
-        :data=`
-            [{"start": 0, "end": 10, "label": "Cheap"},
-            {"start": 11, "end": 20, "label": "Moderate"},
-            {"start": 21, "end": 50, "label": "Pricey"},
-            {"start": 51, "end": 1000, "label": "First Date"}]
-        }`
+        :data="
+            [{'start': 0, 'end': 10, 'label': 'Cheap'},
+            {'start': 11, 'end': 20, 'label': 'Moderate'},
+            {'start': 21, 'end': 50, 'label': 'Pricey'},
+            {'start': 51, 'end': 1000, 'label': 'First Date'}]
+        "
         :showRadio="true"
         :showFilter="true"
         :URLParams="false"
