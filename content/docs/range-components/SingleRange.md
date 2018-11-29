@@ -32,12 +32,12 @@ Example uses:
         title="Prices"
         componentId="PriceSensor"
         dataField="price"
-        :data=`
-            [{"start": 0, "end": 10, "label": "Cheap"},
-            {"start": 11, "end": 20, "label": "Moderate"},
-            {"start": 21, "end": 50, "label": "Pricey"},
-            {"start": 51, "end": 1000, "label": "First Date"}]
-        `
+        :data="
+            [{'start': 0, 'end': 10, 'label': 'Cheap'},
+            {'start': 11, 'end': 20, 'label': 'Moderate'},
+            {'start': 21, 'end': 50, 'label': 'Pricey'},
+            {'start': 51, 'end': 1000, 'label': 'First Date'}]
+        "
     >
 </template>
 ```
@@ -52,12 +52,12 @@ Example uses:
         title="Prices"
         defaultSelected="Cheap"
         filterLabel="Price"
-        :data=`
-            [{"start": 0, "end": 10, "label": "Cheap"},
-            {"start": 11, "end": 20, "label": "Moderate"},
-            {"start": 21, "end": 50, "label": "Pricey"},
-            {"start": 51, "end": 1000, "label": "First Date"}]
-        }`
+        :data="
+            [{'start': 0, 'end': 10, 'label': 'Cheap'},
+            {'start': 11, 'end': 20, 'label': 'Moderate'},
+            {'start': 21, 'end': 50, 'label': 'Pricey'},
+            {'start': 51, 'end': 1000, 'label': 'First Date'}]
+        "
         :showRadio="true"
         :showFilter="true"
         :URLParams="false"
@@ -161,7 +161,7 @@ Read more about it [here](/theming/class.html).
      is an event which accepts component's **prevQuery** and **nextQuery** as parameters. It is called everytime the component's query changes. This event is handy in cases where you want to generate a side-effect whenever the component's query would change.
     
 - **valueChange**  
-    is an event which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This event is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when a list item is selected in a "Discounted Price" SingleList.
+    is an event which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This event is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when range item(s) is/are selected in a "Discounted Price" SingleRange.
 
 ## Examples
 
