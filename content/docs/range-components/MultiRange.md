@@ -38,7 +38,7 @@ Example uses:
             {'start': 21, 'end': 50, 'label': 'Pricey'},
             {'start': 51, 'end': 1000, 'label': 'First Date'}]
         "
-    >
+    />
 </template>
 ```
 
@@ -61,7 +61,7 @@ Example uses:
         :showRadio="true"
         :showFilter="true"
         :URLParams="false"
-    >
+    />
 </template>
 ```
 
