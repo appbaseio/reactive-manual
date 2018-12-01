@@ -33,3 +33,28 @@
           title: Examples
           href: /range-components/singlerange.html#examples
           forceInternal: true
+   - id: multirange
+      title: MultiRange
+      href: /range-components/multirange.html
+      forceInternal: true
+      subitems:
+        - id: usage
+          title: Usage
+          href: /range-components/multirange.html#usage
+          forceInternal: true
+        - id: props
+          title: Props
+          href: /range-components/multirange.html#props
+          forceInternal: true
+        - id: styles
+          title: Styles
+          href: /range-components/multirange.html#styles
+          forceInternal: true
+        - id: extending
+          title: Extending
+          href: /range-components/multirange.html#extending
+          forceInternal: true
+        - id: events
+          title: Events
+          href: /range-components/singlerange.html#events
+          forceInternal: true
