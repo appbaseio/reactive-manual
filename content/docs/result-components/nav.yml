@@ -33,6 +33,31 @@
           title: Examples
           href: /result-components/reactivelist.html#examples
           forceInternal: true
+    - id: resultlist
+      title: ResultList
+      href: /result-components/resultlist.html
+      forceInternal: true
+      subitems:
+        - id: usage
+          title: Usage
+          href: /result-components/resultlist.html#usage
+          forceInternal: true
+        - id: props
+          title: Props
+          href: /result-components/resultlist.html#props
+          forceInternal: true
+        - id: styles
+          title: Styles
+          href: /result-components/resultlist.html#styles
+          forceInternal: true
+        - id: extending
+          title: Extending
+          href: /result-components/resultlist.html#extending
+          forceInternal: true
+        - id: events
+          title: Events
+          href: /result-components/resultlist.html#events
+          forceInternal: true
     - id: resultcard
       title: ResultCard
       href: /result-components/resultcard.html
