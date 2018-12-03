@@ -140,6 +140,9 @@ Example uses:
     ```
 - **onAllData** `Function` [optional]  
     works like **onData** prop but all the data objects are passed to the callback function.
+> Note:
+>
+> Either `onData` or `onAllData` is required in ReactiveList for rendering the data.
 - **defaultQuery** `Function` [optional]  
     applies a default query to the result component. This query will be run when no other components are being watched (via React prop), as well as in conjunction with the query generated from the React prop. The function should return a query.
 - **onNoResults** `String or JSX` [optional]  
