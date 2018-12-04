@@ -3,7 +3,7 @@ node_js:
 - '8.9.1'
 branches:
   only:
-  - new
+  - v3
   - v2
 script:
   - yarn run build
