@@ -7,5 +7,5 @@ branches:
   - v2
 script:
   - yarn run build
-  - gh-pages -d public -a -r https://${GITHUB_TOKEN}@github.com/appbaseio/reactive-manual -b gh-pages
+  - gh-pages -d public -a -e v3 -r https://${GITHUB_TOKEN}@github.com/appbaseio/reactive-manual -b gh-pages
 sudo: false
