@@ -51,6 +51,7 @@ Example uses:
   showFilter={true}
   filterLabel="Cities"
   URLParams={false}
+  loader="Loading ..."
 />
 ```
 
@@ -62,6 +63,8 @@ Example uses:
     data field(s) to be mapped with the component's UI view.
 - **title** `String or JSX` [optional]  
     title of the component to be shown in the UI.
+- **loader** `String or JSX` [optional]  
+    to display an optional loader while fetching the options.
 - **size** `Number` [optional]  
     number of items to be displayed in the list. Defaults to 100.
 - **showCount** `Boolean` [optional]  
