@@ -33,7 +33,7 @@
           title: Examples
           href: /range-components/singlerange.html#examples
           forceInternal: true
-   - id: multirange
+    - id: multirange
       title: MultiRange
       href: /range-components/multirange.html
       forceInternal: true
