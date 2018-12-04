@@ -157,6 +157,8 @@ Now, the components which will have `myColorPicker` present in their `react` pro
 ```
 - **selectedValue** `any`   
 `selectedValue` contains the current value of the component (which can be set via `setQuery()` function). This is used for URLParams and SelectedFilters.
+- **isLoading** `Boolean`
+    `true` means the query is in the execution state.
 
 
 #### ReactiveComponent
