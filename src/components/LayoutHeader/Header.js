@@ -39,10 +39,12 @@ class Header extends Component {
   }
   switchDocs = (value) => {
     if (location.pathname.includes('/reactive-manual/')) {
-      if(value.value === 'v0.10 - Native') {
+      if (value.value === 'v0.10 - Native') {
         window.location.href = window.location.origin + '/reactive-manual/native';
-      } else if(value.value === 'v1 - Vue') {
+      } else if (value.value === 'v1 - Vue') {
         window.location.href = window.location.origin + '/reactive-manual/vue';
+      } else if (value.value === 'v2 - Web') {
+        window.location.href = window.location.origin + '/reactive-manual/v2';
       }
     }
   }
@@ -212,8 +214,8 @@ class Header extends Component {
                   }}
                 >
                   <Dropdown
-                    options={['v2 - Web', 'v0.10 - Native', 'v1 - Vue']}
-                    value="v2 - Web"
+                    options={['v3 - Web', 'v2 - Web', 'v0.10 - Native', 'v1 - Vue']}
+                    value="v3 - Web"
                     onChange={this.switchDocs}
                   />
                 </div>
