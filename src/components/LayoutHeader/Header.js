@@ -44,6 +44,9 @@ class Header extends Component {
       } else if(value.value === 'v1 - Vue') {
         window.location.href = window.location.origin + '/reactive-manual/vue';
       }
+      else if(value.value === 'v3 - Web') {
+        window.location.href = window.location.origin + '/reactive-manual/v3';
+      }
     }
   }
 
@@ -212,7 +215,7 @@ class Header extends Component {
                   }}
                 >
                   <Dropdown
-                    options={['v2 - Web', 'v0.10 - Native', 'v1 - Vue']}
+                    options={['v2 - Web', 'v3 - Web', 'v0.10 - Native', 'v1 - Vue']}
                     value="v2 - Web"
                     onChange={this.switchDocs}
                   />
