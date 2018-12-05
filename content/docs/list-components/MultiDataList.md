@@ -102,10 +102,24 @@ Example uses:
     if provided displays an additional option to selct all list values.
 - **showFilter** `Boolean` [optional]  
     show as filter when a value is selected in a global selected filters view. Defaults to `true`.
+- **showCount** `Boolean` [optional]  
+    show a count of the number of occurences besides each list item. Defaults to `false`.
 - **filterLabel** `String` [optional]  
     An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
+- **renderListItem** `Function` [optional]  
+    customize the rendered list via a function which receives the item label and count and expects a JSX or String back. For example:
+```js
+renderListItem={(label, count) => (
+    <div>
+        {label}
+        <span style={{ marginLeft: 5, color: 'dodgerblue' }}>
+            {count}
+        </span>
+    </div>
+)}
+```
 
 ## Demo
 
@@ -122,6 +136,7 @@ Example uses:
 - `list`
 - `checkbox`
 - `label`
+- `count`
  
 Read more about it [here](/theming/class.html).
 
