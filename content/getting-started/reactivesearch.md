@@ -52,7 +52,7 @@ We will demonstrate creating an index using [appbase.io](https://appbase.io) ser
 
 ![create an appbase.io app](https://i.imgur.com/r6hWKAG.gif)
 
-**Caption:** For the example that we will build, the app is called **car-store** and the associated read-only credentials are **cf7QByt5e:d2d60548-82a9-43cc-8b40-93cbbe75c34c**. You can browse and clone the dataset into your own app from  [here](https://opensource.appbase.io/dejavu/live/#?input_state=XQAAAAJrAAAAAAAAAAA9iIqnY-B2BnTZGEQz6wkFsta-jK5IyCHPDQHd0vFqnW3IIPckWf81EYz6c9_C1aGQkSbGptS4zcGd_lZI2UVGi7gEHVqkGAZzrbpw4o5m3TwqV4NeFg28vpiRpym93H_qNV7y_gPH___dHIAA).
+**Caption:** For the example that we will build, the app is called **carstore-dataset** and the associated read-only credentials are **4HWI27QmA:58c731f7-79ab-4f55-a590-7e15c7e36721**. You can browse and clone the dataset into your own app from  [here](https://opensource.appbase.io/dejavu/#?input_state=XQAAAAJYAQAAAAAAAAA9iIqnY-B2BnTZGEQz6wkFsYr2xMsEqrMu2JBa2BBr9yr6m2tZg0AKj_0NOibrVB6M7O_LS2QjcpmSfZifNLRfB4QBjEtLY8uyxmsd2HpN5OMv6iUHPOAhzAkMBPOo2377ucAJK8b--Zi9fjM3CEZCCA6ah8l4f_q_roWoqv10g9DEzr8TzbUUD8T4MAZ-Fxi9QWnQ1IPnL5bhGmdG9-HoVDte_P9L2ZY7VlIkl6lHRJ2b1dD1QTbMxXX2YX0ISnhdjdxLCbco_B3n9ajCWV8_konrjndbtwL-IoGabFkOHcVzJ6P9TVRPrvUrbnrV5TIV20jowLRniov_-JSjuQ).
 
 We will update our `src/App.js` file to add ReactiveBase component.
 ```js
@@ -64,8 +64,8 @@ class App extends Component {
 	render() {
 		return (
 			<ReactiveBase
-				app="car-store"
-				credentials="cf7QByt5e:d2d60548-82a9-43cc-8b40-93cbbe75c34c">
+				app="carstore-dataset"
+				credentials="4HWI27QmA:58c731f7-79ab-4f55-a590-7e15c7e36721">
 				// other components will go here.
 				<div>
 					Hello ReactiveSearch!
@@ -91,8 +91,8 @@ Lets add them within the ReactiveBase component. But before we do that, we will 
 ```js
 <CategorySearch
 	componentId="searchbox"
-	dataField="name"
-	categoryField="brand.raw"
+	dataField="model"
+	categoryField="brand.keyword"
 	placeholder="Search for cars"
 />
 ```
@@ -159,12 +159,12 @@ class App extends Component {
 	render() {
 		return (
 				<ReactiveBase
-				app="car-store"
-				credentials="cf7QByt5e:d2d60548-82a9-43cc-8b40-93cbbe75c34c">
+				app="carstore-dataset"
+				credentials="4HWI27QmA:58c731f7-79ab-4f55-a590-7e15c7e36721">
 					<CategorySearch
 						componentId="searchbox"
-						dataField="name"
-						categoryField="brand.raw" // use "brand.keyword" for newly cloned datasets
+						dataField="model"
+						categoryField="brand.keyword"
 						placeholder="Search for cars"
 					/>
 					<SingleRange
@@ -182,7 +182,7 @@ class App extends Component {
 					<ResultCard
 						componentId="result"
 						title="Results"
-						dataField="name"
+						dataField="model"
 						from={0}
 						size={5}
 						pagination={true}
@@ -192,7 +192,7 @@ class App extends Component {
 						onData={(res) => {
 							return {
 								image: "https://bit.do/demoimg",
-								title: res.name,
+								title: res.model,
 								description: res.brand + " " + "★".repeat(res.rating)
 							}
 						}}
@@ -229,14 +229,14 @@ class App extends Component {
 	render() {
 		return (
 				<ReactiveBase
-				app="car-store"
-				credentials="cf7QByt5e:d2d60548-82a9-43cc-8b40-93cbbe75c34c">
+				app="carstore-dataset"
+				credentials="4HWI27QmA:58c731f7-79ab-4f55-a590-7e15c7e36721">
 					<div style={{ display: "flex", flexDirection: "row" }}>
 						<div style={{ display: "flex", flexDirection: "column", width: "40%" }}>
 							<CategorySearch
 								componentId="searchbox"
-								dataField="name"
-								categoryField="brand.raw" // use "brand.keyword" for new datasets
+								dataField="model"
+								categoryField="brand.keyword"
 								placeholder="Search for cars"
 								style={{
 									padding: "5px",
@@ -263,7 +263,7 @@ class App extends Component {
 						<ResultCard
 							componentId="result"
 							title="Results"
-							dataField="name"
+							dataField="model"
 							from={0}
 							size={6}
 							pagination={true}
@@ -273,7 +273,7 @@ class App extends Component {
 							onData={(res) => {
 								return {
 									image: "https://www.enterprise.com/content/dam/global-vehicle-images/cars/FORD_FOCU_2012-1.png",
-									title: res.name,
+									title: res.model,
 									description: res.brand + " " + "★".repeat(res.rating)
 								}
 							}}
