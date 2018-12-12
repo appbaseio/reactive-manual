@@ -43,7 +43,7 @@ Example uses:
   title="Cities"
   size={100}
   sortBy="count"
-  defaultSelected="London"
+  defaultValue="London"
   selectAllLabel="All Cities"
   showRadio={true}
   showCount={true}
@@ -73,8 +73,12 @@ Example uses:
     control how many items to display in the List. Defaults to 100.
 - **sortBy** `String` [optional]  
     sort the list items by one of `count`, `asc`, `desc`. Defaults to `count`, which sorts the list by the frequency of count     value, most first.
-- **defaultSelected** `string` [optional]  
-    pre-select an item from the list.
+- **defaultValue** `string` [optional]  
+    selects an initial item from the list on mount.
+- **value** `string` [optional]  
+    controls the current value of the component. It selects the item from the list (on mount and on update). Use this prop in conjunction with `onChange` function.
+- **onChange** `function` [optional]  
+    is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
 - **selectAllLabel** `String` [optional]  
     add an extra `Select all` item to the list with the provided label string.
 - **showRadio** `Boolean` [optional]  

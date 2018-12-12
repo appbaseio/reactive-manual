@@ -138,3 +138,16 @@
           title: Usage
           href: /advanced/typescript.html#click-analytics
           forceInternal: true
+    - id: componentsusage
+      title: Components Usage
+      href: /advanced/componentsusage.html
+      forceInternal: true
+      subitems:
+        - id: controlled-components
+          title: Controlled components
+          href: /advanced/typescript.html#controlled-components
+          forceInternal: true
+        - id: uncontrolled-components
+          title: Uncontrolled components
+          href: /advanced/typescript.html#uncontrolled-components
+          forceInternal: true

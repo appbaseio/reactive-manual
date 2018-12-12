@@ -6,6 +6,8 @@ sectionid: docs
 permalink: advanced/analytics.html
 prev: advanced/typescript.html
 prevTitle: "TypeScript Support"
+next: componentsusage.html
+nextTitle: "Components Usage"
 redirect_from:
     - "analytics"
     - "advanced/analytics"
