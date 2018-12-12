@@ -119,7 +119,7 @@ We will update our `src/App.vue` file to add ReactiveBase component.
 
 This is how the app should look after running the `yarn run serve` command.
 
-![reactive-base](https://i.imgur.com/MkfedrW.png)
+![Image](https://i.imgur.com/6gKpAEI.png)
 
 ---
 
