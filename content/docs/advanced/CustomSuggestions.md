@@ -67,3 +67,23 @@ The `suggestions` parameter receives all the unparsed suggestions from elasticse
 Check out the [example](https://opensource.appbase.io/playground) on playground.
 
 All the parameters received are very similar to the `DataSearch` besides `categories` which receives all the categories for the current query as an array of objects having the `key` attribute and the `doc_count` so you can compose a custom UI accordingly.
+
+
+## Customizing individual suggestions
+
+Similar to the `onSuggestion` prop usage but supports extra keys for `title`, `image` and `description`. Both title and description support highlighting. In order to take control of rendering specify a `label` key just like `onSuggestion` supports (this has the highest precedence while rendering).
+
+```js
+<DataSearch
+  ...
+  renderSuggestion={(suggestion) => ({
+    title: suggestion.source.original_title,
+    description: suggestion.source.authors,
+    image: suggestion.source.image,
+    value: suggestion.source.original_title,  // required
+    // optionally render the entire JSX using label
+    label: <JSX>,  // has higher precedence over title, description, image
+    source: suggestion.source  // for onValueSelected to work with onSuggestion
+  })}
+/>
+```

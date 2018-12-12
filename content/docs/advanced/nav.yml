@@ -13,6 +13,10 @@
           title: Custom Suggestions for CategorySearch
           href: /advanced/customsuggestions.html#custom-suggestions-for-categorysearch
           forceInternal: true
+        - id: customizing-individual-suggestions
+          title: Customizing individual suggestions
+          href: /advanced/customsuggestions.html#customizing-individual-suggestions
+          forceInternal: true
     - id: customquery
       title: Custom Queries
       href: /advanced/customquery.html
