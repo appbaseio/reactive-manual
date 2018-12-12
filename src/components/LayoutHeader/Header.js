@@ -46,6 +46,9 @@ class Header extends Component {
       } else if (value.value === 'v2 - Web') {
         window.location.href = window.location.origin + '/reactive-manual';
       }
+      else if(value.value === 'v3 - Web') {
+        window.location.href = window.location.origin + '/reactive-manual/v3';
+      }
     }
   }
 

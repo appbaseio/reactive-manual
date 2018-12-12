@@ -56,6 +56,7 @@ Example uses:
   showFilter={true}
   filterLabel="City"
   URLParams={false}
+  loader="Loading ..."
 />
 ```
 
@@ -65,6 +66,8 @@ Example uses:
     unique identifier of the component, can be referenced in other components' `react` prop.
 - **dataField** `String`  
     DB data field to be mapped with the component's UI view. The dropdown list items are filtered by a database query on this field. This field is used for doing an aggregation and returns the result. We're using a `.raw` multifield here. You can use a field of type `keyword` or `not_analyzed` depending on your Elasticsearch cluster.
+- **loader** `String or JSX` [optional]  
+    to display an optional loader while fetching the options.
 - **title** `String or JSX` [optional]  
     title of the component to be shown in the UI.
 - **size** `Number` [optional]  

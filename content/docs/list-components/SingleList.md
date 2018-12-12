@@ -55,6 +55,7 @@ Example uses:
   showFilter={true}
   filterLabel="City"
   URLParams={false}
+  loader="Loading ..."
 />
 ```
 
@@ -66,6 +67,8 @@ Example uses:
     data field to be connected to the component's UI view. The list items are filtered by a database query on this field. This field is used for doing an aggregation and returns the result. We're using a `.raw` multifield here. You can use a field of type `keyword` or `not_analyzed` depending on your Elasticsearch cluster.
 - **title** `String or JSX` [optional]  
     title of the component to be shown in the UI.
+- **loader** `String or JSX` [optional]  
+    to display an optional loader while fetching the options.
 - **size** `Number` [optional]  
     control how many items to display in the List. Defaults to 100.
 - **sortBy** `String` [optional]  

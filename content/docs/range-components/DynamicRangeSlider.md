@@ -65,6 +65,7 @@ While `DynamicRangeSlider` only requires the above props to be used, it comes wi
     and: ["CategoryFilter", "SearchFilter"]
   }}
   URLParams={true}
+  loader="Loading ..."
 />
 ```
 
@@ -105,6 +106,8 @@ While `DynamicRangeSlider` only requires the above props to be used, it comes wi
     whether to display the range histogram or not. Defaults to `true`.
 - **interval** `Number` [optional]  
     set the histogram bar interval, applicable when *showHistogram* is `true`. Defaults to `Math.ceil((props.range.end - props.range.start) / 100) || 1`.
+- **loader** `String or JSX` [optional]  
+    to display an optional loader while fetching the histogram stats.
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected range of the slider. This is useful for sharing URLs with the component state. Defaults to `false`.
 
