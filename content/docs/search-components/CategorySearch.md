@@ -148,10 +148,21 @@ Example uses:
     show as filter when a value is selected in a global selected filters view. Defaults to `true`.
 - **filterLabel** `String` [optional]  
     An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
-- **innerRef** `Function` [optional]  
-    You can pass a callback using `innerRef` which gets passed to the inner input element as [`ref`](https://reactjs.org/docs/refs-and-the-dom.html).
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the current value of the search. This is useful for sharing URLs with the component state. Defaults to `false`.
+- **onSuggestions** `Function` [optional]
+    You can pass a callback function to listen for the changes in suggestions.The function receives `suggestions` list.
+- **onError** `Function` [optional]  
+    gets triggered in case of an error and provides the `error` object, which can be used for debugging or giving feedback to the user if needed.
+- **renderError** `String or JSX or Function` [optional]
+    can we used to render an error message in case of any error.
+    ```js
+renderError={(error) => 
+        <div>
+            Something went wrong!<br/>Error details<br/>{error}
+        </div>
+}
+    ```
 
 ## Demo
 
@@ -176,20 +187,20 @@ Read more about it [here](/theming/class.html).
 2. update the underlying DB query with `customQuery`,
 3. connect with external interfaces using `beforeValueChange`, `onValueChange`, `onValueSelected` and `onQueryChange`,
 4. specify how search suggestions should be filtered using `react` prop,
-5. use your own function to render suggestions using `onSuggestion` (deprecated use `renderSuggestion` for better control) prop. It expects an object back for each `suggestion` having keys `label` and `value`. The query is run against the `value` key and `label` is used for rendering the suggestions. `label` can be either `String` or JSX. For example,
+5. use your own function to render suggestions using `renderSuggestion` prop. It expects an object back for each `suggestion` having keys `label` and `value`. The query is run against the `value` key and `label` is used for rendering the suggestions. `label` can be either `String` or JSX. For example,
 
 ```js
 <DataSearch
   ...
-  onSuggestion={(suggestion) => ({
+  renderSuggestion={(suggestion) => ({
     label: (<div>{suggestion._source.original_title} by<span style={{ color: 'dodgerblue', marginLeft: 5 }}>{suggestion._source.authors}</span></div>),
     value: suggestion._source.original_title,
-    source: suggestion._source  // for onValueSelected to work with onSuggestion
+    source: suggestion._source  // for onValueSelected to work with renderSuggestion
   })}
 />
 ```
 
-- it's also possible to take control of rendering individual suggestions with `renderSuggestion` prop or the entire suggestions rendering using the `renderSuggestions` prop. Check the [custom suggestions](/advanced/customsuggestions.html) recipe for more info.
+- it's also possible to take control of rendering individual suggestions with `renderSuggestion` prop or the entire suggestions rendering using the `renderAllSuggestion` prop. Check the [custom suggestions](/advanced/customsuggestions.html) recipe for more info.
 
 6. add the following [synthetic events](https://reactjs.org/events.html) to the underlying `input` element:
     - onBlur

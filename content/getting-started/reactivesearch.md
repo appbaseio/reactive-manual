@@ -133,7 +133,7 @@ Finally, we need a component to show the matching results. [**ResultCard**](/sea
 	react={{
 		and: ["searchbox", "ratingsfilter"]
 	}}
-	onData={(res) => {
+	renderData={(res) => {
 		return {
 			image: 'http://www.asfera.info/files/images/1_aprela/4/deloreyn.jpg',
 			title: res.name,
@@ -189,7 +189,7 @@ class App extends Component {
 						react={{
 							and: ["searchbox", "ratingsfilter"]
 						}}
-						onData={(res) => {
+						renderData={(res) => {
 							return {
 								image: "https://bit.do/demoimg",
 								title: res.model,
@@ -270,7 +270,7 @@ class App extends Component {
 							react={{
 								and: ["searchbox", "ratingsfilter"]
 							}}
-							onData={(res) => {
+							renderData={(res) => {
 								return {
 									image: "https://www.enterprise.com/content/dam/global-vehicle-images/cars/FORD_FOCU_2012-1.png",
 									title: res.model,

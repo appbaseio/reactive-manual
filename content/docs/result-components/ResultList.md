@@ -36,7 +36,7 @@ Example uses:
   react={{
     "and": ["PriceFilter", "SearchFilter"]
   }}
-  onData={this.onData}
+  renderData={this.renderData}
 />
 ```
 
@@ -57,7 +57,7 @@ Example uses:
   react={{
     and: ["PriceFilter", "SearchFilter"]
   }}
-  onData={this.onData}
+  renderData={this.renderData}
 />
 ```
 
@@ -76,7 +76,7 @@ Example uses:
   react={{
     and: ["PriceFilter", "SearchFilter"]
   }}
-  onData={this.onData}
+  renderData={this.renderData}
 />
 ```
 
@@ -144,10 +144,10 @@ Example uses:
     a dependency object defining how this component should react based on the state changes in the sensor components. You can read more about how to specify this prop over [here](/advanced/react.html).
 - **URLParams** `Boolean` [optional]  
     when set adds the current page number to the url. Only works when `pagination` is enabled.
-- **onData** `Function` [optional]  
+- **renderData** `Function` [optional]  
     returns a card element object to be rendered based on the `res` data object. This callback function prop is called for each data item rendered in the **ResultList** component's view.
     ```js
-    onData={
+    renderData={
       function(res) {
         return {
           image: res.image,
@@ -174,6 +174,17 @@ Example uses:
     show custom message or component when no results founds.
 - **onError** `Function` [optional]  
     gets triggered in case of an error and provides the `error` object, which can be used for debugging or giving feedback to the user if needed.
+- **renderError** `String or JSX or Function` [optional]
+    can we used to render an error message in case of any error.
+    ```js
+renderError={(error) => 
+        <div>
+            Something went wrong!<br/>Error details<br/>{error}
+        </div>
+}
+    ```
+- **onData** `Function` [optional]
+    gets triggered after data changes, which returns an object with these properties: `results`, `streamResults`, `loadMore`, `base` & `triggerClickAnalytics`.
 
 ## Demo
 
@@ -203,7 +214,7 @@ Read more about it [here](/theming/class.html).
 
 `ResultList` component can be extended to
 1. customize the look and feel with `className`, `style`,
-2. render individual result data items using `onData`,
+2. render individual result data items using `renderData`,
 3. specify how results should be filtered using `react`.
 4. connect with external interfaces using `onQueryChange`.
 
@@ -213,8 +224,8 @@ Read more about it [here](/theming/class.html).
   className="custom-class"
   // specify any number of custom styles.
   style={{"paddingBottom": "10px"}}
-  // register a callback function with the `onData` prop.
-  onData={
+  // register a callback function with the `renderData` prop.
+  renderData={
     function(res) {
       return {
         image: res.image,
@@ -242,10 +253,10 @@ Read more about it [here](/theming/class.html).
     CSS class to be injected on the component container.
 - **style** `Object`  
     CSS Styles to be applied to the **ResultList** component.
-- **onData** `Function` [optional]  
+- **renderData** `Function` [optional]  
     a callback function where user can define how to render the view based on the data changes. In `ResultList`'s case, the expected return format is an object with `image`, `image_size`, `title`, `url` and `description` keys.
 - **target** `string` [optional]    
-    This prop is equivalent to the `target` attribute of html `a` tags. It is only valid when `url` key is present in `onData()`'s returned object structure. It defaults to `_blank`.
+    This prop is equivalent to the `target` attribute of html `a` tags. It is only valid when `url` key is present in `renderData()`'s returned object structure. It defaults to `_blank`.
 - **react** `Object`  
     specify dependent components to reactively update **ResultList's** data view.
     - **key** `String`  
@@ -259,14 +270,21 @@ Read more about it [here](/theming/class.html).
         - `Object` is used for nesting other key clauses.
 
 ```js
-onAllData(items, loadMoreData) {
+renderAllData({
+     results,
+     streamResults,
+     loadMore,
+     base,
+     triggerClickAnalytics,
+
+}) {
 	// return the list to render
 }
 ```
 
 > Note
 >
-> The **callback** function (`loadMoreData` here) will only be executed in case of infinite loading.
+> The **callback** function (`loadMore` here) will only be executed in case of infinite loading.
 
 - **onQueryChange** `Function`  
     is a callback function which accepts component's **prevQuery** and **nextQuery** as parameters. It is called everytime the component's query changes. This prop is handy in cases where you want to generate a side-effect whenever the component's query would change.

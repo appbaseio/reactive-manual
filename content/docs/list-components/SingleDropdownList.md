@@ -81,18 +81,29 @@ Example uses:
     show count of number of occurences besides an item. Defaults to `true`.
 - **showSearch** `Boolean` [optional]  
     whether to show a searchbox to filter the list items locally. Defaults to false.
-- **renderListItem** `Function` [optional]  
-    customize the rendered list via a function which receives the item label and count and expects a JSX or String back. For example:
+- **renderItem** `Function` [optional]  
+    customize the rendered list via a function which receives the item label, count & isSelected and expects a JSX or String back. For example:
 ```js
-renderListItem={(label, count) => (
+renderItem={(label, count, isSelected) => (
     <div>
         {label}
-        <span style={{ marginLeft: 5, color: 'dodgerblue' }}>
+        <span style={{ marginLeft: 5, color: isSelected ? 'red' : 'dodgerblue' }}>
             {count}
         </span>
     </div>
 )}
 ```
+- **onError** `Function` [optional]  
+    gets triggered in case of an error and provides the `error` object, which can be used for debugging or giving feedback to the user if needed.
+- **renderError** `String or JSX or Function` [optional]
+    can we used to render an error message in case of any error.
+    ```js
+renderError={(error) => 
+        <div>
+            Something went wrong!<br/>Error details<br/>{error}
+        </div>
+}
+    ```
 
 - **showMissing** `Boolean` [optional]  
     defaults to `false`. When set to `true` it also retrives the aggregations for missing fields under the label specified by `missingLabel`.

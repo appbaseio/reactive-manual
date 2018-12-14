@@ -81,6 +81,17 @@ Example uses:
     An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the tag(s). This is useful for sharing URLs with the component state. Defaults to `false`.
+- **onError** `Function` [optional]  
+    gets triggered in case of an error and provides the `error` object, which can be used for debugging or giving feedback to the user if needed.
+- **renderError** `String or JSX or Function` [optional]
+    can we used to render an error message in case of any error.
+    ```js
+renderError={(error) => 
+        <div>
+            Something went wrong!<br/>Error details<br/>{error}
+        </div>
+}
+    ```
 
 ## Demo
 

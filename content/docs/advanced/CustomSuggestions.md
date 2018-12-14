@@ -13,16 +13,16 @@ redirect_from:
     - "reactive-manual/advanced"
 ---
 
-Recipe for rendering custom suggestions with `DataSearch` and `CategorySearch` components using the `renderSuggestions` prop.
+Recipe for rendering custom suggestions with `DataSearch` and `CategorySearch` components using the `renderAllSuggestion` prop.
 
-ReactiveSearch uses the wonderful [downshift](https://github.com/paypal/downshift) for rendering dropdowns and `renderSuggestions` prop provides great extensibility for custom suggestions rendering. `renderSuggestions` is a [render function](https://reactjs.org/docs/render-props.html) which receives some parameters which you may use to build your own custom suggestions rendering
+ReactiveSearch uses the wonderful [downshift](https://github.com/paypal/downshift) for rendering dropdowns and `renderAllSuggestion` prop provides great extensibility for custom suggestions rendering. `renderAllSuggestion` is a [render function](https://reactjs.org/docs/render-props.html) which receives some parameters which you may use to build your own custom suggestions rendering
 
 ## Custom Suggestions for DataSearch
 
 ```js
 <DataSearch
     ...
-    renderSuggestions={
+    renderAllSuggestion={
         ({
             currentValue,       // the current value in the search
             isOpen,             // isOpen from downshift
@@ -50,7 +50,7 @@ The `suggestions` parameter receives all the unparsed suggestions from elasticse
 ```js
 <CategorySearch
     ...
-    renderSuggestions={
+    renderAllSuggestion={
         ({
             currentValue,       // the current value in the search
             isOpen,             // isOpen from downshift
@@ -83,7 +83,7 @@ Similar to the `onSuggestion` prop usage but supports extra keys for `title`, `i
     value: suggestion.source.original_title,  // required
     // optionally render the entire JSX using label
     label: <JSX>,  // has higher precedence over title, description, image
-    source: suggestion.source  // for onValueSelected to work with onSuggestion
+    source: suggestion.source  // for onValueSelected to work with renderSuggestion
   })}
 />
 ```

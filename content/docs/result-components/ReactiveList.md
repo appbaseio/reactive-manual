@@ -34,7 +34,7 @@ Example uses:
   react={{
     "and": ["CitySensor", "SearchSensor"]
   }}
-  onData={(res) => <div>{res.title}</div>}
+  renderData={(res) => <div>{res.title}</div>}
 />
 ```
 
@@ -52,7 +52,7 @@ Example uses:
   size={10}
   loader="Loading Results.."
   showResultStats={true}
-  onData={(res) => <div>{res.title}</div>}
+  renderData={(res) => <div>{res.title}</div>}
   onResultStats={(total, took) => {
     return "found " + total + " results in " + took + "ms."
   }}
@@ -124,10 +124,10 @@ Example uses:
     a dependency object defining how this component should react based on the state changes in the sensor components.
 - **URLParams** `Boolean` [optional]  
     when set adds the current page number to the url. Only works when `pagination` is enabled.
-- **onData** `Function` [optional]  
+- **renderData** `Function` [optional]  
     returns a list element object to be rendered based on the `res` data object. This callback function prop is called for each data item rendered in the **ReactiveList** component's view. For example,
     ```js
-    onData={
+    renderData={
       function(res) {
     		return (
     			<a
@@ -152,18 +152,28 @@ Example uses:
       }
     }
     ```
-- **onAllData** `Function` [optional]  
-    works like **onData** prop but all the data objects are passed to the callback function.
+- **renderAllData** `Function` [optional]  
+    works like **renderData** prop but all the data objects are passed to the callback function.
 > Note:
 >
-> Either `onData` or `onAllData` is required in ReactiveList for rendering the data.
+> Either `renderData` or `renderAllData` is required in ReactiveList for rendering the data.
 - **defaultQuery** `Function` [optional]  
     applies a default query to the result component. This query will be run when no other components are being watched (via React prop), as well as in conjunction with the query generated from the React prop. The function should return a query.
 - **onNoResults** `String or JSX` [optional]  
     show custom message or component when no results founds.
 - **onError** `Function` [optional]  
     gets triggered in case of an error and provides the `error` object, which can be used for debugging or giving feedback to the user if needed.
-
+- **renderError** `String or JSX or Function` [optional]
+    can we used to render an error message in case of any error.
+    ```js
+renderError={(error) => 
+        <div>
+            Something went wrong!<br/>Error details<br/>{error}
+        </div>
+}
+    ```
+- **onData** `Function` [optional]
+    gets triggered after data changes, which returns an object with these properties: `results`, `streamResults`, `loadMore`, `base` & `triggerClickAnalytics`.
 ## Demo
 
 <br />
@@ -190,8 +200,8 @@ Read more about it [here](/theming/class.html).
 
 `ReactiveList` component can be extended to
 1. customize the look and feel with `className`, `style`,
-2. render individual result data items using `onData`,
-3. render the entire result data using `onAllData`.
+2. render individual result data items using `renderData`,
+3. render the entire result data using `renderAllData`.
 4. connect with external interfaces using `onQueryChange`.
 
 ```js
@@ -199,7 +209,7 @@ Read more about it [here](/theming/class.html).
   ...
   className="custom-class"
   style={{"paddingBottom": "10px"}}
-  onData={
+  renderData={
     function(res) {
       return(
         <div>
@@ -222,18 +232,27 @@ Read more about it [here](/theming/class.html).
     CSS class to be injected on the component container.
 - **style** `Object`  
     CSS Styles to be applied to the **ReactiveList** component.
-- **onData** `Function` [optional]  
+- **renderData** `Function` [optional]  
     a callback function where user can define how to render the view based on the data changes.
-- **onAllData** `Function` [optional]  
-    an alternative callback function to `onData`, where user can define how to render the view based on all the data changes.  
+- **renderAllData** `Function` [optional]  
+    an alternative callback function to `renderData`, where user can define how to render the view based on all the data changes.  
     <br/>
-    It accepts three parameters: `results`, `streamResults` and `loadMoreData`.
+    It accepts an object with these properties: `results`, `streamResults`, `loadMore`, `base` & `triggerClickAnalytics`.
     - **`results`**: An array of results obtained from the applied query.
     - **`streamResults`**: An array of results streamed since the applied query, aka realtime data. Here, a meta property `_updated` or `_deleted` is also present within a result object to denote if an existing object has been updated or deleted.
-    - **`loadMoreData`**: A callback function to be called to load the next page of results into the view. The callback function is only applicable in the case of infinite loading view (i.e. `pagination` prop set to `false`).
+    - **`loadMore`**: A callback function to be called to load the next page of results into the view. The callback function is only applicable in the case of infinite loading view (i.e. `pagination` prop set to `false`).
+    - **`base`**: An internally calculated value, useful to calculate analytics. [Read More](/advanced/analytics.html)
+    - **`triggerClickAnalytics`**: A function which can be called to register a click analytics. [Read More](/advanced/analytics.html)
 
 ```js
-onAllData(results, streamResults, loadMoreData) {
+renderAllData({
+     results,
+     streamResults,
+     loadMore,
+     base,
+     triggerClickAnalytics,
+
+}) {
 	// return the list to render
 }
 ```
