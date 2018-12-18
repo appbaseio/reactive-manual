@@ -47,7 +47,7 @@ Example uses:
   title="Cities"
   size={100}
   sortBy="count"
-  defaultSelected="London"
+  defaultValue="London"
   showCount={true}
   placeholder="Search City"
   selectAllLabel="All Cities"
@@ -75,8 +75,12 @@ Example uses:
     control how many items to display in the List. Defaults to 100.
 - **sortBy** `String` [optional]  
     property that decides on how to sort the list items, accepts one of `count`, `asc` or `desc` as valid values. `count` sorts the list based on the count occurences, with highest value at the top. `asc` sorts the list in the ascending order of the list item (Alphabetical). `desc` sorts the list in the descending order of the term. Defaulted to `count`.
-- **defaultSelected** `string` [optional]  
-    default selected value pre-selects an option from the list.
+- **defaultValue** `string` [optional]  
+    selects intial option from the dropdown list on mount.
+- **value** `string` [optional]  
+    controls the current value of the component. It selects the item from the list (on mount and on update). Use this prop in conjunction with `onChange` function.
+- **onChange** `function` [optional]  
+    is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
 - **showCount** `Boolean` [optional]  
     show count of number of occurences besides an item. Defaults to `true`.
 - **showSearch** `Boolean` [optional]  

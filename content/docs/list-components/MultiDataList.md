@@ -72,7 +72,7 @@ Example uses:
   showSearch={true}
   showCheckbox={true}
   placeholder="Filter meetups"
-  defaultSelected={["Social"]}
+  defaultValue={["Social"]}
   selectAllLabel="All meetups"
   showFilter={true}
   filterLabel="Price"
@@ -96,8 +96,12 @@ Example uses:
     whether to display a checkbox button beside the list item. Defaults to `true`.
 - **placeholder** `String` [optional]  
     placeholder to be displayed in the searchbox. Defaults to "Search".
-- **defaultSelected** `String Array` [optional]  
-    default selected value(s) pre-selects option(s) from the list.
+- **defaultValue** `String Array` [optional]  
+    selects initial items from the list on mount.
+- **value** `String Array` [optional]  
+    controls the current value of the component. It selects the item from the list (on mount and on update). Use this prop in conjunction with `onChange` function.
+- **onChange** `function` [optional]  
+    is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
 - **selectAllLabel** `String` [optional]  
     if provided displays an additional option to selct all list values.
 - **showFilter** `Boolean` [optional]  

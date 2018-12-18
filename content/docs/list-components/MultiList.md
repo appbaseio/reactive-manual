@@ -44,7 +44,7 @@ Example uses:
   title="Cities"
   size={100}
   sortBy="asc"
-  defaultSelected={["San Francisco"]}
+  defaultValue={["San Francisco"]}
   queryFormat="or"
   selectAllLabel="All Cities"
   showCheckbox={true}
@@ -75,8 +75,12 @@ Example uses:
     number of list items to be displayed. Defaults to showing a `100` items. Max value for this prop can be `1000`.
 -  **sortBy** `String` [optional]  
     sort the list items by one of `count`, `asc`, or `desc`. Defaults to `count`, which sorts the list by the frequency of count value, most first.
-- **defaultSelected** `Array` [optional]  
-    pre-select one or more list items. Accepts an `Array` object containing the items that should be selected. It is important for the passed value(s) to exactly match the field value(s) as stored in the DB.
+- **defaultValue** `String Array` [optional]  
+    select one or more options from the list on mount. Accepts an `Array` object containing the items that should be selected.
+- **value** `String Array` [optional]  
+    controls the current value of the component. It selects the item from the list (on mount and on update). Use this prop in conjunction with `onChange` function.
+- **onChange** `function` [optional]  
+    is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.  
 - **queryFormat** `String` [optional]  
     queries the selected items from the list in one of two modes: `or`, `and`.
     * Defaults to `or` which queries for results where any of the selected list items are present.
