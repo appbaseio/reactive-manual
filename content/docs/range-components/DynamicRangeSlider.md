@@ -45,7 +45,7 @@ While `DynamicRangeSlider` only requires the above props to be used, it comes wi
   componentId="DynamicRangeSensor"
   dataField="guests"
   title="Guests"
-  defaultSelected={(min, max) => (
+  defaultValue={(min, max) => (
     {
       "start": min,
       "end": Math.min(min + 5, max)
@@ -77,8 +77,12 @@ While `DynamicRangeSlider` only requires the above props to be used, it comes wi
     DB data field to be mapped with the component's UI view.The selected range creates a database query on this field.
 - **title** `String or JSX` [optional]  
     title of the component to be shown in the UI.
-- **defaultSelected** `Function` [optional]  
+- **defaultValue** `Function` [optional]  
     a function that accepts `min` and `max` range values as parameters and returns an object representing current selection from the range with `start` and `end` keys.
+- **value** `Object` [optional]  
+    controls the current value of the component.It selects the item from the dynamic range (on mount and on update).Use this prop in conjunction with `onChange` function.
+- **onChange** `function` [optional]  
+    is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
 - **rangeLabels** `Function` [optional]  
     a function that accepts `min` and `max` range values as parameters and returns an object representing labels with `start` and `end` keys.
 - **showFilter** `Boolean` [optional]  

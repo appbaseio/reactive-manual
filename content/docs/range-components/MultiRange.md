@@ -57,7 +57,7 @@ Example uses:
      {"start": 51, "end": 1000, "label": "First Date"}]
   }
   title="Prices"
-  defaultSelected={["Cheap", "Moderate"]}
+  defaultValue={["Cheap", "Moderate"]}
   showCheckbox={true}
   showFilter={true}
   filterLabel="Prices"
@@ -75,8 +75,12 @@ Example uses:
     collection of UI `labels` with associated `start` and `end` range values.
 - **title** `String or JSX` [optional]  
     title of the component to be shown in the UI.
-- **defaultSelected** `Array` [optional]  
-    pre-select one or more labels from the `data` array.
+- **defaultValue** `Array` [optional]  
+    selects initial items from the data range on mount.
+- **value** `Array` [optional]  
+    controls the current value of the component.It selects the item from the data (on mount and on update).Use this prop in conjunction with `onChange` function.
+- **onChange** `function` [optional]  
+    is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
 - **showCheckbox** `Boolean` [optional]  
     show checkbox icon for each range item. Defaults to `true`.
 - **showFilter** `Boolean` [optional]  

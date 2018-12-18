@@ -45,7 +45,7 @@ Example uses:
   dataField="guests"
   data={{ "label": "Guests", "start": 0, "end": 5 }}
   title="NumberBox component"
-  defaultSelected={0}
+  defaultValue={0}
   labelPosition="left"
   queryFormat="gte"
   URLParams={false}
@@ -62,8 +62,12 @@ Example uses:
     an object with `start` and `end` values and optionally an associated `label` to be displayed in the UI.
 - **title** `String or JSX` [optional]  
     title of the component to be shown in the UI.
-- **defaultSelected** `Number` [optional]  
-    preset a valid value within the [start, end] range.
+- **defaultValue** `Number` [optional]  
+    sets a initial valid value within the [start, end] range on mount.
+- **value** `Object` [optional]  
+    controls the current value of the component.It selects the label from the data (on mount and on update).Use this prop in conjunction with `onChange` function.
+- **onChange** `function` [optional]  
+    is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
 - **labelPosition** `String` [optional]  
     position where label is shown, one of "left", "top", "right", "bottom". Defaults to `left`.
 - **queryFormat** `String` [optional]  

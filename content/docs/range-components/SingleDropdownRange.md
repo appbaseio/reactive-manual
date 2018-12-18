@@ -57,7 +57,7 @@ Example uses:
      {"start": 51, "end": 1000, "label": "First Date"}]
   }
   title="Prices"
-  defaultSelected="Cheap"
+  defaultValue="Cheap"
   placeholder="Select price range"
   showFilter={false}
   filterLabel="Price"
@@ -75,8 +75,12 @@ Example uses:
     collection of UI `labels` with associated `start` and `end` range values.
 - **title** `String or JSX` [optional]  
     title of the component to be shown in the UI.
-- **defaultSelected** `String` [optional]  
-    pre-select a label from the `data` array.
+- **defaultValue** `String` [optional]  
+    select initial item from the data array on mount.
+- **value** `String` [optional]  
+    controls the current value of the component. It selects the item from the data (on mount and on update). Use this prop in conjunction with `onChange` function.
+- **onChange** `function` [optional]  
+    is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
 - **placeholder** `String` [optional]  
     set the placeholder to show for the dropdown UI, useful when no option is `defaultSelected`. The default placeholder value is set to "Select a value".
 - **showFilter** `Boolean` [optional]  
