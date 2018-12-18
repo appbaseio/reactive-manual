@@ -43,7 +43,7 @@ Example uses:
   dataField={["group_venue", "group_city"]}
   categoryField="group_topics"
   title="Search"
-  defaultSelected="Music"
+  defaultValue="Music"
   fieldWeights={[1, 3]}
   placeholder="Search for cities or venues"
   autoSuggest={true}
@@ -72,8 +72,12 @@ Example uses:
     data field which has the category values mapped.
 - **title** `String or JSX` [optional]  
     Sets the title of the component to be shown in the UI.
-- **defaultSelected** `string` [optional]  
-    preset the search query text in the search box.
+- **defaultValue** `string` [optional]  
+    set the initial search query text on mount.
+- **value** `string` [optional]  
+    controls the current value of the component. It sets the search query text (on mount and on update). Use this prop in conjunction with `onChange` function.
+- **onChange** `function` [optional]  
+    is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
 - **downShiftProps** `Object` [optional]  
     allow passing props directly to `Downshift` component. You can read more about Downshift props [here](https://github.com/paypal/downshift#--downshift-------).
 - **fieldWeights** `Array` [optional]  
