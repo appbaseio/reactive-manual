@@ -40,7 +40,7 @@ Example uses:
   componentId="DateSensor"
   dataField="mtime"
   title="DateRange"
-  defaultSelected={{
+  defaultValue={{
     start: '2017-04-01',
     end: '2017-04-07'
   }}
@@ -69,8 +69,12 @@ Example uses:
     * If passed as a `String`, the field is used for both lower and upper bounds match based on the selected values from the component UI view.
 - **title** `String or JSX` [optional]  
     title of the component to be shown in the UI.
-- **defaultSelected** `Object` [optional]  
-    pre-select a default date range based on an object having a **start** and **end** `string` value.
+- **defaultValue** `Object` [optional]  
+    selects a initial date range based on an object having a **start** and **end** `string` value.
+- **value** `Object` [optional]  
+    controls the current value of the component.It selects the range based on the data provided (on mount and on update).Use this prop in conjunction with `onChange` function.
+- **onChange** `function` [optional]  
+    is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
 - **focused** `Boolean` [optional]  
     whether to display the calendar view on initial load. Defaults to `true`.
 - **autoFocusEnd** `Boolean` [optional]  

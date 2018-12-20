@@ -40,7 +40,7 @@ Example uses:
   componentId="DateSensor"
   dataField="mtime"
   title="DatePicker"
-  defaultSelected="2017-04-01"
+  defaultValue="2017-04-01"
   focused={true}
   numberOfMonths={1}
   queryFormat="date"
@@ -61,8 +61,12 @@ Example uses:
     data field to be connected to the component's UI view.
 - **title** `String or JSX` [optional]  
     title of the component to be shown in the UI.
-- **defaultSelected** `string` [optional]  
-    pre-select a default date.
+- **defaultValue** `String` [optional]  
+    selects initial date on mount.
+- **value** `Array` [optional]  
+    controls the current value of the component.It selects the date (on mount and on update).Use this prop in conjunction with `onChange` function.
+- **onChange** `function` [optional]  
+    is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
 - **focused** `Boolean` [optional]  
     whether to display the calendar view on initial load. Defaults to `true`.
 - **numberOfMonths** `Number` [optional]  

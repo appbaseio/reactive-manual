@@ -52,7 +52,7 @@ Example uses:
     {"start": 3, "end": 5, "label": "3 & up"},
     {"start": 1, "end": 5, "label": "All"}
   ]}
-  defaultSelected={{
+  defaultValue={{
     "start": 4, "end": 5
   }}
   URLParams={false}
@@ -69,8 +69,12 @@ Example uses:
     collection of UI `label` with associated with `start` and `end` ratings values.
 - **title** `String or JSX` [optional]  
     title of the component to be shown in the UI.
-- **defaultSelected** `Object` [optional]  
-    pre-select a ratings value using `start` and `end` key values from one of the data elements.
+- **defaultValue** `Object` [optional]  
+    selects a initial ratings value using `start` and `end` key values from one of the data elements.
+- **value** `Object` [optional]  
+    controls the current value of the component. It selects the item from the data (on mount and on update). Use this prop in conjunction with `onChange` function.
+- **onChange** `function` [optional]  
+    is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected rating. This is useful for sharing URLs with the component state. Defaults to `false`.
 

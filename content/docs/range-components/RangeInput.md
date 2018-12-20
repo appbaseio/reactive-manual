@@ -50,7 +50,7 @@ Example uses:
     "start": 3000,
     "end": 50000
   }}
-  defaultSelected={{
+  defaultValue={{
     "start": 4000,
     "end": 10000
   }}
@@ -79,8 +79,12 @@ Example uses:
     an object with `start` and `end` keys and corresponding numeric values denoting the minimum and maximum possible slider values.
 - **title** `String or JSX` [optional]  
     title of the component to be shown in the UI.
-- **defaultSelected** `Object` [optional]  
-    an object with `start` and `end` keys and corresponding numeric values denoting the pre-selected range values.
+- **defaultValue** `Object` [optional]  
+    selects a initial range values using `start` and `end` key values from one of the data elements.
+- **value** `Object` [optional]  
+    controls the current value of the component.It selects the data from the range (on mount and on update). Use this prop in conjunction with `onChange` function.
+- **onChange** `function` [optional]  
+    is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
 - **rangeLabels** `Object` [optional]  
     an object with `start` and `end` keys and corresponding `String` labels to show labels near the ends of the `RangeInput` component.
 - **showFilter** `Boolean` [optional]  
