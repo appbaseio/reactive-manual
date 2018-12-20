@@ -42,6 +42,7 @@ Example uses:
   highlightField="group_city"
   queryFormat="or"
   filterLabel="City"
+  :autosuggest="true"
   :highlight="true"
   :showFilter="true"
   :fieldWeights="[1, 3]"
@@ -69,6 +70,8 @@ Example uses:
     set the search weight for the database fields, useful when dataField is an Array of more than one field. This prop accepts an array of numbers. A higher number implies a higher relevance weight for the corresponding field in the search results.
 - **placeholder** `String` [optional]  
     set the placeholder text to be shown in the searchbox input field. Defaults to "Search".
+- **autosuggest** `Boolean` [optional]  
+    set whether the autosuggest functionality should be enabled or disabled. Defaults to `true`. When set to `false`, it searches as user types, unless `debounce` is also set.
 - **showIcon** `Boolean` [optional]
     whether to display a search or custom icon in the input box. Defaults to `true`.
 - **iconPosition** `String` [optional]
@@ -141,7 +144,7 @@ Example uses:
 
 <br />
 
-<iframe src="https://codesandbox.io/embed/xpm7op166w" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+<iframe src="https://codesandbox.io/s/7zkwpln1qq" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 ## Styles
 
