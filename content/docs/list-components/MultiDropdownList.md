@@ -47,7 +47,7 @@ Example uses:
   title="Cities"
   size={100}
   sortBy="count"
-  defaultSelected={["London"]}
+  defaultValue={["London"]}
   showCount={true}
   placeholder="Search City"
   react={{
@@ -77,8 +77,12 @@ Example uses:
     * `count` sorts the list based on the count occurences, with highest value at the top.
     * `asc` sorts the list in the ascending order of the list item (Alphabetical).
     * `desc` sorts the list in the descending order of the term. Defaulted to `count`.
-- **defaultSelected** `Array` [optional]  
-    pre-select one or more options from the dropdown list. Accepts an `Array` object containing the items that should be selected. It is important for the passed value(s) exactly match with the field value(s) as stored in appbase.io app.
+- **defaultValue** `String Array` [optional]  
+    select one or more options from the dropdown list on mount. Accepts an `Array` object containing the items that should be selected.
+- **value** `String Array` [optional]  
+    controls the current value of the component. It selects the item from the list (on mount and on update). Use this prop in conjunction with `onChange` function.
+- **onChange** `function` [optional]  
+    is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
 - **queryFormat** `String` [optional]  
     queries the selected items from the list in one of two modes: `or`, `and`.
     * Defaults to `or` which queries for results where any of the selected list items are present.
