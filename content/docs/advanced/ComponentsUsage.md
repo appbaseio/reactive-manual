@@ -6,6 +6,8 @@ sectionid: docs
 permalink: advanced/componentsusage.html
 prev: analytics.html
 prevTitle: "Analytics"
+next: migrationguide.html
+nextTitle: "Migration Guide"
 redirect_from:
     - "componentsusage"
     - "advanced/componentsusage"

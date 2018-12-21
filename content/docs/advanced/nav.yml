@@ -151,3 +151,7 @@
           title: Uncontrolled components
           href: /advanced/typescript.html#uncontrolled-components
           forceInternal: true
+    - id: migrationguide
+      title: Migration Guide
+      href: /advanced/migrationguide.html
+      forceInternal: true
