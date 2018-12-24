@@ -58,3 +58,28 @@
           title: Events
           href: /range-components/singlerange.html#events
           forceInternal: true
+    - id: rangeslider
+      title: RangeSlider
+      href: /range-components/rangeslider.html
+      forceInternal: true
+      subitems:
+        - id: usage
+          title: Usage
+          href: /range-components/rangeslider.html#usage
+          forceInternal: true
+        - id: props
+          title: Props
+          href: /range-components/rangeslider.html#props
+          forceInternal: true
+        - id: styles
+          title: Styles
+          href: /range-components/rangeslider.html#styles
+          forceInternal: true
+        - id: extending
+          title: Extending
+          href: /range-components/rangeslider.html#extending
+          forceInternal: true
+        - id: events
+          title: Events
+          href: /range-components/rangeslider.html#events
+          forceInternal: true
