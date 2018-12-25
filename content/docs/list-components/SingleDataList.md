@@ -112,6 +112,12 @@ Example uses:
     show a count of the number of occurences besides each list item. Defaults to `false`.
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
+- **renderNoResults** `Function` [optional]  
+    can be used to render a message in case of no list items.
+
+    ```js
+    renderNoResults={() => <p>No Results Found!</p>}
+    ```
 - **renderItem** `Function` [optional]  
     customize the rendered list via a function which receives the item label, count & isSelected and expects a JSX or String back. For example:
 ```js
