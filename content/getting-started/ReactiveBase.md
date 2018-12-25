@@ -60,6 +60,9 @@ This is the first component you will need to add when using `ReactiveSearch`.
     allows over-writing of default styles by providing a preset value. Supported values are `light` (default) and `dark`. You can read more about its usage [here](/theming/themes.html)
 - **transformRequest** `Function` [optional]  
     Enables transformation of network request before execution. This function will give you the the request object as the param and expect an updated request in return, for execution. Note that this is an experimental API and will likely change in the future.
+- **graphQLUrl** `String` [optional]
+    Allows user to query from GraphqQL server instead of `ElasticSearch` REST api. [graphql-compose-elasticsearch](https://github.com/graphql-compose/graphql-compose-elasticsearch) helps in transforming `GraphQL` queries into `ElasticSearch` rest api. Here is an example of `GraphQL` server which acts as proxy for `ElasticSearch`. 
+    - [GraphQL Server for books application](https://github.com/appbaseio-apps/graphql-elasticsearch-server)
 
 ### Connect to Elasticsearch
 
