@@ -112,7 +112,7 @@ renderItem={(label, count, isSelected) => (
     renderNoResults={() => <p>No Results Found!</p>}
     ```
 - **renderError** `String or JSX or Function` [optional]
-    can we used to render an error message in case of any error.
+    can be used to render an error message in case of any error.
     ```js
 renderError={(error) => 
         <div>
