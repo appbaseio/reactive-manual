@@ -105,6 +105,12 @@ renderItem={(label, count, isSelected) => (
 ```
 - **onError** `Function` [optional]  
     gets triggered in case of an error and provides the `error` object, which can be used for debugging or giving feedback to the user if needed.
+- **renderNoResults** `Function` [optional]  
+    can be used to render a message in case of no list items.
+
+    ```js
+    renderNoResults={() => <p>No Results Found!</p>}
+    ```
 - **renderError** `String or JSX or Function` [optional]
     can be used to render an error message in case of any error.
     ```js
