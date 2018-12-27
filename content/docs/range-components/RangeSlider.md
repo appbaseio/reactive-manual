@@ -77,6 +77,9 @@ While `RangeSlider` only requires the above props to be used, it comes with many
     show the selected item as a filter in the selected filters view. Defaults to `true`.
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
+- **sliderOptions** `Object` [optional]
+    
+    use to pass props directly to the slider component `RangeSlider` uses. Read more about it [here](https://github.com/NightCatSama/vue-slider-component)
   
 ## Styles
 
