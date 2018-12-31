@@ -8,39 +8,28 @@ prev: componentsusage.html
 prevTitle: "Components Usage"
 ---
 
-With the release of version 3.0 of reactivesearch, we are now fully compatible with React 16.6.x and above. This release comes after the feedback we have gathered from the iterative deployment of reactivesearch in production for the dozens of our clients in the past 6–8 months. In this version we have changed the way certain props behaved in the earlier versions. This guide will give a brief about all the changes.
+With the release of version 3.0 of reactivesearch, we are now fully compatible with React 16.6 and above. This release comes after the feedback we have gathered from the iterative deployment of reactivesearch in production for the dozens of our clients in the past 6–8 months. In this version, we have changed the way certain props behaved in the earlier versions. This guide will give you a brief about all the changes.
 
-## Major Changes
+## Breaking Changes
 
 ### Controlled and Uncontrolled component behaviors
 
 To enable effective control over the components, we now support `defaultValue`, `value` & `onChange` props. These new props enable better controlled and uncontrolled usage for all the reactivesearch components. You can read all about it [here](/componentsusage).
 
-### Flexible Rendering
+> We don't support `defaultSelected` prop anywhere.
 
-With custom rendering support, you can now customise the looks and behaviors of your components in much more flexible and declarative manner.
+### New Render Props
 
-- #### Render Error
-
-We have added the support for `renderError` in all the data driven components which is used to display error message.
-
-```js{4-6}
-<DataSearch
-    componentId="SearchSensor"
-    dataField={["group_venue", "group_city"]}
-    renderError={(error) =>
-        <div>
-            Something went wrong with DataSearch!<br/>Error details<br/>{error}
-        </div>
-    }/>
-```
+You can now customise the looks and behaviors of your components in much more flexible and declarative manner with the new render props added to reactivesearch components.
 
 - #### Result Components
 
-In **v3** `onData` & `onAllData` is replaced with `renderData` & `renderAllData`, this props are used to render the UI in your Result Component. While `onData` is used to trigger side effects & concurrently render customised UI within the components.
+In **v3**, you will need to use `renderData` & `renderAllData` to custom render the result UI.
 
-**v2:**
-```js
+> We've removed rendering support with `onData` and `onAllData`. Although onData still exists to enable side-effects handling on new data transmissions. They act as callback props which gets triggered whenever there is a change in the data.
+
+**v2.x:**
+```js{6}
 <ReactiveList
     react={{
         "and": ["CitySensor", "SearchSensor"]
@@ -50,7 +39,7 @@ In **v3** `onData` & `onAllData` is replaced with `renderData` & `renderAllData`
 />
 ```
 
-**v3:**
+**v3.x:**
 ```js{6}
 <ReactiveList
     react={{
@@ -63,9 +52,26 @@ In **v3** `onData` & `onAllData` is replaced with `renderData` & `renderAllData`
 
 > Note: We have removed support for `onAllData` prop from all the result components.
 
+- #### Error handling and rendering control
+
+We have added the support for `renderError` in all the data driven components which can be used to display error message whenever there is an error while fetching the data for that particular component.
+
+```js{4-6}
+<DataSearch
+    componentId="SearchSensor"
+    dataField={["group_venue", "group_city"]}
+    renderError={(error) =>
+        <div>
+            Something went wrong with DataSearch!<br/>Error details<br/>{error}
+        </div>
+    }/>
+```
+
+To allow managing the side-effects on error occurrence, we also support `onError` method which gets triggered whenever an error occurs.
+
 - #### Search Components
 
-In **v3** `onSuggestion` is renamed to `renderSuggestion` & `renderAllSuggestion` is added to retrieve all the suggestions. `Render` prop is used to render the Suggestions UI in your Search Component. While `onSuggestion` is a callback used to  listen for the changes in suggestions & trigger side effects. Now we also have `renderNoSuggestion` to show message when there are no suggestions.
+In **v3**, we have added support for `renderSuggestion` & `renderAllSuggestion` to customise the rendering of suggestions in the search components. This can effectively help you render custom UI in place of vanilla suggestions. We also support `onSuggestion` prop which can be used to listen for the changes in suggestions & trigger side effects if required.
 
 **v2:**
 ```js
@@ -105,9 +111,13 @@ In **v3** `onSuggestion` is renamed to `renderSuggestion` & `renderAllSuggestion
   />
 ```
 
+We also added support for `renderNoSuggestion` to give feedback to the user when there are no suggestions for a given search query. Please check the relevant search component docs for further details.
+
 - #### List Components
 
-In **v3** `renderListItem` is renamed to `renderItem` with an additional third argument `isChecked` to provide whether the item is already checked.
+In **v3**, we have added support for `renderItem` to provide custom rendering for radio, checklist, dropdown list items UIs.
+
+> We have removed support for `renderListItem` prop here. Use `renderItem` instead.
 
 **v2**:
 ```js
@@ -142,14 +152,9 @@ In **v3** `renderListItem` is renamed to `renderItem` with an additional third a
     )}/>
 ```
 
-> Note: We have removed support for `renderListItem` prop from all the list components.
-
 ### Standardized usage of custom and default queries
 
 ReactiveSearch now internally validates the user-provided queries and compute the aggregation, sort, or generic queries based on the input provided. This intents to provide a seamless development experience to the developers for customizing the behaviors of the reactivesearch components. You can catch the details of this enhancement [here](https://github.com/appbaseio/reactivesearch/issues/546).
 
-### Support for google and openstreet maps
-
-We love our reactivemap cousin library equally, and have added support for the rendering of google and openstreet maps with the release of reactivemaps 3.0.
-
-> If you had problems getting through this guide, or made it through the guide but still have problems, please create a new issue describing your problem, ideally with a link to a public repo where we can reproduce the issue. 
+#### TODO: Example usage for default query and explanation
+#### TODO: Example usage for custom query and explanation
