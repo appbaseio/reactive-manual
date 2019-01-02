@@ -73,7 +73,7 @@ To allow managing the side-effects on error occurrence, we also support `onError
 
 In **v3**, we have added support for `renderSuggestion` & `renderAllSuggestion` to customise the rendering of suggestions in the search components. This can effectively help you render custom UI in place of vanilla suggestions. We also support `onSuggestion` prop which can be used to listen for the changes in suggestions & trigger side effects if required.
 
-**v2:**
+**v2.x:**
 ```js
 <DataSearch
   ...
@@ -91,7 +91,7 @@ In **v3**, we have added support for `renderSuggestion` & `renderAllSuggestion` 
   })}/>
 ```
 
-**v3:**
+**v3.x:**
 ```js{3,15}
 <DataSearch
   ...
@@ -119,7 +119,7 @@ In **v3**, we have added support for `renderItem` to provide custom rendering fo
 
 > We have removed support for `renderListItem` prop here. Use `renderItem` instead.
 
-**v2**:
+**v2.x**:
 ```js
 <MultiList
     componentId="CitySensor"
@@ -136,7 +136,7 @@ In **v3**, we have added support for `renderItem` to provide custom rendering fo
 />
 ```
 
-**v3**:
+**v3.x**:
 ```js{5-11}
 <MultiList
     componentId="CitySensor"
@@ -156,5 +156,34 @@ In **v3**, we have added support for `renderItem` to provide custom rendering fo
 
 ReactiveSearch now internally validates the user-provided queries and compute the aggregation, sort, or generic queries based on the input provided. This intents to provide a seamless development experience to the developers for customizing the behaviors of the reactivesearch components. You can catch the details of this enhancement [here](https://github.com/appbaseio/reactivesearch/issues/546).
 
-#### TODO: Example usage for default query and explanation
-#### TODO: Example usage for custom query and explanation
+- #### defaultQuery
+
+`defaultQuery` is ideally used with data-driven components to impact their own data.
+
+For example, in a `SingleList` component showing list of cities you may only want to render cities belonging to India.
+
+```js
+defaultQuery = {() => {
+        query: {
+            terms: {
+                country: [ "India" ]
+            }
+        }
+    }
+}
+```
+
+- #### customQuery
+
+`customQuery` is used to change the component's behavior for its subscribers. It gets triggered after an interaction on the component. Every component is shipped with a default behavior i.e. selecting a city on the SingleList component generates a term query. If you wish to change this behavior i.e. maybe perform additional query besides `term` query or do something else altogether, you can use `customQuery` prop.
+
+```js
+customQuery = {() => {
+    query: {
+        term: {
+                user : "Kimchy"
+            }
+        }
+    }
+}
+```
