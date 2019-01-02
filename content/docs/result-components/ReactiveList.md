@@ -53,8 +53,8 @@ Example uses:
   loader="Loading Results.."
   showResultStats={true}
   renderData={(res) => <div>{res.title}</div>}
-  onResultStats={(total, took) => {
-    return "found " + total + " results in " + took + "ms."
+  renderResultStats={({ total, time }) => {
+    return "found " + total + " results in " + time + "ms."
   }}
   react={{
     and: ["CitySensor", "SearchSensor"]
@@ -106,7 +106,7 @@ Example uses:
     display to show the user while the data is loading, accepts `String` or `JSX` markup.
 - **showResultStats** `Boolean` [optional]  
     whether to show result stats in the form of results found and time taken. Defaults to `true`.
-- **onResultStats** `Function` [optional]  
+- **renderResultStats** `Function` [optional]  
     renders custom result stats using a callback function that takes `stats` object as parameter and expects it to return a string or JSX. `stats` object contains following properties
     - `totalResults` - Total number of results found
     - `totalPages` - Total number of pages found based on current page size
@@ -114,7 +114,7 @@ Example uses:
     - `displayedResults` - Number of results displayed in current view
     - `time` - Time taken to find total results
     ```js
-    onResultStats={
+    renderResultStats={
             function(stats){
                 return (
                     `Showing ${stats.displayedResults} of total ${stats.totalResults} in ${stats.time} ms`
@@ -176,6 +176,13 @@ renderError={(error) =>
     ```
 - **onData** `Function` [optional]
     gets triggered after data changes, which returns an object with these properties: `results`, `streamResults`, `loadMore`, `base` & `triggerClickAnalytics`.
+- **onResultStats** `Function` [optional]
+    gets triggered after stats changes, which returns an object with these properties:
+    - `totalResults` - Total number of results found
+    - `totalPages` - Total number of pages found based on current page size
+    - `currentPage` - Current page number for which data is being rendered
+    - `displayedResults` - Number of results displayed in current view
+    - `time` - Time taken to find total results
 ## Demo
 
 <br />
