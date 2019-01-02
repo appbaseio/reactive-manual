@@ -230,7 +230,7 @@ exports.onCreateNode = ({node, boundActionCreators, getNode}) => {
       createNodeField({
         node,
         name: 'path',
-        value: relativePath,
+        value: relativePath.replace(/\.[^/.]+$/, ''),
       });
 
       // Used by createPages() above to register redirects.
