@@ -91,7 +91,7 @@ const MarkdownPage = ({
                     <a
                       css={sharedStyles.articleLayout.editLink}
                       href={`https://github.com/appbaseio/reactive-manual/tree/v3/content/${markdownRemark
-                        .fields.path}`}>
+                        .fields.path}.md`}>
                       Edit this page
                     </a>
                   </div>
