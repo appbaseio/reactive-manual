@@ -53,9 +53,13 @@ Example uses:
   loader="Loading Results.."
   showResultStats={true}
   renderData={(res) => <div>{res.title}</div>}
-  renderResultStats={({ total, time }) => {
-    return "found " + total + " results in " + time + "ms."
-  }}
+  onResultStats={
+      function(stats){
+          return (
+              `Showing ${stats.displayedResults} of total ${stats.totalResults} in ${stats.time} ms`
+          )   
+      }
+  }
   react={{
     and: ["CitySensor", "SearchSensor"]
   }}
