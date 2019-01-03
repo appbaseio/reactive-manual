@@ -1,16 +1,16 @@
 ---
-id: reactivemap
-title: "ReactiveMap"
+id: reactivegooglemap
+title: "ReactiveGoogleMap"
 layout: docs
 sectionid: docs
-permalink: map-components/reactivemap.html
+permalink: map-components/reactivegooglemap.html
 prev: map-components/geodistancedropdown.html
 prevTitle: "GeoDistanceDropdown"
 ---
 
-![ReactiveMap Image](https://i.imgur.com/Q87ks8I.png)
+![ReactiveGoogleMap Image](https://i.imgur.com/Q87ks8I.png)
 
-A `ReactiveMap` creates a data-driven map UI component. It is the key component for build map based experiences.
+A `ReactiveGoogleMap` creates a data-driven map UI component using Google Maps. It is the key component for building map based experiences.
 
 Example uses:
 * showing a map of user checkins by city and topics for powering discovery based experiences.
@@ -21,7 +21,7 @@ Example uses:
 #### Basic Usage
 
 ```js
-<ReactiveMap
+<ReactiveGoogleMap
     componentId="MapUI"
     dataField="location"
     title="Venue Location Map"
@@ -31,7 +31,7 @@ Example uses:
 #### Usage With All Props
 
 ```js
-<ReactiveMap
+<ReactiveGoogleMap
     componentId="MapUI"
     dataField="location"
     title="Venue Location Map"
@@ -121,7 +121,7 @@ Example uses:
 - **className** `String`  
     CSS class to be injected on the component container.
 - **style** `Object`  
-    CSS style object to be applied to the `ReactiveMap` component.
+    CSS style object to be applied to the `ReactiveGoogleMap` component.
 - **onData** `function`  
     event fired when one or more markers are indexed, updated or removed from the map. It takes an object with the following formats (`label`, `icon`, `custom`):
 
@@ -147,12 +147,11 @@ onData={result => ({
 
 <br />
 
-<iframe height='500' scrolling='no' title='ReactiveMap Example' src='//codepen.io/dhruvdutt/embed/KRwmvz/?height=500&theme-id=light&embed-version=2' frameborder='no' allowtransparency='true' allowfullscreen='true' style='width: 100%;'>See the Pen <a href='https://codepen.io/dhruvdutt/pen/KRwmvz/'>ReactiveMap Example</a> by Dhruvdutt Jadhav (<a href='https://codepen.io/dhruvdutt'>@dhruvdutt</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+<iframe src="https://codesandbox.io/embed/ovq0m97qy6" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 ## Styles
 
-`ReactiveMap` component supports `innerClass` prop with the following keys:    
+`ReactiveGoogleMap` component supports `innerClass` prop with the following keys:    
 
 - `title`
 - `input`
@@ -169,4 +168,4 @@ onData={result => ({
 
 ## Examples
 
-<a href="https://opensource.appbase.io/playground/?selectedKind=Map%20Components%2FReactiveMap&selectedStory=Basic&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybooks%2Fstorybook-addon-knobs" target="_blank">ReactiveMap with all the default props</a>
+<a href="https://opensource.appbase.io/playground/?selectedKind=Map%20Components%2FReactiveMap&selectedStory=Basic&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybooks%2Fstorybook-addon-knobs" target="_blank">ReactiveGoogleMap with all the default props</a>
