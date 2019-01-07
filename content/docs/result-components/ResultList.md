@@ -86,7 +86,7 @@ Example uses:
 - **componentId** `String`  
     unique identifier of the component, can be referenced in other components' `react` prop.
 - **dataField** `String`  
-    data field to be connected to the component's UI view. It is useful for providing a sorting context.
+    data field to be connected to the component's UI view. It is useful for providing a **sorting** context i.e. results would be sorted based on the `dataField`.
 - **excludeFields** `String Array` [optional]  
     fields to be excluded in search results.
 - **includeFields** `String Array` [optional]  
