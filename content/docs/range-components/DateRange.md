@@ -41,8 +41,8 @@ Example uses:
   dataField="mtime"
   title="DateRange"
   defaultSelected={{
-    start: '2017-04-01',
-    end: '2017-04-07'
+    start: new Date('2017-04-01'),
+    end: new Date('2017-04-07')
   }}
   placeholder={{
       start: 'Start Date',
@@ -70,7 +70,17 @@ Example uses:
 - **title** `String or JSX` [optional]  
     title of the component to be shown in the UI.
 - **defaultSelected** `Object` [optional]  
-    pre-select a default date range based on an object having a **start** and **end** `string` value.
+    pre-select a default date range based on an object having a **start** and **end** `date` object value.
+    ```js
+    <DateRange
+      componentId="DateSensor"
+      dataField="mtime"
+      defaultSelected={{
+        start: new Date('2017-04-01'),
+        end: new Date('2017-04-07')
+      }}
+    />
+    ```
 - **focused** `Boolean` [optional]  
     whether to display the calendar view on initial load. Defaults to `true`.
 - **autoFocusEnd** `Boolean` [optional]  
