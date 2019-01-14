@@ -13,16 +13,16 @@ redirect_from:
     - "reactive-manual/advanced"
 ---
 
-Recipe for rendering custom suggestions with `DataSearch` and `CategorySearch` components using the `renderAllSuggestion` prop.
+Recipe for rendering custom suggestions with `DataSearch` and `CategorySearch` components using the `renderAllSuggestions` prop.
 
-ReactiveSearch uses the wonderful [downshift](https://github.com/paypal/downshift) for rendering dropdowns and `renderAllSuggestion` prop provides great extensibility for custom suggestions rendering. `renderAllSuggestion` is a [render function](https://reactjs.org/docs/render-props.html) which receives some parameters which you may use to build your own custom suggestions rendering
+ReactiveSearch uses the wonderful [downshift](https://github.com/paypal/downshift) for rendering dropdowns and `renderAllSuggestions` prop provides great extensibility for custom suggestions rendering. `renderAllSuggestions` is a [render function](https://reactjs.org/docs/render-props.html) which receives some parameters which you may use to build your own custom suggestions rendering
 
 ## Custom Suggestions for DataSearch
 
 ```js
 <DataSearch
     ...
-    renderAllSuggestion={
+    renderAllSuggestions={
         ({
             currentValue,       // the current value in the search
             isOpen,             // isOpen from downshift
@@ -50,7 +50,7 @@ The `suggestions` parameter receives all the unparsed suggestions from elasticse
 ```js
 <CategorySearch
     ...
-    renderAllSuggestion={
+    renderAllSuggestions={
         ({
             currentValue,       // the current value in the search
             isOpen,             // isOpen from downshift

@@ -200,7 +200,7 @@ Read more about it [here](/theming/class.html).
 />
 ```
 
-- it's also possible to take control of rendering individual suggestions with `renderSuggestion` prop or the entire suggestions rendering using the `renderAllSuggestion` prop. Check the [custom suggestions](/advanced/customsuggestions.html) recipe for more info.
+- it's also possible to take control of rendering individual suggestions with `renderSuggestion` prop or the entire suggestions rendering using the `renderAllSuggestions` prop. Check the [custom suggestions](/advanced/customsuggestions.html) recipe for more info.
 
 6. add the following [synthetic events](https://reactjs.org/events.html) to the underlying `input` element:
     - onBlur
