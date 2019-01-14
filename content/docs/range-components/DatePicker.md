@@ -137,8 +137,10 @@ Read more about it [here](/theming/class.html). This component uses [React Day P
   customQuery={
     function(value, props) {
       return {
-        match: {
-          data_field: "this is a test"
+        query: {
+          match: {
+            data_field: "this is a test"
+          }
         }
       }
     }

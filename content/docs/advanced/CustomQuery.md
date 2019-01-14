@@ -50,10 +50,12 @@ Here is another example that applies a `match_phrase_prefix` query.
 
 this.customQuery=function() {
   return {
-    "match_phrase_prefix": {
-      "fieldName": {
-        "query": "hello world",
-        "max_expansions": 10
+    "query": {
+      "match_phrase_prefix": {
+        "fieldName": {
+          "query": "hello world",
+          "max_expansions": 10
+        }
       }
     }
   }

@@ -160,7 +160,7 @@ Read more about it [here](/theming/class.html).
 
 `MultiDropdownList` component can be extended to
 1. customize the look and feel with `className`, `style`,
-2. update the underlying DB query with `customQuery`,
+2. update the underlying DB query with `customQuery`, `defaultQuery`,
 3. connect with external interfaces using `beforeValueChange`, `onValueChange` and `onQueryChange`,
 4. specify how options should be filtered or updated using `react` prop.
 
@@ -172,9 +172,18 @@ Read more about it [here](/theming/class.html).
   customQuery={
     function(value, props) {
       return {
-        match: {
-          data_field: "this is a test"
+        query: {
+            match: {
+                data_field: "this is a test"
+            }
         }
+      }
+    }
+  }
+  defaultQuery={
+    function(value, props) {
+      return {
+          timeout: '1s'
       }
     }
   }
@@ -218,6 +227,8 @@ Read more about it [here](/theming/class.html).
 - **customQuery** `Function`  
     takes **value** and **props** as parameters and **returns** the data query to be applied to the component, as defined in Elasticsearch Query DSL.
     `Note:` customQuery is called on value changes in the **MultiDropdownList** component as long as the component is a part of `react` dependency of at least one other component.
+- **defaultQuery** `Function`
+    takes **value** and **props** as parameters and **returns** the data query to be applied to the source component, as defined in Elasticsearch Query DSL, which doesn't get leaked to other components.
 - **beforeValueChange** `Function`  
     is a callback function which accepts component's future **value** as a parameter and **returns** a promise. It is called everytime before a component's value changes. The promise, if and when resolved, triggers the execution of the component's query and if rejected, kills the query execution. This method can act as a gatekeeper for query execution, since it only executes the query after the provided promise has been resolved.
 - **onValueChange** `Function`  

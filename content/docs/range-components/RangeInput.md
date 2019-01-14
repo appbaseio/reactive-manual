@@ -131,8 +131,10 @@ The other `innerClass` properties are the same as supported by [RangeSlider](ran
   customQuery={
     function(value, props) {
       return {
-        match: {
-          data_field: "this is a test"
+        query: {
+            match: {
+                data_field: "this is a test"
+            }
         }
       }
     }

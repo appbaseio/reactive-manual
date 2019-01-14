@@ -142,8 +142,10 @@ Read more about it [here](/theming/class.html).
   customQuery={
     function(value, props) {
       return {
-        range: {
-          lte: "now"
+        query: {
+            range: {
+                lte: "now"
+            }
         }
       }
     }
