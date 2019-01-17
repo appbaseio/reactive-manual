@@ -110,7 +110,7 @@ Example uses:
     a function which returns the custom [highlight settings](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-highlighting.html). It receives the `props` and expects you to return an object with the `highlight` key. Check out the <a href="https://opensource.appbase.io/reactivesearch/demos/technews/" target="_blank">technews demo</a> where the `DataSearch` component uses a `customHighlight` as given below,
 
 ```js
-<DataSearch
+<CategorySearch
     componentId="title"
     dataField={['title', 'text']}
     highlight
@@ -161,18 +161,19 @@ Example uses:
 - **renderError** `String or JSX or Function` [optional]
     can we used to render an error message in case of any error.
     ```js
-renderError={(error) => 
-        <div>
-            Something went wrong!<br/>Error details<br/>{error}
-        </div>
-}
+    renderError={(error) => (
+            <div>
+                Something went wrong!<br/>Error details<br/>{error}
+            </div>
+        )
+    }
     ```
 
 ## Demo
 
 <br />
 
-<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/dev/packages/web/examples/CategorySearch" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/next/packages/web/examples/CategorySearch" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 ## Styles
 
@@ -194,10 +195,17 @@ Read more about it [here](/theming/class.html).
 5. use your own function to render suggestions using `renderSuggestion` prop. It expects an object back for each `suggestion` having keys `label` and `value`. The query is run against the `value` key and `label` is used for rendering the suggestions. `label` can be either `String` or JSX. For example,
 
 ```js
-<DataSearch
+<CategorySearch
   ...
   renderSuggestion={(suggestion) => ({
-    label: (<div>{suggestion._source.original_title} by<span style={{ color: 'dodgerblue', marginLeft: 5 }}>{suggestion._source.authors}</span></div>),
+    label: (
+        <div>
+            {suggestion._source.original_title} by
+            <span style={{ color: 'dodgerblue', marginLeft: 5 }}>
+                {suggestion._source.authors}
+            </span>
+        </div>
+    ),
     value: suggestion._source.original_title,
     source: suggestion._source  // for onValueSelected to work with renderSuggestion
   })}
