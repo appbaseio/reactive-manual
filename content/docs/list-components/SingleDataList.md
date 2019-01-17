@@ -95,7 +95,7 @@ Example uses:
 - **showRadio** `Boolean` [optional]  
     whether to display a radio button beside the list item. Defaults to `true`.
 - **placeholder** `String` [optional]  
-    placeholder to be displayed in the searchbox. Defaults to "Search".
+    placeholder to be displayed in the searchbox. Defaults to "Search". Applicable only when `showSearch` is true.
 - **defaultValue** `string` [optional]  
     selects an initial item from the list on mount.
 - **value** `string` [optional]  
@@ -103,7 +103,7 @@ Example uses:
 - **onChange** `function` [optional]  
     is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
 - **selectAllLabel** `String` [optional]  
-    if provided displays an additional option to selct all list values.
+    if provided displays an additional option to select all list values.
 - **showFilter** `Boolean` [optional]  
     show as filter when a value is selected in a global selected filters view. Defaults to `true`.
 - **filterLabel** `String` [optional]  
@@ -120,33 +120,36 @@ Example uses:
     ```
 - **renderItem** `Function` [optional]  
     customize the rendered list via a function which receives the item label, count & isSelected and expects a JSX or String back. For example:
-```js
-renderItem={(label, count, isSelected) => (
-    <div>
-        {label}
-        <span style={{ marginLeft: 5, color: isSelected ? 'red' : 'dodgerblue' }}>
-            {count}
-        </span>
-    </div>
-)}
-```
+    ```js
+    renderItem={(label, count, isSelected) => (
+        <div>
+            {label}
+            <span style={{
+                marginLeft: 5, color: isSelected ? 'red' : 'dodgerblue' 
+            }}>
+                {count}
+            </span>
+        </div>
+    )}
+    ```
 - **onError** `Function` [optional]  
     gets triggered in case of an error and provides the `error` object, which can be used for debugging or giving feedback to the user if needed.
 - **renderError** `String or JSX or Function` [optional]
     can be used to render an error message in case of any error.
     ```js
-renderError={(error) => 
-        <div>
-            Something went wrong!<br/>Error details<br/>{error}
-        </div>
-}
+    renderError={(error) => (
+            <div>
+                Something went wrong!<br/>Error details<br/>{error}
+            </div>
+        )
+    }
     ```
 
 ## Demo
 
 <br />
 
-<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/dev/packages/web/examples/SingleDataList" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/next/packages/web/examples/SingleDataList" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 ## Styles
 
