@@ -31,6 +31,7 @@ Example uses:
 
 ```js
 <ReactiveList
+  componentId="SearchResult"
   react={{
     "and": ["CitySensor", "SearchSensor"]
   }}
@@ -172,11 +173,12 @@ Example uses:
 - **renderError** `String or JSX or Function` [optional]
     can be used to render an error message in case of any error.
     ```js
-renderError={(error) => 
-        <div>
-            Something went wrong!<br/>Error details<br/>{error}
-        </div>
-}
+    renderError={(error) => (
+            <div>
+                Something went wrong!<br/>Error details<br/>{error}
+            </div>
+        )
+    }
     ```
 - **onData** `Function` [optional]
     gets triggered after data changes, which returns an object with these properties: `results`, `streamResults`, `loadMore`, `base` & `triggerClickAnalytics`.
@@ -191,7 +193,7 @@ renderError={(error) =>
 
 <br />
 
-<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/dev/packages/web/examples/ReactiveList" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/next/packages/web/examples/ReactiveList" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 ## Styles
 

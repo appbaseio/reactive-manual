@@ -54,7 +54,7 @@ Example uses:
 
 ```js
 <MultiDataList
-  componentId="MeetupTops"
+    componentId="MeetupTops"
   dataField="group.group_topics.topic_name_raw.raw"
   data={
     [{
@@ -103,7 +103,7 @@ Example uses:
 - **onChange** `function` [optional]  
     is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
 - **selectAllLabel** `String` [optional]  
-    if provided displays an additional option to selct all list values.
+    if provided displays an additional option to select all list values.
 - **showFilter** `Boolean` [optional]  
     show as filter when a value is selected in a global selected filters view. Defaults to `true`.
 - **showCount** `Boolean` [optional]  
@@ -120,33 +120,36 @@ Example uses:
     ```
 - **renderItem** `Function` [optional]  
     customize the rendered list via a function which receives the item label, count & isSelected and expects a JSX or String back. For example:
-```js
-renderItem={(label, count, isSelected) => (
-    <div>
-        {label}
-        <span style={{ marginLeft: 5, color: isSelected ? 'red' : 'dodgerblue' }}>
-            {count}
-        </span>
-    </div>
-)}
-```
+    ```js
+    renderItem={(label, count, isSelected) => (
+        <div>
+            {label}
+            <span style={{
+                marginLeft: 5, color: isSelected ? 'red' : 'dodgerblue' 
+            }}>
+                {count}
+            </span>
+        </div>
+    )}
+    ```
 - **onError** `Function` [optional]  
     gets triggered in case of an error and provides the `error` object, which can be used for debugging or giving feedback to the user if needed.
 - **renderError** `String or JSX or Function` [optional]
     can be used to render an error message in case of any error.
     ```js
-renderError={(error) => 
-        <div>
-            Something went wrong!<br/>Error details<br/>{error}
-        </div>
-}
+    renderError={(error) => (
+            <div>
+                Something went wrong!<br/>Error details<br/>{error}
+            </div>
+        )
+    }
     ```
 
 ## Demo
 
 <br />
 
-<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/dev/packages/web/examples/MultiDataList" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/next/packages/web/examples/MultiDataList" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 ## Styles
 
@@ -221,16 +224,16 @@ Read more about it [here](/theming/class.html).
 
 - **className** `String`  
     CSS class to be injected on the component container.
-- **style** `Object`
+- **style** `Object`    
     CSS styles to be applied to the **MultiDataList** component.
-- **customQuery** `Function`
+- **customQuery** `Function`    
     takes **value** and **props** as parameters and **returns** the data query to be applied to the component, as defined in Elasticsearch Query DSL.
     `Note:` customQuery is called on value changes in the **MultiDataList** component as long as the component is a part of `react` dependency of at least one other component.
-- **defaultQuery** `Function`
+- **defaultQuery** `Function`   
     takes **value** and **props** as parameters and **returns** the data query to be applied to the source component, as defined in Elasticsearch Query DSL, which doesn't get leaked to other components.
-- **beforeValueChange** `Function`  
+- **beforeValueChange** `Function`    
     is a callback function which accepts component's future **value** as a parameter and **returns** a promise. It is called everytime before a component's value changes. The promise, if and when resolved, triggers the execution of the component's query and if rejected, kills the query execution. This method can act as a gatekeeper for query execution, since it only executes the query after the provided promise has been resolved.
-- **onValueChange** `Function`  
+- **onValueChange** `Function`   
     is a callback function which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when list item(s) is/are selected in a "Discounted Price" MultiDataList.
 - **onQueryChange** `Function`  
     is a callback function which accepts component's **prevQuery** and **nextQuery** as parameters. It is called everytime the component's query changes. This prop is handy in cases where you want to generate a side-effect whenever the component's query would change.
