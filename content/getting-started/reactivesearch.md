@@ -114,7 +114,7 @@ Next, we will look at the [**SingleRange**](/basic-components/singlerange.html) 
 		{"start": 4, "end": 5, "label": "4 stars and up"},
 		{"start": 3, "end": 5, "label": "3 stars and up"}
 	]}
-	defaultSelected="4 stars and up"
+	defaultValue="4 stars and up"
 />
 ```
 
@@ -177,7 +177,7 @@ class App extends Component {
 							{"start": "2", "end": "5", "label": "2 stars and up"},
 							{"start": "1", "end": "5", "label": "see all ratings"},
 						]}
-						defaultSelected="4 stars and up"
+						defaultValue="4 stars and up"
 					/>
 					<ResultCard
 						componentId="result"
@@ -253,7 +253,7 @@ class App extends Component {
 									{"start": "2", "end": "5", "label": "2 stars and up"},
 									{"start": "1", "end": "5", "label": "see all ratings"},
 								]}
-								defaultSelected="4 stars and up"
+								defaultValue="4 stars and up"
 								style={{
 									padding: "5px",
 									marginTop: "10px"
