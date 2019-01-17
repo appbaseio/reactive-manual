@@ -72,7 +72,7 @@ Example uses:
 - **size** `Number` [optional]  
     control how many items to display in the List. Defaults to 100.
 - **sortBy** `String` [optional]  
-    sort the list items by one of `count`, `asc`, `desc`. Defaults to `count`, which sorts the list by the frequency of count     value, most first.
+    sort the list items by one of `count`, `asc`, `desc`. Defaults to `count`, which sorts the list by the frequency of count value, most first.
 - **defaultValue** `string` [optional]  
     selects an initial item from the list on mount.
 - **value** `string` [optional]  
@@ -87,16 +87,18 @@ Example uses:
     show count value of the number of occurences besides a list item. Defaults to `true`.
 - **renderItem** `Function` [optional]  
     customize the rendered list via a function which receives the item label, count & isSelected and expects a JSX or String back. For example:
-```js
-renderItem={(label, count, isSelected) => (
-    <div>
-        {label}
-        <span style={{ marginLeft: 5, color: isSelected ? 'red' : 'dodgerblue' }}>
-            {count}
-        </span>
-    </div>
-)}
-```
+    ```js
+    renderItem={(label, count, isSelected) => (
+        <div>
+            {label}
+            <span style={{
+                marginLeft: 5, color: isSelected ? 'red' : 'dodgerblue' 
+            }}>
+                {count}
+            </span>
+        </div>
+    )}
+    ```
 - **onError** `Function` [optional]  
     gets triggered in case of an error and provides the `error` object, which can be used for debugging or giving feedback to the user if needed.
 - **renderNoResults** `Function` [optional]  
@@ -108,15 +110,16 @@ renderItem={(label, count, isSelected) => (
 - **renderError** `String or JSX or Function` [optional]
     can be used to render an error message in case of any error.
     ```js
-renderError={(error) => 
-        <div>
-            Something went wrong!<br/>Error details<br/>{error}
-        </div>
-}
+    renderError={(error) => (
+            <div>
+                Something went wrong!<br/>Error details<br/>{error}
+            </div>
+        )
+    }
     ```
 
 - **transformData** `Function` [optional]  
-    allows transforming the data to render inside the list. You can change the order, remove, or add items, tranform their values with this method. It provides the data as param which is an array of objects of shape `{ key: <string>, doc_count: <number> }` and expects you to return the array of objects of same shape. For example:
+    allows transforming the data to render inside the list. You can change the order, remove, or add items, transform their values with this method. It provides the data as param which is an array of objects of shape `{ key: <string>, doc_count: <number> }` and expects you to return the array of objects of same shape. For example:
 ```js
 transformData={(list) => {
     // sort or update the list
@@ -128,7 +131,7 @@ transformData={(list) => {
 - **missingLabel** `String` [optional]  
     defaults to `N/A`. Specify a custom label to show when `showMissing` is set to `true`.
 - **showSearch** `Boolean` [optional]  
-    whether to show a searchbox to filter the list items locally. Defaults to true.
+    whether to show a searchbox to filter the list items locally. Defaults to `true`.
 - **placeholder** `String` [optional]  
     placeholder to be displayed in the searchbox, only applicable when the `showSearch` prop is set to true. When applicable, the default placeholder value is set to "Search".
 - **showFilter** `Boolean` [optional]  
@@ -144,7 +147,7 @@ transformData={(list) => {
 
 <br />
 
-<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/dev/packages/web/examples/SingleList" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/next/packages/web/examples/SingleList" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 ## Styles
 

@@ -16,7 +16,7 @@ redirect_from:
 
 ![Image to be displayed](https://i.imgur.com/OUjsjxH.png)
 
-`MultiDropdownList` creates a  dropdown based multiple selection list UI component that is connected to a database field. It is used for filtering results based on the current selection from a list of items.
+`MultiDropdownList` creates a dropdown based multiple selection list UI component that is connected to a database field. It is used for filtering results based on the current selection from a list of items.
 
 > Note
 >
@@ -76,7 +76,7 @@ Example uses:
     property that decides on how to sort the list items, accepts one of `count`, `asc` or `desc` as valid values.
     * `count` sorts the list based on the count occurences, with highest value at the top.
     * `asc` sorts the list in the ascending order of the list item (Alphabetical).
-    * `desc` sorts the list in the descending order of the term. Defaulted to `count`.
+    * `desc` sorts the list in the descending order of the term. Defaults to `count`.
 - **defaultValue** `String Array` [optional]  
     select one or more options from the dropdown list on mount. Accepts an `Array` object containing the items that should be selected.
 - **value** `String Array` [optional]  
@@ -90,19 +90,21 @@ Example uses:
 - **showCount** `Boolean` [optional]  
     show count of number of occurences besides an item. Defaults to `true`.
 - **showSearch** `Boolean` [optional]  
-    whether to show a searchbox to filter the list items locally. Defaults to false.
+    whether to show a searchbox to filter the list items locally. Defaults to `false`.
 - **renderItem** `Function` [optional]  
     customize the rendered list via a function which receives the item label, count & isSelected and expects a JSX or String back. For example:
-```js
-renderItem={(label, count, isSelected) => (
-    <div>
-        {label}
-        <span style={{ marginLeft: 5, color: isSelected ? 'red' : 'dodgerblue' }}>
-            {count}
-        </span>
-    </div>
-)}
-```
+    ```js
+    renderItem={(label, count, isSelected) => (
+        <div>
+            {label}
+            <span style={{
+                marginLeft: 5, color: isSelected ? 'red' : 'dodgerblue' 
+            }}>
+                {count}
+            </span>
+        </div>
+    )}
+    ```
 - **onError** `Function` [optional]  
     gets triggered in case of an error and provides the `error` object, which can be used for debugging or giving feedback to the user if needed.
 - **renderNoResults** `Function` [optional]  
@@ -114,11 +116,12 @@ renderItem={(label, count, isSelected) => (
 - **renderError** `String or JSX or Function` [optional]
     can be used to render an error message in case of any error.
     ```js
-renderError={(error) => 
-        <div>
-            Something went wrong!<br/>Error details<br/>{error}
-        </div>
-}
+    renderError={(error) => (
+            <div>
+                Something went wrong!<br/>Error details<br/>{error}
+            </div>
+        )
+    }
     ```
 
 - **transformData** `Function` [optional]  
@@ -142,7 +145,7 @@ renderError={(error) =>
 
 <br />
 
-<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/dev/packages/web/examples/MultiDropdownList" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/next/packages/web/examples/MultiDropdownList" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 ## Styles
 
