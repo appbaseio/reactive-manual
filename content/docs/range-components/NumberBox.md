@@ -64,8 +64,8 @@ Example uses:
     title of the component to be shown in the UI.
 - **defaultValue** `Number` [optional]  
     sets a initial valid value within the [start, end] range on mount.
-- **value** `Object` [optional]  
-    controls the current value of the component.It selects the label from the data (on mount and on update).Use this prop in conjunction with `onChange` function.
+- **value** `Number` [optional]  
+    controls the current value of the component (on mount and on update).Use this prop in conjunction with `onChange` function.
 - **onChange** `function` [optional]  
     is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
 - **labelPosition** `String` [optional]  
@@ -84,7 +84,7 @@ Example uses:
 
 <br />
 
-<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/dev/packages/web/examples/NumberBox" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/next/packages/web/examples/NumberBox" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 ## Styles
 

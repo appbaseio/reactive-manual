@@ -41,8 +41,8 @@ Example uses:
   dataField="mtime"
   title="DateRange"
   defaultValue={{
-    start: '2017-04-01',
-    end: '2017-04-07'
+    start: new Date('2017-04-01'),
+    end: new Date('2017-04-07')
   }}
   placeholder={{
       start: 'Start Date',
@@ -70,7 +70,7 @@ Example uses:
 - **title** `String or JSX` [optional]  
     title of the component to be shown in the UI.
 - **defaultValue** `Object` [optional]  
-    selects a initial date range based on an object having a **start** and **end** `string` value.
+    selects a initial date range based on an object having a **start** and **end** `date` object value.
 - **value** `Object` [optional]  
     controls the current value of the component.It selects the range based on the data provided (on mount and on update).Use this prop in conjunction with `onChange` function.
 - **onChange** `function` [optional]  
@@ -113,7 +113,7 @@ Example uses:
 
 <br />
 
-<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/dev/packages/web/examples/DateRange" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/next/packages/web/examples/DateRange" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 ## Styles
 
