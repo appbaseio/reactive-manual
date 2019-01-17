@@ -34,6 +34,14 @@
           title: Extending a Custom Query
           href: /advanced/customquery.html#extending-a-custom-query
           forceInternal: true
+        - id: defining-a-default-query
+          title: Defining a Default Query
+          href: /advanced/customquery.html#defining-a-default-query
+          forceInternal: true
+        - id: extending-a-default-query
+          title: Extending a Default Query
+          href: /advanced/customquery.html#extending-a-default-query
+          forceInternal: true
         - id: data-controller-component
           title: Data Controller Component
           href: /advanced/customquery.html#data-controller-component
