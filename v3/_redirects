@@ -8,12 +8,12 @@
 /reactive-manual/v3/getting-started/reactivemaps  /reactive-manual/v3/getting-started/reactivemaps.html  302
 /reactive-manual/v3/quickstart/maps  /reactive-manual/v3/getting-started/reactivemaps.html  302
 /reactive-manual/v3/quickstart/reactivemaps  /reactive-manual/v3/getting-started/reactivemaps.html  302
-/reactive-manual/v3/analytics  /reactive-manual/v3/advanced/analytics.html  302
-/reactive-manual/v3/advanced/analytics  /reactive-manual/v3/advanced/analytics.html  302
 /reactive-manual/v3/getting-started/  /reactive-manual/v3/getting-started/reactivesearch.html  302
 /reactive-manual/v3/getting-started/reactivesearch  /reactive-manual/v3/getting-started/reactivesearch.html  302
 /reactive-manual/v3/install  /reactive-manual/v3/getting-started/reactivesearch.html  302
 /reactive-manual/v3/quickstart  /reactive-manual/v3/getting-started/reactivesearch.html  302
+/reactive-manual/v3/analytics  /reactive-manual/v3/advanced/analytics.html  302
+/reactive-manual/v3/advanced/analytics  /reactive-manual/v3/advanced/analytics.html  302
 /reactive-manual/v3/comparison  /reactive-manual/v3/advanced/comparison.html  302
 /reactive-manual/v3/advanced/comparison  /reactive-manual/v3/advanced/comparison.html  302
 /reactive-manual/v3/componentsusage  /reactive-manual/v3/advanced/componentsusage.html  302
@@ -26,6 +26,8 @@
 /reactive-manual/v3/react  /reactive-manual/v3/advanced/react.html  302
 /reactive-manual/v3/advanced/reactivecomponent  /reactive-manual/v3/advanced/reactivecomponent.html  302
 /reactive-manual/v3/reactivecomponent  /reactive-manual/v3/advanced/reactivecomponent.html  302
+/reactive-manual/v3/ssr  /reactive-manual/v3/advanced/ssr.html  302
+/reactive-manual/v3/advanced/ssr  /reactive-manual/v3/advanced/ssr.html  302
 /reactive-manual/v3/typescript  /reactive-manual/v3/advanced/typescript.html  302
 /reactive-manual/v3/advanced/typescript  /reactive-manual/v3/advanced/typescript.html  302
 /reactive-manual/v3/basic-components/datacontroller.html  /reactive-manual/v3/base-components/datacontroller.html  302
@@ -100,9 +102,6 @@
 /reactive-manual/v3/basic-components/singledropdownrange.html  /reactive-manual/v3/range-components/singledropdownrange.html  302
 /reactive-manual/v3/range-components/singledropdownrange  /reactive-manual/v3/range-components/singledropdownrange.html  302
 /reactive-manual/v3/singledropdownrange  /reactive-manual/v3/range-components/singledropdownrange.html  302
-/reactive-manual/v3/basic-components/reactivelist.html  /reactive-manual/v3/result-components/reactivelist.html  302
-/reactive-manual/v3/result-components/reactivelist  /reactive-manual/v3/result-components/reactivelist.html  302
-/reactive-manual/v3/reactivelist  /reactive-manual/v3/result-components/reactivelist.html  302
 /reactive-manual/v3/search-components/resultcard.html  /reactive-manual/v3/result-components/resultcard.html  302
 /reactive-manual/v3/result-components/resultcard  /reactive-manual/v3/result-components/resultcard.html  302
 /reactive-manual/v3/resultcard  /reactive-manual/v3/result-components/resultcard.html  302
@@ -127,8 +126,9 @@
 /reactive-manual/v3/theming/  /reactive-manual/v3/theming/themes.html  302
 /reactive-manual/v3/theming  /reactive-manual/v3/theming/themes.html  302
 /reactive-manual/v3/themes  /reactive-manual/v3/theming/themes.html  302
-/reactive-manual/v3/ssr  /reactive-manual/v3/advanced/ssr.html  302
-/reactive-manual/v3/advanced/ssr  /reactive-manual/v3/advanced/ssr.html  302
+/reactive-manual/v3/basic-components/reactivelist.html  /reactive-manual/v3/result-components/reactivelist.html  302
+/reactive-manual/v3/result-components/reactivelist  /reactive-manual/v3/result-components/reactivelist.html  302
+/reactive-manual/v3/reactivelist  /reactive-manual/v3/result-components/reactivelist.html  302
 /reactive-manual/v3/basic-components/singlerange.html  /reactive-manual/v3/range-components/singlerange.html  302
 /reactive-manual/v3/range-components/singlerange  /reactive-manual/v3/range-components/singlerange.html  302
 /reactive-manual/v3/singlerange  /reactive-manual/v3/range-components/singlerange.html  302

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link rel="icon" href="https://opensource.appbase.io/reactive-manual/favicon.ico"/><link rel="preload" href="/reactive-manual/v3/component---src-layouts-index-js-c015ee8c9a6209c49840.js" as="script"/><link rel="preload" href="/reactive-manual/v3/component---src-templates-docs-js-537cfafde62de01bc77c.js" as="script"/><link rel="preload" href="/reactive-manual/v3/path---search-components-datasearch-html-96c303f95064e6547121.js" as="script"/><link rel="preload" href="/reactive-manual/v3/app-3ec1e8aaa2666a6be2fe.js" as="script"/><link rel="preload" href="/reactive-manual/v3/commons-22d574a2e9f866cb63a1.js" as="script"/><style id="glamor-styles">.gatsby-highlight{background:#323a48;color:#ffffff;border-radius:10px;overflow:auto;tab-size:1.5em;-moz-tab-size:1.5em;}
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link rel="icon" href="https://opensource.appbase.io/reactive-manual/favicon.ico"/><link rel="preload" href="/reactive-manual/v3/component---src-layouts-index-js-d086daddb114325a103f.js" as="script"/><link rel="preload" href="/reactive-manual/v3/component---src-templates-docs-js-537cfafde62de01bc77c.js" as="script"/><link rel="preload" href="/reactive-manual/v3/path---search-components-datasearch-html-bdddb4ca77d9fd475b70.js" as="script"/><link rel="preload" href="/reactive-manual/v3/app-9bb61f148bb798c5f575.js" as="script"/><link rel="preload" href="/reactive-manual/v3/commons-22d574a2e9f866cb63a1.js" as="script"/><style id="glamor-styles">.gatsby-highlight{background:#323a48;color:#ffffff;border-radius:10px;overflow:auto;tab-size:1.5em;-moz-tab-size:1.5em;}
 .gatsby-highlight code[class*="gatsby-code-"],
 .gatsby-highlight pre[class*="gatsby-code-"],
 .gatsby-highlight pre.prism-code{height:auto !important;margin:1rem;font-size:16px;line-height:26px;white-space:pre-wrap;word-break:break-word;}.gatsby-highlight + .gatsby-highlight{margin-top:20px;}.gatsby-highlight-code-line{background-color:#222731;display:block;margin:-0.125rem calc(-1rem - 15px);padding:0.125rem calc(1rem + 15px);}.token.attr-name{color:#c5a5c5;}
@@ -279,49 +279,89 @@ menu {
       </div>
 <h2 id="props"><a href="#props" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Props</h2>
 <ul>
-<li><strong>componentId</strong> <code class="gatsby-code-text">String</code><br>
-unique identifier of the component, can be referenced in other components’ <code class="gatsby-code-text">react</code> prop.</li>
-<li><strong>dataField</strong> <code class="gatsby-code-text">String or Array</code><br>
-database field(s) to be connected to the component’s UI view. DataSearch accepts an Array in addition to String, useful for applying search across multiple fields.</li>
-<li><strong>title</strong> <code class="gatsby-code-text">String or JSX</code> [optional]<br>
-set the title of the component to be shown in the UI.</li>
-<li><strong>defaultValue</strong> <code class="gatsby-code-text">string</code> [optional]<br>
-set the initial search query text on mount.</li>
-<li><strong>value</strong> <code class="gatsby-code-text">string</code> [optional]<br>
-controls the current value of the component. It sets the search query text (on mount and on update). Use this prop in conjunction with <code class="gatsby-code-text">onChange</code> function.</li>
-<li><strong>onChange</strong> <code class="gatsby-code-text">function</code> [optional]<br>
-is a callback function which accepts component’s current <strong>value</strong> as a parameter. It is called when you are using the <code class="gatsby-code-text">value</code> props and the component’s value changes. This prop is used to implement the <a href="https://reactjs.org/docs/forms.html#controlled-components">controlled component</a> behavior.</li>
-<li><strong>downShiftProps</strong> <code class="gatsby-code-text">Object</code> [optional]<br>
-allow passing props directly to <code class="gatsby-code-text">Downshift</code> component. You can read more about Downshift props <a href="https://github.com/paypal/downshift#--downshift-------">here</a>.</li>
-<li><strong>fieldWeights</strong> <code class="gatsby-code-text">Array</code> [optional]<br>
-set the search weight for the database fields, useful when dataField is an Array of more than one field. This prop accepts an array of numbers. A higher number implies a higher relevance weight for the corresponding field in the search results.</li>
-<li><strong>placeholder</strong> <code class="gatsby-code-text">String</code> [optional]<br>
-set the placeholder text to be shown in the searchbox input field. Defaults to “Search”.</li>
-<li><strong>showIcon</strong> <code class="gatsby-code-text">Boolean</code> [optional]
-whether to display a search or custom icon in the input box. Defaults to <code class="gatsby-code-text">true</code>.</li>
-<li><strong>iconPosition</strong> <code class="gatsby-code-text">String</code> [optional]
-sets the position of the search icon. Can be <code class="gatsby-code-text">left</code> or <code class="gatsby-code-text">right</code>. Defaults to <code class="gatsby-code-text">right</code>.</li>
-<li><strong>icon</strong> <code class="gatsby-code-text">JSX</code> [optional]
-displays a custom search icon instead of the default 🔍</li>
-<li><strong>showClear</strong> <code class="gatsby-code-text">Boolean</code> [optional]<br>
-show a clear text icon. Defaults to <code class="gatsby-code-text">false</code>.</li>
-<li><strong>clearIcon</strong> <code class="gatsby-code-text">JSX</code> [optional]<br>
-allows setting a custom icon for clearing text instead of the default cross.</li>
-<li><strong>autosuggest</strong> <code class="gatsby-code-text">Boolean</code> [optional]<br>
-set whether the autosuggest functionality should be enabled or disabled. Defaults to <code class="gatsby-code-text">true</code>.</li>
-<li><strong>strictSelection</strong> <code class="gatsby-code-text">Boolean</code> [optional]<br>
-defaults to <code class="gatsby-code-text">false</code>. When set to <code class="gatsby-code-text">true</code> the component will only set its value and fire the query if the value was selected from the suggestion. Otherwise the value will be cleared on selection. This is only relevant with <code class="gatsby-code-text">autosuggest</code>.</li>
-<li><strong>defaultSuggestions</strong> <code class="gatsby-code-text">Array</code> [optional]
-preset search suggestions to be shown on focus when the search box does not have any search query text set. Accepts an array of objects each having a <strong>label</strong> and <strong>value</strong> property. The label can contain either String or an HTML element.</li>
-<li><strong>debounce</strong> <code class="gatsby-code-text">Number</code> [optional]<br>
-sets the milliseconds to wait before executing the query. Defaults to <code class="gatsby-code-text">0</code>, i.e. no debounce.</li>
-<li><strong>highlight</strong> <code class="gatsby-code-text">Boolean</code> [optional]<br>
-whether highlighting should be enabled in the returned results.</li>
-<li><strong>highlightField</strong> <code class="gatsby-code-text">String or Array</code> [optional]<br>
-when highlighting is enabled, this prop allows specifying the fields which should be returned with the matching highlights. When not specified, it defaults to applying highlights on the field(s) specified in the <strong>dataField</strong> prop.</li>
-<li><strong>customHighlight</strong> <code class="gatsby-code-text">Function</code> [optional]<br>
-a function which returns the custom <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-highlighting.html">highlight settings</a>. It receives the <code class="gatsby-code-text">props</code> and expects you to return an object with the <code class="gatsby-code-text">highlight</code> key. Check out the <a href="https://opensource.appbase.io/reactivesearch/demos/technews/" target="_blank">technews demo</a> where the <code class="gatsby-code-text">DataSearch</code> component uses a <code class="gatsby-code-text">customHighlight</code> as given below,</li>
-</ul>
+<li>
+<p><strong>componentId</strong> <code class="gatsby-code-text">String</code><br>
+unique identifier of the component, can be referenced in other components’ <code class="gatsby-code-text">react</code> prop.</p>
+</li>
+<li>
+<p><strong>dataField</strong> <code class="gatsby-code-text">String or Array</code><br>
+database field(s) to be connected to the component’s UI view. DataSearch accepts an Array in addition to String, useful for applying search across multiple fields.</p>
+</li>
+<li>
+<p><strong>title</strong> <code class="gatsby-code-text">String or JSX</code> [optional]<br>
+set the title of the component to be shown in the UI.</p>
+</li>
+<li>
+<p><strong>defaultValue</strong> <code class="gatsby-code-text">string</code> [optional]<br>
+set the initial search query text on mount.</p>
+</li>
+<li>
+<p><strong>value</strong> <code class="gatsby-code-text">string</code> [optional]<br>
+controls the current value of the component. It sets the search query text (on mount and on update). Use this prop in conjunction with <code class="gatsby-code-text">onChange</code> function.</p>
+</li>
+<li>
+<p><strong>onChange</strong> <code class="gatsby-code-text">function</code> [optional]<br>
+is a callback function which accepts component’s current <strong>value</strong> as a parameter. It is called when you are using the <code class="gatsby-code-text">value</code> props and the component’s value changes. This prop is used to implement the <a href="https://reactjs.org/docs/forms.html#controlled-components">controlled component</a> behavior.</p>
+</li>
+<li>
+<p><strong>downShiftProps</strong> <code class="gatsby-code-text">Object</code> [optional]<br>
+allow passing props directly to <code class="gatsby-code-text">Downshift</code> component. You can read more about Downshift props <a href="https://github.com/paypal/downshift#--downshift-------">here</a>.</p>
+</li>
+<li>
+<p><strong>fieldWeights</strong> <code class="gatsby-code-text">Array</code> [optional]<br>
+set the search weight for the database fields, useful when dataField is an Array of more than one field. This prop accepts an array of numbers. A higher number implies a higher relevance weight for the corresponding field in the search results.</p>
+</li>
+<li>
+<p><strong>placeholder</strong> <code class="gatsby-code-text">String</code> [optional]<br>
+set the placeholder text to be shown in the searchbox input field. Defaults to “Search”.</p>
+</li>
+<li>
+<p><strong>showIcon</strong> <code class="gatsby-code-text">Boolean</code> [optional]
+whether to display a search or custom icon in the input box. Defaults to <code class="gatsby-code-text">true</code>.</p>
+</li>
+<li>
+<p><strong>iconPosition</strong> <code class="gatsby-code-text">String</code> [optional]
+sets the position of the search icon. Can be <code class="gatsby-code-text">left</code> or <code class="gatsby-code-text">right</code>. Defaults to <code class="gatsby-code-text">right</code>.</p>
+</li>
+<li>
+<p><strong>icon</strong> <code class="gatsby-code-text">JSX</code> [optional]
+displays a custom search icon instead of the default 🔍</p>
+</li>
+<li>
+<p><strong>showClear</strong> <code class="gatsby-code-text">Boolean</code> [optional]<br>
+show a clear text icon. Defaults to <code class="gatsby-code-text">false</code>.</p>
+</li>
+<li>
+<p><strong>clearIcon</strong> <code class="gatsby-code-text">JSX</code> [optional]<br>
+allows setting a custom icon for clearing text instead of the default cross.</p>
+</li>
+<li>
+<p><strong>autosuggest</strong> <code class="gatsby-code-text">Boolean</code> [optional]<br>
+set whether the autosuggest functionality should be enabled or disabled. Defaults to <code class="gatsby-code-text">true</code>.</p>
+</li>
+<li>
+<p><strong>strictSelection</strong> <code class="gatsby-code-text">Boolean</code> [optional]<br>
+defaults to <code class="gatsby-code-text">false</code>. When set to <code class="gatsby-code-text">true</code> the component will only set its value and fire the query if the value was selected from the suggestion. Otherwise the value will be cleared on selection. This is only relevant with <code class="gatsby-code-text">autosuggest</code>.</p>
+</li>
+<li>
+<p><strong>defaultSuggestions</strong> <code class="gatsby-code-text">Array</code> [optional]
+preset search suggestions to be shown on focus when the search box does not have any search query text set. Accepts an array of objects each having a <strong>label</strong> and <strong>value</strong> property. The label can contain either String or an HTML element.</p>
+</li>
+<li>
+<p><strong>debounce</strong> <code class="gatsby-code-text">Number</code> [optional]<br>
+sets the milliseconds to wait before executing the query. Defaults to <code class="gatsby-code-text">0</code>, i.e. no debounce.</p>
+</li>
+<li>
+<p><strong>highlight</strong> <code class="gatsby-code-text">Boolean</code> [optional]<br>
+whether highlighting should be enabled in the returned results.</p>
+</li>
+<li>
+<p><strong>highlightField</strong> <code class="gatsby-code-text">String or Array</code> [optional]<br>
+when highlighting is enabled, this prop allows specifying the fields which should be returned with the matching highlights. When not specified, it defaults to applying highlights on the field(s) specified in the <strong>dataField</strong> prop.</p>
+</li>
+<li>
+<p><strong>customHighlight</strong> <code class="gatsby-code-text">Function</code> [optional]<br>
+a function which returns the custom <a href="https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-highlighting.html">highlight settings</a>. It receives the <code class="gatsby-code-text">props</code> and expects you to return an object with the <code class="gatsby-code-text">highlight</code> key. Check out the <a href="https://opensource.appbase.io/reactivesearch/demos/technews/" target="_blank">technews demo</a> where the <code class="gatsby-code-text">DataSearch</code> component uses a <code class="gatsby-code-text">customHighlight</code> as given below,</p>
 <div class="gatsby-highlight">
       <pre class="gatsby-code-jsx"><code class="gatsby-code-jsx"><span class="token operator">&lt;</span>DataSearch
     componentId<span class="token operator">=</span><span class="token string">"title"</span>
@@ -340,7 +380,7 @@ a function which returns the custom <a href="https://www.elastic.co/guide/en/ela
     <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
 <span class="token operator">/</span><span class="token operator">></span></code></pre>
       </div>
-<ul>
+</li>
 <li>
 <p><strong>queryFormat</strong> <code class="gatsby-code-text">String</code> [optional]
 Sets the query format, can be <strong>or</strong> or <strong>and</strong>. Defaults to <strong>or</strong>.</p>
@@ -349,8 +389,10 @@ Sets the query format, can be <strong>or</strong> or <strong>and</strong>. Defau
 <li>On the other hand with <strong>and</strong>, only results matching both “bat” and “man” will be returned. It returns the results matching <strong>all</strong> of the search query text’s parameters.</li>
 </ul>
 </li>
-<li><strong>defaultQuery</strong> <code class="gatsby-code-text">Function</code> [optional]<br>
-Lets you append your own query along with the existing query for search. This also works with <code class="gatsby-code-text">customQuery</code> and the query gets appended to the final query. The function receives <code class="gatsby-code-text">value</code> and the current <code class="gatsby-code-text">props</code> and expects you to return a query to append. For example, you may use this to limit your searches to harry potter books by something like:</li>
+<li>
+<p><strong>defaultQuery</strong> <code class="gatsby-code-text">Function</code> [optional]<br>
+Lets you append your own query along with the existing query for search. This also works with <code class="gatsby-code-text">customQuery</code> and the query gets appended to the final query. The function receives <code class="gatsby-code-text">value</code> and the current <code class="gatsby-code-text">props</code> and expects you to return a query to append. For example, you may use this to limit your searches to harry potter books by something like:</p>
+</li>
 </ul>
 <div class="gatsby-highlight">
       <pre class="gatsby-code-jsx"><code class="gatsby-code-jsx"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>DataSearch</span>
@@ -392,17 +434,18 @@ gets triggered in case of an error and provides the <code class="gatsby-code-tex
 <p><strong>renderError</strong> <code class="gatsby-code-text">String or JSX or Function</code> [optional]
 can we used to render an error message in case of any error.</p>
 <div class="gatsby-highlight">
-      <pre class="gatsby-code-jsx"><code class="gatsby-code-jsx">renderError<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token operator">=></span> 
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
-        Something went wrong<span class="token operator">!</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">/></span></span>Error details<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">/></span></span><span class="token punctuation">{</span>error<span class="token punctuation">}</span>
-    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+      <pre class="gatsby-code-jsx"><code class="gatsby-code-jsx">renderError<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span>error<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+            Something went wrong<span class="token operator">!</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">/></span></span>Error details<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">/></span></span><span class="token punctuation">{</span>error<span class="token punctuation">}</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token punctuation">)</span>
 <span class="token punctuation">}</span></code></pre>
       </div>
 </li>
 </ul>
 <h2 id="demo"><a href="#demo" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Demo</h2>
 <br />
-<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/dev/packages/web/examples/DataSearch" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/next/packages/web/examples/DataSearch" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 <h2 id="styles"><a href="#styles" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Styles</h2>
 <p><code class="gatsby-code-text">DataSearch</code> component supports <code class="gatsby-code-text">innerClass</code> prop with the following keys:    </p>
 <ul>
@@ -424,7 +467,14 @@ can we used to render an error message in case of any error.</p>
       <pre class="gatsby-code-jsx"><code class="gatsby-code-jsx"><span class="token operator">&lt;</span>DataSearch
   <span class="token operator">...</span>
   renderSuggestion<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">(</span>suggestion<span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span><span class="token punctuation">{</span>
-    label<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span><span class="token punctuation">{</span>suggestion<span class="token punctuation">.</span>_source<span class="token punctuation">.</span>original_title<span class="token punctuation">}</span> by<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> color<span class="token punctuation">:</span> <span class="token string">'dodgerblue'</span><span class="token punctuation">,</span> marginLeft<span class="token punctuation">:</span> <span class="token number">5</span> <span class="token punctuation">}</span><span class="token punctuation">}</span></span><span class="token punctuation">></span></span><span class="token punctuation">{</span>suggestion<span class="token punctuation">.</span>_source<span class="token punctuation">.</span>authors<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+    label<span class="token punctuation">:</span> <span class="token punctuation">(</span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+            <span class="token punctuation">{</span>suggestion<span class="token punctuation">.</span>_source<span class="token punctuation">.</span>original_title<span class="token punctuation">}</span> by
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>span</span> <span class="token attr-name">style</span><span class="token script language-javascript"><span class="token script-punctuation punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span> color<span class="token punctuation">:</span> <span class="token string">'dodgerblue'</span><span class="token punctuation">,</span> marginLeft<span class="token punctuation">:</span> <span class="token number">5</span> <span class="token punctuation">}</span><span class="token punctuation">}</span></span><span class="token punctuation">></span></span>
+                <span class="token punctuation">{</span>suggestion<span class="token punctuation">.</span>_source<span class="token punctuation">.</span>authors<span class="token punctuation">}</span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>span</span><span class="token punctuation">></span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+    <span class="token punctuation">)</span><span class="token punctuation">,</span>
     value<span class="token punctuation">:</span> suggestion<span class="token punctuation">.</span>_source<span class="token punctuation">.</span>original_title<span class="token punctuation">,</span>
     source<span class="token punctuation">:</span> suggestion<span class="token punctuation">.</span>_source  <span class="token comment">// for onValueSelected to work with renderSuggestion</span>
   <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">}</span>
@@ -700,7 +750,7 @@ one of <code class="gatsby-code-text">and</code>, <code class="gatsby-code-text"
     "></path><polygon fill="currentColor" points="
       45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,
       14.9 62.8,22.9 71.5,22.9
-      "></polygon></svg></a></div></div></div></div></div><div class="css-16whlun">Made with <a href="https://github.com/gatsbyjs/gatsby" target="_blank">GatsbyJS</a>, <a href="https://github.com/reactjs/reactjs.org" target="_blank">Reactjs</a> and ❤️</div></footer></div></div><script id="webpack-manifest">/*<![CDATA[*/window.webpackManifest={"231608221292675":"app-3ec1e8aaa2666a6be2fe.js","266772403791747":"component---src-templates-home-js-fb5f1034b3ab0da0e7c6.js","36733297554888":"component---src-templates-blog-js-a97b151aff0b9fe41f57.js","69872653571698":"component---src-templates-tutorial-js-791b50977b12c0e3e4a1.js","236594062348235":"component---src-templates-docs-js-537cfafde62de01bc77c.js","162898551421021":"component---src-pages-404-js-5eb12a35ae4b63ae6654.js","265325084265088":"component---src-pages-blog-all-html-js-4e8968908d11397a30ea.js","165076273342585":"component---src-pages-jsx-compiler-html-js-2753891fbdf65b8eb673.js","60335399758886":"path----557518bd178906f8d58a.js","142629428675168":"path---index-eaac87213755262c7aa3.js","228075473744252":"path---blog-2017-10-30-reactive-manual-html-906f75fb3b83e8d1b6b7.js","161850451455288":"path---getting-started-data-html-2320d8e26d59df21890d.js","231295166745141":"path---getting-started-componentsindex-html-b659e8a654c5b3bbf6dd.js","2842081980983":"path---getting-started-reactivebase-html-fc54e8f1ff8792f07069.js","18625123672389":"path---getting-started-reactivemaps-html-b5018c43d0bb0f18a093.js","94325899749574":"path---advanced-analytics-html-b63b531ce9c197364711.js","41984078544437":"path---getting-started-reactivesearch-html-1b75ff2cb6b4b47a7d54.js","260917943449227":"path---advanced-comparison-html-68d4d8b1ac30ca7f7ddd.js","49794618776653":"path---advanced-componentsusage-html-cd8ac23717a62248abe7.js","206151111661743":"path---advanced-customquery-html-fad4e160e2d348467692.js","72971155298543":"path---advanced-customsuggestions-html-add6ef38f603bc27f745.js","119997145251317":"path---advanced-guides-html-230627f8d7734db9df8f.js","127428914254922":"path---advanced-migrationguide-html-cc6f0eb328343555c016.js","58345136292746":"path---advanced-react-html-bffb8b7baaa86a58da58.js","201113989118788":"path---advanced-reactivecomponent-html-7680a6f0ec0679deef0e.js","230576653708092":"path---advanced-writingdata-html-d63f7c84cd914f07131a.js","210690525857145":"path---advanced-typescript-html-c7b9b7371ff60c03a220.js","250783552109176":"path---base-components-datacontroller-html-37f28c04adc0b57bdc66.js","82146561664391":"path---base-components-selectedfilters-html-257880183b53685ecce2.js","195463346823047":"path---base-components-tagcloud-html-1fb2178f57e1d7fdf52e.js","45935348729461":"path---base-components-textfield-html-a87f41a75737c7dc40ba.js","248060251960563":"path---base-components-togglebutton-html-17e64df6b5b1e5773335.js","177548868587392":"path---list-components-multidatalist-html-ddd7fdc489bcb22b0a75.js","121257086451122":"path---list-components-multidropdownlist-html-0dba3bffc0d479e669c0.js","78836412246121":"path---list-components-multilist-html-712c47786642783c6a5d.js","133108255508567":"path---search-components-nestedlist-html-8dd52fd3c01e79986c49.js","66859308510187":"path---search-components-nestedmultilist-html-a796e8caf2fc32bbfb33.js","162456501204939":"path---list-components-singledatalist-html-02857231dfd30c4773df.js","61703140123326":"path---list-components-singledropdownlist-html-c640c14f8034edac8041.js","67055671156237":"path---list-components-singlelist-html-1436d6fbe31c22f923a4.js","187551144820723":"path---map-components-geodistancedropdown-html-3f7494e7c73fc84f4533.js","129677242114095":"path---map-components-geodistanceslider-html-b67d7aa88f4f3e940e26.js","109095454231324":"path---map-components-placessearch-html-035ac96b2c963f23b856.js","64106737349458":"path---map-components-reactivemap-html-6cf9ecb63cd2afdb03a6.js","78601740722839":"path---range-components-datepicker-html-6f88953c96336d734e5b.js","111413991855156":"path---range-components-daterange-html-493b6c68ce9460858d13.js","238622705564830":"path---range-components-dynamicrangeslider-html-b5924b452dfadf98d9df.js","144176316636779":"path---range-components-multidropdownrange-html-516e9533140f7ee3f075.js","206290519684481":"path---range-components-multirange-html-a4d4e6952ddcf082d0e3.js","81970924651671":"path---range-components-numberbox-html-03e78eaf47e6b85196f9.js","125144691411707":"path---range-components-rangeinput-html-e16e516e7c460896f5af.js","128041471236677":"path---range-components-rangeslider-html-cf32461803413d87a82c.js","247941501718309":"path---range-components-ratingsfilter-html-3be36875bbe07ea18051.js","222787829434678":"path---range-components-singledropdownrange-html-ceaad597fba56efe7ecb.js","37162140274120":"path---result-components-reactivelist-html-e6359689179bd7a9948b.js","39155803706777":"path---result-components-resultcard-html-d6f461dd81c7fe022a02.js","144156473325815":"path---result-components-resultlist-html-37c5a48aad61cde600ae.js","73887481964516":"path---search-components-categorysearch-html-4d24967068851152e59e.js","99033787998698":"path---search-components-datasearch-html-96c303f95064e6547121.js","233068286010761":"path---theming-class-html-512e82ee4dfa6720b44a.js","62400624188191":"path---theming-style-html-8b10aa58f9977818b5c6.js","382149711765":"path---theming-themes-html-48e787a70b54e79b9ec3.js","143792777985089":"path---advanced-ssr-html-9abf6835f91ec0d7d9b5.js","27034966348728":"path---range-components-singlerange-html-075174d883e303bc335c.js","254022195166212":"path---404-a0e39f21c11f6a62c5ab.js","248976230146735":"path---blog-all-html-2c7363e48ff0a64df829.js","119766850614634":"path---jsx-compiler-html-a0e39f21c11f6a62c5ab.js","178698757827068":"path---404-html-a0e39f21c11f6a62c5ab.js","114276838955818":"component---src-layouts-index-js-c015ee8c9a6209c49840.js"}/*]]>*/</script><script>
+      "></polygon></svg></a></div></div></div></div></div><div class="css-16whlun">Made with <a href="https://github.com/gatsbyjs/gatsby" target="_blank">GatsbyJS</a>, <a href="https://github.com/reactjs/reactjs.org" target="_blank">Reactjs</a> and ❤️</div></footer></div></div><script id="webpack-manifest">/*<![CDATA[*/window.webpackManifest={"231608221292675":"app-9bb61f148bb798c5f575.js","266772403791747":"component---src-templates-home-js-ec20ee9b404aa040ea07.js","36733297554888":"component---src-templates-blog-js-a97b151aff0b9fe41f57.js","69872653571698":"component---src-templates-tutorial-js-791b50977b12c0e3e4a1.js","236594062348235":"component---src-templates-docs-js-537cfafde62de01bc77c.js","162898551421021":"component---src-pages-404-js-5eb12a35ae4b63ae6654.js","265325084265088":"component---src-pages-blog-all-html-js-4e8968908d11397a30ea.js","165076273342585":"component---src-pages-jsx-compiler-html-js-2753891fbdf65b8eb673.js","60335399758886":"path----557518bd178906f8d58a.js","142629428675168":"path---index-eaac87213755262c7aa3.js","228075473744252":"path---blog-2017-10-30-reactive-manual-html-906f75fb3b83e8d1b6b7.js","231295166745141":"path---getting-started-componentsindex-html-b659e8a654c5b3bbf6dd.js","161850451455288":"path---getting-started-data-html-2320d8e26d59df21890d.js","2842081980983":"path---getting-started-reactivebase-html-fc54e8f1ff8792f07069.js","18625123672389":"path---getting-started-reactivemaps-html-b5018c43d0bb0f18a093.js","41984078544437":"path---getting-started-reactivesearch-html-1b75ff2cb6b4b47a7d54.js","94325899749574":"path---advanced-analytics-html-b63b531ce9c197364711.js","260917943449227":"path---advanced-comparison-html-68d4d8b1ac30ca7f7ddd.js","49794618776653":"path---advanced-componentsusage-html-cd8ac23717a62248abe7.js","206151111661743":"path---advanced-customquery-html-fad4e160e2d348467692.js","72971155298543":"path---advanced-customsuggestions-html-add6ef38f603bc27f745.js","119997145251317":"path---advanced-guides-html-230627f8d7734db9df8f.js","127428914254922":"path---advanced-migrationguide-html-cc6f0eb328343555c016.js","58345136292746":"path---advanced-react-html-bffb8b7baaa86a58da58.js","201113989118788":"path---advanced-reactivecomponent-html-7680a6f0ec0679deef0e.js","143792777985089":"path---advanced-ssr-html-9abf6835f91ec0d7d9b5.js","230576653708092":"path---advanced-writingdata-html-d63f7c84cd914f07131a.js","210690525857145":"path---advanced-typescript-html-c7b9b7371ff60c03a220.js","250783552109176":"path---base-components-datacontroller-html-37f28c04adc0b57bdc66.js","82146561664391":"path---base-components-selectedfilters-html-257880183b53685ecce2.js","195463346823047":"path---base-components-tagcloud-html-1fb2178f57e1d7fdf52e.js","45935348729461":"path---base-components-textfield-html-a87f41a75737c7dc40ba.js","248060251960563":"path---base-components-togglebutton-html-17e64df6b5b1e5773335.js","177548868587392":"path---list-components-multidatalist-html-ddd7fdc489bcb22b0a75.js","121257086451122":"path---list-components-multidropdownlist-html-0dba3bffc0d479e669c0.js","78836412246121":"path---list-components-multilist-html-712c47786642783c6a5d.js","133108255508567":"path---search-components-nestedlist-html-8dd52fd3c01e79986c49.js","66859308510187":"path---search-components-nestedmultilist-html-a796e8caf2fc32bbfb33.js","162456501204939":"path---list-components-singledatalist-html-02857231dfd30c4773df.js","61703140123326":"path---list-components-singledropdownlist-html-c640c14f8034edac8041.js","67055671156237":"path---list-components-singlelist-html-1436d6fbe31c22f923a4.js","187551144820723":"path---map-components-geodistancedropdown-html-3f7494e7c73fc84f4533.js","129677242114095":"path---map-components-geodistanceslider-html-b67d7aa88f4f3e940e26.js","109095454231324":"path---map-components-placessearch-html-035ac96b2c963f23b856.js","64106737349458":"path---map-components-reactivemap-html-6cf9ecb63cd2afdb03a6.js","78601740722839":"path---range-components-datepicker-html-6f88953c96336d734e5b.js","111413991855156":"path---range-components-daterange-html-493b6c68ce9460858d13.js","238622705564830":"path---range-components-dynamicrangeslider-html-b5924b452dfadf98d9df.js","144176316636779":"path---range-components-multidropdownrange-html-516e9533140f7ee3f075.js","206290519684481":"path---range-components-multirange-html-a4d4e6952ddcf082d0e3.js","81970924651671":"path---range-components-numberbox-html-03e78eaf47e6b85196f9.js","125144691411707":"path---range-components-rangeinput-html-e16e516e7c460896f5af.js","128041471236677":"path---range-components-rangeslider-html-cf32461803413d87a82c.js","247941501718309":"path---range-components-ratingsfilter-html-3be36875bbe07ea18051.js","222787829434678":"path---range-components-singledropdownrange-html-ceaad597fba56efe7ecb.js","39155803706777":"path---result-components-resultcard-html-5e9d6898b0873fcafea7.js","144156473325815":"path---result-components-resultlist-html-0875535765b4b9684a0d.js","73887481964516":"path---search-components-categorysearch-html-d45967e51e7907168fe5.js","99033787998698":"path---search-components-datasearch-html-bdddb4ca77d9fd475b70.js","233068286010761":"path---theming-class-html-512e82ee4dfa6720b44a.js","62400624188191":"path---theming-style-html-8b10aa58f9977818b5c6.js","382149711765":"path---theming-themes-html-48e787a70b54e79b9ec3.js","37162140274120":"path---result-components-reactivelist-html-962687a0196ff810479b.js","27034966348728":"path---range-components-singlerange-html-075174d883e303bc335c.js","254022195166212":"path---404-a0e39f21c11f6a62c5ab.js","248976230146735":"path---blog-all-html-2c7363e48ff0a64df829.js","119766850614634":"path---jsx-compiler-html-a0e39f21c11f6a62c5ab.js","178698757827068":"path---404-html-a0e39f21c11f6a62c5ab.js","114276838955818":"component---src-layouts-index-js-d086daddb114325a103f.js"}/*]]>*/</script><script>
           window.twttr = (function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0],
     t = window.twttr || {};
@@ -729,4 +779,4 @@ one of <code class="gatsby-code-text">and</code>, <code class="gatsby-code-text"
   if (typeof ga === "function") {
     ga('create', 'UA-54082612-5', 'auto');
       }
-      </script><script>/*<![CDATA[*/["/reactive-manual/v3/commons-22d574a2e9f866cb63a1.js","/reactive-manual/v3/app-3ec1e8aaa2666a6be2fe.js","/reactive-manual/v3/path---search-components-datasearch-html-96c303f95064e6547121.js","/reactive-manual/v3/component---src-templates-docs-js-537cfafde62de01bc77c.js","/reactive-manual/v3/component---src-layouts-index-js-c015ee8c9a6209c49840.js"].forEach(function(s){document.write('<script src="'+s+'" defer></'+'script>')})/*]]>*/</script></body></html>
+      </script><script>/*<![CDATA[*/["/reactive-manual/v3/commons-22d574a2e9f866cb63a1.js","/reactive-manual/v3/app-9bb61f148bb798c5f575.js","/reactive-manual/v3/path---search-components-datasearch-html-bdddb4ca77d9fd475b70.js","/reactive-manual/v3/component---src-templates-docs-js-537cfafde62de01bc77c.js","/reactive-manual/v3/component---src-layouts-index-js-d086daddb114325a103f.js"].forEach(function(s){document.write('<script src="'+s+'" defer></'+'script>')})/*]]>*/</script></body></html>
