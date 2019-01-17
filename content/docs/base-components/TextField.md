@@ -38,7 +38,7 @@ redirect_from:
   componentId="NameTextSensor"
   dataField="name"
   title="TextField"
-  defaultSelected="volvo"
+  defaultValue="volvo"
   placeholder="Type a car name"
   showFilter={true}
   filterLabel="Car"
@@ -54,8 +54,12 @@ redirect_from:
     data field to be connected to the component's UI view.
 - **title** `String or JSX` [optional]  
     title of the component to be shown in the UI.
-- **defaultSelected** `String` [optional]  
+- **defaultValue** `String` [optional]  
     preset some value in the text field.
+- **value** `String` [optional]  
+    controls the current value of the component. It sets text on the input (on mount and on update). Use this prop in conjunction with `onChange` function.
+- **onChange** `function` [optional]  
+    is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
 - **placeholder** `String` [optional]  
     placeholder to be displayed in the text field when it has no value.
 - **showClear** `Boolean` [optional]  
@@ -75,7 +79,7 @@ redirect_from:
 
 <br />
 
-<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/dev/packages/web/examples/TextField" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+<iframe src="https://codesandbox.io/embed/5xyvkr90v4" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 ## Styles
 
