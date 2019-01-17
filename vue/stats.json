@@ -45,8 +45,8 @@
       "path---list-components-singlelist-html-001186fceac8455d9d14.js.map"
     ],
     "component---src-templates-tutorial-js": [
-      "component---src-templates-tutorial-js-5465b13bf41a9c59d096.js",
-      "component---src-templates-tutorial-js-5465b13bf41a9c59d096.js.map"
+      "component---src-templates-tutorial-js-4096b9b1dfe9013e86cd.js",
+      "component---src-templates-tutorial-js-4096b9b1dfe9013e86cd.js.map"
     ],
     "path---list-components-multilist-html": [
       "path---list-components-multilist-html-4ad3388fa9dc77d902d7.js",
@@ -65,8 +65,8 @@
       "path---search-components-datasearch-html-a0d2b9d67a8a3cd31e11.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-0aff1a28b0359bc66c4f.js",
-      "component---src-layouts-index-js-0aff1a28b0359bc66c4f.js.map"
+      "component---src-layouts-index-js-fffded95e4d7c06ed786.js",
+      "component---src-layouts-index-js-fffded95e4d7c06ed786.js.map"
     ],
     "path---jsx-compiler-html": [
       "path---jsx-compiler-html-a0e39f21c11f6a62c5ab.js",
@@ -139,9 +139,9 @@
       "path---getting-started-componentsindex-html-4ba0ae40026bcfe26739.js.map"
     ],
     "app": [
-      "app-3bad23d5c17dd53fffaa.js",
+      "app-57663f0f9e0a6c7d4ed4.js",
       "build-js-styles.css",
-      "app-3bad23d5c17dd53fffaa.js.map",
+      "app-57663f0f9e0a6c7d4ed4.js.map",
       "build-js-styles.css.map"
     ],
     "path---theming-class-html": [
@@ -149,8 +149,12 @@
       "path---theming-class-html-e5d1fc75d77a19386790.js.map"
     ],
     "component---src-templates-docs-js": [
-      "component---src-templates-docs-js-dff913de48d75f24a082.js",
-      "component---src-templates-docs-js-dff913de48d75f24a082.js.map"
+      "component---src-templates-docs-js-0871b4cce089a05ee1a8.js",
+      "component---src-templates-docs-js-0871b4cce089a05ee1a8.js.map"
+    ],
+    "path---range-components-dynamicrangeslider-html": [
+      "path---range-components-dynamicrangeslider-html-0b476a786c86948c906b.js",
+      "path---range-components-dynamicrangeslider-html-0b476a786c86948c906b.js.map"
     ],
     "path---blog-all-html": [
       "path---blog-all-html-2c7363e48ff0a64df829.js",
@@ -165,8 +169,8 @@
       "component---src-pages-blog-all-html-js-4e8968908d11397a30ea.js.map"
     ],
     "component---src-templates-home-js": [
-      "component---src-templates-home-js-34f255fe933280aa5e51.js",
-      "component---src-templates-home-js-34f255fe933280aa5e51.js.map"
+      "component---src-templates-home-js-1b1d356a850f384ff4ea.js",
+      "component---src-templates-home-js-1b1d356a850f384ff4ea.js.map"
     ]
   }
 }
