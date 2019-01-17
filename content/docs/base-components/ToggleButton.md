@@ -51,7 +51,7 @@ Example uses:
      {"label": "Outdoors", "value": "Outdoors"}]
   }
   title="Meetups"
-  defaultSelected=["Social"]
+  defaultValue={["Social"]}
   multiSelect={true}
   showFilter={true}
   filterLabel="City"
@@ -69,8 +69,12 @@ Example uses:
     collection of UI `labels` with associated `value` to be matched against the database field.
 - **title** `String` or `JSX` [optional]  
     title of the component to be shown in the UI.
-- **defaultSelected** `String` or `Array` [optional]  
+- **defaultValue** `String` or `Array` [optional]  
     an array of default selected label(s) to pre-select one or more buttons.
+- **value** `String Array` [optional]  
+    controls the current value of the component. It selects the label (on mount and on update). Use this prop in conjunction with `onChange` function.
+- **onChange** `function` [optional]  
+    is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
 - **multiSelect** `Boolean` [optional]  
     whether multiple buttons can be selected, defaults to **true**. When set to **false**, only one button can be selected.
 - **showFilter** `Boolean` [optional]  
@@ -84,7 +88,7 @@ Example uses:
 
 <br />
 
-<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/dev/packages/web/examples/ToggleButton" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/next/packages/web/examples/ToggleButton" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 ## Styles
 
