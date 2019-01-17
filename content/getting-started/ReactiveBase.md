@@ -63,6 +63,48 @@ This is the first component you will need to add when using `ReactiveSearch`.
 - **graphQLUrl** `String` [optional]
     Allows user to query from GraphqQL server instead of `ElasticSearch` REST api. [graphql-compose-elasticsearch](https://github.com/graphql-compose/graphql-compose-elasticsearch) helps in transforming `GraphQL` queries into `ElasticSearch` rest api. Here is an example of `GraphQL` server which acts as proxy for `ElasticSearch`. 
     - [GraphQL Server for books application](https://github.com/appbaseio-apps/graphql-elasticsearch-server)
+- **tranformResponse** `Function` [optional]
+    Enables transformation of search network response before rendering them. This asynchronous function will give you elasticsearch response object as params and expects and updated response in return in similar structure of elasticsearch, for execution.
+```js{7-34}
+    <ReactiveBase
+        app="appname"
+        credentials="abcdef123:abcdef12-ab12-ab12-ab12-abcdef123456"
+        headers={{
+            secret: 'reactivesearch-is-awesome'
+        }}
+        transformResponse={async (elasticsearchResponse) => (
+            const ids = elasticsearchResponse.responses[0].hits.hits.map(
+                item => item._id
+            );
+            const extraInformation = await getExatraInformation(ids);
+            const hits = elasticsearchResponse.responses[0].hits.hits.map(
+                (item) => {
+                    const extraInformationItem = extraInformation.find(
+                        otherItem => otherItem._id === item._id
+                    );
+                    return {
+                        ...item,
+                        ...extraInformationItem
+                    };
+                }
+            );
+
+            return {
+                response: [
+                    {
+                        hits: {
+                            ...elasticsearchResponse.responses[0].hits,
+                            hits
+                        }
+                    }
+                ]
+            };
+        )}
+    >
+        <Component1 .. />
+        <Component2 .. />
+    </ReactiveBase>
+```
 
 ### Connect to Elasticsearch
 
