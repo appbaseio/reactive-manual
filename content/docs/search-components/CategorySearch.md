@@ -68,6 +68,8 @@ Example uses:
     unique identifier of the component, can be referenced in other components' `react` prop.
 - **dataField** `String or Array`  
     data field(s) on which the search query will be applied to. If you want to search across multiple fields, pass them as an `Array`.
+- **nestedField** `String` [optional]  
+    use to set the `nested`  mapping field that allows arrays of objects to be indexed in a way that they can be queried independently of each other. Applicable only when dataField is a part of `nested` type.
 - **categoryField** `String` [optional]  
     data field which has the category values mapped.
 - **title** `String or JSX` [optional]  

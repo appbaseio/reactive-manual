@@ -75,6 +75,8 @@ While `DynamicRangeSlider` only requires the above props to be used, it comes wi
     unique identifier of the component, can be referenced in other components' `react` prop.
 - **dataField** `String`  
     DB data field to be mapped with the component's UI view.The selected range creates a database query on this field.
+- **nestedField** `String` [optional]  
+    use to set the `nested`  mapping field that allows arrays of objects to be indexed in a way that they can be queried independently of each other. Applicable only when dataField is a part of `nested` type.
 - **title** `String or JSX` [optional]  
     title of the component to be shown in the UI.
 - **defaultValue** `Function` [optional]  
