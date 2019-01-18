@@ -73,6 +73,8 @@ Example uses:
     data field to be connected to the component's UI view. The range items are filtered by a database query on this field.
 - **data** `Object Array`  
     collection of UI `labels` with associated `start` and `end` range values.
+- **nestedField** `String` [optional]  
+    use to set the `nested`  mapping field that allows arrays of objects to be indexed in a way that they can be queried independently of each other. Applicable only when dataField is a part of `nested` type.
 - **title** `String or JSX` [optional]  
     title of the component to be shown in the UI.
 - **defaultSelected** `String` [optional]  
