@@ -1,13 +1,13 @@
 ---
 id: analytics
-title: "Analytics"
+title: "Search and Click Analytics"
 layout: docs
 sectionid: docs
 permalink: advanced/analytics.html
-prev: advanced/typescript.html
-prevTitle: "TypeScript Support"
-next: componentsusage.html
-nextTitle: "Components Usage"
+prev: advancedguides.html
+prevTitle: "Advanced Guides"
+next: writingdata.html
+nextTitle: "Writing and Editing Data"
 redirect_from:
     - "analytics"
     - "advanced/analytics"

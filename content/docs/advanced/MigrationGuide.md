@@ -6,6 +6,8 @@ sectionid: docs
 permalink: advanced/migrationguide.html
 prev: componentsusage.html
 prevTitle: "Components Usage"
+next: advancedguides.html
+nextTitle: "Advanced Guides"
 ---
 
 With the release of version 3.0 of reactivesearch, we are now fully compatible with React 16.6 and above. This release comes after the feedback we have gathered from the iterative deployment of reactivesearch in production for the dozens of our clients in the past 6–8 months. In this version, we have changed the way certain props behaved in the earlier versions. This guide will give you a brief about all the changes.

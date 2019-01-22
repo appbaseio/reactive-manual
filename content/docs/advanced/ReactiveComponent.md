@@ -4,10 +4,10 @@ title: "Reactive Component"
 layout: docs
 sectionid: reactivecomponent
 permalink: advanced/reactivecomponent.html
-prev: advanced/react.html
+prev: react.html
 prevTitle: "React Prop"
-next: advanced/writingdata.html
-nextTitle: "Writing Data"
+next: ssr.html
+nextTitle: "Server Side Rendering"
 redirect_from:
     - "advanced/reactivecomponent"
     - "reactivecomponent"
