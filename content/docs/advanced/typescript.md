@@ -4,10 +4,10 @@ title: "TypeScript Support"
 layout: docs
 sectionid: docs
 permalink: advanced/typescript.html
-prev: advanced/ssr.html
-prevTitle: "Server Side Rendering"
-next: advanced/analytics.html
-nextTitle: "Analytics"
+prev: writingdata.html
+prevTitle: "Writing and Editing Data"
+next: comparison.html
+nextTitle: "Comparison with Other projects"
 redirect_from:
     - "typescript"
     - "advanced/typescript"

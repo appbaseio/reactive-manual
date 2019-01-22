@@ -4,8 +4,8 @@ title: "Comparison with Other Projects"
 layout: docs
 sectionid: docs
 permalink: advanced/comparison.html
-prev: advanced/guides.html
-prevTitle: "Advanced Guides"
+prev: typescript.html
+prevTitle: "Typescript Support"
 redirect_from:
     - "comparison"
     - "advanced/comparison"

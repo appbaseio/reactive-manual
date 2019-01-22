@@ -4,8 +4,8 @@ title: "Components Usage"
 layout: docs
 sectionid: docs
 permalink: advanced/componentsusage.html
-prev: analytics.html
-prevTitle: "Analytics"
+prev: ssr.html
+prevTitle: "Server Side Rendering"
 next: migrationguide.html
 nextTitle: "Migration Guide"
 redirect_from:

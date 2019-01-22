@@ -4,10 +4,10 @@ title: "Server Side Rendering"
 layout: docs
 sectionid: docs
 permalink: advanced/ssr.html
-prev: advanced/guides.html
-prevTitle: "Advanced Guides"
-next: advanced/typescript.html
-nextTitle: "TypeScript Support"
+prev: reactivecomponent.html
+prevTitle: "Reactive Component"
+next: componentsusage.html
+nextTitle: "Components Usage"
 redirect_from:
     - "ssr"
     - "advanced/ssr"

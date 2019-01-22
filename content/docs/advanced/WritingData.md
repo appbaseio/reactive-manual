@@ -4,10 +4,10 @@ title: "Writing and Editing Data"
 layout: tutorial
 sectionid: writingdata
 permalink: advanced/writingdata.html
-prev: advanced/reactivecomponent.html
-prevTitle: "Reactive Component"
-next: advanced/guides.html
-nextTitle: "Advanced Guides"
+prev: analytics.html
+prevTitle: "Search and Click Analytics"
+next: typescript.html
+nextTitle: "Typescript Support"
 ---
 
 Writing and updating data is a common operation that is triggered from app UIs.

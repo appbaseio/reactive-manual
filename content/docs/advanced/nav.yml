@@ -80,71 +80,22 @@
           title: Examples
           href: /advanced/reactivecomponent.html#examples
           forceInternal: true
-    - id: writingdata
-      title: Writing and Editing Data
-      href: /advanced/writingdata.html
-      forceInternal: true
-      subitems:
-        - id: appbase-js
-          title: Appbase-js
-          href: /advanced/writingdata.html#appbase-js
-          forceInternal: true
-        - id: rest-api
-          title: REST API
-          href: /advanced/writingdata.html#rest-api
-          forceInternal: true
-    - id: guides
-      title: Guides
-      href: /advanced/guides.html
-      forceInternal: true
-      subitems:
-        - id: beforevaluechange
-          title: beforeValueChange
-          href: /advanced/guides.html#beforevaluechange
-          forceInternal: true
-        - id: handling-stream-updates
-          title: Handling stream updates
-          href: /advanced/guides.html#handling-stream-updates
-          forceInternal: true
-        - id: minimizing-bundle-size
-          title: Minimizing bundle size
-          href: /advanced/guides.html#minimizing-bundle-size
-          forceInternal: true
-    - id: comparison
-      title: Comparison with Other projects
-      href: /advanced/comparison.html
-      forceInternal: true
-      subitems:
-        - id: comparison
-          title: Comparison
-          href: /advanced/comparison.html#comparison
-          forceInternal: true
     - id: ssr
       title: Server Side Rendering
       href: /advanced/ssr.html
       forceInternal: true
       subitems:
-        - id: ssr
-          title: Server Side Rendering
-          href: /advanced/ssr.html
-          forceInternal: true
-    - id: typescript
-      title: TypeScript Support
-      href: /advanced/typescript.html
-      forceInternal: true
-      subitems:
-        - id: typescript
+        - id: usage
           title: Usage
-          href: /advanced/typescript.html
+          href: /advanced/ssr.html#usage
           forceInternal: true
-    - id: analytics
-      title: Analytics
-      href: /advanced/analytics.html
-      forceInternal: true
-      subitems:
-        - id: click-analytics
-          title: Usage
-          href: /advanced/typescript.html#click-analytics
+        - id: example
+          title: Example
+          href: /advanced/ssr.html#example
+          forceInternal: true
+        - id: using-with-react-dom
+          title: Using with react-dom
+          href: /advanced/ssr.html#using-with-react-dom
           forceInternal: true
     - id: componentsusage
       title: Components Usage
@@ -163,3 +114,60 @@
       title: Migration Guide
       href: /advanced/migrationguide.html
       forceInternal: true
+    - id: advancedguides
+      title: Advanced Guides
+      href: /advanced/advancedguides.html
+      forceInternal: true
+      subitems:
+        - id: beforevaluechange
+          title: beforeValueChange
+          href: /advanced/advancedguides.html#beforevaluechange
+          forceInternal: true
+        - id: handling-stream-updates
+          title: Handling stream updates
+          href: /advanced/advancedguides.html#handling-stream-updates
+          forceInternal: true
+        - id: minimizing-bundle-size
+          title: Minimizing bundle size
+          href: /advanced/advancedguides.html#minimizing-bundle-size
+          forceInternal: true
+    - id: analytics
+      title: Search and Click Analytics
+      href: /advanced/analytics.html
+      forceInternal: true
+      subitems:
+        - id: click-analytics
+          title: Usage
+          href: /advanced/typescript.html#click-analytics
+          forceInternal: true
+    - id: writingdata
+      title: Writing and Editing Data
+      href: /advanced/writingdata.html
+      forceInternal: true
+      subitems:
+        - id: appbase-js
+          title: Appbase-js
+          href: /advanced/writingdata.html#appbase-js
+          forceInternal: true
+        - id: rest-api
+          title: REST API
+          href: /advanced/writingdata.html#rest-api
+          forceInternal: true
+    - id: typescript
+      title: TypeScript Support
+      href: /advanced/typescript.html
+      forceInternal: true
+      subitems:
+        - id: usage
+          title: Usage
+          href: /advanced/typescript.html#usage
+          forceInternal: true
+    - id: comparison
+      title: Comparison with Other projects
+      href: /advanced/comparison.html
+      forceInternal: true
+      subitems:
+        - id: comparison
+          title: Comparison
+          href: /advanced/comparison.html#comparison
+          forceInternal: true

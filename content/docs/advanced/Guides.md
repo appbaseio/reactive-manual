@@ -3,11 +3,11 @@ id: guides
 title: "Advanced Guides"
 layout: docs
 sectionid: docs
-permalink: advanced/guides.html
-prev: advanced/writingdata.html
-prevTitle: "Writing and Editing Data"
-next: advanced/comparison.html
-nextTitle: "Comparison"
+permalink: advanced/advancedguides.html
+prev: migrationguide.html
+prevTitle: "Migration Guide"
+next: analytics.html
+nextTitle: "Search and Click Analytics"
 redirect_from:
     - "guides"
     - "advanced/guides"
