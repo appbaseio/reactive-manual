@@ -117,14 +117,12 @@ Example uses:
     - `dataField` - data field to use for applying the sorting criteria on.
     - `sortBy` - specified as either `asc` or `desc`.
 - **size** `Number` [optional]  
-    number of results to show per view. Defaults to 20.
+    number of results to show per view. Defaults to 20. 
 - **loader** `String or JSX` [optional]  
     display to show the user while the data is loading, accepts `String` or `JSX` markup.
 - **showResultStats** `Boolean` [optional]  
     whether to show result stats in the form of results found and time taken. Defaults to `true`.
 - **onResultStats** `Function` [optional]  
-    returns `total_results` and `time_taken`.This callback function prop is called for each new results.
-- **renderResultStats** `Function` [optional]  
     renders custom result stats using a function that takes two parameters for `total_results` and `time_taken` and expects it to return a string or JSX.
 - **react** `Object`  
     a dependency object defining how this component should react based on the state changes in the sensor components. You can read more about how to specify this prop over [here](/advanced/react.html).
