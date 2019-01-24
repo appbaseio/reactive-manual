@@ -35,7 +35,7 @@ ReactiveSearch uses the wonderful [downshift](https://github.com/paypal/downshif
 />
 ```
 
-Check out the [example](https://opensource.appbase.io/playground) on playground.
+Check out the [example](https://opensource.appbase.io/playground/?selectedKind=Search%20components%2FDataSearch&selectedStory=With%20renderSuggestions&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybooks%2Fstorybook-addon-knobs) on playground.
 
 The `getItemProps` provides some props that you should pass to your suggestions for them to work properly with downshift. The paramter should be an object with key `item` which should have a `value` field. For example:
 
@@ -64,6 +64,6 @@ The `suggestions` parameter receives all the unparsed suggestions from elasticse
 />
 ```
 
-Check out the [example](https://opensource.appbase.io/playground) on playground.
+Check out the [example](https://opensource.appbase.io/playground/?selectedKind=Search%20components%2FCategorySearch&selectedStory=With%20renderSuggestions&full=0&addons=1&stories=1&panelRight=0&addonPanel=storybooks%2Fstorybook-addon-knobs) on playground.
 
 All the parameters received are very similar to the `DataSearch` besides `categories` which receives all the categories for the current query as an array of objects having the `key` attribute and the `doc_count` so you can compose a custom UI accordingly.
