@@ -126,20 +126,6 @@ Example uses:
     Sets the query format, can be **or** or **and**. Defaults to **or**.
     * **or** returns all the results matching **any** of the search query text's parameters. For example, searching for "bat man" with **or** will return all the results matching either "bat" or "man".
     * On the other hand with **and**, only results matching both "bat" and "man" will be returned. It returns the results matching **all** of the search query text's parameters.
-- **defaultQuery** `Function` [optional]    
-    Lets you append your own query along with the existing query for search. This also works with `customQuery` and the query gets appended to the final query. The function receives `value` and the current `props` and expects you to return a query to append. For example, you may use this to limit your searches to harry potter books by something like:
-
-```js
-<DataSearch
-    dataField="original_title"
-    ...
-    defaultQuery={(value, props) => ({
-        match: {
-            original_title: 'Potter'
-        }
-    })}
-/>
-```
 
 - **fuzziness** `String or Number` [optional]
     Sets a maximum edit distance on the search parameters, can be **0**, **1**, **2** or **"AUTO"**. Useful for showing the correct results for an incorrect search parameter by taking the fuzziness into account. For example, with a substitution of one character, **fox** can become **box**. Read more about it in the elastic search [docs](https://www.elastic.co/guide/en/elasticsearch/guide/current/fuzziness.html).
@@ -159,6 +145,16 @@ Example uses:
     renderError={(error) => (
             <div>
                 Something went wrong!<br/>Error details<br/>{error}
+            </div>
+        )
+    }
+    ```
+- **renderNoSuggestion** `String or JSX or Function` [optional]
+    can we used to render a message when there is no suggestions found.
+    ```js
+    renderNoSuggestion={() => (
+            <div>
+                No suggestions found
             </div>
         )
     }

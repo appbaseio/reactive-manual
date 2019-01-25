@@ -70,8 +70,7 @@ All the parameters received are very similar to the `DataSearch` besides `catego
 
 
 ## Customizing individual suggestions
-
-Similar to the `onSuggestion` prop usage but supports extra keys for `title`, `image` and `description`. Both title and description support highlighting. In order to take control of rendering specify a `label` key just like `onSuggestion` supports (this has the highest precedence while rendering).
+It's also possible to customize the individual suggestions by using `renderSuggestion` prop.
 
 ```js
 <DataSearch

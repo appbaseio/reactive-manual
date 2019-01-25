@@ -110,7 +110,7 @@ const myQuery = (value, props) => ({
 ```
 
 ### Defining a Default Query
-Each component has a `customQuery` prop that accepts a function which has the same specifications as `customQuery`.DefaultQuery is used to apply the query on the source component. Unlike `customQuery`, It doesn't get leaked to other components. It's as if you create an internal component and apply the defaultQuery on it. Ideally, you would use this with components that are data-driven.
+Some components have a `defaultQuery` prop that accepts a function which has the same specifications as `customQuery`.DefaultQuery is used to apply the query on the source component. Unlike `customQuery`, It doesn't get leaked to other components. It's as if you create an internal component and apply the defaultQuery on it. Ideally, you would use this with components that are data-driven.
 
 ```javascript
 <SingleList
