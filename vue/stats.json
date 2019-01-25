@@ -45,16 +45,16 @@
       "path---list-components-singlelist-html-f9b01624c5025a79daf7.js.map"
     ],
     "component---src-templates-tutorial-js": [
-      "component---src-templates-tutorial-js-09b0bfb7722a200fb8a7.js",
-      "component---src-templates-tutorial-js-09b0bfb7722a200fb8a7.js.map"
+      "component---src-templates-tutorial-js-083843ee6ad1a2d29042.js",
+      "component---src-templates-tutorial-js-083843ee6ad1a2d29042.js.map"
     ],
     "path---list-components-multilist-html": [
       "path---list-components-multilist-html-7d56312aa0a2f1a3bcae.js",
       "path---list-components-multilist-html-7d56312aa0a2f1a3bcae.js.map"
     ],
     "path---base-components-selectedfilters-html": [
-      "path---base-components-selectedfilters-html-cd9d9290b855eec9bb55.js",
-      "path---base-components-selectedfilters-html-cd9d9290b855eec9bb55.js.map"
+      "path---base-components-selectedfilters-html-d7d7f4c04e97f8723fc1.js",
+      "path---base-components-selectedfilters-html-d7d7f4c04e97f8723fc1.js.map"
     ],
     "path---advanced-analytics-html": [
       "path---advanced-analytics-html-16d52655d6568f8ed670.js",
@@ -65,8 +65,8 @@
       "path---search-components-datasearch-html-916fabf456a2e775221d.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-c903065e6b01e1481ff0.js",
-      "component---src-layouts-index-js-c903065e6b01e1481ff0.js.map"
+      "component---src-layouts-index-js-98ab0539b675b8c68a5a.js",
+      "component---src-layouts-index-js-98ab0539b675b8c68a5a.js.map"
     ],
     "path---jsx-compiler-html": [
       "path---jsx-compiler-html-a0e39f21c11f6a62c5ab.js",
@@ -139,9 +139,9 @@
       "path---getting-started-componentsindex-html-4ba0ae40026bcfe26739.js.map"
     ],
     "app": [
-      "app-57663f0f9e0a6c7d4ed4.js",
+      "app-b9ca8ced88e2da28bf92.js",
       "build-js-styles.css",
-      "app-57663f0f9e0a6c7d4ed4.js.map",
+      "app-b9ca8ced88e2da28bf92.js.map",
       "build-js-styles.css.map"
     ],
     "path---theming-class-html": [
@@ -149,12 +149,16 @@
       "path---theming-class-html-e5d1fc75d77a19386790.js.map"
     ],
     "component---src-templates-docs-js": [
-      "component---src-templates-docs-js-3818462a51c08c158ac8.js",
-      "component---src-templates-docs-js-3818462a51c08c158ac8.js.map"
+      "component---src-templates-docs-js-81be907f3d156779d216.js",
+      "component---src-templates-docs-js-81be907f3d156779d216.js.map"
     ],
     "path---range-components-dynamicrangeslider-html": [
       "path---range-components-dynamicrangeslider-html-52f3eb4ebfdcb4cbcf9d.js",
       "path---range-components-dynamicrangeslider-html-52f3eb4ebfdcb4cbcf9d.js.map"
+    ],
+    "path---base-components-togglebutton-html": [
+      "path---base-components-togglebutton-html-db7d21527d7d130e9bd3.js",
+      "path---base-components-togglebutton-html-db7d21527d7d130e9bd3.js.map"
     ],
     "path---blog-all-html": [
       "path---blog-all-html-2c7363e48ff0a64df829.js",
@@ -169,8 +173,8 @@
       "component---src-pages-blog-all-html-js-4e8968908d11397a30ea.js.map"
     ],
     "component---src-templates-home-js": [
-      "component---src-templates-home-js-1002ecbc52ae8156afe2.js",
-      "component---src-templates-home-js-1002ecbc52ae8156afe2.js.map"
+      "component---src-templates-home-js-42ed2737d08b782a657c.js",
+      "component---src-templates-home-js-42ed2737d08b782a657c.js.map"
     ]
   }
 }

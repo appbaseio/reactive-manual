@@ -2,8 +2,6 @@
 
 ## Created with gatsby-plugin-netlify
 
-/reactive-manual/vue/componentsindex  /reactive-manual/vue/getting-started/componentsindex.html  302
-/reactive-manual/vue/components  /reactive-manual/vue/getting-started/componentsindex.html  302
 /reactive-manual/vue/getting-started/  /reactive-manual/vue/getting-started/reactivesearch.html  302
 /reactive-manual/vue/getting-started/reactivesearch  /reactive-manual/vue/getting-started/reactivesearch.html  302
 /reactive-manual/vue/install  /reactive-manual/vue/getting-started/reactivesearch.html  302
@@ -21,6 +19,9 @@
 /reactive-manual/vue/basic-components/selectedfilters.html  /reactive-manual/vue/base-components/selectedfilters.html  302
 /reactive-manual/vue/base-components/selectedfilters  /reactive-manual/vue/base-components/selectedfilters.html  302
 /reactive-manual/vue/selectedfilters  /reactive-manual/vue/base-components/selectedfilters.html  302
+/reactive-manual/vue/basic-components/togglebutton.html  /reactive-manual/vue/base-components/togglebutton.html  302
+/reactive-manual/vue/base-components/togglebutton  /reactive-manual/vue/base-components/togglebutton.html  302
+/reactive-manual/vue/togglebutton  /reactive-manual/vue/base-components/togglebutton.html  302
 /reactive-manual/vue/basic-components/multidropdownlist.html  /reactive-manual/vue/list-components/multidropdownlist.html  302
 /reactive-manual/vue/list-components/multidropdownlist  /reactive-manual/vue/list-components/multidropdownlist.html  302
 /reactive-manual/vue/multidropdownlist  /reactive-manual/vue/list-components/multidropdownlist.html  302
@@ -63,4 +64,6 @@
 /reactive-manual/vue/theming/style  /reactive-manual/vue/theming/style.html  302
 /reactive-manual/vue/style  /reactive-manual/vue/theming/style.html  302
 /reactive-manual/vue/styles  /reactive-manual/vue/theming/style.html  302
+/reactive-manual/vue/componentsindex  /reactive-manual/vue/getting-started/componentsindex.html  302
+/reactive-manual/vue/components  /reactive-manual/vue/getting-started/componentsindex.html  302
 /reactive-manual/vue/index.html  /reactive-manual/vue/  302
