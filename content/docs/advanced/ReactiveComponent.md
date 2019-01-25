@@ -176,6 +176,10 @@ export default {
 ```
 - **selectedValue** `any`   
 `selectedValue` contains the current value of the component (which can be set via `setQuery()` function). This is used for URLParams and SelectedFilters.
+- **isLoading** `Boolean`
+    `true` means the query is in the execution state.
+- **error** `any`
+    contains the error details in case of any error.
 
 
 #### ReactiveComponent
@@ -210,6 +214,8 @@ export default {
     is a event which accepts component's **prevQuery** and **nextQuery** as parameters. It is called everytime the component's query changes. This prop is handy in cases where you want to generate a side-effect whenever the component's query would change.
 - **allData**  
     event which provides `hits` and `aggregations` as an object properties.
+- **error**
+    gets triggered in case of an error and provides the `error` object, which can be used for debugging or giving feedback to the user if needed.
 
 ## Examples
 

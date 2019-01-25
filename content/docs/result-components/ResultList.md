@@ -34,7 +34,7 @@ Example uses:
         dataField="original_title.raw"
         :from="0"
         :size="5"
-        :onData="booksList"
+        :renderData="booksList"
     />
 </template>
 <script>
@@ -67,7 +67,7 @@ Example uses:
   componentId="SearchResult"
   dataField="original_title.raw"
   paginationAt="bottom"
-  :onData="booksList"
+  :renderData="booksList"
   loader="Loading Books.."
   sortBy="desc"
   :stream="true"
@@ -112,18 +112,16 @@ Example uses:
     display to show the user while the data is loading, accepts `String` or `JSX` markup.
 - **showResultStats** `Boolean` [optional]  
     whether to show result stats in the form of results found and time taken. Defaults to `true`.
-- **onResultStats** `Function|scoped-slot` [optional]  
-    renders custom result stats using a function or slot that takes an object with two properties for `total(results)` and `time(time taken to execute query)` and expects it to return a string or JSX.
 - **react** `Object` [optional]  
     a dependency object defining how this component should react based on the state changes in the sensor components.
 - **URLParams** `Boolean` [optional]  
     when set adds the current page number to the url. Only works when `pagination` is enabled.
-- **onData** `Function|scoped-slot` [optional]  
+- **renderData** `Function|scoped-slot` [optional]  
     returns a list element object to be rendered based on the `res` data object. This callback function prop is called for each data item rendered in the ResultList component’s view.
 
     ```js
     <result-list
-        :onData="function(data){
+        :renderData="function(data){
             return {
                 title: data.original_title,
                 image: data.image,
@@ -147,6 +145,22 @@ Example uses:
             };
         }"
     />
+    ```
+- **renderResultStats** `Function|scoped-slot` [optional]
+    renders custom result stats using a callback function that takes `stats` object as parameter and expects it to return a string or html. `stats` object contains following properties
+    - `totalResults` - Total number of results found
+    - `totalPages` - Total number of pages found based on current page size
+    - `currentPage` - Current page number for which data is being rendered
+    - `displayedResults` - Number of results displayed in current view
+    - `time` - Time taken to find total results
+    ```js
+    :renderResultStats="
+            function(stats){
+                return (
+                    `Showing ${stats.displayedResults} of total ${stats.totalResults} in ${stats.time} ms`
+                )   
+            }
+        "
     ```
 - **defaultQuery** `Function` [optional]  
     applies a default query to the result component. This query will be run when no other components are being watched (via React prop), as well as in conjunction with the query generated from the React prop. The function should return a query.
@@ -173,14 +187,14 @@ Read more about it [here](/theming/class.html).
 
 `resultlist` component can be extended to
 1. customize the look and feel with `className`,
-2. render individual result data items using `onData`,
+2. render individual result data items using `renderData`,
 3. connect with external interfaces using `queryChange`.
 
 ```js
 <resultlist
   ...
   className="custom-class"
-  :onData=`
+  :renderData=`
     function({ item }) {
       return(
         <div>
@@ -201,7 +215,7 @@ Read more about it [here](/theming/class.html).
 
 - **className** `String`  
     CSS class to be injected on the component container.
-- **onData** `Function|scoped-slot` [optional]  
+- **renderData** `Function|scoped-slot` [optional]  
     a callback function or scoped-slot where user can define how to render the view based on the data changes.
 
 > Note
@@ -219,6 +233,17 @@ Read more about it [here](/theming/class.html).
 
 - **pageClick** 
     accepts a function which is invoked with the updated page value when a pagination button is clicked. For example if 'Next' is clicked with the current page number as '1', you would receive the value '2' as the function parameter.
+
+- **data** `Function` [optional]
+    gets triggered after data changes, which returns an object with these properties: `results`, `streamResults`, `loadMore`, `base` & `triggerClickAnalytics`.
+
+- **resultStats** `Function` [optional]
+    gets triggered after stats changes, which returns an object with these properties:
+    - `totalResults` - Total number of results found
+    - `totalPages` - Total number of pages found based on current page size
+    - `currentPage` - Current page number for which data is being rendered
+    - `displayedResults` - Number of results displayed in current view
+    - `time` - Time taken to find total results
 
 > Note:
 >

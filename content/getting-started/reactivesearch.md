@@ -176,7 +176,7 @@ Finally, we need a component to show the matching results. [**reactive-list**](/
   :size="5"
   :react="{and: ['Ratings','Authors']}"
 >
-  <div slot="onData" slot-scope="{ item }">
+  <div slot="renderData" slot-scope="{ item }">
     <div class="flex book-content" key="item._id">
       <img :src="item.image" alt="Book Cover" class="book-image" />
       <div class="flex column justify-center ml20">
@@ -242,7 +242,7 @@ Now, we will put all three components together to create the UI view.
         :size="5"
         :react="{and: ['Ratings','Authors']}"
       >
-        <div slot="onData" slot-scope="{ item }">
+        <div slot="renderData" slot-scope="{ item }">
           <div class="flex book-content" key="item._id">
             <img :src="item.image" alt="Book Cover" class="book-image" />
             <div class="flex column justify-center ml20">

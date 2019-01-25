@@ -30,7 +30,7 @@ Example uses:
             "and": ["CitySensor", "SearchSensor"]
         }`
     >
-         <div slot="onData" scoped-slot="{ item }">
+         <div slot="renderData" scoped-slot="{ item }">
             {{ item.title }}
          </div>
     </reactive-list>
@@ -88,17 +88,15 @@ Example uses:
     display to show the user while the data is loading, accepts `String` or `JSX` markup.
 - **showResultStats** `Boolean` [optional]  
     whether to show result stats in the form of results found and time taken. Defaults to `true`.
-- **onResultStats** `Function|scoped-slot` [optional]  
-    renders custom result stats using a function or slot that takes an object with two properties for `total(results)` and `time(time taken to execute query)` and expects it to return a string or JSX.
 - **react** `Object` [optional]  
     a dependency object defining how this component should react based on the state changes in the sensor components.
 - **URLParams** `Boolean` [optional]  
     when set adds the current page number to the url. Only works when `pagination` is enabled.
-- **onData** `Function|scoped-slot` [optional]  
+- **renderData** `Function|scoped-slot` [optional]  
     returns a list element object to be rendered based on the `res` data object. This callback function prop or slot is called for each data item rendered in the **ReactiveList** component's view. For example,
 
     ```html
-    <div slot="onData" scoped-slot="{ item }">
+    <div slot="renderData" scoped-slot="{ item }">
         <a
             class="full_row single-record single_record_for_clone"
             key="item._id"
@@ -119,12 +117,55 @@ Example uses:
         </a>
     </div>
     ```
-- **onAllData** `Function|scoped-slot` [optional]  
-    works like **onData** but all the data objects are passed to the callback function or slot.
+- **renderAllData** `Function|scoped-slot` [optional]  
+    works like **renderData** but all the data objects are passed to the callback function or slot.
+    It accepts an object with these properties: `results`, `streamResults`, `loadMore`, `base` & `triggerClickAnalytics`.
+    - **`results`**: An array of results obtained from the applied query.
+    - **`streamResults`**: An array of results streamed since the applied query, aka realtime data. Here, a meta property `_updated` or `_deleted` is also present within a result object to denote if an existing object has been updated or deleted.
+    - **`loadMore`**: A callback function to be called to load the next page of results into the view. The callback function is only applicable in the case of infinite loading view (i.e. `pagination` prop set to `false`).
+    - **`base`**: An internally calculated value, useful to calculate analytics. [Read More](/advanced/analytics.html)
+    - **`triggerClickAnalytics`**: A function which can be called to register a click analytics. [Read More](/advanced/analytics.html)
+
+- **renderResultStats** `Function|scoped-slot` [optional]
+    renders custom result stats using a callback function that takes `stats` object as parameter and expects it to return a string or html. `stats` object contains following properties
+    - `totalResults` - Total number of results found
+    - `totalPages` - Total number of pages found based on current page size
+    - `currentPage` - Current page number for which data is being rendered
+    - `displayedResults` - Number of results displayed in current view
+    - `time` - Time taken to find total results
+    ```js
+    :renderResultStats="
+            function(stats){
+                return (
+                    `Showing ${stats.displayedResults} of total ${stats.totalResults} in ${stats.time} ms`
+                )   
+            }
+        "
+    ```
+- **renderError** `String|Function|scoped-slot` [optional] 
+    can be used to render an error message in case of any error.
+
+```js
+    :renderError="error => (
+            <div>
+                Something went wrong!<br/>Error details<br/>{error}
+            </div>
+        )
+    "
+```
+or
+
+```html
+   <template slot="renderError" scoped-slot="error">
+        <div>
+            Something went wrong!<br/>Error details<br/>{{ error }}
+        </div>
+    </template>
+```
+- **renderNoResults** `String|Function|scoped-slot` [optional] 
+    show custom message or component when no results found.
 - **defaultQuery** `Function` [optional]  
     applies a default query to the result component. This query will be run when no other components are being watched (via React prop), as well as in conjunction with the query generated from the React prop. The function should return a query.
-- **onNoResults** `String` [optional]  
-    show custom message or component when no results founds.
 
 ## Demo
 
@@ -152,15 +193,15 @@ Read more about it [here](/theming/class.html).
 
 `ReactiveList` component can be extended to
 1. customize the look and feel with `className`,
-2. render individual result data items using `onData`,
-3. render the entire result data using `onAllData`.
+2. render individual result data items using `renderData`,
+3. render the entire result data using `renderAllData`.
 4. connect with external interfaces using `queryChange`.
 
 ```js
 <ReactiveList
   ...
   className="custom-class"
-  :onData=`
+  :renderData=`
     function({ item }) {
       return(
         <div>
@@ -181,15 +222,17 @@ Read more about it [here](/theming/class.html).
 
 - **className** `String`  
     CSS class to be injected on the component container.
-- **onData** `Function|scoped-slot` [optional]  
+- **renderData** `Function|scoped-slot` [optional]  
     a callback function or scoped-slot where user can define how to render the view based on the data changes.
-- **onAllData** `Function|scoped-slot` [optional]  
-    an alternative callback function or scoped-slot to `onData`, where user can define how to render the view based on all the data changes.  
+- **renderAllData** `Function|scoped-slot` [optional]  
+    an alternative callback function or scoped-slot to `renderData`, where user can define how to render the view based on all the data changes.  
     <br/>
-    It accepts an object with following properties: `results`, `streamResults` and `loadMore`, `base`, `triggerClickAnalytics`.
+    It accepts an object with these properties: `results`, `streamResults`, `loadMore`, `base` & `triggerClickAnalytics`.
     - **`results`**: An array of results obtained from the applied query.
     - **`streamResults`**: An array of results streamed since the applied query, aka realtime data. Here, a meta property `_updated` or `_deleted` is also present within a result object to denote if an existing object has been updated or deleted.
     - **`loadMore`**: A callback function to be called to load the next page of results into the view. The callback function is only applicable in the case of infinite loading view (i.e. `pagination` prop set to `false`).
+    - **`base`**: An internally calculated value, useful to calculate analytics. [Read More](/advanced/analytics.html)
+    - **`triggerClickAnalytics`**: A function which can be called to register a click analytics. [Read More](/advanced/analytics.html)
 
 > Note
 >  
@@ -206,6 +249,21 @@ Read more about it [here](/theming/class.html).
 
 - **pageClick** 
     accepts a function which is invoked with the updated page value when a pagination button is clicked. For example if 'Next' is clicked with the current page number as '1', you would receive the value '2' as the function parameter.
+
+- **data** `Function` [optional]
+    gets triggered after data changes, which returns an object with these properties: `results`, `streamResults`, `loadMore`, `base` & `triggerClickAnalytics`.
+
+- **resultStats** `Function` [optional]
+    gets triggered after stats changes, which returns an object with these properties:
+    - `totalResults` - Total number of results found
+    - `totalPages` - Total number of pages found based on current page size
+    - `currentPage` - Current page number for which data is being rendered
+    - `displayedResults` - Number of results displayed in current view
+    - `time` - Time taken to find total results
+
+
+- **error**
+    gets triggered in case of an error and provides the `error` object, which can be used for debugging or giving feedback to the user if needed.
 
 > Note:
 >
