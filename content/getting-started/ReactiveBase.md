@@ -64,7 +64,7 @@ This is the first component you will need to add when using `ReactiveSearch`.
     Allows user to query from GraphqQL server instead of `ElasticSearch` REST api. [graphql-compose-elasticsearch](https://github.com/graphql-compose/graphql-compose-elasticsearch) helps in transforming `GraphQL` queries into `ElasticSearch` rest api. Here is an example of `GraphQL` server which acts as proxy for `ElasticSearch`. 
     - [GraphQL Server for books application](https://github.com/appbaseio-apps/graphql-elasticsearch-server)
 - **tranformResponse** `Function` [optional]
-    Enables transformation of search network response before rendering them. This asynchronous function will give you elasticsearch response object as params and expects and updated response in return in similar structure of elasticsearch, for execution.
+    Enables transformation of search network response before rendering them. This asynchronous function will give you elasticsearch response object as params and expects an updated response in return in similar structure of elasticsearch, for execution.
 ```js{7-34}
     <ReactiveBase
         app="appname"
@@ -92,6 +92,7 @@ This is the first component you will need to add when using `ReactiveSearch`.
             return {
                 response: [
                     {
+                        ...elasticsearchResponse.responses[0],
                         hits: {
                             ...elasticsearchResponse.responses[0].hits,
                             hits
@@ -104,6 +105,23 @@ This is the first component you will need to add when using `ReactiveSearch`.
         <Component1 .. />
         <Component2 .. />
     </ReactiveBase>
+```
+> Note
+>
+> `transformResponse` function is expected to return data in following structure.
+
+```json
+{
+    response: [
+        {
+            hits: {
+                hits: [...],
+                total: 100
+            },
+            took: 1
+        }
+    ]
+}
 ```
 
 ### Connect to Elasticsearch
