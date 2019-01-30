@@ -45,15 +45,26 @@ or
 npm install --save @appbaseio/reactivemaps @appbaseio/reactivesearch
 ```
 
-#### Add Google Maps JS lib
+### Selecting Map Library
 
-ReactiveMaps uses Google Maps JS library to render the maps and access the necessary geo-location services. For including Google Maps, add the following  `<script>` tag in the `<head>` element of `public/index.html`.
+ReactiveMaps supports [**OpenStreet Map**](https://www.openstreetmap.org) and [**Google Map**](https://www.google.co.in/maps) libraries for rendering map. Depending on the Map library you choose, Following are the dependencies that you will have to add.
+
+#### OpenStreet Maps
+
+`<ReactiveOpenStreetMap />` uses [React-Leaflet](https://react-leaflet.js.org/) for rendering Openstreet maps. For rendering maps correctly, add the following `stylesheet` in the `<head>` element of `public/index.html`
+
+```html
+<link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.css" rel="stylesheet" />
+```
+#### Google Maps
+
+`<ReactiveGoogleMap />` uses Google Maps JS library to render the google map and access the necessary geo-location services. For including Google Maps, add the following  `<script>` tag in the `<head>` element of `public/index.html`.
 
 ```html
 <script type="text/javascript" src="https://maps.google.com/maps/api/js?v=3.31&key=YOUR_MAPS_KEY_HERE"></script>
 ```
 
-> Note that you will need places library from google maps if you are using GeoDistance components. You can add it by appending `&libraries=places` in the above URL
+> Note that you will need places library from google maps if you are using GeoDistance components. You can add it by appending `&libraries=places` in the above URL. This will be required in case of OpenStreetMaps as well.
 
 ---
 
@@ -103,7 +114,7 @@ This is how the app should look after running the `yarn start` command.
 
 ### Step 3: Adding Filters and Map Components
 
-For this app, we will be using [SingleList](/list-components/singlelist.html) component for filtering the dataset. And [ReactiveMap](/map-components/reactivemap.html) component for showing the search results.
+For this app, we will be using [SingleList](/list-components/singlelist.html) component for filtering the dataset. And [ReactiveGoogleMap](/map-components/reactivegooglemap.html) component for showing the search results.
 
 Lets add them within the ReactiveBase component. But before we do that, we will look at the important props for each.
 
@@ -119,10 +130,10 @@ Lets add them within the ReactiveBase component. But before we do that, we will 
 
 **SingleList** creates a radio-buttons list UI component that is connected to the database field passed as `dataField` prop to the SingleList component.
 
-Next, we will look at the [**ReactiveMap**](/map-components/reactivemap.html) component for creating a map component.
+Next, we will look at the [**ReactiveGoogleMap**](/map-components/reactivegooglemap.html) component for creating a map component.
 
 ```js
-<ReactiveMap
+<ReactiveGoogleMap
 	componentId="map"
 	dataField="location"
 	react={{
@@ -138,7 +149,7 @@ The `react` prop here specifies that it should construct a query based on the cu
 
 ![](https://i.imgur.com/QwFq2CP.png)
 
-This is how the map component's UI would look like. Notice how it is rendering the magnitude values of the earthquake in place of the marker pins. We achieved this via `onData` prop in the ReactiveMap component:
+This is how the map component's UI would look like. Notice how it is rendering the magnitude values of the earthquake in place of the marker pins. We achieved this via `onData` prop in the ReactiveGoogleMap component:
 
 ```js
 onData={(result) => ({
@@ -146,14 +157,14 @@ onData={(result) => ({
 })}
 ```
 
-You can also customise it to render any kind of marker pins. Refer [ReactiveMap's documentation](/map-components/reactivemap.html) for the same.
+You can also customise it to render any kind of marker pins. Refer [ReactiveGoogleMap's documentation](/map-components/reactivegooglemap.html) for the same.
 
 Now, we will put all three components together to create the UI view.
 
 ```js
 import React, { Component } from 'react';
 import { ReactiveBase, SingleList } from '@appbaseio/reactivesearch';
-import { ReactiveMap } from '@appbaseio/reactivemaps';
+import { ReactiveGoogleMap } from '@appbaseio/reactivemaps';
 
 import logo from './logo.svg';
 import './App.css';
@@ -183,7 +194,7 @@ class App extends Component {
 						showSearch={true}
 					/>
 
-					<ReactiveMap
+					<ReactiveGoogleMap
 						componentId="map"
 						dataField="location"
 						react={{
@@ -207,7 +218,7 @@ If you have followed along, this is how our app should look now.
 ![Image](https://i.imgur.com/LR4qyZU.png)
 
 
-For convenience, you can checkout the final code from the ReactiveMap starter [GitHub repo](https://github.com/appbaseio-apps/reactivemaps-starter) and [live codepen](https://codepen.io/dhruvdutt/pen/KRwmvz) demo.
+For convenience, you can checkout the final code from the ReactiveMap starter [GitHub repo](https://github.com/appbaseio-apps/reactivemaps-starter) and [live codepen](https://codesandbox.io/s/ovq0m97qy6) demo.
 
 You can run it with the following commands:
 

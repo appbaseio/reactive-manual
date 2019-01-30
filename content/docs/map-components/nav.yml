@@ -87,28 +87,53 @@
     #       title: Examples
     #       href: /map-components/placessearch.html#examples
     #       forceInternal: true
-    - id: reactivemap
-      title: ReactiveMap
-      href: /map-components/reactivemap.html
+    - id: reactivegooglemap
+      title: ReactiveGoogleMap
+      href: /map-components/reactivegooglemap.html
       forceInternal: true
       subitems:
         - id: usage
           title: Usage
-          href: /map-components/reactivemap.html#usage
+          href: /map-components/reactivegooglemap.html#usage
           forceInternal: true
         - id: props
           title: Props
-          href: /map-components/reactivemap.html#props
+          href: /map-components/reactivegooglemap.html#props
           forceInternal: true
         - id: demo
           title: Demo
-          href: /map-components/reactivemap.html#demo
+          href: /map-components/reactivegooglemap.html#demo
           forceInternal: true
         - id: styles
           title: Styles
-          href: /map-components/reactivemap.html#styles
+          href: /map-components/reactivegooglemap.html#styles
           forceInternal: true
         - id: examples
           title: Examples
-          href: /map-components/reactivemap.html#examples
+          href: /map-components/reactivegooglemap.html#examples
+          forceInternal: true
+    - id: reactiveopenstreetmap
+      title: ReactiveOpenStreetMap
+      href: /map-components/reactiveopenstreetmap.html
+      forceInternal: true
+      subitems:
+        - id: usage
+          title: Usage
+          href: /map-components/reactiveopenstreetmap.html#usage
+          forceInternal: true
+        - id: props
+          title: Props
+          href: /map-components/reactiveopenstreetmap.html#props
+          forceInternal: true
+        - id: demo
+          title: Demo
+          href: /map-components/reactiveopenstreetmap.html#demo
+          forceInternal: true
+        - id: styles
+          title: Styles
+          href: /map-components/reactiveopenstreetmap.html#styles
+          forceInternal: true
+        - id: examples
+          title: Examples
+          href: /map-components/reactiveopenstreetmap.html#examples
           forceInternal: true
