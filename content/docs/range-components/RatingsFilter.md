@@ -67,6 +67,8 @@ Example uses:
     data field to be mapped with the component's UI view.
 - **data** `Object Array`  
     collection of UI `label` with associated with `start` and `end` ratings values.
+- **nestedField** `String` [optional]  
+    use to set the `nested`  mapping field that allows arrays of objects to be indexed in a way that they can be queried independently of each other. Applicable only when dataField is a part of `nested` type.
 - **title** `String or JSX` [optional]  
     title of the component to be shown in the UI.
 - **defaultValue** `Object` [optional]  

@@ -60,6 +60,8 @@ Example uses:
     DB data field to be mapped with the component's UI view. The selected box value creates a database query on this field.
 - **data** `Object`  
     an object with `start` and `end` values and optionally an associated `label` to be displayed in the UI.
+- **nestedField** `String` [optional]  
+    use to set the `nested`  mapping field that allows arrays of objects to be indexed in a way that they can be queried independently of each other. Applicable only when dataField is a part of `nested` type.
 - **title** `String or JSX` [optional]  
     title of the component to be shown in the UI.
 - **defaultValue** `Number` [optional]  

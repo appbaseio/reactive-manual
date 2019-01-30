@@ -67,6 +67,8 @@ Example uses:
     database field(s) to be connected to the component's UI view.
     * If passed as an `Array` of length 2, the first `String` element is used for the lower bound and the second `String` element is used for the upper bound of the range.
     * If passed as a `String`, the field is used for both lower and upper bounds match based on the selected values from the component UI view.
+- **nestedField** `String` [optional]  
+    use to set the `nested`  mapping field that allows arrays of objects to be indexed in a way that they can be queried independently of each other. Applicable only when dataField is a part of `nested` type.
 - **title** `String or JSX` [optional]  
     title of the component to be shown in the UI.
 - **defaultValue** `Object` [optional]  
