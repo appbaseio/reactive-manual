@@ -21,7 +21,7 @@ With `ReactiveComponent`, you can convert any React Component into a Reactivesea
 >
 > `ReactiveComponent` is a wrapper component that allows you to connect custom component(s) (passed as children) with the Reactivesearch ecosystem.
 
-### Usage
+### Usage with defaultQuery
 
 For example, let's suppose that we are building an e-commerce store where we have a react component called `ColorPicker` which renders the `colors` passed to it as tiles, allowing us to filter the products by their colors.
 
@@ -139,6 +139,13 @@ class ColorPickerWrapper extends React.Component {
 
 Now, the components which will have `myColorPicker` present in their `react` prop can react to the changes in the ColorPicker component based on the query passed to the setQuery method. You can check a [similar example implementation here](https://github.com/appbaseio/reactivesearch/blob/dev/packages/web/examples/ReactiveComponent/src/index.js).
 
+### Usage with customQuery
+
+Let's suppose we are building a car selling platform which displays cars of particular brand on indiviual page and we want to apply different filters like pricing, type of car, etc based on the brand. In this case ReactiveComponent with `customQuery` comes handy. We can pass the `componentId` in the `react` prop of filters and whenever the query of ReactiveComponent changes, filters are updated accordingly.
+
+Check demo [here](https://codesandbox.io/s/3ylrrr0r5q).
+
+
 ### Props
 
 #### Child Component
@@ -196,9 +203,14 @@ Now, the components which will have `myColorPicker` present in their `react` pro
 
 ### Examples
 
-<br />
 
+**ReactiveComponent with defaultQuery**
+<br/>
 <iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/dev/packages/web/examples/ReactiveComponent" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+
+**ReactiveComponent with customQuery**
+<br/>
+<iframe src="https://codesandbox.io/embed/3ylrrr0r5q" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 See storybook for ReactiveComponent on playground.
 
