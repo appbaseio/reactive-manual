@@ -80,7 +80,13 @@ While `RangeSlider` only requires the above props to be used, it comes with many
 - **sliderOptions** `Object` [optional]
     
     use to pass props directly to the slider component `RangeSlider` uses. Read more about it [here](https://github.com/NightCatSama/vue-slider-component)
-  
+
+
+## Demo
+<br/>
+<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/next/packages/vue/examples/range-slider" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+
+
 ## Styles
 
 `RangeSlider` component supports `innerClass` prop with the following keys:    
