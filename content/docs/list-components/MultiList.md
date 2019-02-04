@@ -93,10 +93,10 @@ Example uses:
     show as filter when a value is selected in a global selected filters view. Defaults to `true`.
 - **filterLabel** `String` [optional]  
     An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
-- **renderListItem** `Function|scoped-slot` [optional]  
-    customize the rendered list via a function or scoped-slot which receives the item label and count and expects a JSX or String back. For example:
+- **renderItem** `Function|scoped-slot` [optional]  
+    customize the rendered list via a function or scoped-slot which receives the item label, count and isChecked & expects a JSX or String back. For example:
 ```js
-renderListItem={({ label, count }) => (
+renderItem={({ label, count }) => (
     <div>
         {label}
         <span style={{ marginLeft: 5, color: 'dodgerblue' }}>
@@ -107,7 +107,7 @@ renderListItem={({ label, count }) => (
 ```
 or
 ```html
-<template slot="renderListItem" scoped-slot="{ label, count }">
+<template slot="renderItem" scoped-slot="{ label, count }">
     <div>
         {{label}}
         <span :style="{ marginLeft: 5, color: 'dodgerblue' }">
@@ -116,7 +116,26 @@ or
     </div>
 </template>
 ```
+- **renderError** `String|Function|scoped-slot` [optional] 
+    can be used to render an error message in case of any error.
 
+```js
+    renderError={error => (
+            <div>
+                Something went wrong!<br/>Error details<br/>{error}
+            </div>
+        )
+    }
+```
+or
+
+```html
+   <template slot="renderError" scoped-slot="error">
+        <div>
+            Something went wrong!<br/>Error details<br/>{{ error }}
+        </div>
+    </template>
+```
 - **showMissing** `Boolean` [optional]  
     defaults to `false`. When set to `true` it also retrives the aggregations for missing fields under the label specified by `missingLabel`.
 - **missingLabel** `String` [optional]  
@@ -164,8 +183,10 @@ Read more about it [here](/theming/class.html).
   :customQuery=`
     function(value, props) {
       return {
-        match: {
-          data_field: "this is a test"
+        query: {
+            match: {
+                data_field: "this is a test"
+            }
         }
       }
     }
@@ -207,6 +228,9 @@ Read more about it [here](/theming/class.html).
     takes **value** and **props** as parameters and **returns** the data query to be applied to the component, as defined in Elasticsearch Query DSL.
     `Note:` customQuery is called on value changes in the **MultiList** component as long as the component is a part of `react` dependency of at least one other component.
     `Note:` When extending with customQuery, the `queryFormat` prop has no affect.
+- **defaultQuery** `Function`
+    takes **value** and **props** as parameters and **returns** the data query to be applied to the source component, as defined in Elasticsearch Query DSL.
+    `Note:` defaultQuery doesn't get leaked to other components.
 - **beforeValueChange** `Function`  
     is a callback function which accepts component's future **value** as a parameter and **returns** a promise. It is called every time before a component's value changes. The promise, if and when resolved, triggers the execution of the component's query and if rejected, kills the query execution. This method can act as a gatekeeper for query execution, since it only executes the query after the provided promise has been resolved.
 - **react** `Object`  
@@ -228,6 +252,9 @@ Read more about it [here](/theming/class.html).
     
 - **valueChange**  
     is an event which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This event is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when a list item is selected in a "Discounted Price" SingleList.
+
+- **error**
+    gets triggered in case of an error and provides the `error` object, which can be used for debugging or giving feedback to the user if needed.
 
 ## Examples
 

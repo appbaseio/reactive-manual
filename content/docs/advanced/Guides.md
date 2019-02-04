@@ -25,10 +25,10 @@ Most components in ReactiveSearch provides a `beforeValueChange` prop. It is a c
 
 The result components also allow streaming updates if you're using [appbase.io](https://appbase.io/) to host your Elasticsearch cluster. You can enable this with the `stream` prop.
 
-If you're using streaming you can use `onAllData` which receives three parameters `onAllData(results, streamResults, loadMoreData)`. The initial results from the query are received in the first paramter `results`. The `streamResults` parameter receives an array of objects when they’re created, deleted, or updated. If an object is updated, it contains a `_updated` key set to `true`. Similarly, if an object is deleted, it contains a `_deleted` key set to `true`. If an object is created, it contains neither of the two. This provides you with all the necessary information to handle streaming in your app suited to your needs. For example, we can utilize this to continuosly handle streaming updates and merge new data with the existing:
+If you're using streaming you can use `renderAllData` which receives three parameters `renderAllData(results, streamResults, loadMoreData)`. The initial results from the query are received in the first paramter `results`. The `streamResults` parameter receives an array of objects when they’re created, deleted, or updated. If an object is updated, it contains a `_updated` key set to `true`. Similarly, if an object is deleted, it contains a `_deleted` key set to `true`. If an object is created, it contains neither of the two. This provides you with all the necessary information to handle streaming in your app suited to your needs. For example, we can utilize this to continuosly handle streaming updates and merge new data with the existing:
 
 ```js
-onAllData({ results, streamResults }) {
+renderAllData({ results, streamResults }) {
     // generate an array of ids of streamResults
     const streamResultsIds = streamResults.map(data => data._id);
 

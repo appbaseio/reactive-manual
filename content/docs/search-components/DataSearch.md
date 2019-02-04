@@ -120,20 +120,6 @@ Example uses:
     Sets the query format, can be **or** or **and**. Defaults to **or**.
     * **or** returns all the results matching **any** of the search query text's parameters. For example, searching for "bat man" with **or** will return all the results matching either "bat" or "man".
     * On the other hand with **and**, only results matching both "bat" and "man" will be returned. It returns the results matching **all** of the search query text's parameters.
-- **defaultQuery** `Function` [optional]    
-    Lets you append your own query along with the existing query for search. This works only if you're not using `customQuery` since the query is applied to the existing one. The function receives `value` and the current `props` and expects you to return a query to append. For example, you may use this to limit your searches to harry potter books by something like:
-
-```js
-<data-search
-    dataField="original_title"
-    ...
-    :defaultQuery=`(value, props) => ({
-        match: {
-            original_title: 'Potter'
-        }
-    })`
-/>
-```
 
 - **fuzziness** `String or Number` [optional]
     Sets a maximum edit distance on the search parameters, can be **0**, **1**, **2** or **"AUTO"**. Useful for showing the correct results for an incorrect search parameter by taking the fuzziness into account. For example, with a substitution of one character, **fox** can become **box**. Read more about it in the elastic search [docs](https://www.elastic.co/guide/en/elasticsearch/guide/current/fuzziness.html).
@@ -141,6 +127,28 @@ Example uses:
     You can pass a callback using `innerRef` which gets passed to the inner input element as [`ref`](https://reactjs.org/docs/refs-and-the-dom.html).
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
+- **renderNoSuggestion** `String|scoped-slot` [optional]
+    can we used to render a message when there is no suggestions found.
+- **renderError** `String|Function|scoped-slot` [optional] 
+    can be used to render an error message in case of any error.
+
+```js
+    renderError={error => (
+            <div>
+                Something went wrong!<br/>Error details<br/>{error}
+            </div>
+        )
+    }
+```
+or
+
+```html
+   <template slot="renderError" scoped-slot="error">
+        <div>
+            Something went wrong!<br/>Error details<br/>{{ error }}
+        </div>
+    </template>
+```
 
 ## Demo
 
@@ -164,6 +172,39 @@ Read more about it [here](/theming/class.html).
 2. update the underlying DB query with `customQuery`,
 3. connect with external interfaces using `beforeValueChange`, `valueChange` and `queryChange`,
 4. specify how search suggestions should be filtered using `react` prop.
+5. use your own function to render suggestions using `renderSuggestion` prop. It expects an object back for each `suggestion` having keys `label` and `value`. The query is run against the `value` key and `label` is used for rendering the suggestions. `label` can be either `String` or JSX. For example,
+
+```js
+<data-search
+  ...
+  :renderSuggestion="suggestion => ({
+    label: `${suggestion._source.original_title} by ${suggestion._source.authors}`,
+    value: suggestion._source.original_title,
+    source: suggestion._source  // for onValueSelected to work with renderSuggestion
+  })"
+/>
+```
+
+- it's also possible to take control of rendering individual suggestions with `renderSuggestion` prop or the entire suggestions rendering using the `renderAllSuggestions` prop.
+
+`renderAllSuggestions` can be used as a `scoped-slot` or `Function` which receives some parameters which you may use to build your own custom suggestions rendering
+
+```html
+<template 
+    slot="renderAllSuggestions" 
+    scoped-slot="{
+        currentValue,       // the current value in the search
+        isOpen,             // isOpen from downshift
+        getItemProps,       // item props to be passed to suggestions
+        highlightedIndex,   // index value which should be highlighted
+        suggestions,        // unmodified suggestions from Elasticsearch
+        parsedSuggestions,  // suggestions parsed by ReactiveSearch 
+    }">
+    ...
+</template>
+```
+
+The `suggestions` parameter receives all the unparsed suggestions from elasticsearch, however `parsedSuggestions` are also passed which can also be used for suggestions rendering.
 
 ```js
 <data-search
@@ -172,8 +213,10 @@ Read more about it [here](/theming/class.html).
   :customQuery=`
     function(value, props) {
       return {
-        match: {
-          data_field: "this is a test"
+        query: {
+            match: {
+                data_field: "this is a test"
+            }
         }
       }
     }
@@ -236,7 +279,13 @@ Read more about it [here](/theming/class.html).
     is an event which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This event is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when a list item is selected in a "Discounted Price" SingleList.
 - **valueSelected**
     is called when a search is performed either by pressing **enter** key or the input is blurred.
+
+- **suggestions** 
+   You can use this event to listen for the changes in suggestions.The function receives `suggestions` list.
  
+- **error**
+    gets triggered in case of an error and provides the `error` object, which can be used for debugging or giving feedback to the user if needed.
+
  The following events to the underlying `input` element:
 - **blur**
 - **focus**
