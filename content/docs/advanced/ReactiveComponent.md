@@ -141,7 +141,9 @@ Now, the components which will have `myColorPicker` present in their `react` pro
 
 ### Usage with customQuery
 
-Let's suppose we are building a car selling platform which displays cars of particular brand on indiviual page and we want to apply different filters like pricing, type of car, etc based on the brand. In this case ReactiveComponent with `customQuery` comes handy. We can pass the `componentId` in the `react` prop of filters and whenever the query of ReactiveComponent changes, filters are updated accordingly.
+Let's suppose - we are building an e-commerce store for cars which displays a list of cars of a particular brand on their separate page as `example.com/cars/nissan`. Now, we want all the filters on that page (like pricing, type of car, model, year, etc) to only show the data relevant to the given brand (i.e. `nissan`). In this case, `ReactiveComponent` can be used with `customQuery` to achieve the desired behavior easily.
+
+We can then use the given ReactiveComponent to be watched by all the filters (via `react` prop) to avail the desired brand based filtering for all the filters.
 
 Check demo [here](https://codesandbox.io/s/3ylrrr0r5q).
 
