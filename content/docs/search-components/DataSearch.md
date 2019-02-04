@@ -62,6 +62,8 @@ Example uses:
     unique identifier of the component, can be referenced in other components' `react` prop.
 - **dataField** `String or Array`  
     database field(s) to be connected to the component's UI view. DataSearch accepts an Array in addition to String, useful for applying search across multiple fields.
+- **nestedField** `String` [optional]  
+    use to set the `nested`  mapping field that allows arrays of objects to be indexed in a way that they can be queried independently of each other. Applicable only when dataField is a part of `nested` type.
 - **title** `String or JSX` [optional]  
     set the title of the component to be shown in the UI.
 - **defaultSelected** `string` [optional]  

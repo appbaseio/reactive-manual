@@ -69,6 +69,8 @@ Example uses:
     unique identifier of the component, can be referenced in other components' `react` prop.
 - **dataField** `String`  
     data field to be connected to the component's UI view. This field is used for doing an aggregation and returns the result. We're using a `.raw` multifield here. You can use a field of type `keyword` or `not_analyzed` depending on your Elasticsearch cluster.
+- **nestedField** `String` [optional]  
+    use to set the `nested`  mapping field that allows arrays of objects to be indexed in a way that they can be queried independently of each other. Applicable only when dataField is a part of `nested` type.
 - **title** `String or JSX` [optional]  
     title of the component to be shown in the UI. Defaults to no title being shown.
 - **size** `Number` [optional]  

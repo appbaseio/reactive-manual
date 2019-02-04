@@ -67,6 +67,8 @@ While `RangeSlider` only requires the above props to be used, it comes with many
     unique identifier of the component, can be referenced in other components' `react` prop.
 - **dataField** `String`  
     DB data field to be mapped with the component's UI view. The selected range creates a database query on this field.
+- **nestedField** `String` [optional]  
+    use to set the `nested`  mapping field that allows arrays of objects to be indexed in a way that they can be queried independently of each other. Applicable only when dataField is a part of `nested` type.
 - **range** `Object`
     an object with `start` and `end` keys and corresponding numeric values denoting the minimum and maximum possible slider values.
 - **title** `String or JSX` [optional]  
