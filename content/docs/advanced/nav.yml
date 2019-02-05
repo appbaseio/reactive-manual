@@ -68,9 +68,13 @@
       href: /advanced/reactivecomponent.html
       forceInternal: true
       subitems:
-        - id: usage
-          title: Usage
-          href: /advanced/reactivecomponent.html#usage
+        - id: usage-with-defaultquery
+          title: Usage with defaultQuery
+          href: /advanced/reactivecomponent.html#usage-with-defaultquery
+          forceInternal: true
+        - id: usage-with-customquery
+          title: Usage with customQuery
+          href: /advanced/reactivecomponent.html#usage-with-customquery
           forceInternal: true
         - id: props
           title: Props

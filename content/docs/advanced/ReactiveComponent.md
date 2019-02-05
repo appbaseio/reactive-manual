@@ -21,7 +21,7 @@ With `ReactiveComponent`, you can convert any React Component into a Reactivesea
 >
 > `ReactiveComponent` is a wrapper component that allows you to connect custom component(s) (passed as children) with the Reactivesearch ecosystem.
 
-### Usage
+### Usage with defaultQuery
 
 For example, let's suppose that we are building an e-commerce store where we have a react component called `ColorPicker` which renders the `colors` passed to it as tiles, allowing us to filter the products by their colors.
 
@@ -139,6 +139,15 @@ class ColorPickerWrapper extends React.Component {
 
 Now, the components which will have `myColorPicker` present in their `react` prop can react to the changes in the ColorPicker component based on the query passed to the setQuery method. You can check a [similar example implementation here](https://github.com/appbaseio/reactivesearch/blob/dev/packages/web/examples/ReactiveComponent/src/index.js).
 
+### Usage with customQuery
+
+Let's suppose - we are building an e-commerce store for cars which displays a list of cars of a particular brand on their separate page as `example.com/cars/nissan`. Now, we want all the filters on that page (like pricing, type of car, model, year, etc) to only show the data relevant to the given brand (i.e. `nissan`). In this case, `ReactiveComponent` can be used with `customQuery` to achieve the desired behavior easily.
+
+We can then use the given ReactiveComponent to be watched by all the filters (via `react` prop) to avail the desired brand based filtering for all the filters.
+
+Check demo [here](https://codesandbox.io/s/3ylrrr0r5q).
+
+
 ### Props
 
 #### Child Component
@@ -196,9 +205,14 @@ Now, the components which will have `myColorPicker` present in their `react` pro
 
 ### Examples
 
-<br />
 
+**ReactiveComponent with defaultQuery**
+<br/>
 <iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/dev/packages/web/examples/ReactiveComponent" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+
+**ReactiveComponent with customQuery**
+<br/>
+<iframe src="https://codesandbox.io/embed/3ylrrr0r5q" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 See storybook for ReactiveComponent on playground.
 
