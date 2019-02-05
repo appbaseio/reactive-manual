@@ -174,3 +174,61 @@
           title: Examples
           href: /list-components/multidatalist.html#examples
           forceInternal: true
+    - id: togglebutton
+      title: ToggleButton
+      href: /list-components/togglebutton.html
+      forceInternal: true
+      subitems:
+        - id: usage
+          title: Usage
+          href: /list-components/togglebutton.html#usage
+          forceInternal: true
+        - id: props
+          title: Props
+          href: /list-components/togglebutton.html#props
+          forceInternal: true
+        - id: demo
+          title: Demo
+          href: /list-components/togglebutton.html#demo
+          forceInternal: true
+        - id: styles
+          title: Styles
+          href: /list-components/togglebutton.html#styles
+          forceInternal: true
+        - id: extending
+          title: Extending
+          href: /list-components/togglebutton.html#extending
+          forceInternal: true
+        - id: examples
+          title: Examples
+          href: /list-components/togglebutton.html#examples
+          forceInternal: true
+    - id: tagcloud
+      title: TagCloud
+      href: /list-components/tagcloud.html
+      forceInternal: true
+      subitems:
+        - id: usage
+          title: Usage
+          href: /list-components/tagcloud.html#usage
+          forceInternal: true
+        - id: props
+          title: Props
+          href: /list-components/tagcloud.html#props
+          forceInternal: true
+        - id: demo
+          title: Demo
+          href: /list-components/tagcloud.html#demo
+          forceInternal: true
+        - id: styles
+          title: Styles
+          href: /list-components/tagcloud.html#styles
+          forceInternal: true
+        - id: extending
+          title: Extending
+          href: /list-components/tagcloud.html#extending
+          forceInternal: true
+        - id: examples
+          title: Examples
+          href: /list-components/tagcloud.html#examples
+          forceInternal: true

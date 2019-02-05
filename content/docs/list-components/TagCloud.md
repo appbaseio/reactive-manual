@@ -3,14 +3,14 @@ id: tagcloud
 title: "TagCloud"
 layout: docs
 sectionid: docs
-permalink: base-components/tagcloud.html
-prev: base-components/togglebutton.html
+permalink: list-components/tagcloud.html
+prev: /list-components/togglebutton.html
 prevTitle: "ToggleButton"
-next: base-components/datacontroller.html
-nextTitle: "DataController"
+next: /range-components/singlerange.html
+nextTitle: "Range Components: SingleRange"
 redirect_from:
     - 'search-components/tagcloud.html'
-    - 'base-components/tagcloud'
+    - 'list-components/tagcloud'
     - 'tagcloud'
 ---
 

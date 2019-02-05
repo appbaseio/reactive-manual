@@ -3,14 +3,14 @@ id: togglebutton
 title: "ToggleButton"
 layout: docs
 sectionid: docs
-permalink: base-components/togglebutton.html
-prev: base-components/textfield.html
-prevTitle: "TextField"
-next: base-components/tagcloud.html
+permalink: list-components/togglebutton.html
+prev: /list-components/multidatalist.html
+prevTitle: "MultiDataList"
+next: /list-components/tagcloud.html
 nextTitle: "TagCloud"
 redirect_from:
     - 'basic-components/togglebutton.html'
-    - 'base-components/togglebutton'
+    - 'list-components/togglebutton'
     - 'togglebutton'
 ---
 

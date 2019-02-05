@@ -6,8 +6,8 @@ sectionid: docs
 permalink: list-components/multidatalist.html
 prev: list-components/singledatalist.html
 prevTitle: "SingleDataList"
-next: range-components/singlerange.html
-nextTitle: "Range Components: SingleRange"
+next: /list-components/togglebutton.html
+nextTitle: "ToggleButton"
 redirect_from:
     - "basic-components/multidatalist.html"
     - "list-components/multidatalist"
