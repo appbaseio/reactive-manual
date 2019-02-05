@@ -108,6 +108,13 @@
 /reactive-manual/v3/search-components/resultlist.html  /reactive-manual/v3/result-components/resultlist.html  302
 /reactive-manual/v3/result-components/resultlist  /reactive-manual/v3/result-components/resultlist.html  302
 /reactive-manual/v3/resultlist  /reactive-manual/v3/result-components/resultlist.html  302
+/reactive-manual/v3/search-components  /reactive-manual/v3/search-components/categorysearch.html  302
+/reactive-manual/v3/reactive-manual/search-components  /reactive-manual/v3/search-components/categorysearch.html  302
+/reactive-manual/v3/search-components/categorysearch  /reactive-manual/v3/search-components/categorysearch.html  302
+/reactive-manual/v3/categorysearch  /reactive-manual/v3/search-components/categorysearch.html  302
+/reactive-manual/v3/basic-components/datasearch.html  /reactive-manual/v3/search-components/datasearch.html  302
+/reactive-manual/v3/search-components/datasearch  /reactive-manual/v3/search-components/datasearch.html  302
+/reactive-manual/v3/datasearch  /reactive-manual/v3/search-components/datasearch.html  302
 /reactive-manual/v3/theming/class  /reactive-manual/v3/theming/class.html  302
 /reactive-manual/v3/class  /reactive-manual/v3/theming/class.html  302
 /reactive-manual/v3/advanced/styleguide.html  /reactive-manual/v3/theming/style.html  302
@@ -119,13 +126,6 @@
 /reactive-manual/v3/theming/  /reactive-manual/v3/theming/themes.html  302
 /reactive-manual/v3/theming  /reactive-manual/v3/theming/themes.html  302
 /reactive-manual/v3/themes  /reactive-manual/v3/theming/themes.html  302
-/reactive-manual/v3/basic-components/datasearch.html  /reactive-manual/v3/search-components/datasearch.html  302
-/reactive-manual/v3/search-components/datasearch  /reactive-manual/v3/search-components/datasearch.html  302
-/reactive-manual/v3/datasearch  /reactive-manual/v3/search-components/datasearch.html  302
-/reactive-manual/v3/search-components  /reactive-manual/v3/search-components/categorysearch.html  302
-/reactive-manual/v3/reactive-manual/search-components  /reactive-manual/v3/search-components/categorysearch.html  302
-/reactive-manual/v3/search-components/categorysearch  /reactive-manual/v3/search-components/categorysearch.html  302
-/reactive-manual/v3/categorysearch  /reactive-manual/v3/search-components/categorysearch.html  302
 /reactive-manual/v3/basic-components/singlerange.html  /reactive-manual/v3/range-components/singlerange.html  302
 /reactive-manual/v3/range-components/singlerange  /reactive-manual/v3/range-components/singlerange.html  302
 /reactive-manual/v3/singlerange  /reactive-manual/v3/range-components/singlerange.html  302
