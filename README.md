@@ -1,6 +1,6 @@
 # Reactive Manual
 
-Data-driven components for building Maps and Search UIs
+Docs for Reactivesearch - Data-driven components for building Maps and Search UIs
 
 Reactive Manual contains the docs for all the Reactive components from [appbase.io](https://appbase.io) including **ReactiveSearch** and **ReactiveMaps**.
 
