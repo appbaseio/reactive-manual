@@ -79,6 +79,19 @@ The components can also be used with `Numeric` datatype fields.
 >
 > Dropdown lists take up less space. If you have many filters to display or a smaller display area (like on phones), it is better to use dropdown lists.
 
+
+<p>
+<img src="https://imgur.com/Ocb9Sir.png" style="float:left">
+
+**[ToggleButton](/list-components/togglebutton.html)** component applies on a String or Text datatype field where you want users to select a choice (or choices) amongst a small number of total choices.
+</p>
+
+<p>
+<img src="https://imgur.com/lC5KfOK.png" style="float:left">
+
+**[TagCloud](/list-components/tagcloud.html)** is useful for showing a weighted tag cloud of items based on the frequency of occurrences.
+</p>
+
 ## 2. Range Components
 
 The following are all the possible UI components for a numeric datatype field in your appbase.io app. These apply a **range** database query on the selected item(s).
@@ -274,30 +287,6 @@ Map components are useful for displaying geospatial data.
 <img src="https://imgur.com/PgOi2QY.png" style="float:left">
 
 **[TextField](/base-components/textfield.html)** displays a text input field. It applies a **match** database query on the entered text.
-</p>
-
-### ToggleButton
-
-<p>
-<img src="https://imgur.com/Ocb9Sir.png" style="float:left">
-
-**[ToggleButton](/base-components/togglebutton.html)** component applies on a String or Text datatype field where you want users to select a choice (or choices) amongst a small number of total choices.
-</p>
-
-### TagCloud
-
-<p>
-<img src="https://imgur.com/lC5KfOK.png" style="float:left">
-
-**[TagCloud](/base-components/tagcloud.html)** is useful for showing a weighted tag cloud of items based on the frequency of occurrences.
-</p>
-
-### DataController
-
-<p>
-<img src="https://imgur.com/qdxEIAz.png" style="float:left">
-
-**[DataController](/base-components/datacontroller.html)** is a UI optional component for adding additional queries, e.g. a query based on current URL page path, a default query, a query based on user's global profile preferences. At the same time, it can also have a UI - this is a catchall component to display something that doesn't fit within other components.
 </p>
 
 ### SelectedFilters

@@ -4,8 +4,8 @@ title: "TextField"
 layout: docs
 sectionid: docs
 permalink: base-components/textfield.html
-next: base-components/togglebutton.html
-nextTitle: "ToggleButton"
+next: /base-components/selectedfilters.html
+nextTitle: "SelectedFilters"
 redirect_from:
     - 'docs'
     - 'basic-components'

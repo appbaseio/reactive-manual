@@ -158,13 +158,6 @@ this.defaultQuery=function() {
 
 When you pass a function to the `defaultQuery` prop, it receives two parameters, `value` (current value of the component) and `props` (current props of the component). Using these parameters, you can construct a query as per your needs.
 
-
-### Data Controller Component
-
-Reactive Maps UI library comes with a specific component that is designed to be truly customizable, [**DataController**](/basic-components/datacontroller.html). It's a UI optional component that requires defining the `customQuery` prop.
-
-For example, let's say you want to apply a query filter to represent an end-user's global preferences within the UI without adding a widget. Data Controller allows you to define a query without needing a UI widget.
-
 ### Not familiar to Elasticsearch?
 
 You need to write a custom query but haven't worked with Elasticsearch. Okay, as a super quick primer, Elasticsearch is a data store search engine with a NoSQL JSON data model.

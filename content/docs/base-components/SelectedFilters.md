@@ -4,9 +4,9 @@ title: "SelectedFilters"
 layout: docs
 sectionid: docs
 permalink: base-components/selectedfilters.html
-prev: basic-components/datacontroller.html
-prevTitle: "DataController"
-next: list-components/singlelist.html
+prev: /basic-components/textfield.html
+prevTitle: "TextField"
+next: /list-components/singlelist.html
 nextTitle: "List Components: SingleList"
 redirect_from:
     - 'basic-components/selectedfilters.html'
