@@ -58,6 +58,10 @@ This is the first component you will need to add when using `ReactiveSearch`.
     allows over-writing of default styles by providing the respective key/values. You can read more about its usage [here](/theming/themes.html)
 - **themePreset** `String` [optional]       
     allows over-writing of default styles by providing a preset value. Supported values are `light` (default) and `dark`. You can read more about its usage [here](/theming/themes.html)
+- **getSearchParams** `Function` [optional]  
+    Enables you to customise the evaluation of query-params-string from the url (or) any other source. If this function is not set, the library will use `window.location.search` as the search query-params-string for parsing selected-values. This can come handy if the URL is using hash values.
+- **setSearchParams** `Function` [optional]  
+    Enables you to customise setting of the query params string in the url by providing the updated query-params-string as the function parameter. If this function is not set, the library will set the `window.history` via `pushState` method.
 - **transformRequest** `Function` [optional]  
     Enables transformation of network request before execution. This function will give you the the request object as the param and expect an updated request in return, for execution. Note that this is an experimental API and will likely change in the future.
 - **graphQLUrl** `String` [optional]
