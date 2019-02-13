@@ -1,34 +1,5 @@
 - title: Base Components
   items:
-    - id: textfield
-      title: TextField
-      href: /base-components/textfield.html
-      forceInternal: true
-      subitems:
-        - id: usage
-          title: Usage
-          href: /base-components/textfield.html#usage
-          forceInternal: true
-        - id: props
-          title: Props
-          href: /base-components/textfield.html#props
-          forceInternal: true
-        - id: demo
-          title: Demo
-          href: /base-components/textfield.html#demo
-          forceInternal: true
-        - id: styles
-          title: Styles
-          href: /base-components/textfield.html#styles
-          forceInternal: true
-        - id: extending
-          title: Extending
-          href: /base-components/textfield.html#extending
-          forceInternal: true
-        - id: examples
-          title: Examples
-          href: /base-components/textfield.html#examples
-          forceInternal: true
     - id: selectedfilters
       title: SelectedFilters
       href: /base-components/selectedfilters.html

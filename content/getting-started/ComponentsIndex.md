@@ -193,9 +193,6 @@ The following are UI components that represent searchbar UIs. The datatype for t
 **[DataSearch](/search-components/datasearch.html)** displays a search input box. It supports autosuggestions, highlighting of results and querying against more than one fields via props.
 </p>
 
-> <i class="fa fa-info-circle"></i> Note
->
-> If you are looking to apply a query on a user input, **DataSearch** is preferable over **TextField**.
 
 ### CategorySearch
 
@@ -280,14 +277,6 @@ Map components are useful for displaying geospatial data.
 ## 6. Base Components
 
 `Base components` are useful primitive components that don’t belong to any of the above categories.
-
-### TextField
-
-<p>
-<img src="https://imgur.com/PgOi2QY.png" style="float:left">
-
-**[TextField](/base-components/textfield.html)** displays a text input field. It applies a **match** database query on the entered text.
-</p>
 
 ### SelectedFilters
 

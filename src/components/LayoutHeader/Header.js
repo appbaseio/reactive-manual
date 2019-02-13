@@ -175,7 +175,7 @@ class Header extends Component {
               <HeaderLink
                 isActive={location.pathname.includes('/base-components/')}
                 title="Components"
-                to="/base-components/textfield.html"
+                to="/base-components/selectedfilters.html"
               />
               <HeaderLink
                 isActive={location.pathname.includes('/theming/')}
