@@ -66,7 +66,7 @@ Example uses:
 - **dataField** `String`  
     data field to be connected to the component's UI view.
 - **data** `Object Array`  
-    collection of UI `labels` with associated `value` to be matched against the database field.
+    collection of UI `labels` with associated `value` to be matched against the database field. `Note`: label should contain `string` value.
 - **title** `String` or `JSX` [optional]  
     title of the component to be shown in the UI.
 - **defaultSelected** `String` or `Array` [optional]  
