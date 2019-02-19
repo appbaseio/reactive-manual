@@ -54,7 +54,7 @@ Example uses:
   loader="Loading Results.."
   showResultStats={true}
   renderData={(res) => <div>{res.title}</div>}
-  onResultStats={
+  renderResultStats={
       function(stats){
           return (
               `Showing ${stats.displayedResults} of total ${stats.totalResults} in ${stats.time} ms`
