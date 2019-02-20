@@ -22,7 +22,7 @@
       href: /advanced/customquery.html
       forceInternal: true
       subitems:
-        - id: when-aware-ui-components
+        - id: data-aware-ui-components
           title: Data Aware UI components
           href: /advanced/customquery.html#data-aware-ui-components
           forceInternal: true
