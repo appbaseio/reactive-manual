@@ -21,16 +21,16 @@ The `innerClass` prop accepts an object with keys as defined in the **Styles** s
 
 ## Examples
 
-Here's an example of how to use `innerClass` with a [TextField](base-components/textfield.html) component:
+Here's an example of how to use `innerClass` with a [DataSearch](search-components/DataSearch.html) component:
 
-![TextField annotated image](https://imgur.com/f20AvrZ.png)
+![DataSearch annotated image](https://imgur.com/f20AvrZ.png)
 
 ```js
-<TextField
+<DataSearch
     ...
     innerClass={{
-        title: 'text-title',
-        input: 'text-input'
+        title: 'search-title',
+        input: 'search-input'
     }}
 />
 ```
@@ -38,12 +38,12 @@ Here's an example of how to use `innerClass` with a [TextField](base-components/
 Then refer to them in your stylesheet.
 
 ```css
-.text-title {
-    font-size: 2rem;
+.search-title {
+    color: red;
 }
 
-.text-input {
-    border: none;
+.search-input {
+    border: 1px solid red;
 }
 ```
 
@@ -54,24 +54,24 @@ While writing styles using `innerClass`, it's important to keep [CSS specificity
 In order for your classes to overwrite the default classes of ReactiveSearch components we recommend combining the `innerClass` classes with a container class. This will also give the correct results without depending on the order of loading of the stylesheets in production. For example:
 
 ```js
-<TextField
+<DataSearch
     ...
     innerClass={{
-        title: 'text-title',
-        input: 'text-input'
+        title: 'search-title',
+        input: 'search-input'
     }}
-    className="text-field"
+    className="search-field"
 />
 ```
 
 Then refer to them in your stylesheet with the container class as:
 
 ```css
-.text-field .text-title {
+.search-field .search-title {
     font-size: 2rem;
 }
 
-.text-field .text-input {
+.search-field .search-input {
     border: none;
 }
 ```

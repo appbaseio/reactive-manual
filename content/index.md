@@ -8,7 +8,7 @@ id: home
   <div class="marketing-row">
     <div class="marketing-col">
       <h3>ReactiveSearch UI Components</h3>
-      <p><b>ReactiveSearch</b> provides 20+ pre-built components for building amazing search UIs with Elasticsearch. Try the <a href="/getting-started/reactivesearch.html">quick start</a> or <a href="/base-components/textfield.html">browse components</a>.</p>
+      <p><b>ReactiveSearch</b> provides 20+ pre-built components for building amazing search UIs with Elasticsearch. Try the <a href="/getting-started/reactivesearch.html">quick start</a> or <a href="/base-components/selectedfilters.html">browse components</a>.</p>
     </div>
     <div class="marketing-col">
       <h3>Bring your own components</h3>
