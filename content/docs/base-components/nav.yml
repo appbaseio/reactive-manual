@@ -34,6 +34,10 @@
           title: Props
           href: /base-components/togglebutton.html#props
           forceInternal: true
+        - id: demo
+          title: Demo
+          href: /base-components/togglebutton.html#demo
+          forceInternal: true
         - id: styles
           title: Styles
           href: /base-components/togglebutton.html#styles

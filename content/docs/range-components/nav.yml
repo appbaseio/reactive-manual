@@ -46,6 +46,10 @@
           title: Props
           href: /range-components/multirange.html#props
           forceInternal: true
+        - id: demo
+          title: Demo
+          href: /range-components/multirange.html#demo
+          forceInternal: true
         - id: styles
           title: Styles
           href: /range-components/multirange.html#styles
@@ -71,6 +75,10 @@
           title: Props
           href: /range-components/rangeslider.html#props
           forceInternal: true
+        - id: demo
+          title: Demo
+          href: /range-components/rangeslider.html#demo
+          forceInternal: true
         - id: styles
           title: Styles
           href: /range-components/rangeslider.html#styles
@@ -95,6 +103,10 @@
         - id: props
           title: Props
           href: /range-components/dynamicrangeslider.html#props
+          forceInternal: true
+        - id: demo
+          title: Demo
+          href: /range-components/dynamicrangeslider.html#demo
           forceInternal: true
         - id: styles
           title: Styles

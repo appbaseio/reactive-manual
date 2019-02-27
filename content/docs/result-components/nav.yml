@@ -46,6 +46,10 @@
           title: Props
           href: /result-components/resultlist.html#props
           forceInternal: true
+        - id: demo
+          title: Demo
+          href: /result-components/resultlist.html#demo
+          forceInternal: true
         - id: styles
           title: Styles
           href: /result-components/resultlist.html#styles
@@ -70,6 +74,10 @@
         - id: props
           title: Props
           href: /result-components/resultcard.html#props
+          forceInternal: true
+        - id: demo
+          title: Demo
+          href: /result-components/resultcard.html#demo
           forceInternal: true
         - id: styles
           title: Styles

@@ -80,6 +80,12 @@ While `DynamicRangeSlider` only requires the above props to be used, it comes wi
     show the selected item as a filter in the selected filters view. Defaults to `true`.
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
+
+## Demo
+
+<br/>
+<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/next/packages/vue/examples/dynamic-range-slider" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+
   
 ## Styles
 
