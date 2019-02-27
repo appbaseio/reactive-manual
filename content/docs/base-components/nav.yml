@@ -21,32 +21,3 @@
           title: Extending
           href: /base-components/selectedfilters.html#extending
           forceInternal: true
-    - id: togglebutton
-      title: ToggleButton
-      href: /base-components/togglebutton.html
-      forceInternal: true
-      subitems:
-        - id: usage
-          title: Usage
-          href: /base-components/togglebutton.html#usage
-          forceInternal: true
-        - id: props
-          title: Props
-          href: /base-components/togglebutton.html#props
-          forceInternal: true
-        - id: demo
-          title: Demo
-          href: /base-components/togglebutton.html#demo
-          forceInternal: true
-        - id: styles
-          title: Styles
-          href: /base-components/togglebutton.html#styles
-          forceInternal: true
-        - id: extending
-          title: Extending
-          href: /base-components/togglebutton.html#extending
-          forceInternal: true
-        - id: examples
-          title: Examples
-          href: /base-components/togglebutton.html#examples
-          forceInternal: true
