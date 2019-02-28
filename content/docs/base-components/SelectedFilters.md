@@ -43,6 +43,8 @@ Example uses:
     When set to `true`, displays an additional button to clear all the filters
 - **clearAllLabel** `string` [optional] (defaults to `'Clear All'`)     
     Sets the label for the clear all button. 
+- **onChange** `function` [optional] (defaults to `'Clear All'`)     
+    Provides access to the current selected values. This enables you to retrieve the selected filters and current search state in a convenient way.
 
 Most ReactiveSearch filter components have a prop `showFilter` (defaults to `true`) which can be used to control whether the component's selected state appears in the SelectedFilters component. There is also a `filterLabel` prop which controls how that component is displayed.
 
