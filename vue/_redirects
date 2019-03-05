@@ -21,9 +21,6 @@
 /reactive-manual/vue/basic-components/selectedfilters.html  /reactive-manual/vue/base-components/selectedfilters.html  302
 /reactive-manual/vue/base-components/selectedfilters  /reactive-manual/vue/base-components/selectedfilters.html  302
 /reactive-manual/vue/selectedfilters  /reactive-manual/vue/base-components/selectedfilters.html  302
-/reactive-manual/vue/basic-components/togglebutton.html  /reactive-manual/vue/base-components/togglebutton.html  302
-/reactive-manual/vue/base-components/togglebutton  /reactive-manual/vue/base-components/togglebutton.html  302
-/reactive-manual/vue/togglebutton  /reactive-manual/vue/base-components/togglebutton.html  302
 /reactive-manual/vue/basic-components/multidropdownlist.html  /reactive-manual/vue/list-components/multidropdownlist.html  302
 /reactive-manual/vue/list-components/multidropdownlist  /reactive-manual/vue/list-components/multidropdownlist.html  302
 /reactive-manual/vue/multidropdownlist  /reactive-manual/vue/list-components/multidropdownlist.html  302
@@ -36,6 +33,8 @@
 /reactive-manual/vue/basic-components/singlelist.html  /reactive-manual/vue/list-components/singlelist.html  302
 /reactive-manual/vue/list-components/singlelist  /reactive-manual/vue/list-components/singlelist.html  302
 /reactive-manual/vue/singlelist  /reactive-manual/vue/list-components/singlelist.html  302
+/reactive-manual/vue/list-components/togglebutton.html  /reactive-manual/vue/list-components/togglebutton.html  302
+/reactive-manual/vue/togglebutton  /reactive-manual/vue/list-components/togglebutton.html  302
 /reactive-manual/vue/basic-components/dynamicrangeslider.html  /reactive-manual/vue/range-components/dynamicrangeslider.html  302
 /reactive-manual/vue/range-components/dynamicrangeslider  /reactive-manual/vue/range-components/dynamicrangeslider.html  302
 /reactive-manual/vue/dynamicrangeslider  /reactive-manual/vue/range-components/dynamicrangeslider.html  302
