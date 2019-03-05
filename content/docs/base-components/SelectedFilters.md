@@ -4,8 +4,8 @@ title: "SelectedFilters"
 layout: docs
 sectionid: docs
 permalink: base-components/selectedfilters.html
-next: base-components/togglebutton.html
-nextTitle: "Toggle Button"
+next: /list-components/singlelist.html
+nextTitle: "List Components: SingleList"
 redirect_from:
     - 'basic-components/selectedfilters.html'
     - 'base-components/selectedfilters'

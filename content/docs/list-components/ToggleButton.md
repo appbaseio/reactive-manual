@@ -3,14 +3,13 @@ id: togglebutton
 title: "ToggleButton"
 layout: docs
 sectionid: docs
-permalink: base-components/togglebutton.html
-prev: base-components/selectedfilters.html
-prevTitle: "SelectedFilters"
-next: list-components/singlelist.html
-nextTitle: "List Components: SingleList"
+permalink: list-components/togglebutton.html
+prev: /list-components/multidropdownlist.html
+prevTitle: "MultiDropdownList"
+next: /range-components/singlerange.html
+nextTitle: "Range Components: SingleRange"
 redirect_from:
-    - 'basic-components/togglebutton.html'
-    - 'base-components/togglebutton'
+    - 'list-components/togglebutton.html'
     - 'togglebutton'
 ---
 

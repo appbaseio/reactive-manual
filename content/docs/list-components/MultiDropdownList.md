@@ -6,6 +6,8 @@ sectionid: docs
 permalink: list-components/multidropdownlist.html
 prev: list-components/singledropdownlist.html
 prevTitle: "SingleDropdownList"
+next: /list-components/togglebutton.html
+nextTitle: "ToggleButton"
 redirect_from:
     - "basic-components/multidropdownlist.html"
     - "list-components/multidropdownlist"
