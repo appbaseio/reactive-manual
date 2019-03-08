@@ -76,6 +76,8 @@ Example uses:
     controls the current value of the component. It selects the label (on mount and on update). Use this prop in conjunction with `onChange` function.
 - **multiSelect** `Boolean` [optional]  
     whether multiple buttons can be selected, defaults to **true**. When set to **false**, only one button can be selected.
+- **nestedField** `String` [optional]  
+    use to set the `nested`  mapping field that allows arrays of objects to be indexed in a way that they can be queried independently of each other. Applicable only when dataField is a part of `nested` type.
 - **showFilter** `Boolean` [optional]  
     show as filter when a value is selected in a global selected filters view. Defaults to `true`.
 - **filterLabel** `String` [optional]  
