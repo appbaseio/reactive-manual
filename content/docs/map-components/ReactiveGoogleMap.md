@@ -53,7 +53,7 @@ Example uses:
     }}
 
     // map events
-    onData={this.onData}
+    renderData={this.renderData}
 
     // less useful props
     autoCenter={true}
@@ -122,22 +122,22 @@ Example uses:
     CSS class to be injected on the component container.
 - **style** `Object`  
     CSS style object to be applied to the `ReactiveGoogleMap` component.
-- **onData** `function`  
+- **renderData** `function`  
     event fired when one or more markers are indexed, updated or removed from the map. It takes an object with the following formats (`label`, `icon`, `custom`):
 
 ```js
 // To render the given text in the marker 
-onData={result => ({
+renderData={result => ({
     label: result.title,
 })}
 
 // To render a marker image 
-onData={result => ({
+renderData={result => ({
     icon: 'https://i.imgur.com/NHR2tYL.png',
 })}
 
 // To render a custom markup (as label) in the marker position 
-onData={result => ({
+renderData={result => ({
     custom: (<div>{result.mag}</div>),
 })}
 ```
