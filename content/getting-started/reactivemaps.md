@@ -139,7 +139,7 @@ Next, we will look at the [**ReactiveGoogleMap**](/map-components/reactivegoogle
 	react={{
 		"and": "places"
 	}}
-	onData={(result) => ({
+	renderData={(result) => ({
 		label: result.mag
 	})}
 />
@@ -149,10 +149,10 @@ The `react` prop here specifies that it should construct a query based on the cu
 
 ![](https://i.imgur.com/QwFq2CP.png)
 
-This is how the map component's UI would look like. Notice how it is rendering the magnitude values of the earthquake in place of the marker pins. We achieved this via `onData` prop in the ReactiveGoogleMap component:
+This is how the map component's UI would look like. Notice how it is rendering the magnitude values of the earthquake in place of the marker pins. We achieved this via `renderData` prop in the ReactiveGoogleMap component:
 
 ```js
-onData={(result) => ({
+renderData={(result) => ({
 	label: result.mag
 })}
 ```
@@ -200,7 +200,7 @@ class App extends Component {
 						react={{
 							and: "places"
 						}}
-						onData={result => ({
+						renderData={result => ({
 							label: result.mag
 						})}
 					/>
