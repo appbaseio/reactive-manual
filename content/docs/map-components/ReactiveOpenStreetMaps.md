@@ -126,6 +126,25 @@ renderData={result => ({
 })}
 ```
 
+```
+- **renderAllData** `function`  
+    use to display results and map component together. Usage:
+```js
+    renderAllData={(hits, streamHits, loadMore, renderMap, renderPagination) => {
+        // hits are the results returned from query.
+        // streamHits are the results which are returned only  when stream prop is true.
+        // loadMore is used to load more results.
+        // renderMap is the function which is used to render Map.
+        // renderPagination is the function which is used to render Pagination like in ReactiveList.
+        return(
+            <>
+                {hits.map(hit => JSON.stringify(hit))}
+                {renderMap()}
+            </>
+        )
+    }
+```
+
 
 ## Demo
 
