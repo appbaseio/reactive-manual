@@ -146,6 +146,102 @@ Example uses:
     You can pass a callback function to listen for the changes in suggestions.The function receives `suggestions` list.
 - **onError** `Function` [optional]  
     gets triggered in case of an error and provides the `error` object, which can be used for debugging or giving feedback to the user if needed.
+- **render** `Function` [optional]  
+    You can render custom suggestions by using `render` prop.
+    <br/>
+    It accepts an object with these properties:
+    - **`loading`**: `boolean` 
+        indicates that the query is still in progress
+    - **`error`**: `object`
+        An object containing the error info
+    - **`data`**: `array`
+        An array of parsed suggestions (original suggestions + category suggestions) obtained from the applied query.
+    - **`categories`**: `array`
+        An array of parsed category suggestions.
+    - **`rawCategories`**: `array`
+        An array of original category suggestions.
+    - **`suggestions`**: `array`
+        An array of parsed suggestions.
+    - **`rawSuggestions`**: `array`
+        An array of original suggestions.
+    - **`value`**: `string`
+        current search input value i.e the search query being used to obtain categories and suggestions.
+    - **`downshiftProps`**: `object`    
+        provides all the control props from `downshift` which can be used to bind list items with click/mouse events.    
+        Read more about it [here](https://github.com/downshift-js/downshift#children-function).
+```js
+<CategorySearch
+        render={({
+            loading,
+            error,
+            value,
+            categories,
+            suggestions,
+            downshiftProps: {
+                isOpen,
+                getItemProps,
+            }
+        }) => {
+            if(loading) { 
+                return <div>Fetching Suggestions.</div>
+            }
+            if(error) {
+                return (
+                    <div>
+                        Something went wrong! Error details {JSON.stringify(error)}
+                    </div>
+                )
+            }
+            return (isOpen && Boolean(value.length)) ? (
+                        <div>
+                            {suggestions.slice(0, 5).map((suggestion, index) => (
+                                <div 
+                                    key={suggestion.value} 
+                                    {...getItemProps({ item: suggestion })}
+                                >
+                                    {suggestion.value}
+                                </div>
+                            ))}
+                            {categories.slice(0, 3).map((category, index) => (
+                                <div 
+                                    key={category.key} 
+                                    {...getItemProps({ item: { value: value, category: category.key } })}
+                                >
+                                    {value} in {category.key}
+                                </div>
+                            ))}
+                            {Boolean(value.length) && (
+                                <div
+                                    {...getItemProps({ item: { label: value, value: value }})}
+                                >
+                                    Search for "{value}" in all categories
+                                </div>
+                            )}
+                        </div>
+				) : null
+        }}
+/>
+```
+Or you can also use render function as children
+```js
+<CategorySearch>
+        {
+            ({
+                loading,
+                error,
+                data,
+                categories,
+                rawCategories,
+                suggestions,
+                rawSuggestions
+                value,
+                downshiftProps
+            }) => (
+                // return custom suggestions UI to be rendered
+            )
+        }
+</CategorySearch>
+```
 - **renderError** `String or JSX or Function` [optional]
     can we used to render an error message in case of any error.
     ```js
@@ -190,12 +286,12 @@ Read more about it [here](/theming/class.html).
 2. update the underlying DB query with `customQuery`,
 3. connect with external interfaces using `beforeValueChange`, `onValueChange`, `onValueSelected` and `onQueryChange`,
 4. specify how search suggestions should be filtered using `react` prop,
-5. use your own function to render suggestions using `renderSuggestion` prop. It expects an object back for each `suggestion` having keys `label` and `value`. The query is run against the `value` key and `label` is used for rendering the suggestions. `label` can be either `String` or JSX. For example,
+5. use your own function to render suggestions using `parseSuggestion` prop. It expects an object back for each `suggestion` having keys `label` and `value`. The query is run against the `value` key and `label` is used for rendering the suggestions. `label` can be either `String` or JSX. For example,
 
 ```js
 <CategorySearch
   ...
-  renderSuggestion={(suggestion) => ({
+  parseSuggestion={(suggestion) => ({
     label: (
         <div>
             {suggestion._source.original_title} by
@@ -205,12 +301,12 @@ Read more about it [here](/theming/class.html).
         </div>
     ),
     value: suggestion._source.original_title,
-    source: suggestion._source  // for onValueSelected to work with renderSuggestion
+    source: suggestion._source  // for onValueSelected to work with parseSuggestion
   })}
 />
 ```
 
-- it's also possible to take control of rendering individual suggestions with `renderSuggestion` prop or the entire suggestions rendering using the `renderAllSuggestions` prop. Check the [custom suggestions](/advanced/customsuggestions.html) recipe for more info.
+- it's also possible to take control of rendering individual suggestions with `parseSuggestion` prop or the entire suggestions rendering using the `render` prop. Check the [custom suggestions](/advanced/customsuggestions.html) recipe for more info.
 
 6. add the following [synthetic events](https://reactjs.org/events.html) to the underlying `input` element:
     - onBlur

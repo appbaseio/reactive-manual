@@ -134,6 +134,44 @@ Example uses:
         </div>
     )}
     ```
+- **render** `Function` [optional]  
+    an alternative callback function to `renderItem`, where user can define how to render the view based on all the data changes.
+    <br/>
+    It accepts an object with these properties:
+    - **`data`**: `array`
+        An array of results obtained from the applied query.
+    - **`value`**: `array`
+        current selected values.
+    - **`handleChange`**: `function`
+        A callback function can be used to mark the list value as selected. 
+```js
+<MultiDropdownList
+    render={({
+        data,
+        handleChange,
+    }) => data.map(item => (
+            <div onClick={() => handleChange(item.key)} key={item.key}>
+                <span>{item.key}</span>
+                <span>{item.doc_count}</span>
+            </div>
+          )
+    )}
+/>
+```
+Or you can also use render function as children
+```js
+<MultiDropdownList>
+        {
+            ({
+                data,
+                value,
+                handleChange,
+            }) => (
+                // return UI to be rendered
+            )
+        }
+</MultiDropdownList>
+```
 - **onError** `Function` [optional]  
     gets triggered in case of an error and provides the `error` object, which can be used for debugging or giving feedback to the user if needed.
 - **renderError** `String or JSX or Function` [optional]

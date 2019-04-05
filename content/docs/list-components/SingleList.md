@@ -101,6 +101,73 @@ Example uses:
         </div>
     )}
     ```
+- **render** `Function` [optional]  
+    an alternative callback function to `renderItem`, where user can define how to render the view based on all the data changes.
+    <br/>
+    It accepts an object with these properties:
+    - **`loading`**: `boolean` 
+        indicates that the query is still in progress
+    - **`error`**: `object`
+        An object containing the error info
+    - **`data`**: `array`
+        An array of results obtained from the applied query.
+    - **`value`**: `string`
+        current selected value.
+    - **`handleChange`**: `function`
+        A callback function can be used to mark the list value as selected. 
+```js
+<SingleList
+        render={({
+            loading,
+            error,
+            data,
+            handleChange,
+        }) => {
+            if(loading) { 
+                return <div>Fetching Results.</div>
+            }
+            if(error) {
+                return (
+                    <div>
+                        Something went wrong! Error details {JSON.stringify(error)}
+                    </div>
+                )
+            }
+            return (
+                <ul>
+                    {
+                        data.map(item => (
+                            <li>
+                                <input 
+                                    type="radio"
+                                    value={item.key}
+                                    onChange={handleChange} 
+                                />
+                                {item.key}-{item.count}
+                            </li>
+                        ))
+                    }
+                </ul>
+            )
+        }}
+/>
+```
+Or you can also use render function as children
+```js
+<SingleList>
+        {
+            ({
+                loading,
+                error,
+                data,
+                value,
+                handleChange,
+            }) => (
+                // return UI to be rendered
+            )
+        }
+</SingleList>
+```
 - **onError** `Function` [optional]  
     gets triggered in case of an error and provides the `error` object, which can be used for debugging or giving feedback to the user if needed.
 - **renderNoResults** `Function` [optional]  

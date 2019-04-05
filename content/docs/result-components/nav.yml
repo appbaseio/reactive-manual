@@ -13,17 +13,13 @@
           title: Props
           href: /result-components/resultlist.html#props
           forceInternal: true
+        - id: sub-components
+          title: Sub Components
+          href: /result-components/resultlist.html#sub-components
+          forceInternal: true
         - id: demo
           title: Demo
           href: /result-components/resultlist.html#demo
-          forceInternal: true
-        - id: styles
-          title: Styles
-          href: /result-components/resultlist.html#styles
-          forceInternal: true
-        - id: extending
-          title: Extending
-          href: /result-components/resultlist.html#extending
           forceInternal: true
         - id: examples
           title: Examples
@@ -42,17 +38,13 @@
           title: Props
           href: /result-components/resultcard.html#props
           forceInternal: true
+        - id: sub-components
+          title: Sub Components
+          href: /result-components/resultcard.html#sub-components
+          forceInternal: true
         - id: demo
           title: Demo
           href: /result-components/resultcard.html#demo
-          forceInternal: true
-        - id: styles
-          title: Styles
-          href: /result-components/resultcard.html#styles
-          forceInternal: true
-        - id: extending
-          title: Extending
-          href: /result-components/resultcard.html#extending
           forceInternal: true
         - id: examples
           title: Examples
@@ -70,6 +62,10 @@
         - id: props
           title: Props
           href: /result-components/reactivelist.html#props
+          forceInternal: true
+        - id: sub-components
+          title: Sub Components
+          href: /result-components/reactivelist.html#sub-components
           forceInternal: true
         - id: demo
           title: Demo

@@ -18,32 +18,32 @@ You can take advantage of search and click analytics when using [Appbase.io](htt
 
 ## Click Analytics
 
-Click analytics have to be wired into the result components. Its supported in `ReactiveList`, `ResultCard` and `ResultList`. When using `ResultCard` or `ResultList` the click analytics will work on its own. However when using `ReactiveList`, the `render` or `renderAllData` prop receives two extra properties(`base` & `triggerClickAnalytics`) to make click analytics work which you have to invoke with `onClick`.
+Click analytics have to be wired into the result components. Its supported in `ReactiveList`, however when using `ReactiveList`, the `renderItem` or `render` prop receives a method called `triggerAnalytics` to make click analytics work which you have to invoke with `onClick`.
 
 ```js
 <ReactiveList
     ...
-    renderData={(data, triggerClickAnalytics) => (
-        <div onClick={triggerClickAnalytics}>...</div>
+    renderItem={(data, triggerAnalytics) => (
+        <div onClick={triggerAnalytics}>...</div>
     )}
 >
 ```
 
-When rendering your component using `renderAllData({ results, streamResults, loadMore, base, triggerClickAnalytics })` you have to call the `triggerClickAnalytics` after adding the `base` value to the `index` (`base` is calculated internally from `currentPage * size`). `index` is assumed to start from `0`. Example:
+When rendering your component using `render` you have to call the `triggerAnalytics` function by using the `_click_id` property of the result items as an argument. 
+Example:
 
 ```js
 <ReactiveList
     ...
-    renderAllData={({
-        results,
-        base,
-        triggerClickAnalytics
+    render={({
+        data,
+        triggerAnalytics
     }) =>
         results
             .map((item, index) => (
                 <div
                     key={item._id}
-                    onClick={() => triggerClickAnalytics(base + index)}
+                    onClick={() => triggerAnalytics(item._click_id)}
                 >
                     ...
                 </div>

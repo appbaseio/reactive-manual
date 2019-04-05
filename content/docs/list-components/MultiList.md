@@ -29,9 +29,9 @@ Example uses:
 
 ```js
 <MultiList
-  componentId="CitySensor"
-  dataField="group_city.raw"
-  title="Cities"
+    componentId="CitySensor"
+    dataField="group_city.raw"
+    title="Cities"
 />
 ```
 
@@ -39,25 +39,25 @@ Example uses:
 
 ```js
 <MultiList
-  componentId="CitySensor"
-  dataField="group_city.raw"
-  title="Cities"
-  size={100}
-  sortBy="asc"
-  defaultValue={["San Francisco"]}
-  queryFormat="or"
-  selectAllLabel="All Cities"
-  showCheckbox={true}
-  showCount={true}
-  showSearch={true}
-  placeholder="Search City"
-  react={{
-    and: ["CategoryFilter", "SearchFilter"]
-  }}
-  showFilter={true}
-  filterLabel="City"
-  URLParams={false}
-  loader="Loading ..."
+    componentId="CitySensor"
+    dataField="group_city.raw"
+    title="Cities"
+    size={100}
+    sortBy="asc"
+    defaultValue={["San Francisco"]}
+    queryFormat="or"
+    selectAllLabel="All Cities"
+    showCheckbox={true}
+    showCount={true}
+    showSearch={true}
+    placeholder="Search City"
+    react={{
+        and: ["CategoryFilter", "SearchFilter"]
+    }}
+    showFilter={true}
+    filterLabel="City"
+    URLParams={false}
+    loader="Loading ..."
 />
 ```
 
@@ -105,8 +105,75 @@ Example uses:
                 {count}
             </span>
         </div>
-    )}
+    )} 
     ```
+- **render** `Function` [optional]  
+    an alternative callback function to `renderItem`, where user can define how to render the view based on all the data changes.
+    <br/>
+    It accepts an object with these properties:
+    - **`loading`**: `boolean` 
+        indicates that the query is still in progress
+    - **`error`**: `object`
+        An object containing the error info
+    - **`data`**: `array`
+        An array of results obtained from the applied query.
+    - **`value`**: `array`
+        current selected values.
+    - **`handleChange`**: `function`
+        A callback function can be used to mark the list value as selected. 
+```js
+<MultiList
+        render={({
+            loading,
+            error,
+            data,
+            handleChange,
+        }) => {
+            if(loading) { 
+                return <div>Fetching Results.</div>
+            }
+            if(error) {
+                return (
+                    <div>
+                        Something went wrong! Error details {JSON.stringify(error)}
+                    </div>
+                )
+            }
+            return (
+                <ul>
+                    {
+                        data.map(item => (
+                            <li>
+                                <input 
+                                    type="checkbox"
+                                    value={item.key}
+                                    onChange={handleChange} 
+                                />
+                                {item.key}-{item.count}
+                            </li>
+                        ))
+                    }
+                </ul>
+            )
+        }}
+/>
+```
+Or you can also use render function as children
+```js
+<MultiList>
+        {
+            ({
+                loading,
+                error,
+                data,
+                value,
+                handleChange,
+            }) => (
+                // return UI to be rendered
+            )
+        }
+</MultiList>
+```
 - **onError** `Function` [optional]  
     gets triggered in case of an error and provides the `error` object, which can be used for debugging or giving feedback to the user if needed.
 - **renderNoResults** `Function` [optional]  

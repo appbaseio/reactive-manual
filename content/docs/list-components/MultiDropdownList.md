@@ -107,6 +107,67 @@ Example uses:
         </div>
     )}
     ```
+- **render** `Function` [optional]  
+    an alternative callback function to `renderItem`, where user can define how to render the view based on all the data changes.
+    <br/>
+    It accepts an object with these properties:
+    - **`loading`**: `boolean` 
+        indicates that the query is still in progress
+    - **`error`**: `object`
+        An object containing the error info
+    - **`data`**: `array`
+        An array of results obtained from the applied query.
+    - **`value`**: `array`
+        current selected values.
+    - **`handleChange`**: `function`
+        A callback function can be used to mark the list value as selected. 
+    - **`downshiftProps`**: `object`    
+        provides all the control props from `downshift` which can be used to bind list items with click/mouse events.    
+        Read more about it [here](https://github.com/downshift-js/downshift#children-function).
+```js
+<MultiDropdownList
+        render={({
+            loading,
+            error,
+            data,
+            handleChange,
+        }) => {
+            if(loading) { 
+                return <div>Fetching Results.</div>
+            }
+            if(error) {
+                return (
+                    <div>
+                        Something went wrong! Error details {JSON.stringify(error)}
+                    </div>
+                )
+            }
+            return data.map(item => (
+                <div onClick={() => handleChange(item.key)} key={item.key}>
+                    <span>{item.key}</span>
+                    <span>{item.doc_count}</span>
+                </div>
+            ))
+        }}
+/>
+```
+Or you can also use render function as children
+```js
+<MultiDropdownList>
+        {
+            ({
+                loading,
+                error,
+                data,
+                value,
+                handleChange,
+                downshiftProps
+            }) => (
+                // return UI to be rendered
+            )
+        }
+</MultiDropdownList>
+```
 - **onError** `Function` [optional]  
     gets triggered in case of an error and provides the `error` object, which can be used for debugging or giving feedback to the user if needed.
 - **renderNoResults** `Function` [optional]  
