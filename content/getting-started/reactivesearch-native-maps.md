@@ -6,8 +6,8 @@ sectionid: getting-started
 permalink: getting-started/reactivemaps-native.html
 prev: getting-started/reactivesearch.html
 prevTitle: "ReactiveSearch Quickstart"
-next: getting-started/reactivesearch-rn.html
-nextTitle: "Setup with React Native CLI"
+next: getting-started/data.html
+nextTitle: "Importing Data"
 redirect_from:
     - "getting-started/reactivemaps-native"
 ---
@@ -16,21 +16,31 @@ ReactiveMaps is a complimentary library to ReactiveSearch. Map component require
 
 ## Get started with ReactiveMap with react-native:
 
-Through out this tutorial, we will be using CRNA to setup the project. If you wish to use `Reactivemap` with any existing project with no dependency on `Expo`, we'd recommend you to install it and set up the project with Expo, as we only support Reactivemap with `Expo` as of now.
+In this tutorial, we will be using `expo-cli` to setup the project. If you wish to use `Reactivemap` with any existing project with no dependency on `Expo`, we'd recommend you to install it and set up the project with Expo, as we only support Reactivemap with `Expo` as of now.
 
-### Step 1: Create Boilerplate with CRNA
+### Step 0: Create Boilerplate with expo-cli
 
-For this quickstart guide, we will use [Create React Native App (CRNA)](https://github.com/react-community/create-react-native-app) with [Expo client](https://expo.io/tools#client).
+For this quickstart guide, we will use [Expo CLI](https://docs.expo.io/versions/v32.0.0/introduction/installation/) and [Expo client](https://expo.io/tools#client).
 
+Install `expo-cli` globally.
 ```bash
-create-react-native-app my-awesome-map-search && cd my-awesome-map-search
+npm install -g expo-cli
 ```
 
-Install the search and maps package:
+Create sample application using `expo-cli`
+```bash
+expo init EarthQuakeReporter
+cd EarthQuakeReporter
+```
+
+### Step 1: Install the reactive search and maps package:
+
 
 ```bash
 yarn add @appbaseio/reactivesearch-native @appbaseio/reactivemaps-native
 ```
+
+### Step 2: Configure Google Map:
 
 Now before we go ahead and add our first component, we need to add the map keys to our setup. Using react-native-maps with Expo makes the setup and installation trivial, we simply need to specify the google-maps key in the expo configuration:
 
@@ -39,7 +49,7 @@ Your `app.json` should look like this:
 ```js
 {
   "expo": {
-    "sdkVersion": "27.0.0", // version is not relevant, gets autoset at the time of installation
+    "sdkVersion": "32.0.0",
     "android": {
       "config": {
         "googleMaps": {
@@ -58,7 +68,7 @@ Your `app.json` should look like this:
 
 And now, you're all set. You can read more about it in detail [here](https://docs.expo.io/versions/latest/sdk/map-view).
 
-### Step 2: Adding first component
+### Step 3: Adding the first component
 
 Lets add our first ReactiveSearch component: [ReactiveBase](/getting-started/reactivebase.html), it is a backend connector where we can configure the Elasticsearch index / authorization setup.
 
@@ -96,7 +106,7 @@ export default class App extends React.Component {
 
 ```
 
-### Step 3: Adding the Map Component
+### Step 4: Adding the Map Component
 
 Next we will look at Reactivemap component:
 
@@ -148,4 +158,8 @@ export default class App extends React.Component {
 
 ```
 
-You can [try the demo here](https://snack.expo.io/@metagrover/reactivemap-with-reactivesearch-native) instantly, and check out [Reactivemaps documentation](/components/reactivemap.html) for further customisations.
+If you have followed along so far, you should be able to see the final app:  
+
+![Image](https://www.dropbox.com/s/6x5h8e5n5qyei4a/Screenshot%202019-04-06%2014.58.39.png?raw=1)
+
+You can [try the demo here](https://snack.expo.io/@lakhansamani/earthquake-reporter) instantly, and check out [Reactivemaps documentation](/components/reactivemap.html) for further customisations.

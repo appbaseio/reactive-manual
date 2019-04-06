@@ -9,9 +9,9 @@
           title: Install ReactiveSearch Native
           href: /getting-started/reactivesearch.html#step-0-install-reactivesearch-native
           forceInternal: true
-        - id: step-1-create-boilerplate-with-crna
-          title: Create Boilerplate with CRNA
-          href: /getting-started/reactivesearch.html#step-1-create-boilerplate-with-crna
+        - id: step-1-create-boilerplate-with-expo-cli
+          title: Create Boilerplate with Expo Cli
+          href: /getting-started/reactivesearch.html#step-1-create-boilerplate-with-expo-cli
           forceInternal: true
         - id: step-2-adding-the-first-component
           title: Adding the First Component
@@ -25,27 +25,49 @@
       title: "ReactiveMaps Native Quickstart"
       href: /getting-started/reactivemaps-native.html
       forceInternal: true
-    - id: reactivesearch-rn
-      title: "Using with React Native CLI"
-      href: /getting-started/reactivesearch-rn.html
-      forceInternal: true
       subitems:
-        - id: step-0-install-reactivesearch-native
-          title: Install ReactiveSearch Native
-          href: /getting-started/reactivesearch-rn.html#step-0-install-reactivesearch-native
+        - id: step-0-create-boilerplate-with-expo-cli
+          title: Create Boilerplate with expo-cli
+          href: /getting-started/reactivemaps-native.html#step-0-create-boilerplate-with-expo-cli
           forceInternal: true
-        - id: step-1-create-boilerplate-with-rncli
-          title: Create Boilerplate with RNCLI
-          href: /getting-started/reactivesearch-rn.html#step-1-create-boilerplate-with-rncli
+        - id: step-1-install-the-reactive-search-and-maps-package
+          title: Install the reactive search and maps package
+          href: /getting-started/reactivemaps-native.html#step-1-install-the-reactive-search-and-maps-package
           forceInternal: true
-        - id: step-2-adding-the-first-component
-          title: Adding the First Component
-          href: /getting-started/reactivesearch-rn.html#step-2-adding-the-first-component
+        - id: step-2-configure-google-map
+          title: Configure Google Map
+          href: /getting-started/reactivemaps-native.html#step-2-configure-google-map
           forceInternal: true
-        - id: step-3-adding-filter-and-result-components
-          title: Adding Filter and Result Components
-          href: /getting-started/reactivesearch-rn.html#step-3-adding-filter-and-result-components
+        - id: step-3-adding-the-first-component
+          title: Adding the first component
+          href: /getting-started/reactivemaps-native.html#step-3-adding-the-first-component
           forceInternal: true
+        - id: step-4-adding-the-map-component
+          title: Adding the Map Component
+          href: /getting-started/reactivemaps-native.html#step-4-adding-the-map-component
+          forceInternal: true
+
+    # - id: reactivesearch-rn
+    #   title: "Using with React Native CLI"
+    #   href: /getting-started/reactivesearch-rn.html
+    #   forceInternal: true
+    #   subitems:
+    #     - id: step-0-install-reactivesearch-native
+    #       title: Install ReactiveSearch Native
+    #       href: /getting-started/reactivesearch-rn.html#step-0-install-reactivesearch-native
+    #       forceInternal: true
+    #     - id: step-1-create-boilerplate-with-rncli
+    #       title: Create Boilerplate with RNCLI
+    #       href: /getting-started/reactivesearch-rn.html#step-1-create-boilerplate-with-rncli
+    #       forceInternal: true
+    #     - id: step-2-adding-the-first-component
+    #       title: Adding the First Component
+    #       href: /getting-started/reactivesearch-rn.html#step-2-adding-the-first-component
+    #       forceInternal: true
+    #     - id: step-3-adding-filter-and-result-components
+    #       title: Adding Filter and Result Components
+    #       href: /getting-started/reactivesearch-rn.html#step-3-adding-filter-and-result-components
+    #       forceInternal: true
     - id: data
       title: Importing Data
       href: /getting-started/data.html

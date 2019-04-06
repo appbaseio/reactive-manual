@@ -210,10 +210,10 @@ class Header extends Component {
                   <Dropdown
                     options={[
                       'v2 - Web',
-                      'v0.10 - Native',
+                      'v0.12 - Native',
                       'v1 - Vue'
                     ]}
-                    value="v0.10 - Native"
+                    value="v0.12 - Native"
                     onChange={this.switchDocs}
                   />
                 </div>

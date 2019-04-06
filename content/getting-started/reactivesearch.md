@@ -29,7 +29,7 @@ npm install @appbaseio/reactivesearch-native
 
 If you are starting from scratch, follow the next steps on getting started with reactivesearch-native.
 
-### Step 1: Create Boilerplate with CRNA
+### Step 1: Create Boilerplate with Expo CLI
 
 We will create a search UI based on a *books dataset* with ReactiveSearch components.
 
@@ -37,10 +37,21 @@ We will create a search UI based on a *books dataset* with ReactiveSearch compon
 
 **Caption:** Final image of how the app will look.
 
-For this quickstart guide, we will use [Create React Native App (CRNA)](https://github.com/react-community/create-react-native-app) with [Expo client](https://expo.io/tools#client).
+For this quickstart guide, we will use [Expo CLI](https://docs.expo.io/versions/v32.0.0/introduction/installation/) and [Expo client](https://expo.io/tools#client).
 
+> Note
+>
+> In order to use latest expo CLI, make sure you are using Node version >=10
+
+Install `expo-cli` globally.
 ```bash
-create-react-native-app my-awesome-mobile-search && cd my-awesome-mobile-search
+npm install -g expo-cli
+```
+
+Create sample application using `expo-cli`
+```bash
+expo init BookSearch
+cd BookSearch
 ```
 
 Install the `@appbaseio/reactivesearch-native` repo.
@@ -144,8 +155,9 @@ The `react` prop here specifies that it should construct a query based on the cu
 ReactiveSearch uses [native-base](https://docs.nativebase.io/docs/GetStarted.html) which uses some fonts which can be included by adding:
 
 ```js
+import { Font } from 'expo'
 async componentWillMount() {
-	await Expo.Font.loadAsync({
+	await Font.loadAsync({
 		Roboto: require('native-base/Fonts/Roboto.ttf'),
 		Roboto_medium: require('native-base/Fonts/Roboto_medium.ttf'),
 		Ionicons: require('native-base/Fonts/Ionicons.ttf'),
@@ -268,5 +280,3 @@ const styles = StyleSheet.create({
 If you have followed along so far, you should be able to see the final app:  
 
 ![Image](https://imgur.com/zAXd5uQ.png)
-
-In the next section we explain about creating the same app outside expo environment.
