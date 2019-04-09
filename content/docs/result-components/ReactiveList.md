@@ -91,15 +91,6 @@ Example uses:
     Determines the position where to show the pagination, only applicable when **pagination** prop is set to `true`. Accepts one of `top`, `bottom` or `both` as valid values. Defaults to `bottom`.
 - **pages** `Number` [optional]  
     number of user selectable pages to be displayed when pagination is enabled. Defaults to 5.
-- **onPageChange** `Function` [optional]  
-    executes when the current page is changed. If not defined, `window` will be scrolled to the top of the page.
-- **onPageClick** `Function` [optional]  
-    accepts a function which is invoked with the updated page value when a pagination button is clicked. For example if 'Next' is clicked with the current page number as '1', you would receive the value '2' as the function parameter.
-
-> Note:
->
-> The fundamental difference between `onPageChange` and `onPageClick` is that `onPageClick` is only called on a manual interaction with the pagination buttons, whereas, `onPageChange` would also be invoked if some other side effects caused the results to update which includes updating filters, queries or changing pages. The behaviour of these two may change in the future versions as we come up with a better API.
-
 - **sortBy** `String` [optional]  
     sort the results by either `asc` or `desc` order. It is an alternative to `sortOptions`, both can't be used together.
 - **sortOptions** `Object Array` [optional]  
@@ -115,31 +106,12 @@ Example uses:
     display to show the user while the data is loading, accepts `String` or `JSX` markup.
 - **showResultStats** `Boolean` [optional]  
     whether to show result stats in the form of results found and time taken. Defaults to `true`.
-- **renderResultStats** `Function` [optional]  
-    renders custom result stats using a callback function that takes `stats` object as parameter and expects it to return a string or JSX. `stats` object contains following properties
-    - **`numberOfResults`**: `number`
-        Total number of results found
-    - **`numberOfPages`**: `number`
-        Total number of pages found based on current page size
-    - **`currentPage`**: `number`
-        Current page number for which data is being rendered
-    - **`time`**: `number`
-        Time taken to find total results (in ms)
-    - **`displayedResults`**: `number`
-        Number of results displayed in current view
-    ```js
-    renderResultStats={
-            function(stats){
-                return (
-                    `Showing ${stats.displayedResults} of total ${stats.totalResults} in ${stats.time} ms`
-                )   
-            }
-        }
-    ```
 - **react** `Object` [optional]  
     a dependency object defining how this component should react based on the state changes in the sensor components.
 - **URLParams** `Boolean` [optional]  
     when set adds the current page number to the url. Only works when `pagination` is enabled.
+- **defaultQuery** `Function` [optional]  
+    applies a default query to the result component. This query will be run when no other components are being watched (via React prop), as well as in conjunction with the query generated from the React prop. The function should return a query.
 - **renderItem** `Function` [optional]  
     returns a list element object to be rendered based on the `res` data object. This callback function prop is called for each data item rendered in the **ReactiveList** component's view. For example,
     ```js
@@ -169,16 +141,11 @@ Example uses:
     }
     ```
 - **render** `Function` [optional]  
-    A function returning the UI you want to render based on your results.
+    A function returning the UI you want to render based on your results. This function receives a list of parameters and expects to return a `JSX`.    
+    Read more about it [here](#extending).
 > Note:
 >
 > Either `renderItem` or `render` is required in ReactiveList for rendering the data.
-- **defaultQuery** `Function` [optional]  
-    applies a default query to the result component. This query will be run when no other components are being watched (via React prop), as well as in conjunction with the query generated from the React prop. The function should return a query.
-- **renderNoResults** `Function` [optional]
-    show custom message or component when no results found.
-- **onError** `Function` [optional]  
-    gets triggered in case of an error and provides the `error` object, which can be used for debugging or giving feedback to the user if needed.
 - **renderError** `String or JSX or Function` [optional]
     can be used to render an error message in case of any error.
     ```js
@@ -189,9 +156,42 @@ Example uses:
         )
     }
     ```
+- **renderResultStats** `Function` [optional]  
+    renders custom result stats using a callback function that takes `stats` object as parameter and expects it to return a string or JSX. `stats` object contains following properties
+    - **`numberOfResults`**: `number`
+        Total number of results found
+    - **`numberOfPages`**: `number`
+        Total number of pages found based on current page size
+    - **`currentPage`**: `number`
+        Current page number for which data is being rendered
+    - **`time`**: `number`
+        Time taken to find total results (in ms)
+    - **`displayedResults`**: `number`
+        Number of results displayed in current view
+    ```js
+    renderResultStats={
+            function(stats){
+                return (
+                    `Showing ${stats.displayedResults} of total ${stats.totalResults} in ${stats.time} ms`
+                )   
+            }
+        }
+    ```
+- **renderNoResults** `Function` [optional]
+    show custom message or component when no results found.
 - **onData** `Function` [optional]
     gets triggered after data changes, which returns an object with these properties: `data`,
     `streamData`, `promotedData`, `rawData` & `resultStats`.
+- **onError** `Function` [optional]  
+    gets triggered in case of an error and provides the `error` object, which can be used for debugging or giving feedback to the user if needed.
+- **onPageChange** `Function` [optional]  
+    executes when the current page is changed. If not defined, `window` will be scrolled to the top of the page.
+- **onPageClick** `Function` [optional]  
+    accepts a function which is invoked with the updated page value when a pagination button is clicked. For example if 'Next' is clicked with the current page number as '1', you would receive the value '2' as the function parameter.
+
+> Note:
+>
+> The fundamental difference between `onPageChange` and `onPageClick` is that `onPageClick` is only called on a manual interaction with the pagination buttons, whereas, `onPageChange` would also be invoked if some other side effects caused the results to update which includes updating filters, queries or changing pages. The behaviour of these two may change in the future versions as we come up with a better API.
 
 ## Sub Components
     

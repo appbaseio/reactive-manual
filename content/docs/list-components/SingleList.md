@@ -79,14 +79,38 @@ Example uses:
     selects an initial item from the list on mount.
 - **value** `string` [optional]  
     controls the current value of the component. It selects the item from the list (on mount and on update). Use this prop in conjunction with `onChange` function.
-- **onChange** `function` [optional]  
-    is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
 - **selectAllLabel** `String` [optional]  
     add an extra `Select all` item to the list with the provided label string.
 - **showRadio** `Boolean` [optional]  
     show radio button icon for each list item. Defaults to `true`.
 - **showCount** `Boolean` [optional]  
     show count value of the number of occurences besides a list item. Defaults to `true`.
+- **transformData** `Function` [optional]  
+    allows transforming the data to render inside the list. You can change the order, remove, or add items, transform their values with this method. It provides the data as param which is an array of objects of shape `{ key: <string>, doc_count: <number> }` and expects you to return the array of objects of same shape. For example:
+```js
+transformData={(list) => {
+    // sort or update the list
+    return list;
+}}
+```
+- **showMissing** `Boolean` [optional]  
+    defaults to `false`. When set to `true` it also retrives the aggregations for missing fields under the label specified by `missingLabel`.
+- **missingLabel** `String` [optional]  
+    defaults to `N/A`. Specify a custom label to show when `showMissing` is set to `true`.
+- **showSearch** `Boolean` [optional]  
+    whether to show a searchbox to filter the list items locally. Defaults to `true`.
+- **placeholder** `String` [optional]  
+    placeholder to be displayed in the searchbox, only applicable when the `showSearch` prop is set to true. When applicable, the default placeholder value is set to "Search".
+- **showFilter** `Boolean` [optional]  
+    show as filter when a value is selected in a global selected filters view. Defaults to `true`.
+- **filterLabel** `String` [optional]  
+    An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
+- **URLParams** `Boolean` [optional]  
+    enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
+- **showLoadMore** `Boolean` [optional]  
+    defaults to `false` and works only with elasticsearch >= 6 since it uses [composite aggregations](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-composite-aggregation.html). This adds a "Load More" button to load the aggs on demand combined with the `size` prop. Composite aggregations are in beta and this is an experimental API which might change in a future release.
+
+    `Note`: Composite aggregations do not support sorting by `count`. Hence with `showLoadMore`, you can only sort by: `asc` or `desc` order. `sortBy` prop defaults to `asc` when `showLoadMore` prop is used.
 - **renderItem** `Function` [optional]  
     customize the rendered list via a function which receives the item label, count & isSelected and expects a JSX or String back. For example:
     ```js
@@ -168,14 +192,6 @@ Or you can also use render function as children
         }
 </SingleList>
 ```
-- **onError** `Function` [optional]  
-    gets triggered in case of an error and provides the `error` object, which can be used for debugging or giving feedback to the user if needed.
-- **renderNoResults** `Function` [optional]  
-    can be used to render a message in case of no list items.
-
-    ```js
-    renderNoResults={() => <p>No Results Found!</p>}
-    ```
 - **renderError** `String or JSX or Function` [optional]
     can be used to render an error message in case of any error.
     ```js
@@ -186,33 +202,16 @@ Or you can also use render function as children
         )
     }
     ```
+- **renderNoResults** `Function` [optional]  
+    can be used to render a message in case of no list items.
 
-- **transformData** `Function` [optional]  
-    allows transforming the data to render inside the list. You can change the order, remove, or add items, transform their values with this method. It provides the data as param which is an array of objects of shape `{ key: <string>, doc_count: <number> }` and expects you to return the array of objects of same shape. For example:
-```js
-transformData={(list) => {
-    // sort or update the list
-    return list;
-}}
-```
-- **showMissing** `Boolean` [optional]  
-    defaults to `false`. When set to `true` it also retrives the aggregations for missing fields under the label specified by `missingLabel`.
-- **missingLabel** `String` [optional]  
-    defaults to `N/A`. Specify a custom label to show when `showMissing` is set to `true`.
-- **showSearch** `Boolean` [optional]  
-    whether to show a searchbox to filter the list items locally. Defaults to `true`.
-- **placeholder** `String` [optional]  
-    placeholder to be displayed in the searchbox, only applicable when the `showSearch` prop is set to true. When applicable, the default placeholder value is set to "Search".
-- **showFilter** `Boolean` [optional]  
-    show as filter when a value is selected in a global selected filters view. Defaults to `true`.
-- **filterLabel** `String` [optional]  
-    An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
-- **URLParams** `Boolean` [optional]  
-    enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
-- **showLoadMore** `Boolean` [optional]  
-    defaults to `false` and works only with elasticsearch >= 6 since it uses [composite aggregations](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-composite-aggregation.html). This adds a "Load More" button to load the aggs on demand combined with the `size` prop. Composite aggregations are in beta and this is an experimental API which might change in a future release.
-
-    `Note`: Composite aggregations do not support sorting by `count`. Hence with `showLoadMore`, you can only sort by: `asc` or `desc` order. `sortBy` prop defaults to `asc` when `showLoadMore` prop is used.
+    ```js
+    renderNoResults={() => <p>No Results Found!</p>}
+    ```
+- **onChange** `function` [optional]  
+    is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
+- **onError** `Function` [optional]  
+    gets triggered in case of an error and provides the `error` object, which can be used for debugging or giving feedback to the user if needed.
 
 ## Demo
 

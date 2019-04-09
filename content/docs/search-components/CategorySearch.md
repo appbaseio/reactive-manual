@@ -78,8 +78,6 @@ Example uses:
     set the initial search query text on mount.
 - **value** `string` [optional]  
     controls the current value of the component. It sets the search query text (on mount and on update). Use this prop in conjunction with `onChange` function.
-- **onChange** `function` [optional]  
-    is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
 - **downShiftProps** `Object` [optional]  
     allow passing props directly to `Downshift` component. You can read more about Downshift props [here](https://github.com/paypal/downshift#--downshift-------).
 - **fieldWeights** `Array` [optional]  
@@ -142,10 +140,6 @@ Example uses:
     An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the current value of the search. This is useful for sharing URLs with the component state. Defaults to `false`.
-- **onSuggestions** `Function` [optional]
-    You can pass a callback function to listen for the changes in suggestions.The function receives `suggestions` list.
-- **onError** `Function` [optional]  
-    gets triggered in case of an error and provides the `error` object, which can be used for debugging or giving feedback to the user if needed.
 - **render** `Function` [optional]  
     You can render custom suggestions by using `render` prop.
     <br/>
@@ -262,6 +256,12 @@ Or you can also use render function as children
         )
     }
     ```
+- **onChange** `function` [optional]  
+    is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
+- **onSuggestions** `Function` [optional]
+    You can pass a callback function to listen for the changes in suggestions.The function receives `suggestions` list.
+- **onError** `Function` [optional]  
+    gets triggered in case of an error and provides the `error` object, which can be used for debugging or giving feedback to the user if needed.
 
 ## Demo
 

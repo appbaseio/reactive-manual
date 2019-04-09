@@ -102,8 +102,6 @@ Example uses:
     selects initial items from the list on mount.
 - **value** `String Array` [optional]  
     controls the current value of the component. It selects the item from the list (on mount and on update). Use this prop in conjunction with `onChange` function.
-- **onChange** `function` [optional]  
-    is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
 - **selectAllLabel** `String` [optional]  
     if provided displays an additional option to select all list values.
 - **showFilter** `Boolean` [optional]  
@@ -114,12 +112,6 @@ Example uses:
     An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
-- **renderNoResults** `Function` [optional]  
-    can be used to render a message in case of no list items.
-
-    ```js
-    renderNoResults={() => <p>No Results Found!</p>}
-    ```
 - **renderItem** `Function` [optional]  
     customize the rendered list via a function which receives the item label, count & isSelected and expects a JSX or String back. For example:
     ```js
@@ -172,8 +164,6 @@ Or you can also use render function as children
         }
 </MultiDropdownList>
 ```
-- **onError** `Function` [optional]  
-    gets triggered in case of an error and provides the `error` object, which can be used for debugging or giving feedback to the user if needed.
 - **renderError** `String or JSX or Function` [optional]
     can be used to render an error message in case of any error.
     ```js
@@ -184,6 +174,16 @@ Or you can also use render function as children
         )
     }
     ```
+- **renderNoResults** `Function` [optional]  
+    can be used to render a message in case of no list items.
+
+    ```js
+    renderNoResults={() => <p>No Results Found!</p>}
+    ```
+- **onChange** `function` [optional]  
+    is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
+- **onError** `Function` [optional]  
+    gets triggered in case of an error and provides the `error` object, which can be used for debugging or giving feedback to the user if needed.
 
 ## Demo
 
