@@ -59,26 +59,26 @@
           title: Props
           href: /advanced/react.html#props
           forceInternal: true
-    - id: reactivecomponent
+    - id: reactivecomponentindepth
       title: Reactive Component
-      href: /advanced/reactivecomponent.html
+      href: /advanced/reactivecomponentindepth.html
       forceInternal: true
       subitems:
         - id: usage-with-defaultquery
           title: Usage with defaultQuery
-          href: /advanced/reactivecomponent.html#usage-with-defaultquery
+          href: /advanced/reactivecomponentindepth.html#usage-with-defaultquery
           forceInternal: true
         - id: usage-with-customquery
           title: Usage with customQuery
-          href: /advanced/reactivecomponent.html#usage-with-customquery
+          href: /advanced/reactivecomponentindepth.html#usage-with-customquery
           forceInternal: true
         - id: props
           title: Props
-          href: /advanced/reactivecomponent.html#props
+          href: /advanced/reactivecomponentindepth.html#props
           forceInternal: true
         - id: examples
           title: Examples
-          href: /advanced/reactivecomponent.html#examples
+          href: /advanced/reactivecomponentindepth.html#examples
           forceInternal: true
     - id: ssr
       title: Server Side Rendering

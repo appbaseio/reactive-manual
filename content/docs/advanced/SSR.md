@@ -4,7 +4,7 @@ title: "Server Side Rendering"
 layout: docs
 sectionid: docs
 permalink: advanced/ssr.html
-prev: reactivecomponent.html
+prev: reactivecomponentindepth.html
 prevTitle: "Reactive Component"
 next: componentsusage.html
 nextTitle: "Components Usage"
