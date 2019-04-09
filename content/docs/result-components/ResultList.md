@@ -16,7 +16,7 @@ redirect_from:
 
 ![Image to be displayed](https://i.imgur.com/iY2csRm.png)
 
-`ResultList` creates a result list UI component to display results in a list layout, suited for data that needs a compact display.
+`ResultList` creates a result list UI component for a particular result item, it can be used with `ReactiveList` to display results in a list layout, suited for data that needs a compact display.
 
 Example uses:
 

@@ -196,11 +196,11 @@ Example uses:
 ## Sub Components
     
 - **ResultCardsWrapper**     
-    can be used to render a card based view.
-    Read more about it [here](/result-components/resultcard).
+    A wrapper component for `ResultCard` components to render a card based layout.    
+    Read more about the usage [here](/result-components/resultcard.html#usage).
 - **ResultListWrapper**     
-    can be used to render a list based view.
-    Read more about it [here](/result-components/resultlist).  
+    A wrapper component for `ResultList` components to render a list based layout.    
+    Read more about the usage [here](/result-components/resultlist.html#usage).  
 
 ## Demo
 

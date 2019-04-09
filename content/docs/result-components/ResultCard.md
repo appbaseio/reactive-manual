@@ -16,7 +16,7 @@ redirect_from:
 
 ![Image to be displayed](https://i.imgur.com/KnrGoRk.png)
 
-`ResultCard` creates a result card UI component to display results in a card layout, suited for data that have an associated image.
+`ResultList` creates a result card UI component for a particular result item, it can be used with `ReactiveList` to display results in a card layout, suited for data that have an associated image.
 
 Example uses:
 
