@@ -210,12 +210,20 @@ Result components are used for displaying the results (aka hits).
 >
 > They do this via [**react**](/advanced/react.html) prop, which allows each component to specify their dependent components using a DSL that mirrors Elasticsearch's compound query DSL for bool clause.
 
+### ReactiveList
+
+<p>
+<img src="https://imgur.com/PCBwK7t.png" style="float:left">
+
+**[ReactiveList](/result-components/reactivelist.html)** displays the results in a configurable list layout. Reactivesearch also provides two components which can be used with `ReactiveList` to display a decorated list and card based layout.
+</p>
+
 ### ResultList
 
 <p>
 <img src="https://imgur.com/L8xTmWd.png" style="float:left">
 
-**[ResultList](/result-components/resultlist.html)** displays the results in a list layout.
+**[ResultList](/result-components/resultlist.html)** displays a particular result list item.
 </p>
 
 ### ResultCard
@@ -223,15 +231,7 @@ Result components are used for displaying the results (aka hits).
 <p>
 <img src="https://imgur.com/VGra3hs.png" style="float:left">
 
-**[ResultCard](/result-components/resultcard.html)** displays the results in a card layout.
-</p>
-
-### ReactiveList
-
-<p>
-<img src="https://imgur.com/PCBwK7t.png" style="float:left">
-
-**[ReactiveList](/result-components/reactivelist.html)** displays the results in a configurable list layout. This is a more flexible display component (used internally by both ResultList and ResultCard) that allows more customization than ResultList and ResultCard.
+**[ResultCard](/result-components/resultcard.html)** displays a particular result card item.
 </p>
 
 ### ReactiveComponent

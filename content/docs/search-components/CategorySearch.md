@@ -6,7 +6,7 @@ sectionid: docs
 permalink: search-components/categorysearch.html
 prev: search-components/datasearch.html
 prevTitle: "DataSearch"
-next: result-components/resultlist.html
+next: result-components/reactivelist.html
 nextTitle: "Result Components: ResultList"
 redirect_from:
     - 'search-components'

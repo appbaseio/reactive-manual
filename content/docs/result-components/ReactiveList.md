@@ -275,7 +275,7 @@ Read more about it [here](/theming/class.html).
     - **`streamData`**: `array`
         An array of results streamed since the applied query, aka realtime data. Here, a meta property `_updated` or `_deleted` is also present within a result object to denote if an existing object has been updated or deleted.
     - **`promotedData`**: `array`
-        An array of promoted results obtained from the applied query.[Read More](https://docs.appbase.io/concepts/query-rules.html#part-1-introduction)
+        An array of promoted results obtained from the applied query. [Read More](https://docs.appbase.io/concepts/query-rules.html#part-1-introduction)
     > Note:
     >
     > `data`, `streamData` and `promotedData` results has a property called `_click_id` which can be used with triggerAnalytics to register the click analytics info.
