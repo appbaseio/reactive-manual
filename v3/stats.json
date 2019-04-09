@@ -69,8 +69,8 @@
       "path---list-components-singlelist-html-a0c8735528d569a2a3b0.js.map"
     ],
     "component---src-templates-tutorial-js": [
-      "component---src-templates-tutorial-js-2c2f7782bbdf845d6203.js",
-      "component---src-templates-tutorial-js-2c2f7782bbdf845d6203.js.map"
+      "component---src-templates-tutorial-js-c40b0905557bcc5fb973.js",
+      "component---src-templates-tutorial-js-c40b0905557bcc5fb973.js.map"
     ],
     "path---advanced-customsuggestions-html": [
       "path---advanced-customsuggestions-html-4ebb397c6e360f8ec0fc.js",
@@ -113,8 +113,8 @@
       "path---range-components-daterange-html-da4edccba627db3a2a4e.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-8792129f9e717764f0ea.js",
-      "component---src-layouts-index-js-8792129f9e717764f0ea.js.map"
+      "component---src-layouts-index-js-815eef3a6f306bee090e.js",
+      "component---src-layouts-index-js-815eef3a6f306bee090e.js.map"
     ],
     "path---list-components-tagcloud-html": [
       "path---list-components-tagcloud-html-240ccf0e854ee3323a51.js",
@@ -239,9 +239,9 @@
       "path---getting-started-componentsindex-html-10dd7f4172883a1e5f29.js.map"
     ],
     "app": [
-      "app-8d8740603bfc1ea51656.js",
+      "app-06df558fc6d8a05a7e28.js",
       "build-js-styles.css",
-      "app-8d8740603bfc1ea51656.js.map",
+      "app-06df558fc6d8a05a7e28.js.map",
       "build-js-styles.css.map"
     ],
     "path---theming-class-html": [
@@ -249,8 +249,8 @@
       "path---theming-class-html-7cf029a59d8249bc7b63.js.map"
     ],
     "component---src-templates-docs-js": [
-      "component---src-templates-docs-js-a2b14198982042adf15e.js",
-      "component---src-templates-docs-js-a2b14198982042adf15e.js.map"
+      "component---src-templates-docs-js-6dae697673f0c21264d4.js",
+      "component---src-templates-docs-js-6dae697673f0c21264d4.js.map"
     ],
     "path---range-components-dynamicrangeslider-html": [
       "path---range-components-dynamicrangeslider-html-3b56c2ff892ad038d4ab.js",
@@ -277,8 +277,8 @@
       "component---src-pages-blog-all-html-js-4e8968908d11397a30ea.js.map"
     ],
     "component---src-templates-home-js": [
-      "component---src-templates-home-js-73d1bd5ba2f02b925d91.js",
-      "component---src-templates-home-js-73d1bd5ba2f02b925d91.js.map"
+      "component---src-templates-home-js-0047896aa7ff794a2144.js",
+      "component---src-templates-home-js-0047896aa7ff794a2144.js.map"
     ]
   }
 }
