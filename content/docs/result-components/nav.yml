@@ -1,5 +1,38 @@
 - title: Result Components
   items:
+    - id: reactivelist
+      title: ReactiveList
+      href: /result-components/reactivelist.html
+      forceInternal: true
+      subitems:
+        - id: usage
+          title: Usage
+          href: /result-components/reactivelist.html#usage
+          forceInternal: true
+        - id: props
+          title: Props
+          href: /result-components/reactivelist.html#props
+          forceInternal: true
+        - id: sub-components
+          title: Sub Components
+          href: /result-components/reactivelist.html#sub-components
+          forceInternal: true
+        - id: demo
+          title: Demo
+          href: /result-components/reactivelist.html#demo
+          forceInternal: true
+        - id: styles
+          title: Styles
+          href: /result-components/reactivelist.html#styles
+          forceInternal: true
+        - id: extending
+          title: Extending
+          href: /result-components/reactivelist.html#extending
+          forceInternal: true
+        - id: examples
+          title: Examples
+          href: /result-components/reactivelist.html#examples
+          forceInternal: true
     - id: resultlist
       title: ResultList
       href: /result-components/resultlist.html
@@ -49,37 +82,4 @@
         - id: examples
           title: Examples
           href: /result-components/resultcard.html#examples
-          forceInternal: true
-    - id: reactivelist
-      title: ReactiveList
-      href: /result-components/reactivelist.html
-      forceInternal: true
-      subitems:
-        - id: usage
-          title: Usage
-          href: /result-components/reactivelist.html#usage
-          forceInternal: true
-        - id: props
-          title: Props
-          href: /result-components/reactivelist.html#props
-          forceInternal: true
-        - id: sub-components
-          title: Sub Components
-          href: /result-components/reactivelist.html#sub-components
-          forceInternal: true
-        - id: demo
-          title: Demo
-          href: /result-components/reactivelist.html#demo
-          forceInternal: true
-        - id: styles
-          title: Styles
-          href: /result-components/reactivelist.html#styles
-          forceInternal: true
-        - id: extending
-          title: Extending
-          href: /result-components/reactivelist.html#extending
-          forceInternal: true
-        - id: examples
-          title: Examples
-          href: /result-components/reactivelist.html#examples
           forceInternal: true

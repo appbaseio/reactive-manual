@@ -178,7 +178,7 @@ class SearchBox extends Component {
         onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
         onSuggestionsClearRequested={this.onSuggestionsClearRequested}
         getSuggestionValue={getSuggestionValue}
-        parseSuggestion={parseSuggestion}
+        renderSuggestion={parseSuggestion}
         inputProps={inputProps}
         onSuggestionSelected={this.onSuggestionSelected}
         renderInputComponent={renderInputComponent}
