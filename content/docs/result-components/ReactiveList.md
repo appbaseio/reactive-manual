@@ -173,7 +173,7 @@ Example uses:
     renderResultStats={
             function(stats){
                 return (
-                    `Showing ${stats.displayedResults} of total ${stats.totalResults} in ${stats.time} ms`
+                    `Showing ${stats.displayedResults} of total ${stats.numberOfResults} in ${stats.time} ms`
                 )   
             }
         }
