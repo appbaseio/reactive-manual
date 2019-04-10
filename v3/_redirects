@@ -4,6 +4,10 @@
 
 /reactive-manual/v3/componentsindex  /reactive-manual/v3/getting-started/componentsindex.html  302
 /reactive-manual/v3/components  /reactive-manual/v3/getting-started/componentsindex.html  302
+/reactive-manual/v3/getting-started/maps  /reactive-manual/v3/getting-started/reactivemaps.html  302
+/reactive-manual/v3/getting-started/reactivemaps  /reactive-manual/v3/getting-started/reactivemaps.html  302
+/reactive-manual/v3/quickstart/maps  /reactive-manual/v3/getting-started/reactivemaps.html  302
+/reactive-manual/v3/quickstart/reactivemaps  /reactive-manual/v3/getting-started/reactivemaps.html  302
 /reactive-manual/v3/getting-started/  /reactive-manual/v3/getting-started/reactivesearch.html  302
 /reactive-manual/v3/getting-started/reactivesearch  /reactive-manual/v3/getting-started/reactivesearch.html  302
 /reactive-manual/v3/install  /reactive-manual/v3/getting-started/reactivesearch.html  302
@@ -12,10 +16,6 @@
 /reactive-manual/v3/advanced/analytics  /reactive-manual/v3/advanced/analytics.html  302
 /reactive-manual/v3/comparison  /reactive-manual/v3/advanced/comparison.html  302
 /reactive-manual/v3/advanced/comparison  /reactive-manual/v3/advanced/comparison.html  302
-/reactive-manual/v3/getting-started/maps  /reactive-manual/v3/getting-started/reactivemaps.html  302
-/reactive-manual/v3/getting-started/reactivemaps  /reactive-manual/v3/getting-started/reactivemaps.html  302
-/reactive-manual/v3/quickstart/maps  /reactive-manual/v3/getting-started/reactivemaps.html  302
-/reactive-manual/v3/quickstart/reactivemaps  /reactive-manual/v3/getting-started/reactivemaps.html  302
 /reactive-manual/v3/componentsusage  /reactive-manual/v3/advanced/componentsusage.html  302
 /reactive-manual/v3/advanced/componentsusage  /reactive-manual/v3/advanced/componentsusage.html  302
 /reactive-manual/v3/advanced  /reactive-manual/v3/advanced/customsuggestions.html  302
