@@ -56,7 +56,7 @@ Example uses:
       "end": "20 mi"
     }
   }
-  defaultSelected={{
+  defaultValue={{
     "location": "London, UK",
     "distance": 12
   }}
@@ -84,10 +84,14 @@ Example uses:
     an object with `start` and `end` keys and corresponding numeric values denoting the minimum and maximum possible slider values.
 - **rangeLabels** `Object` [optional]  
     an object with `start` and `end` keys and corresponding `String` labels to show labels near the ends of the `GeoDistanceSlider` component.
-- **defaultSelected** `Object` [optional]  
+- **defaultValue** `Object` [optional]  
     pre-select the search query with `location` option and distance with `distance` option.
 - **placeholder** `String` [optional]  
-    set the placeholder to show in the location search box, useful when no option is `defaultSelected`.
+    set the placeholder to show in the location search box, useful when no option is `defaultValue`.
+- **value** `Object` [optional]  
+    controls the current value of the component. It sets the location & distance (on mount and on update). Use this prop in conjunction with `onChange` function.
+- **onChange** `function` [optional]  
+    is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.  
 - **showIcon** `Boolean` [optional]
     whether to display a search or custom icon in the input box. Defaults to `true`.
 - **iconPosition** `String` [optional]
