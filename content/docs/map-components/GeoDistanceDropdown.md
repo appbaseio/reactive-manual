@@ -51,7 +51,7 @@ Example uses:
       { "distance": 100, "label": "< 100 miles" },
     ]
   }
-  defaultSelected={{
+  defaultValue={{
     location: "London, UK"
     label: "< 100 miles"
   }}
@@ -77,10 +77,14 @@ Example uses:
     collection of UI `labels` with associated `distance` value.
 - **title** `String or JSX` [optional]  
     title of the component to be shown in the UI.
-- **defaultSelected** `Object` [optional]  
+- **defaultValue** `Object` [optional]  
     pre-select values of the search query with `label` and `location` keys.
 - **placeholder** `String` [optional]  
-    set the placeholder to show in the location search box, useful when no option is `defaultSelected`.
+    set the placeholder to show in the location search box, useful when no option is `defaultValue`.
+- **value** `Object` [optional]  
+    controls the current value of the component. It sets the item from the list & also sets the location (on mount and on update). Use this prop in conjunction with `onChange` function.
+- **onChange** `function` [optional]  
+    is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.  
 - **showIcon** `Boolean` [optional]
     whether to display a search or custom icon in the input box. Defaults to `true`.
 - **iconPosition** `String` [optional]
