@@ -43,7 +43,10 @@ Example uses:
   dataField={["group_venue", "group_city"]}
   categoryField="group_topics"
   title="Search"
-  defaultValue="Music"
+  defaultValue={{
+      term: 'Paris',
+      category: '*'
+  }}
   fieldWeights={[1, 3]}
   placeholder="Search for cities or venues"
   autoSuggest={true}
@@ -74,10 +77,21 @@ Example uses:
     data field which has the category values mapped.
 - **title** `String or JSX` [optional]  
     Sets the title of the component to be shown in the UI.
-- **defaultValue** `string` [optional]  
-    set the initial search query text on mount.
-- **value** `string` [optional]  
-    controls the current value of the component. It sets the search query text (on mount and on update). Use this prop in conjunction with `onChange` function.
+- **defaultValue** `Object` [optional]  
+    set the initial search query text on mount & the category.
+- **value** `Object` [optional]  
+    controls the current value of the component. It sets the search query text & the category (on mount and on update). Use this prop in conjunction with `onChange` function. Usage: 
+```jsx
+    <CategorySearch
+        {...searchProps}
+        value={{
+            term: 'Harry',
+            category: '*',
+        }}
+    />
+```
+- **onChange** `function` [optional]  
+    is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
 - **downShiftProps** `Object` [optional]  
     allow passing props directly to `Downshift` component. You can read more about Downshift props [here](https://github.com/paypal/downshift#--downshift-------).
 - **fieldWeights** `Array` [optional]  
@@ -256,8 +270,6 @@ Or you can also use render function as children
         )
     }
     ```
-- **onChange** `function` [optional]  
-    is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
 - **onSuggestions** `Function` [optional]
     You can pass a callback function to listen for the changes in suggestions.The function receives `suggestions` list.
 - **onError** `Function` [optional]  
