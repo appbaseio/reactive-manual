@@ -16,7 +16,7 @@ redirect_from:
 
 ![Image to be displayed](https://i.imgur.com/KnrGoRk.png)
 
-`ResultList` creates a result card UI component for a particular result item, it can be used with `ReactiveList` to display results in a card layout, suited for data that have an associated image.
+`ResultCard` creates a card UI component for a particular result item, it can be used with `ReactiveList` to display results in a card layout, suited for data that have an associated image.
 
 Example uses:
 
@@ -32,8 +32,8 @@ Example uses:
 ### Basic Usage
 
 ```js
-import { 
-    ReactiveList, 
+import {
+    ReactiveList,
     ResultCard
 } from '@appbaseio/reactivesearch';
 
@@ -52,10 +52,10 @@ const { ResultCardWrapper } = ReactiveList;
                 data.map(item => (
                     <ResultCard key={item._id}>
                         <ResultCard.Image src={item.image}/>
-                        <ResultCard.Title 
-                            dangerouslySetInnerHTML={{ 
-                                __html: item.original_title 
-                            }} 
+                        <ResultCard.Title
+                            dangerouslySetInnerHTML={{
+                                __html: item.original_title
+                            }}
                         />
                         <ResultCard.Description>
                             <div>
@@ -77,25 +77,25 @@ const { ResultCardWrapper } = ReactiveList;
 ```
 
 ## Props
-- **target** `string` [optional]    
+- **target** `string` [optional]
     This prop is equivalent to the `target` attribute of html `a` tags. It defaults to `_blank`.
-- **href** `string` [optional]    
+- **href** `string` [optional]
     can be used to specify the URL of the page the link goes to
 
 > Note
 >
-> ResultCard component accepts all the properties of html `a` tag. 
+> ResultCard component accepts all the properties of html `a` tag.
 
 ## Sub Components
-- **Image**     
-    use it to render the result card image.  
+- **Image**
+    use it to render the result card image.
     <br/>
-    The `ResultCard.Image` accepts the following props: 
-    - **`src`**: `string`    
+    The `ResultCard.Image` accepts the following props:
+    - **`src`**: `string`
         source url of the image
-- **Title**     
+- **Title**
     renders the title of the result card.
-- **Description**     
+- **Description**
     can be used to render the result card description UI.
 
 ## Demo

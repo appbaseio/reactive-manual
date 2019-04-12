@@ -16,7 +16,7 @@ redirect_from:
 
 ![Image to be displayed](https://i.imgur.com/iY2csRm.png)
 
-`ResultList` creates a result list UI component for a particular result item, it can be used with `ReactiveList` to display results in a list layout, suited for data that needs a compact display.
+`ResultList` creates a list UI component for a particular result item, it can be used with `ReactiveList` to display results in a list layout, suited for data that needs a compact display.
 
 Example uses:
 
@@ -32,8 +32,8 @@ Example uses:
 ### Basic Usage
 
 ```js
-import { 
-    ReactiveList, 
+import {
+    ReactiveList,
     ResultList
 } from '@appbaseio/reactivesearch';
 
@@ -53,10 +53,10 @@ const { ResultListWrapper } = ReactiveList;
                     <ResultList key={item._id}>
                         <ResultList.Image src={item.image} />
                         <ResultList.Content>
-                            <ResultList.Title 
-                                dangerouslySetInnerHTML={{ 
-                                    __html: item.original_title 
-                                }} 
+                            <ResultList.Title
+                                dangerouslySetInnerHTML={{
+                                    __html: item.original_title
+                                }}
                             />
                             <ResultList.Description>
                                 <div>
@@ -79,29 +79,29 @@ const { ResultListWrapper } = ReactiveList;
 ```
 
 ## Props
-- **target** `string` [optional]    
+- **target** `string` [optional]
     This prop is equivalent to the `target` attribute of html `a` tags. It defaults to `_blank`.
-- **href** `string` [optional]    
+- **href** `string` [optional]
     can be used to specify the URL of the page the link goes to
 
 > Note
 >
-> ResultList component accepts all the properties of html `a` tag.  
+> ResultList component accepts all the properties of html `a` tag.
 
 ## Sub Components
-- **Image**     
-    use it to render the result list image.  
+- **Image**
+    use it to render the result list image.
     <br/>
-    The `ResultList.Image` accepts the following properties: 
-    - **`src`**: `string`    
+    The `ResultList.Image` accepts the following properties:
+    - **`src`**: `string`
         source url of the image
-    - **`small`**: `boolean`    
+    - **`small`**: `boolean`
         defaults to `false`, if `true` then renders an image of small size.
-- **Content**     
+- **Content**
     use it to wrap the result list content other than image.
-- **Title**     
+- **Title**
     renders the title of the result list.
-- **Description**     
+- **Description**
     can be used to render the result list description UI.
 
 ## Demo
