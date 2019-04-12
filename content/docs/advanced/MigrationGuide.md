@@ -26,7 +26,7 @@ You can now customise the looks and behaviors of your components in much more fl
 
 - #### Result Components
 
-In **v3**, you will need to use `renderData` & `renderAllData` to custom render the result UI.
+In **v3**, you will need to use `renderItem` & `render` to custom render the result UI.
 
 > We've removed rendering support with `onData` and `onAllData`. Although onData still exists to enable side-effects handling on new data transmissions. They act as callback props which gets triggered whenever there is a change in the data.
 
@@ -48,7 +48,7 @@ In **v3**, you will need to use `renderData` & `renderAllData` to custom render 
         "and": ["CitySensor", "SearchSensor"]
     }}
     componentId="SearchResult"
-    renderData={(res) => <div>{res.title}</div>}
+    renderItem={(res) => <div>{res.title}</div>}
 />
 ```
 
@@ -73,7 +73,7 @@ To allow managing the side-effects on error occurrence, we also support `onError
 
 - #### Search Components
 
-In **v3**, we have added support for `renderSuggestion` & `renderAllSuggestions` to customise the rendering of suggestions in the search components. This can effectively help you render custom UI in place of vanilla suggestions. We also support `onSuggestion` prop which can be used to listen for the changes in suggestions & trigger side effects if required.
+In **v3**, we have added support for `parseSuggestion` & `render` to customise the rendering of suggestions in the search components. This can effectively help you render custom UI in place of vanilla suggestions. We also support `onSuggestion` prop which can be used to listen for the changes in suggestions & trigger side effects if required.
 
 **v2.x:**
 ```js
@@ -97,7 +97,7 @@ In **v3**, we have added support for `renderSuggestion` & `renderAllSuggestions`
 ```js{3,15}
 <DataSearch
   ...
-  renderSuggestion={(suggestion) => ({
+  parseSuggestion={(suggestion) => ({
     label: (
             <div>
                 {suggestion._source.original_title} by
@@ -107,7 +107,7 @@ In **v3**, we have added support for `renderSuggestion` & `renderAllSuggestions`
             </div>
         ),
     value: suggestion._source.original_title,
-    source: suggestion._source  // for onValueSelected to work with renderSuggestion
+    source: suggestion._source  // for onValueSelected to work with parseSuggestion
   })}
   renderNoSuggestion={() => <div>No Suggestions for the search term!</div>}
   />

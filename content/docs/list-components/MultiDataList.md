@@ -102,8 +102,6 @@ Example uses:
     selects initial items from the list on mount.
 - **value** `String Array` [optional]  
     controls the current value of the component. It selects the item from the list (on mount and on update). Use this prop in conjunction with `onChange` function.
-- **onChange** `function` [optional]  
-    is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
 - **selectAllLabel** `String` [optional]  
     if provided displays an additional option to select all list values.
 - **showFilter** `Boolean` [optional]  
@@ -114,12 +112,6 @@ Example uses:
     An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
-- **renderNoResults** `Function` [optional]  
-    can be used to render a message in case of no list items.
-
-    ```js
-    renderNoResults={() => <p>No Results Found!</p>}
-    ```
 - **renderItem** `Function` [optional]  
     customize the rendered list via a function which receives the item label, count & isSelected and expects a JSX or String back. For example:
     ```js
@@ -134,8 +126,44 @@ Example uses:
         </div>
     )}
     ```
-- **onError** `Function` [optional]  
-    gets triggered in case of an error and provides the `error` object, which can be used for debugging or giving feedback to the user if needed.
+- **render** `Function` [optional]  
+    an alternative callback function to `renderItem`, where user can define how to render the view based on all the data changes.
+    <br/>
+    It accepts an object with these properties:
+    - **`data`**: `array`
+        An array of results obtained from the applied query.
+    - **`value`**: `array`
+        current selected values.
+    - **`handleChange`**: `function`
+        A callback function can be used to mark the list value as selected. 
+```js
+<MultiDropdownList
+    render={({
+        data,
+        handleChange,
+    }) => data.map(item => (
+            <div onClick={() => handleChange(item.key)} key={item.key}>
+                <span>{item.key}</span>
+                <span>{item.doc_count}</span>
+            </div>
+          )
+    )}
+/>
+```
+Or you can also use render function as children
+```js
+<MultiDropdownList>
+        {
+            ({
+                data,
+                value,
+                handleChange,
+            }) => (
+                // return UI to be rendered
+            )
+        }
+</MultiDropdownList>
+```
 - **renderError** `String or JSX or Function` [optional]
     can be used to render an error message in case of any error.
     ```js
@@ -146,6 +174,16 @@ Example uses:
         )
     }
     ```
+- **renderNoResults** `Function` [optional]  
+    can be used to render a message in case of no list items.
+
+    ```js
+    renderNoResults={() => <p>No Results Found!</p>}
+    ```
+- **onChange** `function` [optional]  
+    is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
+- **onError** `Function` [optional]  
+    gets triggered in case of an error and provides the `error` object, which can be used for debugging or giving feedback to the user if needed.
 
 ## Demo
 
@@ -232,7 +270,8 @@ Read more about it [here](/theming/class.html).
     takes **value** and **props** as parameters and **returns** the data query to be applied to the component, as defined in Elasticsearch Query DSL.
     `Note:` customQuery is called on value changes in the **MultiDataList** component as long as the component is a part of `react` dependency of at least one other component.
 - **defaultQuery** `Function`   
-    takes **value** and **props** as parameters and **returns** the data query to be applied to the source component, as defined in Elasticsearch Query DSL, which doesn't get leaked to other components.
+    takes **value** and **props** as parameters and **returns** the data query to be applied to the source component, as defined in Elasticsearch Query DSL, which doesn't get leaked to other components.    
+    Read more about it [here](/advanced/customquery.html#when-to-use-default-query).
 - **beforeValueChange** `Function`    
     is a callback function which accepts component's future **value** as a parameter and **returns** a promise. It is called everytime before a component's value changes. The promise, if and when resolved, triggers the execution of the component's query and if rejected, kills the query execution. This method can act as a gatekeeper for query execution, since it only executes the query after the provided promise has been resolved.
 - **onValueChange** `Function`   

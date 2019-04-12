@@ -125,7 +125,8 @@ Next, we will look at the [**SingleRange**](/basic-components/singlerange.html) 
 Finally, we need a component to show the matching results. [**ResultCard**](/search-components/resultcard.html) does exactly this.
 
 ```js
-<ResultCard
+
+<ReactiveList
 	componentId="results"
 	dataField="name"
 	size={6}
@@ -133,13 +134,28 @@ Finally, we need a component to show the matching results. [**ResultCard**](/sea
 	react={{
 		and: ["searchbox", "ratingsfilter"]
 	}}
-	renderData={(res) => {
-		return {
-			image: 'http://www.asfera.info/files/images/1_aprela/4/deloreyn.jpg',
-			title: res.name,
-			description: res.brand + " " + "*".repeat(res.rating)
-		}
-	}}
+	render={({ data }) => (
+		<ReactiveList.ResultCardWrapper>
+            {
+                data.map(item => (
+                    <ResultCard key={item._id}>
+										<ResultCard.Image 
+											src='http://www.asfera.info/files/images/
+											1_aprela/4/deloreyn.jpg'
+										/>
+                        <ResultCard.Title 
+                            dangerouslySetInnerHTML={{ 
+                                __html: item.name 
+                            }} 
+                        />
+                        <ResultCard.Description>
+                           {item.brand + " " + "*".repeat(item.rating)}
+                        </ResultCard.Description>
+                    </ResultCard>
+                ))
+            }
+        </ReactiveList.ResultCardWrapper>
+	)}
 />
 ```
 
@@ -153,7 +169,9 @@ Now, we will put all three components together to create the UI view.
 
 ```js
 import React, { Component } from 'react';
-import { ReactiveBase, CategorySearch, SingleRange, ResultCard } from '@appbaseio/reactivesearch';
+import { 
+	ReactiveBase, CategorySearch, SingleRange, ResultCard, ReactiveList 
+} from '@appbaseio/reactivesearch';
 
 class App extends Component {
 	render() {
@@ -179,7 +197,7 @@ class App extends Component {
 						]}
 						defaultValue="4 stars and up"
 					/>
-					<ResultCard
+					<ReactiveList
 						componentId="result"
 						title="Results"
 						dataField="model"
@@ -189,13 +207,27 @@ class App extends Component {
 						react={{
 							and: ["searchbox", "ratingsfilter"]
 						}}
-						renderData={(res) => {
-							return {
-								image: "https://bit.do/demoimg",
-								title: res.model,
-								description: res.brand + " " + "★".repeat(res.rating)
-							}
-						}}
+						render={({ data }) => (
+							<ReactiveList.ResultCardWrapper>
+								{
+									data.map(item => (
+										<ResultCard key={item._id}>
+											<ResultCard.Image 
+												src='https://bit.do/demoimg'
+											/>
+											<ResultCard.Title 
+												dangerouslySetInnerHTML={{ 
+													__html: item.model 
+												}} 
+											/>
+											<ResultCard.Description>
+												{item.brand + " " + "*".repeat(item.rating)}
+											</ResultCard.Description>
+										</ResultCard>
+									))
+								}
+							</ReactiveList.ResultCardWrapper>
+						)}
 					/>
 				</ReactiveBase>
 		);
@@ -223,7 +255,7 @@ With ~16 more lines of inline styles, here is our final app layout.
 
 ```js
 import React, { Component } from 'react';
-import { ReactiveBase, CategorySearch, SingleRange, ResultCard } from '@appbaseio/reactivesearch';
+import { ReactiveBase, CategorySearch, SingleRange, ReactiveList } from '@appbaseio/reactivesearch';
 
 class App extends Component {
 	render() {
@@ -260,7 +292,7 @@ class App extends Component {
 								}}
 							/>
 						</div>
-						<ResultCard
+						<ReactiveList
 							componentId="result"
 							title="Results"
 							dataField="model"
@@ -270,17 +302,31 @@ class App extends Component {
 							react={{
 								and: ["searchbox", "ratingsfilter"]
 							}}
-							renderData={(res) => {
-								return {
-									image: "https://www.enterprise.com/content/dam/global-vehicle-images/cars/FORD_FOCU_2012-1.png",
-									title: res.model,
-									description: res.brand + " " + "★".repeat(res.rating)
-								}
-							}}
 							style={{
 								width: "60%",
 								textAlign: "center"
 							}}
+							render={({ data }) => (
+								<ReactiveList.ResultCardWrapper>
+									{
+										data.map(item => (
+											<ResultCard key={item._id}>
+												<ResultCard.Image 
+													src='https://www.enterprise.com/content/dam/global-vehicle-images/cars/FORD_FOCU_2012-1.png'
+												/>
+												<ResultCard.Title 
+													dangerouslySetInnerHTML={{ 
+														__html: item.model 
+													}} 
+												/>
+												<ResultCard.Description>
+												{item.brand + " " + "*".repeat(item.rating)}
+												</ResultCard.Description>
+											</ResultCard>
+										))
+									}
+								</ReactiveList.ResultCardWrapper>
+							)}
 						/>
 					</div>
 				</ReactiveBase>

@@ -75,8 +75,6 @@ Example uses:
     an array of default selected label(s) to pre-select one or more buttons.
 - **value** `String Array` [optional]  
     controls the current value of the component. It selects the label (on mount and on update). Use this prop in conjunction with `onChange` function.
-- **onChange** `function` [optional]  
-    is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
 - **multiSelect** `Boolean` [optional]  
     whether multiple buttons can be selected, defaults to **true**. When set to **false**, only one button can be selected.
 - **showFilter** `Boolean` [optional]  
@@ -85,6 +83,8 @@ Example uses:
     An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
+- **onChange** `function` [optional]  
+    is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
 
 ## Demo
 

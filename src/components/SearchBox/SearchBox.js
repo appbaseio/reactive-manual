@@ -52,7 +52,7 @@ const getSuggestionValue = suggestion =>
     : ''}${suggestion.title}`;
 
 // Use your imagination to render suggestions.
-const renderSuggestion = suggestion => (
+const parseSuggestion = suggestion => (
   <div
     css={{
       display: 'flex',
@@ -178,7 +178,7 @@ class SearchBox extends Component {
         onSuggestionsFetchRequested={this.onSuggestionsFetchRequested}
         onSuggestionsClearRequested={this.onSuggestionsClearRequested}
         getSuggestionValue={getSuggestionValue}
-        renderSuggestion={renderSuggestion}
+        renderSuggestion={parseSuggestion}
         inputProps={inputProps}
         onSuggestionSelected={this.onSuggestionSelected}
         renderInputComponent={renderInputComponent}

@@ -48,12 +48,19 @@ Now, let's assume that we have all these hex-codes stored as `keywords` in an El
             }
         }
     })}
->
-    <ColorPickerWrapper />
-</ReactiveComponent>
+    render={({ aggregations, setQuery }) => (
+            <ColorPickerWrapper 
+                aggregations={aggregations} 
+                setQuery={setQuery}
+            />
+        )}
+/>
 ```
+> Note
+>  
+> It is also possible to use render function as children
 
-The above snippet runs the `defaultQuery` passed to the ReactiveComponent when the component gets mounted and consequently pass the query results to the `ColorPickerWraper` component (i.e. child component of ReactiveComponent) as the following two props: `hits` and `aggregations`.
+The above snippet runs the `defaultQuery` passed to the ReactiveComponent when the component gets mounted and consequently pass the query results to the `ColorPickerWraper` component (i.e. child component of ReactiveComponent) as the following two props: `data` and `aggregations`.
 
 ```javascript
 class ColorPickerWrapper extends React.Component {
@@ -147,13 +154,16 @@ We can then use the given ReactiveComponent to be watched by all the filters (vi
 
 Check demo [here](https://codesandbox.io/s/3ylrrr0r5q).
 
+#### Parameters available in render prop function
 
-### Props
-
-#### Child Component
-
-- **hits** `Array`  
-    `hits` prop is an array of results from the Elasticsearch query of the component.
+- **loading** `boolean`
+    indicates that the query is still in progress
+- **error**: `object`
+    An object containing the error info
+- **data** `Array`  
+    `data` prop is an array of parsed results(hits) from the Elasticsearch query of the component.
+- **rawData** `Array`  
+    `rawData` prop is an array of original results(hits) from the Elasticsearch query of the component.
 - **aggregations** `Object`     
     `aggregations` prop contains the results from `aggs` Elasticsearch query of the component.
 - **setQuery** `function`   
@@ -164,15 +174,11 @@ Check demo [here](https://codesandbox.io/s/3ylrrr0r5q).
         value: ''  // value of the component
     }
 ```
-- **selectedValue** `any`   
-`selectedValue` contains the current value of the component (which can be set via `setQuery()` function). This is used for URLParams and SelectedFilters.
-- **isLoading** `Boolean`
-    `true` means the query is in the execution state.
-- **error** `any`
-    contains the error details in case of any error.
+- **value** `any`   
+`value` contains the current value of the component (which can be set via `setQuery()` function). This is used for URLParams and SelectedFilters.
 
 
-#### ReactiveComponent
+### Props
  
 - **className** `String`  
     CSS class to be injected on the component container.
@@ -180,6 +186,9 @@ Check demo [here](https://codesandbox.io/s/3ylrrr0r5q).
     CSS styles to be applied to the **DataSearch** component.
 - **defaultQuery** `Function`  
     **returns** the default query to be applied to the component, as defined in Elasticsearch Query DSL.
+- **customQuery** `Function`  
+    **returns** the custom query to be applied to the component, as defined in Elasticsearch Query DSL.
+    Custom query can be used to change the component's behavior for its subscribers.
 - **onQueryChange** `Function`  
     is a callback function which accepts component's **prevQuery** and **nextQuery** as parameters. It is called everytime the component's query changes. This prop is handy in cases where you want to generate a side-effect whenever the component's query would change.
 - **onAllData** `Function`  

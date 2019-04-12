@@ -77,8 +77,6 @@ Example uses:
     pre-select tag(s) from the tag cloud. An Array is accepted when *multiSelect* mode is enabled.
 - **value** `String Array` [optional]  
     controls the current value of the component. It selects the tag from the available tags (on mount and on update). Use this prop in conjunction with `onChange` function.
-- **onChange** `function` [optional]  
-    is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
 - **queryFormat** `String` [optional]   
     sets whether to show results as a union with `"or"` (default) or an intersection with `"and"`. For example, if two tags are selected, say "Guitars" and "Electric Guitars" then with a `queryFormat` of "or" you would get results for both the tags. With a `queryFormat` of "and" you would get more specific results for guitars which satisfy both the tags.
 - **showFilter** `Boolean` [optional]  
@@ -87,8 +85,6 @@ Example uses:
     An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
 - **URLParams** `Boolean` [optional]  
     enable creating a URL query string parameter based on the selected value of the tag(s). This is useful for sharing URLs with the component state. Defaults to `false`.
-- **onError** `Function` [optional]  
-    gets triggered in case of an error and provides the `error` object, which can be used for debugging or giving feedback to the user if needed.
 - **renderError** `String or JSX or Function` [optional]
     can be used to render an error message in case of any error.
     ```js
@@ -98,6 +94,10 @@ renderError={(error) =>
         </div>
 }
     ```
+- **onChange** `function` [optional]  
+    is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
+- **onError** `Function` [optional]  
+    gets triggered in case of an error and provides the `error` object, which can be used for debugging or giving feedback to the user if needed.
 
 ## Demo
 
