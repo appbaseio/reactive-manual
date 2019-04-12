@@ -141,6 +141,7 @@ renderData={result => ({
     custom: (<div>{result.mag}</div>),
 })}
 ```
+
 - **renderAllData** `function`  
     use to display results and map component together. Usage:
 ```js
@@ -158,6 +159,20 @@ renderData={result => ({
         )
     }
 ```
+
+- **renderError** `String or JSX or Function` [optional]
+    can be used to render an error message in case of any error.
+
+```js
+renderError={(error) => (
+        <div>
+            Something went wrong!<br/>Error details<br/>{error}
+        </div>
+    )
+}
+```
+- **onError** `Function` [optional]  
+    gets triggered in case of an error and provides the `error` object, which can be used for debugging or giving feedback to the user if needed.
 
 
 ## Demo

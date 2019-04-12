@@ -83,8 +83,6 @@ Example uses:
     select one or more options from the dropdown list on mount. Accepts an `Array` object containing the items that should be selected.
 - **value** `String Array` [optional]  
     controls the current value of the component. It selects the item from the list (on mount and on update). Use this prop in conjunction with `onChange` function.
-- **onChange** `function` [optional]  
-    is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
 - **queryFormat** `String` [optional]  
     queries the selected items from the list in one of two modes: `or`, `and`.
     * Defaults to `or` which queries for results where any of the selected list items are present.
@@ -93,39 +91,6 @@ Example uses:
     show count of number of occurences besides an item. Defaults to `true`.
 - **showSearch** `Boolean` [optional]  
     whether to show a searchbox to filter the list items locally. Defaults to `false`.
-- **renderItem** `Function` [optional]  
-    customize the rendered list via a function which receives the item label, count & isSelected and expects a JSX or String back. For example:
-    ```js
-    renderItem={(label, count, isSelected) => (
-        <div>
-            {label}
-            <span style={{
-                marginLeft: 5, color: isSelected ? 'red' : 'dodgerblue' 
-            }}>
-                {count}
-            </span>
-        </div>
-    )}
-    ```
-- **onError** `Function` [optional]  
-    gets triggered in case of an error and provides the `error` object, which can be used for debugging or giving feedback to the user if needed.
-- **renderNoResults** `Function` [optional]  
-    can be used to render a message in case of no list items.
-
-    ```js
-    renderNoResults={() => <p>No Results Found!</p>}
-    ```
-- **renderError** `String or JSX or Function` [optional]
-    can be used to render an error message in case of any error.
-    ```js
-    renderError={(error) => (
-            <div>
-                Something went wrong!<br/>Error details<br/>{error}
-            </div>
-        )
-    }
-    ```
-
 - **transformData** `Function` [optional]  
     allows transforming the data to render inside the list. You can change the order, remove, or add items, tranform their values with this method. It provides the data as param which is an array of objects of shape `{ key: <string>, doc_count: <number> }` and expects you to return the array of objects of same shape.
 - **showMissing** `Boolean` [optional]  
@@ -144,7 +109,101 @@ Example uses:
     defaults to `false` and works only with elasticsearch >= 6 since it uses [composite aggregations](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-composite-aggregation.html). This adds a "Load More" button to load the aggs on demand combined with the `size` prop. Composite aggregations are in beta and this is an experimental API which might change in a future release. 
     
    `Note`: Composite aggregations do not support sorting by `count`. Hence with `showLoadMore`, you can only sort by: `asc` or `desc` order. `sortBy` prop defaults to `asc` when `showLoadMore` prop is used.
+- **renderItem** `Function` [optional]  
+    customize the rendered list via a function which receives the item label, count & isSelected and expects a JSX or String back. For example:
+    ```js
+    renderItem={(label, count, isSelected) => (
+        <div>
+            {label}
+            <span style={{
+                marginLeft: 5, color: isSelected ? 'red' : 'dodgerblue' 
+            }}>
+                {count}
+            </span>
+        </div>
+    )}
+    ```
+- **render** `Function` [optional]  
+    an alternative callback function to `renderItem`, where user can define how to render the view based on all the data changes.
+    <br/>
+    It accepts an object with these properties:
+    - **`loading`**: `boolean` 
+        indicates that the query is still in progress
+    - **`error`**: `object`
+        An object containing the error info
+    - **`data`**: `array`
+        An array of results obtained from the applied query.
+    - **`value`**: `array`
+        current selected values.
+    - **`handleChange`**: `function`
+        A callback function can be used to mark the list value as selected. 
+    - **`downshiftProps`**: `object`    
+        provides all the control props from `downshift` which can be used to bind list items with click/mouse events.    
+        Read more about it [here](https://github.com/downshift-js/downshift#children-function).
+```js
+<MultiDropdownList
+        render={({
+            loading,
+            error,
+            data,
+            handleChange,
+        }) => {
+            if(loading) { 
+                return <div>Fetching Results.</div>
+            }
+            if(error) {
+                return (
+                    <div>
+                        Something went wrong! Error details {JSON.stringify(error)}
+                    </div>
+                )
+            }
+            return data.map(item => (
+                <div onClick={() => handleChange(item.key)} key={item.key}>
+                    <span>{item.key}</span>
+                    <span>{item.doc_count}</span>
+                </div>
+            ))
+        }}
+/>
+```
+Or you can also use render function as children
+```js
+<MultiDropdownList>
+        {
+            ({
+                loading,
+                error,
+                data,
+                value,
+                handleChange,
+                downshiftProps
+            }) => (
+                // return UI to be rendered
+            )
+        }
+</MultiDropdownList>
+```
+- **renderError** `String or JSX or Function` [optional]
+    can be used to render an error message in case of any error.
+    ```js
+    renderError={(error) => (
+            <div>
+                Something went wrong!<br/>Error details<br/>{error}
+            </div>
+        )
+    }
+    ```
+- **renderNoResults** `Function` [optional]  
+    can be used to render a message in case of no list items.
 
+    ```js
+    renderNoResults={() => <p>No Results Found!</p>}
+    ```
+- **onChange** `function` [optional]  
+    is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
+- **onError** `Function` [optional]  
+    gets triggered in case of an error and provides the `error` object, which can be used for debugging or giving feedback to the user if needed.
 ## Demo
 
 <br />
@@ -235,7 +294,8 @@ Read more about it [here](/theming/class.html).
     takes **value** and **props** as parameters and **returns** the data query to be applied to the component, as defined in Elasticsearch Query DSL.
     `Note:` customQuery is called on value changes in the **MultiDropdownList** component as long as the component is a part of `react` dependency of at least one other component.
 - **defaultQuery** `Function`
-    takes **value** and **props** as parameters and **returns** the data query to be applied to the source component, as defined in Elasticsearch Query DSL, which doesn't get leaked to other components.
+    takes **value** and **props** as parameters and **returns** the data query to be applied to the source component, as defined in Elasticsearch Query DSL, which doesn't get leaked to other components.    
+    Read more about it [here](/advanced/customquery.html#when-to-use-default-query).
 - **beforeValueChange** `Function`  
     is a callback function which accepts component's future **value** as a parameter and **returns** a promise. It is called everytime before a component's value changes. The promise, if and when resolved, triggers the execution of the component's query and if rejected, kills the query execution. This method can act as a gatekeeper for query execution, since it only executes the query after the provided promise has been resolved.
 - **onValueChange** `Function`  

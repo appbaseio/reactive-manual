@@ -174,6 +174,6 @@ Once you have added the **ReactiveBase** component, you can get started with add
 * Range specific components can be found  [here](/list-components/singlerange.html).
 * Search specific components can be found [here](/search-components/datasearch.html).
 * Result specific components can be found
-[here](/result-components/resultlist.html).
+[here](/result-components/reactivelist.html).
 
 You can read more about when to use which components in the overview guide [here](/getting-started/ComponentsIndex.html).

@@ -31,11 +31,11 @@ Example uses:
 
 ```js
 <ReactiveList
-  componentId="SearchResult"
-  react={{
-    "and": ["CitySensor", "SearchSensor"]
-  }}
-  renderData={(res) => <div>{res.title}</div>}
+    componentId="SearchResult"
+    react={{
+        "and": ["CitySensor", "SearchSensor"]
+    }}
+    renderItem={(res) => <div>{res.title}</div>}
 />
 ```
 
@@ -43,27 +43,27 @@ Example uses:
 
 ```js
 <ReactiveList
-  componentId="SearchResult"
-  dataField="ratings"
-  stream={true}
-  pagination={false}
-  paginationAt="bottom"
-  pages={5}
-  sortBy="desc"
-  size={10}
-  loader="Loading Results.."
-  showResultStats={true}
-  renderData={(res) => <div>{res.title}</div>}
-  renderResultStats={
-      function(stats){
-          return (
-              `Showing ${stats.displayedResults} of total ${stats.totalResults} in ${stats.time} ms`
-          )   
-      }
-  }
-  react={{
-    and: ["CitySensor", "SearchSensor"]
-  }}
+    componentId="SearchResult"
+    dataField="ratings"
+    stream={true}
+    pagination={false}
+    paginationAt="bottom"
+    pages={5}
+    sortBy="desc"
+    size={10}
+    loader="Loading Results.."
+    showResultStats={true}
+    renderItem={(res) => <div>{res.title}</div>}
+    renderResultStats={
+        function(stats){
+            return (
+                `Showing ${stats.displayedResults} of total ${stats.numberOfResults} in ${stats.time} ms`
+            )   
+        }
+    }
+    react={{
+        and: ["CitySensor", "SearchSensor"]
+    }}
 />
 ```
 
@@ -84,20 +84,13 @@ Example uses:
 - **scrollOnChange** `Boolean` [optional]  
     Enables you to customise the window scrolling experience on query change. Defaults to `true` i.e. The window will scroll to top in case of the query change, which can be triggered by change in pagination, change in filters or search value, etc. When set to `false`, scroll position will stay intact.
 - **pagination** `Boolean` [optional]  
-    pagination <> infinite scroll switcher. Defaults to `false`, i.e. an infinite scroll based view. When set to `true`, a pagination based list view with page numbers will appear.
+    Defaults to `false`, When set to `true`, a pagination based list view with page numbers will appear.
+- **infiniteScroll** `Boolean` [optional]
+    Defaults to `true`, When set to `true`, an infinite scroll based view will appear.
 - **paginationAt** `String` [optional]  
     Determines the position where to show the pagination, only applicable when **pagination** prop is set to `true`. Accepts one of `top`, `bottom` or `both` as valid values. Defaults to `bottom`.
 - **pages** `Number` [optional]  
     number of user selectable pages to be displayed when pagination is enabled. Defaults to 5.
-- **onPageChange** `Function` [optional]  
-    executes when the current page is changed. If not defined, `window` will be scrolled to the top of the page.
-- **onPageClick** `Function` [optional]  
-    accepts a function which is invoked with the updated page value when a pagination button is clicked. For example if 'Next' is clicked with the current page number as '1', you would receive the value '2' as the function parameter.
-
-> Note:
->
-> The fundamental difference between `onPageChange` and `onPageClick` is that `onPageClick` is only called on a manual interaction with the pagination buttons, whereas, `onPageChange` would also be invoked if some other side effects caused the results to update which includes updating filters, queries or changing pages. The behaviour of these two may change in the future versions as we come up with a better API.
-
 - **sortBy** `String` [optional]  
     sort the results by either `asc` or `desc` order. It is an alternative to `sortOptions`, both can't be used together.
 - **sortOptions** `Object Array` [optional]  
@@ -113,30 +106,17 @@ Example uses:
     display to show the user while the data is loading, accepts `String` or `JSX` markup.
 - **showResultStats** `Boolean` [optional]  
     whether to show result stats in the form of results found and time taken. Defaults to `true`.
-- **renderResultStats** `Function` [optional]  
-    renders custom result stats using a callback function that takes `stats` object as parameter and expects it to return a string or JSX. `stats` object contains following properties
-    - `totalResults` - Total number of results found
-    - `totalPages` - Total number of pages found based on current page size
-    - `currentPage` - Current page number for which data is being rendered
-    - `displayedResults` - Number of results displayed in current view
-    - `time` - Time taken to find total results
-    ```js
-    renderResultStats={
-            function(stats){
-                return (
-                    `Showing ${stats.displayedResults} of total ${stats.totalResults} in ${stats.time} ms`
-                )   
-            }
-        }
-    ```
 - **react** `Object` [optional]  
     a dependency object defining how this component should react based on the state changes in the sensor components.
 - **URLParams** `Boolean` [optional]  
     when set adds the current page number to the url. Only works when `pagination` is enabled.
-- **renderData** `Function` [optional]  
+- **defaultQuery** `Function` [optional]  
+    applies a default query to the result component. This query will be run when no other components are being watched (via React prop), as well as in conjunction with the query generated from the React prop. The function should return a query.    
+    Read more about it [here](/advanced/customquery.html#when-to-use-default-query).
+- **renderItem** `Function` [optional]  
     returns a list element object to be rendered based on the `res` data object. This callback function prop is called for each data item rendered in the **ReactiveList** component's view. For example,
     ```js
-    renderData={
+    renderItem={
       function(res) {
     		return (
     			<a
@@ -161,17 +141,12 @@ Example uses:
       }
     }
     ```
-- **renderAllData** `Function` [optional]  
-    works like **renderData** prop but all the data objects are passed to the callback function.
+- **render** `Function` [optional]  
+    A function returning the UI you want to render based on your results. This function receives a list of parameters and expects to return a `JSX`.    
+    Read more about it [here](#extending).
 > Note:
 >
-> Either `renderData` or `renderAllData` is required in ReactiveList for rendering the data.
-- **defaultQuery** `Function` [optional]  
-    applies a default query to the result component. This query will be run when no other components are being watched (via React prop), as well as in conjunction with the query generated from the React prop. The function should return a query.
-- **renderNoResults** `Function` [optional]
-    show custom message or component when no results found.
-- **onError** `Function` [optional]  
-    gets triggered in case of an error and provides the `error` object, which can be used for debugging or giving feedback to the user if needed.
+> Either `renderItem` or `render` is required in ReactiveList for rendering the data.
 - **renderError** `String or JSX or Function` [optional]
     can be used to render an error message in case of any error.
     ```js
@@ -182,15 +157,52 @@ Example uses:
         )
     }
     ```
+- **renderResultStats** `Function` [optional]  
+    renders custom result stats using a callback function that takes `stats` object as parameter and expects it to return a string or JSX. `stats` object contains following properties
+    - **`numberOfResults`**: `number`
+        Total number of results found
+    - **`numberOfPages`**: `number`
+        Total number of pages found based on current page size
+    - **`currentPage`**: `number`
+        Current page number for which data is being rendered
+    - **`time`**: `number`
+        Time taken to find total results (in ms)
+    - **`displayedResults`**: `number`
+        Number of results displayed in current view
+    ```js
+    renderResultStats={
+            function(stats){
+                return (
+                    `Showing ${stats.displayedResults} of total ${stats.numberOfResults} in ${stats.time} ms`
+                )   
+            }
+        }
+    ```
+- **renderNoResults** `Function` [optional]
+    show custom message or component when no results found.
 - **onData** `Function` [optional]
-    gets triggered after data changes, which returns an object with these properties: `results`, `streamResults`, `loadMore`, `base` & `triggerClickAnalytics`.
-- **onResultStats** `Function` [optional]
-    gets triggered after stats changes, which returns an object with these properties:
-    - `totalResults` - Total number of results found
-    - `totalPages` - Total number of pages found based on current page size
-    - `currentPage` - Current page number for which data is being rendered
-    - `displayedResults` - Number of results displayed in current view
-    - `time` - Time taken to find total results
+    gets triggered after data changes, which returns an object with these properties: `data`,
+    `streamData`, `promotedData`, `rawData` & `resultStats`.
+- **onError** `Function` [optional]  
+    gets triggered in case of an error and provides the `error` object, which can be used for debugging or giving feedback to the user if needed.
+- **onPageChange** `Function` [optional]  
+    executes when the current page is changed. If not defined, `window` will be scrolled to the top of the page.
+- **onPageClick** `Function` [optional]  
+    accepts a function which is invoked with the updated page value when a pagination button is clicked. For example if 'Next' is clicked with the current page number as '1', you would receive the value '2' as the function parameter.
+
+> Note:
+>
+> The fundamental difference between `onPageChange` and `onPageClick` is that `onPageClick` is only called on a manual interaction with the pagination buttons, whereas, `onPageChange` would also be invoked if some other side effects caused the results to update which includes updating filters, queries or changing pages. The behaviour of these two may change in the future versions as we come up with a better API.
+
+## Sub Components
+    
+- **ResultCardsWrapper**     
+    A wrapper component for `ResultCard` components to render a card based layout.    
+    Read more about the usage [here](/result-components/resultcard.html#usage).
+- **ResultListWrapper**     
+    A wrapper component for `ResultList` components to render a list based layout.    
+    Read more about the usage [here](/result-components/resultlist.html#usage).  
+
 ## Demo
 
 <br />
@@ -217,8 +229,8 @@ Read more about it [here](/theming/class.html).
 
 `ReactiveList` component can be extended to
 1. customize the look and feel with `className`, `style`,
-2. render individual result data items using `renderData`,
-3. render the entire result data using `renderAllData`.
+2. render individual result data items using `renderItem`,
+3. render the entire data using `render`.
 4. connect with external interfaces using `onQueryChange`.
 
 ```js
@@ -226,7 +238,7 @@ Read more about it [here](/theming/class.html).
   ...
   className="custom-class"
   style={{"paddingBottom": "10px"}}
-  renderData={
+  renderItem={
     function(res) {
       return(
         <div>
@@ -249,29 +261,96 @@ Read more about it [here](/theming/class.html).
     CSS class to be injected on the component container.
 - **style** `Object`  
     CSS Styles to be applied to the **ReactiveList** component.
-- **renderData** `Function` [optional]  
+- **renderItem** `Function` [optional]  
     a callback function where user can define how to render the view based on the data changes.
-- **renderAllData** `Function` [optional]  
-    an alternative callback function to `renderData`, where user can define how to render the view based on all the data changes.  
+- **render** `Function` [optional]
+    an alternative callback function to `renderItem`, where user can define how to render the view based on all the data changes.
     <br/>
-    It accepts an object with these properties: `results`, `streamResults`, `loadMore`, `base` & `triggerClickAnalytics`.
-    - **`results`**: An array of results obtained from the applied query.
-    - **`streamResults`**: An array of results streamed since the applied query, aka realtime data. Here, a meta property `_updated` or `_deleted` is also present within a result object to denote if an existing object has been updated or deleted.
-    - **`loadMore`**: A callback function to be called to load the next page of results into the view. The callback function is only applicable in the case of infinite loading view (i.e. `pagination` prop set to `false`).
-    - **`base`**: An internally calculated value, useful to calculate analytics. [Read More](/advanced/analytics.html)
-    - **`triggerClickAnalytics`**: A function which can be called to register a click analytics. [Read More](/advanced/analytics.html)
+    It accepts an object with these properties:
+    - **`loading`**: `boolean` 
+        indicates that the query is still in progress
+    - **`error`**: `object`
+        An object containing the error info
+    - **`data`**: `array`
+        An array of results obtained from the applied query.
+    - **`streamData`**: `array`
+        An array of results streamed since the applied query, aka realtime data. Here, a meta property `_updated` or `_deleted` is also present within a result object to denote if an existing object has been updated or deleted.
+    - **`promotedData`**: `array`
+        An array of promoted results obtained from the applied query. [Read More](https://docs.appbase.io/concepts/query-rules.html#part-1-introduction)
+    > Note:
+    >
+    > `data`, `streamData` and `promotedData` results has a property called `_click_id` which can be used with triggerAnalytics to register the click analytics info.
+    - **`rawData`**: `array`
+        An array of original hits obtained from the applied query.
+    - **`resultStats`**: `object`
+        An object with the following properties which can be helpful to render custom stats:
+        - **`numberOfResults`**: `number`
+            Total number of results found
+        - **`numberOfPages`**: `number`
+            Total number of pages found based on current page size
+        - **`currentPage`**: `number`
+            Current page number for which data is being rendered
+        - **`time`**: `number`
+            Time taken to find total results (in ms)
+        - **`displayedResults`**: `number`
+            Number of results displayed in current view
+    - **`handleLoadMore`**: `function`
+        A callback function to be called to load the next page of results into the view. The callback function is only applicable in the case of infinite loading view (i.e. `infiniteScroll` prop set to `true`).
+    - **`triggerAnalytics`**: `function`
+    A function which can be called to register a click analytics. [Read More](/advanced/analytics.html)
 
 ```js
-renderAllData({
-     results,
-     streamResults,
-     loadMore,
-     base,
-     triggerClickAnalytics,
-
-}) {
-	// return the list to render
-}
+<ReactiveList
+    loader={<div/>} // Hide the default loader
+    render={({
+        loading,
+        error,
+        data,
+    }) => {
+        if(loading) { 
+            return <div>Fetching Results.</div>
+        }
+        if(error) {
+            return (
+                <div>
+                    Something went wrong! Error details {JSON.stringify(error)}
+                </div>
+            )
+        }
+        return (
+            <ul>
+                {
+                    data.map(item => (
+                        <li>
+                            {item.title}
+                            {/* Render UI */}
+                        </li>
+                    ))
+                }
+            </ul>
+        )
+    }}
+/>
+```
+Or you can also use render function as children
+```js
+<ReactiveList>
+    {
+        ({
+            loading,
+            error,
+            data,
+            streamData,
+            promotedData,
+            rawData,
+            resultStats,
+            handleLoadMore,
+            triggerAnalytics
+        }) => (
+            // return UI to be rendered
+        )
+    }
+</ReactiveList>
 ```
 
 > Note

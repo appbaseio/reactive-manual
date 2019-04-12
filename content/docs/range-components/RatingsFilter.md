@@ -59,6 +59,24 @@ Example uses:
 />
 ```
 
+### Usage With Custom Icons
+
+```js
+<RatingsFilter
+    componentId="RatingsSensor"
+    dataField="average_rating_rounded"
+    title="RatingsFilter"
+    icon={<Star style={{ color: 'yellow' }} />}
+    dimmedIcon={<Star style={{ color: 'grey' }} />}
+    data={[
+        { start: 4, end: 5, label: '4 stars and up' },
+        { start: 3, end: 5, label: '3 stars and up' },
+        { start: 2, end: 5, label: '2 stars and up' },
+        { start: 1, end: 5, label: '> 1 stars' },
+    ]}
+/>
+```
+
 ## Props
 
 - **componentId** `String`  
@@ -71,6 +89,10 @@ Example uses:
     use to set the `nested`  mapping field that allows arrays of objects to be indexed in a way that they can be queried independently of each other. Applicable only when dataField is a part of `nested` type.
 - **title** `String or JSX` [optional]  
     title of the component to be shown in the UI.
+- **icon** `JSX` [optional]       
+    to render custom active icon.
+- **dimmedIcon** `JSX` [optional]     
+    to render custom inactive icon.
 - **defaultValue** `Object` [optional]  
     selects a initial ratings value using `start` and `end` key values from one of the data elements.
 - **value** `Object` [optional]  
