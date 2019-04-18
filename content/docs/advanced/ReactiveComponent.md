@@ -6,8 +6,8 @@ sectionid: reactivecomponent
 permalink: advanced/reactivecomponent.html
 prev: advanced/react.html
 prevTitle: "React Prop"
-next: advanced/writingdata.html
-nextTitle: "Writing Data"
+next: advanced/ssr.html
+nextTitle: "SSR"
 redirect_from:
     - "advanced/reactivecomponent"
     - "reactivecomponent"
@@ -162,11 +162,11 @@ export default {
 
 #### Scope Data Object
 
-- **hits** `Array`  
+- **hits** `Array`
     `hits` prop is an array of results from the Elasticsearch query of the component.
-- **aggregations** `Object`     
+- **aggregations** `Object`
     `aggregations` prop contains the results from `aggs` Elasticsearch query of the component.
-- **setQuery** `function`   
+- **setQuery** `function`
     `setQuery` function sets the query of the component. It takes an object param of shape:
 ```javascript
     {
@@ -174,7 +174,7 @@ export default {
         value: ''  // value of the component
     }
 ```
-- **selectedValue** `any`   
+- **selectedValue** `any`
 `selectedValue` contains the current value of the component (which can be set via `setQuery()` function). This is used for URLParams and SelectedFilters.
 - **isLoading** `Boolean`
     `true` means the query is in the execution state.
@@ -183,10 +183,10 @@ export default {
 
 
 #### ReactiveComponent
- 
-- **className** `String`  
+
+- **className** `String`
     CSS class to be injected on the component container.
-- **defaultQuery** `Function`  
+- **defaultQuery** `Function`
     **returns** the default query to be applied to the component, as defined in Elasticsearch Query DSL.
 - **react** `Object`
     `react` prop is available in components whose data view should reactively update when on or more dependent components change their states, e.g. [`ReactiveMap`](/map-components/reactivemap.html), [`ReactiveList`](/basic-components/reactivelist.html).
@@ -200,7 +200,7 @@ export default {
       - `Array` is used for specifying multiple components by their `componentId`.
       - `Object` is used for nesting other key clauses.
 
-- **URLParams** `Boolean` [optional]  
+- **URLParams** `Boolean` [optional]
     enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
 
 ## Demo
@@ -210,9 +210,9 @@ export default {
 <iframe src="https://codesandbox.io/embed/lr707846pl" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 ## Events
-- **queryChange** 
+- **queryChange**
     is a event which accepts component's **prevQuery** and **nextQuery** as parameters. It is called everytime the component's query changes. This prop is handy in cases where you want to generate a side-effect whenever the component's query would change.
-- **allData**  
+- **allData**
     event which provides `hits` and `aggregations` as an object properties.
 - **error**
     gets triggered in case of an error and provides the `error` object, which can be used for debugging or giving feedback to the user if needed.

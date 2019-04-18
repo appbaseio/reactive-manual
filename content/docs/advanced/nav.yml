@@ -67,6 +67,32 @@
           title: Examples
           href: /advanced/reactivecomponent.html#examples
           forceInternal: true
+    - id: ssr
+      title: Server Side Rendering
+      href: /advanced/ssr.html
+      forceInternal: true
+      subitems:
+        - id: usage
+          title: Usage
+          href: /advanced/ssr.html#usage
+          forceInternal: true
+        - id: example
+          title: Example
+          href: /advanced/ssr.html#example
+          forceInternal: true
+    - id: writingdata
+      title: Writing and Editing Data
+      href: /advanced/writingdata.html
+      forceInternal: true
+      subitems:
+        - id: appbase-js
+          title: Appbase-js
+          href: /advanced/writingdata.html#appbase-js
+          forceInternal: true
+        - id: rest-api
+          title: REST API
+          href: /advanced/writingdata.html#rest-api
+          forceInternal: true
     - id: writingdata
       title: Writing and Editing Data
       href: /advanced/writingdata.html
