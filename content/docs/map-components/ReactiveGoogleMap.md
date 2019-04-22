@@ -66,8 +66,6 @@ Example uses:
     unique identifier of the component, can be referenced in other components' `react` prop.
 - **dataField** `String`  
     DB data field to be connected to the component's UI view, usually of a geopoint (i.e. location) data type and used for rendering the markers on the map.
-- **title** `String or JSX` [optional]  
-    title of the component to be shown in the UI.
 - **size** `Number` [optional]  
     number of results to show in the map view, can be a number in the range [1, 1000]. Defaults to 100.
 - **defaultZoom** `Number` [optional]  
@@ -91,6 +89,11 @@ Example uses:
     URL of the default marker pin image to be shown. It comes with a default image. Should only be set if you wish to use a custom marker.
 - **showMarkerClusters** `Boolean` [optional]  
     whether to aggregate and form a cluster of nearby markers. Defaults to `true`.
+
+> Note
+>
+> It requires `showMarkers` prop enabled.
+
 - **showSearchAsMove** `Boolean` [optional]  
     whether to show the *Search As I Move* checkbox in the UI. Defaults to `true`.
 - **searchAsMove** `Boolean` [optional]  

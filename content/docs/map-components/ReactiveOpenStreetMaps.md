@@ -60,8 +60,6 @@ Example uses:
     unique identifier of the component, can be referenced in other components' `react` prop.
 - **dataField** `String`  
     DB data field to be connected to the component's UI view, usually of a geopoint (i.e. location) data type and used for rendering the markers on the map.
-- **title** `String or JSX` [optional]  
-    title of the component to be shown in the UI.
 - **size** `Number` [optional]  
     number of results to show in the map view, can be a number in the range [1, 1000]. Defaults to 100.
 - **defaultZoom** `Number` [optional]  
@@ -77,6 +75,10 @@ Example uses:
     ![screenshot](https://i.imgur.com/STbeagk.png)
 - **showMarkers** `Boolean` [optional]  
     whether to show the markers on the map, defaults to `true`. Sometimes, it doesn't make sense to display markers (when building a heatmap or weather map or a directions navigation map)
+- **showSearchAsMove** `Boolean` [optional]  
+    whether to show the *Search As I Move* checkbox in the UI. Defaults to `true`.
+- **searchAsMove** `Boolean` [optional]  
+    whether to set the *Search As I Move* checkbox. Defaults to `false`.
 - **defaultPin** `String` [optional]  
     URL of the default marker pin image to be shown. It comes with a default image. Should only be set if you wish to use a custom marker.
 - **onPopoverClick** `function` [optional]  
@@ -102,6 +104,20 @@ Example uses:
     whether to auto center the map based on the geometric center of all the location markers while `stream` prop is set to `true`. Defaults to `false`.
 <!-- - **autoMarkerPosition** `Boolean` [optional]  
     whether to set the rotation angle of the marker image based on the delta changes in its location, useful when displaying realtime traffic data. Defaults to `false`. -->
+
+- **tileServer** `String` [optional]
+
+    Used to provide different style to OpenStreet Map. It accepts tiles url that is used for providing layering to map. For more tile servers you can check https://wiki.openstreetmap.org/wiki/Tile_servers.
+
+    Default `titleServer` url is `https://{s}.tile.osm.org/{z}/{x}/{y}.png`.
+
+>Note
+>
+> You will have to link css file for appropriate `tileServer` in your html file / component. For default `tileServer` you can link following css
+>```html
+><link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.3.4/leaflet.css" rel="stylesheet"/>
+>```
+
 - **className** `String`  
     CSS class to be injected on the component container.
 - **style** `Object`  
