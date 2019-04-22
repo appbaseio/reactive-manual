@@ -99,7 +99,7 @@
   },
   "scripts": {
     "build": "gatsby build --prefix-paths",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public -a -r https://${GITHUB_TOKEN}@github.com/appbaseio/reactive-manual -b gh-pages",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
     "check-all": "yarn prettier && yarn lint && yarn flow",
     "ci-check": "yarn prettier:diff && yarn lint && yarn flow",
     "start": "gatsby develop",

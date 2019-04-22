@@ -38,16 +38,16 @@ class Header extends Component {
     }
   }
   switchDocs = (value) => {
-    if (location.pathname.includes('/reactive-manual/v3')) {
+    if (location.pathname.includes('/reactive-manual')) {
       if (value.value === 'v0.10 - Native') {
         window.location.href = window.location.origin + '/reactive-manual/native';
       } else if (value.value === 'v1 - Vue') {
         window.location.href = window.location.origin + '/reactive-manual/vue';
-      } else if (value.value === 'v2 - Web') {
+      } else if (value.value === 'v3 - Web') {
         window.location.href = window.location.origin + '/reactive-manual';
       }
-      else if(value.value === 'v3 - Web') {
-        window.location.href = window.location.origin + '/reactive-manual/v3';
+      else if(value.value === 'v2 - Web') {
+        window.location.href = window.location.origin + '/reactive-manual/v2';
       }
     }
   }
@@ -163,7 +163,7 @@ class Header extends Component {
                 },
               }}>
               <HeaderLink
-                isActive={location.pathname === '/' || location.pathname === '/reactive-manual/v3' || location.pathname === '/reactive-manual/v3/'}
+                isActive={location.pathname === '/' || location.pathname === '/reactive-manual' || location.pathname === '/reactive-manual/'}
                 title="Home"
                 to="/"
               />
@@ -223,7 +223,7 @@ class Header extends Component {
                   />
                 </div>
               }
-              {location.pathname !== '/' && location.pathname !== '/reactive-manual/v3' && !this.state.showSearch && (
+              {location.pathname !== '/' && location.pathname !== '/reactive-manual' && !this.state.showSearch && (
                 <div onClick={this.toggleSearch} role="button" tabIndex="0" css={{ cursor: 'pointer', paddingLeft: 10 }}>
                   <SearchSvg />
                 </div>
