@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: '/reactive-manual/v3',
+  pathPrefix: '/reactive-manual',
   siteMetadata: {
     title:
       'Reactive Manual: Data-driven components for building Maps and Search UIs',
