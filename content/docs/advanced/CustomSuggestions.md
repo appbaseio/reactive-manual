@@ -10,7 +10,7 @@ next: advanced/customquery.html
 nextTitle: "Custom Query"
 redirect_from:
     - "advanced"
-    - "reactive-manual/advanced"
+    - "reactive-manual/v2/advanced"
 ---
 
 Recipe for rendering custom suggestions with `DataSearch` and `CategorySearch` components using the `renderSuggestions` prop.

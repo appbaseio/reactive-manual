@@ -38,7 +38,7 @@ class Header extends Component {
     }
   }
   switchDocs = (value) => {
-    if (location.pathname.includes('/reactive-manual/')) {
+    if (location.pathname.includes('/reactive-manual/v2')) {
       if(value.value === 'v0.10 - Native') {
         window.location.href = window.location.origin + '/reactive-manual/native';
       } else if(value.value === 'v1 - Vue') {
@@ -59,7 +59,7 @@ class Header extends Component {
           backgroundColor: colors.blueDark,
           color: colors.white,
           position: 'fixed',
-          zIndex: (location.pathname !== '/' && location.pathname !== '/reactive-manual/') ? 1 : 3,
+          zIndex: (location.pathname !== '/' && location.pathname !== '/reactive-manual/v2/') ? 1 : 3,
           width: '100%',
           top: 0,
           left: 0,
@@ -161,7 +161,7 @@ class Header extends Component {
                 },
               }}>
               <HeaderLink
-                isActive={location.pathname === '/' || location.pathname === '/reactive-manual/' || location.pathname === '/reactive-manual'}
+                isActive={location.pathname === '/' || location.pathname === '/reactive-manual/v2/' || location.pathname === '/reactive-manual'}
                 title="Home"
                 to="/"
               />
@@ -221,7 +221,7 @@ class Header extends Component {
                   />
                 </div>
               }
-              {location.pathname !== '/' && location.pathname !== '/reactive-manual/' && !this.state.showSearch && (
+              {location.pathname !== '/' && location.pathname !== '/reactive-manual/v2/' && !this.state.showSearch && (
                 <div onClick={this.toggleSearch} role="button" tabIndex="0" css={{ cursor: 'pointer', paddingLeft: 10 }}>
                   <SearchSvg />
                 </div>
@@ -238,7 +238,7 @@ class Header extends Component {
                   },
                 }}
               >
-                <SearchBox handleBlur={this.toggleSearch} prefixSlash={location.pathname.includes('/reactive-manual/')} />
+                <SearchBox handleBlur={this.toggleSearch} prefixSlash={location.pathname.includes('/reactive-manual/v2/')} />
               </div>
             }
           </div>
