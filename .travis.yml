@@ -3,9 +3,9 @@ node_js:
 - '8.9.1'
 branches:
   only:
-  - new
   - v2
+	- v3
 script:
   - yarn run build
-  - gh-pages -d public -a -r https://${GITHUB_TOKEN}@github.com/appbaseio/reactive-manual -b gh-pages
+	- gh-pages -d public -a -e v2 -r https://${GITHUB_TOKEN}@github.com/appbaseio/reactive-manual -b gh-pages
 sudo: false
