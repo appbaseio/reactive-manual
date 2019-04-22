@@ -4,7 +4,7 @@ node_js:
 branches:
   only:
   - v1-native
-  - v2
+  - v3
 script:
   - yarn run build
   - gh-pages -d public -a -e native -r https://${GITHUB_TOKEN}@github.com/appbaseio/reactive-manual -b gh-pages

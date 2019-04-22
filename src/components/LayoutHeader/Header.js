@@ -42,8 +42,10 @@ class Header extends Component {
     if (location.pathname.includes('reactive-manual/native')) {
       if(value.value === 'v1 - Vue') {
         window.location.href = window.location.origin + '/reactive-manual/vue';
-      } else if(value.value === 'v2 - Web') {
+      } else if(value.value === 'v3 - Web') {
         window.location.href = window.location.origin + '/reactive-manual';
+      } else if(value.value === 'v2 - Web') {
+        window.location.href = window.location.origin + '/reactive-manual/v2';
       }
     }
   }
@@ -209,6 +211,7 @@ class Header extends Component {
                 >
                   <Dropdown
                     options={[
+											'v3 - Web',
                       'v2 - Web',
                       'v0.12 - Native',
                       'v1 - Vue'
