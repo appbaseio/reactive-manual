@@ -67,20 +67,20 @@ Example uses:
 
 ## Props
 
-- **componentId** `String`  
+- **componentId** `String`
     unique identifier of the component, can be referenced in other components' `react` prop.
-- **dataField** `String or Array`  
+- **dataField** `String or Array`
     data field(s) on which the search query will be applied to. If you want to search across multiple fields, pass them as an `Array`.
-- **nestedField** `String` [optional]  
+- **nestedField** `String` [optional]
     use to set the `nested`  mapping field that allows arrays of objects to be indexed in a way that they can be queried independently of each other. Applicable only when dataField is a part of `nested` type.
-- **categoryField** `String` [optional]  
+- **categoryField** `String` [optional]
     data field which has the category values mapped.
-- **title** `String or JSX` [optional]  
+- **title** `String or JSX` [optional]
     Sets the title of the component to be shown in the UI.
-- **defaultValue** `Object` [optional]  
+- **defaultValue** `Object` [optional]
     set the initial search query text on mount & the category.
-- **value** `Object` [optional]  
-    controls the current value of the component. It sets the search query text & the category (on mount and on update). Use this prop in conjunction with `onChange` function. Usage: 
+- **value** `Object` [optional]
+    controls the current value of the component. It sets the search query text & the category (on mount and on update). Use this prop in conjunction with `onChange` function. Usage:
 ```jsx
     <CategorySearch
         {...searchProps}
@@ -90,13 +90,13 @@ Example uses:
         }}
     />
 ```
-- **onChange** `function` [optional]  
+- **onChange** `function` [optional]
     is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
-- **downShiftProps** `Object` [optional]  
+- **downShiftProps** `Object` [optional]
     allow passing props directly to `Downshift` component. You can read more about Downshift props [here](https://github.com/paypal/downshift#--downshift-------).
-- **fieldWeights** `Array` [optional]  
+- **fieldWeights** `Array` [optional]
     set the search weight for the database fields, useful when dataField is an Array of more than one field. This prop accepts an array of numbers. A higher number implies a higher relevance weight for the corresponding field in the search results.
-- **placeholder** `String` [optional]  
+- **placeholder** `String` [optional]
     Sets the placeholder text to be shown in the searhbox input field. Defaults to "Search".
 - **showIcon** `Boolean` [optional]
     whether to display a search or custom icon in the input box. Defaults to `true`.
@@ -104,23 +104,23 @@ Example uses:
     sets the position of the search icon. Can be `left` or `right`. Defaults to `right`.
 - **icon** `JSX` [optional]
     displays a custom search icon instead of the default 🔍
-- **showClear** `Boolean` [optional]  
+- **showClear** `Boolean` [optional]
     show a clear text icon. Defaults to `false`.
-- **clearIcon** `JSX` [optional]  
+- **clearIcon** `JSX` [optional]
     allows setting a custom icon for clearing text instead of the default cross.
-- **autosuggest** `Boolean` [optional]  
+- **autosuggest** `Boolean` [optional]
     set whether the autosuggest functionality should be enabled or disabled. Defaults to `true`.
-- **strictSelection** `Boolean` [optional]  
+- **strictSelection** `Boolean` [optional]
     defaults to `false`. When set to `true` the component will only set its value and fire the query if the value was selected from the suggestion. Otherwise the value will be cleared on selection. This is only relevant with `autosuggest`.
 - **defaultSuggestions** `Array` [optional]
     preset search suggestions to be shown on focus when the search box does not have any search query text set. Accepts an array of objects each having a **label** and **value** property. The label can contain either String or an HTML element.
-- **debounce** `Number` [optional]  
+- **debounce** `Number` [optional]
     sets the milliseconds to wait before executing the query. Defaults to `0`, i.e. no debounce.
-- **highlight** `Boolean` [optional]  
+- **highlight** `Boolean` [optional]
     Whether highlighting should be enabled in the returned results. Defaults to `false`.
-- **highlightField** `String` or `Array` [optional]  
+- **highlightField** `String` or `Array` [optional]
     When highlighting is enabled, this prop allows specifying the fields which should be returned with the matching highlights. When not specified, it defaults to applying highlights on the field(s) specified in the **dataField** prop.
-- **customHighlight** `Function` [optional]  
+- **customHighlight** `Function` [optional]
     a function which returns the custom [highlight settings](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-request-highlighting.html). It receives the `props` and expects you to return an object with the `highlight` key. Check out the <a href="https://opensource.appbase.io/reactivesearch/demos/technews/" target="_blank">technews demo</a> where the `DataSearch` component uses a `customHighlight` as given below,
 
 ```js
@@ -148,17 +148,17 @@ Example uses:
     * On the other hand with **and**, only results matching both "bat" and "man" will be returned. It returns the results matching **all** of the search query text's parameters.
 - **fuzziness** `String or Number` [optional]
     Sets a maximum edit distance on the search parameters, can be **0**, **1**, **2** or **"AUTO"**. Useful for showing the correct results for an incorrect search parameter by taking the fuzziness into account. For example, with a substitution of one character, **fox** can become **box**. Read more about it in the elastic search [docs](https://www.elastic.co/guide/en/elasticsearch/guide/current/fuzziness.html).
-- **showFilter** `Boolean` [optional]  
+- **showFilter** `Boolean` [optional]
     show as filter when a value is selected in a global selected filters view. Defaults to `true`.
-- **filterLabel** `String` [optional]  
+- **filterLabel** `String` [optional]
     An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
-- **URLParams** `Boolean` [optional]  
+- **URLParams** `Boolean` [optional]
     enable creating a URL query string parameter based on the current value of the search. This is useful for sharing URLs with the component state. Defaults to `false`.
-- **render** `Function` [optional]  
+- **render** `Function` [optional]
     You can render custom suggestions by using `render` prop.
     <br/>
     It accepts an object with these properties:
-    - **`loading`**: `boolean` 
+    - **`loading`**: `boolean`
         indicates that the query is still in progress
     - **`error`**: `object`
         An object containing the error info
@@ -174,8 +174,8 @@ Example uses:
         An array of original suggestions.
     - **`value`**: `string`
         current search input value i.e the search query being used to obtain categories and suggestions.
-    - **`downshiftProps`**: `object`    
-        provides all the control props from `downshift` which can be used to bind list items with click/mouse events.    
+    - **`downshiftProps`**: `object`
+        provides all the control props from `downshift` which can be used to bind list items with click/mouse events.
         Read more about it [here](https://github.com/downshift-js/downshift#children-function).
 ```js
 <CategorySearch
@@ -190,7 +190,7 @@ Example uses:
                 getItemProps,
             }
         }) => {
-            if(loading) { 
+            if(loading) {
                 return <div>Fetching Suggestions.</div>
             }
             if(error) {
@@ -203,16 +203,16 @@ Example uses:
             return (isOpen && Boolean(value.length)) ? (
                         <div>
                             {suggestions.slice(0, 5).map((suggestion, index) => (
-                                <div 
-                                    key={suggestion.value} 
+                                <div
+                                    key={suggestion.value}
                                     {...getItemProps({ item: suggestion })}
                                 >
                                     {suggestion.value}
                                 </div>
                             ))}
                             {categories.slice(0, 3).map((category, index) => (
-                                <div 
-                                    key={category.key} 
+                                <div
+                                    key={category.key}
                                     {...getItemProps({ item: { value: value, category: category.key } })}
                                 >
                                     {value} in {category.key}
@@ -272,7 +272,7 @@ Or you can also use render function as children
     ```
 - **onSuggestions** `Function` [optional]
     You can pass a callback function to listen for the changes in suggestions.The function receives `suggestions` list.
-- **onError** `Function` [optional]  
+- **onError** `Function` [optional]
     gets triggered in case of an error and provides the `error` object, which can be used for debugging or giving feedback to the user if needed.
 
 ## Demo
@@ -283,12 +283,12 @@ Or you can also use render function as children
 
 ## Styles
 
-`CategorySearch` component supports `innerClass` prop with the following keys:    
+`CategorySearch` component supports `innerClass` prop with the following keys:
 
 - `title`
 - `input`
 - `list`
- 
+
 Read more about it [here](/theming/class.html).
 
 ## Extending
@@ -334,7 +334,7 @@ Read more about it [here](/theming/class.html).
   className="custom-class"
   style={{"paddingBottom": "10px"}}
   customQuery={
-    function(value, props) {
+    function(value, props, category) {
       return {
         query: {
             match: {
@@ -382,32 +382,35 @@ Read more about it [here](/theming/class.html).
 />
 ```
 
-- **className** `String`  
+- **className** `String`
     CSS class to be injected on the component container.
 - **style** `Object`
     CSS styles to be applied to the **CategorySearch** component.
 - **customQuery** `Function`
-    takes **value** and **props** as parameters and **returns** the data query to be applied to the component, as defined in Elasticsearch Query DSL.
+    takes **value**, **props** and **category** as parameters and **returns** the data query to be applied to the component, as defined in Elasticsearch Query DSL.
     `Note:` customQuery is called on value changes in the **CategorySearch** component as long as the component is a part of `react` dependency of at least one other component.
-- **beforeValueChange** `Function`  
+- **defaultQuery** `Function`
+    takes **value**, **props** and **category** as parameters and **returns** the data query to be applied to the source component, as defined in Elasticsearch Query DSL, which doesn't get leaked to other components.<br/>
+    Read more about it [here](/advanced/customquery.html#when-to-use-default-query).
+- **beforeValueChange** `Function`
     is a callback function which accepts component's future **value** as a parameter and **returns** a promise. It is called everytime before a component's value changes. The promise, if and when resolved, triggers the execution of the component's query and if rejected, kills the query execution. This method can act as a gatekeeper for query execution, since it only executes the query after the provided promise has been resolved.
-- **onValueChange** `Function`  
+- **onValueChange** `Function`
     is a callback function which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when a user searches for a product in a CategorySearch.
-- **onValueSelected** `Function`  
+- **onValueSelected** `Function`
     is called with the value and the category selected via user interaction. If the search was performed by selecting the 'in all categories' suggestion, category is received as `*`. If it was performed for one of the categorized suggestion, the `category` is received. In other cases (either searching without selecting a suggestion or picking an uncategorized suggestion), `category` is received as `null`. It works only with `autosuggest` and is called whenever a suggestion is selected or a search is performed by pressing **enter** key. It also passes the `cause` of action and the `source` object if the cause of action was `'SUGGESTION_SELECT'`. The source would be `null` if a category based suggestion was selected. The possible causes are:
     - `'SUGGESTION_SELECT'`
     - `'ENTER_PRESS'`
     - `'CLEAR_VALUE'
-- **onQueryChange** `Function`  
+- **onQueryChange** `Function`
     is a callback function which accepts component's **prevQuery** and **nextQuery** as parameters. It is called everytime the component's query changes. This prop is handy in cases where you want to generate a side-effect whenever the component's query would change.
-- **react** `Object`  
+- **react** `Object`
     specify dependent components to reactively update **CategorySearch's** suggestions.
-    - **key** `String`  
+    - **key** `String`
         one of `and`, `or`, `not` defines the combining clause.
         - **and** clause implies that the results will be filtered by matches from **all** of the associated component states.
         - **or** clause implies that the results will be filtered by matches from **at least one** of the associated component states.
         - **not** clause implies that the results will be filtered by an **inverse** match of the associated component states.
-    - **value** `String or Array or Object`  
+    - **value** `String or Array or Object`
         - `String` is used for specifying a single component by its `componentId`.
         - `Array` is used for specifying multiple components by their `componentId`.
         - `Object` is used for nesting other key clauses.
