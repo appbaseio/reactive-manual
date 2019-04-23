@@ -49,15 +49,15 @@ Now, let's assume that we have all these hex-codes stored as `keywords` in an El
         }
     })}
     render={({ aggregations, setQuery }) => (
-            <ColorPickerWrapper 
-                aggregations={aggregations} 
+            <ColorPickerWrapper
+                aggregations={aggregations}
                 setQuery={setQuery}
             />
         )}
 />
 ```
 > Note
->  
+>
 > It is also possible to use render function as children
 
 The above snippet runs the `defaultQuery` passed to the ReactiveComponent when the component gets mounted and consequently pass the query results to the `ColorPickerWraper` component (i.e. child component of ReactiveComponent) as the following two props: `data` and `aggregations`.
@@ -160,13 +160,13 @@ Check demo [here](https://codesandbox.io/s/3ylrrr0r5q).
     indicates that the query is still in progress
 - **error**: `object`
     An object containing the error info
-- **data** `Array`  
+- **data** `Array`
     `data` prop is an array of parsed results(hits) from the Elasticsearch query of the component.
-- **rawData** `Array`  
+- **rawData** `Array`
     `rawData` prop is an array of original results(hits) from the Elasticsearch query of the component.
-- **aggregations** `Object`     
+- **aggregations** `Object`
     `aggregations` prop contains the results from `aggs` Elasticsearch query of the component.
-- **setQuery** `function`   
+- **setQuery** `function`
     `setQuery` function sets the query of the component. It takes an object param of shape:
 ```javascript
     {
@@ -174,28 +174,28 @@ Check demo [here](https://codesandbox.io/s/3ylrrr0r5q).
         value: ''  // value of the component
     }
 ```
-- **value** `any`   
+- **value** `any`
 `value` contains the current value of the component (which can be set via `setQuery()` function). This is used for URLParams and SelectedFilters.
 
 
 ### Props
- 
-- **className** `String`  
+
+- **className** `String`
     CSS class to be injected on the component container.
-- **style** `Object`  
+- **style** `Object`
     CSS styles to be applied to the **DataSearch** component.
-- **defaultQuery** `Function`  
+- **defaultQuery** `Function`
     **returns** the default query to be applied to the component, as defined in Elasticsearch Query DSL.
-- **customQuery** `Function`  
+- **customQuery** `Function`
     **returns** the custom query to be applied to the component, as defined in Elasticsearch Query DSL.
     Custom query can be used to change the component's behavior for its subscribers.
-- **onQueryChange** `Function`  
+- **onQueryChange** `Function`
     is a callback function which accepts component's **prevQuery** and **nextQuery** as parameters. It is called everytime the component's query changes. This prop is handy in cases where you want to generate a side-effect whenever the component's query would change.
-- **onAllData** `Function`  
-    callback function which provides `hits` and `aggregations` as function params.
-- **showFilter** `Boolean` [optional]  
+- **onData** `Function`
+    callback function which provides `data`, `rawData` and `aggregations` as function params.
+- **showFilter** `Boolean` [optional]
     show as filter when a value is selected in a global selected filters view. Defaults to `true`.
-- **filterLabel** `String` [optional]  
+- **filterLabel** `String` [optional]
     An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
 - **react** `Object`
     `react` prop is available in components whose data view should reactively update when on or more dependent components change their states, e.g. [`ReactiveMap`](/map-components/reactivemap.html), [`ReactiveList`](/basic-components/reactivelist.html).
@@ -209,7 +209,7 @@ Check demo [here](https://codesandbox.io/s/3ylrrr0r5q).
       - `Array` is used for specifying multiple components by their `componentId`.
       - `Object` is used for nesting other key clauses.
 
-- **URLParams** `Boolean` [optional]  
+- **URLParams** `Boolean` [optional]
     enable creating a URL query string parameter based on the selected value of the list. This is useful for sharing URLs with the component state. Defaults to `false`.
 
 ### Examples
