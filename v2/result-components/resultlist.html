@@ -1,0 +1,667 @@
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><link rel="icon" href="https://opensource.appbase.io/reactive-manual/favicon.ico"/><link rel="preload" href="/reactive-manual/v2/component---src-layouts-index-js-9df97058266e08ecd1a9.js" as="script"/><link rel="preload" href="/reactive-manual/v2/component---src-templates-docs-js-aab05acd99e04dc2f646.js" as="script"/><link rel="preload" href="/reactive-manual/v2/path---result-components-resultlist-html-d189311b4244d0038b53.js" as="script"/><link rel="preload" href="/reactive-manual/v2/app-744a6c3a510f90ae79b1.js" as="script"/><link rel="preload" href="/reactive-manual/v2/commons-d013629bd42390efdb09.js" as="script"/><style id="glamor-styles">.gatsby-highlight{background:#323a48;color:#ffffff;border-radius:10px;overflow:auto;tab-size:1.5em;-moz-tab-size:1.5em;}
+.gatsby-highlight code[class*="gatsby-code-"],
+.gatsby-highlight pre[class*="gatsby-code-"],
+.gatsby-highlight pre.prism-code{height:auto !important;margin:1rem;font-size:16px;line-height:26px;white-space:pre-wrap;word-break:break-word;}.gatsby-highlight + .gatsby-highlight{margin-top:20px;}.gatsby-highlight-code-line{background-color:#222731;display:block;margin:-0.125rem calc(-1rem - 15px);padding:0.125rem calc(1rem + 15px);}.token.attr-name{color:#c5a5c5;}
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata{color:#999999;}
+.token.property,
+.token.number,
+.token.function-name,
+.token.constant,
+.token.symbol,
+.token.deleted{color:#5a9bcf;}.token.boolean{color:#ff8b50;}.token.tag{color:#fc929e;}.token.string{color:#8dc891;}.token.punctuation{color:#5FB3B3;}
+.token.selector,
+.token.char,
+.token.builtin,
+.token.inserted{color:#D8DEE9;}.token.function{color:#79b6f2;}
+.token.operator,
+.token.entity,
+.token.url,
+.token.variable{color:#d7deea;}.token.attr-value{color:#8dc891;}.token.keyword{color:#c5a5c5;}
+.token.atrule,
+.token.class-name{color:#FAC863;}.token.important{font-weight:400;}.token.bold{font-weight:700;}.token.italic{font-style:italic;}.token.entity{cursor:help;}.namespace{opacity:0.7;}html {
+  font-family: sans-serif; /* 1 */
+  line-height: 1.15; /* 2 */
+  -ms-text-size-adjust: 100%; /* 3 */
+  -webkit-text-size-adjust: 100%; /* 3 */
+}body {
+  margin: 0;
+}article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}figcaption,
+figure,
+main { /* 1 */
+  display: block;
+}figure {
+  margin: 1em 40px;
+}hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}a {
+  background-color: transparent; /* 1 */
+  -webkit-text-decoration-skip: objects; /* 2 */
+}a:active,
+a:hover {
+  outline-width: 0;
+}abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  text-decoration: underline dotted; /* 2 */
+}b,
+strong {
+  font-weight: inherit;
+}b,
+strong {
+  font-weight: bolder;
+}code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}dfn {
+  font-style: italic;
+}mark {
+  background-color: #ff0;
+  color: #000;
+}small {
+  font-size: 80%;
+}sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}sub {
+  bottom: -0.25em;
+}sup {
+  top: -0.5em;
+}audio,
+video {
+  display: inline-block;
+}audio:not([controls]) {
+  display: none;
+  height: 0;
+}img {
+  border-style: none;
+}svg:not(:root) {
+  overflow: hidden;
+}button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}button,
+input { /* 1 */
+  overflow: visible;
+}button,
+select { /* 1 */
+  text-transform: none;
+}button,
+html [type="button"], /* 1 */
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+}button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}progress {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}textarea {
+  overflow: auto;
+}[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  outline-offset: -2px; /* 2 */
+}[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}details, /* 1 */
+menu {
+  display: block;
+}summary {
+  display: list-item;
+}canvas {
+  display: inline-block;
+}template {
+  display: none;
+}[hidden] {
+  display: none;
+}.css-1tv5sxm,[data-css-1tv5sxm]{flex:1 0 auto;margin-top:60px;-webkit-flex:1 0 auto;}@media (min-width: 780px) and (max-width: 1279px){.css-1tv5sxm,[data-css-1tv5sxm]{margin-top:50px;}}@media (max-width: 779px){.css-1tv5sxm,[data-css-1tv5sxm]{margin-top:40px;}}.css-awku5i,[data-css-awku5i]{display:-webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;flex-direction:column;min-height:100vh;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;}.css-1s6n7si,[data-css-1s6n7si]{margin-bottom:10px;height:40px;}@media (max-width: 599px){.css-1s6n7si,[data-css-1s6n7si]{height:30px;}}.css-z9ethg,[data-css-z9ethg]{color:inherit;margin-left:10px;font-weight:700;font-size:20px;line-height:20px;}@media (max-width: 979px){.css-z9ethg,[data-css-z9ethg]{font-size:16px;margin-top:1px;}}.css-uun7eo,[data-css-uun7eo]{display:-webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;margin-right:10px;height:100%;align-items:center;color:#86ddf8;-webkit-box-align:center;-webkit-align-items:center;}.css-uun7eo:focus,[data-css-uun7eo]:focus{outline:0;color:#ffffff;}@media (max-width: 599px){.css-uun7eo,[data-css-uun7eo]{flex:0 0 auto;-webkit-flex:0 0 auto;}}.css-dk6po0,[data-css-dk6po0]{display:-webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;flex:1;justify-content:flex-end;flex-direction:row;align-items:stretch;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;height:100%;width:60%;-webkit-flex:1;-webkit-box-pack:end;-webkit-justify-content:flex-end;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-webkit-box-align:stretch;-webkit-align-items:stretch;}@media (min-width: 0px) and (max-width: 599px){.css-dk6po0,[data-css-dk6po0]{flex-grow:1;width:auto;-webkit-flex-grow:1;}}@media (max-width: 599px){.css-dk6po0,[data-css-dk6po0]{mask-image:-webkit-linear-gradient(to right, transparent, black 20px, black 90%, transparent); mask-image: -moz-linear-gradient(to right, transparent, black 20px, black 90%, transparent); mask-image: linear-gradient(to right, transparent, black 20px, black 90%, transparent);-webkit-mask-image:-webkit-linear-gradient(to right, transparent, black 20px, black 90%, transparent); -webkit-mask-image: -moz-linear-gradient(to right, transparent, black 20px, black 90%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 20px, black 90%, transparent);}}@media (max-width: 779px){.css-dk6po0,[data-css-dk6po0]{display:none;}}.css-vo9ma4,[data-css-vo9ma4]{z-index:4;width:120px;display:-webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;align-items:center;font-size:0.8em;-webkit-box-align:center;-webkit-align-items:center;}.css-vo9ma4 .Dropdown-root,[data-css-vo9ma4] .Dropdown-root{position:absolute;}.css-vo9ma4 .Dropdown-root .Dropdown-control,[data-css-vo9ma4] .Dropdown-root .Dropdown-control{padding-right:33px;}@media (max-width: 369px){.css-vo9ma4,[data-css-vo9ma4]{display:none;}}.css-x9rkis,[data-css-x9rkis]{display:-webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;justify-content:space-between;padding-left:10px;-webkit-box-pack:justify;-webkit-justify-content:space-between;}.css-tx6pw2,[data-css-tx6pw2]{display:-webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;flex-direction:row;align-items:center;height:60px;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-webkit-box-align:center;-webkit-align-items:center;}@media (min-width: 600px) and (max-width: 1279px){.css-tx6pw2,[data-css-tx6pw2]{height:50px;}}@media (max-width: 599px){.css-tx6pw2,[data-css-tx6pw2]{height:40px;}}@media (max-width: 779px){.css-tx6pw2,[data-css-tx6pw2]{justify-content:space-between;-webkit-box-pack:justify;-webkit-justify-content:space-between;}}.css-tctv7l,[data-css-tctv7l]{padding-left:20px;padding-right:20px;margin-left:auto;margin-right:auto;}@media (min-width: 780px){.css-tctv7l,[data-css-tctv7l]{width:90%;}}@media (min-width: 1340px){.css-tctv7l,[data-css-tctv7l]{max-width:1260px;}}.css-1lm37wx,[data-css-1lm37wx]{display:-webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;flex-direction:row;align-items:center;color:#ffffff;transition:color 0.2s ease-out;padding-left:15px;padding-right:15px;font-weight:300;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-webkit-box-align:center;-webkit-align-items:center;-webkit-transition:color 0.2s ease-out;-moz-transition:color 0.2s ease-out;}.css-1lm37wx:focus,[data-css-1lm37wx]:focus{outline:0;background-color:#3f4b63;color:#ffffff;}@media (min-width: 0px) and (max-width: 599px){.css-1lm37wx,[data-css-1lm37wx]{padding-left:8px;padding-right:8px;}}@media (min-width: 600px) and (max-width: 979px){.css-1lm37wx,[data-css-1lm37wx]{padding-left:10px;padding-right:10px;}}@media (min-width: 1280px){.css-1lm37wx,[data-css-1lm37wx]{padding-left:20px;padding-right:20px;font-size:18px;}.css-1lm37wx:hover:not(:focus),[data-css-1lm37wx]:hover:not(:focus){color:#86ddf8;}}.css-15lkjjo,[data-css-15lkjjo]{display:-webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;flex-direction:column;flex-grow:1;flex-shrink:0;flex-basis:auto;justify-content:stretch;align-items:flex-start;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-webkit-flex-grow:1;-webkit-flex-shrink:0;-webkit-flex-basis:auto;-webkit-box-pack:stretch;-webkit-justify-content:stretch;-webkit-box-align:start;-webkit-align-items:flex-start;}.css-hx86mf,[data-css-hx86mf]{flex-wrap:wrap;display:-webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;width:100%;-webkit-box-lines:multiple;-webkit-flex-wrap:wrap;}.css-ftk3jl,[data-css-ftk3jl]{display:-webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;flex-direction:row;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-webkit-box-lines:multiple;-webkit-flex-wrap:wrap;}@media (min-width: 600px) and (max-width: 979px){.css-ftk3jl,[data-css-ftk3jl]{padding-right:240px;}}@media (min-width: 980px) and (max-width: 1339px){.css-ftk3jl,[data-css-ftk3jl]{padding-right:280px;}}@media (min-width: 1100px) and (max-width: 1999px){.css-ftk3jl,[data-css-ftk3jl]{padding-right:380px;}}.css-16whlun,[data-css-16whlun]{position:absolute;margin:20px 0 0 0;padding:10px 0;background-color:#222731;text-align:center;width:100%;bottom:0;}.css-p4mm5i,[data-css-p4mm5i]{background-color:#232e44;color:#ffffff;padding-top:10px;padding-bottom:50px;}@media (min-width: 2000px){.css-p4mm5i,[data-css-p4mm5i]{padding-top:40px;}}.css-1m3wp4q,[data-css-1m3wp4q]{display:-webkit-inline-box; display: -moz-inline-box; display: -ms-inline-flexbox; display: -webkit-inline-flex; display: inline-flex;flex-direction:column;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;}.css-1j550lu,[data-css-1j550lu]{display:-webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;flex-direction:column;align-items:flex-start;width:50%;padding-top:40px;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-webkit-box-align:start;-webkit-align-items:flex-start;}@media (min-width: 2000px){.css-1j550lu,[data-css-1j550lu]{padding-top:0;width:25%;}}@media (min-width: 980px){.css-1j550lu,[data-css-1j550lu]{width:25%;}}.css-109jn6d,[data-css-109jn6d]{color:#999;font-size:14px;font-weight:700;line-height:3;text-transform:uppercase;letter-spacing:0.08em;}.css-6hsdb8,[data-css-6hsdb8]{line-height:2;}.css-6hsdb8:hover,[data-css-6hsdb8]:hover{color:#86ddf8;}.css-83uoqv,[data-css-83uoqv]{vertical-align:-2px;display:inline-block;margin-left:5px;color:#6d6d6d;}.css-1texv08,[data-css-1texv08]{cursor:pointer;padding-left:10px;}.css-1qozwqn,[data-css-1qozwqn]{background-color:#222731;color:#ffffff;position:fixed;z-index:1;width:100%;top:0;left:0;}.css-13lxhub,[data-css-13lxhub]{line-height:25px;}.css-13lxhub .gatsby-highlight,[data-css-13lxhub] .gatsby-highlight{margin-top:25px;margin-bottom:25px;padding-left:15px;padding-right:15px;}.css-13lxhub a:not(.anchor):not(.gatsby-resp-image-link),[data-css-13lxhub] a:not(.anchor):not(.gatsby-resp-image-link){background-color:rgba(182,239,126,0.5);border-bottom:1px solid rgba(0,0,0,0.2);color:#1a1a1a;}.css-13lxhub a:not(.anchor):not(.gatsby-resp-image-link):hover,[data-css-13lxhub] a:not(.anchor):not(.gatsby-resp-image-link):hover{background-color:#b6ef7e;border-bottom-color:#1a1a1a;}.css-13lxhub > p:first-child,[data-css-13lxhub] > p:first-child{font-size:18px;font-weight:300;color:#6d6d6d;}.css-13lxhub > p:first-child a,[data-css-13lxhub] > p:first-child a, .css-13lxhub > p:first-child strong, [data-css-13lxhub] > p:first-child strong{font-weight:400;}.css-13lxhub p,[data-css-13lxhub] p{margin-top:30px;font-size:17px;line-height:1.7;max-width:42em;}.css-13lxhub p:first-of-type,[data-css-13lxhub] p:first-of-type{margin-top:15px;}.css-13lxhub p:first-child,[data-css-13lxhub] p:first-child{margin-top:0;}.css-13lxhub h3 + p,[data-css-13lxhub] h3 + p, .css-13lxhub h3 + p:first-of-type, [data-css-13lxhub] h3 + p:first-of-type{margin-top:20px;}.css-13lxhub p > code,[data-css-13lxhub] p > code, .css-13lxhub li > code, [data-css-13lxhub] li > code{background:rgba(255,238,170,0.4);padding:0 3px;font-size:inherit;color:#1a1a1a;word-break:break-word;}.css-13lxhub hr,[data-css-13lxhub] hr{height:1px;margin-bottom:-1px;border:none;border-bottom:1px solid #ececec;margin-top:40px;}.css-13lxhub hr:first-child,[data-css-13lxhub] hr:first-child{margin-top:0;}.css-13lxhub h1,[data-css-13lxhub] h1{line-height:1.2;}.css-13lxhub h2,[data-css-13lxhub] h2{border-top:1px solid #ececec;margin-top:44px;padding-top:40px;line-height:1.2;}.css-13lxhub h2:first-child,[data-css-13lxhub] h2:first-child{border-top:0;margin-top:0;padding-top:0;}.css-13lxhub hr + h2,[data-css-13lxhub] hr + h2{border-top:0;margin-top:0;}.css-13lxhub h3,[data-css-13lxhub] h3{padding-top:45px;}.css-13lxhub h2 + h3,[data-css-13lxhub] h2 + h3, .css-13lxhub h2 + h3:first-of-type, [data-css-13lxhub] h2 + h3:first-of-type{padding-top:30px;}.css-13lxhub h4,[data-css-13lxhub] h4{font-size:20px;color:#6d6d6d;line-height:1.3;margin-top:50px;font-weight:400;}.css-13lxhub h4 + p,[data-css-13lxhub] h4 + p{margin-top:20px;}.css-13lxhub ol,[data-css-13lxhub] ol, .css-13lxhub ul, [data-css-13lxhub] ul{margin-top:20px;font-size:16px;color:#1a1a1a;padding-left:20px;}.css-13lxhub ol p,[data-css-13lxhub] ol p, .css-13lxhub ul p, [data-css-13lxhub] ul p, .css-13lxhub ol p:first-of-type, [data-css-13lxhub] ol p:first-of-type,  .css-13lxhub ul p:first-of-type,  [data-css-13lxhub] ul p:first-of-type{font-size:16px;margin-top:0;line-height:1.2;}.css-13lxhub ol li,[data-css-13lxhub] ol li, .css-13lxhub ul li, [data-css-13lxhub] ul li{margin-top:20px;}.css-13lxhub ol li.button-newapp,[data-css-13lxhub] ol li.button-newapp, .css-13lxhub ul li.button-newapp, [data-css-13lxhub] ul li.button-newapp{margin-top:0;}.css-13lxhub ol ol,[data-css-13lxhub] ol ol, .css-13lxhub ul ol, [data-css-13lxhub] ul ol, .css-13lxhub ol ul, [data-css-13lxhub] ol ul,  .css-13lxhub ul ul,  [data-css-13lxhub] ul ul{margin-left:20px;}.css-13lxhub img,[data-css-13lxhub] img{max-width:100%;}.css-13lxhub ol,[data-css-13lxhub] ol{list-style:decimal;}.css-13lxhub ul,[data-css-13lxhub] ul{list-style:disc;}.css-13lxhub blockquote,[data-css-13lxhub] blockquote{background-color:rgba(255,238,170,0.5);border-left-color:#fea;border-left-width:9px;border-left-style:solid;padding:20px 45px 20px 26px;margin-bottom:30px;margin-top:20px;}.css-13lxhub blockquote p,[data-css-13lxhub] blockquote p{margin-top:15px;}.css-13lxhub blockquote p:first-of-type,[data-css-13lxhub] blockquote p:first-of-type{font-weight:700;margin-top:0;}.css-13lxhub blockquote p:nth-of-type(2),[data-css-13lxhub] blockquote p:nth-of-type(2){margin-top:0;}.css-13lxhub .gatsby-highlight + blockquote,[data-css-13lxhub] .gatsby-highlight + blockquote{margin-top:40px;}.css-13lxhub table,[data-css-13lxhub] table{border-collapse:collapse;}.css-13lxhub th,[data-css-13lxhub] th{border:1px solid #ddd;border-bottom-width:2px;padding:10px;text-align:left;}.css-13lxhub td,[data-css-13lxhub] td{border:1px solid #ddd;padding:10px;text-align:left;}@media (max-width: 599px){.css-13lxhub .gatsby-highlight,[data-css-13lxhub] .gatsby-highlight{margin-left:-20px;margin-right:-20px;border-radius:0;}.css-13lxhub blockquote,[data-css-13lxhub] blockquote{margin-left:-20px;margin-right:-20px;}}@media (min-width: 1280px){.css-13lxhub > p:first-child,[data-css-13lxhub] > p:first-child{font-size:24px;}.css-13lxhub h1,[data-css-13lxhub] h1{font-size:60px;}.css-13lxhub h2,[data-css-13lxhub] h2{font-size:35px;}.css-13lxhub h3,[data-css-13lxhub] h3{font-size:25px;line-height:1.3;}}@media (max-width: 979px){.css-13lxhub p,[data-css-13lxhub] p{font-size:16px;margin-top:25px;}.css-13lxhub h2,[data-css-13lxhub] h2{font-size:20px;}}@media (min-width: 0px) and (max-width: 599px){.css-13lxhub h1,[data-css-13lxhub] h1{font-size:30px;}}@media (min-width: 600px) and (max-width: 1279px){.css-13lxhub h1,[data-css-13lxhub] h1{font-size:45px;}}.css-1x091gh,[data-css-1x091gh]{color:#6d6d6d;border-color:#ececec;transition:all 0.2s ease;transition-propery:color, border-color;white-space:nowrap;border-bottom-width:1px;border-bottom-style:solid;-webkit-transition:all 0.2s ease;-moz-transition:all 0.2s ease;}.css-1x091gh:hover,[data-css-1x091gh]:hover{color:#1a1a1a;border-color:#1a1a1a;}.css-1m173d1,[data-css-1m173d1]{margin-top:80px;}.css-124oy3v,[data-css-124oy3v]{margin-top:40px;margin-bottom:120px;}@media (min-width: 780px){.css-124oy3v,[data-css-124oy3v]{margin-top:50px;}}.css-1kbu8hg,[data-css-1kbu8hg]{display:-webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;flex-direction:column;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;}@media (min-width: 600px){.css-1kbu8hg,[data-css-1kbu8hg]{border-left:1px solid #ececec;margin-left:80px;}}@media (min-width: 600px) and (max-width: 1339px){.css-1kbu8hg,[data-css-1kbu8hg]{flex:0 0 200px;margin-left:80px;-webkit-flex:0 0 200px;}}@media (min-width: 600px) and (max-width: 979px){.css-1kbu8hg,[data-css-1kbu8hg]{margin-left:40px;}}@media (min-width: 1100px){.css-1kbu8hg,[data-css-1kbu8hg]{flex:0 0 300px;-webkit-flex:0 0 300px;}}@media (min-width: 2000px){.css-1kbu8hg,[data-css-1kbu8hg]{position:fixed;right:0;width:300px;z-index:2;}}.css-j4q8zh,[data-css-j4q8zh]{display:-webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;min-height:calc(100vh - 60px);}@media (min-width: 2000px){.css-j4q8zh,[data-css-j4q8zh]{max-width:840px;margin-left:auto;margin-right:auto;}}.css-12vsfho,[data-css-12vsfho]{flex:1 0 auto;-webkit-flex:1 0 auto;}.css-5v0gxc,[data-css-5v0gxc]{width:100%;flex:1 0 auto;position:relative;z-index:0;-webkit-flex:1 0 auto;}.css-95xunl,[data-css-95xunl]{display:-webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;flex-direction:column;flex-grow:1;flex-shrink:0;flex-basis:auto;justify-content:flex-start;align-items:stretch;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-webkit-flex-grow:1;-webkit-flex-shrink:0;-webkit-flex-basis:auto;-webkit-box-pack:start;-webkit-justify-content:flex-start;-webkit-box-align:stretch;-webkit-align-items:stretch;}.css-174qq1k,[data-css-174qq1k]{display:-webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;flex-direction:column;flex-grow:1;flex-shrink:1;flex-basis:auto;justify-content:flex-start;align-items:stretch;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-webkit-flex-grow:1;-webkit-flex-shrink:1;-webkit-flex-basis:auto;-webkit-box-pack:start;-webkit-justify-content:flex-start;-webkit-box-align:stretch;-webkit-align-items:stretch;}.css-1bkpx50,[data-css-1bkpx50]{color:#222731;margin-bottom:0;margin-top:40px;font-size:60px;line-height:65px;font-weight:700;}@media (max-width: 779px){.css-1bkpx50,[data-css-1bkpx50]{font-size:40px;line-height:45px;}}@media (min-width: 780px) and (max-width: 979px){.css-1bkpx50,[data-css-1bkpx50]{margin-top:60px;}}@media (min-width: 980px){.css-1bkpx50,[data-css-1bkpx50]{margin-top:80px;}}.css-hgc6lu,[data-css-hgc6lu]{display:-webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;flex-direction:row;flex-grow:0;flex-shrink:1;flex-basis:auto;justify-content:space-between;align-items:baseline;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-webkit-flex-grow:0;-webkit-flex-shrink:1;-webkit-flex-basis:auto;-webkit-box-pack:justify;-webkit-justify-content:space-between;-webkit-box-align:baseline;-webkit-align-items:baseline;}.css-rtmybd,[data-css-rtmybd]{margin-top:60px;margin-bottom:60px;}@media (min-width: 0px) and (max-width: 599px){.css-rtmybd,[data-css-rtmybd]{margin-top:40px;margin-bottom:40px;}}@media (min-width: 600px) and (max-width: 979px){.css-rtmybd,[data-css-rtmybd]{margin-top:0;margin-bottom:0;}}@media (min-width: 780px) and (max-width: 1279px){.css-rtmybd,[data-css-rtmybd]{margin-top:50px;margin-bottom:50px;}}@media (min-width: 600px){.css-rtmybd,[data-css-rtmybd]{transform:none !important;-webkit-transform:none !important;}}@media (max-width: 599px){.css-3ao3zf,[data-css-3ao3zf]{top:0;left:0;bottom:0;right:0;position:fixed;background-color:#ffffff;z-index:2;height:100vh;overflow-y:auto;-webkit-overflow-scrolling:touch;pointer-events:none;}}@media (min-width: 780px){.css-3ao3zf,[data-css-3ao3zf]{margin-right:-999px;padding-right:999px;background-color:#f7f7f7;}}@media (min-width: 780px) and (max-width: 1999px){.css-3ao3zf,[data-css-3ao3zf]{position:fixed;z-index:2;height:100%;}}@media (min-width: 600px){.css-3ao3zf,[data-css-3ao3zf]{position:fixed;z-index:2;height:calc(100vh - 60px);overflow-y:auto;-webkit-overflow-scrolling:touch;margin-right:-999px;padding-right:999px;background-color:#f7f7f7;opacity:1 !important;}}@media (min-width: 600px) and (max-width: 779px){.css-3ao3zf,[data-css-3ao3zf]{height:calc(100vh - 40px);}}@media (min-width: 780px) and (max-width: 1279px){.css-3ao3zf,[data-css-3ao3zf]{height:calc(100vh - 50px);}}@media (min-width: 2000px){.css-3ao3zf,[data-css-3ao3zf]{border-left:1px solid #ececec;}}.css-44j8jf,[data-css-44j8jf]{width:20px;height:20px;align-self:center;display:-webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;flex-direction:column;color:#86ddf8;-webkit-align-self:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;}.css-7ef8f8,[data-css-7ef8f8]{display:-webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;flex-direction:row;align-items:center;height:60px;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-webkit-box-align:center;-webkit-align-items:center;}@media (min-width: 780px) and (max-width: 1279px){.css-7ef8f8,[data-css-7ef8f8]{height:50px;}}@media (max-width: 599px){.css-7ef8f8,[data-css-7ef8f8]{height:60px;overflow:hidden;align-items:flex-start;-webkit-box-align:start;-webkit-align-items:flex-start;}}.css-1rqzsfy,[data-css-1rqzsfy]{background-color:#232e44;bottom:44px;color:#86ddf8;display:none;cursor:pointer;position:fixed;right:20px;z-index:3;border-radius:50%;border:1px solid rgba(255, 255, 255, 0.1);box-shadow:0 0 20px rgba(0, 0, 0, 0.3);}@media (max-width: 599px){.css-1rqzsfy,[data-css-1rqzsfy]{display:inline-block;}}.css-7stz2q,[data-css-7stz2q]{width:100%;padding-left:20px;position:relative;}@media (min-width: 1100px){.css-7stz2q,[data-css-7stz2q]{padding-left:40px;}}@media (max-width: 599px){.css-7stz2q,[data-css-7stz2q]{padding-bottom:100px;}}.css-1aai96l,[data-css-1aai96l]{display:-webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;flex-direction:column;flex-grow:0;flex-shrink:1;flex-basis:auto;justify-content:flex-start;align-items:stretch;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-webkit-flex-grow:0;-webkit-flex-shrink:1;-webkit-flex-basis:auto;-webkit-box-pack:start;-webkit-justify-content:flex-start;-webkit-box-align:stretch;-webkit-align-items:stretch;}.css-1j8jxus,[data-css-1j8jxus]{cursor:pointer;background-color:transparent;border:0;margin-top:10px;}.css-19pur11,[data-css-19pur11]{color:#1a1a1a;display:inline-block;border-bottom:1px solid transparent;transition:border 0.2s ease;margin-top:5px;-webkit-transition:border 0.2s ease;-moz-transition:border 0.2s ease;}.css-19pur11:hover,[data-css-19pur11]:hover{color:#6d6d6d;}.css-prcfqy,[data-css-prcfqy]{margin-top:8px;}.css-1s0et3v,[data-css-1s0et3v]{width:4px;height:25px;border-left:4px solid #86ddf8;padding-left:16px;position:absolute;left:0;margin-top:-3px;}@media (min-width: 1100px){.css-1s0et3v,[data-css-1s0et3v]{left:15px;}}.css-1b7a3df,[data-css-1b7a3df]{color:#1a1a1a;display:inline-block;border-bottom:1px solid transparent;transition:border 0.2s ease;margin-top:5px;font-weight:700;-webkit-transition:border 0.2s ease;-moz-transition:border 0.2s ease;}.css-1b7a3df:hover,[data-css-1b7a3df]:hover{color:#6d6d6d;}.css-140tz9x,[data-css-140tz9x]{margin-left:20px;}.css-axv6fp,[data-css-axv6fp]{margin-bottom:10px;}@media (min-width: 600px){.css-axv6fp,[data-css-axv6fp]{display:block;}}.css-cqdcva,[data-css-cqdcva]{color:#6d6d6d;font-size:14px;font-weight:700;line-height:3;text-transform:uppercase;letter-spacing:0.08em;}@media (min-width: 600px){.css-cqdcva,[data-css-cqdcva]{color:#1a1a1a;}.css-cqdcva:hover,[data-css-cqdcva]:hover{color:#1a1a1a;}}.css-1mwek35,[data-css-1mwek35]{margin-left:7px;transform:rotateX(180deg);transition:-webkit-transform 0.2s ease,transform 0.2s ease;-webkit-transform:rotateX(180deg);-webkit-transition:-webkit-transform 0.2s ease,transform 0.2s ease;-moz-transition:transform 0.2s ease;}@media (max-width: 599px){.css-1mwek35,[data-css-1mwek35]{display:none;}}.css-1isbolo,[data-css-1isbolo]{margin-bottom:10px;}@media (min-width: 600px){.css-1isbolo,[data-css-1isbolo]{display:none;}}.css-1n7kyh0,[data-css-1n7kyh0]{color:#6d6d6d;font-size:14px;font-weight:700;line-height:3;text-transform:uppercase;letter-spacing:0.08em;}@media (min-width: 600px){.css-1n7kyh0,[data-css-1n7kyh0]{color:#6d6d6d;}.css-1n7kyh0:hover,[data-css-1n7kyh0]:hover{color:#1a1a1a;}}.css-1jiuhrf,[data-css-1jiuhrf]{margin-left:7px;transform:rotateX(0deg);transition:-webkit-transform 0.2s ease,transform 0.2s ease;-webkit-transform:rotateX(0deg);-webkit-transition:-webkit-transform 0.2s ease,transform 0.2s ease;-moz-transition:transform 0.2s ease;}@media (max-width: 599px){.css-1jiuhrf,[data-css-1jiuhrf]{display:none;}}.css-sg9l1i,[data-css-sg9l1i]{transform:translate(2px, -4px) rotate(180deg);transition:-webkit-transform 0.2s ease,transform 0.2s ease;-webkit-transform:translate(2px, -4px) rotate(180deg);-webkit-transition:-webkit-transform 0.2s ease,transform 0.2s ease;-moz-transition:transform 0.2s ease;}.css-o1zbu3,[data-css-o1zbu3]{transform:translate(2px, 4px);transition:-webkit-transform 0.2s ease,transform 0.2s ease;-webkit-transform:translate(2px, 4px);-webkit-transition:-webkit-transform 0.2s ease,transform 0.2s ease;-moz-transition:transform 0.2s ease;}.css-1gz2d9j,[data-css-1gz2d9j]{padding-top:10px;}.css-syjz65,[data-css-syjz65]{text-align:right;}@media (min-width: 600px) and (max-width: 979px){.css-15o825x,[data-css-15o825x]{padding-right:240px;}}@media (min-width: 980px) and (max-width: 1339px){.css-15o825x,[data-css-15o825x]{padding-right:280px;}}@media (min-width: 1100px) and (max-width: 1999px){.css-15o825x,[data-css-15o825x]{padding-right:380px;}}.css-7zvbu5,[data-css-7zvbu5]{background:#323a48;color:#ffffff;padding-top:50px;padding-bottom:50px;}.css-lhap5,[data-css-lhap5]{display:-webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;flex-direction:row;flex-grow:0;flex-shrink:1;flex-basis:auto;justify-content:space-between;align-items:flex-start;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-webkit-flex-grow:0;-webkit-flex-shrink:1;-webkit-flex-basis:auto;-webkit-box-pack:justify;-webkit-justify-content:space-between;-webkit-box-align:start;-webkit-align-items:flex-start;}.css-k2v7we,[data-css-k2v7we]{display:-webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;flex-direction:row;flex-grow:0;flex-shrink:1;flex-basis:50%;justify-content:flex-start;align-items:flex-start;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-webkit-flex-grow:0;-webkit-flex-shrink:1;-webkit-flex-basis:50%;-webkit-box-pack:start;-webkit-justify-content:flex-start;-webkit-box-align:start;-webkit-align-items:flex-start;}.css-4q3d7y,[data-css-4q3d7y]{color:#86ddf8;font-size:14px;}.css-1ujbmto,[data-css-1ujbmto]{display:inline;text-transform:capitalize;border-color:#6d6d6d;transition:border-color 0.2s ease;font-size:30px;border-bottom-width:1px;border-bottom-style:solid;-webkit-transition:border-color 0.2s ease;-moz-transition:border-color 0.2s ease;}.css-1ujbmto:hover,[data-css-1ujbmto]:hover{border-color:#ffffff;}@media (max-width: 979px){.css-1ujbmto,[data-css-1ujbmto]{font-size:24px;}}@media (min-width: 0px) and (max-width: 599px){.css-1ujbmto,[data-css-1ujbmto]{font-size:16px;}}.css-14qyarc,[data-css-14qyarc]{display:-webkit-box; display: -moz-box; display: -ms-flexbox; display: -webkit-flex; display: flex;flex-direction:row;flex-grow:0;flex-shrink:1;flex-basis:50%;justify-content:flex-end;align-items:flex-start;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-webkit-flex-direction:row;-webkit-flex-grow:0;-webkit-flex-shrink:1;-webkit-flex-basis:50%;-webkit-box-pack:end;-webkit-justify-content:flex-end;-webkit-box-align:start;-webkit-align-items:flex-start;}</style><script id="glamor-ids">
+        // <![CDATA[
+        window._glamor = ["i2mgzj","46qz71","1jld97y","expzc7","14f2gh7","1u4y56u","1h2fzrm","syyzfr","ki8d3w","o0vamj","1j3hxv8","zsednb","2x6ipt","nf6sef","6kb8y3","1ogfv32","h7y4wy","kgt1pa","16to0wc","9cb5ay","lhlvbt","f5j1cd","1lk3hfe","8jdw55","17ufatm","u4j1fe","1jmm0qs","vztle4","1spusys","p9r9zw","k99y95","tqmsxa","514nx3","bmkla1","1i9sgxs","1ilizh3","kirud9","tt2yeq","h5g5l5","18vkdd6","1f9aa52","w0wzhx","kcwrr","1dvmgyu","2oh51h","1hke9lz","1gqfy9o","und790","164veih","q1fzsk","wzwv41","8r5hw5","dumj1p","j1ud8o","npkq0u","htcfem","eznxm9","1cpgitm","1lzdxot","g5mtsg","1w8g2ov","pbmvx7","rabpw6","1tj07cs","19ekajh","1rho0fa","1tv5sxm","awku5i","1s6n7si","z9ethg","uun7eo","dk6po0","vo9ma4","x9rkis","tx6pw2","tctv7l","1lm37wx","15lkjjo","hx86mf","ftk3jl","16whlun","p4mm5i","1m3wp4q","1j550lu","109jn6d","6hsdb8","83uoqv","1texv08","1qozwqn","13lxhub","1x091gh","1m173d1","124oy3v","1kbu8hg","j4q8zh","12vsfho","5v0gxc","95xunl","174qq1k","1bkpx50","hgc6lu","rtmybd","3ao3zf","44j8jf","7ef8f8","1rqzsfy","7stz2q","1aai96l","1j8jxus","19pur11","prcfqy","1s0et3v","1b7a3df","140tz9x","axv6fp","cqdcva","1mwek35","1isbolo","1n7kyh0","1jiuhrf","sg9l1i","o1zbu3","1gz2d9j","syjz65","15o825x","7zvbu5","lhap5","k2v7we","4q3d7y","1ujbmto","14qyarc"]
+        // ]]>
+        </script><style type="text/css">
+    .anchor {
+      float: left;
+      padding-right: 4px;
+      margin-left: -20px;
+    }
+    h1 .anchor svg,
+    h2 .anchor svg,
+    h3 .anchor svg,
+    h4 .anchor svg,
+    h5 .anchor svg,
+    h6 .anchor svg {
+      visibility: hidden;
+    }
+    h1:hover .anchor svg,
+    h2:hover .anchor svg,
+    h3:hover .anchor svg,
+    h4:hover .anchor svg,
+    h5:hover .anchor svg,
+    h6:hover .anchor svg {
+      visibility: visible;
+    }
+  </style><script>
+    document.addEventListener("DOMContentLoaded", function(event) {
+      var hash = window.decodeURI(location.hash.replace('#', ''))
+      if (hash !== '') {
+        var element = document.getElementById(hash)
+        if (element) {
+          var offset = element.offsetTop
+          // Wait for the browser to finish rendering before scrolling.
+          setTimeout((function() {
+            window.scrollTo(0, offset - 0)
+          }), 0)
+        }
+      }
+    })
+  </script><link rel="alternate" type="application/rss+xml" href="/feed.xml"/><title data-react-helmet="true">ResultList - Reactive Manual</title><meta data-react-helmet="true" property="og:title" content="ResultList - Reactive Manual"/><meta data-react-helmet="true" property="og:type" content="website"/><meta data-react-helmet="true" property="og:url" content="https://divyanshu013.github.io/reactive-manual-new/result-components/resultlist.html"/><meta data-react-helmet="true" property="og:image" content="https://opensource.appbase.io/reactive-manual/logo-og.png"/><meta data-react-helmet="true" property="og:description" content="UI components for Elasticsearch"/><meta data-react-helmet="true" property="fb:app_id" content="623268441017527"/><script>
+                ((window.gitter = {}).chat = {}).options = {
+                  room: 'appbaseio/reactivesearch'
+                };
+							</script><script>
+                (function(h,o,t,j,a,r){
+                  h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+                  h._hjSettings={hjid:22389,hjsv:6};
+                  a=o.getElementsByTagName('head')[0];
+                  r=o.createElement('script');r.async=1;
+                  r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+                  a.appendChild(r);
+                })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+							</script><script src="https://sidecar.gitter.im/dist/sidecar.v1.js" async="" defer=""></script><script src="//use.fontawesome.com/655968a3e7.js"></script><style id="gatsby-inlined-css">.Dropdown-root{position:relative}.Dropdown-control{position:relative;overflow:hidden;background-color:#fff;border:1px solid #ccc;border-radius:2px;box-sizing:border-box;color:#333;cursor:default;outline:none;padding:8px 52px 8px 10px;transition:all .2s ease}.Dropdown-control:hover{box-shadow:0 1px 0 rgba(0,0,0,.06)}.Dropdown-arrow{border-color:#999 transparent transparent;border-style:solid;border-width:5px 5px 0;content:" ";display:block;height:0;margin-top:-ceil(2.5);position:absolute;right:10px;top:14px;width:0}.is-open .Dropdown-arrow{border-color:transparent transparent #999;border-width:0 5px 5px}.Dropdown-menu{background-color:#fff;border:1px solid #ccc;box-shadow:0 1px 0 rgba(0,0,0,.06);box-sizing:border-box;margin-top:-1px;max-height:200px;overflow-y:auto;position:absolute;top:100%;width:100%;z-index:1000;-webkit-overflow-scrolling:touch}.Dropdown-menu .Dropdown-group>.Dropdown-title{padding:8px 10px;color:#333;font-weight:700;text-transform:capitalize}.Dropdown-option{box-sizing:border-box;color:rgba(51,51,51,.8);cursor:pointer;display:block;padding:8px 10px}.Dropdown-option:last-child{border-bottom-right-radius:2px;border-bottom-left-radius:2px}.Dropdown-option.is-selected,.Dropdown-option:hover{background-color:#f2f9fc;color:#333}.Dropdown-noresults{box-sizing:border-box;color:#ccc;cursor:default;display:block;padding:8px 10px}.react-autosuggest__container{position:relative;color:#000}.react-autosuggest__input{width:400px;height:50px;padding:10px 20px;padding-left:40px;font-weight:300;font-size:16px;border:1px solid #aaa;border-radius:4px}.react-autosuggest__input--focused{outline:none}.react-autosuggest__input--open{border-bottom-left-radius:0;border-bottom-right-radius:0}.react-autosuggest__suggestions-container{display:none}.react-autosuggest__suggestions-container--open{display:block;position:absolute;top:51px;width:400px;border:1px solid #aaa;background-color:#fff;font-weight:300;font-size:13px;border-bottom-left-radius:4px;border-bottom-right-radius:4px;z-index:2}.react-autosuggest__suggestions-list{margin:0;padding:0;list-style-type:none}.react-autosuggest__suggestion{cursor:pointer;padding:10px 20px;border-bottom:1px solid #ddd}.react-autosuggest__suggestion--highlighted{background-color:#f7f7f7}@media (max-width:1279px){.react-autosuggest__input{height:40px}.react-autosuggest__suggestions-container--open{top:41px}}@media (max-width:600px){.react-autosuggest__input{height:35px}.react-autosuggest__suggestions-container--open{top:36px}}@media (max-width:500px){.react-autosuggest__input,.react-autosuggest__suggestions-container--open{width:100%}}html{box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;font-weight:400;font-style:normal;-webkit-font-smoothing:antialiased}body{overflow-x:hidden;position:relative}*{margin:0;padding:0}*,:after,:before{box-sizing:inherit}a{color:inherit;text-decoration:none}ol,ul{list-style:none}img{display:inline-block;vertical-align:top}code,pre{font-family:source-code-pro,Menlo,Monaco,Consolas,Courier New,monospace}</style></head><body><div id="___gatsby"><div class="css-awku5i" data-reactroot=""><header class="css-1qozwqn"><div class="css-tctv7l"><div class="css-tx6pw2"><a href="https://opensource.appbase.io/reactivesearch" target="_blank" rel="noopener" class="css-uun7eo"><img src="data:image/png;base64,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" alt="Logo" class="css-1s6n7si"/><span class="css-z9ethg">ReactiveSearch</span></a><nav class="css-dk6po0"><a class="css-1lm37wx" href="/reactive-manual/v2/">Home</a><a class="css-1lm37wx" href="/reactive-manual/v2/getting-started/">Getting Started</a><a class="css-1lm37wx" href="/reactive-manual/v2/base-components/textfield.html">Components</a><a class="css-1lm37wx" href="/reactive-manual/v2/theming/themes.html">Theming</a><a class="css-1lm37wx" href="/reactive-manual/v2/advanced/customsuggestions.html">Advanced</a></nav><div class="css-x9rkis"><div class="css-vo9ma4"><div class="undefined Dropdown-root"><div class="Dropdown-control "><div class="Dropdown-placeholder">v2 - Web</div><span class="Dropdown-arrow"></span></div></div></div><div role="button" tabIndex="0" class="css-1texv08"><svg alt="Search" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><title>Search</title><path d="
+        M6.02945,10.20327a4.17382,4.17382,0,1,1,4.17382-4.17382A4.15609,4.15609,
+        0,0,1,6.02945,10.20327Zm9.69195,4.2199L10.8989,9.59979A5.88021,5.88021,
+        0,0,0,12.058,6.02856,6.00467,6.00467,0,1,0,9.59979,10.8989l4.82338,
+        4.82338a.89729.89729,0,0,0,1.29912,0,.89749.89749,0,0,0-.00087-1.29909Z
+      " fill="currentColor"></path></svg></div></div></div></div></header><div class="css-1tv5sxm css-15lkjjo"><div class="css-5v0gxc css-95xunl"><div class="css-12vsfho"><div class="css-tctv7l"><div class="css-j4q8zh"><article class="css-174qq1k"><header class="css-hgc6lu"><h1 class="css-1bkpx50">ResultList</h1></header><div class="css-124oy3v"><div class="css-13lxhub"><p><img src="https://i.imgur.com/iY2csRm.png" alt="Image to be displayed"></p>
+<p><code>ResultList</code> creates a result list UI component to display results in a list layout, suited for data that needs a compact display.</p>
+<p>Example uses:</p>
+<ul>
+<li>showing e-commerce search listings.</li>
+<li>showing filtered hotel booking results.</li>
+</ul>
+<blockquote>
+<p>Note</p>
+<p>An alternative layout to ResultList is a <a href="/reactive-manual/v2/search-components/resultcard.html"><strong>ResultCard</strong></a>, which displays result data in a card layout.</p>
+</blockquote>
+<h2 id="usage"><a href="#usage" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Usage</h2>
+<h3 id="basic-usage"><a href="#basic-usage" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Basic Usage</h3>
+<div class="gatsby-highlight">
+      <pre class="gatsby-code-jsx"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ResultList</span>
+  <span class="token attr-name">react</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+    <span class="token string">"and"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">"PriceFilter"</span><span class="token punctuation">,</span> <span class="token string">"SearchFilter"</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
+  <span class="token attr-name">onData</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>onData<span class="token punctuation">}</span></span>
+<span class="token punctuation">/></span></span>
+</code></pre>
+      </div>
+<h3 id="pagination-usage-with-all-props"><a href="#pagination-usage-with-all-props" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Pagination Usage With All Props</h3>
+<div class="gatsby-highlight">
+      <pre class="gatsby-code-jsx"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ResultList</span>
+  <span class="token attr-name">componentId</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ResultList01<span class="token punctuation">"</span></span>
+  <span class="token attr-name">dataField</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ratings<span class="token punctuation">"</span></span>
+  <span class="token attr-name">stream</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token boolean">true</span><span class="token punctuation">}</span></span>  
+  <span class="token attr-name">sortBy</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>desc<span class="token punctuation">"</span></span>
+  <span class="token attr-name">size</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token number">8</span><span class="token punctuation">}</span></span>
+  <span class="token attr-name">pagination</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token boolean">true</span><span class="token punctuation">}</span></span>
+  <span class="token attr-name">paginationAt</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>bottom<span class="token punctuation">"</span></span>
+  <span class="token attr-name">pages</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token number">5</span><span class="token punctuation">}</span></span>
+  <span class="token attr-name">showResultStats</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token boolean">true</span><span class="token punctuation">}</span></span>
+  <span class="token attr-name">loader</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Loading Results..<span class="token punctuation">"</span></span>
+  <span class="token attr-name">react</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+    and<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">"PriceFilter"</span><span class="token punctuation">,</span> <span class="token string">"SearchFilter"</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
+  <span class="token attr-name">onData</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>onData<span class="token punctuation">}</span></span>
+<span class="token punctuation">/></span></span>
+</code></pre>
+      </div>
+<h3 id="infinite-scroll-usage-with-all-props"><a href="#infinite-scroll-usage-with-all-props" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Infinite Scroll Usage With All Props</h3>
+<div class="gatsby-highlight">
+      <pre class="gatsby-code-jsx"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ResultList</span>
+  <span class="token attr-name">componentId</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ResultList01<span class="token punctuation">"</span></span>
+  <span class="token attr-name">dataField</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ratings<span class="token punctuation">"</span></span>
+  <span class="token attr-name">stream</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token boolean">true</span><span class="token punctuation">}</span></span>  
+  <span class="token attr-name">sortBy</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>desc<span class="token punctuation">"</span></span>
+  <span class="token attr-name">size</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token number">8</span><span class="token punctuation">}</span></span>
+  <span class="token attr-name">pagination</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token boolean">false</span><span class="token punctuation">}</span></span>
+  <span class="token attr-name">showResultStats</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token boolean">true</span><span class="token punctuation">}</span></span>
+  <span class="token attr-name">loader</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>Loading Results..<span class="token punctuation">"</span></span>
+  <span class="token attr-name">react</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+    and<span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">"PriceFilter"</span><span class="token punctuation">,</span> <span class="token string">"SearchFilter"</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">}</span></span>
+  <span class="token attr-name">onData</span><span class="token script language-javascript"><span class="token punctuation">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>onData<span class="token punctuation">}</span></span>
+<span class="token punctuation">/></span></span>
+</code></pre>
+      </div>
+<h2 id="props"><a href="#props" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Props</h2>
+<ul>
+<li><strong>componentId</strong> <code>String</code><br>
+unique identifier of the component, can be referenced in other components’ <code>react</code> prop.</li>
+<li><strong>dataField</strong> <code>String</code><br>
+data field to be mapped with <code>ResultList</code>’s UI view, used for providing a sorting context.</li>
+<li><strong>excludeFields</strong> <code>String Array</code> [optional]<br>
+fields to be excluded in search results.</li>
+<li><strong>includeFields</strong> <code>String Array</code> [optional]<br>
+fields to be included in search results.</li>
+<li><strong>stream</strong> <code>Boolean</code> [optional]<br>
+whether to stream new result updates in the UI. Defaults to <code>false</code>.</li>
+<li><strong>scrollTarget</strong> <code>String</code> [optional]<br>
+accepts <code>id</code> of the container you wish to apply infinite loading on. <strong>Note:</strong> The container should be scrollable.</li>
+<li><strong>pagination</strong> <code>Boolean</code> [optional]<br>
+pagination &#x3C;> infinite scroll switcher. Defaults to <code>false</code>, i.e. an infinite scroll based view. When set to <code>true</code>, a pagination based list view with page numbers will appear.</li>
+<li><strong>paginationAt</strong> <code>String</code> [optional]<br>
+Determines the position where to show the pagination, only applicable when <strong>pagination</strong> prop is set to <code>true</code>. Accepts one of <code>top</code>, <code>bottom</code> or <code>both</code> as valid values. Defaults to <code>bottom</code>.</li>
+<li><strong>pages</strong> <code>Number</code> [optional]<br>
+number of pages to show at at time, defaults to 5.</li>
+<li><strong>onPageChange</strong> <code>Function</code> [optional]<br>
+executes when the current page is changed. If not defined, <code>window</code> will be scrolled to the top of the page.</li>
+<li><strong>onPageClick</strong> <code>Function</code> [optional]<br>
+accepts a function which is invoked with the updated page value when a pagination button is clicked. For example if ‘Next’ is clicked with the current page number as ‘1’, you would receive the value ‘2’ as the function parameter.</li>
+</ul>
+<blockquote>
+<p>Note:</p>
+<p>The fundamental difference between <code>onPageChange</code> and <code>onPageClick</code> is that <code>onPageClick</code> is only called on a manual interaction with the pagination buttons, whereas, <code>onPageChange</code> would also be invoked if some other side effects caused the results to update which includes updating filters, queries or changing pages. The behaviour of these two may change in the future versions as we come up with a better API.</p>
+</blockquote>
+<ul>
+<li><strong>sortBy</strong> <code>String</code> [optional]<br>
+sort the results by either <code>asc</code> or <code>desc</code> order. It is an alternative to <code>sortOptions</code>, both can’t be used together.</li>
+<li>
+<p><strong>sortOptions</strong> <code>Object Array</code> [optional]<br>
+an alternative to the <code>sortBy</code> prop, <code>sortOptions</code> creates a sorting view in the ResultList component’s UI. Each array element is an object that takes three keys:</p>
+<ul>
+<li><code>label</code> - label to be displayed in the UI.</li>
+<li><code>dataField</code> - data field to use for applying the sorting criteria on.</li>
+<li><code>sortBy</code> - specified as either <code>asc</code> or <code>desc</code>.</li>
+</ul>
+</li>
+<li><strong>size</strong> <code>Number</code> [optional]<br>
+number of results to show per view. Defaults to 20. </li>
+<li><strong>loader</strong> <code>String or JSX</code> [optional]<br>
+display to show the user while the data is loading, accepts <code>String</code> or <code>JSX</code> markup.</li>
+<li><strong>showResultStats</strong> <code>Boolean</code> [optional]<br>
+whether to show result stats in the form of results found and time taken. Defaults to <code>true</code>.</li>
+<li><strong>onResultStats</strong> <code>Function</code> [optional]<br>
+renders custom result stats using a function that takes two parameters for <code>total_results</code> and <code>time_taken</code> and expects it to return a string or JSX.</li>
+<li><strong>react</strong> <code>Object</code><br>
+a dependency object defining how this component should react based on the state changes in the sensor components. You can read more about how to specify this prop over <a href="/reactive-manual/v2/advanced/react.html">here</a>.</li>
+<li><strong>URLParams</strong> <code>Boolean</code> [optional]<br>
+when set adds the current page number to the url. Only works when <code>pagination</code> is enabled.</li>
+<li>
+<p><strong>onData</strong> <code>Function</code> [optional]<br>
+returns a card element object to be rendered based on the <code>res</code> data object. This callback function prop is called for each data item rendered in the <strong>ResultList</strong> component’s view.</p>
+<div class="gatsby-highlight">
+      <pre class="gatsby-code-jsx"><code>onData<span class="token operator">=</span><span class="token punctuation">{</span>
+  <span class="token keyword">function</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token punctuation">{</span>
+      image<span class="token punctuation">:</span> res<span class="token punctuation">.</span>image<span class="token punctuation">,</span>
+      title<span class="token punctuation">:</span> res<span class="token punctuation">.</span>name<span class="token punctuation">,</span>
+      description<span class="token punctuation">:</span> <span class="token punctuation">(</span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">></span></span>
+              <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">className</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>price<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>$<span class="token punctuation">{</span>res<span class="token punctuation">.</span>price<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+              <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><span class="token punctuation">{</span>res<span class="token punctuation">.</span>room_type<span class="token punctuation">}</span> · <span class="token punctuation">{</span>res<span class="token punctuation">.</span>accommodates<span class="token punctuation">}</span> guests<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+      <span class="token punctuation">)</span><span class="token punctuation">,</span>
+      url<span class="token punctuation">:</span> res<span class="token punctuation">.</span>listing_url<span class="token punctuation">,</span>
+      containerProps<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        onMouseEnter<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'😁'</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+        onMouseLeave<span class="token punctuation">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'🙀'</span><span class="token punctuation">)</span>
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre>
+      </div>
+<p>The return format for the callback function is an object with <code>image</code>, <code>image_size</code>, <code>title</code>, <code>description</code> and <code>url</code> fields.</p>
+</li>
+<li><strong>defaultQuery</strong> <code>Function</code> [optional]<br>
+applies a default query to the result component. This query will be run when no other components are being watched (via React prop), as well as in conjunction with the query generated from the React prop. The function should return a query.</li>
+<li><strong>onNoResults</strong> <code>String or JSX</code> [optional]<br>
+show custom message or component when no results founds.</li>
+<li><strong>onError</strong> <code>Function</code> [optional]<br>
+gets triggered in case of an error and provides the <code>error</code> object, which can be used for debugging or giving feedback to the user if needed.</li>
+</ul>
+<h2 id="demo"><a href="#demo" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Demo</h2>
+<br />
+<iframe src="https://codesandbox.io/embed/github/appbaseio/reactivesearch/tree/dev/packages/web/examples/ResultList" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+<h2 id="styles"><a href="#styles" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Styles</h2>
+<p><code>ResultList</code> component supports <code>innerClass</code> prop with the following keys:    </p>
+<ul>
+<li><code>resultsInfo</code></li>
+<li><code>sortOptions</code></li>
+<li><code>resultStats</code></li>
+<li><code>noResults</code></li>
+<li><code>button</code></li>
+<li><code>pagination</code></li>
+<li><code>list</code></li>
+<li><code>listItem</code></li>
+<li><code>image</code></li>
+<li><code>title</code></li>
+<li><code>poweredBy</code></li>
+</ul>
+<p>Read more about it <a href="/reactive-manual/v2/theming/class.html">here</a>.</p>
+<h2 id="extending"><a href="#extending" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Extending</h2>
+<p><code>ResultList</code> component can be extended to</p>
+<ol>
+<li>customize the look and feel with <code>className</code>, <code>style</code>,</li>
+<li>render individual result data items using <code>onData</code>,</li>
+<li>specify how results should be filtered using <code>react</code>.</li>
+<li>connect with external interfaces using <code>onQueryChange</code>.</li>
+</ol>
+<div class="gatsby-highlight">
+      <pre class="gatsby-code-jsx"><code><span class="token operator">&lt;</span>ResultList
+  <span class="token operator">...</span>
+  className<span class="token operator">=</span><span class="token string">"custom-class"</span>
+  <span class="token comment">// specify any number of custom styles.</span>
+  style<span class="token operator">=</span><span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token string">"paddingBottom"</span><span class="token punctuation">:</span> <span class="token string">"10px"</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+  <span class="token comment">// register a callback function with the `onData` prop.</span>
+  onData<span class="token operator">=</span><span class="token punctuation">{</span>
+    <span class="token keyword">function</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token keyword">return</span> <span class="token punctuation">{</span>
+        image<span class="token punctuation">:</span> res<span class="token punctuation">.</span>image<span class="token punctuation">,</span>
+        title<span class="token punctuation">:</span> res<span class="token punctuation">.</span>name<span class="token punctuation">,</span>
+        url<span class="token punctuation">:</span> res<span class="token punctuation">.</span>listing_url
+      <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  onQueryChange<span class="token operator">=</span><span class="token punctuation">{</span>
+    <span class="token keyword">function</span><span class="token punctuation">(</span>prevQuery<span class="token punctuation">,</span> nextQuery<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token comment">// use the query with other js code</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'prevQuery'</span><span class="token punctuation">,</span> prevQuery<span class="token punctuation">)</span><span class="token punctuation">;</span>
+      console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">'nextQuery'</span><span class="token punctuation">,</span> nextQuery<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment">// specify how and which results are filtered using `react` prop.</span>
+  react<span class="token operator">=</span><span class="token punctuation">{</span>
+    <span class="token string">"and"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">"pricingFilter"</span><span class="token punctuation">,</span> <span class="token string">"dateFilter"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token string">"or"</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">"searchFilter"</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span>
+<span class="token operator">/</span><span class="token operator">></span>
+</code></pre>
+      </div>
+<ul>
+<li><strong>className</strong> <code>String</code><br>
+CSS class to be injected on the component container.</li>
+<li><strong>style</strong> <code>Object</code><br>
+CSS Styles to be applied to the <strong>ResultList</strong> component.</li>
+<li><strong>onData</strong> <code>Function</code> [optional]<br>
+a callback function where user can define how to render the view based on the data changes. In <code>ResultList</code>’s case, the expected return format is an object with <code>image</code>, <code>image_size</code>, <code>title</code>, <code>url</code> and <code>description</code> keys.</li>
+<li><strong>target</strong> <code>string</code> [optional]<br>
+This prop is equivalent to the <code>target</code> attribute of html <code>a</code> tags. It is only valid when <code>url</code> key is present in <code>onData()</code>’s returned object structure. It defaults to <code>_blank</code>.</li>
+<li>
+<p><strong>react</strong> <code>Object</code><br>
+specify dependent components to reactively update <strong>ResultList’s</strong> data view.</p>
+<ul>
+<li>
+<p><strong>key</strong> <code>String</code><br>
+one of <code>and</code>, <code>or</code>, <code>not</code> defines the combining clause.</p>
+<ul>
+<li><strong>and</strong> clause implies that the results will be filtered by matches from <strong>all</strong> of the associated component states.</li>
+<li><strong>or</strong> clause implies that the results will be filtered by matches from <strong>at least one</strong> of the associated component states.</li>
+<li><strong>not</strong> clause implies that the results will be filtered by an <strong>inverse</strong> match of the associated component states.</li>
+</ul>
+</li>
+<li>
+<p><strong>value</strong> <code>String or Array or Object</code>  </p>
+<ul>
+<li><code>String</code> is used for specifying a single component by its <code>componentId</code>.</li>
+<li><code>Array</code> is used for specifying multiple components by their <code>componentId</code>.</li>
+<li><code>Object</code> is used for nesting other key clauses.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<div class="gatsby-highlight">
+      <pre class="gatsby-code-jsx"><code><span class="token function">onAllData</span><span class="token punctuation">(</span>items<span class="token punctuation">,</span> loadMoreData<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+	<span class="token comment">// return the list to render</span>
+<span class="token punctuation">}</span>
+</code></pre>
+      </div>
+<blockquote>
+<p>Note</p>
+<p>The <strong>callback</strong> function (<code>loadMoreData</code> here) will only be executed in case of infinite loading.</p>
+</blockquote>
+<ul>
+<li><strong>onQueryChange</strong> <code>Function</code><br>
+is a callback function which accepts component’s <strong>prevQuery</strong> and <strong>nextQuery</strong> as parameters. It is called everytime the component’s query changes. This prop is handy in cases where you want to generate a side-effect whenever the component’s query would change.</li>
+</ul>
+<h2 id="examples"><a href="#examples" aria-hidden="true" class="anchor"><svg aria-hidden="true" height="16" version="1.1" viewBox="0 0 16 16" width="16"><path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path></svg></a>Examples</h2>
+<p>See more stories for ResultList on playground.</p>
+<p><a href="https://opensource.appbase.io/playground/?selectedKind=Result%20components%2FResultList" target="_blank">ResultList with default props</a></p></div><div class="css-1m173d1"><a href="https://github.com/appbaseio/reactive-manual/tree/v2/content/docs/result-components/ResultList.md" class="css-1x091gh">Edit this page</a></div></div></article><div class="css-1kbu8hg"><div><div style="opacity:0;transition:opacity 0.5s ease" class="css-3ao3zf"><div style="transform:translate(0px, 40px);transition:transform 0.5s ease" class="css-rtmybd"><nav class="css-7stz2q css-1aai96l"><div><button class="css-1j8jxus"><div class="css-1n7kyh0">Getting Started<svg viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" class="css-1jiuhrf"><g transform="translate(904.92214,-879.1482)"><path d="
+          m -673.67664,1221.6502 -231.2455,-231.24803 55.6165,
+          -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894,
+          0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892,
+          -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696,
+          -174.68583 0.6895,0 26.281,25.03215 56.8701,
+          55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864
+          -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688,
+          -104.0616 -231.873,-231.248 z
+        " fill="currentColor"></path></g></svg></div></button><ul class="css-1isbolo"><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/getting-started/reactivesearch.html">ReactiveSearch Quickstart</a></li><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/getting-started/reactivemaps.html">ReactiveMaps Quickstart</a></li><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/getting-started/data.html">Importing Data</a></li><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/getting-started/reactivebase.html">ReactiveBase</a></li><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/getting-started/componentsindex.html">Components Overview</a></li></ul></div><div><button class="css-1j8jxus"><div class="css-1n7kyh0">Base Components<svg viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" class="css-1jiuhrf"><g transform="translate(904.92214,-879.1482)"><path d="
+          m -673.67664,1221.6502 -231.2455,-231.24803 55.6165,
+          -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894,
+          0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892,
+          -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696,
+          -174.68583 0.6895,0 26.281,25.03215 56.8701,
+          55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864
+          -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688,
+          -104.0616 -231.873,-231.248 z
+        " fill="currentColor"></path></g></svg></div></button><ul class="css-1isbolo"><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/base-components/textfield.html">TextField</a></li><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/base-components/togglebutton.html">ToggleButton</a></li><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/base-components/tagcloud.html">TagCloud</a></li><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/base-components/datacontroller.html">DataController</a></li><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/base-components/selectedfilters.html">SelectedFilters</a></li></ul></div><div><button class="css-1j8jxus"><div class="css-1n7kyh0">List Components<svg viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" class="css-1jiuhrf"><g transform="translate(904.92214,-879.1482)"><path d="
+          m -673.67664,1221.6502 -231.2455,-231.24803 55.6165,
+          -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894,
+          0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892,
+          -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696,
+          -174.68583 0.6895,0 26.281,25.03215 56.8701,
+          55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864
+          -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688,
+          -104.0616 -231.873,-231.248 z
+        " fill="currentColor"></path></g></svg></div></button><ul class="css-1isbolo"><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/list-components/singlelist.html">SingleList</a></li><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/list-components/multilist.html">MultiList</a></li><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/list-components/singledropdownlist.html">SingleDropdownList</a></li><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/list-components/multidropdownlist.html">MultiDropdownList</a></li><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/list-components/singledatalist.html">SingleDataList</a></li><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/list-components/multidatalist.html">MultiDataList</a></li></ul></div><div><button class="css-1j8jxus"><div class="css-1n7kyh0">Range Components<svg viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" class="css-1jiuhrf"><g transform="translate(904.92214,-879.1482)"><path d="
+          m -673.67664,1221.6502 -231.2455,-231.24803 55.6165,
+          -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894,
+          0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892,
+          -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696,
+          -174.68583 0.6895,0 26.281,25.03215 56.8701,
+          55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864
+          -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688,
+          -104.0616 -231.873,-231.248 z
+        " fill="currentColor"></path></g></svg></div></button><ul class="css-1isbolo"><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/range-components/singlerange.html">SingleRange</a></li><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/range-components/multirange.html">MultiRange</a></li><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/range-components/singledropdownrange.html">SingleDropdownRange</a></li><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/range-components/multidropdownrange.html">MultiDropdownRange</a></li><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/range-components/rangeslider.html">RangeSlider</a></li><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/range-components/dynamicrangeslider.html">DynamicRangeSlider</a></li><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/range-components/rangeinput.html">RangeInput</a></li><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/range-components/numberbox.html">NumberBox</a></li><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/range-components/datepicker.html">DatePicker</a></li><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/range-components/daterange.html">DateRange</a></li><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/range-components/ratingsfilter.html">RatingsFilter</a></li></ul></div><div><button class="css-1j8jxus"><div class="css-1n7kyh0">Search Components<svg viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" class="css-1jiuhrf"><g transform="translate(904.92214,-879.1482)"><path d="
+          m -673.67664,1221.6502 -231.2455,-231.24803 55.6165,
+          -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894,
+          0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892,
+          -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696,
+          -174.68583 0.6895,0 26.281,25.03215 56.8701,
+          55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864
+          -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688,
+          -104.0616 -231.873,-231.248 z
+        " fill="currentColor"></path></g></svg></div></button><ul class="css-1isbolo"><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/search-components/datasearch.html">DataSearch</a></li><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/search-components/categorysearch.html">CategorySearch</a></li></ul></div><div><button class="css-1j8jxus"><div class="css-cqdcva">Result Components<svg viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" class="css-1mwek35"><g transform="translate(904.92214,-879.1482)"><path d="
+          m -673.67664,1221.6502 -231.2455,-231.24803 55.6165,
+          -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894,
+          0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892,
+          -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696,
+          -174.68583 0.6895,0 26.281,25.03215 56.8701,
+          55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864
+          -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688,
+          -104.0616 -231.873,-231.248 z
+        " fill="currentColor"></path></g></svg></div></button><ul class="css-axv6fp"><li class="css-prcfqy"><a class="css-1b7a3df" href="/reactive-manual/v2/result-components/resultlist.html"><span class="css-1s0et3v"></span>ResultList</a><ul class="css-140tz9x"><li><a class="css-19pur11" href="/reactive-manual/v2/result-components/resultlist.html#usage">Usage</a></li><li><a class="css-19pur11" href="/reactive-manual/v2/result-components/resultlist.html#props">Props</a></li><li><a class="css-19pur11" href="/reactive-manual/v2/result-components/resultlist.html#demo">Demo</a></li><li><a class="css-19pur11" href="/reactive-manual/v2/result-components/resultlist.html#styles">Styles</a></li><li><a class="css-19pur11" href="/reactive-manual/v2/result-components/resultlist.html#extending">Extending</a></li><li><a class="css-19pur11" href="/reactive-manual/v2/result-components/resultlist.html#examples">Examples</a></li></ul></li><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/result-components/resultcard.html">ResultCard</a></li><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/result-components/reactivelist.html">ReactiveList</a></li></ul></div><div><button class="css-1j8jxus"><div class="css-1n7kyh0">Map Components<svg viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" class="css-1jiuhrf"><g transform="translate(904.92214,-879.1482)"><path d="
+          m -673.67664,1221.6502 -231.2455,-231.24803 55.6165,
+          -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894,
+          0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892,
+          -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696,
+          -174.68583 0.6895,0 26.281,25.03215 56.8701,
+          55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864
+          -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688,
+          -104.0616 -231.873,-231.248 z
+        " fill="currentColor"></path></g></svg></div></button><ul class="css-1isbolo"><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/map-components/geodistanceslider.html">GeoDistanceSlider</a></li><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/map-components/geodistancedropdown.html">GeoDistanceDropdown</a></li><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/map-components/reactivemap.html">ReactiveMap</a></li></ul></div><div><button class="css-1j8jxus"><div class="css-1n7kyh0">Theming<svg viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" class="css-1jiuhrf"><g transform="translate(904.92214,-879.1482)"><path d="
+          m -673.67664,1221.6502 -231.2455,-231.24803 55.6165,
+          -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894,
+          0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892,
+          -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696,
+          -174.68583 0.6895,0 26.281,25.03215 56.8701,
+          55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864
+          -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688,
+          -104.0616 -231.873,-231.248 z
+        " fill="currentColor"></path></g></svg></div></button><ul class="css-1isbolo"><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/theming/themes.html">Themes</a></li><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/theming/style.html">Style</a></li><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/theming/class.html">ClassName Injection</a></li></ul></div><div><button class="css-1j8jxus"><div class="css-1n7kyh0">Advanced<svg viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="10" height="10" class="css-1jiuhrf"><g transform="translate(904.92214,-879.1482)"><path d="
+          m -673.67664,1221.6502 -231.2455,-231.24803 55.6165,
+          -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894,
+          0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892,
+          -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696,
+          -174.68583 0.6895,0 26.281,25.03215 56.8701,
+          55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864
+          -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688,
+          -104.0616 -231.873,-231.248 z
+        " fill="currentColor"></path></g></svg></div></button><ul class="css-1isbolo"><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/advanced/customsuggestions.html">Custom Suggestions</a></li><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/advanced/customquery.html">Custom Queries</a></li><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/advanced/react.html">React Prop</a></li><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/advanced/reactivecomponent.html">Reactive Component</a></li><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/advanced/writingdata.html">Writing and Editing Data</a></li><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/advanced/guides.html">Guides</a></li><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/advanced/comparison.html">Comparison with Other projects</a></li><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/advanced/ssr.html">Server Side Rendering</a></li><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/advanced/typescript.html">TypeScript Support</a></li><li class="css-prcfqy"><a class="css-19pur11" href="/reactive-manual/v2/advanced/analytics.html">Analytics</a></li></ul></div></nav></div></div><div role="button" tabIndex="0" class="css-1rqzsfy"><div class="css-tctv7l"><div class="css-7ef8f8"><div class="css-44j8jf"><svg viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="15" height="15" class="css-sg9l1i"><g transform="translate(904.92214,-879.1482)"><path d="
+          m -673.67664,1221.6502 -231.2455,-231.24803 55.6165,
+          -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894,
+          0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892,
+          -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696,
+          -174.68583 0.6895,0 26.281,25.03215 56.8701,
+          55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864
+          -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688,
+          -104.0616 -231.873,-231.248 z
+        " fill="currentColor"></path></g></svg><svg viewBox="0 0 926.23699 573.74994" version="1.1" x="0px" y="0px" width="15" height="15" class="css-o1zbu3"><g transform="translate(904.92214,-879.1482)"><path d="
+          m -673.67664,1221.6502 -231.2455,-231.24803 55.6165,
+          -55.627 c 30.5891,-30.59485 56.1806,-55.627 56.8701,-55.627 0.6894,
+          0 79.8637,78.60862 175.9427,174.68583 l 174.6892,174.6858 174.6892,
+          -174.6858 c 96.079,-96.07721 175.253196,-174.68583 175.942696,
+          -174.68583 0.6895,0 26.281,25.03215 56.8701,
+          55.627 l 55.6165,55.627 -231.245496,231.24803 c -127.185,127.1864
+          -231.5279,231.248 -231.873,231.248 -0.3451,0 -104.688,
+          -104.0616 -231.873,-231.248 z
+        " fill="currentColor"></path></g></svg></div></div></div></div></div></div></div></div></div><div class="css-7zvbu5"><div class="css-tctv7l"><ul class="css-15o825x css-lhap5"><li class="css-k2v7we"><div><div class="css-4q3d7y">Previous article</div><div class="css-1gz2d9j"><a class="css-1ujbmto" href="/reactive-manual/v2/result-components/search-components/categorysearch.html">Search Components: CategorySearch</a></div></div></li><li class="css-syjz65 css-14qyarc"><div><div class="css-4q3d7y">Next article</div><div class="css-1gz2d9j"><a class="css-1ujbmto" href="/reactive-manual/v2/result-components/result-components/resultcard.html">ResultCard</a></div></div></li></ul></div></div></div></div><footer class="css-p4mm5i"><div class="css-tctv7l"><div class="css-ftk3jl"><div class="css-hx86mf"><div class="css-1j550lu"><div class="css-1m3wp4q"><div class="css-109jn6d">Docs</div><a class="css-6hsdb8" href="/reactive-manual/v2/getting-started/">Quick Start</a><a class="css-6hsdb8" href="/reactive-manual/v2/base-components/textfield.html">Basic Components</a><a class="css-6hsdb8" href="/reactive-manual/v2/map-components/geodistanceslider.html">Map Components</a><a class="css-6hsdb8" href="/reactive-manual/v2/search-components/categorysearch.html">Search Components</a><a class="css-6hsdb8" href="/reactive-manual/v2/advanced/customquery.html">Advanced</a></div></div><div class="css-1j550lu"><div class="css-1m3wp4q"><div class="css-109jn6d">Community</div><a href="https://github.com/appbaseio/reactivesearch/" target="_blank" rel="noopener" class="css-6hsdb8">Github<svg x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="css-83uoqv"><path fill="currentColor" d="
+      M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,
+      0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z
+    "></path><polygon fill="currentColor" points="
+      45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,
+      14.9 62.8,22.9 71.5,22.9
+      "></polygon></svg></a><a href="https://gitter.im/appbaseio/reactivesearch" target="_blank" rel="noopener" class="css-6hsdb8">Gitter<svg x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="css-83uoqv"><path fill="currentColor" d="
+      M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,
+      0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z
+    "></path><polygon fill="currentColor" points="
+      45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,
+      14.9 62.8,22.9 71.5,22.9
+      "></polygon></svg></a><a href="https://stackoverflow.com/questions/tagged/reactivesearch" target="_blank" rel="noopener" class="css-6hsdb8">Stackoverflow<svg x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="css-83uoqv"><path fill="currentColor" d="
+      M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,
+      0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z
+    "></path><polygon fill="currentColor" points="
+      45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,
+      14.9 62.8,22.9 71.5,22.9
+      "></polygon></svg></a><a href="https://twitter.com/appbaseio" target="_blank" rel="noopener" class="css-6hsdb8">Twitter<svg x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="css-83uoqv"><path fill="currentColor" d="
+      M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,
+      0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z
+    "></path><polygon fill="currentColor" points="
+      45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,
+      14.9 62.8,22.9 71.5,22.9
+      "></polygon></svg></a></div></div><div class="css-1j550lu"><div class="css-1m3wp4q"><div class="css-109jn6d">Helpful Tools</div><a href="https://opensource.appbase.io/dejavu/" target="_blank" rel="noopener" class="css-6hsdb8">Data Browser<svg x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="css-83uoqv"><path fill="currentColor" d="
+      M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,
+      0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z
+    "></path><polygon fill="currentColor" points="
+      45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,
+      14.9 62.8,22.9 71.5,22.9
+      "></polygon></svg></a><a href="https://opensource.appbase.io/mirage/" target="_blank" rel="noopener" class="css-6hsdb8">GUI Query Builder<svg x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="css-83uoqv"><path fill="currentColor" d="
+      M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,
+      0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z
+    "></path><polygon fill="currentColor" points="
+      45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,
+      14.9 62.8,22.9 71.5,22.9
+      "></polygon></svg></a></div></div><div class="css-1j550lu"><div class="css-1m3wp4q"><div class="css-109jn6d">More</div><a href="https://medium.appbase.io/" target="_blank" rel="noopener" class="css-6hsdb8">Medium Publication<svg x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="css-83uoqv"><path fill="currentColor" d="
+      M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,
+      0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z
+    "></path><polygon fill="currentColor" points="
+      45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,
+      14.9 62.8,22.9 71.5,22.9
+      "></polygon></svg></a><a href="http://docs.appbase.io/" target="_blank" rel="noopener" class="css-6hsdb8">Appbaseio Docs<svg x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="css-83uoqv"><path fill="currentColor" d="
+      M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,
+      0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z
+    "></path><polygon fill="currentColor" points="
+      45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,
+      14.9 62.8,22.9 71.5,22.9
+      "></polygon></svg></a><a href="mailto:support@appbase.io" target="_blank" rel="noopener" class="css-6hsdb8">Support Email<svg x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="css-83uoqv"><path fill="currentColor" d="
+      M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,
+      0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z
+    "></path><polygon fill="currentColor" points="
+      45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,
+      14.9 62.8,22.9 71.5,22.9
+      "></polygon></svg></a></div></div></div></div></div><div class="css-16whlun">Made with <a href="https://github.com/gatsbyjs/gatsby" target="_blank">GatsbyJS</a>, <a href="https://github.com/reactjs/reactjs.org" target="_blank">Reactjs</a> and ❤️</div></footer></div></div><script id="webpack-manifest">/*<![CDATA[*/window.webpackManifest={"231608221292675":"app-744a6c3a510f90ae79b1.js","266772403791747":"component---src-templates-home-js-09aac97936c9b8304f5d.js","69872653571698":"component---src-templates-tutorial-js-776226af7e861a25adbf.js","36733297554888":"component---src-templates-blog-js-3903a8ad8c9b0809cf6b.js","236594062348235":"component---src-templates-docs-js-aab05acd99e04dc2f646.js","162898551421021":"component---src-pages-404-js-5eb12a35ae4b63ae6654.js","265325084265088":"component---src-pages-blog-all-html-js-4e8968908d11397a30ea.js","165076273342585":"component---src-pages-jsx-compiler-html-js-2753891fbdf65b8eb673.js","60335399758886":"path----557518bd178906f8d58a.js","142629428675168":"path---index-eaac87213755262c7aa3.js","161850451455288":"path---getting-started-data-html-f16d0a545bb38ecb7e8f.js","2842081980983":"path---getting-started-reactivebase-html-5bb92d1b17cd2df83173.js","18625123672389":"path---getting-started-reactivemaps-html-7ef4577e361f8d44557e.js","228075473744252":"path---blog-2017-10-30-reactive-manual-html-123471d6e9d78dca6c89.js","250783552109176":"path---base-components-datacontroller-html-f02eb705cb8b63d1152c.js","82146561664391":"path---base-components-selectedfilters-html-912d83e47494bfd468cb.js","45935348729461":"path---base-components-textfield-html-032348aa35f32548b7e3.js","248060251960563":"path---base-components-togglebutton-html-c2e13667b0dfceaf77fe.js","195463346823047":"path---base-components-tagcloud-html-20c0c0151cfa343571c7.js","94325899749574":"path---advanced-analytics-html-51396701026dd5afac4b.js","260917943449227":"path---advanced-comparison-html-09040ee6bc15ee990965.js","206151111661743":"path---advanced-customquery-html-d025f1f54eb414ff21c6.js","72971155298543":"path---advanced-customsuggestions-html-cc6b9fb26350af9afeb7.js","119997145251317":"path---advanced-guides-html-7a4f317f89e8168e0844.js","58345136292746":"path---advanced-react-html-9dce5a2dde09be7e0439.js","230576653708092":"path---advanced-writingdata-html-afd478e6c5bab5edde85.js","143792777985089":"path---advanced-ssr-html-6f981d269574a1ccf487.js","64106737349458":"path---map-components-reactivemap-html-b82e641e6288569025fb.js","109095454231324":"path---map-components-placessearch-html-8820d328f51405d93054.js","78601740722839":"path---range-components-datepicker-html-c4aea003b95840cc74a7.js","111413991855156":"path---range-components-daterange-html-23ad82c5ddddff6af653.js","210690525857145":"path---advanced-typescript-html-5df450e082c7c3a45553.js","144176316636779":"path---range-components-multidropdownrange-html-a9d271dc282a83393a93.js","206290519684481":"path---range-components-multirange-html-2cc64c474fade9111baa.js","81970924651671":"path---range-components-numberbox-html-53a6dd112d81ef82ff70.js","125144691411707":"path---range-components-rangeinput-html-17dbde5153afa60fbdc0.js","247941501718309":"path---range-components-ratingsfilter-html-707662f7d85741fe71c0.js","222787829434678":"path---range-components-singledropdownrange-html-b40cb925b6204e4cd7cb.js","27034966348728":"path---range-components-singlerange-html-178b9c6db32c22702dea.js","233068286010761":"path---theming-class-html-4c007ff68bdfdc86fde7.js","62400624188191":"path---theming-style-html-0b9f22cb9f1fe45d3893.js","382149711765":"path---theming-themes-html-aee3be6359025694c499.js","177548868587392":"path---list-components-multidatalist-html-b43074d8f58e40769b3f.js","162456501204939":"path---list-components-singledatalist-html-37988aa95a9d117b85aa.js","231295166745141":"path---getting-started-componentsindex-html-c7fdc2606d3b582906a0.js","41984078544437":"path---getting-started-reactivesearch-html-9aa3cacb5850f8d2d19f.js","201113989118788":"path---advanced-reactivecomponent-html-128c4ff8a7d277048aa1.js","187551144820723":"path---map-components-geodistancedropdown-html-443f1a81d17562d7772e.js","129677242114095":"path---map-components-geodistanceslider-html-09a36d5542a6e008bd5b.js","238622705564830":"path---range-components-dynamicrangeslider-html-246a3283d6ad9be949e0.js","128041471236677":"path---range-components-rangeslider-html-d9c2615d0f7009499ace.js","37162140274120":"path---result-components-reactivelist-html-8321b0e0294a49643ef8.js","39155803706777":"path---result-components-resultcard-html-51aacea793592a667281.js","144156473325815":"path---result-components-resultlist-html-d189311b4244d0038b53.js","73887481964516":"path---search-components-categorysearch-html-8b83bcd0e428b6a40349.js","99033787998698":"path---search-components-datasearch-html-de946256391f21acd80f.js","121257086451122":"path---list-components-multidropdownlist-html-3080fbb4dbdb44e4ea7f.js","78836412246121":"path---list-components-multilist-html-91a708a7a86afb9aa671.js","133108255508567":"path---search-components-nestedlist-html-c1ae57e355d515e4f163.js","61703140123326":"path---list-components-singledropdownlist-html-a70ae64d428194ada0fd.js","67055671156237":"path---list-components-singlelist-html-04a100ce753e79b0c073.js","66859308510187":"path---search-components-nestedmultilist-html-38563da0c2ccd51fa406.js","254022195166212":"path---404-a0e39f21c11f6a62c5ab.js","248976230146735":"path---blog-all-html-5b6b6db19f920e3a6732.js","119766850614634":"path---jsx-compiler-html-a0e39f21c11f6a62c5ab.js","178698757827068":"path---404-html-a0e39f21c11f6a62c5ab.js","114276838955818":"component---src-layouts-index-js-9df97058266e08ecd1a9.js"}/*]]>*/</script><script>
+          window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));
+      </script><script>
+  
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-54082612-5', 'auto');
+  </script><script>/*<![CDATA[*/!function(e,t,r){function n(){for(;d[0]&&"loaded"==d[0][f];)c=d.shift(),c[o]=!i.parentNode.insertBefore(c,i)}for(var s,a,c,d=[],i=e.scripts[0],o="onreadystatechange",f="readyState";s=r.shift();)a=e.createElement(t),"async"in i?(a.async=!1,e.head.appendChild(a)):i[f]?(d.push(a),a[o]=n):e.write("<"+t+' src="'+s+'" defer></'+t+">"),a.src=s}(document,"script",["/reactive-manual/v2/commons-d013629bd42390efdb09.js","/reactive-manual/v2/app-744a6c3a510f90ae79b1.js","/reactive-manual/v2/path---result-components-resultlist-html-d189311b4244d0038b53.js","/reactive-manual/v2/component---src-templates-docs-js-aab05acd99e04dc2f646.js","/reactive-manual/v2/component---src-layouts-index-js-9df97058266e08ecd1a9.js"])/*]]>*/</script></body></html>
