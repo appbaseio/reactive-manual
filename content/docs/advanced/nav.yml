@@ -114,6 +114,23 @@
       title: Migration Guide
       href: /advanced/migrationguide.html
       forceInternal: true
+      subitems:
+        - id: controlled-and-uncontrolled-component-behaviors
+          title: Controlled and Uncontrolled component behaviors
+          href: /advanced/migrationguide.html#controlled-and-uncontrolled-component-behaviors
+          forceInternal: true
+        - id: new-render-props
+          title: New Render Props
+          href: /advanced/migrationguide.html#new-render-props
+          forceInternal: true
+        - id: standardized-usage-of-custom-and-default-queries
+          title: Standardized usage of custom and default queries
+          href: /advanced/migrationguide.html#standardized-usage-of-custom-and-default-queries
+          forceInternal: true
+        - id: reactivemaps
+          title: ReactiveMaps
+          href: /advanced/migrationguide.html#reactivemaps
+          forceInternal: true
     - id: advancedguides
       title: Advanced Guides
       href: /advanced/advancedguides.html

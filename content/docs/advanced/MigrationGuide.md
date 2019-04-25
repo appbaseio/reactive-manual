@@ -10,7 +10,7 @@ next: advancedguides.html
 nextTitle: "Advanced Guides"
 ---
 
-With the release of version 3.0 of reactivesearch, we are now fully compatible with React 16.6 and above. This release comes after the feedback we have gathered from the iterative deployment of reactivesearch in production for the dozens of our clients in the past 6–8 months. In this version, we have changed the way certain props behaved in the earlier versions. This guide will give you a brief about all the changes.
+With the release of version 3.0 of reactivesearch and reactivemaps, we are now fully compatible with React 16.6 and above. This release comes after the feedback we have gathered from the iterative deployment of reactivesearch in production for the dozens of our clients in the past 6–8 months. In this version, we have changed the way certain props behaved in the earlier versions. This guide will give you a brief about all the changes.
 
 ## Breaking Changes
 
@@ -189,3 +189,47 @@ customQuery = {() => {
     }
 }
 ```
+
+### ReactiveMaps
+
+In **v3**, we have added support for [OpenStreetMaps](https://www.openstreetmap.org) along with [GoogleMaps](https://www.google.com/maps). To optimize the final build based on the map that you would like to integrate, we are now exporting [`ReactiveGoogleMap`](/map-components/reactivegooglemap.html#props) and [`ReactiveOpenStreetMap`](/map-components/reactiveopenstreetmap.html#props) instead of `ReactiveMap`. This helps with tree shaking, by removing unnecessary imports based on the map that you are using. Most of the props for `ReactiveGoogleMap` remains same as `ReactiveMap` from `v2`, there are few additional props introduced for `ReactiveOpenStreetMap` based on its library requirement, you can check [here](/map-components/reactiveopenstreetmap.html#props).
+
+**v2**:
+
+```js
+import { ReactiveMap } from '@appbaseio/reactivemaps'
+
+<ReactiveMap
+    componentId="MapUI"
+    dataField="location"
+    title="Venue Location Map"
+/>
+```
+
+**v3**:
+
+```js
+import { ReactiveGoogleMap } from '@appbaseio/reactivemaps'
+
+<ReactiveGoogleMap
+    componentId="MapUI"
+    dataField="location"
+    title="Venue Location Map"
+/>
+```
+
+*OR*
+
+```js
+import { ReactiveOpenStreetMap } from '@appbaseio/reactivemaps'
+
+<ReactiveOpenStreetMap
+    componentId="MapUI"
+    dataField="location"
+    title="Venue Location Map"
+/>
+```
+
+>NOTE
+>
+>`GeoDistanceSlider` and `GeoDistanceDropdown` have also been updated and are now compatible with react >= v16.6. They also support same controlled and uncontrolled behaviour mentioned above in the [guide](#controlled-and-uncontrolled-component-behaviors).
