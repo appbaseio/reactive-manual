@@ -15,7 +15,7 @@ redirect_from:
 
 **ReactiveSearch-Vue** provides Vue UI components for Elasticsearch. This document explains the different kinds of components offered by the library and walks throughs scenarios of when to use which component.
 
-Components are divided into four broad categories:  
+Components are divided into four broad categories:
 1. `List components` represent all kinds of list related UI components which typically create a term query.
 2. `Range components` represent all kinds of numbers and dates related UI components which typically create a range based query.
 3. `Search components` represent searchbar UIs, which typically apply search on full-text data.
@@ -34,13 +34,13 @@ The components can also be used with `Numeric` datatype fields.
 <p>
 <img src="https://imgur.com/p2PBKh6.png" style="float:left">
 
-**[SingleList](list-components/singlelist.html)** is useful for displaying a list of values where only one item can be selected at a time, and the values are retrieved by a database query on the field specified in the **dataField** prop.
+**[SingleList](/list-components/singlelist.html)** is useful for displaying a list of values where only one item can be selected at a time, and the values are retrieved by a database query on the field specified in the **dataField** prop.
 </p>
 
 <p>
 <img src="https://imgur.com/waVNdgr.png" style="float:left">
 
-**[MultiList](list-components/multilist.html)** is useful for displaying a list of values where multiple values can be selected at a time. Similar to SingleList, these values are retrieved by a database query on the field specified in the **dataField** prop.
+**[MultiList](/list-components/multilist.html)** is useful for displaying a list of values where multiple values can be selected at a time. Similar to SingleList, these values are retrieved by a database query on the field specified in the **dataField** prop.
 </p>
 
 ## 2. Range Components
@@ -50,7 +50,7 @@ The following are all the possible UI components for a numeric datatype field in
 <p>
 <img src="https://imgur.com/tPi76EU.png" style="float:left">
 
-**[SingleRange](range-components/singlerange.html)** displays a curated list of items where only one item can be selected at a time. Each item represents a range of values, specified in the **data** prop of the component.
+**[SingleRange](/range-components/singlerange.html)** displays a curated list of items where only one item can be selected at a time. Each item represents a range of values, specified in the **data** prop of the component.
 </p>
 
 ## 3. Search Components
@@ -62,7 +62,7 @@ The following are UI components that represent searchbar UIs. The datatype for t
 <p>
 <img src="https://imgur.com/kbnVVkZ.png" style="float:left">
 
-**[DataSearch](search-components/datasearch.html)** displays a search input box.
+**[DataSearch](/search-components/datasearch.html)** displays a search input box.
 </p>
 
 
@@ -79,7 +79,7 @@ Result components are used for displaying the results (aka hits).
 <p>
 <img src="https://imgur.com/PCBwK7t.png" style="float:left">
 
-**[ReactiveList](result-components/reactivelist.html)** displays the results in a configurable list layout. This is a more flexible display component (used internally by both ResultList and ResultCard) that allows more customization than ResultList and ResultCard.
+**[ReactiveList](/result-components/reactivelist.html)** displays the results in a configurable list layout. This is a more flexible display component (used internally by both ResultList and ResultCard) that allows more customization than ResultList and ResultCard.
 </p>
 
 ## 5. Base Components
