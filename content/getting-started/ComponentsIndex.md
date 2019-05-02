@@ -280,4 +280,4 @@ Map components are useful for displaying geospatial data.
 
 ### SelectedFilters
 
-**[SelectedFilterss](base-components/selectedfilters.html)** is a selection component to render the selected values from other components with a "Clear All" option.
+**[SelectedFilters](/base-components/selectedfilters.html)** is a selection component to render the selected values from other components with a "Clear All" option.
