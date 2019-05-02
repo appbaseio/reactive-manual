@@ -15,7 +15,7 @@ redirect_from:
 
 **ReactiveSearch** provides React UI components for Elasticsearch. This document explains the different kinds of components offered by the library and walks throughs scenarios of when to use which component.
 
-Components are divided into five broad categories:  
+Components are divided into five broad categories:
 1. `List components` represent all kinds of list related UI components which typically create a term query.
 2. `Range components` represent all kinds of numbers and dates related UI components which typically create a range based query.
 3. `Search components` represent searchbar UIs, which typically apply search on full-text data.
@@ -280,4 +280,4 @@ Map components are useful for displaying geospatial data.
 
 ### SelectedFilters
 
-**[SelectedFilters](/base-components/selectedfilters.html)** is a selection component to render the selected values from other components with a "Clear All" option.
+**[SelectedFilterss](base-components/selectedfilters.html)** is a selection component to render the selected values from other components with a "Clear All" option.

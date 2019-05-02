@@ -7,7 +7,7 @@ permalink: base-components/selectedfilters.html
 next: /list-components/singlelist.html
 nextTitle: "List Components: SingleList"
 redirect_from:
-    - 'base-components/selectedfilters.html'
+    - 'basic-components/selectedfilters.html'
     - 'base-components/selectedfilters'
     - 'selectedfilters'
 ---
