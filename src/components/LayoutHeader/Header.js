@@ -45,7 +45,7 @@ class Header extends Component {
         window.location.href = window.location.origin + '/reactive-manual/vue';
       }
       else if(value.value === 'v3 - Web') {
-        window.location.href = window.location.origin + '/reactive-manual/v3';
+        window.location.href = window.location.origin + '/reactive-manual';
       }
     }
   }
