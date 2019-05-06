@@ -6,7 +6,7 @@ sectionid: docs
 permalink: advanced/react.html
 prev: advanced/customquery.html
 prevTitle: "Defining Custom Queries"
-next: advanced/reactivecomponent.html
+next: advanced/reactivecomponentindepth.html
 nextTitle: "Reactive Component"
 redirect_from:
     - 'advanced/react'

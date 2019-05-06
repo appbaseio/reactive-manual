@@ -1,16 +1,16 @@
 ---
-id: reactivecomponent
+id: reactivecomponentindepth
 title: "Reactive Component"
 layout: docs
 sectionid: reactivecomponent
-permalink: advanced/reactivecomponent.html
+permalink: advanced/reactivecomponentindepth.html
 prev: react.html
 prevTitle: "React Prop"
 next: ssr.html
 nextTitle: "Server Side Rendering"
 redirect_from:
-    - "advanced/reactivecomponent"
-    - "reactivecomponent"
+    - "advanced/reactivecomponentindepth"
+    - "reactivecomponentindepth"
 ---
 
 We have built this library keeping you, the developer, in mind. If you're here, it is obvious that you want to create a custom component that is reactive in nature. Perhaps, you already have a component in your design kit and want it to work seamlessly with Reactivesearch.

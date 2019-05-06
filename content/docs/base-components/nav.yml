@@ -29,3 +29,20 @@
           title: Examples
           href: /base-components/selectedfilters.html#examples
           forceInternal: true
+    - id: reactivecomponent
+      title: Reactive Component
+      href: /base-components/reactivecomponent.html
+      forceInternal: true
+      subitems:
+        - id: usage
+          title: Usage
+          href: /base-components/reactivecomponent.html#usage
+          forceInternal: true
+        - id: props
+          title: Props
+          href: /base-components/reactivecomponent.html#props
+          forceInternal: true
+        - id: demo
+          title: Demo
+          href: /base-components/reactivecomponent.html#demo
+          forceInternal: true
