@@ -26,7 +26,7 @@ ReactiveComponent lets you connect any React UI component with an ElasticSearch 
 
 Let's suppose - we are building an e-commerce store for cars which displays a list of cars and 5 popular car brands in tabs UI as the user selects a tab the result gets updated with the cars of selected brand. Now if the user wants to select other brand from tab, the results should be updated to new selected brand. In this case, `ReactiveComponent` can be used with `defaultQuery` to achieve the desired behavior easily.
 
-We can then use the given ReactiveComponent to be watched by the result component (via `react` prop) to avail the desired brand based filtering for the results.
+After selecting value from `ReactiveComponent` we will need to update result component with items satisfying the value, to achieve this we can take use of `react` prop. You can read more about the prop [here](/advanced/react.html).
 
 Check demo [here](https://codesandbox.io/s/7zrj740oj6).
 
@@ -54,26 +54,7 @@ Check demo [here](https://codesandbox.io/s/7zrj740oj6).
 />
 ```
 
-You can also take advantage of various ReactiveSearch components static method for generating query. So we our basically selecting a single tab so we can use `SingleList` static method to generate query as follow:
-
-```js
-<ReactiveComponent
-    componentId="Brand"
-    showFilter
-    defaultQuery={() => ({
-        ...SingleList.generateQueryOptions({
-            dataField: "brand.keyword",
-            size: 5,
-            sortBy: "count"
-        })
-    })}
-    render={data => {
-        return <TabComponent dataField="brand.keyword" {...data} />;
-    }}
-/>
-```
-
-Here `TabComponent` is the component responsible to render the Tabs UI and handle switching tab and displaying selected filters. We are using `render` prop to display the component which provides a object with different params that can used in rendering UI and dispatching new query.Fow switching tab we will use `onClick` event on each tab to fire new query. We will make use of following param provided by `render` method: 
+Here `TabComponent` is responsible to render the Tabs UI and handle the switching between tabs and displaying selected filters. We are using `render` prop to display the component which provides an object with different parameters that can be used in rendering the UI and dispatching a new query. Fow switching the tab we will use `onClick` event to fire a new query. We will make use of the following paramateres provided by `render` method: 
 
 - **aggregations** `Object`
     `aggregations` prop contains the results from `aggs` Elasticsearch query of the component.
@@ -93,11 +74,32 @@ For showing selected filters we will use [`SelectedFilters`](/base-components/se
 
 
 **ReactiveComponent and React context**     
-If the CustomComponent contains multiple react component which need to access ElasticSearch data we can take use of react [`context`](https://reactjs.org/docs/context.html) in order to pass data through the component tree without having to pass props down manually at every level. We can refactor the above example to use multiple child components and pass the data using context. You can check the refactored app demo [here](https://codesandbox.io/s/o9popzr47y).
+If the CustomComponent contains multiple react components which need to access ElasticSearch data we can take use of react [`context`](https://reactjs.org/docs/context.html) in order to pass data through the component tree without having to pass props down manually at every level. We can refactor the above example to use multiple child components and pass the data using context. You can check the refactored app demo [here](https://codesandbox.io/s/o9popzr47y).
 
 
 **ReactiveComponent with Ant Design Component**     
 You can also easily connect component from design system to index data using `ReactiveComponent`. Check the example [here](https://codesandbox.io/s/mmkjv990nj) which connects `Dropdown` component of `Antd` with index data.
+
+**ReactiveComponent Query using helper method**
+
+You can also take advantage of various ReactiveSearch components static method for generating query. So we our basically selecting a single tab so we can use `SingleList` static method to generate query as follow:
+
+```js
+<ReactiveComponent
+    componentId="Brand"
+    showFilter
+    defaultQuery={() => ({
+        ...SingleList.generateQueryOptions({
+            dataField: "brand.keyword",
+            size: 5,
+            sortBy: "count"
+        })
+    })}
+    render={data => {
+        return <TabComponent dataField="brand.keyword" {...data} />;
+    }}
+/>
+```
 
 
 ### Props
