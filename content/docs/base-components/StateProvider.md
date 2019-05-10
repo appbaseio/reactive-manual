@@ -14,7 +14,7 @@ redirect_from:
     - 'stateprovider'
 ---
 
-`StateProvider` component allows you to access the current state of your components.
+`StateProvider` component allows you to access the current state of your components along with the search results. For instance, you can use this component to create results/no results or query/no query pages.
 
 ## Usage
 
@@ -75,6 +75,9 @@ or
 				filterLabel: "search",
 				placeholder: "Search for a book title or an author",
 				queryFormat: "and",
+				hits: [],
+				isLoading: false,
+				error: null,
 	   	},
 	   	RatingsFilter: {
 				URLParams: false,
@@ -97,7 +100,11 @@ or
 					start: 4,
 					end: 5,
 					label: "★★★★ & up"
-				}
+				},
+				aggregations: [],
+				hits: [],
+				isLoading: false,
+				error: null
 	   	}
    }
   ```
