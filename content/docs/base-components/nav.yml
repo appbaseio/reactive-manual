@@ -29,3 +29,16 @@
           title: Examples
           href: /base-components/selectedfilters.html#examples
           forceInternal: true
+    - id: stateprovider
+      title: StateProvider
+      href: /base-components/stateprovider.html
+      forceInternal: true
+      subitems:
+       - id: usage
+         title: Usage
+         href: /base-components/stateprovider.html#usage
+         forceInternal: true
+       - id: props
+         title: Props
+         href: /base-components/stateprovider.html#props
+         forceInternal: true
