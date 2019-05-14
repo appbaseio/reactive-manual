@@ -137,7 +137,7 @@ Read more about it [here](/theming/class.html).
 3. connect with external interfaces using `beforeValueChange`, `onValueChange` and `onQueryChange`.
 
 ```js
-<DataSearch
+<DateRange
   ...
   className="custom-class"
   style={{"paddingBottom": "10px"}}
