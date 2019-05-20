@@ -102,6 +102,8 @@ Example uses:
     number of results to show per view. Defaults to 10.
 - **loader** `String or JSX` [optional]
     display to show the user while the data is loading, accepts `String` or `JSX` markup.
+- **showLoader** `Boolean` [optional]
+    defaults to `true`, if set to `false` then the ReactiveList will not display the default loader.
 - **showResultStats** `Boolean` [optional]
     whether to show result stats in the form of results found and time taken. Defaults to `true`.
 - **react** `Object` [optional]
@@ -299,7 +301,7 @@ Read more about it [here](/theming/class.html).
 
 ```js
 <ReactiveList
-    loader={<div/>} // Hide the default loader
+    showLoader={false} // Hides the default loader
     render={({
         loading,
         error,
