@@ -12,8 +12,6 @@
 /reactive-manual/vue/advanced/analytics  /reactive-manual/vue/advanced/analytics.html  302
 /reactive-manual/vue/advanced  /reactive-manual/vue/advanced/customquery.html  302
 /reactive-manual/vue/reactive-manual/advanced  /reactive-manual/vue/advanced/customquery.html  302
-/reactive-manual/vue/guides  /reactive-manual/vue/advanced/guides.html  302
-/reactive-manual/vue/advanced/guides  /reactive-manual/vue/advanced/guides.html  302
 /reactive-manual/vue/advanced/react  /reactive-manual/vue/advanced/react.html  302
 /reactive-manual/vue/react  /reactive-manual/vue/advanced/react.html  302
 /reactive-manual/vue/advanced/reactivecomponent  /reactive-manual/vue/advanced/reactivecomponent.html  302
@@ -52,6 +50,8 @@
 /reactive-manual/vue/basic-components/reactivelist.html  /reactive-manual/vue/result-components/reactivelist.html  302
 /reactive-manual/vue/result-components/reactivelist  /reactive-manual/vue/result-components/reactivelist.html  302
 /reactive-manual/vue/reactivelist  /reactive-manual/vue/result-components/reactivelist.html  302
+/reactive-manual/vue/guides  /reactive-manual/vue/advanced/guides.html  302
+/reactive-manual/vue/advanced/guides  /reactive-manual/vue/advanced/guides.html  302
 /reactive-manual/vue/basic-components/resultcard.html  /reactive-manual/vue/result-components/resultcard.html  302
 /reactive-manual/vue/result-components/resultcard  /reactive-manual/vue/result-components/resultcard.html  302
 /reactive-manual/vue/resultcard  /reactive-manual/vue/result-components/resultcard.html  302
