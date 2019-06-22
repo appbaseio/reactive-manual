@@ -32,9 +32,6 @@
 /reactive-manual/vue/basic-components/singledropdownlist.html  /reactive-manual/vue/list-components/singledropdownlist.html  302
 /reactive-manual/vue/list-components/singledropdownlist  /reactive-manual/vue/list-components/singledropdownlist.html  302
 /reactive-manual/vue/singledropdownlist  /reactive-manual/vue/list-components/singledropdownlist.html  302
-/reactive-manual/vue/basic-components/singlelist.html  /reactive-manual/vue/list-components/singlelist.html  302
-/reactive-manual/vue/list-components/singlelist  /reactive-manual/vue/list-components/singlelist.html  302
-/reactive-manual/vue/singlelist  /reactive-manual/vue/list-components/singlelist.html  302
 /reactive-manual/vue/list-components/togglebutton.html  /reactive-manual/vue/list-components/togglebutton.html  302
 /reactive-manual/vue/togglebutton  /reactive-manual/vue/list-components/togglebutton.html  302
 /reactive-manual/vue/basic-components/dynamicrangeslider.html  /reactive-manual/vue/range-components/dynamicrangeslider.html  302
@@ -67,4 +64,7 @@
 /reactive-manual/vue/theming/style  /reactive-manual/vue/theming/style.html  302
 /reactive-manual/vue/style  /reactive-manual/vue/theming/style.html  302
 /reactive-manual/vue/styles  /reactive-manual/vue/theming/style.html  302
+/reactive-manual/vue/basic-components/singlelist.html  /reactive-manual/vue/list-components/singlelist.html  302
+/reactive-manual/vue/list-components/singlelist  /reactive-manual/vue/list-components/singlelist.html  302
+/reactive-manual/vue/singlelist  /reactive-manual/vue/list-components/singlelist.html  302
 /reactive-manual/vue/index.html  /reactive-manual/vue/  302
