@@ -57,46 +57,46 @@ Example uses:
 
 ## Props
 
-- **componentId** `String`  
+- **componentId** `String`
     unique identifier of the component, can be referenced in other components' `react` prop.
-- **dataField** `String`  
+- **dataField** `String`
     data field(s) to be mapped with the component's UI view.
-- **nestedField** `String` [optional]  
+- **nestedField** `String` [optional]
     use to set the `nested`  mapping field that allows arrays of objects to be indexed in a way that they can be queried independently of each other. Applicable only when dataField is a part of `nested` type.
-- **title** `String or JSX` [optional]  
+- **title** `String or JSX` [optional]
     title of the component to be shown in the UI.
-- **loader** `String or JSX` [optional]  
+- **loader** `String or JSX` [optional]
     to display an optional loader while fetching the options.
-- **size** `Number` [optional]  
+- **size** `Number` [optional]
     number of items to be displayed in the list. Defaults to 100.
-- **showCount** `Boolean` [optional]  
+- **showCount** `Boolean` [optional]
     show a count of the number of occurrences besides each list item. Defaults to `true`.
-- **multiSelect** `Boolean` [optional]  
+- **multiSelect** `Boolean` [optional]
     whether to support multiple tag selections. Defaults to `false`.
-- **defaultValue** `StringArray` [optional]  
+- **defaultValue** `StringArray` [optional]
     pre-select tag(s) from the tag cloud. An Array is accepted when *multiSelect* mode is enabled.
-- **value** `String Array` [optional]  
+- **value** `String Array` [optional]
     controls the current value of the component. It selects the tag from the available tags (on mount and on update). Use this prop in conjunction with `onChange` function.
-- **queryFormat** `String` [optional]   
+- **queryFormat** `String` [optional]
     sets whether to show results as a union with `"or"` (default) or an intersection with `"and"`. For example, if two tags are selected, say "Guitars" and "Electric Guitars" then with a `queryFormat` of "or" you would get results for both the tags. With a `queryFormat` of "and" you would get more specific results for guitars which satisfy both the tags.
-- **showFilter** `Boolean` [optional]  
+- **showFilter** `Boolean` [optional]
     show as filter when a value is selected in a global selected filters view. Defaults to `true`.
-- **filterLabel** `String` [optional]  
+- **filterLabel** `String` [optional]
     An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
-- **URLParams** `Boolean` [optional]  
+- **URLParams** `Boolean` [optional]
     enable creating a URL query string parameter based on the selected value of the tag(s). This is useful for sharing URLs with the component state. Defaults to `false`.
 - **renderError** `String or JSX or Function` [optional]
     can be used to render an error message in case of any error.
     ```js
-renderError={(error) => 
+renderError={(error) =>
         <div>
             Something went wrong!<br/>Error details<br/>{error}
         </div>
 }
     ```
-- **onChange** `function` [optional]  
-    is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
-- **onError** `Function` [optional]  
+- **onChange** `function` [optional]
+    is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` prop and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
+- **onError** `Function` [optional]
     gets triggered in case of an error and provides the `error` object, which can be used for debugging or giving feedback to the user if needed.
 
 ## Demo
@@ -107,12 +107,12 @@ renderError={(error) =>
 
 ## Styles
 
-`TagCloud` component supports `innerClass` prop with the following keys:    
+`TagCloud` component supports `innerClass` prop with the following keys:
 
 - `title`
 - `list`
 - `input`
- 
+
 Read more about it [here](/theming/class.html).
 
 ## Extending
@@ -170,27 +170,27 @@ Read more about it [here](/theming/class.html).
 />
 ```
 
-- **className** `String`  
+- **className** `String`
     CSS class to be injected on the component container.
 - **style** `Object`
     CSS styles to be applied to the **TagCloud** component.
 - **customQuery** `Function`
     takes **value** and **props** as parameters and **returns** the data query to be applied to the component, as defined in Elasticsearch Query DSL.
     `Note:` customQuery is called on value changes in the **TagCloud** component as long as the component is a part of `react` dependency of at least one other component.
-- **beforeValueChange** `Function`  
+- **beforeValueChange** `Function`
     is a callback function which accepts component's future **value** as a parameter and **returns** a promise. It is called everytime before a component's value changes. The promise, if and when resolved, triggers the execution of the component's query and if rejected, kills the query execution. This method can act as a gatekeeper for query execution, since it only executes the query after the provided promise has been resolved.
-- **onValueChange** `Function`  
+- **onValueChange** `Function`
     is a callback function which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when a user picks a category in a TagCloud.
-- **onQueryChange** `Function`  
+- **onQueryChange** `Function`
     is a callback function which accepts component's **prevQuery** and **nextQuery** as parameters. It is called everytime the component's query changes. This prop is handy in cases where you want to generate a side-effect whenever the component's query would change.
-- **react** `Object`  
+- **react** `Object`
     specify dependent components to reactively update **TagCloud's** data view.
-    - **key** `String`  
+    - **key** `String`
         one of `and`, `or`, `not` defines the combining clause.
         - **and** clause implies that the results will be filtered by matches from **all** of the associated component states.
         - **or** clause implies that the results will be filtered by matches from **at least one** of the associated component states.
         - **not** clause implies that the results will be filtered by an **inverse** match of the associated component states.
-    - **value** `String or Array or Object`  
+    - **value** `String or Array or Object`
         - `String` is used for specifying a single component by its `componentId`.
         - `Array` is used for specifying multiple components by their `componentId`.
         - `Object` is used for nesting other key clauses.

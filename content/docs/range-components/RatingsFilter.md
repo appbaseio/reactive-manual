@@ -79,27 +79,27 @@ Example uses:
 
 ## Props
 
-- **componentId** `String`  
+- **componentId** `String`
     unique identifier of the component, can be referenced in other components' `react` prop.
-- **dataField** `String`  
+- **dataField** `String`
     data field to be mapped with the component's UI view.
-- **data** `Object Array`  
+- **data** `Object Array`
     collection of UI `label` with associated with `start` and `end` ratings values.
-- **nestedField** `String` [optional]  
+- **nestedField** `String` [optional]
     use to set the `nested`  mapping field that allows arrays of objects to be indexed in a way that they can be queried independently of each other. Applicable only when dataField is a part of `nested` type.
-- **title** `String or JSX` [optional]  
+- **title** `String or JSX` [optional]
     title of the component to be shown in the UI.
-- **icon** `JSX` [optional]       
+- **icon** `JSX` [optional]
     to render custom active icon.
-- **dimmedIcon** `JSX` [optional]     
+- **dimmedIcon** `JSX` [optional]
     to render custom inactive icon.
-- **defaultValue** `Object` [optional]  
+- **defaultValue** `Object` [optional]
     selects a initial ratings value using `start` and `end` key values from one of the data elements.
-- **value** `Object` [optional]  
+- **value** `Object` [optional]
     controls the current value of the component. It selects the item from the data (on mount and on update). Use this prop in conjunction with `onChange` function.
-- **onChange** `function` [optional]  
-    is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
-- **URLParams** `Boolean` [optional]  
+- **onChange** `function` [optional]
+    is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` prop and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
+- **URLParams** `Boolean` [optional]
     enable creating a URL query string parameter based on the selected rating. This is useful for sharing URLs with the component state. Defaults to `false`.
 
 ## Demo
@@ -110,10 +110,10 @@ Example uses:
 
 ## Styles
 
-`RatingsFilter` component supports `innerClass` prop with the following keys:    
+`RatingsFilter` component supports `innerClass` prop with the following keys:
 
 - `title`
- 
+
 Read more about it [here](/theming/class.html).
 
 ## Extending
@@ -167,18 +167,18 @@ Read more about it [here](/theming/class.html).
 />
 ```
 
-- **className** `String`  
+- **className** `String`
     CSS class to be injected on the component container.
-- **style** `Object`  
+- **style** `Object`
     CSS styles to be applied to the **RatingsFilter** component.
-- **customQuery** `Function`  
+- **customQuery** `Function`
     takes **value** and **props** as parameters and **returns** the data query to be applied to the component, as defined in Elasticsearch Query DSL.
     `Note:` customQuery is called on value changes in the **RangeFilter** component as long as the component is a part of `react` dependency of at least one other component.
-- **beforeValueChange** `Function`  
+- **beforeValueChange** `Function`
     is a callback function which accepts component's future **value** as a parameter and **returns** a promise. It is called everytime before a component's value changes. The promise, if and when resolved, triggers the execution of the component's query and if rejected, kills the query execution. This method can act as a gatekeeper for query execution, since it only executes the query after the provided promise has been resolved.
-- **onValueChange** `Function`  
+- **onValueChange** `Function`
     is a callback function which accepts component's current **value** as a parameter. It is called everytime the component's value changes. This prop is handy in cases where you want to generate a side-effect on value selection. For example: You want to show a pop-up modal with the valid discount coupon code when a user searches for a product with a specific rating in a RatingsFilter.
-- **onQueryChange** `Function`  
+- **onQueryChange** `Function`
     is a callback function which accepts component's **prevQuery** and **nextQuery** as parameters. It is called everytime the component's query changes. This prop is handy in cases where you want to generate a side-effect whenever the component's query would change.
 
 ## Examples

@@ -171,7 +171,8 @@ Check demo [here](https://codesandbox.io/s/3ylrrr0r5q).
 ```javascript
     {
         query: {}, // query of the component
-        value: ''  // value of the component
+		value: '',  // value of the component
+		options: {}, // query options for e.g size, timeout & includeFields etc.
     }
 ```
 - **value** `any`

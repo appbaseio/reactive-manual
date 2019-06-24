@@ -232,7 +232,22 @@ Or you can also use render function as children
     }
     ```
 - **onChange** `function` [optional]
-    is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` props and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
+    is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` prop and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
+
+	```js
+	<DataSearch
+		value={this.state.value}
+		onChange={(value, triggerQuery, event) => {
+			this.setState({
+				value,
+			}, () => triggerQuery())
+		}}
+	/>
+	```
+	> Note:
+	>
+	> If you're using the controlled behavior than it's your responsibility to call the `triggerQuery` method to update the query i.e execute the search query and update the query results in connected components by `react` prop. It is not mandatory to call the `triggerQuery` in `onChange` you can also call it in other input handlers like `onBlur` or `onKeyPress`.
+
 - **onSuggestions** `Function` [optional]
     You can pass a callback function to listen for the changes in suggestions.The function receives `suggestions` list.
 - **onError** `Function` [optional]
@@ -290,6 +305,10 @@ Read more about it [here](/theming/class.html).
     - onKeyDown
     - onKeyUp
     - autoFocus
+
+	> Note:
+	>
+	> All these events accepts the `triggerQuery` as a second parameter which can be used to trigger the `DataSearch` query with the current selected value (useful to customize the search query execution).
 
 ```js
 <DataSearch
