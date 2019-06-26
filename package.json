@@ -1,5 +1,5 @@
 {
-  "name": "reactive-manual-v3",
+  "name": "@appbaseio/reactive-manual-v3",
   "description": "Reactive Manual: React components for Elasticsearch -- Documentation",
   "author": {
     "name": "Divyanshu Maithani",
@@ -19,7 +19,6 @@
     }
   ],
   "version": "0.0.1",
-  "private": false,
   "bugs": {
     "url": "https://github.com/appbaseio/reactive-manual/issues"
   },
