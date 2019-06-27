@@ -93,19 +93,6 @@
           title: REST API
           href: /advanced/writingdata.html#rest-api
           forceInternal: true
-    - id: writingdata
-      title: Writing and Editing Data
-      href: /advanced/writingdata.html
-      forceInternal: true
-      subitems:
-        - id: appbase-js
-          title: Appbase-js
-          href: /advanced/writingdata.html#appbase-js
-          forceInternal: true
-        - id: rest-api
-          title: REST API
-          href: /advanced/writingdata.html#rest-api
-          forceInternal: true
     - id: guides
       title: Guides
       href: /advanced/guides.html

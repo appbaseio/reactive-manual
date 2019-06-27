@@ -30,7 +30,7 @@ Example uses:
             "and": ["CitySensor", "SearchSensor"]
         }`
     >
-         <div slot="renderData" scoped-slot="{ item }">
+         <div slot="renderData" slot-scope="{ item }">
             {{ item.title }}
          </div>
     </reactive-list>
@@ -84,7 +84,7 @@ Example uses:
     - `sortBy` - specified as either `asc` or `desc`.
 - **size** `Number` [optional]  
     number of results to show per view. Defaults to 10.
-- **loader** `String|scoped-slot` [optional]  
+- **loader** `String|slot-scope` [optional]  
     display to show the user while the data is loading, accepts `String` or `JSX` markup.
 - **showResultStats** `Boolean` [optional]  
     whether to show result stats in the form of results found and time taken. Defaults to `true`.
@@ -92,11 +92,11 @@ Example uses:
     a dependency object defining how this component should react based on the state changes in the sensor components.
 - **URLParams** `Boolean` [optional]  
     when set adds the current page number to the url. Only works when `pagination` is enabled.
-- **renderData** `Function|scoped-slot` [optional]  
+- **renderData** `Function|slot-scope` [optional]  
     returns a list element object to be rendered based on the `res` data object. This callback function prop or slot is called for each data item rendered in the **ReactiveList** component's view. For example,
 
     ```html
-    <div slot="renderData" scoped-slot="{ item }">
+    <div slot="renderData" slot-scope="{ item }">
         <a
             class="full_row single-record single_record_for_clone"
             key="item._id"
@@ -117,7 +117,7 @@ Example uses:
         </a>
     </div>
     ```
-- **renderAllData** `Function|scoped-slot` [optional]  
+- **renderAllData** `Function|slot-scope` [optional]  
     works like **renderData** but all the data objects are passed to the callback function or slot.
     It accepts an object with these properties: `results`, `streamResults`, `loadMore`, `base` & `triggerClickAnalytics`.
     - **`results`**: An array of results obtained from the applied query.
@@ -126,7 +126,7 @@ Example uses:
     - **`base`**: An internally calculated value, useful to calculate analytics. [Read More](/advanced/analytics.html)
     - **`triggerClickAnalytics`**: A function which can be called to register a click analytics. [Read More](/advanced/analytics.html)
 
-- **renderResultStats** `Function|scoped-slot` [optional]
+- **renderResultStats** `Function|slot-scope` [optional]
     renders custom result stats using a callback function that takes `stats` object as parameter and expects it to return a string or html. `stats` object contains following properties
     - `totalResults` - Total number of results found
     - `totalPages` - Total number of pages found based on current page size
@@ -142,7 +142,7 @@ Example uses:
             }
         "
     ```
-- **renderError** `String|Function|scoped-slot` [optional] 
+- **renderError** `String|Function|slot-scope` [optional] 
     can be used to render an error message in case of any error.
 
 ```js
@@ -156,13 +156,13 @@ Example uses:
 or
 
 ```html
-   <template slot="renderError" scoped-slot="error">
+   <template slot="renderError" slot-scope="error">
         <div>
             Something went wrong!<br/>Error details<br/>{{ error }}
         </div>
     </template>
 ```
-- **renderNoResults** `String|Function|scoped-slot` [optional] 
+- **renderNoResults** `String|Function|slot-scope` [optional] 
     show custom message or component when no results found.
 - **defaultQuery** `Function` [optional]  
     applies a default query to the result component. This query will be run when no other components are being watched (via React prop), as well as in conjunction with the query generated from the React prop. The function should return a query.
@@ -222,10 +222,10 @@ Read more about it [here](/theming/class.html).
 
 - **className** `String`  
     CSS class to be injected on the component container.
-- **renderData** `Function|scoped-slot` [optional]  
-    a callback function or scoped-slot where user can define how to render the view based on the data changes.
-- **renderAllData** `Function|scoped-slot` [optional]  
-    an alternative callback function or scoped-slot to `renderData`, where user can define how to render the view based on all the data changes.  
+- **renderData** `Function|slot-scope` [optional]  
+    a callback function or slot-scope where user can define how to render the view based on the data changes.
+- **renderAllData** `Function|slot-scope` [optional]  
+    an alternative callback function or slot-scope to `renderData`, where user can define how to render the view based on all the data changes.  
     <br/>
     It accepts an object with these properties: `results`, `streamResults`, `loadMore`, `base` & `triggerClickAnalytics`.
     - **`results`**: An array of results obtained from the applied query.
