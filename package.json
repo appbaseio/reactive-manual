@@ -1,5 +1,5 @@
 {
-  "name": "reactive-manual-vue",
+  "name": "@appbaseio/reactive-manual-vue",
   "description": "Reactive Manual: Vue components for Elasticsearch -- Documentation",
   "author": {
     "name": "Kuldeep Saxena",
