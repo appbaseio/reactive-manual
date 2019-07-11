@@ -133,9 +133,10 @@ Example uses:
     show as filter when a value is selected in a global selected filters view. Defaults to `true`.
 <!-- - **showVoiceSearch** `Boolean` [optional]
 	show an option in search bar to enable the voice to text search. Defaults to `false`.
+ -->
 - **searchOperators** `Boolean` [optional]
     Defaults to `false`, if set to `true` than you can use special characters in the search query to enable the advanced search.<br/>
-	Read more about it [here](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-simple-query-string-query.html). -->
+	Read more about it [here](https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl-simple-query-string-query.html).
 - **filterLabel** `String` [optional]
     An optional label to display for the component in the global selected filters view. This is only applicable if `showFilter` is enabled. Default value used here is `componentId`.
 - **URLParams** `Boolean` [optional]
