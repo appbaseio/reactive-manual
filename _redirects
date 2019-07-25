@@ -8,12 +8,12 @@
 /reactive-manual/getting-started/reactivemaps  /reactive-manual/getting-started/reactivemaps.html  302
 /reactive-manual/quickstart/maps  /reactive-manual/getting-started/reactivemaps.html  302
 /reactive-manual/quickstart/reactivemaps  /reactive-manual/getting-started/reactivemaps.html  302
+/reactive-manual/analytics  /reactive-manual/advanced/analytics.html  302
+/reactive-manual/advanced/analytics  /reactive-manual/advanced/analytics.html  302
 /reactive-manual/getting-started/  /reactive-manual/getting-started/reactivesearch.html  302
 /reactive-manual/getting-started/reactivesearch  /reactive-manual/getting-started/reactivesearch.html  302
 /reactive-manual/install  /reactive-manual/getting-started/reactivesearch.html  302
 /reactive-manual/quickstart  /reactive-manual/getting-started/reactivesearch.html  302
-/reactive-manual/analytics  /reactive-manual/advanced/analytics.html  302
-/reactive-manual/advanced/analytics  /reactive-manual/advanced/analytics.html  302
 /reactive-manual/comparison  /reactive-manual/advanced/comparison.html  302
 /reactive-manual/advanced/comparison  /reactive-manual/advanced/comparison.html  302
 /reactive-manual/componentsusage  /reactive-manual/advanced/componentsusage.html  302
@@ -36,6 +36,9 @@
 /reactive-manual/basic-components/stateprovider.html  /reactive-manual/base-components/stateprovider.html  302
 /reactive-manual/base-components/stateprovider  /reactive-manual/base-components/stateprovider.html  302
 /reactive-manual/stateprovider  /reactive-manual/base-components/stateprovider.html  302
+/reactive-manual/basic-components/multidatalist.html  /reactive-manual/list-components/multidatalist.html  302
+/reactive-manual/list-components/multidatalist  /reactive-manual/list-components/multidatalist.html  302
+/reactive-manual/multidatalist  /reactive-manual/list-components/multidatalist.html  302
 /reactive-manual/basic-components/multidropdownlist.html  /reactive-manual/list-components/multidropdownlist.html  302
 /reactive-manual/list-components/multidropdownlist  /reactive-manual/list-components/multidropdownlist.html  302
 /reactive-manual/multidropdownlist  /reactive-manual/list-components/multidropdownlist.html  302
@@ -89,9 +92,6 @@
 /reactive-manual/range-components/ratingsfilter  /reactive-manual/range-components/ratingsfilter.html  302
 /reactive-manual/base-components/ratingsfilter  /reactive-manual/range-components/ratingsfilter.html  302
 /reactive-manual/ratingsfilter  /reactive-manual/range-components/ratingsfilter.html  302
-/reactive-manual/basic-components/multidatalist.html  /reactive-manual/list-components/multidatalist.html  302
-/reactive-manual/list-components/multidatalist  /reactive-manual/list-components/multidatalist.html  302
-/reactive-manual/multidatalist  /reactive-manual/list-components/multidatalist.html  302
 /reactive-manual/basic-components/singledropdownrange.html  /reactive-manual/range-components/singledropdownrange.html  302
 /reactive-manual/range-components/singledropdownrange  /reactive-manual/range-components/singledropdownrange.html  302
 /reactive-manual/singledropdownrange  /reactive-manual/range-components/singledropdownrange.html  302
