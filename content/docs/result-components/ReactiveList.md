@@ -191,7 +191,11 @@ Example uses:
     - **`setPage`**: `function`
         Function use to set the currentPage
     - **`fragmentName`**: `string`
-        `componentId` of the Result component for setting url params
+        `componentId` of the Result component for setting url params for eg:
+        ```jsx
+<a href={`?${fragmentName}=${pageNumber}`}>{pageNumber}</a>
+        ```
+
     ```js
     renderPagination={({ pages, totalPages, currentPage, setPage, fragmentName }) => {
           const selectPage = Number.isFinite(pages) && (
