@@ -180,6 +180,31 @@ Example uses:
     ```
 - **renderNoResults** `Function` [optional]
     show custom message or component when no results found.
+- **renderPagination** `Function` [optional]
+    can be used to render custom pagination.
+    ```js
+    renderPagination={({ pages, totalPages, currentPage, setPage, fragmentName }) => {
+          const selectPage = Number.isFinite(pages) && (
+            <select
+                value={currentPage + 1}
+                onChange={e => setPage(parseInt(e.target.value, 10))}
+            >
+                {new Array(pages).fill(currentPage).map((item, i) =>
+                    (item + i > totalPages ? null : (
+                        <option
+                            key={`${i}-${fragmentName}`}
+                            value={i + item}
+                        >
+                            Page {i + item}
+                        </option>
+                    )),
+                )}
+            </select>
+        );
+
+        return selectPage;
+    }
+    ```
 - **onData** `Function` [optional]
     gets triggered after data changes, which returns an object with these properties: `data`,
     `streamData`, `promotedData`, `rawData` & `resultStats`.
