@@ -182,6 +182,16 @@ Example uses:
     show custom message or component when no results found.
 - **renderPagination** `Function` [optional]
     can be used to render custom pagination.
+     - **`pages`**: `number`
+        Number of pages to be displayed
+    - **`totalPages`**: `number`
+        Total number of pages found based on current page size
+    - **`currentPage`**: `number`
+        Current page number for which data is being rendered
+    - **`setPage`**: `function`
+        Function use to set the currentPage
+    - **`fragmentName`**: `string`
+        `componentId` of the Result component for setting url params
     ```js
     renderPagination={({ pages, totalPages, currentPage, setPage, fragmentName }) => {
           const selectPage = Number.isFinite(pages) && (
