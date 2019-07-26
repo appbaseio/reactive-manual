@@ -180,7 +180,7 @@ Example uses:
     ```
 - **renderNoResults** `Function` [optional]
     show custom message or component when no results found.
-- **renderPagination** `Function` [optional]
+<!-- - **renderPagination** `Function` [optional]
     can be used to render custom pagination.
      - **`pages`**: `number`
         Number of pages to be displayed
@@ -218,7 +218,7 @@ Example uses:
 
         return selectPage;
     }
-    ```
+    ``` -->
 - **onData** `Function` [optional]
     gets triggered after data changes, which returns an object with these properties: `data`,
     `streamData`, `promotedData`, `rawData` & `resultStats`.
