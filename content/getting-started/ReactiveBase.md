@@ -58,6 +58,9 @@ This is the first component you will need to add when using `ReactiveSearch`.
 	allows to use the custom html element tag, defaults to `div`.
 - **searchStateHeader** `Boolean` [optional]  
     Defaults to `false`. Allows recording some **advanced** search analytics (and click analytics) when set to `true` and appbase.io is used as a backend.
+	> Note:
+    >
+    > You must use the react version >= 16.6 to make it work with click analytics.
 - **theme** `Object` [optional]  
     allows over-writing of default styles by providing the respective key/values. You can read more about its usage [here](/theming/themes.html)
 - **themePreset** `String` [optional]  
