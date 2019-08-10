@@ -8,6 +8,10 @@
 /reactive-manual/getting-started/reactivemaps  /reactive-manual/getting-started/reactivemaps.html  302
 /reactive-manual/quickstart/maps  /reactive-manual/getting-started/reactivemaps.html  302
 /reactive-manual/quickstart/reactivemaps  /reactive-manual/getting-started/reactivemaps.html  302
+/reactive-manual/getting-started/  /reactive-manual/getting-started/reactivesearch.html  302
+/reactive-manual/getting-started/reactivesearch  /reactive-manual/getting-started/reactivesearch.html  302
+/reactive-manual/install  /reactive-manual/getting-started/reactivesearch.html  302
+/reactive-manual/quickstart  /reactive-manual/getting-started/reactivesearch.html  302
 /reactive-manual/analytics  /reactive-manual/advanced/analytics.html  302
 /reactive-manual/advanced/analytics  /reactive-manual/advanced/analytics.html  302
 /reactive-manual/comparison  /reactive-manual/advanced/comparison.html  302
@@ -64,10 +68,6 @@
 /reactive-manual/basic-components/daterange.html  /reactive-manual/range-components/daterange.html  302
 /reactive-manual/range-components/daterange  /reactive-manual/range-components/daterange.html  302
 /reactive-manual/daterange  /reactive-manual/range-components/daterange.html  302
-/reactive-manual/getting-started/  /reactive-manual/getting-started/reactivesearch.html  302
-/reactive-manual/getting-started/reactivesearch  /reactive-manual/getting-started/reactivesearch.html  302
-/reactive-manual/install  /reactive-manual/getting-started/reactivesearch.html  302
-/reactive-manual/quickstart  /reactive-manual/getting-started/reactivesearch.html  302
 /reactive-manual/search-components/dynamicrangeslider.html  /reactive-manual/range-components/dynamicrangeslider.html  302
 /reactive-manual/range-components/dynamicrangeslider  /reactive-manual/range-components/dynamicrangeslider.html  302
 /reactive-manual/dynamicrangeslider  /reactive-manual/range-components/dynamicrangeslider.html  302
