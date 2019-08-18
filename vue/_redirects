@@ -46,6 +46,9 @@
 /reactive-manual/vue/basic-components/rangeslider.html  /reactive-manual/vue/range-components/rangeslider.html  302
 /reactive-manual/vue/range-components/rangeslider  /reactive-manual/vue/range-components/rangeslider.html  302
 /reactive-manual/vue/rangeslider  /reactive-manual/vue/range-components/rangeslider.html  302
+/reactive-manual/vue/basic-components/singlerange.html  /reactive-manual/vue/range-components/singlerange.html  302
+/reactive-manual/vue/range-components/singlerange  /reactive-manual/vue/range-components/singlerange.html  302
+/reactive-manual/vue/singlerange  /reactive-manual/vue/range-components/singlerange.html  302
 /reactive-manual/vue/basic-components/reactivelist.html  /reactive-manual/vue/result-components/reactivelist.html  302
 /reactive-manual/vue/result-components/reactivelist  /reactive-manual/vue/result-components/reactivelist.html  302
 /reactive-manual/vue/reactivelist  /reactive-manual/vue/result-components/reactivelist.html  302
@@ -58,9 +61,6 @@
 /reactive-manual/vue/basic-components/datasearch.html  /reactive-manual/vue/search-components/datasearch.html  302
 /reactive-manual/vue/search-components/datasearch  /reactive-manual/vue/search-components/datasearch.html  302
 /reactive-manual/vue/datasearch  /reactive-manual/vue/search-components/datasearch.html  302
-/reactive-manual/vue/basic-components/singlerange.html  /reactive-manual/vue/range-components/singlerange.html  302
-/reactive-manual/vue/range-components/singlerange  /reactive-manual/vue/range-components/singlerange.html  302
-/reactive-manual/vue/singlerange  /reactive-manual/vue/range-components/singlerange.html  302
 /reactive-manual/vue/theming/class  /reactive-manual/vue/theming/class.html  302
 /reactive-manual/vue/class  /reactive-manual/vue/theming/class.html  302
 /reactive-manual/vue/advanced/styleguide.html  /reactive-manual/vue/theming/style.html  302
