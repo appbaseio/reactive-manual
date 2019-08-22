@@ -21,7 +21,7 @@ Reactive Manual contains the docs for all the Reactive components from [appbase.
 
 ### Running locally
 
-1. `yarn dev` to start the hot-reloading development server (powered by [Gatsby](https://www.gatsbyjs.org))
+1. `yarn start` to start the hot-reloading development server (powered by [Gatsby](https://www.gatsbyjs.org))
 1. `open http://localhost:8000` to open the site in your favorite browser
 
 ## Contributing

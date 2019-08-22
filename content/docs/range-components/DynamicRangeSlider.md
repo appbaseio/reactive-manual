@@ -66,6 +66,7 @@ While `DynamicRangeSlider` only requires the above props to be used, it comes wi
   }}
   URLParams={true}
   loader="Loading ..."
+  includeNullValues
 />
 ```
 
@@ -116,6 +117,9 @@ While `DynamicRangeSlider` only requires the above props to be used, it comes wi
     to display an optional loader while fetching the histogram stats.
 - **URLParams** `Boolean` [optional]
     enable creating a URL query string parameter based on the selected range of the slider. This is useful for sharing URLs with the component state. Defaults to `false`.
+- **includeNullValues** `Boolean` [optional]
+   If you have sparse data (i.e. some data item which does not have `dataField`), then this prop enables you to show that data. Defaults to `false`.
+
 
 ## Demo
 
