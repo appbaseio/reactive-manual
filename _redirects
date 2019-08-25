@@ -57,6 +57,9 @@
 /reactive-manual/search-components/tagcloud.html  /reactive-manual/list-components/tagcloud.html  302
 /reactive-manual/list-components/tagcloud  /reactive-manual/list-components/tagcloud.html  302
 /reactive-manual/tagcloud  /reactive-manual/list-components/tagcloud.html  302
+/reactive-manual/basic-components/togglebutton.html  /reactive-manual/list-components/togglebutton.html  302
+/reactive-manual/list-components/togglebutton  /reactive-manual/list-components/togglebutton.html  302
+/reactive-manual/togglebutton  /reactive-manual/list-components/togglebutton.html  302
 /reactive-manual/map-components  /reactive-manual/map-components/geodistanceslider.html  302
 /reactive-manual/reactive-manual/map-components  /reactive-manual/map-components/geodistanceslider.html  302
 /reactive-manual/basic-components/datepicker.html  /reactive-manual/range-components/datepicker.html  302
@@ -89,9 +92,6 @@
 /reactive-manual/range-components/ratingsfilter  /reactive-manual/range-components/ratingsfilter.html  302
 /reactive-manual/base-components/ratingsfilter  /reactive-manual/range-components/ratingsfilter.html  302
 /reactive-manual/ratingsfilter  /reactive-manual/range-components/ratingsfilter.html  302
-/reactive-manual/basic-components/togglebutton.html  /reactive-manual/list-components/togglebutton.html  302
-/reactive-manual/list-components/togglebutton  /reactive-manual/list-components/togglebutton.html  302
-/reactive-manual/togglebutton  /reactive-manual/list-components/togglebutton.html  302
 /reactive-manual/basic-components/singledropdownrange.html  /reactive-manual/range-components/singledropdownrange.html  302
 /reactive-manual/range-components/singledropdownrange  /reactive-manual/range-components/singledropdownrange.html  302
 /reactive-manual/singledropdownrange  /reactive-manual/range-components/singledropdownrange.html  302
