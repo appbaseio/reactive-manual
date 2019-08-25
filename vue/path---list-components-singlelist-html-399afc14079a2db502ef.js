@@ -1,0 +1,2 @@
+webpackJsonp([67055671156237],{442:function(t,n){t.exports={pathContext:{slug:"list-components/singlelist.html"}}}});
+//# sourceMappingURL=path---list-components-singlelist-html-399afc14079a2db502ef.js.map
