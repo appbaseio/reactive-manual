@@ -2,6 +2,8 @@
 
 ## Created with gatsby-plugin-netlify
 
+/reactive-manual/vue/componentsindex  /reactive-manual/vue/getting-started/componentsindex.html  302
+/reactive-manual/vue/components  /reactive-manual/vue/getting-started/componentsindex.html  302
 /reactive-manual/vue/getting-started/  /reactive-manual/vue/getting-started/reactivesearch.html  302
 /reactive-manual/vue/getting-started/reactivesearch  /reactive-manual/vue/getting-started/reactivesearch.html  302
 /reactive-manual/vue/install  /reactive-manual/vue/getting-started/reactivesearch.html  302
@@ -65,6 +67,4 @@
 /reactive-manual/vue/theming/style  /reactive-manual/vue/theming/style.html  302
 /reactive-manual/vue/style  /reactive-manual/vue/theming/style.html  302
 /reactive-manual/vue/styles  /reactive-manual/vue/theming/style.html  302
-/reactive-manual/vue/componentsindex  /reactive-manual/vue/getting-started/componentsindex.html  302
-/reactive-manual/vue/components  /reactive-manual/vue/getting-started/componentsindex.html  302
 /reactive-manual/vue/index.html  /reactive-manual/vue/  302
