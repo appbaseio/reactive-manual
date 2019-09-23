@@ -65,8 +65,8 @@
       "path---search-components-datasearch-html-265b9b9dbb8b9520f9c0.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-aeb3244d33ce3327122d.js",
-      "component---src-layouts-index-js-aeb3244d33ce3327122d.js.map"
+      "component---src-layouts-index-js-b8880f71bb23d319756c.js",
+      "component---src-layouts-index-js-b8880f71bb23d319756c.js.map"
     ],
     "path---jsx-compiler-html": [
       "path---jsx-compiler-html-a0e39f21c11f6a62c5ab.js",
@@ -147,9 +147,9 @@
       "path---getting-started-componentsindex-html-6c0e23ec095845bda787.js.map"
     ],
     "app": [
-      "app-828ebd6b60360e69cd6d.js",
+      "app-8d41bea913d4d386b065.js",
       "build-js-styles.css",
-      "app-828ebd6b60360e69cd6d.js.map",
+      "app-8d41bea913d4d386b065.js.map",
       "build-js-styles.css.map"
     ],
     "path---theming-class-html": [
@@ -177,8 +177,8 @@
       "component---src-pages-blog-all-html-js-4e8968908d11397a30ea.js.map"
     ],
     "component---src-templates-home-js": [
-      "component---src-templates-home-js-5b212aad05e4bd74f429.js",
-      "component---src-templates-home-js-5b212aad05e4bd74f429.js.map"
+      "component---src-templates-home-js-03cf2686f18abba16d40.js",
+      "component---src-templates-home-js-03cf2686f18abba16d40.js.map"
     ]
   }
 }
