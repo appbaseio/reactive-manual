@@ -113,8 +113,8 @@
       "path---range-components-daterange-html-3e32ec48395eb49dec48.js.map"
     ],
     "component---src-layouts-index-js": [
-      "component---src-layouts-index-js-6d6f321733b5b0e3ccb4.js",
-      "component---src-layouts-index-js-6d6f321733b5b0e3ccb4.js.map"
+      "component---src-layouts-index-js-d6478e771d9e5283cc6b.js",
+      "component---src-layouts-index-js-d6478e771d9e5283cc6b.js.map"
     ],
     "path---list-components-tagcloud-html": [
       "path---list-components-tagcloud-html-fa36281ee55c7a768a73.js",
@@ -243,9 +243,9 @@
       "path---getting-started-componentsindex-html-685d20a47b987e822064.js.map"
     ],
     "app": [
-      "app-148969a13d42bf28a5b5.js",
+      "app-4a09d08a98c20fbe1466.js",
       "build-js-styles.css",
-      "app-148969a13d42bf28a5b5.js.map",
+      "app-4a09d08a98c20fbe1466.js.map",
       "build-js-styles.css.map"
     ],
     "path---theming-class-html": [
@@ -281,8 +281,8 @@
       "component---src-pages-blog-all-html-js-4e8968908d11397a30ea.js.map"
     ],
     "component---src-templates-home-js": [
-      "component---src-templates-home-js-7e3717780cd7df621361.js",
-      "component---src-templates-home-js-7e3717780cd7df621361.js.map"
+      "component---src-templates-home-js-fb4679acb7e8e006c453.js",
+      "component---src-templates-home-js-fb4679acb7e8e006c453.js.map"
     ]
   }
 }
