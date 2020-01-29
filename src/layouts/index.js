@@ -45,10 +45,38 @@ class Template extends Component {
           }}>
           {children()}
         </Flex>
+        <div
+          css={{
+            position: 'fixed',
+            bottom: 20,
+            padding: '10px 15px',
+            background: 'rgba(182,239,126,1)',
+            color: '#262626',
+            fontWeight: '500',
+            left: '50%',
+            transform: `translateX(-50%)`,
+            zIndex: 9,
+            borderRadius: 3,
+            boxShadow: '0 6px 12px 0 rgba(0,0,0,0.1)',
+          }}>
+          <h3 css={{fontSize: '1.4rem'}}>
+            <span css={{marginRight: 5}}>🆕</span>Visit our new docs are
+            available over at{' '}
+            <a
+              css={{
+                borderBottom: '2px solid white',
+                '&:hover': {
+                  color: 'black',
+                },
+              }}
+              href="https://docs.appbase.io/docs/reactivesearch/gettingstarted/">
+              docs.appbase.io
+            </a>
+          </h3>
+        </div>
         <Footer layoutHasSidebar={layoutHasSidebar} />
       </div>
     );
   }
 }
-
 export default Template;
