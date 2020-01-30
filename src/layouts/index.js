@@ -8,6 +8,7 @@ import Flex from 'components/Flex';
 import Footer from 'components/LayoutFooter';
 import Header from 'components/LayoutHeader';
 import {media} from 'theme';
+import ExternalLinkSvg from 'templates/components/ExternalLinkSvg';
 
 // Import global styles
 import '../prism-styles';
@@ -48,29 +49,35 @@ class Template extends Component {
         <div
           css={{
             position: 'fixed',
-            bottom: 20,
-            padding: '10px 15px',
-            background: 'rgba(182,239,126,1)',
+            bottom: 0,
+            padding: 20,
+            width: '100%',
+            background: '#fff566',
             color: '#262626',
             fontWeight: '500',
-            left: '50%',
-            transform: `translateX(-50%)`,
+            textAlign: 'center',
             zIndex: 9,
-            borderRadius: 3,
             boxShadow: '0 6px 12px 0 rgba(0,0,0,0.1)',
           }}>
           <h3 css={{fontSize: '1.4rem'}}>
-            <span css={{marginRight: 5}}>🆕</span>Visit our new docs are
-            available over at{' '}
+            <span css={{marginRight: 5}}>🆕</span>Visit our new docs available
+            at{' '}
             <a
               css={{
-                borderBottom: '2px solid white',
+                color: '#1890ff',
                 '&:hover': {
-                  color: 'black',
+                  color: '#40a9ff',
                 },
               }}
+              target="_blank"
               href="https://docs.appbase.io/docs/reactivesearch/gettingstarted/">
-              docs.appbase.io
+              docs.appbase.io{' '}
+              <ExternalLinkSvg
+                cssProps={{
+                  verticalAlign: -2,
+                  display: 'inline-block',
+                }}
+              />
             </a>
           </h3>
         </div>
