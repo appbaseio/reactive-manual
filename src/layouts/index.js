@@ -8,6 +8,7 @@ import Flex from 'components/Flex';
 import Footer from 'components/LayoutFooter';
 import Header from 'components/LayoutHeader';
 import {media} from 'theme';
+import ExternalLinkSvg from 'templates/components/ExternalLinkSvg';
 
 // Import global styles
 import '../prism-styles';
@@ -45,10 +46,44 @@ class Template extends Component {
           }}>
           {children()}
         </Flex>
+        <div
+          css={{
+            position: 'fixed',
+            bottom: 0,
+            padding: 20,
+            width: '100%',
+            background: '#fff566',
+            color: '#262626',
+            fontWeight: '500',
+            textAlign: 'center',
+            zIndex: 9,
+            boxShadow: '0 6px 12px 0 rgba(0,0,0,0.1)',
+          }}>
+          <h3 css={{fontSize: '1.4rem'}}>
+            <span css={{marginRight: 5}}>🆕</span>Visit our new docs available
+            at{' '}
+            <a
+              css={{
+                color: '#1890ff',
+                '&:hover': {
+                  color: '#40a9ff',
+                },
+              }}
+              target="_blank"
+              href="https://docs.appbase.io/docs/reactivesearch/gettingstarted/">
+              docs.appbase.io{' '}
+              <ExternalLinkSvg
+                cssProps={{
+                  verticalAlign: -2,
+                  display: 'inline-block',
+                }}
+              />
+            </a>
+          </h3>
+        </div>
         <Footer layoutHasSidebar={layoutHasSidebar} />
       </div>
     );
   }
 }
-
 export default Template;
