@@ -58,6 +58,8 @@ Example uses:
     filterLabel="City"
     URLParams={false}
     loader="Loading ..."
+    showLoadMore={true}
+    loadMoreLabel="Load more"
 />
 ```
 
@@ -111,6 +113,8 @@ Example uses:
     defaults to `false` and works only with elasticsearch >= 6 since it uses [composite aggregations](https://www.elastic.co/guide/en/elasticsearch/reference/current/search-aggregations-bucket-composite-aggregation.html). This adds a "Load More" button to load the aggs on demand combined with the `size` prop. Composite aggregations are in beta and this is an experimental API which might change in a future release.
 
     `Note`: Composite aggregations do not support sorting by `count`. Hence with `showLoadMore`, you can only sort by: `asc` or `desc` order. `sortBy` prop defaults to `asc` when `showLoadMore` prop is used.
+- **loadMoreLabel** `String` [optional]
+    defaults to `Load more`. Specify a custom label to use for the button when `showLoadMore` is set to `true`.
 - **renderItem** `Function` [optional]
     customize the rendered list via a function which receives the item label, count & isSelected and expects a JSX or String back. For example:
     ```js
