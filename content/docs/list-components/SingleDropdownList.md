@@ -194,6 +194,15 @@ Or you can also use render function as children
     ```js
     renderNoResults={() => <p>No Results Found!</p>}
     ```
+- **renderLabel** `Function` [optional]
+  can be used to change the label of the dropdown. Useful for adding highlighting/styling to or translating the label.
+  ```js
+  renderLabel={(item) => (
+    <div>
+      <MyTranslationComponent key={item ? item : 'placeholder'} />
+    </div>
+  )}  
+  ```
 - **onChange** `function` [optional]
     is a callback function which accepts component's current **value** as a parameter. It is called when you are using the `value` prop and the component's value changes. This prop is used to implement the [controlled component](https://reactjs.org/docs/forms.html#controlled-components) behavior.
 - **onError** `Function` [optional]
